@@ -1,0 +1,1054 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "definitions": {
+        "FermentationStageType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "aging": {
+                    "$ref": "#/definitions/TimeType"
+                },
+                "temperature": {
+                    "$ref": "#/definitions/TemperatureType"
+                }
+            },
+            "required": [
+                "aging",
+                "temperature"
+            ]
+        },
+        "RecipeType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "extract",
+                        "partial mash",
+                        "all grain"
+                    ]
+                },
+                "author": {
+                    "type": "string"
+                },
+                "coauthor": {
+                    "type": "string"
+                },
+                "created": {
+                    "$ref": "#/definitions/DateType"
+                },
+                "batch_size": {
+                    "$ref": "#/definitions/VolumeType"
+                },
+                "boil_size": {
+                    "$ref": "#/definitions/VolumeType"
+                },
+                "boil_time": {
+                    "$ref": "#/definitions/TimeType"
+                },
+                "efficiency": {
+                    "$ref": "#/definitions/PercentType"
+                },
+                "style": {
+                    "$ref": "#/definitions/RecipeStyleType"
+                },
+                "ingredients": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "grain_bill": {
+                            "$ref": "#/definitions/FermentableAdditionType"
+                        },
+                        "hop_bill": {
+                            "$ref": "#/definitions/HopAdditionType"
+                        },
+                        "adjuncts": {
+                            "$ref": "#/definitions/MiscellaneousAdditionType"
+                        },
+                        "yeast_additions": {
+                            "$ref": "#/definitions/YeastAdditionType"
+                        },
+                        "water_profile": {
+                            "$ref": "#/definitions/WaterAdditionType"
+                        }
+                    },
+                    "required": [
+                        "grain_bill"
+                    ]
+                },
+                "mash": {
+                    "$ref": "#/definitions/MashProcedureType"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "original_gravity": {
+                    "$ref": "#/definitions/DensityType"
+                },
+                "final_gravity": {
+                    "$ref": "#/definitions/DensityType"
+                },
+                "alcohol_by_volume": {
+                    "$ref": "#/definitions/PercentType"
+                },
+                "ibu_estimate": {
+                    "$ref": "#/definitions/IBUEstimateType"
+                },
+                "color_estimate": {
+                    "$ref": "#/definitions/ColorType"
+                },
+                "carbonation": {
+                    "type": "number"
+                },
+                "fermentation_stages": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "primary": {
+                            "$ref": "#/definitions/FermentationStageType"
+                        },
+                        "secondary": {
+                            "$ref": "#/definitions/FermentationStageType"
+                        },
+                        "tertiary": {
+                            "$ref": "#/definitions/FermentationStageType"
+                        },
+                        "conditioning": {
+                            "$ref": "#/definitions/FermentationStageType"
+                        }
+                    }
+                },
+                "taste": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "notes": {
+                            "type": "string"
+                        },
+                        "rating": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "notes",
+                        "rating"
+                    ]
+                },
+                "calories_per_pint": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "name",
+                "type",
+                "author",
+                "batch_size",
+                "boil_size",
+                "boil_time",
+                "ingredients"
+            ]
+        },
+        "VolumeType": {
+            "properties": {
+                "volume": {
+                    "$ref": "#/definitions/VolumeUnitType"
+                }
+            }
+        },
+        "MassType": {
+            "properties": {
+                "mass": {
+                    "$ref": "#/definitions/MassUnitType"
+                }
+            }
+        },
+        "TemperatureType": {
+            "properties": {
+                "degrees": {
+                    "$ref": "#/definitions/TemperatureUnitType"
+                }
+            }
+        },
+        "DistanceType": {
+            "properties": {
+                "length": {
+                    "$ref": "#/definitions/DistanceUnitType"
+                }
+            }
+        },
+        "PressureType": {
+            "properties": {
+                "pressure": {
+                    "$ref": "#/definitions/PressureUnitType"
+                }
+            }
+        },
+        "TimeType": {
+            "properties": {
+                "duration": {
+                    "$ref": "#/definitions/TimeUnitType"
+                }
+            }
+        },
+        "ColorType": {
+            "properties": {
+                "scale": {
+                    "$ref": "#/definitions/ColorUnitType"
+                }
+            }
+        },
+        "DensityType": {
+            "properties": {
+                "density": {
+                    "$ref": "#/definitions/DensityUnitType"
+                }
+            }
+        },
+        "QuantitativeRangeType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "minimum": {
+                    "type": "number"
+                },
+                "maximum": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "minimum",
+                "maximum"
+            ]
+        },
+        "TemperatureRangeType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "minimum": {
+                    "$ref": "#/definitions/TemperatureType"
+                },
+                "maximum": {
+                    "$ref": "#/definitions/TemperatureType"
+                }
+            },
+            "required": [
+                "minimum",
+                "maximum"
+            ]
+        },
+        "ColorRangeType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "minimum": {
+                    "$ref": "#/definitions/ColorType"
+                },
+                "maximum": {
+                    "$ref": "#/definitions/ColorType"
+                }
+            },
+            "required": [
+                "minimum",
+                "maximum"
+            ]
+        },
+        "DensityRangeType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "minimum": {
+                    "$ref": "#/definitions/DensityType"
+                },
+                "maximum": {
+                    "$ref": "#/definitions/DensityType"
+                }
+            },
+            "required": [
+                "minimum",
+                "maximum"
+            ]
+        },
+        "PercentRangeType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "minimum": {
+                    "$ref": "#/definitions/PercentType"
+                },
+                "maximum": {
+                    "$ref": "#/definitions/PercentType"
+                }
+            },
+            "required": [
+                "minimum",
+                "maximum"
+            ]
+        },
+        "FermentableBase": {
+            "type": "object",
+            "description": "Fermentable Base Desc",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "adjunct",
+                        "dry extract",
+                        "extract",
+                        "grain",
+                        "sugar"
+                    ]
+                },
+                "color": {
+                    "$ref": "#/definitions/ColorType"
+                },
+                "origin": {
+                    "type": "string"
+                },
+                "supplier": {
+                    "type": "string"
+                },
+                "group": {
+                    "type": "string",
+                    "enum": [
+                        "base",
+                        "caramel",
+                        "flakes",
+                        "roasted",
+                        "speciality",
+                        "wheat"
+                    ]
+                }
+            },
+            "required": [
+                "name",
+                "type",
+                "color"
+            ]
+        },
+        "FermentableType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "yield_dry_basis": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "fine_grind": {
+                            "$ref": "#/definitions/PercentType"
+                        },
+                        "coarse_grind": {
+                            "$ref": "#/definitions/PercentType"
+                        },
+                        "fine_coarse_difference": {
+                            "$ref": "#/definitions/PercentType"
+                        }
+                    },
+                    "required": [
+                        "fine_grind",
+                        "coarse_grind"
+                    ]
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "moisture": {
+                    "$ref": "#/definitions/PercentType"
+                },
+                "diastatic_power": {
+                    "type": "number"
+                },
+                "protein": {
+                    "$ref": "#/definitions/PercentType"
+                },
+                "soluble_nitrogen_ratio": {
+                    "type": "number"
+                },
+                "max_in_batch": {
+                    "$ref": "#/definitions/PercentType"
+                },
+                "recommend_mash": {
+                    "type": "boolean"
+                },
+                "ibu_gal_per_lb": {
+                    "type": "number"
+                },
+                "potential": {
+                    "$ref": "#/definitions/DensityType"
+                },
+                "inventory": {
+                    "$ref": "#/definitions/MassType"
+                }
+            },
+            "required": [
+                "yield_dry_basis"
+            ]
+        },
+        "FermentableAdditionType": {
+            "type": "object",
+            "description": "Addition of Fermentable Type to recipe",
+            "additionalProperties": false,
+            "properties": {
+                "addition": {
+                    "$ref": "#/definitions/FermentableBase"
+                }
+            },
+            "required": [
+                "addition"
+            ]
+        },
+        "MiscellaneousBase": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "spice",
+                        "fining",
+                        "water agent",
+                        "herb",
+                        "fruit",
+                        "flavor",
+                        "other"
+                    ]
+                },
+                "use": {
+                    "type": "string",
+                    "enum": [
+                        "boil",
+                        "mash",
+                        "primary",
+                        "secondary",
+                        "bottling"
+                    ]
+                }
+            },
+            "required": [
+                "name",
+                "type",
+                "use"
+            ]
+        },
+        "MiscellaneousType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "use_for": {
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "inventory": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "amount": {
+                            "$ref": "#/definitions/VolumeType"
+                        },
+                        "amount_as_weight": {
+                            "$ref": "#/definitions/MassType"
+                        }
+                    },
+                    "required": [
+                        "amount",
+                        "amount_as_weight"
+                    ]
+                }
+            }
+        },
+        "MiscellaneousAdditionType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "addition": {
+                    "$ref": "#/definitions/MiscellaneousBase"
+                }
+            },
+            "required": [
+                "addition"
+            ]
+        },
+        "HopVarietyBase": {
+            "type": "object",
+            "description": "Hop Variety Base Desc",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "origin": {
+                    "type": "string"
+                },
+                "alpha_acid_units": {
+                    "type": "number"
+                },
+                "beta_acid_units": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "name",
+                "origin",
+                "alpha_acid_units"
+            ]
+        },
+        "VarietyInformation": {
+            "type": "object",
+            "description": "Hop Variety Record Information",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "aroma",
+                        "bittering",
+                        "flavor",
+                        "aroma/bittering",
+                        "bittering/flavor",
+                        "aroma/flavor",
+                        "aroma/bittering/flavor"
+                    ]
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "percent_lost": {
+                    "$ref": "#/definitions/PercentType"
+                },
+                "substitutes": {
+                    "type": "string"
+                },
+                "humulene": {
+                    "type": "number"
+                },
+                "caryophyllene": {
+                    "type": "number"
+                },
+                "cohumulone": {
+                    "type": "number"
+                },
+                "myrcene": {
+                    "type": "number"
+                },
+                "farnesene": {
+                    "type": "number"
+                },
+                "inventory": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "leaf": {
+                            "$ref": "#/definitions/MassType"
+                        },
+                        "pellet": {
+                            "$ref": "#/definitions/MassType"
+                        },
+                        "plug": {
+                            "$ref": "#/definitions/MassType"
+                        }
+                    }
+                }
+            }
+        },
+        "HopAdditionType": {
+            "type": "object",
+            "description": "Addition of hops to recipe",
+            "additionalProperties": false,
+            "properties": {
+                "addition": {
+                    "$ref": "#/definitions/HopVarietyBase"
+                }
+            },
+            "required": [
+                "addition"
+            ]
+        },
+        "IBUEstimateType": {
+            "properties": {
+                "method": {
+                    "$ref": "#/definitions/IBUMethodType"
+                }
+            }
+        },
+        "CultureBase": {
+            "type": "object",
+            "description": "The descriptive base type for both yeast culture records and yeast recipe additions.",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "ale",
+                        "lager",
+                        "wheat",
+                        "wine",
+                        "champagne"
+                    ]
+                },
+                "form": {
+                    "type": "string",
+                    "enum": [
+                        "liquid",
+                        "dry",
+                        "slant",
+                        "culture"
+                    ]
+                },
+                "laboratory": {
+                    "type": "string"
+                },
+                "product_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "type",
+                "form",
+                "laboratory",
+                "product_id"
+            ]
+        },
+        "CultureInformation": {
+            "type": "object",
+            "description": "Yeast Culture Record Information",
+            "additionalProperties": false,
+            "properties": {
+                "temperature_range": {
+                    "$ref": "#/definitions/TemperatureRangeType"
+                },
+                "flocculation": {
+                    "$ref": "#/definitions/QualitativeRangeType"
+                },
+                "attenuation": {
+                    "$ref": "#/definitions/PercentType"
+                },
+                "alcohol_tolerance": {
+                    "$ref": "#/definitions/PercentRangeType"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "best_for": {
+                    "type": "string"
+                },
+                "max_reuse": {
+                    "type": "integer"
+                },
+                "inventory": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "liquid": {
+                            "$ref": "#/definitions/VolumeType"
+                        },
+                        "dry": {
+                            "$ref": "#/definitions/MassType"
+                        },
+                        "slant": {
+                            "$ref": "#/definitions/VolumeType"
+                        },
+                        "culture": {
+                            "$ref": "#/definitions/VolumeType"
+                        }
+                    }
+                }
+            }
+        },
+        "YeastAdditionType": {
+            "type": "object",
+            "description": "Addition of yeast to recipe",
+            "additionalProperties": false,
+            "properties": {
+                "addition": {
+                    "$ref": "#/definitions/CultureBase"
+                }
+            },
+            "required": [
+                "addition"
+            ]
+        },
+        "WaterBase": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "calcium": {
+                    "type": "number"
+                },
+                "bicarbonate": {
+                    "type": "number"
+                },
+                "sulfate": {
+                    "type": "number"
+                },
+                "chloride": {
+                    "type": "number"
+                },
+                "sodium": {
+                    "type": "number"
+                },
+                "magnesium": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "name",
+                "calcium",
+                "bicarbonate",
+                "sulfate",
+                "chloride",
+                "sodium",
+                "magnesium"
+            ]
+        },
+        "WaterType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "pH": {
+                    "type": "number"
+                },
+                "notes": {
+                    "type": "string"
+                }
+            }
+        },
+        "WaterAdditionType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "addition": {
+                    "$ref": "#/definitions/WaterBase"
+                }
+            },
+            "required": [
+                "addition"
+            ]
+        },
+        "StyleBase": {
+            "type": "object",
+            "description": "The descriptive base type for both beer style guideline records and recipe style provisions.",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "category": {
+                    "type": "string"
+                },
+                "category_number": {
+                    "type": "integer"
+                },
+                "style_letter": {
+                    "type": "string",
+                    "maxLength": 1,
+                    "minLength": 1,
+                    "pattern": "[A-Z ]"
+                },
+                "style_guide": {
+                    "type": "string"
+                },
+                "type": {
+                    "$ref": "#/definitions/StyleCategories"
+                }
+            },
+            "required": [
+                "name",
+                "category",
+                "category_number",
+                "style_letter",
+                "style_guide",
+                "type"
+            ]
+        },
+        "StyleType": {
+            "type": "object",
+            "description": "Style Type Record Information",
+            "additionalProperties": false,
+            "properties": {
+                "original_gravity": {
+                    "$ref": "#/definitions/DensityRangeType"
+                },
+                "final_gravity": {
+                    "$ref": "#/definitions/DensityRangeType"
+                },
+                "international_bitterness_units": {
+                    "$ref": "#/definitions/QuantitativeRangeType"
+                },
+                "color": {
+                    "$ref": "#/definitions/ColorRangeType"
+                },
+                "carbonation": {
+                    "$ref": "#/definitions/QuantitativeRangeType"
+                },
+                "alcohol_by_volume": {
+                    "$ref": "#/definitions/PercentRangeType"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "aroma": {
+                    "type": "string"
+                },
+                "appearance": {
+                    "type": "string"
+                },
+                "flavor": {
+                    "type": "string"
+                },
+                "mouthfeel": {
+                    "type": "string"
+                },
+                "overall_impression": {
+                    "type": "string"
+                },
+                "ingredients": {
+                    "type": "string"
+                },
+                "examples": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "original_gravity",
+                "final_gravity",
+                "international_bitterness_units",
+                "color"
+            ]
+        },
+        "RecipeStyleType": {
+            "description": "Recipe Style Type Description"
+        },
+        "MashProcedureType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "grain_temperature": {
+                    "$ref": "#/definitions/TemperatureType"
+                },
+                "sparge_temperature": {
+                    "$ref": "#/definitions/TemperatureType"
+                },
+                "pH": {
+                    "type": "number"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "mash_steps": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "step": {
+                            "$ref": "#/definitions/MashStepType"
+                        }
+                    },
+                    "required": [
+                        "step"
+                    ]
+                }
+            },
+            "required": [
+                "name",
+                "grain_temperature",
+                "mash_steps"
+            ]
+        },
+        "MashStepType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "infusion",
+                        "temperature",
+                        "decoction"
+                    ]
+                },
+                "infuse_amount": {
+                    "$ref": "#/definitions/VolumeType"
+                },
+                "step_temperature": {
+                    "$ref": "#/definitions/TemperatureType"
+                },
+                "step_time": {
+                    "$ref": "#/definitions/TimeType"
+                },
+                "ramp_time": {
+                    "$ref": "#/definitions/TimeType"
+                },
+                "end_temperature": {
+                    "$ref": "#/definitions/TemperatureType"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "water_grain_ratio": {
+                    "type": "number"
+                },
+                "decoction_amount": {
+                    "$ref": "#/definitions/VolumeType"
+                },
+                "infuse_temperature": {
+                    "$ref": "#/definitions/TemperatureType"
+                }
+            },
+            "required": [
+                "name",
+                "type",
+                "step_temperature",
+                "step_time"
+            ]
+        },
+        "VolumeUnitType": {
+            "type": "string",
+            "enum": [
+                "ml",
+                "l",
+                "tsp",
+                "tbsp",
+                "ozfl",
+                "cup",
+                "pt",
+                "qt",
+                "gal",
+                "bbl",
+                "iozfl",
+                "ipt",
+                "iqt",
+                "igal",
+                "ibbl"
+            ]
+        },
+        "MassUnitType": {
+            "type": "string",
+            "enum": [
+                "mg",
+                "g",
+                "kg",
+                "lb",
+                "oz"
+            ]
+        },
+        "TemperatureUnitType": {
+            "type": "string",
+            "enum": [
+                "C",
+                "F"
+            ]
+        },
+        "DistanceUnitType": {
+            "type": "string",
+            "enum": [
+                "cm",
+                "m",
+                "ft",
+                "in"
+            ]
+        },
+        "PressureUnitType": {
+            "type": "string",
+            "enum": [
+                "kPa",
+                "psi",
+                "bar"
+            ]
+        },
+        "TimeUnitType": {
+            "type": "string",
+            "enum": [
+                "sec",
+                "min",
+                "hr",
+                "day",
+                "week",
+                "month",
+                "year"
+            ]
+        },
+        "ColorUnitType": {
+            "type": "string",
+            "enum": [
+                "EBC",
+                "L",
+                "SRM"
+            ]
+        },
+        "DensityUnitType": {
+            "type": "string",
+            "enum": [
+                "sg",
+                "plato"
+            ]
+        },
+        "DateType": {
+            "type": "string",
+            "pattern": "\\d{4}-\\d{2}-\\d{2}|\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}"
+        },
+        "PercentType": {
+            "type": "number"
+        },
+        "QualitativeRangeType": {
+            "type": "string",
+            "enum": [
+                "very low",
+                "low",
+                "medium low",
+                "medium",
+                "medium high",
+                "high",
+                "very high"
+            ]
+        },
+        "VersionType": {
+            "type": "number"
+        },
+        "IBUMethodType": {
+            "type": "string",
+            "enum": [
+                "Rager",
+                "Tinseth",
+                "Garetz",
+                "Other"
+            ]
+        },
+        "StyleCategories": {
+            "type": "string",
+            "enum": [
+                "lager",
+                "ale",
+                "mead",
+                "wheat",
+                "mixed",
+                "cider"
+            ]
+        }
+    }
+}
