@@ -5,6 +5,7 @@
     "definitions": {
         "WaterBase": {
             "type": "object",
+            "description": "WaterBase provides unique properties to identify individual records of regional brewing water",
             "additionalProperties": false,
             "properties": {
                 "name": {
@@ -41,6 +42,7 @@
         },
         "WaterType": {
             "type": "object",
+            "description": "WaterType collects the attributes of a regional brewing water to store as record information",
             "additionalProperties": false,
             "properties": {
                 "pH": {
@@ -53,6 +55,7 @@
         },
         "WaterAdditionType": {
             "type": "object",
+            "description": "WaterAdditionType collects the attributes of a water salt addition for use in a recipe",
             "additionalProperties": false,
             "properties": {
                 "addition": {

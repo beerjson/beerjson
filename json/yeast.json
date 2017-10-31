@@ -5,7 +5,7 @@
     "definitions": {
         "CultureBase": {
             "type": "object",
-            "description": "The descriptive base type for both yeast culture records and yeast recipe additions.",
+            "description": "The descriptive base type for both yeast culture records and yeast recipe additions. Provides unique properties to identify individual records of a yeast culture",
             "additionalProperties": false,
             "properties": {
                 "name": {
@@ -47,7 +47,7 @@
         },
         "CultureInformation": {
             "type": "object",
-            "description": "Yeast Culture Record Information",
+            "description": "CultureInformation collects the attributes of a yeast culture to store as record information",
             "additionalProperties": false,
             "properties": {
                 "temperature_range": {
@@ -93,7 +93,7 @@
         },
         "YeastAdditionType": {
             "type": "object",
-            "description": "Addition of yeast to recipe",
+            "description": "YeastAdditionType collects the attributes of a yeast ingredient for use in a recipe",
             "additionalProperties": false,
             "properties": {
                 "addition": {

@@ -5,6 +5,7 @@
     "definitions": {
         "MiscellaneousBase": {
             "type": "object",
+            "description": "MiscellaneousBase provides unique properties to identify individual records of adjunct ingredients",
             "additionalProperties": false,
             "properties": {
                 "name": {
@@ -41,6 +42,7 @@
         },
         "MiscellaneousType": {
             "type": "object",
+            "description": "MiscellaneousType collects the attributes of a adjunct ingredient to store as record information",
             "additionalProperties": false,
             "properties": {
                 "use_for": {
@@ -69,6 +71,7 @@
         },
         "MiscellaneousAdditionType": {
             "type": "object",
+            "description": "MiscellaneousAdditionType collects the attributes of an adjunct ingredient for use in a recipe adjunct bill",
             "additionalProperties": false,
             "properties": {
                 "addition": {

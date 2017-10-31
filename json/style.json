@@ -5,7 +5,7 @@
     "definitions": {
         "StyleBase": {
             "type": "object",
-            "description": "The descriptive base type for both beer style guideline records and recipe style provisions.",
+            "description": "The descriptive base type for both beer style guideline records and recipe style provisions. Provides unique properties to identify individual beer styles",
             "additionalProperties": false,
             "properties": {
                 "name": {
@@ -41,7 +41,7 @@
         },
         "StyleType": {
             "type": "object",
-            "description": "Style Type Record Information",
+            "description": "StyleType provide information for BJCP Style categorization",
             "additionalProperties": false,
             "properties": {
                 "original_gravity": {
@@ -95,7 +95,7 @@
             ]
         },
         "RecipeStyleType": {
-            "description": "Recipe Style Type Description"
+            "description": "RecipeStyleType defines style information stored in a recipe record"
         },
         "VolumeType": {
             "properties": {

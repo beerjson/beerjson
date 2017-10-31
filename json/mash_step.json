@@ -5,6 +5,7 @@
     "definitions": {
         "MashStepType": {
             "type": "object",
+            "description": "MashStepType - a per step representation occuring within the mash",
             "additionalProperties": false,
             "properties": {
                 "name": {

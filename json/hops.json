@@ -5,7 +5,7 @@
     "definitions": {
         "HopVarietyBase": {
             "type": "object",
-            "description": "Hop Variety Base Desc",
+            "description": "HopVarietyBase provides unique properties to identify individual records of a hop variety",
             "additionalProperties": false,
             "properties": {
                 "name": {
@@ -29,7 +29,7 @@
         },
         "VarietyInformation": {
             "type": "object",
-            "description": "Hop Variety Record Information",
+            "description": "VarietyInformation collects the attributes of a hop variety to store as record information",
             "additionalProperties": false,
             "properties": {
                 "type": {
@@ -87,7 +87,7 @@
         },
         "HopAdditionType": {
             "type": "object",
-            "description": "Addition of hops to recipe",
+            "description": "HopAdditionType collects the attributes of a hop ingredient for use in a recipe hop bil",
             "additionalProperties": false,
             "properties": {
                 "addition": {

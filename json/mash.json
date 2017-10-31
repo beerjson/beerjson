@@ -5,6 +5,7 @@
     "definitions": {
         "MashProcedureType": {
             "type": "object",
+            "description": "MashProcedureType defines the procedure for performing unique mashing styles",
             "additionalProperties": false,
             "properties": {
                 "name": {
