@@ -1,0 +1,22 @@
+{
+  "name": "beerjson",
+  "version": "1.0.0",
+  "description": "BeerJSON format",
+  "main": "index.js",
+  "devDependencies": {
+    "json-schema-to-markdown": "^1.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beerjson/beerjson.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beerjson/beerjson/issues"
+  },
+  "homepage": "https://github.com/beerjson/beerjson#readme"
+}
