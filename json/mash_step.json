@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
+    "id":"https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/mash_step.json",
     "type": "object",
     "additionalProperties": false,
     "definitions": {
@@ -20,19 +21,19 @@
                     ]
                 },
                 "infuse_amount": {
-                    "$ref": "#/definitions/VolumeType"
+                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/VolumeType"
                 },
                 "step_temperature": {
-                    "$ref": "#/definitions/TemperatureType"
+                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/TemperatureType"
                 },
                 "step_time": {
-                    "$ref": "#/definitions/TimeType"
+                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/TimeType"
                 },
                 "ramp_time": {
-                    "$ref": "#/definitions/TimeType"
+                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/TimeType"
                 },
                 "end_temperature": {
-                    "$ref": "#/definitions/TemperatureType"
+                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/TemperatureType"
                 },
                 "description": {
                     "type": "string"
@@ -41,10 +42,10 @@
                     "type": "number"
                 },
                 "decoction_amount": {
-                    "$ref": "#/definitions/VolumeType"
+                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/VolumeType"
                 },
                 "infuse_temperature": {
-                    "$ref": "#/definitions/TemperatureType"
+                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/TemperatureType"
                 }
             },
             "required": [
@@ -53,245 +54,6 @@
                 "step_temperature",
                 "step_time"
             ]
-        },
-        "VolumeType": {
-            "properties": {
-                "volume": {
-                    "$ref": "#/definitions/VolumeUnitType"
-                }
-            }
-        },
-        "MassType": {
-            "properties": {
-                "mass": {
-                    "$ref": "#/definitions/MassUnitType"
-                }
-            }
-        },
-        "TemperatureType": {
-            "properties": {
-                "degrees": {
-                    "$ref": "#/definitions/TemperatureUnitType"
-                }
-            }
-        },
-        "DistanceType": {
-            "properties": {
-                "length": {
-                    "$ref": "#/definitions/DistanceUnitType"
-                }
-            }
-        },
-        "PressureType": {
-            "properties": {
-                "pressure": {
-                    "$ref": "#/definitions/PressureUnitType"
-                }
-            }
-        },
-        "TimeType": {
-            "properties": {
-                "duration": {
-                    "$ref": "#/definitions/TimeUnitType"
-                }
-            }
-        },
-        "ColorType": {
-            "properties": {
-                "scale": {
-                    "$ref": "#/definitions/ColorUnitType"
-                }
-            }
-        },
-        "DensityType": {
-            "properties": {
-                "density": {
-                    "$ref": "#/definitions/DensityUnitType"
-                }
-            }
-        },
-        "QuantitativeRangeType": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "minimum": {
-                    "type": "number"
-                },
-                "maximum": {
-                    "type": "number"
-                }
-            },
-            "required": [
-                "minimum",
-                "maximum"
-            ]
-        },
-        "TemperatureRangeType": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "minimum": {
-                    "$ref": "#/definitions/TemperatureType"
-                },
-                "maximum": {
-                    "$ref": "#/definitions/TemperatureType"
-                }
-            },
-            "required": [
-                "minimum",
-                "maximum"
-            ]
-        },
-        "ColorRangeType": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "minimum": {
-                    "$ref": "#/definitions/ColorType"
-                },
-                "maximum": {
-                    "$ref": "#/definitions/ColorType"
-                }
-            },
-            "required": [
-                "minimum",
-                "maximum"
-            ]
-        },
-        "DensityRangeType": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "minimum": {
-                    "$ref": "#/definitions/DensityType"
-                },
-                "maximum": {
-                    "$ref": "#/definitions/DensityType"
-                }
-            },
-            "required": [
-                "minimum",
-                "maximum"
-            ]
-        },
-        "PercentRangeType": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "minimum": {
-                    "$ref": "#/definitions/PercentType"
-                },
-                "maximum": {
-                    "$ref": "#/definitions/PercentType"
-                }
-            },
-            "required": [
-                "minimum",
-                "maximum"
-            ]
-        },
-        "VolumeUnitType": {
-            "type": "string",
-            "enum": [
-                "ml",
-                "l",
-                "tsp",
-                "tbsp",
-                "ozfl",
-                "cup",
-                "pt",
-                "qt",
-                "gal",
-                "bbl",
-                "iozfl",
-                "ipt",
-                "iqt",
-                "igal",
-                "ibbl"
-            ]
-        },
-        "MassUnitType": {
-            "type": "string",
-            "enum": [
-                "mg",
-                "g",
-                "kg",
-                "lb",
-                "oz"
-            ]
-        },
-        "TemperatureUnitType": {
-            "type": "string",
-            "enum": [
-                "C",
-                "F"
-            ]
-        },
-        "DistanceUnitType": {
-            "type": "string",
-            "enum": [
-                "cm",
-                "m",
-                "ft",
-                "in"
-            ]
-        },
-        "PressureUnitType": {
-            "type": "string",
-            "enum": [
-                "kPa",
-                "psi",
-                "bar"
-            ]
-        },
-        "TimeUnitType": {
-            "type": "string",
-            "enum": [
-                "sec",
-                "min",
-                "hr",
-                "day",
-                "week",
-                "month",
-                "year"
-            ]
-        },
-        "ColorUnitType": {
-            "type": "string",
-            "enum": [
-                "EBC",
-                "L",
-                "SRM"
-            ]
-        },
-        "DensityUnitType": {
-            "type": "string",
-            "enum": [
-                "sg",
-                "plato"
-            ]
-        },
-        "DateType": {
-            "type": "string",
-            "pattern": "\\d{4}-\\d{2}-\\d{2}|\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}"
-        },
-        "PercentType": {
-            "type": "number"
-        },
-        "QualitativeRangeType": {
-            "type": "string",
-            "enum": [
-                "very low",
-                "low",
-                "medium low",
-                "medium",
-                "medium high",
-                "high",
-                "very high"
-            ]
-        },
-        "VersionType": {
-            "type": "number"
         }
     }
 }

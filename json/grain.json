@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
+    "id":"https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/grain.json"
     "type": "object",
     "additionalProperties": false,
     "definitions": {
@@ -22,7 +23,7 @@
                     ]
                 },
                 "color": {
-                    "$ref": "#/definitions/ColorType"
+                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/ColorType"
                 },
                 "origin": {
                     "type": "string"
@@ -58,13 +59,13 @@
                     "additionalProperties": false,
                     "properties": {
                         "fine_grind": {
-                            "$ref": "#/definitions/PercentType"
+                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/PercentType"
                         },
                         "coarse_grind": {
-                            "$ref": "#/definitions/PercentType"
+                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/PercentType"
                         },
                         "fine_coarse_difference": {
-                            "$ref": "#/definitions/PercentType"
+                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/PercentType"
                         }
                     },
                     "required": [
@@ -76,19 +77,19 @@
                     "type": "string"
                 },
                 "moisture": {
-                    "$ref": "#/definitions/PercentType"
+                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/PercentType"
                 },
                 "diastatic_power": {
                     "type": "number"
                 },
                 "protein": {
-                    "$ref": "#/definitions/PercentType"
+                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/PercentType"
                 },
                 "soluble_nitrogen_ratio": {
                     "type": "number"
                 },
                 "max_in_batch": {
-                    "$ref": "#/definitions/PercentType"
+                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/PercentType"
                 },
                 "recommend_mash": {
                     "type": "boolean"
@@ -97,10 +98,10 @@
                     "type": "number"
                 },
                 "potential": {
-                    "$ref": "#/definitions/DensityType"
+                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/DensityType"
                 },
                 "inventory": {
-                    "$ref": "#/definitions/MassType"
+                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/MassType"
                 }
             },
             "required": [
@@ -119,245 +120,6 @@
             "required": [
                 "addition"
             ]
-        },
-        "VolumeType": {
-            "properties": {
-                "volume": {
-                    "$ref": "#/definitions/VolumeUnitType"
-                }
-            }
-        },
-        "MassType": {
-            "properties": {
-                "mass": {
-                    "$ref": "#/definitions/MassUnitType"
-                }
-            }
-        },
-        "TemperatureType": {
-            "properties": {
-                "degrees": {
-                    "$ref": "#/definitions/TemperatureUnitType"
-                }
-            }
-        },
-        "DistanceType": {
-            "properties": {
-                "length": {
-                    "$ref": "#/definitions/DistanceUnitType"
-                }
-            }
-        },
-        "PressureType": {
-            "properties": {
-                "pressure": {
-                    "$ref": "#/definitions/PressureUnitType"
-                }
-            }
-        },
-        "TimeType": {
-            "properties": {
-                "duration": {
-                    "$ref": "#/definitions/TimeUnitType"
-                }
-            }
-        },
-        "ColorType": {
-            "properties": {
-                "scale": {
-                    "$ref": "#/definitions/ColorUnitType"
-                }
-            }
-        },
-        "DensityType": {
-            "properties": {
-                "density": {
-                    "$ref": "#/definitions/DensityUnitType"
-                }
-            }
-        },
-        "QuantitativeRangeType": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "minimum": {
-                    "type": "number"
-                },
-                "maximum": {
-                    "type": "number"
-                }
-            },
-            "required": [
-                "minimum",
-                "maximum"
-            ]
-        },
-        "TemperatureRangeType": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "minimum": {
-                    "$ref": "#/definitions/TemperatureType"
-                },
-                "maximum": {
-                    "$ref": "#/definitions/TemperatureType"
-                }
-            },
-            "required": [
-                "minimum",
-                "maximum"
-            ]
-        },
-        "ColorRangeType": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "minimum": {
-                    "$ref": "#/definitions/ColorType"
-                },
-                "maximum": {
-                    "$ref": "#/definitions/ColorType"
-                }
-            },
-            "required": [
-                "minimum",
-                "maximum"
-            ]
-        },
-        "DensityRangeType": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "minimum": {
-                    "$ref": "#/definitions/DensityType"
-                },
-                "maximum": {
-                    "$ref": "#/definitions/DensityType"
-                }
-            },
-            "required": [
-                "minimum",
-                "maximum"
-            ]
-        },
-        "PercentRangeType": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "minimum": {
-                    "$ref": "#/definitions/PercentType"
-                },
-                "maximum": {
-                    "$ref": "#/definitions/PercentType"
-                }
-            },
-            "required": [
-                "minimum",
-                "maximum"
-            ]
-        },
-        "VolumeUnitType": {
-            "type": "string",
-            "enum": [
-                "ml",
-                "l",
-                "tsp",
-                "tbsp",
-                "ozfl",
-                "cup",
-                "pt",
-                "qt",
-                "gal",
-                "bbl",
-                "iozfl",
-                "ipt",
-                "iqt",
-                "igal",
-                "ibbl"
-            ]
-        },
-        "MassUnitType": {
-            "type": "string",
-            "enum": [
-                "mg",
-                "g",
-                "kg",
-                "lb",
-                "oz"
-            ]
-        },
-        "TemperatureUnitType": {
-            "type": "string",
-            "enum": [
-                "C",
-                "F"
-            ]
-        },
-        "DistanceUnitType": {
-            "type": "string",
-            "enum": [
-                "cm",
-                "m",
-                "ft",
-                "in"
-            ]
-        },
-        "PressureUnitType": {
-            "type": "string",
-            "enum": [
-                "kPa",
-                "psi",
-                "bar"
-            ]
-        },
-        "TimeUnitType": {
-            "type": "string",
-            "enum": [
-                "sec",
-                "min",
-                "hr",
-                "day",
-                "week",
-                "month",
-                "year"
-            ]
-        },
-        "ColorUnitType": {
-            "type": "string",
-            "enum": [
-                "EBC",
-                "L",
-                "SRM"
-            ]
-        },
-        "DensityUnitType": {
-            "type": "string",
-            "enum": [
-                "sg",
-                "plato"
-            ]
-        },
-        "DateType": {
-            "type": "string",
-            "pattern": "\\d{4}-\\d{2}-\\d{2}|\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}"
-        },
-        "PercentType": {
-            "type": "number"
-        },
-        "QualitativeRangeType": {
-            "type": "string",
-            "enum": [
-                "very low",
-                "low",
-                "medium low",
-                "medium",
-                "medium high",
-                "high",
-                "very high"
-            ]
-        },
-        "VersionType": {
-            "type": "number"
         }
     }
 }
