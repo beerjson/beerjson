@@ -28,8 +28,8 @@
         },
 
         "ingredients":{
-          "grain_bill":[
-            {
+          "grain_bill":{
+            "addition":{
               "name":"Buckwheat Honey",
               "type":"adjunct",
               "color":{
@@ -42,7 +42,7 @@
                 "value":2.148
               }
             },
-            {
+            "addition":{
               "name":"Flaked Barley",
               "type":"adjunct",
               "color":{
@@ -55,7 +55,7 @@
                 "value":0.500
               }
             },
-            {
+            "addition":{
               "name":"Roasted Barley",
               "type":"grain",
               "color":{
@@ -68,7 +68,7 @@
                 "value":0.250
               }
             },
-            {
+            "addition":{
               "name":"Unmalted Wheat",
               "type":"grain",
               "color":{
@@ -81,7 +81,7 @@
                 "value":1.500
               }
             },
-            {
+            "addition":{
               "name":"Pale Malt(2-row)",
               "type":"grain",
               "color":{
@@ -94,7 +94,7 @@
                 "value":8.000
               }
             },
-            {
+            "addition":{
               "name":"Crystal Malt",
               "type":"grain",
               "color":{
@@ -107,7 +107,7 @@
                 "value":1.000
               }
             }
-          ],
+          },
           "adjuncts":[
             {
               "name":"Bitter Orange Peel",

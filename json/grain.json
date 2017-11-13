@@ -110,11 +110,22 @@
         },
         "FermentableAdditionType": {
             "type": "object",
-            "description": "FermentableAdditionType collects the attributes of a fermentable ingredient for use in a recipe grain bill",
-            "additionalProperties": false,
+            "description": "FermentableAdditionType collects the attributes of a fermentable ingredient for use in a recipe grain bill",            
             "properties": {
                 "addition": {
-                    "$ref": "#/definitions/FermentableBase"
+                    "allOf":[           
+                        {"$ref": "#/definitions/FermentableBase"},
+                        { "properties":
+                            { 
+                                "amount": {
+                                    "$ref": "measureable_units.json#/definitions/MassType"
+                                },
+                                "add_after_boil" :{
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    ]
                 }
             },
             "required": [
