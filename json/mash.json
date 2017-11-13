@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
+    "id":"https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/mash.json",
     "type": "object",
     "additionalProperties": false,
     "definitions": {
@@ -12,10 +13,10 @@
                     "type": "string"
                 },
                 "grain_temperature": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/TemperatureType"
+                    "$ref": "measureable_units.json#/definitions/TemperatureType"
                 },
                 "sparge_temperature": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/TemperatureType"
+                    "$ref": "measureable_units.json#/definitions/TemperatureType"
                 },
                 "pH": {
                     "type": "number"
@@ -28,7 +29,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "step": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/mash_step.json#/definitions/MashStepType"
+                            "$ref": "mash_step.json#/definitions/MashStepType"
                         }
                     },
                     "required": [

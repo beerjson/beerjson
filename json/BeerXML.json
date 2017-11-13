@@ -10,7 +10,7 @@
             "additionalProperties": false,
             "properties": {
                 "version": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/VersionType"
+                    "$ref": "measureable_units.json#/definitions/VersionType"
                 },
                 "fermentables": {
                     "type": "object",
@@ -18,7 +18,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "fermentable": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/grain.json#/definitions/FermentableType"
+                            "$ref": "grain.json#/definitions/FermentableType"
                         }
                     },
                     "required": [
@@ -31,7 +31,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "miscellaneous": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/misc.json#/definitions/MiscellaneousType"
+                            "$ref": "misc.json#/definitions/MiscellaneousType"
                         }
                     },
                     "required": [
@@ -44,7 +44,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "hop": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/hops.json#/definitions/VarietyInformation"
+                            "$ref": "hops.json#/definitions/VarietyInformation"
                         }
                     },
                     "required": [
@@ -57,7 +57,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "yeast": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/yeast.json#/definitions/CultureInformation"
+                            "$ref": "yeast.json#/definitions/CultureInformation"
                         }
                     },
                     "required": [
@@ -70,7 +70,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "water": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/water.json#/definitions/WaterType"
+                            "$ref": "water.json#/definitions/WaterType"
                         }
                     },
                     "required": [
@@ -83,7 +83,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "style": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/style.json#/definitions/StyleType"
+                            "$ref": "style.json#/definitions/StyleType"
                         }
                     },
                     "required": [
@@ -96,7 +96,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "mash": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/mash.json#/definitions/MashProcedureType"
+                            "$ref": "mash.json#/definitions/MashProcedureType"
                         }
                     },
                     "required": [
@@ -109,7 +109,7 @@
                     "additionalProperties": false,
                     "properties": {
                         "recipe": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/recipes.json#/definitions/RecipeType"
+                            "$ref": "recipes.json#/definitions/RecipeType"
                         }
                     },
                     "required": [

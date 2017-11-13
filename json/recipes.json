@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
+    "id":"https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/recipes.json",
     "type": "object",
     "additionalProperties": false,
     "definitions": {
@@ -8,10 +9,10 @@
             "additionalProperties": false,
             "properties": {
                 "aging": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/TimeType"
+                    "$ref": "measureable_units.json#/definitions/TimeType"
                 },
                 "temperature": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/TemperatureType"
+                    "$ref": "measureable_units.json#/definitions/TemperatureType"
                 }
             },
             "required": [
@@ -42,19 +43,19 @@
                     "type": "string"
                 },
                 "created": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/DateType"
+                    "$ref": "measureable_units.json#/definitions/DateType"
                 },
                 "batch_size": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/VolumeType"
+                    "$ref": "measureable_units.json#/definitions/VolumeType"
                 },
                 "boil_size": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/VolumeType"
+                    "$ref": "measureable_units.json#/definitions/VolumeType"
                 },
                 "boil_time": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/TimeType"
+                    "$ref": "measureable_units.json#/definitions/TimeType"
                 },
                 "efficiency": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/PercentType"
+                    "$ref": "measureable_units.json#/definitions/PercentType"
                 },
                 "style": {
                     "$ref": "#/definitions/RecipeStyleType"
@@ -64,19 +65,19 @@
                     "additionalProperties": false,
                     "properties": {
                         "grain_bill": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/grain.json#/definitions/FermentableAdditionType"
+                            "$ref": "grain.json#/definitions/FermentableAdditionType"
                         },
                         "hop_bill": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/hops.json#/definitions/HopAdditionType"
+                            "$ref": "hops.json#/definitions/HopAdditionType"
                         },
                         "adjuncts": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/misc.json#/definitions/MiscellaneousAdditionType"
+                            "$ref": "misc.json#/definitions/MiscellaneousAdditionType"
                         },
                         "yeast_additions": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/yeast.json#/definitions/YeastAdditionType"
+                            "$ref": "yeast.json#/definitions/YeastAdditionType"
                         },
                         "water_profile": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/water.json#/definitions/WaterAdditionType"
+                            "$ref": "water.json#/definitions/WaterAdditionType"
                         }
                     },
                     "required": [
@@ -84,25 +85,25 @@
                     ]
                 },
                 "mash": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/mash.json#/definitions/MashProcedureType"
+                    "$ref": "mash.json#/definitions/MashProcedureType"
                 },
                 "notes": {
                     "type": "string"
                 },
                 "original_gravity": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/DensityType"
+                    "$ref": "measureable_units.json#/definitions/DensityType"
                 },
                 "final_gravity": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/DensityType"
+                    "$ref": "measureable_units.json#/definitions/DensityType"
                 },
                 "alcohol_by_volume": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/PercentType"
+                    "$ref": "measureable_units.json#/definitions/PercentType"
                 },
                 "ibu_estimate": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/hops.json#/definitions/IBUEstimateType"
+                    "$ref": "hops.json#/definitions/IBUEstimateType"
                 },
                 "color_estimate": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/ColorType"
+                    "$ref": "measureable_units.json#/definitions/ColorType"
                 },
                 "carbonation": {
                     "type": "number"

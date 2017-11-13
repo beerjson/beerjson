@@ -21,19 +21,19 @@
                     ]
                 },
                 "infuse_amount": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/VolumeType"
+                    "$ref": "measureable_units.json#/definitions/VolumeType"
                 },
                 "step_temperature": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/TemperatureType"
+                    "$ref": "measureable_units.json#/definitions/TemperatureType"
                 },
                 "step_time": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/TimeType"
+                    "$ref": "measureable_units.json#/definitions/TimeType"
                 },
                 "ramp_time": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/TimeType"
+                    "$ref": "measureable_units.json#/definitions/TimeType"
                 },
                 "end_temperature": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/TemperatureType"
+                    "$ref": "measureable_units.json#/definitions/TemperatureType"
                 },
                 "description": {
                     "type": "string"
@@ -42,10 +42,10 @@
                     "type": "number"
                 },
                 "decoction_amount": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/VolumeType"
+                    "$ref": "measureable_units.json#/definitions/VolumeType"
                 },
                 "infuse_temperature": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/TemperatureType"
+                    "$ref": "measureable_units.json#/definitions/TemperatureType"
                 }
             },
             "required": [

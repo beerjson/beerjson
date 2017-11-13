@@ -57,10 +57,10 @@
                     "additionalProperties": false,
                     "properties": {
                         "amount": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/VolumeType"
+                            "$ref": "measureable_units.json#/definitions/VolumeType"
                         },
                         "amount_as_weight": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/MassType"
+                            "$ref": "measureable_units.json#/definitions/MassType"
                         }
                     },
                     "required": [

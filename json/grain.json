@@ -23,7 +23,7 @@
                     ]
                 },
                 "color": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/ColorType"
+                    "$ref": "measureable_units.json#/definitions/ColorType"
                 },
                 "origin": {
                     "type": "string"
@@ -59,13 +59,13 @@
                     "additionalProperties": false,
                     "properties": {
                         "fine_grind": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/PercentType"
+                            "$ref": "measureable_units.json#/definitions/PercentType"
                         },
                         "coarse_grind": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/PercentType"
+                            "$ref": "measureable_units.json#/definitions/PercentType"
                         },
                         "fine_coarse_difference": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/PercentType"
+                            "$ref": "measureable_units.json#/definitions/PercentType"
                         }
                     },
                     "required": [
@@ -77,19 +77,19 @@
                     "type": "string"
                 },
                 "moisture": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/PercentType"
+                    "$ref": "measureable_units.json#/definitions/PercentType"
                 },
                 "diastatic_power": {
                     "type": "number"
                 },
                 "protein": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/PercentType"
+                    "$ref": "measureable_units.json#/definitions/PercentType"
                 },
                 "soluble_nitrogen_ratio": {
                     "type": "number"
                 },
                 "max_in_batch": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/PercentType"
+                    "$ref": "measureable_units.json#/definitions/PercentType"
                 },
                 "recommend_mash": {
                     "type": "boolean"
@@ -98,10 +98,10 @@
                     "type": "number"
                 },
                 "potential": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/DensityType"
+                    "$ref": "measureable_units.json#/definitions/DensityType"
                 },
                 "inventory": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/MassType"
+                    "$ref": "measureable_units.json#/definitions/MassType"
                 }
             },
             "required": [

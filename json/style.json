@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
+    "id":"https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/style.json",
     "type": "object",
     "additionalProperties": false,
     "definitions": {
@@ -45,22 +46,22 @@
             "additionalProperties": false,
             "properties": {
                 "original_gravity": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/DensityRangeType"
+                    "$ref": "measureable_units.json#/definitions/DensityRangeType"
                 },
                 "final_gravity": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/DensityRangeType"
+                    "$ref": "measureable_units.json#/definitions/DensityRangeType"
                 },
                 "international_bitterness_units": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/QuantitativeRangeType"
+                    "$ref": "measureable_units.json#/definitions/QuantitativeRangeType"
                 },
                 "color": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/ColorRangeType"
+                    "$ref": "measureable_units.json#/definitions/ColorRangeType"
                 },
                 "carbonation": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/QuantitativeRangeType"
+                    "$ref": "measureable_units.json#/definitions/QuantitativeRangeType"
                 },
                 "alcohol_by_volume": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/PercentRangeType"
+                    "$ref": "measureable_units.json#/definitions/PercentRangeType"
                 },
                 "notes": {
                     "type": "string"

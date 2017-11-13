@@ -52,16 +52,16 @@
             "additionalProperties": false,
             "properties": {
                 "temperature_range": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/TemperatureRangeType"
+                    "$ref": "measureable_units.json#/definitions/TemperatureRangeType"
                 },
                 "flocculation": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/QualitativeRangeType"
+                    "$ref": "measureable_units.json#/definitions/QualitativeRangeType"
                 },
                 "attenuation": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/PercentType"
+                    "$ref": "measureable_units.json#/definitions/PercentType"
                 },
                 "alcohol_tolerance": {
-                    "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/PercentRangeType"
+                    "$ref": "measureable_units.json#/definitions/PercentRangeType"
                 },
                 "notes": {
                     "type": "string"
@@ -77,16 +77,16 @@
                     "additionalProperties": false,
                     "properties": {
                         "liquid": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/VolumeType"
+                            "$ref": "measureable_units.json#/definitions/VolumeType"
                         },
                         "dry": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/MassType"
+                            "$ref": "measureable_units.json#/definitions/MassType"
                         },
                         "slant": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/VolumeType"
+                            "$ref": "measureable_units.json#/definitions/VolumeType"
                         },
                         "culture": {
-                            "$ref": "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/measureable_units.json#/definitions/VolumeType"
+                            "$ref": "measureable_units.json#/definitions/VolumeType"
                         }
                     }
                 }
