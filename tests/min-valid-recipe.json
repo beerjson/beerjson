@@ -60,7 +60,10 @@
         "name":"my recipe",
         "type":"all grain",
         "author":"me",
-        "batch_size":{},
+        "batch_size":{
+          "volume":"gal",
+          "value":5
+        },
         "boil_size":{},
         "boil_time":90,
         "ingredients":{
