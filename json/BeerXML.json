@@ -116,18 +116,7 @@
                         "recipe"
                     ]
                 }
-            },
-            "required": [
-                "version",
-                "fermentables",
-                "miscellaneous_ingredients",
-                "hop_varieties",
-                "cultures",
-                "profiles",
-                "styles",
-                "procedure",
-                "recipes"
-            ]
+            }
         }
     },
     "required": [

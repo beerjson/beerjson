@@ -108,8 +108,8 @@
               }
             }
           },
-          "adjuncts":[
-            {
+          "adjuncts":{
+            "addition":{
               "name":"Bitter Orange Peel",
               "type":"spice",
               "use":"boil",
@@ -122,7 +122,7 @@
                 "value":60
               }
             },
-            {
+            "addition":{
               "name":"Licorice Stick",
               "type":"spice",
               "use":"boil",
@@ -135,7 +135,7 @@
                 "value":60
               }
             },
-            {
+            "addition":{
               "name":"Mugwort",
               "type":"herb",
               "use":"boil",
@@ -148,7 +148,7 @@
                 "value":60.0
               }
             },
-            {
+            "addition":{
               "name":"Juniper Berries",
               "type":"fruit",
               "use":"secondary",
@@ -161,7 +161,7 @@
                 "value":0.0
               }
             },
-            {
+            "addition":{
               "name":"Lemon Balm",
               "type":"herb",
               "use":"boil",
@@ -174,7 +174,7 @@
                 "value":0.0
               }
             }                        
-          ],
+          },
           "yeast_additions":{
             "addition":{
               "name":"English Ale",
@@ -183,7 +183,7 @@
               "laboratory":"Ithaca Beer C",
               "product_id":"",
               "amount":{
-                "volume":"mL",
+                "volume":"ml",
                 "value":0.0
               }
             }
