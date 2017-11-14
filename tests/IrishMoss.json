@@ -1,0 +1,12 @@
+{
+  "beer_xml": {
+    "version": 2.01,
+    "miscellaneous_ingredients": {
+      "miscellaneous": {
+        "name": "Irish Moss",
+        "type": "fining",
+        "use": "boil"
+      }
+    }
+  }
+}

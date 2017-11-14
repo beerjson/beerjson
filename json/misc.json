@@ -3,7 +3,6 @@
   "id":
     "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/misc.json",
   "type": "object",
-  "additionalProperties": false,
   "definitions": {
     "MiscellaneousBase": {
       "type": "object",
@@ -36,28 +35,32 @@
       "type": "object",
       "description":
         "MiscellaneousType collects the attributes of a adjunct ingredient to store as record information",
-      "additionalProperties": false,
-      "properties": {
-        "use_for": {
-          "type": "string"
-        },
-        "notes": {
-          "type": "string"
-        },
-        "inventory": {
-          "type": "object",
-          "additionalProperties": false,
+      "allOf": [
+        { "$ref": "#/definitions/MiscellaneousBase" },
+        {
           "properties": {
-            "amount": {
-              "$ref": "measureable_units.json#/definitions/VolumeType"
+            "use_for": {
+              "type": "string"
             },
-            "amount_as_weight": {
-              "$ref": "measureable_units.json#/definitions/MassType"
+            "notes": {
+              "type": "string"
+            },
+            "inventory": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "amount": {
+                  "$ref": "measureable_units.json#/definitions/VolumeType"
+                },
+                "amount_as_weight": {
+                  "$ref": "measureable_units.json#/definitions/MassType"
+                }
+              },
+              "required": ["amount", "amount_as_weight"]
             }
-          },
-          "required": ["amount", "amount_as_weight"]
+          }
         }
-      }
+      ]
     },
     "MiscellaneousAdditionType": {
       "type": "object",

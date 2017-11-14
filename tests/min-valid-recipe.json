@@ -13,7 +13,11 @@
       }
     },
     "miscellaneous_ingredients": {
-      "miscellaneous": {}
+      "miscellaneous": {
+        "name": "name",
+        "type": "fining",
+        "use": "boil"
+      }
     },
     "hop_varieties": {
       "hop": {}
