@@ -25,3 +25,4 @@ const testJson = path => {
 testJson('./min-valid-recipe.json')
 testJson('./MedievalAle.json')
 testJson('./FermentableRecord.json')
+testJson('./HoppedExtract.json')
