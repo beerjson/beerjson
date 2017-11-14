@@ -1,79 +1,79 @@
 {
-  "beer_xml":{
-    "version":2.06,
-    "fermentables":{
-      "fermentable":{
-        "yield_dry_basis":{
-          "fine_grind":1,
-          "coarse_grind":1
+  "beer_xml": {
+    "version": 2.06,
+    "fermentables": {
+      "fermentable": {
+        "yield_dry_basis": {
+          "fine_grind": 1,
+          "coarse_grind": 1
         }
       }
     },
-    "miscellaneous_ingredients":{
-      "miscellaneous":{}
+    "miscellaneous_ingredients": {
+      "miscellaneous": {}
     },
-    "hop_varieties":{
-      "hop":{}
+    "hop_varieties": {
+      "hop": {}
     },
-    "cultures":{
-      "yeast":{}
+    "cultures": {
+      "yeast": {}
     },
-    "profiles":{
-      "water":{}
+    "profiles": {
+      "water": {}
     },
-    "styles":{
-      "style":{
-        "original_gravity":{
-          "minimum":1,
-          "maximum":1
+    "styles": {
+      "style": {
+        "original_gravity": {
+          "minimum": 1,
+          "maximum": 1
         },
-        "final_gravity":{          
-          "minimum":1,
-          "maximum":1
+        "final_gravity": {
+          "minimum": 1,
+          "maximum": 1
         },
-        "international_bitterness_units":{
-          "minimum":1,
-          "maximum":1
+        "international_bitterness_units": {
+          "minimum": 1,
+          "maximum": 1
         },
-        "color":{
-          "minimum":1,
-          "maximum":1
-        }        
+        "color": {
+          "minimum": 1,
+          "maximum": 1
+        }
       }
     },
-    "procedure":{
-      "mash":{
-        "name":"mash",
-        "grain_temperature":68,
-        "mash_steps":{
-          "step":{
-            "name":"step 1",
-            "type":"infusion",
-            "step_temperature":75,
-            "step_time":60
+    "procedure": {
+      "mash": {
+        "name": "mash",
+        "grain_temperature": 68,
+        "mash_steps": {
+          "step": {
+            "name": "step 1",
+            "type": "infusion",
+            "step_temperature": 75,
+            "step_time": 60
           }
         }
       }
     },
-    "recipes":{
-      "recipe":{
-        "name":"my recipe",
-        "type":"all grain",
-        "author":"me",
-        "batch_size":{
-          "volume":"gal",
-          "value":5
+    "recipes": {
+      "recipe": {
+        "name": "my recipe",
+        "type": "all grain",
+        "author": "me",
+        "batch_size": {
+          "volume": "gal",
+          "value": 5
         },
-        "boil_size":{},
-        "boil_time":90,
-        "ingredients":{
-          "grain_bill":{
-            "addition":{
-              "name":"pale ale",
-              "type":"grain",
-              "color":{}
+        "boil_size": {},
+        "boil_time": 90,
+        "ingredients": {
+          "grain_bill": {
+            "addition": {
+              "name": "pale ale",
+              "type": "grain",
+              "color": {}
             }
-          }          
+          }
         }
       }
     }

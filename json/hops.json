@@ -1,119 +1,112 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "id":"https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/hops.json",
-    "type": "object",
-    "additionalProperties": false,
-    "definitions": {
-        "HopVarietyBase": {
-            "type": "object",
-            "description": "HopVarietyBase provides unique properties to identify individual records of a hop variety",
-            "additionalProperties": false,
-            "properties": {
-                "name": {
-                    "type": "string"
-                },
-                "origin": {
-                    "type": "string"
-                },
-                "alpha_acid_units": {
-                    "type": "number"
-                },
-                "beta_acid_units": {
-                    "type": "number"
-                }
-            },
-            "required": [
-                "name",
-                "origin",
-                "alpha_acid_units"
-            ]
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":
+    "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/hops.json",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "HopVarietyBase": {
+      "type": "object",
+      "description":
+        "HopVarietyBase provides unique properties to identify individual records of a hop variety",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
         },
-        "VarietyInformation": {
-            "type": "object",
-            "description": "VarietyInformation collects the attributes of a hop variety to store as record information",
-            "additionalProperties": false,
-            "properties": {
-                "type": {
-                    "type": "string",
-                    "enum": [
-                        "aroma",
-                        "bittering",
-                        "flavor",
-                        "aroma/bittering",
-                        "bittering/flavor",
-                        "aroma/flavor",
-                        "aroma/bittering/flavor"
-                    ]
-                },
-                "notes": {
-                    "type": "string"
-                },
-                "percent_lost": {
-                    "$ref": "measureable_units.json#/definitions/PercentType"
-                },
-                "substitutes": {
-                    "type": "string"
-                },
-                "humulene": {
-                    "type": "number"
-                },
-                "caryophyllene": {
-                    "type": "number"
-                },
-                "cohumulone": {
-                    "type": "number"
-                },
-                "myrcene": {
-                    "type": "number"
-                },
-                "farnesene": {
-                    "type": "number"
-                },
-                "inventory": {
-                    "type": "object",
-                    "additionalProperties": false,
-                    "properties": {
-                        "leaf": {
-                            "$ref": "measureable_units.json#/definitions/MassType"
-                        },
-                        "pellet": {
-                            "$ref": "measureable_units.json#/definitions/MassType"
-                        },
-                        "plug": {
-                            "$ref": "measureable_units.json#/definitions/MassType"
-                        }
-                    }
-                }
-            }
+        "origin": {
+          "type": "string"
         },
-        "HopAdditionType": {
-            "type": "object",
-            "description": "HopAdditionType collects the attributes of a hop ingredient for use in a recipe hop bil",
-            "additionalProperties": false,
-            "properties": {
-                "addition": {
-                    "$ref": "#/definitions/HopVarietyBase"
-                }
-            },
-            "required": [
-                "addition"
-            ]
+        "alpha_acid_units": {
+          "type": "number"
         },
-        "IBUEstimateType": {
-            "properties": {
-                "method": {
-                    "$ref": "#/definitions/IBUMethodType"
-                }
-            }
-        },
-        "IBUMethodType": {
-            "type": "string",
-            "enum": [
-                "Rager",
-                "Tinseth",
-                "Garetz",
-                "Other"
-            ]
+        "beta_acid_units": {
+          "type": "number"
         }
+      },
+      "required": ["name", "origin", "alpha_acid_units"]
+    },
+    "VarietyInformation": {
+      "type": "object",
+      "description":
+        "VarietyInformation collects the attributes of a hop variety to store as record information",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "aroma",
+            "bittering",
+            "flavor",
+            "aroma/bittering",
+            "bittering/flavor",
+            "aroma/flavor",
+            "aroma/bittering/flavor"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        },
+        "percent_lost": {
+          "$ref": "measureable_units.json#/definitions/PercentType"
+        },
+        "substitutes": {
+          "type": "string"
+        },
+        "humulene": {
+          "type": "number"
+        },
+        "caryophyllene": {
+          "type": "number"
+        },
+        "cohumulone": {
+          "type": "number"
+        },
+        "myrcene": {
+          "type": "number"
+        },
+        "farnesene": {
+          "type": "number"
+        },
+        "inventory": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "leaf": {
+              "$ref": "measureable_units.json#/definitions/MassType"
+            },
+            "pellet": {
+              "$ref": "measureable_units.json#/definitions/MassType"
+            },
+            "plug": {
+              "$ref": "measureable_units.json#/definitions/MassType"
+            }
+          }
+        }
+      }
+    },
+    "HopAdditionType": {
+      "type": "object",
+      "description":
+        "HopAdditionType collects the attributes of a hop ingredient for use in a recipe hop bil",
+      "additionalProperties": false,
+      "properties": {
+        "addition": {
+          "$ref": "#/definitions/HopVarietyBase"
+        }
+      },
+      "required": ["addition"]
+    },
+    "IBUEstimateType": {
+      "properties": {
+        "method": {
+          "$ref": "#/definitions/IBUMethodType"
+        }
+      }
+    },
+    "IBUMethodType": {
+      "type": "string",
+      "enum": ["Rager", "Tinseth", "Garetz", "Other"]
     }
+  }
 }

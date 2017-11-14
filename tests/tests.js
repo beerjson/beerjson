@@ -14,7 +14,7 @@ ajv.addSchema(require('../json/yeast.json'))
 
 const validate = ajv.compile(require('../json/BeerXML.json'))
 
-const testJson = path =>{
+const testJson = path => {
   if (!validate(require(path))) {
     console.log(validate.errors)
     process.exit(1)

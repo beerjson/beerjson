@@ -1,242 +1,242 @@
 {
-  "beer_xml":{
-    "version":2.06,
-    "recipes":{
-      "recipe":{
-        "name":"#20 1058 Medieval Ale",
-        "type":"all grain",
-        "author":"",
-        "batch_size":{
-          "volume":"gal",
-          "value":5.5
+  "beer_xml": {
+    "version": 2.06,
+    "recipes": {
+      "recipe": {
+        "name": "#20 1058 Medieval Ale",
+        "type": "all grain",
+        "author": "",
+        "batch_size": {
+          "volume": "gal",
+          "value": 5.5
         },
-        "boil_size":{
-          "volume":"gal",
-          "value":5.5
-        },        
-        "boil_time":{
-          "duration":"min",
-          "value":90.0
-        },        
-        "style":{
-        "name":"Specialty",
-        "category":"Experimental and Historic",
-        "category_number":24,
-        "style_letter":"",
-        "style_guide":"BJCP 1999",
-        "type":"mixed"
+        "boil_size": {
+          "volume": "gal",
+          "value": 5.5
+        },
+        "boil_time": {
+          "duration": "min",
+          "value": 90.0
+        },
+        "style": {
+          "name": "Specialty",
+          "category": "Experimental and Historic",
+          "category_number": 24,
+          "style_letter": "",
+          "style_guide": "BJCP 1999",
+          "type": "mixed"
         },
 
-        "ingredients":{
-          "grain_bill":{
-            "addition":{
-              "name":"Buckwheat Honey",
-              "type":"adjunct",
-              "color":{
-                "scale":"L",
+        "ingredients": {
+          "grain_bill": {
+            "addition": {
+              "name": "Buckwheat Honey",
+              "type": "adjunct",
+              "color": {
+                "scale": "L",
                 "value": 0.0
-              }, 
-              "origin":"America",
-              "amount":{
-                "mass":"lb",
-                "value":2.148
+              },
+              "origin": "America",
+              "amount": {
+                "mass": "lb",
+                "value": 2.148
               }
             },
-            "addition":{
-              "name":"Flaked Barley",
-              "type":"adjunct",
-              "color":{
-                "scale":"L",
+            "addition": {
+              "name": "Flaked Barley",
+              "type": "adjunct",
+              "color": {
+                "scale": "L",
                 "value": 2.2
-              }, 
-              "origin":"America",
-              "amount":{
-                "mass":"lb",
-                "value":0.500
+              },
+              "origin": "America",
+              "amount": {
+                "mass": "lb",
+                "value": 0.5
               }
             },
-            "addition":{
-              "name":"Roasted Barley",
-              "type":"grain",
-              "color":{
-                "scale":"L",
+            "addition": {
+              "name": "Roasted Barley",
+              "type": "grain",
+              "color": {
+                "scale": "L",
                 "value": 450.0
-              }, 
-              "origin":"America",
-              "amount":{
-                "mass":"lb",
-                "value":0.250
+              },
+              "origin": "America",
+              "amount": {
+                "mass": "lb",
+                "value": 0.25
               }
             },
-            "addition":{
-              "name":"Unmalted Wheat",
-              "type":"grain",
-              "color":{
-                "scale":"L",
+            "addition": {
+              "name": "Unmalted Wheat",
+              "type": "grain",
+              "color": {
+                "scale": "L",
                 "value": 2.7
-              }, 
-              "origin":"America",
-              "amount":{
-                "mass":"lb",
-                "value":1.500
+              },
+              "origin": "America",
+              "amount": {
+                "mass": "lb",
+                "value": 1.5
               }
             },
-            "addition":{
-              "name":"Pale Malt(2-row)",
-              "type":"grain",
-              "color":{
-                "scale":"L",
+            "addition": {
+              "name": "Pale Malt(2-row)",
+              "type": "grain",
+              "color": {
+                "scale": "L",
                 "value": 1.8
-              }, 
-              "origin":"America",
-              "amount":{
-                "mass":"lb",
-                "value":8.000
+              },
+              "origin": "America",
+              "amount": {
+                "mass": "lb",
+                "value": 8.0
               }
             },
-            "addition":{
-              "name":"Crystal Malt",
-              "type":"grain",
-              "color":{
-                "scale":"L",
+            "addition": {
+              "name": "Crystal Malt",
+              "type": "grain",
+              "color": {
+                "scale": "L",
                 "value": 60.0
-              }, 
-              "origin":"America",
-              "amount":{
-                "mass":"lb",
-                "value":1.000
+              },
+              "origin": "America",
+              "amount": {
+                "mass": "lb",
+                "value": 1.0
               }
             }
           },
-          "adjuncts":{
-            "addition":{
-              "name":"Bitter Orange Peel",
-              "type":"spice",
-              "use":"boil",
-              "amount_as_weight":{
-                "mass":"oz",
-                "value":0.63
+          "adjuncts": {
+            "addition": {
+              "name": "Bitter Orange Peel",
+              "type": "spice",
+              "use": "boil",
+              "amount_as_weight": {
+                "mass": "oz",
+                "value": 0.63
               },
-              "time":{
-                "duration":"min",
-                "value":60
+              "time": {
+                "duration": "min",
+                "value": 60
               }
             },
-            "addition":{
-              "name":"Licorice Stick",
-              "type":"spice",
-              "use":"boil",
-              "amount_as_weight":{
-                "mass":"oz",
-                "value":0.75
+            "addition": {
+              "name": "Licorice Stick",
+              "type": "spice",
+              "use": "boil",
+              "amount_as_weight": {
+                "mass": "oz",
+                "value": 0.75
               },
-              "time":{
-                "duration":"min",
-                "value":60
+              "time": {
+                "duration": "min",
+                "value": 60
               }
             },
-            "addition":{
-              "name":"Mugwort",
-              "type":"herb",
-              "use":"boil",
-              "amount_as_weight":{
-                "mass":"oz",
-                "value":1.00
+            "addition": {
+              "name": "Mugwort",
+              "type": "herb",
+              "use": "boil",
+              "amount_as_weight": {
+                "mass": "oz",
+                "value": 1.0
               },
-              "time":{
-                "duration":"min",
-                "value":60.0
+              "time": {
+                "duration": "min",
+                "value": 60.0
               }
             },
-            "addition":{
-              "name":"Juniper Berries",
-              "type":"fruit",
-              "use":"secondary",
-              "amount_as_weight":{
-                "mass":"oz",
-                "value":1.00
+            "addition": {
+              "name": "Juniper Berries",
+              "type": "fruit",
+              "use": "secondary",
+              "amount_as_weight": {
+                "mass": "oz",
+                "value": 1.0
               },
-              "time":{
-                "duration":"day",
-                "value":0.0
+              "time": {
+                "duration": "day",
+                "value": 0.0
               }
             },
-            "addition":{
-              "name":"Lemon Balm",
-              "type":"herb",
-              "use":"boil",
-              "amount_as_weight":{
-                "mass":"oz",
-                "value":3.00
+            "addition": {
+              "name": "Lemon Balm",
+              "type": "herb",
+              "use": "boil",
+              "amount_as_weight": {
+                "mass": "oz",
+                "value": 3.0
               },
-              "time":{
-                "duration":"min",
-                "value":0.0
+              "time": {
+                "duration": "min",
+                "value": 0.0
               }
-            }                        
+            }
           },
-          "yeast_additions":{
-            "addition":{
-              "name":"English Ale",
-              "type":"ale",
-              "form":"liquid",
-              "laboratory":"Ithaca Beer C",
-              "product_id":"",
-              "amount":{
-                "volume":"ml",
-                "value":0.0
+          "yeast_additions": {
+            "addition": {
+              "name": "English Ale",
+              "type": "ale",
+              "form": "liquid",
+              "laboratory": "Ithaca Beer C",
+              "product_id": "",
+              "amount": {
+                "volume": "ml",
+                "value": 0.0
+              }
+            }
+          }
+        },
+        "mash": {
+          "name": "Simple Mash Type - Single Step",
+          "grain_temperature": {
+            "degrees": "F",
+            "value": 80.0
+          },
+          "notes": "",
+          "mash_steps": {
+            "step": {
+              "name": "Saccharification Rest",
+              "type": "infusion",
+              "infuse_amount": {
+                "volume": "qt",
+                "value": 22.5
+              },
+              "step_temperature": {
+                "degrees": "F",
+                "value": 158.0
+              },
+              "step_time": {
+                "duration": "min",
+                "value": 70.0
+              },
+              "ramp_time": {
+                "duration": "min",
+                "value": 5.0
+              },
+              "end_temperature": {
+                "duration": "min",
+                "value": 5.0
+              },
+              "description": "Add 22.50 qt of water at 165.0 F",
+              "water_grain_ratio": 2.09,
+              "infuse_temperature": {
+                "degrees": "F",
+                "value": 165.0
               }
             }
           }
         },
-        "mash":{
-          "name":"Simple Mash Type - Single Step",
-          "grain_temperature":{
-            "degrees":"F",
-            "value":80.0
-          },
-          "notes":"",
-          "mash_steps":{
-            "step":{
-              "name":"Saccharification Rest",
-              "type":"infusion",
-              "infuse_amount":{
-                "volume":"qt",
-                "value":22.50
-              }, 
-              "step_temperature":{
-                "degrees":"F",
-                "value":158.0
-              }, 
-              "step_time":{
-                "duration":"min",
-                "value":70.0
-              },
-              "ramp_time":{
-                "duration":"min",
-                "value":5.0
-              }, 
-              "end_temperature":{
-                "duration":"min",
-                "value":5.0
-              }, 
-              "description":"Add 22.50 qt of water at 165.0 F",
-              "water_grain_ratio":2.09,              
-              "infuse_temperature":{
-                "degrees":"F",
-                "value":165.0
-              } 
-            }
-          }
+        "notes": "",
+        "original_gravity": {
+          "density": "sg",
+          "value": 1.059
         },
-        "notes":"",
-        "original_gravity":{
-          "density":"sg",
-          "value":1.059
-        },
-        "ibu_estimate":{
-          "method":"Other",
-          "value":0
+        "ibu_estimate": {
+          "method": "Other",
+          "value": 0
         }
       }
     }
