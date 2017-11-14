@@ -44,55 +44,59 @@
       "type": "object",
       "description":
         "FermentableType collects the attributes of a fermentable ingredient to store as record information",
-      "additionalProperties": false,
-      "properties": {
-        "yield_dry_basis": {
-          "type": "object",
-          "additionalProperties": false,
+      "allOf": [
+        { "$ref": "#/definitions/FermentableBase" },
+        {
           "properties": {
-            "fine_grind": {
+            "yield_dry_basis": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "fine_grind": {
+                  "$ref": "measureable_units.json#/definitions/PercentType"
+                },
+                "coarse_grind": {
+                  "$ref": "measureable_units.json#/definitions/PercentType"
+                },
+                "fine_coarse_difference": {
+                  "$ref": "measureable_units.json#/definitions/PercentType"
+                }
+              },
+              "required": ["fine_grind", "coarse_grind"]
+            },
+            "notes": {
+              "type": "string"
+            },
+            "moisture": {
               "$ref": "measureable_units.json#/definitions/PercentType"
             },
-            "coarse_grind": {
+            "diastatic_power": {
+              "type": "number"
+            },
+            "protein": {
               "$ref": "measureable_units.json#/definitions/PercentType"
             },
-            "fine_coarse_difference": {
+            "soluble_nitrogen_ratio": {
+              "type": "number"
+            },
+            "max_in_batch": {
               "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "recommend_mash": {
+              "type": "boolean"
+            },
+            "ibu_gal_per_lb": {
+              "type": "number"
+            },
+            "potential": {
+              "$ref": "measureable_units.json#/definitions/DensityType"
+            },
+            "inventory": {
+              "$ref": "measureable_units.json#/definitions/MassType"
             }
-          },
-          "required": ["fine_grind", "coarse_grind"]
-        },
-        "notes": {
-          "type": "string"
-        },
-        "moisture": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
-        },
-        "diastatic_power": {
-          "type": "number"
-        },
-        "protein": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
-        },
-        "soluble_nitrogen_ratio": {
-          "type": "number"
-        },
-        "max_in_batch": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
-        },
-        "recommend_mash": {
-          "type": "boolean"
-        },
-        "ibu_gal_per_lb": {
-          "type": "number"
-        },
-        "potential": {
-          "$ref": "measureable_units.json#/definitions/DensityType"
-        },
-        "inventory": {
-          "$ref": "measureable_units.json#/definitions/MassType"
+          }
         }
-      },
+      ],
       "required": ["yield_dry_basis"]
     },
     "FermentableAdditionType": {
