@@ -20,7 +20,11 @@
       }
     },
     "hop_varieties": {
-      "hop": {}
+      "hop": {
+        "name": "name",
+        "origin": "US",
+        "alpha_acid_units": 5
+      }
     },
     "cultures": {
       "yeast": {}

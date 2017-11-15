@@ -9,7 +9,6 @@
       "type": "object",
       "description":
         "HopVarietyBase provides unique properties to identify individual records of a hop variety",
-      "additionalProperties": false,
       "properties": {
         "name": {
           "type": "string"
@@ -30,60 +29,64 @@
       "type": "object",
       "description":
         "VarietyInformation collects the attributes of a hop variety to store as record information",
-      "additionalProperties": false,
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "aroma",
-            "bittering",
-            "flavor",
-            "aroma/bittering",
-            "bittering/flavor",
-            "aroma/flavor",
-            "aroma/bittering/flavor"
-          ]
-        },
-        "notes": {
-          "type": "string"
-        },
-        "percent_lost": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
-        },
-        "substitutes": {
-          "type": "string"
-        },
-        "humulene": {
-          "type": "number"
-        },
-        "caryophyllene": {
-          "type": "number"
-        },
-        "cohumulone": {
-          "type": "number"
-        },
-        "myrcene": {
-          "type": "number"
-        },
-        "farnesene": {
-          "type": "number"
-        },
-        "inventory": {
-          "type": "object",
-          "additionalProperties": false,
+      "allOf": [
+        { "$ref": "#/definitions/HopVarietyBase" },
+        {
           "properties": {
-            "leaf": {
-              "$ref": "measureable_units.json#/definitions/MassType"
+            "type": {
+              "type": "string",
+              "enum": [
+                "aroma",
+                "bittering",
+                "flavor",
+                "aroma/bittering",
+                "bittering/flavor",
+                "aroma/flavor",
+                "aroma/bittering/flavor"
+              ]
             },
-            "pellet": {
-              "$ref": "measureable_units.json#/definitions/MassType"
+            "notes": {
+              "type": "string"
             },
-            "plug": {
-              "$ref": "measureable_units.json#/definitions/MassType"
+            "percent_lost": {
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "substitutes": {
+              "type": "string"
+            },
+            "humulene": {
+              "type": "number"
+            },
+            "caryophyllene": {
+              "type": "number"
+            },
+            "cohumulone": {
+              "type": "number"
+            },
+            "myrcene": {
+              "type": "number"
+            },
+            "farnesene": {
+              "type": "number"
+            },
+            "inventory": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "leaf": {
+                  "$ref": "measureable_units.json#/definitions/MassType"
+                },
+                "pellet": {
+                  "$ref": "measureable_units.json#/definitions/MassType"
+                },
+                "plug": {
+                  "$ref": "measureable_units.json#/definitions/MassType"
+                }
+              }
             }
           }
         }
-      }
+      ]
     },
     "HopAdditionType": {
       "type": "object",
