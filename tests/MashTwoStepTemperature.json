@@ -1,0 +1,60 @@
+{
+  "beer_xml": {
+    "version": 2.01,
+    "procedure": {
+      "mash": {
+        "name": "Two Step Temperature, 68C",
+        "grain_temperature": {
+          "degrees": "C",
+          "value": 22.0
+        },
+        "sparge_temperature": {
+          "degrees": "C",
+          "value": 78.0
+        },
+        "mash_steps": {
+          "step": {
+            "name": "Protein Rest",
+            "type": "temperature",
+            "infuse_amount": {
+              "volume": "l",
+              "value": 15.0
+            },
+            "step_temperature": {
+              "degrees": "C",
+              "value": 49.0
+            },
+            "step_time": {
+              "duration": "min",
+              "value": 20.0
+            },
+            "ramp_time": {
+              "duration": "min",
+              "value": 10.0
+            }
+          },
+          "step": {
+            "name": "Conversion Step, 68 C",
+            "type": "temperature",
+            "infuse_amount": {
+              "volume": "l",
+              "value": 15.0
+            },
+            "step_temperature": {
+              "degrees": "C",
+              "value": 68.0
+            },
+            "step_time": {
+              "duration": "min",
+              "value": 60.0
+            },
+            "ramp_time": {
+              "duration": "min",
+              "value": 20.0
+            }
+          }
+        }
+      }
+    }
+  }
+}

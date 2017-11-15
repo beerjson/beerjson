@@ -1,0 +1,32 @@
+{
+  "beer_xml": {
+    "version": 2.01,
+    "procedure": {
+      "mash": {
+        "name": "Single Step Infusion, 68 C",
+        "grain_temperature": {
+          "degrees": "C",
+          "value": 22.0
+        },
+        "mash_steps": {
+          "step": {
+            "name": "Conversion Step, 68C",
+            "type": "infusion",
+            "infuse_amount": {
+              "volume": "l",
+              "value": 10.0
+            },
+            "step_temperature": {
+              "degrees": "C",
+              "value": 68.0
+            },
+            "step_time": {
+              "duration": "min",
+              "value": 60.0
+            }
+          }
+        }
+      }
+    }
+  }
+}
