@@ -95,7 +95,36 @@
       "additionalProperties": false,
       "properties": {
         "addition": {
-          "$ref": "#/definitions/HopVarietyBase"
+          "allOf": [
+            { "$ref": "#/definitions/HopVarietyBase" },
+            {
+              "form": {
+                "type": "string",
+                "enum": ["leaf", "pellet", "plug"]
+              }
+            },
+            {
+              "use": {
+                "type": "string",
+                "enum": [
+                  "boil",
+                  "dry hop",
+                  "first wort",
+                  "hopback",
+                  "mash",
+                  "continuous boil addition"
+                ]
+              }
+            },
+            {
+              "amount": {
+                "$ref": "measureable_units.json#/definitions/MassType"
+              },
+              "time": {
+                "$ref": "measureable_units.json#/definitions/TimeType"
+              }
+            }
+          ]
         }
       },
       "required": ["addition"]

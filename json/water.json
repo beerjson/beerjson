@@ -67,7 +67,14 @@
       "additionalProperties": false,
       "properties": {
         "addition": {
-          "$ref": "#/definitions/WaterBase"
+          "allOf": [
+            { "$ref": "#/definitions/WaterBase" },
+            {
+              "amount": {
+                "$ref": "measureable_units.json#/definitions/VolumeType"
+              }
+            }
+          ]
         }
       },
       "required": ["addition"]

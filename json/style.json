@@ -105,7 +105,8 @@
     },
     "RecipeStyleType": {
       "description":
-        "RecipeStyleType defines style information stored in a recipe record"
+        "RecipeStyleType defines style information stored in a recipe record",
+      "allOf": [{ "$ref": "#/definitions/StyleBase" }]
     },
     "StyleCategories": {
       "type": "string",
