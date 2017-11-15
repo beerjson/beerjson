@@ -1,0 +1,29 @@
+{
+  "beer_xml": {
+    "version": 2.01,
+    "cultures": {
+      "yeast": {
+        "name": "German Ale",
+        "type": "ale",
+        "form": "liquid",
+        "laboratory": "Wyeast Labs",
+        "product_id": "1007",
+        "temperature_range": {
+          "minimum": {
+            "degrees": "C",
+            "value": 12.8
+          },
+          "maximum": {
+            "degrees": "C",
+            "value": 20.0
+          }
+        },
+        "flocculation": "low",
+        "attenuation": 75.0,
+        "notes":
+          "Crisp dry flavor with a hint of mild flavor. Great for many continental ales.",
+        "best_for": "German Ales, Alts, Kolsch, Dry Stouts"
+      }
+    }
+  }
+}

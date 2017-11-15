@@ -34,48 +34,52 @@
       "type": "object",
       "description":
         "CultureInformation collects the attributes of a yeast culture to store as record information",
-      "additionalProperties": false,
-      "properties": {
-        "temperature_range": {
-          "$ref": "measureable_units.json#/definitions/TemperatureRangeType"
-        },
-        "flocculation": {
-          "$ref": "measureable_units.json#/definitions/QualitativeRangeType"
-        },
-        "attenuation": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
-        },
-        "alcohol_tolerance": {
-          "$ref": "measureable_units.json#/definitions/PercentRangeType"
-        },
-        "notes": {
-          "type": "string"
-        },
-        "best_for": {
-          "type": "string"
-        },
-        "max_reuse": {
-          "type": "integer"
-        },
-        "inventory": {
-          "type": "object",
-          "additionalProperties": false,
+      "allOf": [
+        { "$ref": "#/definitions/CultureBase" },
+        {
           "properties": {
-            "liquid": {
-              "$ref": "measureable_units.json#/definitions/VolumeType"
+            "temperature_range": {
+              "$ref": "measureable_units.json#/definitions/TemperatureRangeType"
             },
-            "dry": {
-              "$ref": "measureable_units.json#/definitions/MassType"
+            "flocculation": {
+              "$ref": "measureable_units.json#/definitions/QualitativeRangeType"
             },
-            "slant": {
-              "$ref": "measureable_units.json#/definitions/VolumeType"
+            "attenuation": {
+              "$ref": "measureable_units.json#/definitions/PercentType"
             },
-            "culture": {
-              "$ref": "measureable_units.json#/definitions/VolumeType"
+            "alcohol_tolerance": {
+              "$ref": "measureable_units.json#/definitions/PercentRangeType"
+            },
+            "notes": {
+              "type": "string"
+            },
+            "best_for": {
+              "type": "string"
+            },
+            "max_reuse": {
+              "type": "integer"
+            },
+            "inventory": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "liquid": {
+                  "$ref": "measureable_units.json#/definitions/VolumeType"
+                },
+                "dry": {
+                  "$ref": "measureable_units.json#/definitions/MassType"
+                },
+                "slant": {
+                  "$ref": "measureable_units.json#/definitions/VolumeType"
+                },
+                "culture": {
+                  "$ref": "measureable_units.json#/definitions/VolumeType"
+                }
+              }
             }
           }
         }
-      }
+      ]
     },
     "YeastAdditionType": {
       "type": "object",

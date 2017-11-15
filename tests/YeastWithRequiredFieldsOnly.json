@@ -1,0 +1,14 @@
+{
+  "beer_xml": {
+    "version": 2.01,
+    "cultures": {
+      "yeast": {
+        "name": "Ole English Ale Yeast",
+        "type": "ale",
+        "form": "liquid",
+        "laboratory": "",
+        "product_id": ""
+      }
+    }
+  }
+}

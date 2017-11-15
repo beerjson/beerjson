@@ -27,7 +27,13 @@
       }
     },
     "cultures": {
-      "yeast": {}
+      "yeast": {
+        "name": "Ole English Ale Yeast",
+        "type": "ale",
+        "form": "liquid",
+        "laboratory": "",
+        "product_id": ""
+      }
     },
     "profiles": {
       "water": {}
