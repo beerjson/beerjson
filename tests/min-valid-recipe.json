@@ -36,7 +36,16 @@
       }
     },
     "profiles": {
-      "water": {}
+      "water": {
+        "name": "name",
+        "calcium": 295.0,
+        "bicarbonate": 300.0,
+        "sulfate": 725.0,
+        "chloride": 25.0,
+        "sodium": 55.0,
+        "magnesium": 45.0,
+        "pH": 8.0
+      }
     },
     "styles": {
       "style": {
