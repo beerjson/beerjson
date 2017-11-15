@@ -9,7 +9,6 @@
       "type": "object",
       "description":
         "The descriptive base type for both beer style guideline records and recipe style provisions. Provides unique properties to identify individual beer styles",
-      "additionalProperties": false,
       "properties": {
         "name": {
           "type": "string"
@@ -46,51 +45,57 @@
       "type": "object",
       "description":
         "StyleType provide information for BJCP Style categorization",
-      "additionalProperties": false,
-      "properties": {
-        "original_gravity": {
-          "$ref": "measureable_units.json#/definitions/DensityRangeType"
-        },
-        "final_gravity": {
-          "$ref": "measureable_units.json#/definitions/DensityRangeType"
-        },
-        "international_bitterness_units": {
-          "$ref": "measureable_units.json#/definitions/QuantitativeRangeType"
-        },
-        "color": {
-          "$ref": "measureable_units.json#/definitions/ColorRangeType"
-        },
-        "carbonation": {
-          "$ref": "measureable_units.json#/definitions/QuantitativeRangeType"
-        },
-        "alcohol_by_volume": {
-          "$ref": "measureable_units.json#/definitions/PercentRangeType"
-        },
-        "notes": {
-          "type": "string"
-        },
-        "aroma": {
-          "type": "string"
-        },
-        "appearance": {
-          "type": "string"
-        },
-        "flavor": {
-          "type": "string"
-        },
-        "mouthfeel": {
-          "type": "string"
-        },
-        "overall_impression": {
-          "type": "string"
-        },
-        "ingredients": {
-          "type": "string"
-        },
-        "examples": {
-          "type": "string"
+      "allOf": [
+        { "$ref": "#/definitions/StyleBase" },
+        {
+          "properties": {
+            "original_gravity": {
+              "$ref": "measureable_units.json#/definitions/DensityRangeType"
+            },
+            "final_gravity": {
+              "$ref": "measureable_units.json#/definitions/DensityRangeType"
+            },
+            "international_bitterness_units": {
+              "$ref":
+                "measureable_units.json#/definitions/QuantitativeRangeType"
+            },
+            "color": {
+              "$ref": "measureable_units.json#/definitions/ColorRangeType"
+            },
+            "carbonation": {
+              "$ref":
+                "measureable_units.json#/definitions/QuantitativeRangeType"
+            },
+            "alcohol_by_volume": {
+              "$ref": "measureable_units.json#/definitions/PercentRangeType"
+            },
+            "notes": {
+              "type": "string"
+            },
+            "aroma": {
+              "type": "string"
+            },
+            "appearance": {
+              "type": "string"
+            },
+            "flavor": {
+              "type": "string"
+            },
+            "mouthfeel": {
+              "type": "string"
+            },
+            "overall_impression": {
+              "type": "string"
+            },
+            "ingredients": {
+              "type": "string"
+            },
+            "examples": {
+              "type": "string"
+            }
+          }
         }
-      },
+      ],
       "required": [
         "original_gravity",
         "final_gravity",

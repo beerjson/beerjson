@@ -49,6 +49,12 @@
     },
     "styles": {
       "style": {
+        "name": "name",
+        "category": "European Pale Ale",
+        "category_number": 2,
+        "style_letter": "A",
+        "style_guide": "BJCP",
+        "type": "lager",
         "original_gravity": {
           "minimum": 1,
           "maximum": 1
