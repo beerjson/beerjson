@@ -34,7 +34,7 @@ This element must be one of the following enum values:
 * `sugar`
 
 ### color
- `color` (, required)
+ `color` ([ColorType](measureable_units.json.md/#ColorType), required)
 
 ### origin
  `origin` (string)

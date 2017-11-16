@@ -14,10 +14,10 @@ Properties of the `FermentationStageType` object:
 * [temperature](#temperature)
 
 ### aging
- `aging` (, required)
+ `aging` ([TimeType](measureable_units.json.md/#TimeType), required)
 
 ### temperature
- `temperature` (, required)
+ `temperature` ([TemperatureType](measureable_units.json.md/#TemperatureType), required)
 
 ## `RecipeType` (object)
 
@@ -67,19 +67,19 @@ This element must be one of the following enum values:
  `coauthor` (string)
 
 ### created
- `created`
+ `created` ([DateType](measureable_units.json.md/#DateType))
 
 ### batch_size
- `batch_size` (, required)
+ `batch_size` ([VolumeType](measureable_units.json.md/#VolumeType), required)
 
 ### boil_size
- `boil_size` (, required)
+ `boil_size` ([VolumeType](measureable_units.json.md/#VolumeType), required)
 
 ### boil_time
- `boil_time` (, required)
+ `boil_time` ([TimeType](measureable_units.json.md/#TimeType), required)
 
 ### efficiency
- `efficiency`
+ `efficiency` ([PercentType](measureable_units.json.md/#PercentType))
 
 ### style
  `style` (RecipeStyleType)
@@ -96,40 +96,40 @@ Properties of the `ingredients` object:
 * [water_profile](#water_profile)
 
 #### grain_bill
- `grain_bill` (, required)
+ `grain_bill` ([FermentableAdditionType](grain.json.md/#FermentableAdditionType), required)
 
 #### hop_bill
- `hop_bill`
+ `hop_bill` ([HopAdditionType](hops.json.md/#HopAdditionType))
 
 #### adjuncts
- `adjuncts`
+ `adjuncts` ([MiscellaneousAdditionType](misc.json.md/#MiscellaneousAdditionType))
 
 #### yeast_additions
- `yeast_additions`
+ `yeast_additions` ([YeastAdditionType](yeast.json.md/#YeastAdditionType))
 
 #### water_profile
- `water_profile`
+ `water_profile` ([WaterAdditionType](water.json.md/#WaterAdditionType))
 
 ### mash
- `mash`
+ `mash` ([MashProcedureType](mash.json.md/#MashProcedureType))
 
 ### notes
  `notes` (string)
 
 ### original_gravity
- `original_gravity`
+ `original_gravity` ([DensityType](measureable_units.json.md/#DensityType))
 
 ### final_gravity
- `final_gravity`
+ `final_gravity` ([DensityType](measureable_units.json.md/#DensityType))
 
 ### alcohol_by_volume
- `alcohol_by_volume`
+ `alcohol_by_volume` ([PercentType](measureable_units.json.md/#PercentType))
 
 ### ibu_estimate
- `ibu_estimate`
+ `ibu_estimate` ([IBUEstimateType](hops.json.md/#IBUEstimateType))
 
 ### color_estimate
- `color_estimate`
+ `color_estimate` ([ColorType](measureable_units.json.md/#ColorType))
 
 ### carbonation
  `carbonation` (number)

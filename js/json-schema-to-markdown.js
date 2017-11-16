@@ -23,9 +23,19 @@ function generateElementTitle(
     text.push(' `' + elementName + '`')
   }
   if (elementType || isRequired) {
+    let typeName = elementType
+    let link = undefined
+    if (elementType && elementType.ref) {
+      typeName = elementType.ref.typeName
+      link = elementType.ref.fileBase + '.json.md/#' + typeName
+    }
     text.push(' (')
-    if (elementType) {
-      text.push(elementType)
+    if (typeName) {
+      if (link) {
+        text.push(`[${typeName}](${link})`)
+      } else {
+        text.push(typeName)
+      }
     }
     if (isEnum) {
       text.push(', enum')
@@ -243,8 +253,17 @@ function generatePropertySection(octothorpes, schema, subSchemas) {
 function getActualType(schema, subSchemas) {
   if (schema.type) {
     return schema.type
-  } else if (schema['$ref'] && subSchemas[schema['$ref']]) {
-    return subSchemas[schema['$ref']]
+  } else if (schema['$ref']) {
+    if (subSchemas[schema['$ref']]) {
+      return subSchemas[schema['$ref']]
+    } else {
+      let matches = []
+      const regex = /(.+).json#(.*)\/([a-zA-Z]+)$/g
+      match = regex.exec(schema['$ref'])
+      const fileBase = match[1]
+      const typeName = match[3]
+      return { ref: { fileBase, typeName } }
+    }
   } else {
     return undefined
   }

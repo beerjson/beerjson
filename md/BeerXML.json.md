@@ -20,7 +20,7 @@ Properties of the `beer_xml` object:
 * [recipes](#recipes)
 
 ## version
- `version`
+ `version` ([VersionType](measureable_units.json.md/#VersionType))
 
 ## fermentables
  `fermentables` (object)
@@ -32,7 +32,7 @@ Properties of the `fermentables` object:
 * [fermentable](#fermentable)
 
 ### fermentable
- `fermentable` (, required)
+ `fermentable` ([FermentableType](grain.json.md/#FermentableType), required)
 
 ## miscellaneous_ingredients
  `miscellaneous_ingredients` (object)
@@ -44,7 +44,7 @@ Properties of the `miscellaneous_ingredients` object:
 * [miscellaneous](#miscellaneous)
 
 ### miscellaneous
- `miscellaneous` (, required)
+ `miscellaneous` ([MiscellaneousType](misc.json.md/#MiscellaneousType), required)
 
 ## hop_varieties
  `hop_varieties` (object)
@@ -56,7 +56,7 @@ Properties of the `hop_varieties` object:
 * [hop](#hop)
 
 ### hop
- `hop` (, required)
+ `hop` ([VarietyInformation](hops.json.md/#VarietyInformation), required)
 
 ## cultures
  `cultures` (object)
@@ -68,7 +68,7 @@ Properties of the `cultures` object:
 * [yeast](#yeast)
 
 ### yeast
- `yeast` (, required)
+ `yeast` ([CultureInformation](yeast.json.md/#CultureInformation), required)
 
 ## profiles
  `profiles` (object)
@@ -80,7 +80,7 @@ Properties of the `profiles` object:
 * [water](#water)
 
 ### water
- `water` (, required)
+ `water` ([WaterType](water.json.md/#WaterType), required)
 
 ## styles
  `styles` (object)
@@ -92,7 +92,7 @@ Properties of the `styles` object:
 * [style](#style)
 
 ### style
- `style` (, required)
+ `style` ([StyleType](style.json.md/#StyleType), required)
 
 ## procedure
  `procedure` (object)
@@ -104,7 +104,7 @@ Properties of the `procedure` object:
 * [mash](#mash)
 
 ### mash
- `mash` (, required)
+ `mash` ([MashProcedureType](mash.json.md/#MashProcedureType), required)
 
 ## recipes
  `recipes` (object)
@@ -116,4 +116,4 @@ Properties of the `recipes` object:
 * [recipe](#recipe)
 
 ### recipe
- `recipe` (, required)
+ `recipe` ([RecipeType](recipes.json.md/#RecipeType), required)

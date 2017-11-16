@@ -37,19 +37,19 @@ This element must be one of the following enum values:
 * `decoction`
 
 ### infuse_amount
- `infuse_amount`
+ `infuse_amount` ([VolumeType](measureable_units.json.md/#VolumeType))
 
 ### step_temperature
- `step_temperature` (, required)
+ `step_temperature` ([TemperatureType](measureable_units.json.md/#TemperatureType), required)
 
 ### step_time
- `step_time` (, required)
+ `step_time` ([TimeType](measureable_units.json.md/#TimeType), required)
 
 ### ramp_time
- `ramp_time`
+ `ramp_time` ([TimeType](measureable_units.json.md/#TimeType))
 
 ### end_temperature
- `end_temperature`
+ `end_temperature` ([TemperatureType](measureable_units.json.md/#TemperatureType))
 
 ### description
  `description` (string)
@@ -58,7 +58,7 @@ This element must be one of the following enum values:
  `water_grain_ratio` (number)
 
 ### decoction_amount
- `decoction_amount`
+ `decoction_amount` ([VolumeType](measureable_units.json.md/#VolumeType))
 
 ### infuse_temperature
- `infuse_temperature`
+ `infuse_temperature` ([TemperatureType](measureable_units.json.md/#TemperatureType))

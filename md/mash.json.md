@@ -23,10 +23,10 @@ Properties of the `MashProcedureType` object:
  `name` (string, required)
 
 ### grain_temperature
- `grain_temperature` (, required)
+ `grain_temperature` ([TemperatureType](measureable_units.json.md/#TemperatureType), required)
 
 ### sparge_temperature
- `sparge_temperature`
+ `sparge_temperature` ([TemperatureType](measureable_units.json.md/#TemperatureType))
 
 ### pH
  `pH` (number)
@@ -42,4 +42,4 @@ Properties of the `mash_steps` object:
 * [step](#step)
 
 #### step
- `step` (, required)
+ `step` ([MashStepType](mash_step.json.md/#MashStepType), required)
