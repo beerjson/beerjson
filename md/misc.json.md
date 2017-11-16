@@ -6,7 +6,8 @@ The schema defines the following properties:
 
 The schema defines the following additional types:
 
-## `MiscellaneousBase` (object)
+## MiscellaneousBase
+`MiscellaneousBase` (object)
 
 MiscellaneousBase provides unique properties to identify individual records of adjunct ingredients
 
@@ -43,11 +44,13 @@ This element must be one of the following enum values:
 * `secondary`
 * `bottling`
 
-## `MiscellaneousType` (object)
+## MiscellaneousType
+`MiscellaneousType` (object)
 
 MiscellaneousType collects the attributes of a adjunct ingredient to store as record information
 
-## `MiscellaneousAdditionType` (object)
+## MiscellaneousAdditionType
+`MiscellaneousAdditionType` (object)
 
 MiscellaneousAdditionType collects the attributes of an adjunct ingredient for use in a recipe adjunct bill
 

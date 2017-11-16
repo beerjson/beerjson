@@ -6,7 +6,8 @@ The schema defines the following properties:
 
 The schema defines the following additional types:
 
-## `StyleBase` (object)
+## StyleBase
+`StyleBase` (object)
 
 The descriptive base type for both beer style guideline records and recipe style provisions. Provides unique properties to identify individual beer styles
 
@@ -41,12 +42,15 @@ Additional restrictions:
 ### type
  `type` (StyleCategories, required)
 
-## `StyleType` (object)
+## StyleType
+`StyleType` (object)
 
 StyleType provide information for BJCP Style categorization
 
-## `RecipeStyleType` (undefined)
+## RecipeStyleType
+`RecipeStyleType` (undefined)
 
 RecipeStyleType defines style information stored in a recipe record
 
-## `StyleCategories` (string)
+## StyleCategories
+`StyleCategories` (string)

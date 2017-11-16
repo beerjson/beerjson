@@ -27,7 +27,7 @@ function generateElementTitle(
     let link = undefined
     if (elementType && elementType.ref) {
       typeName = elementType.ref.typeName
-      link = elementType.ref.fileBase + '.json.md/#' + typeName
+      link = elementType.ref.fileBase + '.json.md/#' + typeName.toLowerCase()
     }
     text.push(' (')
     if (typeName) {
@@ -315,7 +315,9 @@ module.exports = function(schema, startingOctothorpes) {
     text.push('The schema defines the following additional types:')
     Object.keys(schema.definitions).forEach(function(subSchemaTypeName) {
       text.push(
-        '## `' +
+        '## ' +
+          subSchemaTypeName +
+          '\n`' +
           subSchemaTypeName +
           '` (' +
           schema.definitions[subSchemaTypeName].type +

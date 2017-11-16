@@ -6,7 +6,8 @@ The schema defines the following properties:
 
 The schema defines the following additional types:
 
-## `FermentationStageType` (object)
+## FermentationStageType
+`FermentationStageType` (object)
 
 Properties of the `FermentationStageType` object:
 
@@ -14,12 +15,13 @@ Properties of the `FermentationStageType` object:
 * [temperature](#temperature)
 
 ### aging
- `aging` ([TimeType](measureable_units.json.md/#TimeType), required)
+ `aging` ([TimeType](measureable_units.json.md/#timetype), required)
 
 ### temperature
- `temperature` ([TemperatureType](measureable_units.json.md/#TemperatureType), required)
+ `temperature` ([TemperatureType](measureable_units.json.md/#temperaturetype), required)
 
-## `RecipeType` (object)
+## RecipeType
+`RecipeType` (object)
 
 RecipeType composes the information stored in a beer_xml recipe
 
@@ -67,19 +69,19 @@ This element must be one of the following enum values:
  `coauthor` (string)
 
 ### created
- `created` ([DateType](measureable_units.json.md/#DateType))
+ `created` ([DateType](measureable_units.json.md/#datetype))
 
 ### batch_size
- `batch_size` ([VolumeType](measureable_units.json.md/#VolumeType), required)
+ `batch_size` ([VolumeType](measureable_units.json.md/#volumetype), required)
 
 ### boil_size
- `boil_size` ([VolumeType](measureable_units.json.md/#VolumeType), required)
+ `boil_size` ([VolumeType](measureable_units.json.md/#volumetype), required)
 
 ### boil_time
- `boil_time` ([TimeType](measureable_units.json.md/#TimeType), required)
+ `boil_time` ([TimeType](measureable_units.json.md/#timetype), required)
 
 ### efficiency
- `efficiency` ([PercentType](measureable_units.json.md/#PercentType))
+ `efficiency` ([PercentType](measureable_units.json.md/#percenttype))
 
 ### style
  `style` (RecipeStyleType)
@@ -96,40 +98,40 @@ Properties of the `ingredients` object:
 * [water_profile](#water_profile)
 
 #### grain_bill
- `grain_bill` ([FermentableAdditionType](grain.json.md/#FermentableAdditionType), required)
+ `grain_bill` ([FermentableAdditionType](grain.json.md/#fermentableadditiontype), required)
 
 #### hop_bill
- `hop_bill` ([HopAdditionType](hops.json.md/#HopAdditionType))
+ `hop_bill` ([HopAdditionType](hops.json.md/#hopadditiontype))
 
 #### adjuncts
- `adjuncts` ([MiscellaneousAdditionType](misc.json.md/#MiscellaneousAdditionType))
+ `adjuncts` ([MiscellaneousAdditionType](misc.json.md/#miscellaneousadditiontype))
 
 #### yeast_additions
- `yeast_additions` ([YeastAdditionType](yeast.json.md/#YeastAdditionType))
+ `yeast_additions` ([YeastAdditionType](yeast.json.md/#yeastadditiontype))
 
 #### water_profile
- `water_profile` ([WaterAdditionType](water.json.md/#WaterAdditionType))
+ `water_profile` ([WaterAdditionType](water.json.md/#wateradditiontype))
 
 ### mash
- `mash` ([MashProcedureType](mash.json.md/#MashProcedureType))
+ `mash` ([MashProcedureType](mash.json.md/#mashproceduretype))
 
 ### notes
  `notes` (string)
 
 ### original_gravity
- `original_gravity` ([DensityType](measureable_units.json.md/#DensityType))
+ `original_gravity` ([DensityType](measureable_units.json.md/#densitytype))
 
 ### final_gravity
- `final_gravity` ([DensityType](measureable_units.json.md/#DensityType))
+ `final_gravity` ([DensityType](measureable_units.json.md/#densitytype))
 
 ### alcohol_by_volume
- `alcohol_by_volume` ([PercentType](measureable_units.json.md/#PercentType))
+ `alcohol_by_volume` ([PercentType](measureable_units.json.md/#percenttype))
 
 ### ibu_estimate
- `ibu_estimate` ([IBUEstimateType](hops.json.md/#IBUEstimateType))
+ `ibu_estimate` ([IBUEstimateType](hops.json.md/#ibuestimatetype))
 
 ### color_estimate
- `color_estimate` ([ColorType](measureable_units.json.md/#ColorType))
+ `color_estimate` ([ColorType](measureable_units.json.md/#colortype))
 
 ### carbonation
  `carbonation` (number)
@@ -173,6 +175,7 @@ Properties of the `taste` object:
 ### calories_per_pint
  `calories_per_pint` (number)
 
-## `RecipeStyleType` (undefined)
+## RecipeStyleType
+`RecipeStyleType` (undefined)
 
 Recipe Style Type Description

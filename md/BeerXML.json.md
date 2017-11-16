@@ -20,7 +20,7 @@ Properties of the `beer_xml` object:
 * [recipes](#recipes)
 
 ## version
- `version` ([VersionType](measureable_units.json.md/#VersionType))
+ `version` ([VersionType](measureable_units.json.md/#versiontype))
 
 ## fermentables
  `fermentables` (object)
@@ -32,7 +32,7 @@ Properties of the `fermentables` object:
 * [fermentable](#fermentable)
 
 ### fermentable
- `fermentable` ([FermentableType](grain.json.md/#FermentableType), required)
+ `fermentable` ([FermentableType](grain.json.md/#fermentabletype), required)
 
 ## miscellaneous_ingredients
  `miscellaneous_ingredients` (object)
@@ -44,7 +44,7 @@ Properties of the `miscellaneous_ingredients` object:
 * [miscellaneous](#miscellaneous)
 
 ### miscellaneous
- `miscellaneous` ([MiscellaneousType](misc.json.md/#MiscellaneousType), required)
+ `miscellaneous` ([MiscellaneousType](misc.json.md/#miscellaneoustype), required)
 
 ## hop_varieties
  `hop_varieties` (object)
@@ -56,7 +56,7 @@ Properties of the `hop_varieties` object:
 * [hop](#hop)
 
 ### hop
- `hop` ([VarietyInformation](hops.json.md/#VarietyInformation), required)
+ `hop` ([VarietyInformation](hops.json.md/#varietyinformation), required)
 
 ## cultures
  `cultures` (object)
@@ -68,7 +68,7 @@ Properties of the `cultures` object:
 * [yeast](#yeast)
 
 ### yeast
- `yeast` ([CultureInformation](yeast.json.md/#CultureInformation), required)
+ `yeast` ([CultureInformation](yeast.json.md/#cultureinformation), required)
 
 ## profiles
  `profiles` (object)
@@ -80,7 +80,7 @@ Properties of the `profiles` object:
 * [water](#water)
 
 ### water
- `water` ([WaterType](water.json.md/#WaterType), required)
+ `water` ([WaterType](water.json.md/#watertype), required)
 
 ## styles
  `styles` (object)
@@ -92,7 +92,7 @@ Properties of the `styles` object:
 * [style](#style)
 
 ### style
- `style` ([StyleType](style.json.md/#StyleType), required)
+ `style` ([StyleType](style.json.md/#styletype), required)
 
 ## procedure
  `procedure` (object)
@@ -104,7 +104,7 @@ Properties of the `procedure` object:
 * [mash](#mash)
 
 ### mash
- `mash` ([MashProcedureType](mash.json.md/#MashProcedureType), required)
+ `mash` ([MashProcedureType](mash.json.md/#mashproceduretype), required)
 
 ## recipes
  `recipes` (object)
@@ -116,4 +116,4 @@ Properties of the `recipes` object:
 * [recipe](#recipe)
 
 ### recipe
- `recipe` ([RecipeType](recipes.json.md/#RecipeType), required)
+ `recipe` ([RecipeType](recipes.json.md/#recipetype), required)

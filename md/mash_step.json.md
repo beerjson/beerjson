@@ -6,7 +6,8 @@ The schema defines the following properties:
 
 The schema defines the following additional types:
 
-## `MashStepType` (object)
+## MashStepType
+`MashStepType` (object)
 
 MashStepType - a per step representation occuring within the mash
 
@@ -37,19 +38,19 @@ This element must be one of the following enum values:
 * `decoction`
 
 ### infuse_amount
- `infuse_amount` ([VolumeType](measureable_units.json.md/#VolumeType))
+ `infuse_amount` ([VolumeType](measureable_units.json.md/#volumetype))
 
 ### step_temperature
- `step_temperature` ([TemperatureType](measureable_units.json.md/#TemperatureType), required)
+ `step_temperature` ([TemperatureType](measureable_units.json.md/#temperaturetype), required)
 
 ### step_time
- `step_time` ([TimeType](measureable_units.json.md/#TimeType), required)
+ `step_time` ([TimeType](measureable_units.json.md/#timetype), required)
 
 ### ramp_time
- `ramp_time` ([TimeType](measureable_units.json.md/#TimeType))
+ `ramp_time` ([TimeType](measureable_units.json.md/#timetype))
 
 ### end_temperature
- `end_temperature` ([TemperatureType](measureable_units.json.md/#TemperatureType))
+ `end_temperature` ([TemperatureType](measureable_units.json.md/#temperaturetype))
 
 ### description
  `description` (string)
@@ -58,7 +59,7 @@ This element must be one of the following enum values:
  `water_grain_ratio` (number)
 
 ### decoction_amount
- `decoction_amount` ([VolumeType](measureable_units.json.md/#VolumeType))
+ `decoction_amount` ([VolumeType](measureable_units.json.md/#volumetype))
 
 ### infuse_temperature
- `infuse_temperature` ([TemperatureType](measureable_units.json.md/#TemperatureType))
+ `infuse_temperature` ([TemperatureType](measureable_units.json.md/#temperaturetype))

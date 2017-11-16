@@ -6,63 +6,72 @@ The schema defines the following properties:
 
 The schema defines the following additional types:
 
-## `VolumeType` (undefined)
+## VolumeType
+`VolumeType` (undefined)
 
 * [volume](#volume)
 
 ### volume
  `volume` (VolumeUnitType)
 
-## `MassType` (undefined)
+## MassType
+`MassType` (undefined)
 
 * [mass](#mass)
 
 ### mass
  `mass` (MassUnitType)
 
-## `TemperatureType` (undefined)
+## TemperatureType
+`TemperatureType` (undefined)
 
 * [degrees](#degrees)
 
 ### degrees
  `degrees` (TemperatureUnitType)
 
-## `DistanceType` (undefined)
+## DistanceType
+`DistanceType` (undefined)
 
 * [length](#length)
 
 ### length
  `length` (DistanceUnitType)
 
-## `PressureType` (undefined)
+## PressureType
+`PressureType` (undefined)
 
 * [pressure](#pressure)
 
 ### pressure
  `pressure` (PressureUnitType)
 
-## `TimeType` (undefined)
+## TimeType
+`TimeType` (undefined)
 
 * [duration](#duration)
 
 ### duration
  `duration` (TimeUnitType)
 
-## `ColorType` (undefined)
+## ColorType
+`ColorType` (undefined)
 
 * [scale](#scale)
 
 ### scale
  `scale` (ColorUnitType)
 
-## `DensityType` (undefined)
+## DensityType
+`DensityType` (undefined)
 
 * [density](#density)
 
 ### density
  `density` (DensityUnitType)
 
-## `QuantitativeRangeType` (object)
+## QuantitativeRangeType
+`QuantitativeRangeType` (object)
 
 Properties of the `QuantitativeRangeType` object:
 
@@ -75,7 +84,8 @@ Properties of the `QuantitativeRangeType` object:
 ### maximum
  `maximum` (number, required)
 
-## `TemperatureRangeType` (object)
+## TemperatureRangeType
+`TemperatureRangeType` (object)
 
 Properties of the `TemperatureRangeType` object:
 
@@ -88,7 +98,8 @@ Properties of the `TemperatureRangeType` object:
 ### maximum
  `maximum` (TemperatureType, required)
 
-## `ColorRangeType` (object)
+## ColorRangeType
+`ColorRangeType` (object)
 
 Properties of the `ColorRangeType` object:
 
@@ -101,7 +112,8 @@ Properties of the `ColorRangeType` object:
 ### maximum
  `maximum` (ColorType, required)
 
-## `DensityRangeType` (object)
+## DensityRangeType
+`DensityRangeType` (object)
 
 Properties of the `DensityRangeType` object:
 
@@ -114,7 +126,8 @@ Properties of the `DensityRangeType` object:
 ### maximum
  `maximum` (DensityType, required)
 
-## `PercentRangeType` (object)
+## PercentRangeType
+`PercentRangeType` (object)
 
 Properties of the `PercentRangeType` object:
 
@@ -127,26 +140,38 @@ Properties of the `PercentRangeType` object:
 ### maximum
  `maximum` (PercentType, required)
 
-## `VolumeUnitType` (string)
+## VolumeUnitType
+`VolumeUnitType` (string)
 
-## `MassUnitType` (string)
+## MassUnitType
+`MassUnitType` (string)
 
-## `TemperatureUnitType` (string)
+## TemperatureUnitType
+`TemperatureUnitType` (string)
 
-## `DistanceUnitType` (string)
+## DistanceUnitType
+`DistanceUnitType` (string)
 
-## `PressureUnitType` (string)
+## PressureUnitType
+`PressureUnitType` (string)
 
-## `TimeUnitType` (string)
+## TimeUnitType
+`TimeUnitType` (string)
 
-## `ColorUnitType` (string)
+## ColorUnitType
+`ColorUnitType` (string)
 
-## `DensityUnitType` (string)
+## DensityUnitType
+`DensityUnitType` (string)
 
-## `DateType` (string)
+## DateType
+`DateType` (string)
 
-## `PercentType` (number)
+## PercentType
+`PercentType` (number)
 
-## `QualitativeRangeType` (string)
+## QualitativeRangeType
+`QualitativeRangeType` (string)
 
-## `VersionType` (number)
+## VersionType
+`VersionType` (number)

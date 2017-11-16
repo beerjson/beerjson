@@ -6,7 +6,8 @@ The schema defines the following properties:
 
 The schema defines the following additional types:
 
-## `WaterBase` (object)
+## WaterBase
+`WaterBase` (object)
 
 WaterBase provides unique properties to identify individual records of regional brewing water
 
@@ -41,11 +42,13 @@ Properties of the `WaterBase` object:
 ### magnesium
  `magnesium` (number, required)
 
-## `WaterType` (object)
+## WaterType
+`WaterType` (object)
 
 WaterType collects the attributes of a regional brewing water to store as record information
 
-## `WaterAdditionType` (object)
+## WaterAdditionType
+`WaterAdditionType` (object)
 
 WaterAdditionType collects the attributes of a water salt addition for use in a recipe
 

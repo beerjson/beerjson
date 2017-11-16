@@ -6,7 +6,8 @@ The schema defines the following properties:
 
 The schema defines the following additional types:
 
-## `HopVarietyBase` (object)
+## HopVarietyBase
+`HopVarietyBase` (object)
 
 HopVarietyBase provides unique properties to identify individual records of a hop variety
 
@@ -29,11 +30,13 @@ Properties of the `HopVarietyBase` object:
 ### beta_acid_units
  `beta_acid_units` (number)
 
-## `VarietyInformation` (object)
+## VarietyInformation
+`VarietyInformation` (object)
 
 VarietyInformation collects the attributes of a hop variety to store as record information
 
-## `HopAdditionType` (object)
+## HopAdditionType
+`HopAdditionType` (object)
 
 HopAdditionType collects the attributes of a hop ingredient for use in a recipe hop bil
 
@@ -44,11 +47,13 @@ Properties of the `HopAdditionType` object:
 ### addition
  `addition` (, required)
 
-## `IBUEstimateType` (undefined)
+## IBUEstimateType
+`IBUEstimateType` (undefined)
 
 * [method](#method)
 
 ### method
  `method` (IBUMethodType)
 
-## `IBUMethodType` (string)
+## IBUMethodType
+`IBUMethodType` (string)

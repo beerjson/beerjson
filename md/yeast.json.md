@@ -6,7 +6,8 @@ The schema defines the following properties:
 
 The schema defines the following additional types:
 
-## `CultureBase` (object)
+## CultureBase
+`CultureBase` (object)
 
 The descriptive base type for both yeast culture records and yeast recipe additions. Provides unique properties to identify individual records of a yeast culture
 
@@ -48,11 +49,13 @@ This element must be one of the following enum values:
 ### product_id
  `product_id` (string, required)
 
-## `CultureInformation` (object)
+## CultureInformation
+`CultureInformation` (object)
 
 CultureInformation collects the attributes of a yeast culture to store as record information
 
-## `YeastAdditionType` (object)
+## YeastAdditionType
+`YeastAdditionType` (object)
 
 YeastAdditionType collects the attributes of a yeast ingredient for use in a recipe
 

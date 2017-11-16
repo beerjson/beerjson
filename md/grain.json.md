@@ -6,7 +6,8 @@ The schema defines the following properties:
 
 The schema defines the following additional types:
 
-## `FermentableBase` (object)
+## FermentableBase
+`FermentableBase` (object)
 
 FermentableBase provides unique properties to identify individual records of fermentable ingredients
 
@@ -34,7 +35,7 @@ This element must be one of the following enum values:
 * `sugar`
 
 ### color
- `color` ([ColorType](measureable_units.json.md/#ColorType), required)
+ `color` ([ColorType](measureable_units.json.md/#colortype), required)
 
 ### origin
  `origin` (string)
@@ -54,11 +55,13 @@ This element must be one of the following enum values:
 * `speciality`
 * `wheat`
 
-## `FermentableType` (object)
+## FermentableType
+`FermentableType` (object)
 
 FermentableType collects the attributes of a fermentable ingredient to store as record information
 
-## `FermentableAdditionType` (object)
+## FermentableAdditionType
+`FermentableAdditionType` (object)
 
 FermentableAdditionType collects the attributes of a fermentable ingredient for use in a recipe grain bill
 
