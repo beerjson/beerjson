@@ -10,9 +10,14 @@ The schema defines the following additional types:
 
 Properties of the `FermentationStageType` object:
 
-### `aging` (TimeType, required)
+* [aging](#aging)
+* [temperature](#temperature)
 
-### `temperature` (TemperatureType, required)
+### aging
+ `aging` (, required)
+
+### temperature
+ `temperature` (, required)
 
 ## `RecipeType` (object)
 
@@ -20,9 +25,34 @@ RecipeType composes the information stored in a beer_xml recipe
 
 Properties of the `RecipeType` object:
 
-### `name` (string, required)
+* [name](#name)
+* [type](#type)
+* [author](#author)
+* [coauthor](#coauthor)
+* [created](#created)
+* [batch_size](#batch_size)
+* [boil_size](#boil_size)
+* [boil_time](#boil_time)
+* [efficiency](#efficiency)
+* [style](#style)
+* [ingredients](#ingredients)
+* [mash](#mash)
+* [notes](#notes)
+* [original_gravity](#original_gravity)
+* [final_gravity](#final_gravity)
+* [alcohol_by_volume](#alcohol_by_volume)
+* [ibu_estimate](#ibu_estimate)
+* [color_estimate](#color_estimate)
+* [carbonation](#carbonation)
+* [fermentation_stages](#fermentation_stages)
+* [taste](#taste)
+* [calories_per_pint](#calories_per_pint)
 
-### `type` (string, enum, required)
+### name
+ `name` (string, required)
+
+### type
+ `type` (string, enum, required)
 
 This element must be one of the following enum values:
 
@@ -30,582 +60,119 @@ This element must be one of the following enum values:
 * `partial mash`
 * `all grain`
 
-### `author` (string, required)
+### author
+ `author` (string, required)
 
-### `coauthor` (string)
+### coauthor
+ `coauthor` (string)
 
-### `created` (DateType)
+### created
+ `created`
 
-### `batch_size` (VolumeType, required)
+### batch_size
+ `batch_size` (, required)
 
-### `boil_size` (VolumeType, required)
+### boil_size
+ `boil_size` (, required)
 
-### `boil_time` (TimeType, required)
+### boil_time
+ `boil_time` (, required)
 
-### `efficiency` (PercentType)
+### efficiency
+ `efficiency`
 
-### `style` (RecipeStyleType)
+### style
+ `style` (RecipeStyleType)
 
-### `ingredients` (object, required)
+### ingredients
+ `ingredients` (object, required)
 
 Properties of the `ingredients` object:
 
-#### `grain_bill` (FermentableAdditionType, required)
+* [grain_bill](#grain_bill)
+* [hop_bill](#hop_bill)
+* [adjuncts](#adjuncts)
+* [yeast_additions](#yeast_additions)
+* [water_profile](#water_profile)
 
-#### `hop_bill` (HopAdditionType)
+#### grain_bill
+ `grain_bill` (, required)
 
-#### `adjuncts` (MiscellaneousAdditionType)
+#### hop_bill
+ `hop_bill`
 
-#### `yeast_additions` (YeastAdditionType)
+#### adjuncts
+ `adjuncts`
 
-#### `water_profile` (WaterAdditionType)
+#### yeast_additions
+ `yeast_additions`
 
-### `mash` (MashProcedureType)
+#### water_profile
+ `water_profile`
 
-### `notes` (string)
+### mash
+ `mash`
 
-### `original_gravity` (DensityType)
+### notes
+ `notes` (string)
 
-### `final_gravity` (DensityType)
+### original_gravity
+ `original_gravity`
 
-### `alcohol_by_volume` (PercentType)
+### final_gravity
+ `final_gravity`
 
-### `ibu_estimate` (IBUEstimateType)
+### alcohol_by_volume
+ `alcohol_by_volume`
 
-### `color_estimate` (ColorType)
+### ibu_estimate
+ `ibu_estimate`
 
-### `carbonation` (number)
+### color_estimate
+ `color_estimate`
 
-### `fermentation_stages` (object)
+### carbonation
+ `carbonation` (number)
+
+### fermentation_stages
+ `fermentation_stages` (object)
 
 Properties of the `fermentation_stages` object:
 
-#### `primary` (FermentationStageType)
+* [primary](#primary)
+* [secondary](#secondary)
+* [tertiary](#tertiary)
+* [conditioning](#conditioning)
 
-#### `secondary` (FermentationStageType)
+#### primary
+ `primary` (FermentationStageType)
 
-#### `tertiary` (FermentationStageType)
+#### secondary
+ `secondary` (FermentationStageType)
 
-#### `conditioning` (FermentationStageType)
+#### tertiary
+ `tertiary` (FermentationStageType)
 
-### `taste` (object)
+#### conditioning
+ `conditioning` (FermentationStageType)
+
+### taste
+ `taste` (object)
 
 Properties of the `taste` object:
 
-#### `notes` (string, required)
+* [notes](#notes)
+* [rating](#rating)
 
-#### `rating` (number, required)
+#### notes
+ `notes` (string, required)
 
-### `calories_per_pint` (number)
+#### rating
+ `rating` (number, required)
 
-## `VolumeType` (undefined)
-
-### `volume` (VolumeUnitType)
-
-## `MassType` (undefined)
-
-### `mass` (MassUnitType)
-
-## `TemperatureType` (undefined)
-
-### `degrees` (TemperatureUnitType)
-
-## `DistanceType` (undefined)
-
-### `length` (DistanceUnitType)
-
-## `PressureType` (undefined)
-
-### `pressure` (PressureUnitType)
-
-## `TimeType` (undefined)
-
-### `duration` (TimeUnitType)
-
-## `ColorType` (undefined)
-
-### `scale` (ColorUnitType)
-
-## `DensityType` (undefined)
-
-### `density` (DensityUnitType)
-
-## `QuantitativeRangeType` (object)
-
-Properties of the `QuantitativeRangeType` object:
-
-### `minimum` (number, required)
-
-### `maximum` (number, required)
-
-## `TemperatureRangeType` (object)
-
-Properties of the `TemperatureRangeType` object:
-
-### `minimum` (TemperatureType, required)
-
-### `maximum` (TemperatureType, required)
-
-## `ColorRangeType` (object)
-
-Properties of the `ColorRangeType` object:
-
-### `minimum` (ColorType, required)
-
-### `maximum` (ColorType, required)
-
-## `DensityRangeType` (object)
-
-Properties of the `DensityRangeType` object:
-
-### `minimum` (DensityType, required)
-
-### `maximum` (DensityType, required)
-
-## `PercentRangeType` (object)
-
-Properties of the `PercentRangeType` object:
-
-### `minimum` (PercentType, required)
-
-### `maximum` (PercentType, required)
-
-## `FermentableBase` (object)
-
-Fermentable Base Desc
-
-Properties of the `FermentableBase` object:
-
-### `name` (string, required)
-
-### `type` (string, enum, required)
-
-This element must be one of the following enum values:
-
-* `adjunct`
-* `dry extract`
-* `extract`
-* `grain`
-* `sugar`
-
-### `color` (ColorType, required)
-
-### `origin` (string)
-
-### `supplier` (string)
-
-### `group` (string, enum)
-
-This element must be one of the following enum values:
-
-* `base`
-* `caramel`
-* `flakes`
-* `roasted`
-* `speciality`
-* `wheat`
-
-## `FermentableType` (object)
-
-Properties of the `FermentableType` object:
-
-### `yield_dry_basis` (object, required)
-
-Properties of the `yield_dry_basis` object:
-
-#### `fine_grind` (PercentType, required)
-
-#### `coarse_grind` (PercentType, required)
-
-#### `fine_coarse_difference` (PercentType)
-
-### `notes` (string)
-
-### `moisture` (PercentType)
-
-### `diastatic_power` (number)
-
-### `protein` (PercentType)
-
-### `soluble_nitrogen_ratio` (number)
-
-### `max_in_batch` (PercentType)
-
-### `recommend_mash` (boolean)
-
-### `ibu_gal_per_lb` (number)
-
-### `potential` (DensityType)
-
-### `inventory` (MassType)
-
-## `FermentableAdditionType` (object)
-
-Addition of Fermentable Type to recipe
-
-Properties of the `FermentableAdditionType` object:
-
-### `addition` (FermentableBase, required)
-
-## `MiscellaneousBase` (object)
-
-Properties of the `MiscellaneousBase` object:
-
-### `name` (string, required)
-
-### `type` (string, enum, required)
-
-This element must be one of the following enum values:
-
-* `spice`
-* `fining`
-* `water agent`
-* `herb`
-* `fruit`
-* `flavor`
-* `other`
-
-### `use` (string, enum, required)
-
-This element must be one of the following enum values:
-
-* `boil`
-* `mash`
-* `primary`
-* `secondary`
-* `bottling`
-
-## `MiscellaneousType` (object)
-
-Properties of the `MiscellaneousType` object:
-
-### `use_for` (string)
-
-### `notes` (string)
-
-### `inventory` (object)
-
-Properties of the `inventory` object:
-
-#### `amount` (VolumeType, required)
-
-#### `amount_as_weight` (MassType, required)
-
-## `MiscellaneousAdditionType` (object)
-
-Properties of the `MiscellaneousAdditionType` object:
-
-### `addition` (MiscellaneousBase, required)
-
-## `HopVarietyBase` (object)
-
-Hop Variety Base Desc
-
-Properties of the `HopVarietyBase` object:
-
-### `name` (string, required)
-
-### `origin` (string, required)
-
-### `alpha_acid_units` (number, required)
-
-### `beta_acid_units` (number)
-
-## `VarietyInformation` (object)
-
-Hop Variety Record Information
-
-Properties of the `VarietyInformation` object:
-
-### `type` (string, enum)
-
-This element must be one of the following enum values:
-
-* `aroma`
-* `bittering`
-* `flavor`
-* `aroma/bittering`
-* `bittering/flavor`
-* `aroma/flavor`
-* `aroma/bittering/flavor`
-
-### `notes` (string)
-
-### `percent_lost` (PercentType)
-
-### `substitutes` (string)
-
-### `humulene` (number)
-
-### `caryophyllene` (number)
-
-### `cohumulone` (number)
-
-### `myrcene` (number)
-
-### `farnesene` (number)
-
-### `inventory` (object)
-
-Properties of the `inventory` object:
-
-#### `leaf` (MassType)
-
-#### `pellet` (MassType)
-
-#### `plug` (MassType)
-
-## `HopAdditionType` (object)
-
-Addition of hops to recipe
-
-Properties of the `HopAdditionType` object:
-
-### `addition` (HopVarietyBase, required)
-
-## `IBUEstimateType` (undefined)
-
-### `method` (IBUMethodType)
-
-## `CultureBase` (object)
-
-The descriptive base type for both yeast culture records and yeast recipe additions.
-
-Properties of the `CultureBase` object:
-
-### `name` (string, required)
-
-### `type` (string, enum, required)
-
-This element must be one of the following enum values:
-
-* `ale`
-* `lager`
-* `wheat`
-* `wine`
-* `champagne`
-
-### `form` (string, enum, required)
-
-This element must be one of the following enum values:
-
-* `liquid`
-* `dry`
-* `slant`
-* `culture`
-
-### `laboratory` (string, required)
-
-### `product_id` (string, required)
-
-## `CultureInformation` (object)
-
-Yeast Culture Record Information
-
-Properties of the `CultureInformation` object:
-
-### `temperature_range` (TemperatureRangeType)
-
-### `flocculation` (QualitativeRangeType)
-
-### `attenuation` (PercentType)
-
-### `alcohol_tolerance` (PercentRangeType)
-
-### `notes` (string)
-
-### `best_for` (string)
-
-### `max_reuse` (integer)
-
-### `inventory` (object)
-
-Properties of the `inventory` object:
-
-#### `liquid` (VolumeType)
-
-#### `dry` (MassType)
-
-#### `slant` (VolumeType)
-
-#### `culture` (VolumeType)
-
-## `YeastAdditionType` (object)
-
-Addition of yeast to recipe
-
-Properties of the `YeastAdditionType` object:
-
-### `addition` (CultureBase, required)
-
-## `WaterBase` (object)
-
-Properties of the `WaterBase` object:
-
-### `name` (string, required)
-
-### `calcium` (number, required)
-
-### `bicarbonate` (number, required)
-
-### `sulfate` (number, required)
-
-### `chloride` (number, required)
-
-### `sodium` (number, required)
-
-### `magnesium` (number, required)
-
-## `WaterType` (object)
-
-Properties of the `WaterType` object:
-
-### `pH` (number)
-
-### `notes` (string)
-
-## `WaterAdditionType` (object)
-
-Properties of the `WaterAdditionType` object:
-
-### `addition` (WaterBase, required)
-
-## `StyleBase` (object)
-
-The descriptive base type for both beer style guideline records and recipe style provisions.
-
-Properties of the `StyleBase` object:
-
-### `name` (string, required)
-
-### `category` (string, required)
-
-### `category_number` (integer, required)
-
-### `style_letter` (string, required)
-
-Additional restrictions:
-
-* Regex pattern: `[A-Z ]`
-
-### `style_guide` (string, required)
-
-### `type` (StyleCategories, required)
-
-## `StyleType` (object)
-
-Style Type Record Information
-
-Properties of the `StyleType` object:
-
-### `original_gravity` (DensityRangeType, required)
-
-### `final_gravity` (DensityRangeType, required)
-
-### `international_bitterness_units` (QuantitativeRangeType, required)
-
-### `color` (ColorRangeType, required)
-
-### `carbonation` (QuantitativeRangeType)
-
-### `alcohol_by_volume` (PercentRangeType)
-
-### `notes` (string)
-
-### `aroma` (string)
-
-### `appearance` (string)
-
-### `flavor` (string)
-
-### `mouthfeel` (string)
-
-### `overall_impression` (string)
-
-### `ingredients` (string)
-
-### `examples` (string)
+### calories_per_pint
+ `calories_per_pint` (number)
 
 ## `RecipeStyleType` (undefined)
 
 Recipe Style Type Description
-
-## `MashProcedureType` (object)
-
-Properties of the `MashProcedureType` object:
-
-### `name` (string, required)
-
-### `grain_temperature` (TemperatureType, required)
-
-### `sparge_temperature` (TemperatureType)
-
-### `pH` (number)
-
-### `notes` (string)
-
-### `mash_steps` (object, required)
-
-Properties of the `mash_steps` object:
-
-#### `step` (MashStepType, required)
-
-## `MashStepType` (object)
-
-Properties of the `MashStepType` object:
-
-### `name` (string, required)
-
-### `type` (string, enum, required)
-
-This element must be one of the following enum values:
-
-* `infusion`
-* `temperature`
-* `decoction`
-
-### `infuse_amount` (VolumeType)
-
-### `step_temperature` (TemperatureType, required)
-
-### `step_time` (TimeType, required)
-
-### `ramp_time` (TimeType)
-
-### `end_temperature` (TemperatureType)
-
-### `description` (string)
-
-### `water_grain_ratio` (number)
-
-### `decoction_amount` (VolumeType)
-
-### `infuse_temperature` (TemperatureType)
-
-## `VolumeUnitType` (string)
-
-## `MassUnitType` (string)
-
-## `TemperatureUnitType` (string)
-
-## `DistanceUnitType` (string)
-
-## `PressureUnitType` (string)
-
-## `TimeUnitType` (string)
-
-## `ColorUnitType` (string)
-
-## `DensityUnitType` (string)
-
-## `DateType` (string)
-
-## `PercentType` (number)
-
-## `QualitativeRangeType` (string)
-
-## `VersionType` (number)
-
-## `IBUMethodType` (string)
-
-## `StyleCategories` (string)

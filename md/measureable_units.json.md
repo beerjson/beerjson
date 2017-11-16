@@ -8,75 +8,124 @@ The schema defines the following additional types:
 
 ## `VolumeType` (undefined)
 
-### `volume` (VolumeUnitType)
+* [volume](#volume)
+
+### volume
+ `volume` (VolumeUnitType)
 
 ## `MassType` (undefined)
 
-### `mass` (MassUnitType)
+* [mass](#mass)
+
+### mass
+ `mass` (MassUnitType)
 
 ## `TemperatureType` (undefined)
 
-### `degrees` (TemperatureUnitType)
+* [degrees](#degrees)
+
+### degrees
+ `degrees` (TemperatureUnitType)
 
 ## `DistanceType` (undefined)
 
-### `length` (DistanceUnitType)
+* [length](#length)
+
+### length
+ `length` (DistanceUnitType)
 
 ## `PressureType` (undefined)
 
-### `pressure` (PressureUnitType)
+* [pressure](#pressure)
+
+### pressure
+ `pressure` (PressureUnitType)
 
 ## `TimeType` (undefined)
 
-### `duration` (TimeUnitType)
+* [duration](#duration)
+
+### duration
+ `duration` (TimeUnitType)
 
 ## `ColorType` (undefined)
 
-### `scale` (ColorUnitType)
+* [scale](#scale)
+
+### scale
+ `scale` (ColorUnitType)
 
 ## `DensityType` (undefined)
 
-### `density` (DensityUnitType)
+* [density](#density)
+
+### density
+ `density` (DensityUnitType)
 
 ## `QuantitativeRangeType` (object)
 
 Properties of the `QuantitativeRangeType` object:
 
-### `minimum` (number, required)
+* [minimum](#minimum)
+* [maximum](#maximum)
 
-### `maximum` (number, required)
+### minimum
+ `minimum` (number, required)
+
+### maximum
+ `maximum` (number, required)
 
 ## `TemperatureRangeType` (object)
 
 Properties of the `TemperatureRangeType` object:
 
-### `minimum` (TemperatureType, required)
+* [minimum](#minimum)
+* [maximum](#maximum)
 
-### `maximum` (TemperatureType, required)
+### minimum
+ `minimum` (TemperatureType, required)
+
+### maximum
+ `maximum` (TemperatureType, required)
 
 ## `ColorRangeType` (object)
 
 Properties of the `ColorRangeType` object:
 
-### `minimum` (ColorType, required)
+* [minimum](#minimum)
+* [maximum](#maximum)
 
-### `maximum` (ColorType, required)
+### minimum
+ `minimum` (ColorType, required)
+
+### maximum
+ `maximum` (ColorType, required)
 
 ## `DensityRangeType` (object)
 
 Properties of the `DensityRangeType` object:
 
-### `minimum` (DensityType, required)
+* [minimum](#minimum)
+* [maximum](#maximum)
 
-### `maximum` (DensityType, required)
+### minimum
+ `minimum` (DensityType, required)
+
+### maximum
+ `maximum` (DensityType, required)
 
 ## `PercentRangeType` (object)
 
 Properties of the `PercentRangeType` object:
 
-### `minimum` (PercentType, required)
+* [minimum](#minimum)
+* [maximum](#maximum)
 
-### `maximum` (PercentType, required)
+### minimum
+ `minimum` (PercentType, required)
+
+### maximum
+ `maximum` (PercentType, required)
 
 ## `VolumeUnitType` (string)
 
