@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":
+    "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/water.json",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "WaterBase": {
+      "type": "object",
+      "description":
+        "WaterBase provides unique properties to identify individual records of regional brewing water",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "calcium": {
+          "type": "number"
+        },
+        "bicarbonate": {
+          "type": "number"
+        },
+        "sulfate": {
+          "type": "number"
+        },
+        "chloride": {
+          "type": "number"
+        },
+        "sodium": {
+          "type": "number"
+        },
+        "magnesium": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "name",
+        "calcium",
+        "bicarbonate",
+        "sulfate",
+        "chloride",
+        "sodium",
+        "magnesium"
+      ]
+    },
+    "WaterType": {
+      "type": "object",
+      "description":
+        "WaterType collects the attributes of a regional brewing water to store as record information",
+      "allOf": [
+        { "$ref": "#/definitions/WaterBase" },
+        {
+          "properties": {
+            "pH": {
+              "type": "number"
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "WaterAdditionType": {
+      "type": "object",
+      "description":
+        "WaterAdditionType collects the attributes of a water salt addition for use in a recipe",
+      "additionalProperties": false,
+      "properties": {
+        "addition": {
+          "allOf": [
+            { "$ref": "#/definitions/WaterBase" },
+            {
+              "amount": {
+                "$ref": "measureable_units.json#/definitions/VolumeType"
+              }
+            }
+          ]
+        }
+      },
+      "required": ["addition"]
+    }
+  }
+}

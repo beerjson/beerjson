@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":
+    "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/mash.json",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "MashProcedureType": {
+      "type": "object",
+      "description":
+        "MashProcedureType defines the procedure for performing unique mashing styles",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "grain_temperature": {
+          "$ref": "measureable_units.json#/definitions/TemperatureType"
+        },
+        "sparge_temperature": {
+          "$ref": "measureable_units.json#/definitions/TemperatureType"
+        },
+        "pH": {
+          "type": "number"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "mash_steps": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "step": {
+              "$ref": "mash_step.json#/definitions/MashStepType"
+            }
+          },
+          "required": ["step"]
+        }
+      },
+      "required": ["name", "grain_temperature", "mash_steps"]
+    }
+  }
+}

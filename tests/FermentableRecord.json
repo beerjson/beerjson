@@ -1,0 +1,19 @@
+{
+  "beer_xml": {
+    "version": 2.01,
+    "fermentables": {
+      "fermentable": {
+        "name": "Pale 2-row Malt",
+        "type": "grain",
+        "color": {
+          "scale": "L",
+          "value": 3.0
+        },
+        "yield_dry_basis": {
+          "fine_grind": 73.4,
+          "coarse_grind": 0
+        }
+      }
+    }
+  }
+}

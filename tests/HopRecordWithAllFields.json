@@ -1,0 +1,36 @@
+{
+  "beer_xml": {
+    "version": 2.01,
+    "hop_varieties": {
+      "hop": {
+        "name": "Super Hops",
+        "origin": "Planet Krypton",
+        "alpha_acid_units": 4.5,
+        "beta_acid_units": 5.5,
+        "type": "bittering",
+        "notes":
+          "This hop is a really cool hops - you can use it for anything. It leaps over buildings in a single bound, is faster than a speeding bullet and makes really bitter beer.",
+        "percent_lost": 30,
+        "substitutes": "Goldings, Fuggles, Super Alpha",
+        "humulene": 2.34,
+        "caryophyllene": 1.23,
+        "cohumulone": 13.2,
+        "myrcene": 24.2,
+        "inventory": {
+          "leaf": {
+            "mass": "oz",
+            "value": 2.0
+          },
+          "pellet": {
+            "mass": "oz",
+            "value": 0.5
+          },
+          "plug": {
+            "mass": "oz",
+            "value": 0.0
+          }
+        }
+      }
+    }
+  }
+}

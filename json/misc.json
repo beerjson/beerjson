@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":
+    "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/misc.json",
+  "type": "object",
+  "definitions": {
+    "MiscellaneousBase": {
+      "type": "object",
+      "description":
+        "MiscellaneousBase provides unique properties to identify individual records of adjunct ingredients",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "spice",
+            "fining",
+            "water agent",
+            "herb",
+            "fruit",
+            "flavor",
+            "other"
+          ]
+        },
+        "use": {
+          "type": "string",
+          "enum": ["boil", "mash", "primary", "secondary", "bottling"]
+        }
+      },
+      "required": ["name", "type", "use"]
+    },
+    "MiscellaneousType": {
+      "type": "object",
+      "description":
+        "MiscellaneousType collects the attributes of a adjunct ingredient to store as record information",
+      "allOf": [
+        { "$ref": "#/definitions/MiscellaneousBase" },
+        {
+          "properties": {
+            "use_for": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "string"
+            },
+            "inventory": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "amount": {
+                  "$ref": "measureable_units.json#/definitions/VolumeType"
+                },
+                "amount_as_weight": {
+                  "$ref": "measureable_units.json#/definitions/MassType"
+                }
+              },
+              "required": ["amount", "amount_as_weight"]
+            }
+          }
+        }
+      ]
+    },
+    "MiscellaneousAdditionType": {
+      "type": "object",
+      "description":
+        "MiscellaneousAdditionType collects the attributes of an adjunct ingredient for use in a recipe adjunct bill",
+      "additionalProperties": false,
+      "properties": {
+        "addition": {
+          "allOf": [
+            { "$ref": "#/definitions/MiscellaneousBase" },
+            {
+              "properties": {
+                "time": {
+                  "$ref": "measureable_units.json#/definitions/TimeType"
+                }
+              }
+            }
+          ],
+          "oneOf": [
+            {
+              "properties": {
+                "amount": {
+                  "$ref": "measureable_units.json#/definitions/VolumeType"
+                },
+                "amount_as_weight": {
+                  "$ref": "measureable_units.json#/definitions/MassType"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "required": ["addition"]
+    }
+  }
+}

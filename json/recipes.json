@@ -1,0 +1,153 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":
+    "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/recipes.json",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "FermentationStageType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "aging": {
+          "$ref": "measureable_units.json#/definitions/TimeType"
+        },
+        "temperature": {
+          "$ref": "measureable_units.json#/definitions/TemperatureType"
+        }
+      },
+      "required": ["aging", "temperature"]
+    },
+    "RecipeType": {
+      "type": "object",
+      "description":
+        "RecipeType composes the information stored in a beer_xml recipe",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["extract", "partial mash", "all grain"]
+        },
+        "author": {
+          "type": "string"
+        },
+        "coauthor": {
+          "type": "string"
+        },
+        "created": {
+          "$ref": "measureable_units.json#/definitions/DateType"
+        },
+        "batch_size": {
+          "$ref": "measureable_units.json#/definitions/VolumeType"
+        },
+        "boil_size": {
+          "$ref": "measureable_units.json#/definitions/VolumeType"
+        },
+        "boil_time": {
+          "$ref": "measureable_units.json#/definitions/TimeType"
+        },
+        "efficiency": {
+          "$ref": "measureable_units.json#/definitions/PercentType"
+        },
+        "style": {
+          "$ref": "#/definitions/RecipeStyleType"
+        },
+        "ingredients": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "grain_bill": {
+              "$ref": "grain.json#/definitions/FermentableAdditionType"
+            },
+            "hop_bill": {
+              "$ref": "hops.json#/definitions/HopAdditionType"
+            },
+            "adjuncts": {
+              "$ref": "misc.json#/definitions/MiscellaneousAdditionType"
+            },
+            "yeast_additions": {
+              "$ref": "yeast.json#/definitions/YeastAdditionType"
+            },
+            "water_profile": {
+              "$ref": "water.json#/definitions/WaterAdditionType"
+            }
+          },
+          "required": ["grain_bill"]
+        },
+        "mash": {
+          "$ref": "mash.json#/definitions/MashProcedureType"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "original_gravity": {
+          "$ref": "measureable_units.json#/definitions/DensityType"
+        },
+        "final_gravity": {
+          "$ref": "measureable_units.json#/definitions/DensityType"
+        },
+        "alcohol_by_volume": {
+          "$ref": "measureable_units.json#/definitions/PercentType"
+        },
+        "ibu_estimate": {
+          "$ref": "hops.json#/definitions/IBUEstimateType"
+        },
+        "color_estimate": {
+          "$ref": "measureable_units.json#/definitions/ColorType"
+        },
+        "carbonation": {
+          "type": "number"
+        },
+        "fermentation_stages": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "primary": {
+              "$ref": "#/definitions/FermentationStageType"
+            },
+            "secondary": {
+              "$ref": "#/definitions/FermentationStageType"
+            },
+            "tertiary": {
+              "$ref": "#/definitions/FermentationStageType"
+            },
+            "conditioning": {
+              "$ref": "#/definitions/FermentationStageType"
+            }
+          }
+        },
+        "taste": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "notes": {
+              "type": "string"
+            },
+            "rating": {
+              "type": "number"
+            }
+          },
+          "required": ["notes", "rating"]
+        },
+        "calories_per_pint": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "author",
+        "batch_size",
+        "boil_size",
+        "boil_time",
+        "ingredients"
+      ]
+    },
+    "RecipeStyleType": {
+      "description": "Recipe Style Type Description"
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":
+    "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/yeast.json",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "CultureBase": {
+      "type": "object",
+      "description":
+        "The descriptive base type for both yeast culture records and yeast recipe additions. Provides unique properties to identify individual records of a yeast culture",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["ale", "lager", "wheat", "wine", "champagne"]
+        },
+        "form": {
+          "type": "string",
+          "enum": ["liquid", "dry", "slant", "culture"]
+        },
+        "laboratory": {
+          "type": "string"
+        },
+        "product_id": {
+          "type": "string"
+        }
+      },
+      "required": ["name", "type", "form", "laboratory", "product_id"]
+    },
+    "CultureInformation": {
+      "type": "object",
+      "description":
+        "CultureInformation collects the attributes of a yeast culture to store as record information",
+      "allOf": [
+        { "$ref": "#/definitions/CultureBase" },
+        {
+          "properties": {
+            "temperature_range": {
+              "$ref": "measureable_units.json#/definitions/TemperatureRangeType"
+            },
+            "flocculation": {
+              "$ref": "measureable_units.json#/definitions/QualitativeRangeType"
+            },
+            "attenuation": {
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "alcohol_tolerance": {
+              "$ref": "measureable_units.json#/definitions/PercentRangeType"
+            },
+            "notes": {
+              "type": "string"
+            },
+            "best_for": {
+              "type": "string"
+            },
+            "max_reuse": {
+              "type": "integer"
+            },
+            "inventory": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "liquid": {
+                  "$ref": "measureable_units.json#/definitions/VolumeType"
+                },
+                "dry": {
+                  "$ref": "measureable_units.json#/definitions/MassType"
+                },
+                "slant": {
+                  "$ref": "measureable_units.json#/definitions/VolumeType"
+                },
+                "culture": {
+                  "$ref": "measureable_units.json#/definitions/VolumeType"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "YeastAdditionType": {
+      "type": "object",
+      "description":
+        "YeastAdditionType collects the attributes of a yeast ingredient for use in a recipe",
+      "additionalProperties": false,
+      "properties": {
+        "addition": {
+          "allOf": [
+            { "$ref": "#/definitions/CultureBase" },
+            {
+              "properties": {
+                "times_cultured": {
+                  "type": "integer"
+                },
+                "add_to_secondary": {
+                  "type": "boolean"
+                }
+              }
+            }
+          ],
+          "oneOf": [
+            {
+              "properties": {
+                "amount": {
+                  "$ref": "measureable_units.json#/definitions/VolumeType"
+                },
+                "amount_as_weight": {
+                  "$ref": "measureable_units.json#/definitions/MassType"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "required": ["addition"]
+    }
+  }
+}

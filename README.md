@@ -1,2 +1,13 @@
-# beerjson
-BeerJSON format
+[![Build Status](https://travis-ci.org/beerjson/beerjson.svg?branch=preparing-beerjson-2.0)](https://travis-ci.org/beerjson/beerjson)
+
+# Welcome to BeerJSON 2 working group repository
+This is a repository for development of BeerJSON interchange format specification. It is based on yet unfinished [BeerXML 2 standard (PDF)](http://users.speakeasy.net/%7Eantonw/beer_xml/BeerXML_v2_01.pdf).
+
+## Structure of the repository
+* Current development is done in the Master branch.
+* Each published version has its own branch or tag
+* Changes are proposed by creating a [pull request](https://github.com/beerjson/beerjson/pulls) that should be reviewed by members of working group.
+* Issues, questions and suggestions should be posted to [Issues](https://github.com/beerjson/beerjson/issues)
+
+
+
