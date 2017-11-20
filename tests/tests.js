@@ -1,3 +1,4 @@
+const JsonLint = require('json-dup-key-validator')
 const Ajv = require('ajv')
 const ajv = new Ajv()
 ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-04'))
@@ -16,25 +17,30 @@ const validate = ajv.compile(require('../json/BeerXML'))
 
 const testJson = path => {
   console.log(path)
-  if (!validate(require(path))) {
+  const rawJSON = require('fs').readFileSync(
+    __dirname + '/' + path + '.json',
+    'utf8'
+  )
+
+  if (!validate(JsonLint.parse(rawJSON))) {
     console.log(validate.errors)
     process.exit(1)
   }
 }
 
-testJson('./min-valid-recipe')
-testJson('./MedievalAle')
-testJson('./FermentableRecord')
-testJson('./HoppedExtract')
-testJson('./CrystalMaltSpecialtyGrain')
-testJson('./IrishMoss')
-testJson('./CorianderSpice')
-testJson('./HopWithRequiredFieldsOnly')
-testJson('./HopRecordWithAllFields')
-testJson('./YeastWithRequiredFieldsOnly')
-testJson('./YeastWithMorePopularFields')
-testJson('./SampleWaterProfile')
-testJson('./StyleBohemianPilsner.json')
-testJson('./StyleDryIrishStoutWithAllFields')
-testJson('./MashSingleStepInfusion')
-testJson('./MashTwoStepTemperature')
+testJson('min-valid-recipe')
+testJson('MedievalAle')
+testJson('FermentableRecord')
+testJson('HoppedExtract')
+testJson('CrystalMaltSpecialtyGrain')
+testJson('IrishMoss')
+testJson('CorianderSpice')
+testJson('HopWithRequiredFieldsOnly')
+testJson('HopRecordWithAllFields')
+testJson('YeastWithRequiredFieldsOnly')
+testJson('YeastWithMorePopularFields')
+testJson('SampleWaterProfile')
+testJson('StyleBohemianPilsner.json')
+testJson('StyleDryIrishStoutWithAllFields')
+testJson('MashSingleStepInfusion')
+testJson('MashTwoStepTemperature')
