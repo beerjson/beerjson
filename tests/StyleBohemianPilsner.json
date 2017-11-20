@@ -1,8 +1,8 @@
 {
   "beer_xml": {
     "version": 2.01,
-    "styles": {
-      "style": {
+    "styles": [
+      {
         "name": "Bohemian Pilsner",
         "category": "European Pale Ale",
         "category_number": 2,
@@ -46,6 +46,6 @@
         "notes":
           "Famous beer of Pilsen, Czech republic. Light to medium body with some sweetness. Saaz hop flavor and aroma with no lingering bitterness."
       }
-    }
+    ]
   }
 }

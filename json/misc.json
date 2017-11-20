@@ -63,37 +63,33 @@
       ]
     },
     "MiscellaneousAdditionType": {
-      "type": "object",
+      "type": "array",
       "description":
         "MiscellaneousAdditionType collects the attributes of an adjunct ingredient for use in a recipe adjunct bill",
-      "additionalProperties": false,
-      "properties": {
-        "addition": {
-          "allOf": [
-            { "$ref": "#/definitions/MiscellaneousBase" },
-            {
-              "properties": {
-                "time": {
-                  "$ref": "measureable_units.json#/definitions/TimeType"
-                }
+      "items": {
+        "allOf": [
+          { "$ref": "#/definitions/MiscellaneousBase" },
+          {
+            "properties": {
+              "time": {
+                "$ref": "measureable_units.json#/definitions/TimeType"
               }
             }
-          ],
-          "oneOf": [
-            {
-              "properties": {
-                "amount": {
-                  "$ref": "measureable_units.json#/definitions/VolumeType"
-                },
-                "amount_as_weight": {
-                  "$ref": "measureable_units.json#/definitions/MassType"
-                }
+          }
+        ],
+        "oneOf": [
+          {
+            "properties": {
+              "amount": {
+                "$ref": "measureable_units.json#/definitions/VolumeType"
+              },
+              "amount_as_weight": {
+                "$ref": "measureable_units.json#/definitions/MassType"
               }
             }
-          ]
-        }
-      },
-      "required": ["addition"]
+          }
+        ]
+      }
     }
   }
 }

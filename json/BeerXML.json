@@ -14,100 +14,68 @@
           "$ref": "measureable_units.json#/definitions/VersionType"
         },
         "fermentables": {
-          "type": "object",
+          "type": "array",
           "description":
             "Records for any ingredient that contributes to the gravity of the beer.",
-          "additionalProperties": false,
-          "properties": {
-            "fermentable": {
-              "$ref": "grain.json#/definitions/FermentableType"
-            }
-          },
-          "required": ["fermentable"]
+          "items": {
+            "$ref": "grain.json#/definitions/FermentableType"
+          }
         },
         "miscellaneous_ingredients": {
-          "type": "object",
+          "type": "array",
           "description":
             "Records for adjuncts which do not contribute to the gravity of the beer.",
-          "additionalProperties": false,
-          "properties": {
-            "miscellaneous": {
-              "$ref": "misc.json#/definitions/MiscellaneousType"
-            }
-          },
-          "required": ["miscellaneous"]
+          "items": {
+            "$ref": "misc.json#/definitions/MiscellaneousType"
+          }
         },
         "hop_varieties": {
-          "type": "object",
+          "type": "array",
           "description":
             "Records detailing the many properties of unique hop varieties.",
-          "additionalProperties": false,
-          "properties": {
-            "hop": {
-              "$ref": "hops.json#/definitions/VarietyInformation"
-            }
-          },
-          "required": ["hop"]
+          "items": {
+            "$ref": "hops.json#/definitions/VarietyInformation"
+          }
         },
         "cultures": {
-          "type": "object",
+          "type": "array",
           "description":
             "Records detailing the wide array of unique yeast cultures.",
-          "additionalProperties": false,
-          "properties": {
-            "yeast": {
-              "$ref": "yeast.json#/definitions/CultureInformation"
-            }
-          },
-          "required": ["yeast"]
+          "items": {
+            "$ref": "yeast.json#/definitions/CultureInformation"
+          }
         },
         "profiles": {
-          "type": "object",
+          "type": "array",
           "description":
             "Records for regional water profiles used in style-specific beer brewing.",
-          "additionalProperties": false,
-          "properties": {
-            "water": {
-              "$ref": "water.json#/definitions/WaterType"
-            }
-          },
-          "required": ["water"]
+          "items": {
+            "$ref": "water.json#/definitions/WaterType"
+          }
         },
         "styles": {
-          "type": "object",
+          "type": "array",
           "description":
             "Records detailing the characteristics of the beer styles for which judging guidelines have been established.",
-          "additionalProperties": false,
-          "properties": {
-            "style": {
-              "$ref": "style.json#/definitions/StyleType"
-            }
-          },
-          "required": ["style"]
+          "items": {
+            "$ref": "style.json#/definitions/StyleType"
+          }
         },
         "procedure": {
-          "type": "object",
+          "type": "array",
           "description":
             "A collection of steps providing process information for common mashing procedures.",
-          "additionalProperties": false,
-          "properties": {
-            "mash": {
-              "$ref": "mash.json#/definitions/MashProcedureType"
-            }
-          },
-          "required": ["mash"]
+          "items": {
+            "$ref": "mash.json#/definitions/MashProcedureType"
+          }
         },
         "recipes": {
-          "type": "object",
+          "type": "array",
           "description":
             "Records containing a minimal collection of the description of ingredients, procedures and other required parameters necessary to recreate a batch of beer.",
-          "additionalProperties": false,
-          "properties": {
-            "recipe": {
-              "$ref": "recipes.json#/definitions/RecipeType"
-            }
-          },
-          "required": ["recipe"]
+          "items": {
+            "$ref": "recipes.json#/definitions/RecipeType"
+          }
         }
       }
     }

@@ -1,8 +1,8 @@
 {
   "beer_xml": {
     "version": 2.01,
-    "fermentables": {
-      "fermentable": {
+    "fermentables": [
+      {
         "name": "Pale 2-row Malt",
         "type": "grain",
         "color": {
@@ -14,6 +14,6 @@
           "coarse_grind": 0
         }
       }
-    }
+    ]
   }
 }

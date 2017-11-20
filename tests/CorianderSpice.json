@@ -1,8 +1,8 @@
 {
   "beer_xml": {
     "version": 2.01,
-    "miscellaneous_ingredients": {
-      "miscellaneous": {
+    "miscellaneous_ingredients": [
+      {
         "name": "Coriander",
         "type": "spice",
         "use": "boil",
@@ -10,6 +10,6 @@
         "notes":
           "Used in Belgian Wit, Whites, and Holiday ales. Very good when used in light wheat ales. Often used with Bitter Orange Peel. Crack open seeds and add at the end of the boil to extract aroma and flavor."
       }
-    }
+    ]
   }
 }

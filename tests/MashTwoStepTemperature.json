@@ -1,8 +1,8 @@
 {
   "beer_xml": {
     "version": 2.01,
-    "procedure": {
-      "mash": {
+    "procedure": [
+      {
         "name": "Two Step Temperature, 68C",
         "grain_temperature": {
           "degrees": "C",
@@ -12,8 +12,8 @@
           "degrees": "C",
           "value": 78.0
         },
-        "mash_steps": {
-          "step": {
+        "mash_steps": [
+          {
             "name": "Protein Rest",
             "type": "temperature",
             "infuse_amount": {
@@ -33,7 +33,7 @@
               "value": 10.0
             }
           },
-          "step": {
+          {
             "name": "Conversion Step, 68 C",
             "type": "temperature",
             "infuse_amount": {
@@ -53,8 +53,8 @@
               "value": 20.0
             }
           }
-        }
+        ]
       }
-    }
+    ]
   }
 }

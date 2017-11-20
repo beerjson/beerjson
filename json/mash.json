@@ -27,14 +27,11 @@
           "type": "string"
         },
         "mash_steps": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "step": {
-              "$ref": "mash_step.json#/definitions/MashStepType"
-            }
-          },
-          "required": ["step"]
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "mash_step.json#/definitions/MashStepType"
+          }
         }
       },
       "required": ["name", "grain_temperature", "mash_steps"]

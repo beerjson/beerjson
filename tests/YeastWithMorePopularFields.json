@@ -1,8 +1,8 @@
 {
   "beer_xml": {
     "version": 2.01,
-    "cultures": {
-      "yeast": {
+    "cultures": [
+      {
         "name": "German Ale",
         "type": "ale",
         "form": "liquid",
@@ -24,6 +24,6 @@
           "Crisp dry flavor with a hint of mild flavor. Great for many continental ales.",
         "best_for": "German Ales, Alts, Kolsch, Dry Stouts"
       }
-    }
+    ]
   }
 }
