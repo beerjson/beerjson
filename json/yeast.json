@@ -95,13 +95,7 @@
               },
               "add_to_secondary": {
                 "type": "boolean"
-              }
-            }
-          }
-        ],
-        "oneOf": [
-          {
-            "properties": {
+              },
               "amount": {
                 "$ref": "measureable_units.json#/definitions/VolumeType"
               },
@@ -109,6 +103,16 @@
                 "$ref": "measureable_units.json#/definitions/MassType"
               }
             }
+          },
+          {
+            "oneOf": [
+              {
+                "required": ["amount"]
+              },
+              {
+                "required": ["amount_as_weight"]
+              }
+            ]
           }
         ]
       }
