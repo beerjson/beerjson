@@ -1,8 +1,8 @@
 {
   "beer_xml": {
     "version": 2.01,
-    "procedure": {
-      "mash": {
+    "procedure": [
+      {
         "name": "Single Step Infusion, 68 C",
         "grain_temperature": {
           "degrees": "C",
@@ -27,6 +27,6 @@
           }
         ]
       }
-    }
+    ]
   }
 }

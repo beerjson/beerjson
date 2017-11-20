@@ -1,8 +1,8 @@
 {
   "beer_xml": {
     "version": 2.01,
-    "fermentables": {
-      "fermentable": {
+    "fermentables": [
+      {
         "name": "Fustons Hopped Amber",
         "type": "extract",
         "color": {
@@ -16,6 +16,6 @@
         "notes": "Hopped amber extract suitable as a base for english ales.",
         "ibu_gal_per_lb": 16.6
       }
-    }
+    ]
   }
 }

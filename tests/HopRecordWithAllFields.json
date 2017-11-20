@@ -1,8 +1,8 @@
 {
   "beer_xml": {
     "version": 2.01,
-    "hop_varieties": {
-      "hop": {
+    "hop_varieties": [
+      {
         "name": "Super Hops",
         "origin": "Planet Krypton",
         "alpha_acid_units": 4.5,
@@ -31,6 +31,6 @@
           }
         }
       }
-    }
+    ]
   }
 }

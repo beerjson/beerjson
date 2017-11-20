@@ -1,8 +1,8 @@
 {
   "beer_xml": {
     "version": 2.01,
-    "profiles": {
-      "water": {
+    "profiles": [
+      {
         "name": "Burton on Trent, UK",
         "calcium": 295.0,
         "bicarbonate": 300.0,
@@ -12,6 +12,6 @@
         "magnesium": 45.0,
         "pH": 8.0
       }
-    }
+    ]
   }
 }

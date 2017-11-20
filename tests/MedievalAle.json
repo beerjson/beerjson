@@ -1,8 +1,8 @@
 {
   "beer_xml": {
     "version": 2.06,
-    "recipes": {
-      "recipe": {
+    "recipes": [
+      {
         "name": "#20 1058 Medieval Ale",
         "type": "all grain",
         "author": "",
@@ -28,8 +28,8 @@
         },
 
         "ingredients": {
-          "grain_bill": {
-            "addition": {
+          "grain_bill": [
+            {
               "name": "Buckwheat Honey",
               "type": "adjunct",
               "color": {
@@ -42,7 +42,7 @@
                 "value": 2.148
               }
             },
-            "addition": {
+            {
               "name": "Flaked Barley",
               "type": "adjunct",
               "color": {
@@ -55,7 +55,7 @@
                 "value": 0.5
               }
             },
-            "addition": {
+            {
               "name": "Roasted Barley",
               "type": "grain",
               "color": {
@@ -68,7 +68,7 @@
                 "value": 0.25
               }
             },
-            "addition": {
+            {
               "name": "Unmalted Wheat",
               "type": "grain",
               "color": {
@@ -81,7 +81,7 @@
                 "value": 1.5
               }
             },
-            "addition": {
+            {
               "name": "Pale Malt(2-row)",
               "type": "grain",
               "color": {
@@ -94,7 +94,7 @@
                 "value": 8.0
               }
             },
-            "addition": {
+            {
               "name": "Crystal Malt",
               "type": "grain",
               "color": {
@@ -107,9 +107,9 @@
                 "value": 1.0
               }
             }
-          },
-          "adjuncts": {
-            "addition": {
+          ],
+          "adjuncts": [
+            {
               "name": "Bitter Orange Peel",
               "type": "spice",
               "use": "boil",
@@ -122,7 +122,7 @@
                 "value": 60
               }
             },
-            "addition": {
+            {
               "name": "Licorice Stick",
               "type": "spice",
               "use": "boil",
@@ -135,7 +135,7 @@
                 "value": 60
               }
             },
-            "addition": {
+            {
               "name": "Mugwort",
               "type": "herb",
               "use": "boil",
@@ -148,7 +148,7 @@
                 "value": 60.0
               }
             },
-            "addition": {
+            {
               "name": "Juniper Berries",
               "type": "fruit",
               "use": "secondary",
@@ -161,7 +161,7 @@
                 "value": 0.0
               }
             },
-            "addition": {
+            {
               "name": "Lemon Balm",
               "type": "herb",
               "use": "boil",
@@ -174,9 +174,9 @@
                 "value": 0.0
               }
             }
-          },
-          "yeast_additions": {
-            "addition": {
+          ],
+          "yeast_additions": [
+            {
               "name": "English Ale",
               "type": "ale",
               "form": "liquid",
@@ -187,7 +187,7 @@
                 "value": 0.0
               }
             }
-          }
+          ]
         },
         "mash": {
           "name": "Simple Mash Type - Single Step",
@@ -239,6 +239,6 @@
           "value": 0
         }
       }
-    }
+    ]
   }
 }

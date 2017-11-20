@@ -1,8 +1,8 @@
 {
   "beer_xml": {
     "version": 2.01,
-    "fermentables": {
-      "fermentable": {
+    "fermentables": [
+      {
         "name": "Crystal 40 L",
         "type": "grain",
         "color": {
@@ -24,6 +24,6 @@
         "max_in_batch": 10.0,
         "recommend_mash": false
       }
-    }
+    ]
   }
 }

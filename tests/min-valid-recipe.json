@@ -1,8 +1,8 @@
 {
   "beer_xml": {
     "version": 2.06,
-    "fermentables": {
-      "fermentable": {
+    "fermentables": [
+      {
         "name": "name",
         "type": "grain",
         "color": {},
@@ -11,32 +11,32 @@
           "coarse_grind": 1
         }
       }
-    },
-    "miscellaneous_ingredients": {
-      "miscellaneous": {
+    ],
+    "miscellaneous_ingredients": [
+      {
         "name": "name",
         "type": "fining",
         "use": "boil"
       }
-    },
-    "hop_varieties": {
-      "hop": {
+    ],
+    "hop_varieties": [
+      {
         "name": "name",
         "origin": "US",
         "alpha_acid_units": 5
       }
-    },
-    "cultures": {
-      "yeast": {
+    ],
+    "cultures": [
+      {
         "name": "Ole English Ale Yeast",
         "type": "ale",
         "form": "liquid",
         "laboratory": "",
         "product_id": ""
       }
-    },
-    "profiles": {
-      "water": {
+    ],
+    "profiles": [
+      {
         "name": "name",
         "calcium": 295.0,
         "bicarbonate": 300.0,
@@ -46,9 +46,9 @@
         "magnesium": 45.0,
         "pH": 8.0
       }
-    },
-    "styles": {
-      "style": {
+    ],
+    "styles": [
+      {
         "name": "name",
         "category": "European Pale Ale",
         "category_number": 2,
@@ -72,9 +72,9 @@
           "maximum": 1
         }
       }
-    },
-    "procedure": {
-      "mash": {
+    ],
+    "procedure": [
+      {
         "name": "mash",
         "grain_temperature": 68,
         "mash_steps": [
@@ -86,9 +86,9 @@
           }
         ]
       }
-    },
-    "recipes": {
-      "recipe": {
+    ],
+    "recipes": [
+      {
         "name": "my recipe",
         "type": "all grain",
         "author": "me",
@@ -99,15 +99,15 @@
         "boil_size": {},
         "boil_time": 90,
         "ingredients": {
-          "grain_bill": {
-            "addition": {
+          "grain_bill": [
+            {
               "name": "pale ale",
               "type": "grain",
               "color": {}
             }
-          }
+          ]
         }
       }
-    }
+    ]
   }
 }

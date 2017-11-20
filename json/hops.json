@@ -89,45 +89,41 @@
       ]
     },
     "HopAdditionType": {
-      "type": "object",
+      "type": "array",
       "description":
         "HopAdditionType collects the attributes of a hop ingredient for use in a recipe hop bil",
-      "additionalProperties": false,
-      "properties": {
-        "addition": {
-          "allOf": [
-            { "$ref": "#/definitions/HopVarietyBase" },
-            {
-              "form": {
-                "type": "string",
-                "enum": ["leaf", "pellet", "plug"]
-              }
-            },
-            {
-              "use": {
-                "type": "string",
-                "enum": [
-                  "boil",
-                  "dry hop",
-                  "first wort",
-                  "hopback",
-                  "mash",
-                  "continuous boil addition"
-                ]
-              }
-            },
-            {
-              "amount": {
-                "$ref": "measureable_units.json#/definitions/MassType"
-              },
-              "time": {
-                "$ref": "measureable_units.json#/definitions/TimeType"
-              }
+      "items": {
+        "allOf": [
+          { "$ref": "#/definitions/HopVarietyBase" },
+          {
+            "form": {
+              "type": "string",
+              "enum": ["leaf", "pellet", "plug"]
             }
-          ]
-        }
-      },
-      "required": ["addition"]
+          },
+          {
+            "use": {
+              "type": "string",
+              "enum": [
+                "boil",
+                "dry hop",
+                "first wort",
+                "hopback",
+                "mash",
+                "continuous boil addition"
+              ]
+            }
+          },
+          {
+            "amount": {
+              "$ref": "measureable_units.json#/definitions/MassType"
+            },
+            "time": {
+              "$ref": "measureable_units.json#/definitions/TimeType"
+            }
+          }
+        ]
+      }
     },
     "IBUEstimateType": {
       "properties": {

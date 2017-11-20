@@ -82,40 +82,36 @@
       ]
     },
     "YeastAdditionType": {
-      "type": "object",
+      "type": "array",
       "description":
         "YeastAdditionType collects the attributes of a yeast ingredient for use in a recipe",
-      "additionalProperties": false,
-      "properties": {
-        "addition": {
-          "allOf": [
-            { "$ref": "#/definitions/CultureBase" },
-            {
-              "properties": {
-                "times_cultured": {
-                  "type": "integer"
-                },
-                "add_to_secondary": {
-                  "type": "boolean"
-                }
+      "items": {
+        "allOf": [
+          { "$ref": "#/definitions/CultureBase" },
+          {
+            "properties": {
+              "times_cultured": {
+                "type": "integer"
+              },
+              "add_to_secondary": {
+                "type": "boolean"
               }
             }
-          ],
-          "oneOf": [
-            {
-              "properties": {
-                "amount": {
-                  "$ref": "measureable_units.json#/definitions/VolumeType"
-                },
-                "amount_as_weight": {
-                  "$ref": "measureable_units.json#/definitions/MassType"
-                }
+          }
+        ],
+        "oneOf": [
+          {
+            "properties": {
+              "amount": {
+                "$ref": "measureable_units.json#/definitions/VolumeType"
+              },
+              "amount_as_weight": {
+                "$ref": "measureable_units.json#/definitions/MassType"
               }
             }
-          ]
-        }
-      },
-      "required": ["addition"]
+          }
+        ]
+      }
     }
   }
 }

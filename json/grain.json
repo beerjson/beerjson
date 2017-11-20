@@ -100,27 +100,24 @@
       "required": ["yield_dry_basis"]
     },
     "FermentableAdditionType": {
-      "type": "object",
+      "type": "array",
       "description":
         "FermentableAdditionType collects the attributes of a fermentable ingredient for use in a recipe grain bill",
-      "properties": {
-        "addition": {
-          "allOf": [
-            { "$ref": "#/definitions/FermentableBase" },
-            {
-              "properties": {
-                "amount": {
-                  "$ref": "measureable_units.json#/definitions/MassType"
-                },
-                "add_after_boil": {
-                  "type": "boolean"
-                }
+      "items": {
+        "allOf": [
+          { "$ref": "#/definitions/FermentableBase" },
+          {
+            "properties": {
+              "amount": {
+                "$ref": "measureable_units.json#/definitions/MassType"
+              },
+              "add_after_boil": {
+                "type": "boolean"
               }
             }
-          ]
-        }
-      },
-      "required": ["addition"]
+          }
+        ]
+      }
     }
   }
 }
