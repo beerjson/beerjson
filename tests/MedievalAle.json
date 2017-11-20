@@ -196,8 +196,8 @@
             "value": 80.0
           },
           "notes": "",
-          "mash_steps": {
-            "step": {
+          "mash_steps": [
+            {
               "name": "Saccharification Rest",
               "type": "infusion",
               "infuse_amount": {
@@ -227,7 +227,7 @@
                 "value": 165.0
               }
             }
-          }
+          ]
         },
         "notes": "",
         "original_gravity": {

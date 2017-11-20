@@ -8,8 +8,8 @@
           "degrees": "C",
           "value": 22.0
         },
-        "mash_steps": {
-          "step": {
+        "mash_steps": [
+          {
             "name": "Conversion Step, 68C",
             "type": "infusion",
             "infuse_amount": {
@@ -25,7 +25,7 @@
               "value": 60.0
             }
           }
-        }
+        ]
       }
     }
   }
