@@ -28,6 +28,7 @@
         },
         "mash_steps": {
           "type": "array",
+          "minItems": 1,
           "items": {
             "$ref": "mash_step.json#/definitions/MashStepType"
           }
