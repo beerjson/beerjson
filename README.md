@@ -1,6 +1,8 @@
 [![Build Sntatus](https://travis-ci.org/beerjson/beerjson.svg?branch=preparing-beerjson-2.0)](https://travis-ci.org/beerjson/beerjson)
 
 # Welcome to BeerJSON 2.0-draft working group repository
+
+[![Join the chat at https://gitter.im/beerjson/beerjson](https://badges.gitter.im/beerjson/beerjson.svg)](https://gitter.im/beerjson/beerjson?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 This is a repository for development of BeerJSON interchange format specification. It is based on yet unfinished [BeerXML 2 standard (PDF)](http://users.speakeasy.net/%7Eantonw/beer_xml/BeerXML_v2_01.pdf).
 
 ## Structure of the repository
