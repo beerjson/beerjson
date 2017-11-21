@@ -1,6 +1,6 @@
 {
-  "RECIPES": {
-    "RECIPE": {
+  "RECIPES": [
+    {
       "VERSION": 1,
       "NAME": "RR Brown Ale",
       "BREWER": "RomaRoma",
@@ -10,18 +10,18 @@
       "BOIL_TIME": 60,
       "EFFICIENCY": 75,
       "TYPE": "All Grain",
-      "FERMENTABLES": {
-        "FERMENTABLE": {
+      "FERMENTABLES": [
+        {
           "VERSION": 1,
           "NAME": "Pale Malt, Maris Otter",
           "ADD_AFTER_BOIL": "FALSE",
           "AMOUNT": 7.4999894,
           "COLOR": 3,
           "POTENTIAL": 1.03795,
-          "YIELD": 82.5,
+          "YIELD": 82,
           "TYPE": "Grain"
         },
-        "FERMENTABLE": {
+        {
           "VERSION": 1,
           "NAME": "Black (Patent) Malt",
           "ADD_AFTER_BOIL": "FALSE",
@@ -31,7 +31,7 @@
           "YIELD": 55,
           "TYPE": "Grain"
         },
-        "FERMENTABLE": {
+        {
           "VERSION": 1,
           "NAME": "Cara 150",
           "ADD_AFTER_BOIL": "FALSE",
@@ -41,7 +41,7 @@
           "YIELD": 74,
           "TYPE": "Grain"
         },
-        "FERMENTABLE": {
+        {
           "VERSION": 1,
           "NAME": "Cara 250",
           "ADD_AFTER_BOIL": "FALSE",
@@ -51,7 +51,7 @@
           "YIELD": 72,
           "TYPE": "Grain"
         },
-        "FERMENTABLE": {
+        {
           "VERSION": 1,
           "NAME": "Chocolate Malt",
           "ADD_AFTER_BOIL": "FALSE",
@@ -61,9 +61,9 @@
           "YIELD": 73,
           "TYPE": "Grain"
         }
-      },
-      "HOPS": {
-        "HOP": {
+      ],
+      "HOPS": [
+        {
           "VERSION": 1,
           "NAME": "Target",
           "ALPHA": 0.11,
@@ -72,7 +72,7 @@
           "USE": "Boil",
           "TIME": 60
         },
-        "HOP": {
+        {
           "VERSION": 1,
           "NAME": "Goldings, East Kent",
           "ALPHA": 0.05,
@@ -81,7 +81,7 @@
           "USE": "Boil",
           "TIME": 10
         }
-      },
+      ],
       "MASH": {
         "VERSION": 1,
         "NAME": "Simple One",
@@ -89,8 +89,8 @@
         "TUN_TEMP": 22.2222222,
         "EQUIP_ADJUST": "FALSE",
         "SPARGE_TEMP": 75.5555556,
-        "MASH_STEPS": {
-          "MASH_STEP": {
+        "MASH_STEPS": [
+          {
             "VERSION": 1,
             "NAME": "Saccharification",
             "END_TEMP": 66,
@@ -100,7 +100,7 @@
             "STEP_TIME": 60,
             "TYPE": "Infusion"
           },
-          "MASH_STEP": {
+          {
             "VERSION": 1,
             "NAME": "MASH Out",
             "END_TEMP": 75,
@@ -110,10 +110,10 @@
             "STEP_TIME": 10,
             "TYPE": "Temperature"
           }
-        }
+        ]
       },
-      "YEASTS": {
-        "YEAST": {
+      "YEASTS": [
+        {
           "VERSION": 1,
           "NAME": "English Ale",
           "AMOUNT": 0.0354884,
@@ -122,7 +122,7 @@
           "FORM": "Liquid",
           "TYPE": "Ale"
         }
-      },
+      ],
       "STYLE": {
         "NAME": "",
         "VERSION": 1,
@@ -154,5 +154,5 @@
         "TRUB_CHILLER_LOSS": 2
       }
     }
-  }
+  ]
 }

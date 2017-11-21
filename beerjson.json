@@ -6,403 +6,41 @@
   "additionalProperties": false,
   "properties": {
     "RECIPES": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "RECIPE": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "NAME": {
-              "type": "string"
-            },
-            "VERSION": {
-              "type": "integer"
-            },
-            "TYPE": {
-              "type": "string"
-            },
-            "BREWER": {
-              "type": "string"
-            },
-            "ASST_BREWER": {
-              "additionalProperties": false
-            },
-            "BATCH_SIZE": {
-              "type": "number"
-            },
-            "BOIL_SIZE": {
-              "type": "number"
-            },
-            "BOIL_TIME": {
-              "type": "integer"
-            },
-            "EFFICIENCY": {
-              "type": "integer"
-            },
-            "HOPS": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "HOP": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "NAME": {
-                      "type": "string"
-                    },
-                    "VERSION": {
-                      "type": "integer"
-                    },
-                    "ORIGIN": {
-                      "type": "string"
-                    },
-                    "ALPHA": {
-                      "type": "number"
-                    },
-                    "AMOUNT": {
-                      "type": "number"
-                    },
-                    "USE": {
-                      "type": "string"
-                    },
-                    "TIME": {
-                      "type": "integer"
-                    },
-                    "NOTES": {
-                      "type": "string"
-                    },
-                    "TYPE": {
-                      "type": "string"
-                    },
-                    "FORM": {
-                      "type": "string"
-                    },
-                    "BETA": {
-                      "type": "number"
-                    },
-                    "HSI": {
-                      "type": "integer"
-                    },
-                    "DISPLAY_AMOUNT": {
-                      "type": "string"
-                    },
-                    "INVENTORY": {
-                      "type": "string"
-                    },
-                    "DISPLAY_TIME": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "NAME",
-                    "VERSION",
-                    "ALPHA",
-                    "AMOUNT",
-                    "USE",
-                    "TIME"
-                  ]
-                }
-              },
-              "required": ["HOP"]
-            },
-            "FERMENTABLES": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "FERMENTABLE": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "NAME": {
-                      "type": "string"
-                    },
-                    "VERSION": {
-                      "type": "integer"
-                    },
-                    "TYPE": {
-                      "type": "string"
-                    },
-                    "AMOUNT": {
-                      "type": "number"
-                    },
-                    "YIELD": {
-                      "type": "integer"
-                    },
-                    "COLOR": {
-                      "type": "number"
-                    },
-                    "ADD_AFTER_BOIL": {
-                      "type": "string"
-                    },
-                    "ORIGIN": {
-                      "type": "string"
-                    },
-                    "SUPPLIER": {
-                      "additionalProperties": false
-                    },
-                    "NOTES": {
-                      "type": "string"
-                    },
-                    "COARSE_FINE_DIFF": {
-                      "type": "number"
-                    },
-                    "MOISTURE": {
-                      "type": "integer"
-                    },
-                    "DIASTATIC_POWER": {
-                      "type": "integer"
-                    },
-                    "PROTEIN": {
-                      "type": "number"
-                    },
-                    "MAX_IN_BATCH": {
-                      "type": "integer"
-                    },
-                    "RECOMMEND_MASH": {
-                      "type": "string"
-                    },
-                    "IBU_GAL_PER_LB": {
-                      "type": "integer"
-                    },
-                    "DISPLAY_AMOUNT": {
-                      "type": "string"
-                    },
-                    "INVENTORY": {
-                      "type": "string"
-                    },
-                    "POTENTIAL": {
-                      "type": "number"
-                    },
-                    "DISPLAY_COLOR": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "NAME",
-                    "VERSION",
-                    "TYPE",
-                    "AMOUNT",
-                    "YIELD",
-                    "COLOR"
-                  ]
-                }
-              },
-              "required": ["FERMENTABLE"]
-            },
-            "MISCS": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "MISC": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "NAME": {
-                      "type": "string"
-                    },
-                    "VERSION": {
-                      "type": "integer"
-                    },
-                    "TYPE": {
-                      "type": "string"
-                    },
-                    "USE": {
-                      "type": "string"
-                    },
-                    "AMOUNT": {
-                      "type": "number"
-                    },
-                    "TIME": {
-                      "type": "integer"
-                    },
-                    "AMOUNT_IS_WEIGHT": {
-                      "type": "string"
-                    },
-                    "USE_FOR": {
-                      "type": "string"
-                    },
-                    "NOTES": {
-                      "type": "string"
-                    },
-                    "DISPLAY_AMOUNT": {
-                      "type": "string"
-                    },
-                    "INVENTORY": {
-                      "type": "string"
-                    },
-                    "DISPLAY_TIME": {
-                      "type": "string"
-                    },
-                    "BATCH_SIZE": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "NAME",
-                    "VERSION",
-                    "TYPE",
-                    "USE",
-                    "AMOUNT",
-                    "TIME",
-                    "AMOUNT_IS_WEIGHT",
-                    "USE_FOR",
-                    "NOTES",
-                    "DISPLAY_AMOUNT",
-                    "INVENTORY",
-                    "DISPLAY_TIME",
-                    "BATCH_SIZE"
-                  ]
-                }
-              },
-              "required": ["MISC"]
-            },
-            "YEASTS": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "YEAST": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "NAME": {
-                      "type": "string"
-                    },
-                    "VERSION": {
-                      "type": "integer"
-                    },
-                    "TYPE": {
-                      "type": "string"
-                    },
-                    "FORM": {
-                      "type": "string"
-                    },
-                    "AMOUNT": {
-                      "type": "number"
-                    },
-                    "AMOUNT_IS_WEIGHT": {
-                      "type": "string"
-                    },
-                    "LABORATORY": {
-                      "type": "string"
-                    },
-                    "PRODUCT_ID": {
-                      "type": "string"
-                    },
-                    "MIN_TEMPERATURE": {
-                      "type": "integer"
-                    },
-                    "MAX_TEMPERATURE": {
-                      "type": "number"
-                    },
-                    "FLOCCULATION": {
-                      "type": "string"
-                    },
-                    "ATTENUATION": {
-                      "type": "integer"
-                    },
-                    "NOTES": {
-                      "type": "string"
-                    },
-                    "BEST_FOR": {
-                      "type": "string"
-                    },
-                    "MAX_REUSE": {
-                      "type": "integer"
-                    },
-                    "TIMES_CULTURED": {
-                      "type": "integer"
-                    },
-                    "ADD_TO_SECONDARY": {
-                      "type": "string"
-                    },
-                    "DISPLAY_AMOUNT": {
-                      "type": "string"
-                    },
-                    "DISP_MIN_TEMP": {
-                      "type": "string"
-                    },
-                    "DISP_MAX_TEMP": {
-                      "type": "string"
-                    },
-                    "INVENTORY": {
-                      "type": "string"
-                    },
-                    "CULTURE_DATE": {
-                      "type": "string"
-                    }
-                  },
-                  "required": ["NAME", "VERSION", "TYPE", "FORM", "AMOUNT"]
-                }
-              },
-              "required": ["YEAST"]
-            },
-            "WATERS": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "WATER": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "NAME": {
-                      "type": "string"
-                    },
-                    "VERSION": {
-                      "type": "integer"
-                    },
-                    "AMOUNT": {
-                      "type": "number"
-                    },
-                    "CALCIUM": {
-                      "type": "integer"
-                    },
-                    "BICARBONATE": {
-                      "type": "integer"
-                    },
-                    "SULFATE": {
-                      "type": "integer"
-                    },
-                    "CHLORIDE": {
-                      "type": "integer"
-                    },
-                    "SODIUM": {
-                      "type": "integer"
-                    },
-                    "MAGNESIUM": {
-                      "type": "integer"
-                    },
-                    "PH": {
-                      "type": "integer"
-                    },
-                    "NOTES": {
-                      "type": "string"
-                    },
-                    "DISPLAY_AMOUNT": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "NAME",
-                    "VERSION",
-                    "AMOUNT",
-                    "CALCIUM",
-                    "BICARBONATE",
-                    "SULFATE",
-                    "CHLORIDE",
-                    "SODIUM",
-                    "MAGNESIUM",
-                    "PH",
-                    "NOTES",
-                    "DISPLAY_AMOUNT"
-                  ]
-                }
-              },
-              "required": ["WATER"]
-            },
-            "STYLE": {
-              "type": "object",
-              "additionalProperties": false,
+      "type": "array",
+      "minLength": 1,
+      "items": {
+        "properties": {
+          "NAME": {
+            "type": "string"
+          },
+          "VERSION": {
+            "type": "integer"
+          },
+          "TYPE": {
+            "type": "string"
+          },
+          "BREWER": {
+            "type": "string"
+          },
+          "ASST_BREWER": {
+            "additionalProperties": false
+          },
+          "BATCH_SIZE": {
+            "type": "number"
+          },
+          "BOIL_SIZE": {
+            "type": "number"
+          },
+          "BOIL_TIME": {
+            "type": "integer"
+          },
+          "EFFICIENCY": {
+            "type": "integer"
+          },
+          "HOPS": {
+            "type": "array",
+            "minLength": 1,
+            "items": {
               "properties": {
                 "NAME": {
                   "type": "string"
@@ -410,437 +48,757 @@
                 "VERSION": {
                   "type": "integer"
                 },
-                "CATEGORY": {
+                "ORIGIN": {
                   "type": "string"
                 },
-                "CATEGORY_NUMBER": {
+                "ALPHA": {
+                  "type": "number"
+                },
+                "AMOUNT": {
+                  "type": "number"
+                },
+                "USE": {
+                  "type": "string"
+                },
+                "TIME": {
                   "type": "integer"
                 },
-                "STYLE_LETTER": {
-                  "type": "string"
-                },
-                "STYLE_GUIDE": {
+                "NOTES": {
                   "type": "string"
                 },
                 "TYPE": {
                   "type": "string"
                 },
-                "OG_MIN": {
+                "FORM": {
+                  "type": "string"
+                },
+                "BETA": {
                   "type": "number"
                 },
-                "OG_MAX": {
-                  "type": "number"
-                },
-                "FG_MIN": {
-                  "type": "number"
-                },
-                "FG_MAX": {
-                  "type": "number"
-                },
-                "IBU_MIN": {
+                "HSI": {
                   "type": "integer"
                 },
-                "IBU_MAX": {
+                "DISPLAY_AMOUNT": {
+                  "type": "string"
+                },
+                "INVENTORY": {
+                  "type": "string"
+                },
+                "DISPLAY_TIME": {
+                  "type": "string"
+                }
+              },
+              "required": ["NAME", "VERSION", "ALPHA", "AMOUNT", "USE", "TIME"]
+            }
+          },
+          "FERMENTABLES": {
+            "type": "array",
+            "minLength": 1,
+            "items": {
+              "properties": {
+                "NAME": {
+                  "type": "string"
+                },
+                "VERSION": {
                   "type": "integer"
                 },
-                "COLOR_MIN": {
+                "TYPE": {
+                  "type": "string"
+                },
+                "AMOUNT": {
+                  "type": "number"
+                },
+                "YIELD": {
                   "type": "integer"
                 },
-                "COLOR_MAX": {
-                  "type": "integer"
-                },
-                "CARB_MIN": {
+                "COLOR": {
                   "type": "number"
                 },
-                "CARB_MAX": {
-                  "type": "number"
+                "ADD_AFTER_BOIL": {
+                  "type": "string"
                 },
-                "ABV_MAX": {
-                  "type": "number"
+                "ORIGIN": {
+                  "type": "string"
                 },
-                "ABV_MIN": {
-                  "type": "number"
+                "SUPPLIER": {
+                  "additionalProperties": false
                 },
                 "NOTES": {
                   "type": "string"
                 },
-                "PROFILE": {
+                "COARSE_FINE_DIFF": {
+                  "type": "number"
+                },
+                "MOISTURE": {
+                  "type": "integer"
+                },
+                "DIASTATIC_POWER": {
+                  "type": "integer"
+                },
+                "PROTEIN": {
+                  "type": "number"
+                },
+                "MAX_IN_BATCH": {
+                  "type": "integer"
+                },
+                "RECOMMEND_MASH": {
                   "type": "string"
                 },
-                "INGREDIENTS": {
+                "IBU_GAL_PER_LB": {
+                  "type": "integer"
+                },
+                "DISPLAY_AMOUNT": {
                   "type": "string"
                 },
-                "EXAMPLES": {
+                "INVENTORY": {
                   "type": "string"
                 },
-                "DISPLAY_OG_MIN": {
-                  "type": "string"
+                "POTENTIAL": {
+                  "type": "number"
                 },
-                "DISPLAY_OG_MAX": {
-                  "type": "string"
-                },
-                "DISPLAY_FG_MIN": {
-                  "type": "string"
-                },
-                "DISPLAY_FG_MAX": {
-                  "type": "string"
-                },
-                "DISPLAY_COLOR_MIN": {
-                  "type": "string"
-                },
-                "DISPLAY_COLOR_MAX": {
-                  "type": "string"
-                },
-                "OG_RANGE": {
-                  "type": "string"
-                },
-                "FG_RANGE": {
-                  "type": "string"
-                },
-                "IBU_RANGE": {
-                  "type": "string"
-                },
-                "CARB_RANGE": {
-                  "type": "string"
-                },
-                "COLOR_RANGE": {
-                  "type": "string"
-                },
-                "ABV_RANGE": {
+                "DISPLAY_COLOR": {
                   "type": "string"
                 }
               },
               "required": [
                 "NAME",
                 "VERSION",
-                "CATEGORY",
-                "CATEGORY_NUMBER",
-                "STYLE_LETTER",
-                "STYLE_GUIDE",
                 "TYPE",
-                "OG_MIN",
-                "OG_MAX",
-                "FG_MIN",
-                "FG_MAX",
-                "IBU_MIN",
-                "IBU_MAX",
-                "COLOR_MIN",
-                "COLOR_MAX"
+                "AMOUNT",
+                "YIELD",
+                "COLOR"
               ]
-            },
-            "EQUIPMENT": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "NAME": {
-                  "type": "string"
-                },
-                "VERSION": {
-                  "type": "integer"
-                },
-                "BOIL_SIZE": {
-                  "type": "number"
-                },
-                "BATCH_SIZE": {
-                  "type": "number"
-                },
-                "TUN_VOLUME": {
-                  "type": "number"
-                },
-                "TUN_WEIGHT": {
-                  "type": "number"
-                },
-                "TUN_SPECIFIC_HEAT": {
-                  "type": "number"
-                },
-                "TOP_UP_WATER": {
-                  "type": "integer"
-                },
-                "TRUB_CHILLER_LOSS": {
-                  "type": "number"
-                },
-                "EVAP_RATE": {
-                  "type": "integer"
-                },
-                "BOIL_TIME": {
-                  "type": "integer"
-                },
-                "CALC_BOIL_VOLUME": {
-                  "type": "string"
-                },
-                "LAUTER_DEADSPACE": {
-                  "type": "number"
-                },
-                "TOP_UP_KETTLE": {
-                  "type": "integer"
-                },
-                "HOP_UTILIZATION": {
-                  "type": "integer"
-                },
-                "NOTES": {
-                  "type": "string"
-                },
-                "DISPLAY_BOIL_SIZE": {
-                  "type": "string"
-                },
-                "DISPLAY_BATCH_SIZE": {
-                  "type": "string"
-                },
-                "DISPLAY_TUN_VOLUME": {
-                  "type": "string"
-                },
-                "DISPLAY_TUN_WEIGHT": {
-                  "type": "string"
-                },
-                "DISPLAY_TOP_UP_WATER": {
-                  "type": "string"
-                },
-                "DISPLAY_TRUB_CHILLER_LOSS": {
-                  "type": "string"
-                },
-                "DISPLAY_LAUTER_DEADSPACE": {
-                  "type": "string"
-                },
-                "DISPLAY_TOP_UP_KETTLE": {
-                  "type": "string"
-                }
-              },
-              "required": ["NAME", "VERSION", "BOIL_SIZE", "BATCH_SIZE"]
-            },
-            "MASH": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "NAME": {
-                  "type": "string"
-                },
-                "VERSION": {
-                  "type": "integer"
-                },
-                "GRAIN_TEMP": {
-                  "type": "number"
-                },
-                "TUN_TEMP": {
-                  "type": "number"
-                },
-                "SPARGE_TEMP": {
-                  "type": "number"
-                },
-                "PH": {
-                  "type": "number"
-                },
-                "TUN_WEIGHT": {
-                  "type": "number"
-                },
-                "TUN_SPECIFIC_HEAT": {
-                  "type": "number"
-                },
-                "EQUIP_ADJUST": {
-                  "type": "string"
-                },
-                "NOTES": {
-                  "additionalProperties": false
-                },
-                "DISPLAY_GRAIN_TEMP": {
-                  "type": "string"
-                },
-                "DISPLAY_TUN_TEMP": {
-                  "type": "integer"
-                },
-                "DISPLAY_SPARGE_TEMP": {
-                  "type": "string"
-                },
-                "DISPLAY_TUN_WEIGHT": {
-                  "type": "string"
-                },
-                "MASH_STEPS": {
-                  "type": "object",
-                  "additionalProperties": false,
-                  "properties": {
-                    "MASH_STEP": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "properties": {
-                        "NAME": {
-                          "type": "string"
-                        },
-                        "VERSION": {
-                          "type": "integer"
-                        },
-                        "TYPE": {
-                          "type": "string"
-                        },
-                        "INFUSE_AMOUNT": {
-                          "type": "number"
-                        },
-                        "STEP_TIME": {
-                          "type": "integer"
-                        },
-                        "STEP_TEMP": {
-                          "type": "integer"
-                        },
-                        "RAMP_TIME": {
-                          "type": "integer"
-                        },
-                        "END_TEMP": {
-                          "type": "integer"
-                        },
-                        "DESCRIPTION": {
-                          "type": "string"
-                        },
-                        "WATER_GRAIN_RATIO": {
-                          "type": "number"
-                        },
-                        "DECOCTION_AMT": {
-                          "type": "string"
-                        },
-                        "INFUSE_TEMP": {
-                          "type": "string"
-                        },
-                        "DISPLAY_STEP_TEMP": {
-                          "type": "string"
-                        },
-                        "DISPLAY_INFUSE_AMT": {
-                          "type": "string"
-                        }
-                      },
-                      "required": [
-                        "NAME",
-                        "VERSION",
-                        "TYPE",
-                        "INFUSE_AMOUNT",
-                        "STEP_TIME",
-                        "STEP_TEMP",
-                        "RAMP_TIME",
-                        "END_TEMP"
-                      ]
-                    }
-                  },
-                  "required": ["MASH_STEP"]
-                }
-              },
-              "required": ["NAME", "VERSION", "GRAIN_TEMP", "MASH_STEPS"]
-            },
-            "NOTES": {
-              "additionalProperties": false
-            },
-            "TASTE_NOTES": {
-              "type": "string"
-            },
-            "TASTE_RATING": {
-              "type": "integer"
-            },
-            "OG": {
-              "type": "number"
-            },
-            "FG": {
-              "type": "number"
-            },
-            "CARBONATION": {
-              "type": "number"
-            },
-            "FERMENTATION_STAGES": {
-              "type": "integer"
-            },
-            "PRIMARY_AGE": {
-              "type": "integer"
-            },
-            "PRIMARY_TEMP": {
-              "type": "integer"
-            },
-            "SECONDARY_AGE": {
-              "type": "integer"
-            },
-            "SECONDARY_TEMP": {
-              "type": "integer"
-            },
-            "TERTIARY_AGE": {
-              "type": "integer"
-            },
-            "AGE": {
-              "type": "integer"
-            },
-            "AGE_TEMP": {
-              "type": "number"
-            },
-            "CARBONATION_USED": {
-              "type": "string"
-            },
-            "DATE": {
-              "type": "string"
-            },
-            "EST_OG": {
-              "type": "string"
-            },
-            "EST_FG": {
-              "type": "string"
-            },
-            "EST_COLOR": {
-              "type": "string"
-            },
-            "IBU": {
-              "type": "string"
-            },
-            "IBU_METHOD": {
-              "type": "string"
-            },
-            "EST_ABV": {
-              "type": "string"
-            },
-            "ABV": {
-              "type": "string"
-            },
-            "ACTUAL_EFFICIENCY": {
-              "type": "string"
-            },
-            "CALORIES": {
-              "type": "string"
-            },
-            "DISPLAY_BATCH_SIZE": {
-              "type": "string"
-            },
-            "DISPLAY_BOIL_SIZE": {
-              "type": "string"
-            },
-            "DISPLAY_OG": {
-              "type": "string"
-            },
-            "DISPLAY_FG": {
-              "type": "string"
-            },
-            "DISPLAY_PRIMARY_TEMP": {
-              "type": "string"
-            },
-            "DISPLAY_SECONDARY_TEMP": {
-              "type": "string"
-            },
-            "DISPLAY_TERTIARY_TEMP": {
-              "type": "string"
-            },
-            "DISPLAY_AGE_TEMP": {
-              "type": "string"
             }
           },
-          "required": [
-            "NAME",
-            "VERSION",
-            "TYPE",
-            "BREWER",
-            "ASST_BREWER",
-            "BATCH_SIZE",
-            "BOIL_SIZE",
-            "BOIL_TIME",
-            "EFFICIENCY",
-            "HOPS",
-            "FERMENTABLES",
-            "YEASTS",
-            "STYLE",
-            "EQUIPMENT",
-            "MASH"
-          ]
-        }
-      },
-      "required": ["RECIPE"]
+          "MISCS": {
+            "type": "array",
+            "minLength": 1,
+            "items": {
+              "properties": {
+                "NAME": {
+                  "type": "string"
+                },
+                "VERSION": {
+                  "type": "integer"
+                },
+                "TYPE": {
+                  "type": "string"
+                },
+                "USE": {
+                  "type": "string"
+                },
+                "AMOUNT": {
+                  "type": "number"
+                },
+                "TIME": {
+                  "type": "integer"
+                },
+                "AMOUNT_IS_WEIGHT": {
+                  "type": "string"
+                },
+                "USE_FOR": {
+                  "type": "string"
+                },
+                "NOTES": {
+                  "type": "string"
+                },
+                "DISPLAY_AMOUNT": {
+                  "type": "string"
+                },
+                "INVENTORY": {
+                  "type": "string"
+                },
+                "DISPLAY_TIME": {
+                  "type": "string"
+                },
+                "BATCH_SIZE": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "NAME",
+                "VERSION",
+                "TYPE",
+                "USE",
+                "AMOUNT",
+                "TIME",
+                "AMOUNT_IS_WEIGHT",
+                "USE_FOR",
+                "NOTES",
+                "DISPLAY_AMOUNT",
+                "INVENTORY",
+                "DISPLAY_TIME",
+                "BATCH_SIZE"
+              ]
+            }
+          },
+          "YEASTS": {
+            "type": "array",
+            "minLength": 1,
+            "items": {
+              "properties": {
+                "NAME": {
+                  "type": "string"
+                },
+                "VERSION": {
+                  "type": "integer"
+                },
+                "TYPE": {
+                  "type": "string"
+                },
+                "FORM": {
+                  "type": "string"
+                },
+                "AMOUNT": {
+                  "type": "number"
+                },
+                "AMOUNT_IS_WEIGHT": {
+                  "type": "string"
+                },
+                "LABORATORY": {
+                  "type": "string"
+                },
+                "PRODUCT_ID": {
+                  "type": "string"
+                },
+                "MIN_TEMPERATURE": {
+                  "type": "integer"
+                },
+                "MAX_TEMPERATURE": {
+                  "type": "number"
+                },
+                "FLOCCULATION": {
+                  "type": "string"
+                },
+                "ATTENUATION": {
+                  "type": "integer"
+                },
+                "NOTES": {
+                  "type": "string"
+                },
+                "BEST_FOR": {
+                  "type": "string"
+                },
+                "MAX_REUSE": {
+                  "type": "integer"
+                },
+                "TIMES_CULTURED": {
+                  "type": "integer"
+                },
+                "ADD_TO_SECONDARY": {
+                  "type": "string"
+                },
+                "DISPLAY_AMOUNT": {
+                  "type": "string"
+                },
+                "DISP_MIN_TEMP": {
+                  "type": "string"
+                },
+                "DISP_MAX_TEMP": {
+                  "type": "string"
+                },
+                "INVENTORY": {
+                  "type": "string"
+                },
+                "CULTURE_DATE": {
+                  "type": "string"
+                }
+              },
+              "required": ["NAME", "VERSION", "TYPE", "FORM", "AMOUNT"]
+            }
+          },
+          "WATERS": {
+            "type": "array",
+            "minLength": 1,
+            "items": {
+              "properties": {
+                "NAME": {
+                  "type": "string"
+                },
+                "VERSION": {
+                  "type": "integer"
+                },
+                "AMOUNT": {
+                  "type": "number"
+                },
+                "CALCIUM": {
+                  "type": "integer"
+                },
+                "BICARBONATE": {
+                  "type": "integer"
+                },
+                "SULFATE": {
+                  "type": "integer"
+                },
+                "CHLORIDE": {
+                  "type": "integer"
+                },
+                "SODIUM": {
+                  "type": "integer"
+                },
+                "MAGNESIUM": {
+                  "type": "integer"
+                },
+                "PH": {
+                  "type": "integer"
+                },
+                "NOTES": {
+                  "type": "string"
+                },
+                "DISPLAY_AMOUNT": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "NAME",
+                "VERSION",
+                "AMOUNT",
+                "CALCIUM",
+                "BICARBONATE",
+                "SULFATE",
+                "CHLORIDE",
+                "SODIUM",
+                "MAGNESIUM",
+                "PH",
+                "NOTES",
+                "DISPLAY_AMOUNT"
+              ]
+            }
+          },
+          "STYLE": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "NAME": {
+                "type": "string"
+              },
+              "VERSION": {
+                "type": "integer"
+              },
+              "CATEGORY": {
+                "type": "string"
+              },
+              "CATEGORY_NUMBER": {
+                "type": "integer"
+              },
+              "STYLE_LETTER": {
+                "type": "string"
+              },
+              "STYLE_GUIDE": {
+                "type": "string"
+              },
+              "TYPE": {
+                "type": "string"
+              },
+              "OG_MIN": {
+                "type": "number"
+              },
+              "OG_MAX": {
+                "type": "number"
+              },
+              "FG_MIN": {
+                "type": "number"
+              },
+              "FG_MAX": {
+                "type": "number"
+              },
+              "IBU_MIN": {
+                "type": "integer"
+              },
+              "IBU_MAX": {
+                "type": "integer"
+              },
+              "COLOR_MIN": {
+                "type": "integer"
+              },
+              "COLOR_MAX": {
+                "type": "integer"
+              },
+              "CARB_MIN": {
+                "type": "number"
+              },
+              "CARB_MAX": {
+                "type": "number"
+              },
+              "ABV_MAX": {
+                "type": "number"
+              },
+              "ABV_MIN": {
+                "type": "number"
+              },
+              "NOTES": {
+                "type": "string"
+              },
+              "PROFILE": {
+                "type": "string"
+              },
+              "INGREDIENTS": {
+                "type": "string"
+              },
+              "EXAMPLES": {
+                "type": "string"
+              },
+              "DISPLAY_OG_MIN": {
+                "type": "string"
+              },
+              "DISPLAY_OG_MAX": {
+                "type": "string"
+              },
+              "DISPLAY_FG_MIN": {
+                "type": "string"
+              },
+              "DISPLAY_FG_MAX": {
+                "type": "string"
+              },
+              "DISPLAY_COLOR_MIN": {
+                "type": "string"
+              },
+              "DISPLAY_COLOR_MAX": {
+                "type": "string"
+              },
+              "OG_RANGE": {
+                "type": "string"
+              },
+              "FG_RANGE": {
+                "type": "string"
+              },
+              "IBU_RANGE": {
+                "type": "string"
+              },
+              "CARB_RANGE": {
+                "type": "string"
+              },
+              "COLOR_RANGE": {
+                "type": "string"
+              },
+              "ABV_RANGE": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "NAME",
+              "VERSION",
+              "CATEGORY",
+              "CATEGORY_NUMBER",
+              "STYLE_LETTER",
+              "STYLE_GUIDE",
+              "TYPE",
+              "OG_MIN",
+              "OG_MAX",
+              "FG_MIN",
+              "FG_MAX",
+              "IBU_MIN",
+              "IBU_MAX",
+              "COLOR_MIN",
+              "COLOR_MAX"
+            ]
+          },
+          "EQUIPMENT": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "NAME": {
+                "type": "string"
+              },
+              "VERSION": {
+                "type": "integer"
+              },
+              "BOIL_SIZE": {
+                "type": "number"
+              },
+              "BATCH_SIZE": {
+                "type": "number"
+              },
+              "TUN_VOLUME": {
+                "type": "number"
+              },
+              "TUN_WEIGHT": {
+                "type": "number"
+              },
+              "TUN_SPECIFIC_HEAT": {
+                "type": "number"
+              },
+              "TOP_UP_WATER": {
+                "type": "integer"
+              },
+              "TRUB_CHILLER_LOSS": {
+                "type": "number"
+              },
+              "EVAP_RATE": {
+                "type": "integer"
+              },
+              "BOIL_TIME": {
+                "type": "integer"
+              },
+              "CALC_BOIL_VOLUME": {
+                "type": "string"
+              },
+              "LAUTER_DEADSPACE": {
+                "type": "number"
+              },
+              "TOP_UP_KETTLE": {
+                "type": "integer"
+              },
+              "HOP_UTILIZATION": {
+                "type": "integer"
+              },
+              "NOTES": {
+                "type": "string"
+              },
+              "DISPLAY_BOIL_SIZE": {
+                "type": "string"
+              },
+              "DISPLAY_BATCH_SIZE": {
+                "type": "string"
+              },
+              "DISPLAY_TUN_VOLUME": {
+                "type": "string"
+              },
+              "DISPLAY_TUN_WEIGHT": {
+                "type": "string"
+              },
+              "DISPLAY_TOP_UP_WATER": {
+                "type": "string"
+              },
+              "DISPLAY_TRUB_CHILLER_LOSS": {
+                "type": "string"
+              },
+              "DISPLAY_LAUTER_DEADSPACE": {
+                "type": "string"
+              },
+              "DISPLAY_TOP_UP_KETTLE": {
+                "type": "string"
+              }
+            },
+            "required": ["NAME", "VERSION", "BOIL_SIZE", "BATCH_SIZE"]
+          },
+          "MASH": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "NAME": {
+                "type": "string"
+              },
+              "VERSION": {
+                "type": "integer"
+              },
+              "GRAIN_TEMP": {
+                "type": "number"
+              },
+              "TUN_TEMP": {
+                "type": "number"
+              },
+              "SPARGE_TEMP": {
+                "type": "number"
+              },
+              "PH": {
+                "type": "number"
+              },
+              "TUN_WEIGHT": {
+                "type": "number"
+              },
+              "TUN_SPECIFIC_HEAT": {
+                "type": "number"
+              },
+              "EQUIP_ADJUST": {
+                "type": "string"
+              },
+              "NOTES": {
+                "additionalProperties": false
+              },
+              "DISPLAY_GRAIN_TEMP": {
+                "type": "string"
+              },
+              "DISPLAY_TUN_TEMP": {
+                "type": "integer"
+              },
+              "DISPLAY_SPARGE_TEMP": {
+                "type": "string"
+              },
+              "DISPLAY_TUN_WEIGHT": {
+                "type": "string"
+              },
+              "MASH_STEPS": {
+                "type": "array",
+                "minLength": 1,
+                "items": {
+                  "properties": {
+                    "NAME": {
+                      "type": "string"
+                    },
+                    "VERSION": {
+                      "type": "integer"
+                    },
+                    "TYPE": {
+                      "type": "string"
+                    },
+                    "INFUSE_AMOUNT": {
+                      "type": "number"
+                    },
+                    "STEP_TIME": {
+                      "type": "integer"
+                    },
+                    "STEP_TEMP": {
+                      "type": "integer"
+                    },
+                    "RAMP_TIME": {
+                      "type": "integer"
+                    },
+                    "END_TEMP": {
+                      "type": "integer"
+                    },
+                    "DESCRIPTION": {
+                      "type": "string"
+                    },
+                    "WATER_GRAIN_RATIO": {
+                      "type": "number"
+                    },
+                    "DECOCTION_AMT": {
+                      "type": "string"
+                    },
+                    "INFUSE_TEMP": {
+                      "type": "string"
+                    },
+                    "DISPLAY_STEP_TEMP": {
+                      "type": "string"
+                    },
+                    "DISPLAY_INFUSE_AMT": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "NAME",
+                    "VERSION",
+                    "TYPE",
+                    "INFUSE_AMOUNT",
+                    "STEP_TIME",
+                    "STEP_TEMP",
+                    "RAMP_TIME",
+                    "END_TEMP"
+                  ]
+                }
+              }
+            },
+            "required": ["NAME", "VERSION", "GRAIN_TEMP", "MASH_STEPS"]
+          },
+          "NOTES": {
+            "additionalProperties": false
+          },
+          "TASTE_NOTES": {
+            "type": "string"
+          },
+          "TASTE_RATING": {
+            "type": "integer"
+          },
+          "OG": {
+            "type": "number"
+          },
+          "FG": {
+            "type": "number"
+          },
+          "CARBONATION": {
+            "type": "number"
+          },
+          "FERMENTATION_STAGES": {
+            "type": "integer"
+          },
+          "PRIMARY_AGE": {
+            "type": "integer"
+          },
+          "PRIMARY_TEMP": {
+            "type": "integer"
+          },
+          "SECONDARY_AGE": {
+            "type": "integer"
+          },
+          "SECONDARY_TEMP": {
+            "type": "integer"
+          },
+          "TERTIARY_AGE": {
+            "type": "integer"
+          },
+          "AGE": {
+            "type": "integer"
+          },
+          "AGE_TEMP": {
+            "type": "number"
+          },
+          "CARBONATION_USED": {
+            "type": "string"
+          },
+          "DATE": {
+            "type": "string"
+          },
+          "EST_OG": {
+            "type": "string"
+          },
+          "EST_FG": {
+            "type": "string"
+          },
+          "EST_COLOR": {
+            "type": "string"
+          },
+          "IBU": {
+            "type": "string"
+          },
+          "IBU_METHOD": {
+            "type": "string"
+          },
+          "EST_ABV": {
+            "type": "string"
+          },
+          "ABV": {
+            "type": "string"
+          },
+          "ACTUAL_EFFICIENCY": {
+            "type": "string"
+          },
+          "CALORIES": {
+            "type": "string"
+          },
+          "DISPLAY_BATCH_SIZE": {
+            "type": "string"
+          },
+          "DISPLAY_BOIL_SIZE": {
+            "type": "string"
+          },
+          "DISPLAY_OG": {
+            "type": "string"
+          },
+          "DISPLAY_FG": {
+            "type": "string"
+          },
+          "DISPLAY_PRIMARY_TEMP": {
+            "type": "string"
+          },
+          "DISPLAY_SECONDARY_TEMP": {
+            "type": "string"
+          },
+          "DISPLAY_TERTIARY_TEMP": {
+            "type": "string"
+          },
+          "DISPLAY_AGE_TEMP": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "NAME",
+          "VERSION",
+          "TYPE",
+          "BREWER",
+          "ASST_BREWER",
+          "BATCH_SIZE",
+          "BOIL_SIZE",
+          "BOIL_TIME",
+          "EFFICIENCY",
+          "HOPS",
+          "FERMENTABLES",
+          "YEASTS",
+          "STYLE",
+          "EQUIPMENT",
+          "MASH"
+        ]
+      }
     }
   },
   "required": ["RECIPES"],
