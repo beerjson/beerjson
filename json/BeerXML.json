@@ -6,78 +6,111 @@
   "additionalProperties": false,
   "properties": {
     "beer_xml": {
-      "type": "object",
-      "description": "Root element of all BeerXML 3 documents.",
-      "additionalProperties": false,
-      "properties": {
-        "version": {
-          "$ref": "measureable_units.json#/definitions/VersionType"
+      "allOf": [
+        {
+          "type": "object",
+          "description": "Root element of all BeerXML 3 documents.",
+          "additionalProperties": false,
+          "properties": {
+            "version": {
+              "$ref": "measureable_units.json#/definitions/VersionType"
+            },
+            "fermentables": {
+              "type": "array",
+              "description":
+                "Records for any ingredient that contributes to the gravity of the beer.",
+              "items": {
+                "$ref": "grain.json#/definitions/FermentableType"
+              }
+            },
+            "miscellaneous_ingredients": {
+              "type": "array",
+              "description":
+                "Records for adjuncts which do not contribute to the gravity of the beer.",
+              "items": {
+                "$ref": "misc.json#/definitions/MiscellaneousType"
+              }
+            },
+            "hop_varieties": {
+              "type": "array",
+              "description":
+                "Records detailing the many properties of unique hop varieties.",
+              "items": {
+                "$ref": "hops.json#/definitions/VarietyInformation"
+              }
+            },
+            "cultures": {
+              "type": "array",
+              "description":
+                "Records detailing the wide array of unique yeast cultures.",
+              "items": {
+                "$ref": "yeast.json#/definitions/CultureInformation"
+              }
+            },
+            "profiles": {
+              "type": "array",
+              "description":
+                "Records for regional water profiles used in style-specific beer brewing.",
+              "items": {
+                "$ref": "water.json#/definitions/WaterType"
+              }
+            },
+            "styles": {
+              "type": "array",
+              "description":
+                "Records detailing the characteristics of the beer styles for which judging guidelines have been established.",
+              "items": {
+                "$ref": "style.json#/definitions/StyleType"
+              }
+            },
+            "procedure": {
+              "type": "array",
+              "description":
+                "A collection of steps providing process information for common mashing procedures.",
+              "items": {
+                "$ref": "mash.json#/definitions/MashProcedureType"
+              }
+            },
+            "recipes": {
+              "type": "array",
+              "description":
+                "Records containing a minimal collection of the description of ingredients, procedures and other required parameters necessary to recreate a batch of beer.",
+              "items": {
+                "$ref": "recipes.json#/definitions/RecipeType"
+              }
+            }
+          },
+          "required": ["version"]
         },
-        "fermentables": {
-          "type": "array",
-          "description":
-            "Records for any ingredient that contributes to the gravity of the beer.",
-          "items": {
-            "$ref": "grain.json#/definitions/FermentableType"
-          }
-        },
-        "miscellaneous_ingredients": {
-          "type": "array",
-          "description":
-            "Records for adjuncts which do not contribute to the gravity of the beer.",
-          "items": {
-            "$ref": "misc.json#/definitions/MiscellaneousType"
-          }
-        },
-        "hop_varieties": {
-          "type": "array",
-          "description":
-            "Records detailing the many properties of unique hop varieties.",
-          "items": {
-            "$ref": "hops.json#/definitions/VarietyInformation"
-          }
-        },
-        "cultures": {
-          "type": "array",
-          "description":
-            "Records detailing the wide array of unique yeast cultures.",
-          "items": {
-            "$ref": "yeast.json#/definitions/CultureInformation"
-          }
-        },
-        "profiles": {
-          "type": "array",
-          "description":
-            "Records for regional water profiles used in style-specific beer brewing.",
-          "items": {
-            "$ref": "water.json#/definitions/WaterType"
-          }
-        },
-        "styles": {
-          "type": "array",
-          "description":
-            "Records detailing the characteristics of the beer styles for which judging guidelines have been established.",
-          "items": {
-            "$ref": "style.json#/definitions/StyleType"
-          }
-        },
-        "procedure": {
-          "type": "array",
-          "description":
-            "A collection of steps providing process information for common mashing procedures.",
-          "items": {
-            "$ref": "mash.json#/definitions/MashProcedureType"
-          }
-        },
-        "recipes": {
-          "type": "array",
-          "description":
-            "Records containing a minimal collection of the description of ingredients, procedures and other required parameters necessary to recreate a batch of beer.",
-          "items": {
-            "$ref": "recipes.json#/definitions/RecipeType"
-          }
+        {
+          "oneOf": [
+            {
+              "required": ["fermentables"]
+            },
+            {
+              "required": ["miscellaneous_ingredients"]
+            },
+            {
+              "required": ["hop_varieties"]
+            },
+            {
+              "required": ["cultures"]
+            },
+            {
+              "required": ["profiles"]
+            },
+            {
+              "required": ["styles"]
+            },
+            {
+              "required": ["procedure"]
+            },
+            {
+              "required": ["recipes"]
+            }
+          ]
         }
-      }
+      ]
     }
   },
   "required": ["beer_xml"]
