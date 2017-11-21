@@ -16,5 +16,5 @@ This is BeerJSON 2.0-draft (currently in progress)
 ## State
 This spec is unfinished yet, JSON schema is being converted from BeerXML 2.0 XSD files.
 
-## Discussion
-[![Join the chat at https://gitter.im/beerjson/beerjson](https://badges.gitter.im/beerjson/beerjson.svg)](https://gitter.im/beerjson/beerjson?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+## Contacts
+[![Join the chat at https://gitter.im/beerjson/beerjson](https://badges.gitter.im/beerjson/beerjson.svg)](https://gitter.im/beerjson/beerjson?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) 
