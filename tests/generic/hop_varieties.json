@@ -1,0 +1,12 @@
+{
+  "beer_xml": {
+    "version": 2.06,
+    "hop_varieties": [
+      {
+        "name": "name",
+        "origin": "US",
+        "alpha_acid_units": 5
+      }
+    ]
+  }
+}

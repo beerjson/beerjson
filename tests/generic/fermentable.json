@@ -1,0 +1,16 @@
+{
+  "beer_xml": {
+    "version": 2.06,
+    "fermentables": [
+      {
+        "name": "name",
+        "type": "grain",
+        "color": {},
+        "yield_dry_basis": {
+          "fine_grind": 1,
+          "coarse_grind": 1
+        }
+      }
+    ]
+  }
+}

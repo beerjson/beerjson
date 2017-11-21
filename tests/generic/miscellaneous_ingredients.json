@@ -1,0 +1,12 @@
+{
+  "beer_xml": {
+    "version": 2.06,
+    "miscellaneous_ingredients": [
+      {
+        "name": "name",
+        "type": "fining",
+        "use": "boil"
+      }
+    ]
+  }
+}
