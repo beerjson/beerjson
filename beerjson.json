@@ -1,5 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":
+    "https://raw.githubusercontent.com/beerjson/beerjson/beerjson-1.0/beerjson.json",
   "type": "object",
   "additionalProperties": false,
   "properties": {
