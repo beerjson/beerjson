@@ -1,11 +1,10 @@
-var parse = require('../js/json-schema-to-markdown.js')
-var fs = require('fs')
+const parse = require('../js/json-schema-to-markdown.js')
+const fs = require('fs')
 
-var jsons = fs.readdirSync('./json')
+const schemaDir = __dirname + '/../json/'
 
-jsons.forEach(j => {
-  var schema = fs.readFile('./json/' + j, (err, data) => {
-    var markdown = parse(JSON.parse(data))
-    fs.writeFileSync('./docs/' + j + '.md', markdown)
-  })
-})
+fs
+  .readdirSync(schemaDir)
+  .forEach(j =>
+    fs.writeFileSync('./docs/' + j + '.md', parse(require(schemaDir + j)))
+  )
