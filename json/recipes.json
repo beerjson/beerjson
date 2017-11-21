@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id":
-    "https://raw.githubusercontent.com/beerjson/beerjson/preparing-beerjson-2.0/json/recipes.json",
+    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/recipes.json",
   "type": "object",
   "additionalProperties": false,
   "definitions": {
