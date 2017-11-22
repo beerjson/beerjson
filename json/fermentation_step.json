@@ -29,18 +29,30 @@
         "free_rise": {
           "type": "boolean"
         },
+        "start_gravity":{
+          "type":"number"
+        },
+        "end_gravity":{
+          "type":"number"
+        },
+        "start_ph":{
+          "type":"number"
+        },
+        "end_ph":{
+          "type":"number"
+        },
         "vessel": {
           "type": "string"
         },
         "microorganism_type": {
           "type": "string",
-          "enum": ["Saccharomyces", "Brettanomyces", "Lactobacillus", "Pediococcus"]
+          "enum": ["Saccharomyces", "Brettanomyces", "Lactobacillus", "Pediococcus", "Other"]
         },
         "microorganism_name":{
           "type": "string"
         }
       },
-      "required": ["name", "type", "step_temperature", "step_time"]
+      "required": ["name"]
     }
   }
 }
