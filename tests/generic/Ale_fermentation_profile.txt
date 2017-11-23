@@ -1,0 +1,15 @@
+Ale, Single Stage
+ 
+Type: Single Stage
+Days in Primary: 14.00
+Temperature in Primary: 19.4 C to 19.4 C
+Days in Secondary: 10.00
+Temperature in Secondary: 18.3 C to 18.3 C
+Days in Tertiary: 7.00
+Temperature in Tertiary: 18.3 C to 18.3 C
+ 
+Age for: 30.00
+Starting Storage Temperature: 18.3 C
+Ending Storage Temperature: 18.3 C
+ 
+Notes: A simple single stage fermentation, often used by extract brewers or for classic ales.
