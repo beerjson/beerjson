@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":
+    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/fermentation_step.json",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "FermentationStepType": {
+      "type": "object",
+      "description":
+        "FermentationStepType - a per step representation of a fermentation action",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "start_temperature": {
+          "$ref": "measureable_units.json#/definitions/TemperatureType"
+        },
+        "end_temperature": {
+          "$ref": "measureable_units.json#/definitions/TemperatureType"
+        },
+        "step_time": {
+          "$ref": "measureable_units.json#/definitions/TimeType"
+        },
+        "free_rise": {
+          "type": "boolean"
+        },
+        "start_gravity":{
+          "type":"number"
+        },
+        "end_gravity":{
+          "type":"number"
+        },
+        "start_ph":{
+          "type":"number"
+        },
+        "end_ph":{
+          "type":"number"
+        },
+        "vessel": {
+          "type": "string"
+        },
+        "microorganism_type": {
+          "type": "string",
+          "enum": ["Saccharomyces", "Brettanomyces", "Lactobacillus", "Pediococcus", "Other"]
+        },
+        "microorganism_name":{
+          "type": "string"
+        }
+      },
+      "required": ["name"]
+    }
+  }
+}
