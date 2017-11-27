@@ -17,6 +17,25 @@ specification. It is based on yet unfinished
 * Issues, questions and suggestions should be posted to
   [Issues](https://github.com/beerjson/beerjson/issues)
 
+## CI and tests
+
+For safe manipulations with json schemas, we have set of tests in the tests
+folder. We check that json is valid for serializations and json is valid
+according to the beerjson schema. To run tests do following steps after repo
+fork or clone
+
+```bash
+yarn
+yarn test
+```
+
+or
+
+```bash
+npm i
+npm test
+```
+
 ## Version
 
 This is BeerJSON 2.0-draft (currently in progress)
