@@ -88,12 +88,8 @@
         "carbonation": {
           "type": "number"
         },
-        "fermentation_steps": {
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "$ref": "fermentation_step.json#/definitions/FermentationStepType"
-          }
+        "fermentation": {
+          "$ref": "fermentation.json#/definitions/FermentationProcedureType"
         },
         "taste": {
           "type": "object",

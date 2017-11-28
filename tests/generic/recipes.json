@@ -21,59 +21,59 @@
             }
           ]
         },
-        "fermentation_steps": [
-          {
-            "name": "Ale, Single Stage",
-            "description":
-              "A simple single stage fermentation, often used by extract brewers or for classic ales.",
-            "start_temperature": {
-              "degrees": "C",
-              "value": 19.4
+        "fermentation": {
+          "name": "Ale, Single Stage",
+          "type": "Single Stage",
+          "description":
+            "A simple single stage fermentation, often used by extract brewers or for classic ales.",
+          "fermentation_steps": [
+            {
+              "name": "Primary",
+              "start_temperature": {
+                "degrees": "C",
+                "value": 19.4
+              },
+              "end_temperature": {
+                "degrees": "C",
+                "value": 19.4
+              },
+              "step_time": {
+                "duration": "day",
+                "value": 14.0
+              }
             },
-            "end_temperature": {
-              "degrees": "C",
-              "value": 19.4
+            {
+              "name": "Secondary",
+              "start_temperature": {
+                "degrees": "C",
+                "value": 18.3
+              },
+              "end_temperature": {
+                "degrees": "C",
+                "value": 18.3
+              },
+              "step_time": {
+                "duration": "day",
+                "value": 10.0
+              }
             },
-            "step_time": {
-              "duration": "day",
-              "value": 14.0
+            {
+              "name": "Tertiary",
+              "start_temperature": {
+                "degrees": "C",
+                "value": 18.3
+              },
+              "end_temperature": {
+                "degrees": "C",
+                "value": 18.3
+              },
+              "step_time": {
+                "duration": "day",
+                "value": 7
+              }
             }
-          },
-          {
-            "name": "Ale, Single Stage",
-            "description":
-              "A simple single stage fermentation, often used by extract brewers or for classic ales.",
-            "start_temperature": {
-              "degrees": "C",
-              "value": 18.3
-            },
-            "end_temperature": {
-              "degrees": "C",
-              "value": 18.3
-            },
-            "step_time": {
-              "duration": "day",
-              "value": 10.0
-            }
-          },
-          {
-            "name": "Ale, Single Stage",
-            "description":
-              "A simple single stage fermentation, often used by extract brewers or for classic ales.",
-            "start_temperature": {
-              "degrees": "C",
-              "value": 18.3
-            },
-            "end_temperature": {
-              "degrees": "C",
-              "value": 18.3
-            },
-            "step_time": {
-              "duration": "day",
-              "value": 10
-            }
-          }
-        ]
+          ]
+        }
       }
     ]
   }
