@@ -52,5 +52,8 @@ files.
 * To propose a schema change
   [submit a pull request](https://github.com/beerjson/beerjson/pulls).
   [Learn more about pull requests](https://help.github.com/articles/about-pull-requests/).
+  Note that one of the benefits of using json schemas is a possibility to use
+  tests and CI. Please ensure that tests are green before submitting a pull
+  request. And all new entities in the json schema are covered.
 * To chat with others, join our Gitter chat:
   [![Join the chat at https://gitter.im/beerjson/beerjson](https://badges.gitter.im/beerjson/beerjson.svg)](https://gitter.im/beerjson/beerjson?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
