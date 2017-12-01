@@ -15,7 +15,7 @@
         },
         "type": {
           "type": "string",
-          "enum": ["ale", "lager", "wheat", "wine", "champagne"]
+          "enum": ["ale", "lager", "wheat", "wine", "champagne", "bacteria", "mixed-culture"]
         },
         "form": {
           "type": "string",
@@ -93,8 +93,8 @@
               "times_cultured": {
                 "type": "integer"
               },
-              "add_to_secondary": {
-                "type": "boolean"
+              "add_to_fermentation_step": {
+                "type": "integer"
               },
               "amount": {
                 "$ref": "measureable_units.json#/definitions/VolumeType"

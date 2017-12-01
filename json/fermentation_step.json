@@ -43,13 +43,6 @@
         },
         "vessel": {
           "type": "string"
-        },
-        "microorganism_type": {
-          "type": "string",
-          "enum": ["Saccharomyces", "Brettanomyces", "Lactobacillus", "Pediococcus", "Other"]
-        },
-        "microorganism_name":{
-          "type": "string"
         }
       },
       "required": ["name"]
