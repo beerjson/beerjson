@@ -7,10 +7,13 @@
         "type": "all grain",
         "author": "me",
         "batch_size": {
-          "volume": "gal",
+          "units": "gal",
           "value": 5
         },
-        "boil_size": {},
+        "boil_size": {
+          "units": "gal",
+          "value": 5
+        },
         "boil_time": 90,
         "ingredients": {
           "grain_bill": [

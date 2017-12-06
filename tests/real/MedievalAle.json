@@ -7,11 +7,11 @@
         "type": "all grain",
         "author": "",
         "batch_size": {
-          "volume": "gal",
+          "units": "gal",
           "value": 5.5
         },
         "boil_size": {
-          "volume": "gal",
+          "units": "gal",
           "value": 5.5
         },
         "boil_time": {
@@ -183,7 +183,7 @@
               "laboratory": "Ithaca Beer C",
               "product_id": "",
               "amount": {
-                "volume": "ml",
+                "units": "ml",
                 "value": 0.0
               }
             }
@@ -201,7 +201,7 @@
               "name": "Saccharification Rest",
               "type": "infusion",
               "infuse_amount": {
-                "volume": "qt",
+                "units": "qt",
                 "value": 22.5
               },
               "step_temperature": {

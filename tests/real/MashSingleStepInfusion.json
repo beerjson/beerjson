@@ -13,7 +13,7 @@
             "name": "Conversion Step, 68C",
             "type": "infusion",
             "infuse_amount": {
-              "volume": "l",
+              "units": "l",
               "value": 10.0
             },
             "step_temperature": {

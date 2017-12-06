@@ -5,12 +5,26 @@
   "type": "object",
   "additionalProperties": false,
   "definitions": {
-    "VolumeType": {
+    "UnitBase": {
       "properties": {
-        "volume": {
-          "$ref": "#/definitions/VolumeUnitType"
+        "value": {
+          "type": "number"
         }
-      }
+      },
+      "required": ["value"]
+    },
+    "VolumeType": {
+      "allOf": [
+        { "$ref": "#/definitions/UnitBase" },
+        {
+          "properties": {
+            "units": {
+              "$ref": "#/definitions/VolumeUnitType"
+            }
+          }
+        }
+      ],
+      "required": ["units"]
     },
     "MassType": {
       "properties": {
