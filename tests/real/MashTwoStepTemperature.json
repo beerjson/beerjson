@@ -5,11 +5,11 @@
       {
         "name": "Two Step Temperature, 68C",
         "grain_temperature": {
-          "degrees": "C",
+          "units": "C",
           "value": 22.0
         },
         "sparge_temperature": {
-          "degrees": "C",
+          "units": "C",
           "value": 78.0
         },
         "mash_steps": [
@@ -21,15 +21,15 @@
               "value": 15.0
             },
             "step_temperature": {
-              "degrees": "C",
+              "units": "C",
               "value": 49.0
             },
             "step_time": {
-              "duration": "min",
+              "units": "min",
               "value": 20.0
             },
             "ramp_time": {
-              "duration": "min",
+              "units": "min",
               "value": 10.0
             }
           },
@@ -41,15 +41,15 @@
               "value": 15.0
             },
             "step_temperature": {
-              "degrees": "C",
+              "units": "C",
               "value": 68.0
             },
             "step_time": {
-              "duration": "min",
+              "units": "min",
               "value": 60.0
             },
             "ramp_time": {
-              "duration": "min",
+              "units": "min",
               "value": 20.0
             }
           }

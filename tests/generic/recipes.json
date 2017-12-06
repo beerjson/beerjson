@@ -20,7 +20,10 @@
             {
               "name": "pale ale",
               "type": "grain",
-              "color": {}
+              "color": {
+                "units": "SRM",
+                "value": 3.0
+              }
             }
           ]
         }

@@ -6,7 +6,7 @@
         "name": "Crystal 40 L",
         "type": "grain",
         "color": {
-          "scale": "L",
+          "units": "L",
           "value": 40.0
         },
         "origin": "United Kingdom",

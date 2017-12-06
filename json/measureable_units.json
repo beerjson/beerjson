@@ -27,53 +27,95 @@
       "required": ["units"]
     },
     "MassType": {
-      "properties": {
-        "mass": {
-          "$ref": "#/definitions/MassUnitType"
+      "allOf": [
+        { "$ref": "#/definitions/UnitBase" },
+        {
+          "properties": {
+            "units": {
+              "$ref": "#/definitions/MassUnitType"
+            }
+          }
         }
-      }
+      ],
+      "required": ["units"]
     },
     "TemperatureType": {
-      "properties": {
-        "degrees": {
-          "$ref": "#/definitions/TemperatureUnitType"
+      "allOf": [
+        { "$ref": "#/definitions/UnitBase" },
+        {
+          "properties": {
+            "units": {
+              "$ref": "#/definitions/TemperatureUnitType"
+            }
+          }
         }
-      }
+      ],
+      "required": ["units"]
     },
     "DistanceType": {
-      "properties": {
-        "length": {
-          "$ref": "#/definitions/DistanceUnitType"
+      "allOf": [
+        { "$ref": "#/definitions/UnitBase" },
+        {
+          "properties": {
+            "units": {
+              "$ref": "#/definitions/DistanceUnitType"
+            }
+          }
         }
-      }
+      ],
+      "required": ["units"]
     },
     "PressureType": {
-      "properties": {
-        "pressure": {
-          "$ref": "#/definitions/PressureUnitType"
+      "allOf": [
+        { "$ref": "#/definitions/UnitBase" },
+        {
+          "properties": {
+            "units": {
+              "$ref": "#/definitions/PressureUnitType"
+            }
+          }
         }
-      }
+      ],
+      "required": ["units"]
     },
     "TimeType": {
-      "properties": {
-        "duration": {
-          "$ref": "#/definitions/TimeUnitType"
+      "allOf": [
+        { "$ref": "#/definitions/UnitBase" },
+        {
+          "properties": {
+            "units": {
+              "$ref": "#/definitions/TimeUnitType"
+            }
+          }
         }
-      }
+      ],
+      "required": ["units"]
     },
     "ColorType": {
-      "properties": {
-        "scale": {
-          "$ref": "#/definitions/ColorUnitType"
+      "allOf": [
+        { "$ref": "#/definitions/UnitBase" },
+        {
+          "properties": {
+            "units": {
+              "$ref": "#/definitions/ColorUnitType"
+            }
+          }
         }
-      }
+      ],
+      "required": ["units"]
     },
     "DensityType": {
-      "properties": {
-        "density": {
-          "$ref": "#/definitions/DensityUnitType"
+      "allOf": [
+        { "$ref": "#/definitions/UnitBase" },
+        {
+          "properties": {
+            "units": {
+              "$ref": "#/definitions/DensityUnitType"
+            }
+          }
         }
-      }
+      ],
+      "required": ["units"]
     },
     "QuantitativeRangeType": {
       "type": "object",

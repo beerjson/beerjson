@@ -11,21 +11,21 @@
         "type": "lager",
         "original_gravity": {
           "minimum": {
-            "density": "sg",
+            "units": "sg",
             "value": 1.044
           },
           "maximum": {
-            "density": "sg",
+            "units": "sg",
             "value": 1.056
           }
         },
         "final_gravity": {
           "minimum": {
-            "density": "sg",
+            "units": "sg",
             "value": 1.013
           },
           "maximum": {
-            "density": "sg",
+            "units": "sg",
             "value": 1.017
           }
         },
@@ -35,11 +35,11 @@
         },
         "color": {
           "minimum": {
-            "density": "SRM",
+            "units": "SRM",
             "value": 3.0
           },
           "maximum": {
-            "density": "SRM",
+            "units": "SRM",
             "value": 5.0
           }
         },

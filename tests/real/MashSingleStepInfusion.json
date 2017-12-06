@@ -5,7 +5,7 @@
       {
         "name": "Single Step Infusion, 68 C",
         "grain_temperature": {
-          "degrees": "C",
+          "units": "C",
           "value": 22.0
         },
         "mash_steps": [
@@ -17,11 +17,11 @@
               "value": 10.0
             },
             "step_temperature": {
-              "degrees": "C",
+              "units": "C",
               "value": 68.0
             },
             "step_time": {
-              "duration": "min",
+              "units": "min",
               "value": 60.0
             }
           }

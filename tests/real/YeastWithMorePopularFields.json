@@ -10,11 +10,11 @@
         "product_id": "1007",
         "temperature_range": {
           "minimum": {
-            "degrees": "C",
+            "units": "C",
             "value": 12.8
           },
           "maximum": {
-            "degrees": "C",
+            "units": "C",
             "value": 20.0
           }
         },

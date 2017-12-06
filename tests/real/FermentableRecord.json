@@ -6,7 +6,7 @@
         "name": "Pale 2-row Malt",
         "type": "grain",
         "color": {
-          "scale": "L",
+          "units": "L",
           "value": 3.0
         },
         "yield_dry_basis": {

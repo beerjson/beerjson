@@ -6,7 +6,7 @@
         "name": "Fustons Hopped Amber",
         "type": "extract",
         "color": {
-          "scale": "L",
+          "units": "L",
           "value": 13
         },
         "yield_dry_basis": {

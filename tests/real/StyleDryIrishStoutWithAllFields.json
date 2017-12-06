@@ -11,21 +11,21 @@
         "type": "ale",
         "original_gravity": {
           "minimum": {
-            "density": "sg",
+            "units": "sg",
             "value": 1.035
           },
           "maximum": {
-            "density": "sg",
+            "units": "sg",
             "value": 1.05
           }
         },
         "final_gravity": {
           "minimum": {
-            "density": "sg",
+            "units": "sg",
             "value": 1.007
           },
           "maximum": {
-            "density": "sg",
+            "units": "sg",
             "value": 1.011
           }
         },
@@ -35,11 +35,11 @@
         },
         "color": {
           "minimum": {
-            "density": "SRM",
+            "units": "SRM",
             "value": 35.0
           },
           "maximum": {
-            "density": "SRM",
+            "units": "SRM",
             "value": 200.0
           }
         },
