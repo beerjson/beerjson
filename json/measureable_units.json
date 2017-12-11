@@ -38,17 +38,6 @@
       },
       "required": ["units", "degrees"]
     },
-    "DistanceType": {
-      "properties": {
-        "units": {
-          "$ref": "#/definitions/DistanceUnitType"
-        },
-        "length": {
-          "type": "number"
-        }
-      },
-      "required": ["units", "length"]
-    },
     "PressureType": {
       "properties": {
         "units": {
@@ -185,10 +174,6 @@
     "TemperatureUnitType": {
       "type": "string",
       "enum": ["C", "F"]
-    },
-    "DistanceUnitType": {
-      "type": "string",
-      "enum": ["cm", "m", "ft", "in"]
     },
     "PressureUnitType": {
       "type": "string",
