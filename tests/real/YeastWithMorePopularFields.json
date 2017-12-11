@@ -11,11 +11,11 @@
         "temperature_range": {
           "minimum": {
             "units": "C",
-            "value": 12.8
+            "degrees": 12.8
           },
           "maximum": {
             "units": "C",
-            "value": 20.0
+            "degrees": 20.0
           }
         },
         "flocculation": "low",

@@ -7,7 +7,7 @@
         "type": "grain",
         "color": {
           "units": "L",
-          "value": 40.0
+          "scale": 40.0
         },
         "origin": "United Kingdom",
         "supplier": "Fussybrewer Malting",

@@ -7,7 +7,7 @@
         "type": "extract",
         "color": {
           "units": "L",
-          "value": 13
+          "scale": 13
         },
         "yield_dry_basis": {
           "fine_grind": 78.0,

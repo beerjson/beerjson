@@ -5,117 +5,93 @@
   "type": "object",
   "additionalProperties": false,
   "definitions": {
-    "UnitBase": {
+    "VolumeType": {
       "properties": {
-        "value": {
+        "units": {
+          "$ref": "#/definitions/VolumeUnitType"
+        },
+        "volume": {
           "type": "number"
         }
       },
-      "required": ["value"]
-    },
-    "VolumeType": {
-      "allOf": [
-        { "$ref": "#/definitions/UnitBase" },
-        {
-          "properties": {
-            "units": {
-              "$ref": "#/definitions/VolumeUnitType"
-            }
-          }
-        }
-      ],
-      "required": ["units"]
+      "required": ["units", "volume"]
     },
     "MassType": {
-      "allOf": [
-        { "$ref": "#/definitions/UnitBase" },
-        {
-          "properties": {
-            "units": {
-              "$ref": "#/definitions/MassUnitType"
-            }
-          }
+      "properties": {
+        "units": {
+          "$ref": "#/definitions/MassUnitType"
+        },
+        "mass": {
+          "type": "number"
         }
-      ],
-      "required": ["units"]
+      },
+      "required": ["units", "mass"]
     },
     "TemperatureType": {
-      "allOf": [
-        { "$ref": "#/definitions/UnitBase" },
-        {
-          "properties": {
-            "units": {
-              "$ref": "#/definitions/TemperatureUnitType"
-            }
-          }
+      "properties": {
+        "units": {
+          "$ref": "#/definitions/TemperatureUnitType"
+        },
+        "degrees": {
+          "type": "number"
         }
-      ],
-      "required": ["units"]
+      },
+      "required": ["units", "degrees"]
     },
     "DistanceType": {
-      "allOf": [
-        { "$ref": "#/definitions/UnitBase" },
-        {
-          "properties": {
-            "units": {
-              "$ref": "#/definitions/DistanceUnitType"
-            }
-          }
+      "properties": {
+        "units": {
+          "$ref": "#/definitions/DistanceUnitType"
+        },
+        "length": {
+          "type": "number"
         }
-      ],
-      "required": ["units"]
+      },
+      "required": ["units", "length"]
     },
     "PressureType": {
-      "allOf": [
-        { "$ref": "#/definitions/UnitBase" },
-        {
-          "properties": {
-            "units": {
-              "$ref": "#/definitions/PressureUnitType"
-            }
-          }
+      "properties": {
+        "units": {
+          "$ref": "#/definitions/PressureUnitType"
+        },
+        "pressure": {
+          "type": "number"
         }
-      ],
-      "required": ["units"]
+      },
+      "required": ["units", "pressure"]
     },
     "TimeType": {
-      "allOf": [
-        { "$ref": "#/definitions/UnitBase" },
-        {
-          "properties": {
-            "units": {
-              "$ref": "#/definitions/TimeUnitType"
-            }
-          }
+      "properties": {
+        "units": {
+          "$ref": "#/definitions/TimeUnitType"
+        },
+        "duration": {
+          "type": "number"
         }
-      ],
-      "required": ["units"]
+      },
+      "required": ["units", "duration"]
     },
     "ColorType": {
-      "allOf": [
-        { "$ref": "#/definitions/UnitBase" },
-        {
-          "properties": {
-            "units": {
-              "$ref": "#/definitions/ColorUnitType"
-            }
-          }
+      "properties": {
+        "units": {
+          "$ref": "#/definitions/ColorUnitType"
+        },
+        "scale": {
+          "type": "number"
         }
-      ],
-      "required": ["units"]
+      },
+      "required": ["units", "scale"]
     },
     "DensityType": {
-      "allOf": [
-        { "$ref": "#/definitions/UnitBase" },
-        {
-          "properties": {
-            "units": {
-              "$ref": "#/definitions/DensityUnitType"
-            }
-          }
+      "properties": {
+        "units": {
+          "$ref": "#/definitions/DensityUnitType"
+        },
+        "density": {
+          "type": "number"
         }
-      ],
-      "required": ["units"]
+      },
+      "required": ["units", "density"]
     },
     "QuantitativeRangeType": {
       "type": "object",

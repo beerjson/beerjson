@@ -19,15 +19,15 @@
         "inventory": {
           "leaf": {
             "units": "oz",
-            "value": 2.0
+            "mass": 2.0
           },
           "pellet": {
             "units": "oz",
-            "value": 0.5
+            "mass": 0.5
           },
           "plug": {
             "units": "oz",
-            "value": 0.0
+            "mass": 0.0
           }
         }
       }

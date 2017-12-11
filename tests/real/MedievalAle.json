@@ -8,15 +8,15 @@
         "author": "",
         "batch_size": {
           "units": "gal",
-          "value": 5.5
+          "volume": 5.5
         },
         "boil_size": {
           "units": "gal",
-          "value": 5.5
+          "volume": 5.5
         },
         "boil_time": {
           "units": "min",
-          "value": 90.0
+          "duration": 90.0
         },
         "style": {
           "name": "Specialty",
@@ -34,12 +34,12 @@
               "type": "adjunct",
               "color": {
                 "units": "L",
-                "value": 0.0
+                "scale": 0.0
               },
               "origin": "America",
               "amount": {
                 "units": "lb",
-                "value": 2.148
+                "mass": 2.148
               }
             },
             {
@@ -47,12 +47,12 @@
               "type": "adjunct",
               "color": {
                 "units": "L",
-                "value": 2.2
+                "scale": 2.2
               },
               "origin": "America",
               "amount": {
                 "units": "lb",
-                "value": 0.5
+                "mass": 0.5
               }
             },
             {
@@ -60,12 +60,12 @@
               "type": "grain",
               "color": {
                 "units": "L",
-                "value": 450.0
+                "scale": 450.0
               },
               "origin": "America",
               "amount": {
                 "units": "lb",
-                "value": 0.25
+                "mass": 0.25
               }
             },
             {
@@ -73,12 +73,12 @@
               "type": "grain",
               "color": {
                 "units": "L",
-                "value": 2.7
+                "scale": 2.7
               },
               "origin": "America",
               "amount": {
                 "units": "lb",
-                "value": 1.5
+                "mass": 1.5
               }
             },
             {
@@ -86,12 +86,12 @@
               "type": "grain",
               "color": {
                 "units": "L",
-                "value": 1.8
+                "scale": 1.8
               },
               "origin": "America",
               "amount": {
                 "units": "lb",
-                "value": 8.0
+                "mass": 8.0
               }
             },
             {
@@ -99,12 +99,12 @@
               "type": "grain",
               "color": {
                 "units": "L",
-                "value": 60.0
+                "scale": 60.0
               },
               "origin": "America",
               "amount": {
                 "units": "lb",
-                "value": 1.0
+                "mass": 1.0
               }
             }
           ],
@@ -115,11 +115,11 @@
               "use": "boil",
               "amount_as_weight": {
                 "units": "oz",
-                "value": 0.63
+                "mass": 0.63
               },
               "time": {
                 "units": "min",
-                "value": 60
+                "duration": 60
               }
             },
             {
@@ -128,11 +128,11 @@
               "use": "boil",
               "amount_as_weight": {
                 "units": "oz",
-                "value": 0.75
+                "mass": 0.75
               },
               "time": {
                 "units": "min",
-                "value": 60
+                "duration": 60
               }
             },
             {
@@ -141,11 +141,11 @@
               "use": "boil",
               "amount_as_weight": {
                 "units": "oz",
-                "value": 1.0
+                "mass": 1.0
               },
               "time": {
                 "units": "min",
-                "value": 60.0
+                "duration": 60.0
               }
             },
             {
@@ -154,11 +154,11 @@
               "use": "secondary",
               "amount_as_weight": {
                 "units": "oz",
-                "value": 1.0
+                "mass": 1.0
               },
               "time": {
                 "units": "day",
-                "value": 0.0
+                "duration": 0.0
               }
             },
             {
@@ -167,11 +167,11 @@
               "use": "boil",
               "amount_as_weight": {
                 "units": "oz",
-                "value": 3.0
+                "mass": 3.0
               },
               "time": {
                 "units": "min",
-                "value": 0.0
+                "duration": 0.0
               }
             }
           ],
@@ -184,7 +184,7 @@
               "product_id": "",
               "amount": {
                 "units": "ml",
-                "value": 0.0
+                "volume": 0.0
               }
             }
           ]
@@ -193,7 +193,7 @@
           "name": "Simple Mash Type - Single Step",
           "grain_temperature": {
             "units": "F",
-            "value": 80.0
+            "degrees": 80.0
           },
           "notes": "",
           "mash_steps": [
@@ -202,29 +202,29 @@
               "type": "infusion",
               "infuse_amount": {
                 "units": "qt",
-                "value": 22.5
+                "volume": 22.5
               },
               "step_temperature": {
                 "units": "F",
-                "value": 158.0
+                "degrees": 158.0
               },
               "step_time": {
                 "units": "min",
-                "value": 70.0
+                "duration": 70.0
               },
               "ramp_time": {
                 "units": "min",
-                "value": 5.0
+                "duration": 5.0
               },
               "end_temperature": {
                 "units": "F",
-                "value": 158.0
+                "degrees": 158.0
               },
               "description": "Add 22.50 qt of water at 165.0 F",
               "water_grain_ratio": 2.09,
               "infuse_temperature": {
                 "units": "F",
-                "value": 165.0
+                "degrees": 165.0
               }
             }
           ]
@@ -232,7 +232,7 @@
         "notes": "",
         "original_gravity": {
           "units": "sg",
-          "value": 1.059
+          "density": 1.059
         },
         "ibu_estimate": {
           "method": "Other",

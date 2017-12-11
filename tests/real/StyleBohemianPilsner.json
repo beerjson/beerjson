@@ -12,21 +12,21 @@
         "original_gravity": {
           "minimum": {
             "units": "sg",
-            "value": 1.044
+            "density": 1.044
           },
           "maximum": {
             "units": "sg",
-            "value": 1.056
+            "density": 1.056
           }
         },
         "final_gravity": {
           "minimum": {
             "units": "sg",
-            "value": 1.013
+            "density": 1.013
           },
           "maximum": {
             "units": "sg",
-            "value": 1.017
+            "density": 1.017
           }
         },
         "international_bitterness_units": {
@@ -36,11 +36,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "value": 3.0
+            "scale": 3.0
           },
           "maximum": {
             "units": "SRM",
-            "value": 5.0
+            "scale": 5.0
           }
         },
         "notes":

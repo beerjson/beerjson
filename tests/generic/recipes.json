@@ -8,11 +8,11 @@
         "author": "me",
         "batch_size": {
           "units": "gal",
-          "value": 5
+          "volume": 5
         },
         "boil_size": {
           "units": "gal",
-          "value": 5
+          "volume": 5
         },
         "boil_time": 90,
         "ingredients": {
@@ -22,7 +22,7 @@
               "type": "grain",
               "color": {
                 "units": "SRM",
-                "value": 3.0
+                "scale": 3.0
               }
             }
           ]

@@ -7,7 +7,7 @@
         "type": "grain",
         "color": {
           "units": "SRM",
-          "value": 3.0
+          "scale": 3.0
         },
         "yield_dry_basis": {
           "fine_grind": 1,
