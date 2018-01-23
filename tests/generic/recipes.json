@@ -7,17 +7,23 @@
         "type": "all grain",
         "author": "me",
         "batch_size": {
-          "volume": "gal",
-          "value": 5
+          "units": "gal",
+          "volume": 5
         },
-        "boil_size": {},
+        "boil_size": {
+          "units": "gal",
+          "volume": 5
+        },
         "boil_time": 90,
         "ingredients": {
           "grain_bill": [
             {
               "name": "pale ale",
               "type": "grain",
-              "color": {}
+              "color": {
+                "units": "SRM",
+                "scale": 3.0
+              }
             }
           ]
         }

@@ -7,59 +7,80 @@
   "definitions": {
     "VolumeType": {
       "properties": {
-        "volume": {
+        "units": {
           "$ref": "#/definitions/VolumeUnitType"
+        },
+        "volume": {
+          "type": "number"
         }
-      }
+      },
+      "required": ["units", "volume"]
     },
     "MassType": {
       "properties": {
-        "mass": {
+        "units": {
           "$ref": "#/definitions/MassUnitType"
+        },
+        "mass": {
+          "type": "number"
         }
-      }
+      },
+      "required": ["units", "mass"]
     },
     "TemperatureType": {
       "properties": {
-        "degrees": {
+        "units": {
           "$ref": "#/definitions/TemperatureUnitType"
+        },
+        "degrees": {
+          "type": "number"
         }
-      }
-    },
-    "DistanceType": {
-      "properties": {
-        "length": {
-          "$ref": "#/definitions/DistanceUnitType"
-        }
-      }
+      },
+      "required": ["units", "degrees"]
     },
     "PressureType": {
       "properties": {
-        "pressure": {
+        "units": {
           "$ref": "#/definitions/PressureUnitType"
+        },
+        "pressure": {
+          "type": "number"
         }
-      }
+      },
+      "required": ["units", "pressure"]
     },
     "TimeType": {
       "properties": {
-        "duration": {
+        "units": {
           "$ref": "#/definitions/TimeUnitType"
+        },
+        "duration": {
+          "type": "number"
         }
-      }
+      },
+      "required": ["units", "duration"]
     },
     "ColorType": {
       "properties": {
-        "scale": {
+        "units": {
           "$ref": "#/definitions/ColorUnitType"
+        },
+        "scale": {
+          "type": "number"
         }
-      }
+      },
+      "required": ["units", "scale"]
     },
     "DensityType": {
       "properties": {
-        "density": {
+        "units": {
           "$ref": "#/definitions/DensityUnitType"
+        },
+        "density": {
+          "type": "number"
         }
-      }
+      },
+      "required": ["units", "density"]
     },
     "QuantitativeRangeType": {
       "type": "object",
@@ -153,10 +174,6 @@
     "TemperatureUnitType": {
       "type": "string",
       "enum": ["C", "F"]
-    },
-    "DistanceUnitType": {
-      "type": "string",
-      "enum": ["cm", "m", "ft", "in"]
     },
     "PressureUnitType": {
       "type": "string",

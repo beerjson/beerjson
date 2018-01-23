@@ -5,52 +5,52 @@
       {
         "name": "Two Step Temperature, 68C",
         "grain_temperature": {
-          "degrees": "C",
-          "value": 22.0
+          "units": "C",
+          "degrees": 22.0
         },
         "sparge_temperature": {
-          "degrees": "C",
-          "value": 78.0
+          "units": "C",
+          "degrees": 78.0
         },
         "mash_steps": [
           {
             "name": "Protein Rest",
             "type": "temperature",
             "infuse_amount": {
-              "volume": "l",
-              "value": 15.0
+              "units": "l",
+              "volume": 15.0
             },
             "step_temperature": {
-              "degrees": "C",
-              "value": 49.0
+              "units": "C",
+              "degrees": 49.0
             },
             "step_time": {
-              "duration": "min",
-              "value": 20.0
+              "units": "min",
+              "duration": 20.0
             },
             "ramp_time": {
-              "duration": "min",
-              "value": 10.0
+              "units": "min",
+              "duration": 10.0
             }
           },
           {
             "name": "Conversion Step, 68 C",
             "type": "temperature",
             "infuse_amount": {
-              "volume": "l",
-              "value": 15.0
+              "units": "l",
+              "volume": 15.0
             },
             "step_temperature": {
-              "degrees": "C",
-              "value": 68.0
+              "units": "C",
+              "degrees": 68.0
             },
             "step_time": {
-              "duration": "min",
-              "value": 60.0
+              "units": "min",
+              "duration": 60.0
             },
             "ramp_time": {
-              "duration": "min",
-              "value": 20.0
+              "units": "min",
+              "duration": 20.0
             }
           }
         ]

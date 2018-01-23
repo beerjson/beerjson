@@ -6,8 +6,8 @@
         "name": "Crystal 40 L",
         "type": "grain",
         "color": {
-          "scale": "L",
-          "value": 40.0
+          "units": "L",
+          "scale": 40.0
         },
         "origin": "United Kingdom",
         "supplier": "Fussybrewer Malting",

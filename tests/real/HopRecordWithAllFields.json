@@ -18,16 +18,16 @@
         "myrcene": 24.2,
         "inventory": {
           "leaf": {
-            "mass": "oz",
-            "value": 2.0
+            "units": "oz",
+            "mass": 2.0
           },
           "pellet": {
-            "mass": "oz",
-            "value": 0.5
+            "units": "oz",
+            "mass": 0.5
           },
           "plug": {
-            "mass": "oz",
-            "value": 0.0
+            "units": "oz",
+            "mass": 0.0
           }
         }
       }

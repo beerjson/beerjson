@@ -11,22 +11,22 @@
         "type": "ale",
         "original_gravity": {
           "minimum": {
-            "density": "sg",
-            "value": 1.035
+            "units": "sg",
+            "density": 1.035
           },
           "maximum": {
-            "density": "sg",
-            "value": 1.05
+            "units": "sg",
+            "density": 1.05
           }
         },
         "final_gravity": {
           "minimum": {
-            "density": "sg",
-            "value": 1.007
+            "units": "sg",
+            "density": 1.007
           },
           "maximum": {
-            "density": "sg",
-            "value": 1.011
+            "units": "sg",
+            "density": 1.011
           }
         },
         "international_bitterness_units": {
@@ -35,12 +35,12 @@
         },
         "color": {
           "minimum": {
-            "density": "SRM",
-            "value": 35.0
+            "units": "SRM",
+            "scale": 35.0
           },
           "maximum": {
-            "density": "SRM",
-            "value": 200.0
+            "units": "SRM",
+            "scale": 200.0
           }
         },
         "carbonation": {
