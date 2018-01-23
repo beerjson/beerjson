@@ -11,46 +11,46 @@
           {
             "name": "Primary",
             "start_temperature": {
-              "degrees": "C",
-              "value": 19.4
+              "units": "C",
+              "degrees": 19.4
             },
             "end_temperature": {
-              "degrees": "C",
-              "value": 19.4
+              "units": "C",
+              "degrees": 19.4
             },
             "step_time": {
-              "duration": "day",
-              "value": 14.0
+              "units": "day",
+              "duration": 14.0
             }
           },
           {
             "name": "Secondary",
             "start_temperature": {
-              "degrees": "C",
-              "value": 18.3
+              "units": "C",
+              "degrees": 18.3
             },
             "end_temperature": {
-              "degrees": "C",
-              "value": 18.3
+              "units": "C",
+              "degrees": 18.3
             },
             "step_time": {
-              "duration": "day",
-              "value": 10.0
+              "units": "day",
+              "duration": 10.0
             }
           },
           {
             "name": "Tertiary",
             "start_temperature": {
-              "degrees": "C",
-              "value": 18.3
+              "units": "C",
+              "degrees": 18.3
             },
             "end_temperature": {
-              "degrees": "C",
-              "value": 18.3
+              "units": "C",
+              "degrees": 18.3
             },
             "step_time": {
-              "duration": "day",
-              "value": 7
+              "units": "day",
+              "duration": 7
             }
           }
         ]
