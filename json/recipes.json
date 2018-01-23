@@ -5,19 +5,6 @@
   "type": "object",
   "additionalProperties": false,
   "definitions": {
-    "FermentationStageType": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "aging": {
-          "$ref": "measureable_units.json#/definitions/TimeType"
-        },
-        "temperature": {
-          "$ref": "measureable_units.json#/definitions/TemperatureType"
-        }
-      },
-      "required": ["aging", "temperature"]
-    },
     "RecipeType": {
       "type": "object",
       "description":
@@ -101,23 +88,8 @@
         "carbonation": {
           "type": "number"
         },
-        "fermentation_stages": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "primary": {
-              "$ref": "#/definitions/FermentationStageType"
-            },
-            "secondary": {
-              "$ref": "#/definitions/FermentationStageType"
-            },
-            "tertiary": {
-              "$ref": "#/definitions/FermentationStageType"
-            },
-            "conditioning": {
-              "$ref": "#/definitions/FermentationStageType"
-            }
-          }
+        "fermentation": {
+          "$ref": "fermentation.json#/definitions/FermentationProcedureType"
         },
         "taste": {
           "type": "object",

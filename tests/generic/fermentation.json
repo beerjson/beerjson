@@ -1,0 +1,60 @@
+{
+  "beer_xml": {
+    "version": 2.06,
+    "fermentation": [
+      {
+        "name": "Ale, Single Stage",
+        "type": "Single Stage",
+        "description":
+          "A simple single stage fermentation, often used by extract brewers or for classic ales.",
+        "fermentation_steps": [
+          {
+            "name": "Primary",
+            "start_temperature": {
+              "units": "C",
+              "degrees": 19.4
+            },
+            "end_temperature": {
+              "units": "C",
+              "degrees": 19.4
+            },
+            "step_time": {
+              "units": "day",
+              "duration": 14.0
+            }
+          },
+          {
+            "name": "Secondary",
+            "start_temperature": {
+              "units": "C",
+              "degrees": 18.3
+            },
+            "end_temperature": {
+              "units": "C",
+              "degrees": 18.3
+            },
+            "step_time": {
+              "units": "day",
+              "duration": 10.0
+            }
+          },
+          {
+            "name": "Tertiary",
+            "start_temperature": {
+              "units": "C",
+              "degrees": 18.3
+            },
+            "end_temperature": {
+              "units": "C",
+              "degrees": 18.3
+            },
+            "step_time": {
+              "units": "day",
+              "duration": 7
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

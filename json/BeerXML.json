@@ -71,6 +71,15 @@
                 "$ref": "mash.json#/definitions/MashProcedureType"
               }
             },
+            "fermentation": {
+              "type": "array",
+              "description":
+                "A collection of steps providing process information for common fermentation procedures.",
+              "items": {
+                "$ref":
+                  "fermentation.json#/definitions/FermentationProcedureType"
+              }
+            },
             "recipes": {
               "type": "array",
               "description":
@@ -104,6 +113,9 @@
             },
             {
               "required": ["procedure"]
+            },
+            {
+              "required": ["fermentation"]
             },
             {
               "required": ["recipes"]
