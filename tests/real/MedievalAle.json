@@ -7,16 +7,16 @@
         "type": "all grain",
         "author": "",
         "batch_size": {
-          "volume": "gal",
-          "value": 5.5
+          "units": "gal",
+          "volume": 5.5
         },
         "boil_size": {
-          "volume": "gal",
-          "value": 5.5
+          "units": "gal",
+          "volume": 5.5
         },
         "boil_time": {
-          "duration": "min",
-          "value": 90.0
+          "units": "min",
+          "duration": 90.0
         },
         "style": {
           "name": "Specialty",
@@ -33,78 +33,78 @@
               "name": "Buckwheat Honey",
               "type": "adjunct",
               "color": {
-                "scale": "L",
-                "value": 0.0
+                "units": "L",
+                "scale": 0.0
               },
               "origin": "America",
               "amount": {
-                "mass": "lb",
-                "value": 2.148
+                "units": "lb",
+                "mass": 2.148
               }
             },
             {
               "name": "Flaked Barley",
               "type": "adjunct",
               "color": {
-                "scale": "L",
-                "value": 2.2
+                "units": "L",
+                "scale": 2.2
               },
               "origin": "America",
               "amount": {
-                "mass": "lb",
-                "value": 0.5
+                "units": "lb",
+                "mass": 0.5
               }
             },
             {
               "name": "Roasted Barley",
               "type": "grain",
               "color": {
-                "scale": "L",
-                "value": 450.0
+                "units": "L",
+                "scale": 450.0
               },
               "origin": "America",
               "amount": {
-                "mass": "lb",
-                "value": 0.25
+                "units": "lb",
+                "mass": 0.25
               }
             },
             {
               "name": "Unmalted Wheat",
               "type": "grain",
               "color": {
-                "scale": "L",
-                "value": 2.7
+                "units": "L",
+                "scale": 2.7
               },
               "origin": "America",
               "amount": {
-                "mass": "lb",
-                "value": 1.5
+                "units": "lb",
+                "mass": 1.5
               }
             },
             {
               "name": "Pale Malt(2-row)",
               "type": "grain",
               "color": {
-                "scale": "L",
-                "value": 1.8
+                "units": "L",
+                "scale": 1.8
               },
               "origin": "America",
               "amount": {
-                "mass": "lb",
-                "value": 8.0
+                "units": "lb",
+                "mass": 8.0
               }
             },
             {
               "name": "Crystal Malt",
               "type": "grain",
               "color": {
-                "scale": "L",
-                "value": 60.0
+                "units": "L",
+                "scale": 60.0
               },
               "origin": "America",
               "amount": {
-                "mass": "lb",
-                "value": 1.0
+                "units": "lb",
+                "mass": 1.0
               }
             }
           ],
@@ -114,12 +114,12 @@
               "type": "spice",
               "use": "boil",
               "amount_as_weight": {
-                "mass": "oz",
-                "value": 0.63
+                "units": "oz",
+                "mass": 0.63
               },
               "time": {
-                "duration": "min",
-                "value": 60
+                "units": "min",
+                "duration": 60
               }
             },
             {
@@ -127,12 +127,12 @@
               "type": "spice",
               "use": "boil",
               "amount_as_weight": {
-                "mass": "oz",
-                "value": 0.75
+                "units": "oz",
+                "mass": 0.75
               },
               "time": {
-                "duration": "min",
-                "value": 60
+                "units": "min",
+                "duration": 60
               }
             },
             {
@@ -140,12 +140,12 @@
               "type": "herb",
               "use": "boil",
               "amount_as_weight": {
-                "mass": "oz",
-                "value": 1.0
+                "units": "oz",
+                "mass": 1.0
               },
               "time": {
-                "duration": "min",
-                "value": 60.0
+                "units": "min",
+                "duration": 60.0
               }
             },
             {
@@ -153,12 +153,12 @@
               "type": "fruit",
               "use": "secondary",
               "amount_as_weight": {
-                "mass": "oz",
-                "value": 1.0
+                "units": "oz",
+                "mass": 1.0
               },
               "time": {
-                "duration": "day",
-                "value": 0.0
+                "units": "day",
+                "duration": 0.0
               }
             },
             {
@@ -166,12 +166,12 @@
               "type": "herb",
               "use": "boil",
               "amount_as_weight": {
-                "mass": "oz",
-                "value": 3.0
+                "units": "oz",
+                "mass": 3.0
               },
               "time": {
-                "duration": "min",
-                "value": 0.0
+                "units": "min",
+                "duration": 0.0
               }
             }
           ],
@@ -183,8 +183,8 @@
               "laboratory": "Ithaca Beer C",
               "product_id": "",
               "amount": {
-                "volume": "ml",
-                "value": 0.0
+                "units": "ml",
+                "volume": 0.0
               }
             }
           ]
@@ -192,8 +192,8 @@
         "mash": {
           "name": "Simple Mash Type - Single Step",
           "grain_temperature": {
-            "degrees": "F",
-            "value": 80.0
+            "units": "F",
+            "degrees": 80.0
           },
           "notes": "",
           "mash_steps": [
@@ -201,38 +201,38 @@
               "name": "Saccharification Rest",
               "type": "infusion",
               "infuse_amount": {
-                "volume": "qt",
-                "value": 22.5
+                "units": "qt",
+                "volume": 22.5
               },
               "step_temperature": {
-                "degrees": "F",
-                "value": 158.0
+                "units": "F",
+                "degrees": 158.0
               },
               "step_time": {
-                "duration": "min",
-                "value": 70.0
+                "units": "min",
+                "duration": 70.0
               },
               "ramp_time": {
-                "duration": "min",
-                "value": 5.0
+                "units": "min",
+                "duration": 5.0
               },
               "end_temperature": {
-                "duration": "min",
-                "value": 5.0
+                "units": "F",
+                "degrees": 158.0
               },
               "description": "Add 22.50 qt of water at 165.0 F",
               "water_grain_ratio": 2.09,
               "infuse_temperature": {
-                "degrees": "F",
-                "value": 165.0
+                "units": "F",
+                "degrees": 165.0
               }
             }
           ]
         },
         "notes": "",
         "original_gravity": {
-          "density": "sg",
-          "value": 1.059
+          "units": "sg",
+          "density": 1.059
         },
         "ibu_estimate": {
           "method": "Other",
