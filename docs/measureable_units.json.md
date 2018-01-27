@@ -45,6 +45,14 @@ The schema defines the following additional types:
 
 ### pressure
  `pressure` (PressureUnitType)
+ 
+ ## AcidityType
+`AcidityType` (undefined)
+
+* [acidity](#acidity)
+
+### Acidity
+ `acidity` (AcidityUnitType)
 
 ## TimeType
 `TimeType` (undefined)
@@ -154,6 +162,9 @@ Properties of the `PercentRangeType` object:
 
 ## PressureUnitType
 `PressureUnitType` (string)
+
+## AcidityUnitType
+`AcidityUnitType` (string)
 
 ## TimeUnitType
 `TimeUnitType` (string)

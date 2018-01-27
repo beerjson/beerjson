@@ -49,6 +49,19 @@
       },
       "required": ["units", "pressure"]
     },
+	
+	"AcidityType": {
+      "properties": {
+        "units": {
+          "$ref": "#/definitions/AcidityUnitType"
+        },
+        "Acidity": {
+          "type": "number"
+        }
+      },
+      "required": ["units", "acidity"]
+    },
+    
     "TimeType": {
       "properties": {
         "units": {
@@ -174,6 +187,10 @@
     "TemperatureUnitType": {
       "type": "string",
       "enum": ["C", "F"]
+    },
+	"AcidityUnitType": {
+      "type": "string",
+      "enum": ["pH"]
     },
     "PressureUnitType": {
       "type": "string",

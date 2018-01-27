@@ -45,6 +45,7 @@ Properties of the `RecipeType` object:
 * [alcohol_by_volume](#alcohol_by_volume)
 * [ibu_estimate](#ibu_estimate)
 * [color_estimate](#color_estimate)
+* [acidity](#acidity)
 * [carbonation](#carbonation)
 * [fermentation_stages](#fermentation_stages)
 * [taste](#taste)
@@ -130,6 +131,9 @@ Properties of the `ingredients` object:
 ### ibu_estimate
  `ibu_estimate` ([IBUEstimateType](hops.json.md/#ibuestimatetype))
 
+ ### acidity
+ `acidity` ([acidity](measureable_units.json.md/#acidityType))
+ 
 ### color_estimate
  `color_estimate` ([ColorType](measureable_units.json.md/#colortype))
 
