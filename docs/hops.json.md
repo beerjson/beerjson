@@ -15,6 +15,7 @@ Properties of the `HopVarietyBase` object:
 
 * [name](#name)
 * [origin](#origin)
+* [form](#form)
 * [alpha_acid_units](#alpha_acid_units)
 * [beta_acid_units](#beta_acid_units)
 
@@ -23,6 +24,9 @@ Properties of the `HopVarietyBase` object:
 
 ### origin
  `origin` (string, required)
+ 
+### form
+ `form` (string)
 
 ### alpha_acid_units
  `alpha_acid_units` (number, required)
