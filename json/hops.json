@@ -80,7 +80,7 @@
                 "extract": {
                   "$ref": "measureable_units.json#/definitions/VolumeType"
                 },
-                "leaf (dry)": {
+                "leaf": {
                   "$ref": "measureable_units.json#/definitions/MassType"
                 },
                 "leaf (wet)": {
