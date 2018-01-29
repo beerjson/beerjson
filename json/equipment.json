@@ -19,7 +19,7 @@
 					"enum": ["HLT", "Mash Tun", "Lauter Tun", "Brew Kettle", "Fermenter", "Aging Vessel", "Packaging Vessel"]
 				},
 				"Maximum Volume": {
-					"$ref": "measureable_units.json#/definitions/VolumeRangeType"
+					"$ref": "measureable_units.json#/definitions/VolumeType"
 				}
 			},
 			"required": [
@@ -37,22 +37,22 @@
 				{
 					"properties": {
 						"Maximum Volume": {
-							"$ref": "measureable_units.json#/definitions/VolumeRangeType"
+							"$ref": "measureable_units.json#/definitions/VolumeType"
 						},
 						"Loss": {
-							"$ref": "measureable_units.json#/definitions/VolumeRangeType"
+							"$ref": "measureable_units.json#/definitions/VolumeType"
 						},
 						"Grain_absorption_rate": {
-							"$ref": "measureable_units.json#/definitions/SpecificVolumeRangeType"
+							"$ref": "measureable_units.json#/definitions/SpecificVolumeType"
 						},
             "Boil_rate_per_Hour": {
-							"$ref": "measureable_units.json#/definitions/VolumeRangeType"
+							"$ref": "measureable_units.json#/definitions/VolumeType"
 						},
 						"Weight": {
-							"$ref": "measureable_units.json#/definitions/MassRangeType"
+							"$ref": "measureable_units.json#/definitions/MassType"
 						},
 						"SpecificHeat": {
-							"$ref": "measureable_units.json#/definitions/SpecificHeatRangeType"
+							"$ref": "measureable_units.json#/definitions/SpecificHeatType"
 						},
 						"notes": {
 							"type": "string"
