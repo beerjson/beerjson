@@ -1,0 +1,69 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/equipment.json",
+	"type": "object",
+	"additionalProperties": false,
+	"definitions": {
+		"EquipmentBase": {
+			"type": "object",
+			"description": "The descriptive base type for brew day equipment. Provides unique properties to fully describe the recipe.",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"Type": {
+					"type": "string"
+				},
+				"form": {
+					"type": "string",
+					"enum": ["HLT", "Mash Tun", "Lauter Tun", "Brew Kettle", "Fermenter", "Aging Vessel", "Packaging Vessel"]
+				},
+				"Maximum Volume": {
+					"$ref": "measureable_units.json#/definitions/VolumeRangeType"
+				}
+			},
+			"required": [
+				"name",
+				"type",
+				"Maximum Volume"
+			]
+		},
+		"EquipmentType": {
+			"type": "object",
+			"description": "EquipmentType provides necessary information for brewing equipment",
+			"allOf": [{
+					"$ref": "#/definitions/EquipmentBase"
+				},
+				{
+					"properties": {
+						"Maximum Volume": {
+							"$ref": "measureable_units.json#/definitions/VolumeRangeType"
+						},
+						"Loss": {
+							"$ref": "measureable_units.json#/definitions/VolumeRangeType"
+						},
+						"Grain_absorption_rate": {
+							"$ref": "measureable_units.json#/definitions/SpecificVolumeRangeType"
+						},
+            "Boil_rate_per_Hour": {
+							"$ref": "measureable_units.json#/definitions/VolumeRangeType"
+						},
+						"Weight": {
+							"$ref": "measureable_units.json#/definitions/MassRangeType"
+						},
+						"SpecificHeat": {
+							"$ref": "measureable_units.json#/definitions/SpecificHeatRangeType"
+						},
+						"notes": {
+							"type": "string"
+						}
+					}
+				}
+			],
+			"required": [
+				"Maximum Volume",
+				"Loss"
+			]
+		}
+	}
+}
