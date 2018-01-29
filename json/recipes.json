@@ -85,6 +85,9 @@
         "color_estimate": {
           "$ref": "measureable_units.json#/definitions/ColorType"
         },
+        "beer_pH": {
+          "$ref": "measureable_units.json#/definitions/AcidityType"
+        },
         "carbonation": {
           "type": "number"
         },

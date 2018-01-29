@@ -16,6 +16,10 @@
         "origin": {
           "type": "string"
         },
+		"form": {
+              "type": "string",
+              "enum": ["extract", "leaf", "leaf (wet)", "pellet", "powder", "plug"]
+        },
         "alpha_acid_units": {
           "type": "number"
         },
@@ -73,10 +77,19 @@
               "type": "object",
               "additionalProperties": false,
               "properties": {
+                "extract": {
+                  "$ref": "measureable_units.json#/definitions/VolumeType"
+                },
                 "leaf": {
                   "$ref": "measureable_units.json#/definitions/MassType"
                 },
+                "leaf (wet)": {
+                  "$ref": "measureable_units.json#/definitions/MassType"
+                },
                 "pellet": {
+                  "$ref": "measureable_units.json#/definitions/MassType"
+                },
+                "powder": {
                   "$ref": "measureable_units.json#/definitions/MassType"
                 },
                 "plug": {
@@ -98,19 +111,21 @@
           {
             "form": {
               "type": "string",
-              "enum": ["leaf", "pellet", "plug"]
+              "enum": ["extract", "leaf", "leaf (wet)", "pellet", "powder", "plug"]
             }
           },
           {
             "use": {
               "type": "string",
               "enum": [
-                "boil",
+				"mash",
+				"first wort",
+				"boil",
+				"continuous boil addition",
+				"whirlpool",
+				"hop stand",
                 "dry hop",
-                "first wort",
-                "hopback",
-                "mash",
-                "continuous boil addition"
+                "hopback"
               ]
             }
           },
@@ -118,8 +133,14 @@
             "amount": {
               "$ref": "measureable_units.json#/definitions/MassType"
             },
+			"volume": {
+              "$ref": "measureable_units.json#/definitions/VolumeType"
+            },
             "time": {
               "$ref": "measureable_units.json#/definitions/TimeType"
+            },
+			"temperature": {
+              "$ref": "measureable_units.json#/definitions/TemperatureType"
             }
           }
         ]
