@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":
+    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/equipment.json",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "EquipmentBase": {
+      "type": "object",
+      "description":
+        "The descriptive base type for brew day equipment. Provides unique properties to fully describe the recipe.",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "form": {
+          "type": "string",
+          "enum": [
+            "HLT",
+            "Mash Tun",
+            "Lauter Tun",
+            "Brew Kettle",
+            "Fermenter",
+            "Aging Vessel",
+            "Packaging Vessel"
+          ]
+        },
+        "maximum_volume": {
+          "$ref": "measureable_units.json#/definitions/VolumeType"
+        }
+      },
+      "required": ["name", "type", "maximum_volume"]
+    },
+    "EquipmentType": {
+      "type": "object",
+      "description":
+        "EquipmentType provides necessary information for brewing equipment",
+      "allOf": [
+        {
+          "$ref": "#/definitions/EquipmentBase"
+        },
+        {
+          "properties": {
+            "loss": {
+              "$ref": "measureable_units.json#/definitions/VolumeType"
+            },
+            "grain_absorption_rate": {
+              "$ref": "measureable_units.json#/definitions/SpecificVolumeType"
+            },
+            "boil_rate_per_hour": {
+              "$ref": "measureable_units.json#/definitions/VolumeType"
+            },
+            "weight": {
+              "$ref": "measureable_units.json#/definitions/MassType"
+            },
+            "specific_heat": {
+              "$ref": "measureable_units.json#/definitions/SpecificHeatType"
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "required": ["loss"]
+    }
+  }
+}

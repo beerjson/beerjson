@@ -77,6 +77,22 @@ The schema defines the following additional types:
 
 ### density
  `density` (DensityUnitType)
+ 
+ ## SpecificHeatType
+`SpecificHeatType` (undefined)
+
+* [specificheat](#specificheat)
+
+### specificheat
+ `specific heat` (SpecificHeatUnitType)
+
+ ## SpecificVolumeType
+`SpecificVolumeType` (undefined)
+
+* [specificvolume](#specificvolume)
+
+### specificvolume
+ `specific volume` (SpecificVolumeType)
 
 ## QuantitativeRangeType
 `QuantitativeRangeType` (object)

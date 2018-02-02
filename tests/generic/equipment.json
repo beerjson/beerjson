@@ -1,0 +1,19 @@
+{
+  "beer_xml": {
+    "version": 2.06,
+    "equipment": [
+      {
+        "name": "10Gal Mashtun",
+        "type": "Mash Tun",
+        "loss": {
+          "units": "gal",
+          "volume": 1
+        },
+        "maximum_volume": {
+          "units": "gal",
+          "volume": 1
+        }
+      }
+    ]
+  }
+}
