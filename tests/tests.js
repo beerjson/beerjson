@@ -14,6 +14,7 @@ ajv.addSchema(require('../json/recipes'))
 ajv.addSchema(require('../json/style'))
 ajv.addSchema(require('../json/water'))
 ajv.addSchema(require('../json/yeast'))
+ajv.addSchema(require('../json/equipment'))
 
 const validate = ajv.compile(require('../json/BeerXML'))
 
@@ -31,6 +32,7 @@ const testJson = path => {
 }
 
 testJson('generic/cultures')
+testJson('generic/equipment')
 testJson('generic/fermentable')
 testJson('generic/hop_varieties')
 testJson('generic/miscellaneous_ingredients')

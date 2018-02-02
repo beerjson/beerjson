@@ -5,10 +5,14 @@
       {
         "name": "10Gal Mashtun",
         "type": "Mash Tun",
-        "batch_size": {
+        "loss": {
           "units": "gal",
-          "volume": 10
-            }
+          "volume": 1
+        },
+        "maximum_volume": {
+          "units": "gal",
+          "volume": 1
+        }
       }
     ]
   }

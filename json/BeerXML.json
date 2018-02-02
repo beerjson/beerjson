@@ -87,6 +87,14 @@
               "items": {
                 "$ref": "recipes.json#/definitions/RecipeType"
               }
+            },
+            "equipment": {
+              "type": "array",
+              "description":
+                "Provides necessary information for brewing equipment.",
+              "items": {
+                "$ref": "equipment.json#/definitions/EquipmentType"
+              }
             }
           },
           "required": ["version"]
@@ -119,6 +127,9 @@
             },
             {
               "required": ["recipes"]
+            },
+            {
+              "required": ["equipment"]
             }
           ]
         }
