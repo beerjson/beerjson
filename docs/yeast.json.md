@@ -1,8 +1,9 @@
 The schema defines the following types:
 
 ## CultureBase
-  
+
 The descriptive base type for both yeast culture records and yeast recipe additions. Provides unique properties to identify individual records of a yeast culture
+
 `CultureBase` type: `object`
 
 ### Properties
@@ -16,14 +17,16 @@ The descriptive base type for both yeast culture records and yeast recipe additi
 | **product_id** | string|  | :white_check_mark: |
 
 ## CultureInformation
-  
+
 CultureInformation collects the attributes of a yeast culture to store as record information
+
 `CultureInformation` type: `object`
 
 
 ## YeastAdditionType
-  
+
 YeastAdditionType collects the attributes of a yeast ingredient for use in a recipe
+
 `YeastAdditionType` type: `array`
 
 

@@ -1,8 +1,9 @@
 The schema defines the following types:
 
 ## MashStepType
-  
+
 MashStepType - a per step representation occuring within the mash
+
 `MashStepType` type: `object`
 
 ### Properties

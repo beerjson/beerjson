@@ -1,8 +1,9 @@
 The schema defines the following types:
 
 ## RecipeType
-  
+
 RecipeType composes the information stored in a beer_xml recipe
+
 `RecipeType` type: `object`
 
 ### Properties
@@ -34,8 +35,9 @@ RecipeType composes the information stored in a beer_xml recipe
 | **calories_per_pint** | number|  |  |
 
 ## RecipeStyleType
-  
+
 Recipe Style Type Description
+
 `RecipeStyleType` type: `undefined`
 
 

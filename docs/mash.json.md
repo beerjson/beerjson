@@ -1,8 +1,9 @@
 The schema defines the following types:
 
 ## MashProcedureType
-  
+
 MashProcedureType defines the procedure for performing unique mashing styles
+
 `MashProcedureType` type: `object`
 
 ### Properties

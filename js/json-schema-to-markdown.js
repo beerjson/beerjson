@@ -38,8 +38,9 @@ const formatProperties = requiredList =>
 
 const formatTypeDefinition = ([typeName, typeDef]) =>
   `## ${typeName}
-  
+
 ${R.propOr('*no description yet*', 'description', typeDef)}
+
 \`${typeName}\` type: \`${typeDef.type}\`
 
 ${formatProperties(R.propOr([], 'required', typeDef))(typeDef)}
