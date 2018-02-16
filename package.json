@@ -6,11 +6,12 @@
   "devDependencies": {
     "ajv": "^5.3.0",
     "json-dup-key-validator": "^1.0.2",
-    "prettier": "1.8.2"
+    "prettier": "1.8.2",
+    "ramda": "^0.25.0"
   },
   "scripts": {
     "test": "node tests/tests.js",
-    "gen-docs": "node docs/gen-docs.js"
+    "gen-docs": "node js/gen-docs.js"
   },
   "repository": {
     "type": "git",

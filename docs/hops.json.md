@@ -1,63 +1,32 @@
-The schema defines the following properties:
+The schema defines the following types:
 
----
-
-# Sub Schemas
-
-The schema defines the following additional types:
-
-## HopVarietyBase
-`HopVarietyBase` (object)
-
+# HopVarietyBase
 HopVarietyBase provides unique properties to identify individual records of a hop variety
-
-Properties of the `HopVarietyBase` object:
-
-* [name](#name)
-* [origin](#origin)
-* [form](#form)
-* [alpha_acid_units](#alpha_acid_units)
-* [beta_acid_units](#beta_acid_units)
-
-### name
- `name` (string, required)
-
-### origin
- `origin` (string, required)
- 
-### form
- `form` (string)
-
-### alpha_acid_units
- `alpha_acid_units` (number, required)
-
-### beta_acid_units
- `beta_acid_units` (number)
-
-## VarietyInformation
-`VarietyInformation` (object)
-
+  
+`HopVarietyBase` type: `object`
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+|**name**|string|| |
+|**origin**|string|| |
+|**form**|string|| |
+|**alpha_acid_units**|number|| |
+|**beta_acid_units**|number|| |
+# VarietyInformation
 VarietyInformation collects the attributes of a hop variety to store as record information
-
-## HopAdditionType
-`HopAdditionType` (object)
-
+  
+`VarietyInformation` type: `object`
+# HopAdditionType
 HopAdditionType collects the attributes of a hop ingredient for use in a recipe hop bil
-
-Properties of the `HopAdditionType` object:
-
-* [addition](#addition)
-
-### addition
- `addition` (, required)
-
-## IBUEstimateType
-`IBUEstimateType` (undefined)
-
-* [method](#method)
-
-### method
- `method` (IBUMethodType)
-
-## IBUMethodType
-`IBUMethodType` (string)
+  
+`HopAdditionType` type: `array`
+# IBUEstimateType
+*no description yet*
+  
+`IBUEstimateType` type: `undefined`
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+|**method**|undefined|| |
+# IBUMethodType
+*no description yet*
+  
+`IBUMethodType` type: `string`
