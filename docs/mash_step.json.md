@@ -10,13 +10,13 @@ MashStepType - a per step representation occuring within the mash
 |---|----|-----------|--------|
 | **name** | string|  | :white_check_mark: |
 | **type** | string|  | :white_check_mark: |
-| **infuse_amount** | undefined|  |  |
-| **step_temperature** | undefined|  | :white_check_mark: |
-| **step_time** | undefined|  | :white_check_mark: |
-| **ramp_time** | undefined|  |  |
-| **end_temperature** | undefined|  |  |
+| **infuse_amount** | [VolumeType](measureable_units.json.md#volumetype)|  |  |
+| **step_temperature** | [TemperatureType](measureable_units.json.md#temperaturetype)|  | :white_check_mark: |
+| **step_time** | [TimeType](measureable_units.json.md#timetype)|  | :white_check_mark: |
+| **ramp_time** | [TimeType](measureable_units.json.md#timetype)|  |  |
+| **end_temperature** | [TemperatureType](measureable_units.json.md#temperaturetype)|  |  |
 | **description** | string|  |  |
 | **water_grain_ratio** | number|  |  |
-| **decoction_amount** | undefined|  |  |
-| **infuse_temperature** | undefined|  |  |
+| **decoction_amount** | [VolumeType](measureable_units.json.md#volumetype)|  |  |
+| **infuse_temperature** | [TemperatureType](measureable_units.json.md#temperaturetype)|  |  |
 

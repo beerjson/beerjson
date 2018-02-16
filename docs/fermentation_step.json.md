@@ -10,9 +10,9 @@ FermentationStepType - a per step representation of a fermentation action
 |---|----|-----------|--------|
 | **name** | string|  | :white_check_mark: |
 | **description** | string|  |  |
-| **start_temperature** | undefined|  |  |
-| **end_temperature** | undefined|  |  |
-| **step_time** | undefined|  |  |
+| **start_temperature** | [TemperatureType](measureable_units.json.md#temperaturetype)|  |  |
+| **end_temperature** | [TemperatureType](measureable_units.json.md#temperaturetype)|  |  |
+| **step_time** | [TimeType](measureable_units.json.md#timetype)|  |  |
 | **free_rise** | boolean|  |  |
 | **start_gravity** | number|  |  |
 | **end_gravity** | number|  |  |

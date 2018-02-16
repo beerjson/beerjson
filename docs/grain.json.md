@@ -10,7 +10,7 @@ FermentableBase provides unique properties to identify individual records of fer
 |---|----|-----------|--------|
 | **name** | string|  | :white_check_mark: |
 | **type** | string|  | :white_check_mark: |
-| **color** | undefined|  | :white_check_mark: |
+| **color** | [ColorType](measureable_units.json.md#colortype)|  | :white_check_mark: |
 | **origin** | string|  |  |
 | **supplier** | string|  |  |
 | **group** | string|  |  |

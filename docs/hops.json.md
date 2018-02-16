@@ -32,7 +32,7 @@ HopAdditionType collects the attributes of a hop ingredient for use in a recipe 
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **method** | undefined|  |  |
+| **method** | [IBUMethodType](#ibumethodtype)|  |  |
 
 ## IBUMethodType
 *no description yet*

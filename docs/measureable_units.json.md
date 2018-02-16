@@ -8,7 +8,7 @@ The schema defines the following types:
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | undefined|  | :white_check_mark: |
+| **units** | [VolumeUnitType](#volumeunittype)|  | :white_check_mark: |
 | **volume** | number|  | :white_check_mark: |
 
 ## MassType
@@ -19,7 +19,7 @@ The schema defines the following types:
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | undefined|  | :white_check_mark: |
+| **units** | [MassUnitType](#massunittype)|  | :white_check_mark: |
 | **mass** | number|  | :white_check_mark: |
 
 ## TemperatureType
@@ -30,7 +30,7 @@ The schema defines the following types:
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | undefined|  | :white_check_mark: |
+| **units** | [TemperatureUnitType](#temperatureunittype)|  | :white_check_mark: |
 | **degrees** | number|  | :white_check_mark: |
 
 ## PressureType
@@ -41,7 +41,7 @@ The schema defines the following types:
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | undefined|  | :white_check_mark: |
+| **units** | [PressureUnitType](#pressureunittype)|  | :white_check_mark: |
 | **pressure** | number|  | :white_check_mark: |
 
 ## AcidityType
@@ -52,7 +52,7 @@ The schema defines the following types:
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | undefined|  | :white_check_mark: |
+| **units** | [AcidityUnitType](#acidityunittype)|  | :white_check_mark: |
 | **Acidity** | number|  |  |
 
 ## TimeType
@@ -63,7 +63,7 @@ The schema defines the following types:
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | undefined|  | :white_check_mark: |
+| **units** | [TimeUnitType](#timeunittype)|  | :white_check_mark: |
 | **duration** | number|  | :white_check_mark: |
 
 ## ColorType
@@ -74,7 +74,7 @@ The schema defines the following types:
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | undefined|  | :white_check_mark: |
+| **units** | [ColorUnitType](#colorunittype)|  | :white_check_mark: |
 | **scale** | number|  | :white_check_mark: |
 
 ## DensityType
@@ -85,7 +85,7 @@ The schema defines the following types:
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | undefined|  | :white_check_mark: |
+| **units** | [DensityUnitType](#densityunittype)|  | :white_check_mark: |
 | **density** | number|  | :white_check_mark: |
 
 ## SpecificHeatType
@@ -96,7 +96,7 @@ The schema defines the following types:
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | undefined|  | :white_check_mark: |
+| **units** | [SpecificHeatType](#specificheattype)|  | :white_check_mark: |
 | **specific heat** | number|  | :white_check_mark: |
 
 ## SpecificVolumeType
@@ -107,7 +107,7 @@ The schema defines the following types:
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | undefined|  | :white_check_mark: |
+| **units** | [SpecificVolumeType](#specificvolumetype)|  | :white_check_mark: |
 | **specific volume** | number|  | :white_check_mark: |
 
 ## QuantitativeRangeType
@@ -129,8 +129,8 @@ The schema defines the following types:
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **minimum** | undefined|  | :white_check_mark: |
-| **maximum** | undefined|  | :white_check_mark: |
+| **minimum** | [TemperatureType](#temperaturetype)|  | :white_check_mark: |
+| **maximum** | [TemperatureType](#temperaturetype)|  | :white_check_mark: |
 
 ## ColorRangeType
 *no description yet*
@@ -140,8 +140,8 @@ The schema defines the following types:
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **minimum** | undefined|  | :white_check_mark: |
-| **maximum** | undefined|  | :white_check_mark: |
+| **minimum** | [ColorType](#colortype)|  | :white_check_mark: |
+| **maximum** | [ColorType](#colortype)|  | :white_check_mark: |
 
 ## DensityRangeType
 *no description yet*
@@ -151,8 +151,8 @@ The schema defines the following types:
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **minimum** | undefined|  | :white_check_mark: |
-| **maximum** | undefined|  | :white_check_mark: |
+| **minimum** | [DensityType](#densitytype)|  | :white_check_mark: |
+| **maximum** | [DensityType](#densitytype)|  | :white_check_mark: |
 
 ## PercentRangeType
 *no description yet*
@@ -162,8 +162,8 @@ The schema defines the following types:
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **minimum** | undefined|  | :white_check_mark: |
-| **maximum** | undefined|  | :white_check_mark: |
+| **minimum** | [PercentType](#percenttype)|  | :white_check_mark: |
+| **maximum** | [PercentType](#percenttype)|  | :white_check_mark: |
 
 ## VolumeUnitType
 *no description yet*

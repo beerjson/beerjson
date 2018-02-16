@@ -1,7 +1,22 @@
 const R = require('ramda')
 
+const formatTypeRef = ref => {
+  const regex = /^(\S+)?#\/definitions\/(\S+)/
+  const matches = ref.match(regex)
+  const fileName = matches[1]
+  const typeName = matches[2]
+  return `[${typeName}](${fileName ? fileName + '.md' : ''}#${R.toLower(
+    typeName
+  )})`
+}
+
+const formatPropType = R.cond([
+  [R.has('type'), R.prop('type')],
+  [R.has('$ref'), R.pipe(R.prop('$ref'), formatTypeRef)]
+])
+
 const formatPropDefinition = requiredList => ([propName, propDef]) =>
-  `| **${propName}** | ${propDef.type}| ${R.propOr(
+  `| **${propName}** | ${formatPropType(propDef)}| ${R.propOr(
     '',
     'description',
     propDef

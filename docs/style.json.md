@@ -13,7 +13,7 @@ The descriptive base type for both beer style guideline records and recipe style
 | **category_number** | integer|  | :white_check_mark: |
 | **style_letter** | string|  | :white_check_mark: |
 | **style_guide** | string|  | :white_check_mark: |
-| **type** | undefined|  | :white_check_mark: |
+| **type** | [StyleCategories](#stylecategories)|  | :white_check_mark: |
 
 ## StyleType
 StyleType provide information for BJCP Style categorization

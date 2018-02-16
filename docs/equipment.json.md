@@ -11,7 +11,7 @@ The descriptive base type for brew day equipment. Provides unique properties to 
 | **name** | string|  | :white_check_mark: |
 | **type** | string|  | :white_check_mark: |
 | **form** | string|  |  |
-| **maximum_volume** | undefined|  | :white_check_mark: |
+| **maximum_volume** | [VolumeType](measureable_units.json.md#volumetype)|  | :white_check_mark: |
 
 ## EquipmentType
 EquipmentType provides necessary information for brewing equipment
