@@ -1,28 +1,36 @@
 const R = require('ramda')
 
-const formatPropDefinition = ([propName, propDef]) =>
-  `|**${propName}**|${propDef.type}|${R.propOr('', 'description', propDef)}| |
+const formatPropDefinition = requiredList => ([propName, propDef]) =>
+  `| **${propName}** | ${propDef.type}| ${R.propOr(
+    '',
+    'description',
+    propDef
+  )} | ${R.contains(propName, requiredList) ? ':white_check_mark:' : ''} |
 `
-const addTableHeader = str =>
-  `|   |Type|Description|Required|
+const addTableHeader = str => `### Properties
+
+|   |Type|Description|Required|
 |---|----|-----------|--------|
 ${str}`
 
-const formatProperties = R.pipe(
-  R.prop('properties'),
-  R.toPairs,
-  R.reduce((md, pair) => md + formatPropDefinition(pair), ''),
-  R.ifElse(R.isEmpty, R.empty, addTableHeader)
-)
+const formatProperties = requiredList =>
+  R.pipe(
+    R.prop('properties'),
+    R.toPairs,
+    R.reduce((md, pair) => md + formatPropDefinition(requiredList)(pair), ''),
+    R.ifElse(R.isEmpty, R.empty, addTableHeader)
+  )
 
-const formatTypeDefinition = ([typeName, typeDef]) => `# ${typeName}
+const formatTypeDefinition = ([typeName, typeDef]) =>
+  `## ${typeName}
 ${R.propOr('*no description yet*', 'description', typeDef)}
-  
 \`${typeName}\` type: \`${typeDef.type}\`
 
-${formatProperties(typeDef)}`
+${formatProperties(R.propOr([], 'required', typeDef))(typeDef)}
+`
 
 const addTypeHeader = str => `The schema defines the following types:\n\n${str}`
+
 const formatDefinitions = R.pipe(
   R.prop('definitions'),
   R.toPairs,

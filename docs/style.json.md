@@ -1,30 +1,32 @@
 The schema defines the following types:
 
-# StyleBase
+## StyleBase
 The descriptive base type for both beer style guideline records and recipe style provisions. Provides unique properties to identify individual beer styles
-  
 `StyleBase` type: `object`
+
+### Properties
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-|**name**|string|| |
-|**category**|string|| |
-|**category_number**|integer|| |
-|**style_letter**|string|| |
-|**style_guide**|string|| |
-|**type**|undefined|| |
-# StyleType
+| **name** | string|  | :white_check_mark: |
+| **category** | string|  | :white_check_mark: |
+| **category_number** | integer|  | :white_check_mark: |
+| **style_letter** | string|  | :white_check_mark: |
+| **style_guide** | string|  | :white_check_mark: |
+| **type** | undefined|  | :white_check_mark: |
+
+## StyleType
 StyleType provide information for BJCP Style categorization
-  
 `StyleType` type: `object`
 
-# RecipeStyleType
+
+## RecipeStyleType
 RecipeStyleType defines style information stored in a recipe record
-  
 `RecipeStyleType` type: `undefined`
 
-# StyleCategories
+
+## StyleCategories
 *no description yet*
-  
 `StyleCategories` type: `string`
+
 
