@@ -11,11 +11,11 @@ FermentableBase provides unique properties to identify individual records of fer
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 | **name** | string|  | :white_check_mark: |
-| **type** |  'adjunct'  | 'dry extract'  | 'extract'  | 'grain'  | 'sugar' |  | :white_check_mark: |
+| **type** |  'adjunct'  , 'dry extract'  , 'extract'  , 'grain'  , 'sugar' |  | :white_check_mark: |
 | **color** | [ColorType](measureable_units.json.md#colortype)|  | :white_check_mark: |
 | **origin** | string|  |  |
 | **supplier** | string|  |  |
-| **group** |  'base'  | 'caramel'  | 'flakes'  | 'roasted'  | 'speciality'  | 'wheat' |  |  |
+| **group** |  'base'  , 'caramel'  , 'flakes'  , 'roasted'  , 'speciality'  , 'wheat' |  |  |
 
 ## FermentableType
 

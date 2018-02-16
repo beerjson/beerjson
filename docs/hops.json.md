@@ -12,7 +12,7 @@ HopVarietyBase provides unique properties to identify individual records of a ho
 |---|----|-----------|--------|
 | **name** | string|  | :white_check_mark: |
 | **origin** | string|  | :white_check_mark: |
-| **form** |  'extract'  | 'leaf'  | 'leaf (wet)'  | 'pellet'  | 'powder'  | 'plug' |  |  |
+| **form** |  'extract'  , 'leaf'  , 'leaf (wet)'  , 'pellet'  , 'powder'  , 'plug' |  |  |
 | **alpha_acid_units** | number|  | :white_check_mark: |
 | **beta_acid_units** | number|  |  |
 

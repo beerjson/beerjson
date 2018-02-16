@@ -11,7 +11,7 @@ const formatTypeRef = ref => {
 }
 
 const formatEnum = R.reduce(
-  (str, val) => (str ? str + ` | '${val}' ` : ` '${val}' `),
+  (str, val) => (str ? str + ` , '${val}' ` : ` '${val}' `),
   ''
 )
 
