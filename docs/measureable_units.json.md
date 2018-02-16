@@ -4,6 +4,7 @@ The schema defines the following types:
 *no description yet*
   
 `VolumeType` type: `undefined`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**units**|undefined|| |
@@ -12,6 +13,7 @@ The schema defines the following types:
 *no description yet*
   
 `MassType` type: `undefined`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**units**|undefined|| |
@@ -20,6 +22,7 @@ The schema defines the following types:
 *no description yet*
   
 `TemperatureType` type: `undefined`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**units**|undefined|| |
@@ -28,6 +31,7 @@ The schema defines the following types:
 *no description yet*
   
 `PressureType` type: `undefined`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**units**|undefined|| |
@@ -36,6 +40,7 @@ The schema defines the following types:
 *no description yet*
   
 `AcidityType` type: `undefined`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**units**|undefined|| |
@@ -44,6 +49,7 @@ The schema defines the following types:
 *no description yet*
   
 `TimeType` type: `undefined`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**units**|undefined|| |
@@ -52,6 +58,7 @@ The schema defines the following types:
 *no description yet*
   
 `ColorType` type: `undefined`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**units**|undefined|| |
@@ -60,6 +67,7 @@ The schema defines the following types:
 *no description yet*
   
 `DensityType` type: `undefined`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**units**|undefined|| |
@@ -68,6 +76,7 @@ The schema defines the following types:
 *no description yet*
   
 `SpecificHeatType` type: `undefined`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**units**|undefined|| |
@@ -76,6 +85,7 @@ The schema defines the following types:
 *no description yet*
   
 `SpecificVolumeType` type: `undefined`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**units**|undefined|| |
@@ -84,6 +94,7 @@ The schema defines the following types:
 *no description yet*
   
 `QuantitativeRangeType` type: `object`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**minimum**|number|| |
@@ -92,6 +103,7 @@ The schema defines the following types:
 *no description yet*
   
 `TemperatureRangeType` type: `object`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**minimum**|undefined|| |
@@ -100,6 +112,7 @@ The schema defines the following types:
 *no description yet*
   
 `ColorRangeType` type: `object`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**minimum**|undefined|| |
@@ -108,6 +121,7 @@ The schema defines the following types:
 *no description yet*
   
 `DensityRangeType` type: `object`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**minimum**|undefined|| |
@@ -116,6 +130,7 @@ The schema defines the following types:
 *no description yet*
   
 `PercentRangeType` type: `object`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**minimum**|undefined|| |
@@ -124,47 +139,59 @@ The schema defines the following types:
 *no description yet*
   
 `VolumeUnitType` type: `string`
+
 # MassUnitType
 *no description yet*
   
 `MassUnitType` type: `string`
+
 # TemperatureUnitType
 *no description yet*
   
 `TemperatureUnitType` type: `string`
+
 # AcidityUnitType
 *no description yet*
   
 `AcidityUnitType` type: `string`
+
 # PressureUnitType
 *no description yet*
   
 `PressureUnitType` type: `string`
+
 # TimeUnitType
 *no description yet*
   
 `TimeUnitType` type: `string`
+
 # ColorUnitType
 *no description yet*
   
 `ColorUnitType` type: `string`
+
 # DensityUnitType
 *no description yet*
   
 `DensityUnitType` type: `string`
+
 # DateType
 *no description yet*
   
 `DateType` type: `string`
+
 # PercentType
 *no description yet*
   
 `PercentType` type: `number`
+
 # QualitativeRangeType
 *no description yet*
   
 `QualitativeRangeType` type: `string`
+
 # VersionType
 *no description yet*
   
 `VersionType` type: `number`
+

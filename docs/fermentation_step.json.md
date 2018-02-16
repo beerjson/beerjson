@@ -4,6 +4,7 @@ The schema defines the following types:
 FermentationStepType - a per step representation of a fermentation action
   
 `FermentationStepType` type: `object`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**name**|string|| |

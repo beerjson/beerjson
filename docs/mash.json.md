@@ -4,6 +4,7 @@ The schema defines the following types:
 MashProcedureType defines the procedure for performing unique mashing styles
   
 `MashProcedureType` type: `object`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**name**|string|| |

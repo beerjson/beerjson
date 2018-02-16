@@ -4,6 +4,7 @@ The schema defines the following types:
 The descriptive base type for brew day equipment. Provides unique properties to fully describe the recipe.
   
 `EquipmentBase` type: `object`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**name**|string|| |
@@ -14,3 +15,4 @@ The descriptive base type for brew day equipment. Provides unique properties to 
 EquipmentType provides necessary information for brewing equipment
   
 `EquipmentType` type: `object`
+

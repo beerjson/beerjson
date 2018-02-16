@@ -4,6 +4,7 @@ The schema defines the following types:
 RecipeType composes the information stored in a beer_xml recipe
   
 `RecipeType` type: `object`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**name**|string|| |
@@ -33,3 +34,4 @@ RecipeType composes the information stored in a beer_xml recipe
 Recipe Style Type Description
   
 `RecipeStyleType` type: `undefined`
+

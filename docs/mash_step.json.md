@@ -4,6 +4,7 @@ The schema defines the following types:
 MashStepType - a per step representation occuring within the mash
   
 `MashStepType` type: `object`
+
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 |**name**|string|| |
