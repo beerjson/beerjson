@@ -1,6 +1,7 @@
 The schema defines the following types:
 
 ## VolumeType
+  
 *no description yet*
 `VolumeType` type: `undefined`
 
@@ -12,6 +13,7 @@ The schema defines the following types:
 | **volume** | number|  | :white_check_mark: |
 
 ## MassType
+  
 *no description yet*
 `MassType` type: `undefined`
 
@@ -23,6 +25,7 @@ The schema defines the following types:
 | **mass** | number|  | :white_check_mark: |
 
 ## TemperatureType
+  
 *no description yet*
 `TemperatureType` type: `undefined`
 
@@ -34,6 +37,7 @@ The schema defines the following types:
 | **degrees** | number|  | :white_check_mark: |
 
 ## PressureType
+  
 *no description yet*
 `PressureType` type: `undefined`
 
@@ -45,6 +49,7 @@ The schema defines the following types:
 | **pressure** | number|  | :white_check_mark: |
 
 ## AcidityType
+  
 *no description yet*
 `AcidityType` type: `undefined`
 
@@ -56,6 +61,7 @@ The schema defines the following types:
 | **Acidity** | number|  |  |
 
 ## TimeType
+  
 *no description yet*
 `TimeType` type: `undefined`
 
@@ -67,6 +73,7 @@ The schema defines the following types:
 | **duration** | number|  | :white_check_mark: |
 
 ## ColorType
+  
 *no description yet*
 `ColorType` type: `undefined`
 
@@ -78,6 +85,7 @@ The schema defines the following types:
 | **scale** | number|  | :white_check_mark: |
 
 ## DensityType
+  
 *no description yet*
 `DensityType` type: `undefined`
 
@@ -89,6 +97,7 @@ The schema defines the following types:
 | **density** | number|  | :white_check_mark: |
 
 ## SpecificHeatType
+  
 *no description yet*
 `SpecificHeatType` type: `undefined`
 
@@ -100,6 +109,7 @@ The schema defines the following types:
 | **specific heat** | number|  | :white_check_mark: |
 
 ## SpecificVolumeType
+  
 *no description yet*
 `SpecificVolumeType` type: `undefined`
 
@@ -111,6 +121,7 @@ The schema defines the following types:
 | **specific volume** | number|  | :white_check_mark: |
 
 ## QuantitativeRangeType
+  
 *no description yet*
 `QuantitativeRangeType` type: `object`
 
@@ -122,6 +133,7 @@ The schema defines the following types:
 | **maximum** | number|  | :white_check_mark: |
 
 ## TemperatureRangeType
+  
 *no description yet*
 `TemperatureRangeType` type: `object`
 
@@ -133,6 +145,7 @@ The schema defines the following types:
 | **maximum** | [TemperatureType](#temperaturetype)|  | :white_check_mark: |
 
 ## ColorRangeType
+  
 *no description yet*
 `ColorRangeType` type: `object`
 
@@ -144,6 +157,7 @@ The schema defines the following types:
 | **maximum** | [ColorType](#colortype)|  | :white_check_mark: |
 
 ## DensityRangeType
+  
 *no description yet*
 `DensityRangeType` type: `object`
 
@@ -155,6 +169,7 @@ The schema defines the following types:
 | **maximum** | [DensityType](#densitytype)|  | :white_check_mark: |
 
 ## PercentRangeType
+  
 *no description yet*
 `PercentRangeType` type: `object`
 
@@ -166,61 +181,73 @@ The schema defines the following types:
 | **maximum** | [PercentType](#percenttype)|  | :white_check_mark: |
 
 ## VolumeUnitType
+  
 *no description yet*
 `VolumeUnitType` type: `string`
 
 
 ## MassUnitType
+  
 *no description yet*
 `MassUnitType` type: `string`
 
 
 ## TemperatureUnitType
+  
 *no description yet*
 `TemperatureUnitType` type: `string`
 
 
 ## AcidityUnitType
+  
 *no description yet*
 `AcidityUnitType` type: `string`
 
 
 ## PressureUnitType
+  
 *no description yet*
 `PressureUnitType` type: `string`
 
 
 ## TimeUnitType
+  
 *no description yet*
 `TimeUnitType` type: `string`
 
 
 ## ColorUnitType
+  
 *no description yet*
 `ColorUnitType` type: `string`
 
 
 ## DensityUnitType
+  
 *no description yet*
 `DensityUnitType` type: `string`
 
 
 ## DateType
+  
 *no description yet*
 `DateType` type: `string`
 
 
 ## PercentType
+  
 *no description yet*
 `PercentType` type: `number`
 
 
 ## QualitativeRangeType
+  
 *no description yet*
 `QualitativeRangeType` type: `string`
 
 
 ## VersionType
+  
 *no description yet*
 `VersionType` type: `number`
 

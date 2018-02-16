@@ -1,6 +1,7 @@
 The schema defines the following types:
 
 ## FermentationProcedureType
+  
 FermentationProcedureType defines the procedure for performing fermenting
 `FermentationProcedureType` type: `object`
 
