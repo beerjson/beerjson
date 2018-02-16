@@ -11,8 +11,8 @@ The descriptive base type for both yeast culture records and yeast recipe additi
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 | **name** | string|  | :white_check_mark: |
-| **type** | string|  | :white_check_mark: |
-| **form** | string|  | :white_check_mark: |
+| **type** |  'ale'  | 'lager'  | 'wheat'  | 'wine'  | 'champagne'  | 'bacteria'  | 'mixed-culture' |  | :white_check_mark: |
+| **form** |  'liquid'  | 'dry'  | 'slant'  | 'culture' |  | :white_check_mark: |
 | **laboratory** | string|  | :white_check_mark: |
 | **product_id** | string|  | :white_check_mark: |
 

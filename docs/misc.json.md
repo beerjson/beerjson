@@ -11,8 +11,8 @@ MiscellaneousBase provides unique properties to identify individual records of a
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 | **name** | string|  | :white_check_mark: |
-| **type** | string|  | :white_check_mark: |
-| **use** | string|  | :white_check_mark: |
+| **type** |  'spice'  | 'fining'  | 'water agent'  | 'herb'  | 'fruit'  | 'flavor'  | 'other' |  | :white_check_mark: |
+| **use** |  'boil'  | 'mash'  | 'primary'  | 'secondary'  | 'bottling' |  | :white_check_mark: |
 
 ## MiscellaneousType
 

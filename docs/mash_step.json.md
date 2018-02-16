@@ -11,7 +11,7 @@ MashStepType - a per step representation occuring within the mash
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 | **name** | string|  | :white_check_mark: |
-| **type** | string|  | :white_check_mark: |
+| **type** |  'infusion'  | 'temperature'  | 'decoction' |  | :white_check_mark: |
 | **infuse_amount** | [VolumeType](measureable_units.json.md#volumetype)|  |  |
 | **step_temperature** | [TemperatureType](measureable_units.json.md#temperaturetype)|  | :white_check_mark: |
 | **step_time** | [TimeType](measureable_units.json.md#timetype)|  | :white_check_mark: |

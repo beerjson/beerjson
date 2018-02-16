@@ -10,7 +10,13 @@ const formatTypeRef = ref => {
   )})`
 }
 
+const formatEnum = R.reduce(
+  (str, val) => (str ? str + ` | '${val}' ` : ` '${val}' `),
+  ''
+)
+
 const formatPropType = R.cond([
+  [R.has('enum'), R.pipe(R.prop('enum'), formatEnum)],
   [R.has('type'), R.prop('type')],
   [R.has('$ref'), R.pipe(R.prop('$ref'), formatTypeRef)]
 ])

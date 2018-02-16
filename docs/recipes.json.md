@@ -11,7 +11,7 @@ RecipeType composes the information stored in a beer_xml recipe
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 | **name** | string|  | :white_check_mark: |
-| **type** | string|  | :white_check_mark: |
+| **type** |  'extract'  | 'partial mash'  | 'all grain' |  | :white_check_mark: |
 | **author** | string|  | :white_check_mark: |
 | **coauthor** | string|  |  |
 | **created** | [DateType](measureable_units.json.md#datetype)|  |  |
