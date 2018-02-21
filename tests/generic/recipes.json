@@ -25,6 +25,34 @@
                 "scale": 3.0
               }
             }
+          ],
+          "hop_bill": [
+            {
+              "name": "Citra",
+              "origin": "US",
+              "form": "pellet",
+              "alpha_acid_units": 10,
+              "beta_acid_units": 3,
+              "type": "aroma/bittering",
+              "notes":
+                "American aroma hop Citra was created by John I. Haas, Inc. and Select Botanicals Group joint venture, the Hop Breeding Company. It was released to the brewing world in 2008.",
+              "substitutes": "Simcoe®, Cascade (US), Centennial, Mosaic®",
+              "humulene": 12,
+              "caryophyllene": 8,
+              "myrcene": 60,
+              "farnesene": 1,
+              "inventory": {
+                "pellet": {
+                  "units": "g",
+                  "mass": 30.0
+                }
+              },
+              "use": "dry hop",
+              "amount": {
+                "units": "g",
+                "mass": 10.0
+              }
+            }
           ]
         },
         "fermentation": {
