@@ -26,7 +26,7 @@ const testJson = path => {
   )
 
   if (!validate(JsonLint.parse(rawJSON))) {
-    console.log(validate.errors)
+    console.log(JSON.stringify(validate.errors, null, 2))
     process.exit(1)
   }
 }
