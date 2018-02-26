@@ -51,11 +51,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 2.0
+            "scale": 2.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 3.0
+            "scale": 3.0
           }
         },
         "alcohol_by_volume": {
@@ -112,11 +112,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 2.0
+            "scale": 2.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 4.0
+            "scale": 4.0
           }
         },
         "alcohol_by_volume": {
@@ -173,11 +173,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 2.5
+            "scale": 2.5
           },
           "maximum": {
             "units": "SRM",
-            "density": 5.0
+            "scale": 5.0
           }
         },
         "alcohol_by_volume": {
@@ -234,11 +234,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 3.0
+            "scale": 3.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 6.0
+            "scale": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -295,11 +295,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 2.0
+            "scale": 2.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 6.0
+            "scale": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -356,11 +356,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 7.0
+            "scale": 7.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 14.0
+            "scale": 14.0
           }
         },
         "alcohol_by_volume": {
@@ -417,11 +417,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 14.0
+            "scale": 14.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 22.0
+            "scale": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -478,11 +478,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 3.0
+            "scale": 3.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 6.0
+            "scale": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -539,11 +539,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 3.5
+            "scale": 3.5
           },
           "maximum": {
             "units": "SRM",
-            "density": 6.0
+            "scale": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -600,11 +600,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 10.0
+            "scale": 10.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 16.0
+            "scale": 16.0
           }
         },
         "alcohol_by_volume": {
@@ -661,11 +661,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 14.0
+            "scale": 14.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 35.0
+            "scale": 35.0
           }
         },
         "alcohol_by_volume": {
@@ -722,11 +722,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 3.0
+            "scale": 3.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 5.0
+            "scale": 5.0
           }
         },
         "alcohol_by_volume": {
@@ -783,11 +783,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 4.0
+            "scale": 4.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 7.0
+            "scale": 7.0
           }
         },
         "alcohol_by_volume": {
@@ -844,11 +844,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 6.0
+            "scale": 6.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 11.0
+            "scale": 11.0
           }
         },
         "alcohol_by_volume": {
@@ -905,11 +905,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 2.0
+            "scale": 2.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 5.0
+            "scale": 5.0
           }
         },
         "alcohol_by_volume": {
@@ -966,11 +966,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 3.5
+            "scale": 3.5
           },
           "maximum": {
             "units": "SRM",
-            "density": 5.0
+            "scale": 5.0
           }
         },
         "alcohol_by_volume": {
@@ -1027,11 +1027,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 4.0
+            "scale": 4.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 7.0
+            "scale": 7.0
           }
         },
         "alcohol_by_volume": {
@@ -1088,11 +1088,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 2.0
+            "scale": 2.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 5.0
+            "scale": 5.0
           }
         },
         "alcohol_by_volume": {
@@ -1149,11 +1149,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 8.0
+            "scale": 8.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 17.0
+            "scale": 17.0
           }
         },
         "alcohol_by_volume": {
@@ -1210,11 +1210,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 12.0
+            "scale": 12.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 22.0
+            "scale": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -1271,11 +1271,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 14.0
+            "scale": 14.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 22.0
+            "scale": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -1332,11 +1332,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 9.0
+            "scale": 9.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 15.0
+            "scale": 15.0
           }
         },
         "alcohol_by_volume": {
@@ -1393,11 +1393,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 11.0
+            "scale": 11.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 17.0
+            "scale": 17.0
           }
         },
         "alcohol_by_volume": {
@@ -1455,11 +1455,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 7.0
+            "scale": 7.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 17.0
+            "scale": 17.0
           }
         },
         "alcohol_by_volume": {
@@ -1516,11 +1516,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 14.0
+            "scale": 14.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 28.0
+            "scale": 28.0
           }
         },
         "alcohol_by_volume": {
@@ -1577,11 +1577,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 17.0
+            "scale": 17.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 30.0
+            "scale": 30.0
           }
         },
         "alcohol_by_volume": {
@@ -1639,11 +1639,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 6.0
+            "scale": 6.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 25.0
+            "scale": 25.0
           }
         },
         "alcohol_by_volume": {
@@ -1700,11 +1700,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 18.0
+            "scale": 18.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 30.0
+            "scale": 30.0
           }
         },
         "alcohol_by_volume": {
@@ -1761,11 +1761,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 17.0
+            "scale": 17.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 30.0
+            "scale": 30.0
           }
         },
         "alcohol_by_volume": {
@@ -1821,11 +1821,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 2.0
+            "scale": 2.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 6.0
+            "scale": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -1882,11 +1882,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 14.0
+            "scale": 14.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 23.0
+            "scale": 23.0
           }
         },
         "alcohol_by_volume": {
@@ -1944,11 +1944,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 6.0
+            "scale": 6.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 25.0
+            "scale": 25.0
           }
         },
         "alcohol_by_volume": {
@@ -2005,11 +2005,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 8.0
+            "scale": 8.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 14.0
+            "scale": 14.0
           }
         },
         "alcohol_by_volume": {
@@ -2066,11 +2066,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 8.0
+            "scale": 8.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 16.0
+            "scale": 16.0
           }
         },
         "alcohol_by_volume": {
@@ -2127,11 +2127,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 8.0
+            "scale": 8.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 18.0
+            "scale": 18.0
           }
         },
         "alcohol_by_volume": {
@@ -2188,11 +2188,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 2.0
+            "scale": 2.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 6.0
+            "scale": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -2249,11 +2249,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 4.0
+            "scale": 4.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 7.0
+            "scale": 7.0
           }
         },
         "alcohol_by_volume": {
@@ -2310,11 +2310,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 6.0
+            "scale": 6.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 14.0
+            "scale": 14.0
           }
         },
         "alcohol_by_volume": {
@@ -2371,11 +2371,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 12.0
+            "scale": 12.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 25.0
+            "scale": 25.0
           }
         },
         "alcohol_by_volume": {
@@ -2432,11 +2432,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 12.0
+            "scale": 12.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 22.0
+            "scale": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -2493,11 +2493,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 20.0
+            "scale": 20.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 30.0
+            "scale": 30.0
           }
         },
         "alcohol_by_volume": {
@@ -2553,11 +2553,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 17.0
+            "scale": 17.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 22.0
+            "scale": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -2613,11 +2613,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 13.0
+            "scale": 13.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 22.0
+            "scale": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -2673,11 +2673,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 13.0
+            "scale": 13.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 22.0
+            "scale": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -2734,11 +2734,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 9.0
+            "scale": 9.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 14.0
+            "scale": 14.0
           }
         },
         "alcohol_by_volume": {
@@ -2795,11 +2795,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 25.0
+            "scale": 25.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 40.0
+            "scale": 40.0
           }
         },
         "alcohol_by_volume": {
@@ -2856,11 +2856,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 25.0
+            "scale": 25.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 40.0
+            "scale": 40.0
           }
         },
         "alcohol_by_volume": {
@@ -2917,11 +2917,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 30.0
+            "scale": 30.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 40.0
+            "scale": 40.0
           }
         },
         "alcohol_by_volume": {
@@ -2978,11 +2978,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 22.0
+            "scale": 22.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 40.0
+            "scale": 40.0
           }
         },
         "alcohol_by_volume": {
@@ -3039,11 +3039,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 30.0
+            "scale": 30.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 40.0
+            "scale": 40.0
           }
         },
         "alcohol_by_volume": {
@@ -3100,11 +3100,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 30.0
+            "scale": 30.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 40.0
+            "scale": 40.0
           }
         },
         "alcohol_by_volume": {
@@ -3161,11 +3161,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 8.0
+            "scale": 8.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 22.0
+            "scale": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -3222,11 +3222,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 10.0
+            "scale": 10.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 22.0
+            "scale": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -3283,11 +3283,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 14.0
+            "scale": 14.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 25.0
+            "scale": 25.0
           }
         },
         "alcohol_by_volume": {
@@ -3344,11 +3344,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 8.0
+            "scale": 8.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 22.0
+            "scale": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -3405,11 +3405,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 3.0
+            "scale": 3.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 6.0
+            "scale": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -3466,11 +3466,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 5.0
+            "scale": 5.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 10.0
+            "scale": 10.0
           }
         },
         "alcohol_by_volume": {
@@ -3527,11 +3527,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 10.0
+            "scale": 10.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 17.0
+            "scale": 17.0
           }
         },
         "alcohol_by_volume": {
@@ -3588,11 +3588,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 10.0
+            "scale": 10.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 14.0
+            "scale": 14.0
           }
         },
         "alcohol_by_volume": {
@@ -3649,11 +3649,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 18.0
+            "scale": 18.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 35.0
+            "scale": 35.0
           }
         },
         "alcohol_by_volume": {
@@ -3710,11 +3710,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 22.0
+            "scale": 22.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 40.0
+            "scale": 40.0
           }
         },
         "alcohol_by_volume": {
@@ -3771,11 +3771,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 30.0
+            "scale": 30.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 40.0
+            "scale": 40.0
           }
         },
         "alcohol_by_volume": {
@@ -3832,11 +3832,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 30.0
+            "scale": 30.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 40.0
+            "scale": 40.0
           }
         },
         "alcohol_by_volume": {
@@ -3893,11 +3893,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 6.0
+            "scale": 6.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 14.0
+            "scale": 14.0
           }
         },
         "alcohol_by_volume": {
@@ -3978,11 +3978,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 6.0
+            "scale": 6.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 14.0
+            "scale": 14.0
           }
         },
         "alcohol_by_volume": {
@@ -4039,11 +4039,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 7.0
+            "scale": 7.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 19.0
+            "scale": 19.0
           }
         },
         "alcohol_by_volume": {
@@ -4100,11 +4100,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 10.0
+            "scale": 10.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 19.0
+            "scale": 19.0
           }
         },
         "alcohol_by_volume": {
@@ -4161,11 +4161,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 8.0
+            "scale": 8.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 15.0
+            "scale": 15.0
           }
         },
         "alcohol_by_volume": {
@@ -4222,11 +4222,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 2.0
+            "scale": 2.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 3.0
+            "scale": 3.0
           }
         },
         "alcohol_by_volume": {
@@ -4283,11 +4283,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 10.0
+            "scale": 10.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 16.0
+            "scale": 16.0
           }
         },
         "alcohol_by_volume": {
@@ -4344,11 +4344,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 15.0
+            "scale": 15.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 22.0
+            "scale": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -4405,11 +4405,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 3.0
+            "scale": 3.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 7.0
+            "scale": 7.0
           }
         },
         "alcohol_by_volume": {
@@ -4466,11 +4466,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 3.0
+            "scale": 3.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 7.0
+            "scale": 7.0
           }
         },
         "alcohol_by_volume": {
@@ -4528,11 +4528,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 3.0
+            "scale": 3.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 7.0
+            "scale": 7.0
           }
         },
         "alcohol_by_volume": {
@@ -4589,11 +4589,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 2.0
+            "scale": 2.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 4.0
+            "scale": 4.0
           }
         },
         "alcohol_by_volume": {
@@ -4650,11 +4650,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 8.0
+            "scale": 8.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 14.0
+            "scale": 14.0
           }
         },
         "alcohol_by_volume": {
@@ -4712,11 +4712,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 6.0
+            "scale": 6.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 19.0
+            "scale": 19.0
           }
         },
         "alcohol_by_volume": {
@@ -4773,11 +4773,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 4.0
+            "scale": 4.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 7.0
+            "scale": 7.0
           }
         },
         "alcohol_by_volume": {
@@ -4835,11 +4835,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 5.0
+            "scale": 5.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 14.0
+            "scale": 14.0
           }
         },
         "alcohol_by_volume": {
@@ -4896,11 +4896,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 3.0
+            "scale": 3.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 6.0
+            "scale": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -4957,11 +4957,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 3.0
+            "scale": 3.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 5.0
+            "scale": 5.0
           }
         },
         "alcohol_by_volume": {
@@ -5018,11 +5018,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 10.0
+            "scale": 10.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 17.0
+            "scale": 17.0
           }
         },
         "alcohol_by_volume": {
@@ -5079,11 +5079,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 4.5
+            "scale": 4.5
           },
           "maximum": {
             "units": "SRM",
-            "density": 7.0
+            "scale": 7.0
           }
         },
         "alcohol_by_volume": {
@@ -5140,11 +5140,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 12.0
+            "scale": 12.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 22.0
+            "scale": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -5201,11 +5201,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 3.0
+            "scale": 3.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 4.0
+            "scale": 4.0
           }
         },
         "alcohol_by_volume": {
@@ -5262,11 +5262,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 11.0
+            "scale": 11.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 20.0
+            "scale": 20.0
           }
         },
         "alcohol_by_volume": {
@@ -5322,11 +5322,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 3.0
+            "scale": 3.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 6.0
+            "scale": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -5383,11 +5383,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 22.0
+            "scale": 22.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 35.0
+            "scale": 35.0
           }
         },
         "alcohol_by_volume": {
@@ -5443,11 +5443,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 3.0
+            "scale": 3.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 6.0
+            "scale": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -5504,11 +5504,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 3.0
+            "scale": 3.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 6.0
+            "scale": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -5565,11 +5565,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 18.0
+            "scale": 18.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 30.0
+            "scale": 30.0
           }
         },
         "alcohol_by_volume": {
@@ -5626,11 +5626,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 14.0
+            "scale": 14.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 19.0
+            "scale": 19.0
           }
         },
         "alcohol_by_volume": {
@@ -5686,11 +5686,11 @@
         "color": {
           "minimum": {
             "units": "SRM",
-            "density": 4.0
+            "scale": 4.0
           },
           "maximum": {
             "units": "SRM",
-            "density": 22.0
+            "scale": 22.0
           }
         },
         "alcohol_by_volume": {
