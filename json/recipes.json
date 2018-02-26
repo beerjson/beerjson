@@ -8,7 +8,7 @@
     "RecipeType": {
       "type": "object",
       "description":
-        "RecipeType composes the information stored in a beer_xml recipe",
+        "RecipeType composes the information stored in a beerjson recipe",
       "additionalProperties": false,
       "properties": {
         "name": {

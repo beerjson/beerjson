@@ -9,10 +9,12 @@
       "allOf": [
         {
           "type": "object",
-          "description": "Root element of all BeerXML 3 documents.",
+          "description": "Root element of all beerjson documents.",
           "additionalProperties": false,
           "properties": {
             "version": {
+              "description":
+                "Explicitly encode beerjson version within list of records.",
               "$ref": "measureable_units.json#/definitions/VersionType"
             },
             "fermentables": {
