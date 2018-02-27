@@ -26,7 +26,7 @@ const testJson = path => {
   )
 
   if (!validate(JsonLint.parse(rawJSON))) {
-    console.log(validate.errors)
+    console.log(JSON.stringify(validate.errors, null, 2))
     process.exit(1)
   }
 }
@@ -57,3 +57,5 @@ testJson('real/StyleBohemianPilsner')
 testJson('real/StyleDryIrishStoutWithAllFields')
 testJson('real/MashSingleStepInfusion')
 testJson('real/MashTwoStepTemperature')
+
+testJson('styles/styleguide-2015')
