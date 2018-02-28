@@ -1,11 +1,11 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id":
-    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/BeerXML.json",
+    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/beer.json",
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "beer_xml": {
+    "beerjson": {
       "allOf": [
         {
           "type": "object",
@@ -138,5 +138,5 @@
       ]
     }
   },
-  "required": ["beer_xml"]
+  "required": ["beerjson"]
 }
