@@ -58,4 +58,4 @@ testJson('real/StyleDryIrishStoutWithAllFields')
 testJson('real/MashSingleStepInfusion')
 testJson('real/MashTwoStepTemperature')
 
-testJson('styles/styleguide-2015')
+testJson('styles/bjcp_styleguide-2015')
