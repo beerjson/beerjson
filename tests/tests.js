@@ -16,7 +16,7 @@ ajv.addSchema(require('../json/water'))
 ajv.addSchema(require('../json/yeast'))
 ajv.addSchema(require('../json/equipment'))
 
-const validate = ajv.compile(require('../json/BeerXML'))
+const validate = ajv.compile(require('../json/beer'))
 
 const testJson = path => {
   console.log(path)
