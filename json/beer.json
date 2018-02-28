@@ -44,9 +44,9 @@
             "cultures": {
               "type": "array",
               "description":
-                "Records detailing the wide array of unique yeast cultures.",
+                "Records detailing the wide array of unique cultures.",
               "items": {
-                "$ref": "yeast.json#/definitions/CultureInformation"
+                "$ref": "culture.json#/definitions/CultureInformation"
               }
             },
             "profiles": {

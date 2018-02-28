@@ -13,7 +13,7 @@ ajv.addSchema(require('../json/misc'))
 ajv.addSchema(require('../json/recipes'))
 ajv.addSchema(require('../json/style'))
 ajv.addSchema(require('../json/water'))
-ajv.addSchema(require('../json/yeast'))
+ajv.addSchema(require('../json/culture'))
 ajv.addSchema(require('../json/equipment'))
 
 const validate = ajv.compile(require('../json/beer'))

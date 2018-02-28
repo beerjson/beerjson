@@ -108,7 +108,7 @@
               }
             }
           ],
-          "adjuncts": [
+          "miscellaneous_additions": [
             {
               "name": "Bitter Orange Peel",
               "type": "spice",
@@ -151,7 +151,7 @@
             {
               "name": "Juniper Berries",
               "type": "fruit",
-              "use": "secondary",
+              "use": "fermentation",
               "amount_as_weight": {
                 "units": "oz",
                 "mass": 1.0
@@ -175,7 +175,7 @@
               }
             }
           ],
-          "yeast_additions": [
+          "culture_additions": [
             {
               "name": "English Ale",
               "type": "ale",
