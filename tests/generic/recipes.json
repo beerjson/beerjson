@@ -22,7 +22,7 @@
           "brewhouse": 74.1
 			  },
         "ingredients": {
-          "grain_bill": [
+          "fermentable_bill": [
             {
               "name": "pale ale",
               "type": "grain",

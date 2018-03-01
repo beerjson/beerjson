@@ -100,14 +100,14 @@ This element must be one of the following enum values:
 
 Properties of the `ingredients` object:
 
-* [grain_bill](#grain_bill)
+* [fermentable_bill](#fermentable_bill)
 * [hop_bill](#hop_bill)
 * [adjuncts](#adjuncts)
 * [yeast_additions](#yeast_additions)
 * [water_profile](#water_profile)
 
-#### grain_bill
- `grain_bill` ([FermentableAdditionType](grain.json.md/#fermentableadditiontype), required)
+#### fermentable_bill
+ `fermentable_bill` ([FermentableAdditionType](fermentables.json.md/#fermentableadditiontype), required)
 
 #### hop_bill
  `hop_bill` ([HopAdditionType](hops.json.md/#hopadditiontype))

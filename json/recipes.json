@@ -63,8 +63,8 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "grain_bill": {
-              "$ref": "grain.json#/definitions/FermentableAdditionType"
+            "fermentable_bill": {
+              "$ref": "fermentables.json#/definitions/FermentableAdditionType"
             },
             "hop_bill": {
               "$ref": "hops.json#/definitions/HopAdditionType"
@@ -79,7 +79,7 @@
               "$ref": "water.json#/definitions/WaterAdditionType"
             }
           },
-          "required": ["grain_bill"]
+          "required": ["fermentable_bill"]
         },
         "mash": {
           "$ref": "mash.json#/definitions/MashProcedureType"

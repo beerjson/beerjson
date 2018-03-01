@@ -22,7 +22,7 @@
               "description":
                 "Records for any ingredient that contributes to the gravity of the beer.",
               "items": {
-                "$ref": "grain.json#/definitions/FermentableType"
+                "$ref": "fermentables.json#/definitions/FermentableType"
               }
             },
             "miscellaneous_ingredients": {
