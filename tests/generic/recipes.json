@@ -16,7 +16,7 @@
         },
         "boil_time": 90,
         "ingredients": {
-          "grain_bill": [
+          "fermentable_bill": [
             {
               "name": "pale ale",
               "type": "grain",

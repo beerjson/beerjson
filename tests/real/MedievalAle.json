@@ -28,7 +28,7 @@
         },
 
         "ingredients": {
-          "grain_bill": [
+          "fermentable_bill": [
             {
               "name": "Buckwheat Honey",
               "type": "adjunct",
