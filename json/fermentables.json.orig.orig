@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id":
+    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/fermentables.json",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "FermentableBase": {
+      "type": "object",
+      "description":
+        "FermentableBase provides unique properties to identify individual records of fermentable ingredients",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["adjunct", "dry extract", "extract", "grain", "sugar"]
+        },
+        "color": {
+          "$ref": "measureable_units.json#/definitions/ColorType"
+        },
+        "origin": {
+          "type": "string"
+        },
+        "supplier": {
+          "type": "string"
+        },
+        "group": {
+          "type": "string",
+          "enum": [
+            "base",
+            "caramel",
+            "flaked",
+            "roasted",
+            "speciality",
+            "wheat"
+          ]
+        }
+      },
+      "required": ["name", "type", "color"]
+    },
+    "FermentableType": {
+      "type": "object",
+      "description":
+        "FermentableType collects the attributes of a fermentable ingredient to store as record information",
+      "allOf": [
+        { "$ref": "#/definitions/FermentableBase" },
+        {
+          "properties": {
+            "yield_dry_basis": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "fine_grind": {
+                  "$ref": "measureable_units.json#/definitions/PercentType"
+                },
+                "coarse_grind": {
+                  "$ref": "measureable_units.json#/definitions/PercentType"
+                },
+                "fine_coarse_difference": {
+                  "$ref": "measureable_units.json#/definitions/PercentType"
+                }
+              },
+              "required": ["fine_grind", "coarse_grind"]
+            },
+            "notes": {
+              "type": "string"
+            },
+            "moisture": {
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "diastatic_power": {
+              "type": "number"
+            },
+            "protein": {
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "soluble_nitrogen_ratio": {
+              "type": "number"
+            },
+            "max_in_batch": {
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "recommend_mash": {
+              "type": "boolean"
+            },
+            "ibu_gal_per_lb": {
+              "type": "number"
+            },
+            "potential": {
+              "$ref": "measureable_units.json#/definitions/DensityType"
+            },
+            "inventory": {
+              "$ref": "measureable_units.json#/definitions/MassType"
+            }
+          }
+        }
+      ],
+      "required": ["yield_dry_basis"]
+    },
+    "FermentableAdditionType": {
+      "type": "array",
+      "description":
+        "FermentableAdditionType collects the attributes of a fermentable ingredient for use in a recipe fermentable bill",
+      "items": {
+        "allOf": [
+          { "$ref": "#/definitions/FermentableBase" },
+          {
+            "properties": {
+              "amount": {
+                "$ref": "measureable_units.json#/definitions/MassType"
+              },
+              "add_after_boil": {
+                "type": "boolean"
+              }
+<<<<<<< HEAD
+            },
+            "required": ["amount"]
+=======
+            }
+>>>>>>> Modifying 'grain' to 'fermentable' where appropriate, and 'flakes' to 'flaked', according to issue #30 in the beerjson/beerjson
+          }
+        ]
+      }
+    }
+  }
+}
