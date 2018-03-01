@@ -32,7 +32,7 @@ Properties of the `fermentables` object:
 * [fermentable](#fermentable)
 
 ### fermentable
- `fermentable` ([FermentableType](grain.json.md/#fermentabletype), required)
+ `fermentable` ([FermentableType](fermentables.json.md/#fermentabletype), required)
 
 ## miscellaneous_ingredients
  `miscellaneous_ingredients` (object)

@@ -50,7 +50,7 @@ This element must be one of the following enum values:
 
 * `base`
 * `caramel`
-* `flakes`
+* `flaked`
 * `roasted`
 * `speciality`
 * `wheat`
@@ -63,7 +63,7 @@ FermentableType collects the attributes of a fermentable ingredient to store as 
 ## FermentableAdditionType
 `FermentableAdditionType` (object)
 
-FermentableAdditionType collects the attributes of a fermentable ingredient for use in a recipe grain bill
+FermentableAdditionType collects the attributes of a fermentable ingredient for use in a recipe fermentable bill
 
 Properties of the `FermentableAdditionType` object:
 
