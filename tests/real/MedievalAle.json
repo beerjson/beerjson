@@ -17,6 +17,12 @@
         "boil_time": {
           "units": "min",
           "duration": 90.0
+        },        
+        "efficiency": {
+          "conversion": 92.0,
+          "lauter": 80.5,
+          "mash": 74.0,
+          "brewhouse": 74.1
         },
         "style": {
           "name": "Specialty",

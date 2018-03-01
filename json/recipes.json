@@ -37,7 +37,24 @@
           "$ref": "measureable_units.json#/definitions/TimeType"
         },
         "efficiency": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "conversion": {
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "lauter": {
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "mash": {
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "brewhouse": {
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            }
+
+          },
+          "required": ["brewhouse"]
         },
         "style": {
           "$ref": "#/definitions/RecipeStyleType"
@@ -115,6 +132,7 @@
         "name",
         "type",
         "author",
+		"efficiency",
         "batch_size",
         "boil_size",
         "boil_time",

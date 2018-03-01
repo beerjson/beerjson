@@ -47,6 +47,7 @@ Properties of the `RecipeType` object:
 * [color_estimate](#color_estimate)
 * [acidity](#acidity)
 * [carbonation](#carbonation)
+* [serving_temperature](#serving_temperature)
 * [fermentation_stages](#fermentation_stages)
 * [taste](#taste)
 * [calories_per_pint](#calories_per_pint)
@@ -82,7 +83,14 @@ This element must be one of the following enum values:
  `boil_time` ([TimeType](measureable_units.json.md/#timetype), required)
 
 ### efficiency
- `efficiency` ([PercentType](measureable_units.json.md/#percenttype))
+ `efficiency` (object, required)
+ 
+ Properties of the `efficiency` object:
+ 
+* [conversion](#conversion) ([PercentType](measureable_units.json.md/#percenttype))
+* [lauter](#lauter) ([PercentType](measureable_units.json.md/#percenttype))
+* [mash](#mash) ([PercentType](measureable_units.json.md/#percenttype))
+* [brewhouse](#brewhouse) ([PercentType](measureable_units.json.md/#percenttype), required)
 
 ### style
  `style` (RecipeStyleType)
@@ -139,6 +147,9 @@ Properties of the `ingredients` object:
 
 ### carbonation
  `carbonation` (number)
+ 
+### serving_temperature
+ `serving_temperature` ([TemperatureType](measureable_units.json.md/#temperaturetype))
 
 ### fermentation_stages
  `fermentation_stages` (object)

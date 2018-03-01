@@ -16,7 +16,7 @@
         },
         "type": {
           "type": "string",
-          "enum": ["infusion", "temperature", "decoction"]
+          "enum": ["infusion", "temperature", "decoction", "souring mash", "souring wort"]
         },
         "infuse_amount": {
           "$ref": "measureable_units.json#/definitions/VolumeType"
@@ -44,6 +44,12 @@
         },
         "infuse_temperature": {
           "$ref": "measureable_units.json#/definitions/TemperatureType"
+        },
+		"initial_pH": {
+          "$ref": "measureable_units.json#/definitions/AcidityType"
+        },
+		"final_pH": {
+          "$ref": "measureable_units.json#/definitions/AcidityType"
         }
       },
       "required": ["name", "type", "step_temperature", "step_time"]
