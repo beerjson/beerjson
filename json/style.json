@@ -8,7 +8,7 @@
     "StyleBase": {
       "type": "object",
       "description":
-        "The descriptive base type for both beer style guideline records and recipe style provisions. Provides unique properties to identify individual beer styles",
+        "The descriptive base type for both style guideline records, and recipe style provisions. Provides unique properties to identify individual styles",
       "properties": {
         "name": {
           "type": "string"
@@ -37,7 +37,7 @@
     "StyleType": {
       "type": "object",
       "description":
-        "StyleType provide information for BJCP Style categorization",
+        "StyleType provide information for Style categorization",
       "allOf": [
         { "$ref": "#/definitions/StyleBase" },
         {

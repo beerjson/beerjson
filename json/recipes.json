@@ -37,7 +37,24 @@
           "$ref": "measureable_units.json#/definitions/TimeType"
         },
         "efficiency": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "conversion": {
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "lauter": {
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "mash": {
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "brewhouse": {
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            }
+
+          },
+          "required": ["brewhouse"]
         },
         "style": {
           "$ref": "#/definitions/RecipeStyleType"
@@ -52,11 +69,11 @@
             "hop_bill": {
               "$ref": "hops.json#/definitions/HopAdditionType"
             },
-            "adjuncts": {
+            "miscellaneous_additions": {
               "$ref": "misc.json#/definitions/MiscellaneousAdditionType"
             },
-            "yeast_additions": {
-              "$ref": "yeast.json#/definitions/YeastAdditionType"
+            "culture_additions": {
+              "$ref": "culture.json#/definitions/CultureAdditionType"
             },
             "water_profile": {
               "$ref": "water.json#/definitions/WaterAdditionType"
@@ -115,6 +132,7 @@
         "name",
         "type",
         "author",
+		"efficiency",
         "batch_size",
         "boil_size",
         "boil_time",
