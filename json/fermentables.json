@@ -111,11 +111,14 @@
               "amount": {
                 "$ref": "measureable_units.json#/definitions/MassType"
               },
+              "yield": {
+                "type": "number"
+              },
               "add_after_boil": {
                 "type": "boolean"
               }
             },
-            "required": ["amount"]
+            "required": ["amount", "yield"]
           }
         ]
       }

@@ -17,7 +17,7 @@
         "boil_time": {
           "units": "min",
           "duration": 90.0
-        },        
+        },
         "efficiency": {
           "conversion": 92.0,
           "lauter": 80.5,
@@ -46,7 +46,8 @@
               "amount": {
                 "units": "lb",
                 "mass": 2.148
-              }
+              },
+              "yield": 85
             },
             {
               "name": "Flaked Barley",
@@ -59,7 +60,8 @@
               "amount": {
                 "units": "lb",
                 "mass": 0.5
-              }
+              },
+              "yield": 85
             },
             {
               "name": "Roasted Barley",
@@ -72,7 +74,8 @@
               "amount": {
                 "units": "lb",
                 "mass": 0.25
-              }
+              },
+              "yield": 85
             },
             {
               "name": "Unmalted Wheat",
@@ -85,7 +88,8 @@
               "amount": {
                 "units": "lb",
                 "mass": 1.5
-              }
+              },
+              "yield": 85
             },
             {
               "name": "Pale Malt(2-row)",
@@ -98,7 +102,8 @@
               "amount": {
                 "units": "lb",
                 "mass": 8.0
-              }
+              },
+              "yield": 85
             },
             {
               "name": "Crystal Malt",
@@ -111,7 +116,8 @@
               "amount": {
                 "units": "lb",
                 "mass": 1.0
-              }
+              },
+              "yield": 85
             }
           ],
           "miscellaneous_additions": [

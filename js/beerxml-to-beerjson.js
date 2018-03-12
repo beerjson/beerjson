@@ -11,15 +11,20 @@ const getArrayNode = node => Array.from(Array.isArray(node) ? node : [node])
 const importFromBeerXml = xml => {
   try {
     const r = XML.parse(xml).RECIPE
-
     const recipe = {
       beerjson: {
         version: 2.06,
         recipes: [
           {
-            name: r.NAME,
+            name: r['NAME'],
             type: _.lowerCase(r['TYPE']),
-            author: r.BREWER,
+            author: r['BREWER'],
+            ...(r['ASST_BREWER'] !== '' && r['ASST_BREWER'] !== undefined
+              ? { coauthor: r['ASST_BREWER'] }
+              : {}),
+            ...(r['DATE'] !== '' && r['DATE'] !== undefined
+              ? { created: new Date(r['DATE']).toISOString() }
+              : {}),
             batch_size: {
               units: 'l',
               volume: Number(r['BATCH_SIZE'])
@@ -35,6 +40,9 @@ const importFromBeerXml = xml => {
             efficiency: {
               brewhouse: Number(r['EFFICIENCY'])
             },
+            ...(r['STYLE'] !== '' && r['STYLE'] !== undefined
+              ? { style: r['STYLE'] }
+              : {}),
             ingredients: {
               fermentable_bill: _.map(
                 getArrayNode(_.get(r, ['FERMENTABLES', 'FERMENTABLE'])),
@@ -48,7 +56,17 @@ const importFromBeerXml = xml => {
                   amount: {
                     units: 'kg',
                     mass: Number(fermentable['AMOUNT'])
-                  }
+                  },
+                  origin: fermentable['ORIGIN'],
+                  supplier: fermentable['SUPPLIER'],
+                  group: 'base',
+                  yield: Number(fermentable['YIELD']),
+                  ...(r['ADD_AFTER_BOIL'] !== '' &&
+                  r['ADD_AFTER_BOIL'] !== undefined
+                    ? {
+                        add_after_boil: parseBool(fermentable['ADD_AFTER_BOIL'])
+                      }
+                    : {})
                 })
               )
             }
@@ -57,6 +75,7 @@ const importFromBeerXml = xml => {
       }
     }
 
+    //console.log(JSON.stringify(recipe))
     return JSON.stringify(recipe)
   } catch (err) {
     console.log('XML Parser Error: ' + err)
