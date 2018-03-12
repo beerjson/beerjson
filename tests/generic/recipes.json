@@ -20,7 +20,7 @@
           "lauter": 80.5,
           "mash": 74.0,
           "brewhouse": 74.1
-			  },
+        },
         "ingredients": {
           "fermentable_bill": [
             {
@@ -29,6 +29,10 @@
               "color": {
                 "units": "SRM",
                 "scale": 3.0
+              },
+              "amount": {
+                "units": "kg",
+                "mass": 5
               }
             }
           ],
