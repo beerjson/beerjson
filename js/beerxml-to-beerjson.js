@@ -61,8 +61,8 @@ const importFromBeerXml = xml => {
                   supplier: fermentable['SUPPLIER'],
                   group: 'base',
                   yield: Number(fermentable['YIELD']),
-                  ...(r['ADD_AFTER_BOIL'] !== '' &&
-                  r['ADD_AFTER_BOIL'] !== undefined
+                  ...(fermentable['ADD_AFTER_BOIL'] !== '' &&
+                  fermentable['ADD_AFTER_BOIL'] !== undefined
                     ? {
                         add_after_boil: parseBool(fermentable['ADD_AFTER_BOIL'])
                       }
