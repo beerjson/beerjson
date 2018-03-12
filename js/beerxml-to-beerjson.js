@@ -68,7 +68,31 @@ const importFromBeerXml = xml => {
                       }
                     : {})
                 })
-              )
+              ),
+              hop_bill: _.map(getArrayNode(_.get(r, ['HOPS', 'HOP'])), hop => ({
+                name: hop['NAME'],
+                alpha_acid_units: Number(hop['ALPHA']),
+                ...(hop['ORIGIN'] !== '' && hop['ORIGIN'] !== undefined
+                  ? { origin: hop['ORIGIN'] }
+                  : {}),
+                ...(hop['FORM'] !== '' && hop['FORM'] !== undefined
+                  ? { form: _.lowerCase(hop['FORM']) }
+                  : {}),
+                ...(hop['BETA'] !== '' && hop['BETA'] !== undefined
+                  ? { beta_acid_units: Number(hop['BETA']) }
+                  : {}),
+                ...(hop['USE'] !== '' && hop['USE'] !== undefined
+                  ? { use: Number(hop['USE']) }
+                  : {}),
+                amount: {
+                  units: 'kg',
+                  mass: Number(hop['AMOUNT'])
+                },
+                time: {
+                  units: 'min',
+                  duration: Number(hop['TIME'])
+                }
+              }))
             }
           }
         ]

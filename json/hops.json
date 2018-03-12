@@ -27,7 +27,7 @@
           "type": "number"
         }
       },
-      "required": ["name", "origin", "alpha_acid_units"]
+      "required": ["name", "alpha_acid_units"]
     },
     "VarietyInformation": {
       "type": "object",
@@ -137,7 +137,8 @@
               "$ref": "measureable_units.json#/definitions/TemperatureType"
             }
           }
-        ]
+        ],
+        "required": ["amount"]
       }
     },
     "IBUEstimateType": {
