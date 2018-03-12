@@ -19,10 +19,10 @@ const importFromBeerXml = xml => {
             name: r['NAME'],
             type: _.lowerCase(r['TYPE']),
             author: r['BREWER'],
-            ...(r['ASST_BREWER'] !== '' && r['ASST_BREWER'] !== undefined
+            ...(!_.isEmpty(r['ASST_BREWER'])
               ? { coauthor: r['ASST_BREWER'] }
               : {}),
-            ...(r['DATE'] !== '' && r['DATE'] !== undefined
+            ...(!_.isEmpty(r['DATE'])
               ? { created: new Date(r['DATE']).toISOString() }
               : {}),
             batch_size: {
@@ -40,9 +40,7 @@ const importFromBeerXml = xml => {
             efficiency: {
               brewhouse: Number(r['EFFICIENCY'])
             },
-            ...(r['STYLE'] !== '' && r['STYLE'] !== undefined
-              ? { style: r['STYLE'] }
-              : {}),
+            ...(!_.isEmpty(r['STYLE']) ? { style: r['STYLE'] } : {}),
             ingredients: {
               fermentable_bill: _.map(
                 getArrayNode(_.get(r, ['FERMENTABLES', 'FERMENTABLE'])),
@@ -61,8 +59,7 @@ const importFromBeerXml = xml => {
                   supplier: fermentable['SUPPLIER'],
                   group: 'base',
                   yield: Number(fermentable['YIELD']),
-                  ...(fermentable['ADD_AFTER_BOIL'] !== '' &&
-                  fermentable['ADD_AFTER_BOIL'] !== undefined
+                  ...(!_.isEmpty(fermentable['ADD_AFTER_BOIL'])
                     ? {
                         add_after_boil: parseBool(fermentable['ADD_AFTER_BOIL'])
                       }
@@ -72,18 +69,14 @@ const importFromBeerXml = xml => {
               hop_bill: _.map(getArrayNode(_.get(r, ['HOPS', 'HOP'])), hop => ({
                 name: hop['NAME'],
                 alpha_acid_units: Number(hop['ALPHA']),
-                ...(hop['ORIGIN'] !== '' && hop['ORIGIN'] !== undefined
-                  ? { origin: hop['ORIGIN'] }
-                  : {}),
-                ...(hop['FORM'] !== '' && hop['FORM'] !== undefined
+                ...(!_.isEmpty(hop['ORIGIN']) ? { origin: hop['ORIGIN'] } : {}),
+                ...(!_.isEmpty(hop['FORM'])
                   ? { form: _.lowerCase(hop['FORM']) }
                   : {}),
-                ...(hop['BETA'] !== '' && hop['BETA'] !== undefined
+                ...(!_.isEmpty(hop['BETA'])
                   ? { beta_acid_units: Number(hop['BETA']) }
                   : {}),
-                ...(hop['USE'] !== '' && hop['USE'] !== undefined
-                  ? { use: Number(hop['USE']) }
-                  : {}),
+                ...(!_.isEmpty(hop['USE']) ? { use: Number(hop['USE']) } : {}),
                 amount: {
                   units: 'kg',
                   mass: Number(hop['AMOUNT'])
