@@ -7,7 +7,7 @@
     "MiscellaneousBase": {
       "type": "object",
       "description":
-        "MiscellaneousBase provides unique properties to identify individual records of adjunct ingredients",
+        "MiscellaneousBase provides unique properties to identify individual records of ingredients",
       "properties": {
         "name": {
           "type": "string"
@@ -21,12 +21,13 @@
             "herb",
             "fruit",
             "flavor",
+            "wood",
             "other"
           ]
         },
         "use": {
           "type": "string",
-          "enum": ["boil", "mash", "primary", "secondary", "bottling"]
+          "enum": ["boil", "mash", "fermentation", "packaging"]
         }
       },
       "required": ["name", "type", "use"]
@@ -34,7 +35,7 @@
     "MiscellaneousType": {
       "type": "object",
       "description":
-        "MiscellaneousType collects the attributes of a adjunct ingredient to store as record information",
+        "MiscellaneousType collects the attributes of an ingredient to store as record information",
       "allOf": [
         { "$ref": "#/definitions/MiscellaneousBase" },
         {
@@ -65,7 +66,7 @@
     "MiscellaneousAdditionType": {
       "type": "array",
       "description":
-        "MiscellaneousAdditionType collects the attributes of an adjunct ingredient for use in a recipe adjunct bill",
+        "MiscellaneousAdditionType collects the attributes of an ingredient for use in a recipe",
       "items": {
         "allOf": [
           { "$ref": "#/definitions/MiscellaneousBase" },

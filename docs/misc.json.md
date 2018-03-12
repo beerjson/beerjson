@@ -31,6 +31,7 @@ This element must be one of the following enum values:
 * `herb`
 * `fruit`
 * `flavor`
+* `wood`
 * `other`
 
 ### use
@@ -40,9 +41,8 @@ This element must be one of the following enum values:
 
 * `boil`
 * `mash`
-* `primary`
-* `secondary`
-* `bottling`
+* `fermentation`
+* `packaging`
 
 ## MiscellaneousType
 `MiscellaneousType` (object)
