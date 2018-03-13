@@ -143,7 +143,27 @@ const importFromBeerXml = xml => {
                       }
                     : {})
                 })
-              )
+              ),
+              ...(!_.isEmpty(r['WATERS'])
+                ? {
+                    water_profile: _.map(
+                      getArrayNode(_.get(r, ['WATERS', 'WATER'])),
+                      water => ({
+                        name: water['NAME'],
+                        calcium: Number(water['CALCIUM']),
+                        bicarbonate: Number(water['BICARBONATE']),
+                        sulfate: Number(water['SULFATE']),
+                        chloride: Number(water['CHLORIDE']),
+                        sodium: Number(water['SODIUM']),
+                        magnesium: Number(water['MAGNESIUM']),
+                        amount: {
+                          units: 'l',
+                          volume: Number(water['AMOUNT'])
+                        }
+                      })
+                    )
+                  }
+                : {})
             }
           }
         ]
