@@ -114,12 +114,8 @@
               "add_after_boil": {
                 "type": "boolean"
               }
-<<<<<<< HEAD
             },
             "required": ["amount"]
-=======
-            }
->>>>>>> Modifying 'grain' to 'fermentable' where appropriate, and 'flakes' to 'flaked', according to issue #30 in the beerjson/beerjson
           }
         ]
       }
