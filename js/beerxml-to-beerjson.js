@@ -85,7 +85,38 @@ const importFromBeerXml = xml => {
                   units: 'min',
                   duration: Number(hop['TIME'])
                 }
-              }))
+              })),
+              ...(!_.isEmpty(r['MISCS'])
+                ? {
+                    miscellaneous_additions: _.map(
+                      getArrayNode(_.get(r, ['MISCS', 'MISC'])),
+                      misc => ({
+                        name: misc['NAME'],
+                        type: _.lowerCase(misc['TYPE']),
+                        use: _.lowerCase(misc['USE']),
+                        ...(!_.isEmpty(misc['AMOUNT_IS_WEIGHT']) &&
+                        parseBool(misc['AMOUNT_IS_WEIGHT'])
+                          ? {
+                              amount_as_weight: {
+                                units: 'kg',
+                                mass: Number(misc['AMOUNT'])
+                              }
+                            }
+                          : {}),
+                        ...((!_.isEmpty(misc['AMOUNT_IS_WEIGHT']) &&
+                          !parseBool(misc['AMOUNT_IS_WEIGHT'])) ||
+                        _.isEmpty(misc['AMOUNT_IS_WEIGHT'])
+                          ? {
+                              amount: {
+                                units: 'l',
+                                volume: Number(misc['AMOUNT'])
+                              }
+                            }
+                          : {})
+                      })
+                    )
+                  }
+                : {})
             }
           }
         ]
