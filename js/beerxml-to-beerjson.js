@@ -164,6 +164,52 @@ const importFromBeerXml = xml => {
                     )
                   }
                 : {})
+            },
+            mash: {
+              name: _.get(r, ['MASH', 'NAME']),
+              grain_temperature: {
+                units: 'C',
+                degrees: Number(_.get(r, ['MASH', 'GRAIN_TEMP']))
+              },
+              mash_steps: _.map(
+                getArrayNode(_.get(r, ['MASH', 'MASH_STEPS', 'MASH_STEP'])),
+                mash_step => ({
+                  name: mash_step['NAME'],
+                  type: _.lowerCase(mash_step['TYPE']),
+                  step_temperature: {
+                    units: 'C',
+                    degrees: Number(mash_step['STEP_TEMP'])
+                  },
+                  step_time: {
+                    units: 'min',
+                    duration: Number(mash_step['STEP_TIME'])
+                  },
+                  ...(!_.isEmpty(mash_step['RAMP_TIME'])
+                    ? {
+                        step_time: {
+                          units: 'min',
+                          duration: Number(mash_step['RAMP_TIME'])
+                        }
+                      }
+                    : {}),
+                  ...(!_.isEmpty(mash_step['END_TEMP'])
+                    ? {
+                        end_temperature: {
+                          units: 'C',
+                          degrees: Number(mash_step['END_TEMP'])
+                        }
+                      }
+                    : {}),
+                  ...(!_.isEmpty(mash_step['INFUSE_AMOUNT'])
+                    ? {
+                        infuse_amount: {
+                          units: 'l',
+                          volume: Number(mash_step['INFUSE_AMOUNT'])
+                        }
+                      }
+                    : {})
+                })
+              )
             }
           }
         ]
