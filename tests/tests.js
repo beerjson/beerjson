@@ -59,3 +59,4 @@ testJson('real/MashSingleStepInfusion')
 testJson('real/MashTwoStepTemperature')
 
 testJson('styles/bjcp_styleguide-2015')
+testJson('styles/ba_styleguide-2017')

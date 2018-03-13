@@ -32,7 +32,7 @@
           "$ref": "#/definitions/StyleCategories"
         }
       },
-      "required": ["name", "category", "style_letter", "style_guide", "type"]
+      "required": ["name", "category", "style_guide", "type"]
     },
     "StyleType": {
       "type": "object",
