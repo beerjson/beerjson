@@ -116,7 +116,34 @@ const importFromBeerXml = xml => {
                       })
                     )
                   }
-                : {})
+                : {}),
+              culture_additions: _.map(
+                getArrayNode(_.get(r, ['YEASTS', 'YEAST'])),
+                culture => ({
+                  name: culture['NAME'],
+                  type: _.lowerCase(culture['TYPE']),
+                  form: _.lowerCase(culture['FORM']),
+                  ...(!_.isEmpty(culture['AMOUNT_IS_WEIGHT']) &&
+                  parseBool(culture['AMOUNT_IS_WEIGHT'])
+                    ? {
+                        amount_as_weight: {
+                          units: 'kg',
+                          mass: Number(culture['AMOUNT'])
+                        }
+                      }
+                    : {}),
+                  ...((!_.isEmpty(culture['AMOUNT_IS_WEIGHT']) &&
+                    !parseBool(culture['AMOUNT_IS_WEIGHT'])) ||
+                  _.isEmpty(culture['AMOUNT_IS_WEIGHT'])
+                    ? {
+                        amount: {
+                          units: 'l',
+                          volume: Number(culture['AMOUNT'])
+                        }
+                      }
+                    : {})
+                })
+              )
             }
           }
         ]

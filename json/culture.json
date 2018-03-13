@@ -15,7 +15,21 @@
         },
         "type": {
           "type": "string",
-          "enum": ["ale","bacteria","brett","champagne", "kviek", "lacto","lager","malolactic","mixed-culture", "other","pedio", "spontaneous","wine"]
+          "enum": [
+            "ale",
+            "bacteria",
+            "brett",
+            "champagne",
+            "kviek",
+            "lacto",
+            "lager",
+            "malolactic",
+            "mixed-culture",
+            "other",
+            "pedio",
+            "spontaneous",
+            "wine"
+          ]
         },
         "form": {
           "type": "string",
@@ -28,7 +42,7 @@
           "type": "string"
         }
       },
-      "required": ["name", "type", "form", "laboratory", "product_id"]
+      "required": ["name", "type", "form"]
     },
     "CultureInformation": {
       "type": "object",
@@ -81,7 +95,7 @@
         }
       ]
     },
-   "CultureAdditionType": {
+    "CultureAdditionType": {
       "type": "array",
       "description":
         "CultureAdditionType collects the attributes of a culture ingredient for use in a recipe",
@@ -96,13 +110,13 @@
               "add_to_fermentation_step": {
                 "type": "integer"
               },
-			  "addition_time": {
+              "addition_time": {
                 "$ref": "measureable_units.json#/definitions/TimeType"
-				},
-			  "addition_sg": {
+              },
+              "addition_sg": {
                 "$ref": "measureable_units.json#/definitions/DensityRangeType"
-				},
-			  "cell_count_billions": {
+              },
+              "cell_count_billions": {
                 "type": "integer"
               },
               "amount": {
