@@ -1,5 +1,5 @@
 {
-  "beer_xml": {
+  "beerjson": {
     "version": 2.01,
     "styles": [
       {
@@ -8,7 +8,7 @@
         "category_number": 16,
         "style_letter": "A",
         "style_guide": "BJCP",
-        "type": "ale",
+        "type": "beer",
         "original_gravity": {
           "minimum": {
             "units": "sg",

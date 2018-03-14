@@ -1,5 +1,5 @@
 {
-  "beer_xml": {
+  "beerjson": {
     "version": 2.06,
     "recipes": [
       {
@@ -18,6 +18,12 @@
           "units": "min",
           "duration": 90.0
         },
+        "efficiency": {
+          "conversion": 92.0,
+          "lauter": 80.5,
+          "mash": 74.0,
+          "brewhouse": 74.1
+        },
         "style": {
           "name": "Specialty",
           "category": "Experimental and Historic",
@@ -28,7 +34,7 @@
         },
 
         "ingredients": {
-          "grain_bill": [
+          "fermentable_bill": [
             {
               "name": "Buckwheat Honey",
               "type": "adjunct",
@@ -40,7 +46,8 @@
               "amount": {
                 "units": "lb",
                 "mass": 2.148
-              }
+              },
+              "yield": 85
             },
             {
               "name": "Flaked Barley",
@@ -53,7 +60,8 @@
               "amount": {
                 "units": "lb",
                 "mass": 0.5
-              }
+              },
+              "yield": 85
             },
             {
               "name": "Roasted Barley",
@@ -66,7 +74,8 @@
               "amount": {
                 "units": "lb",
                 "mass": 0.25
-              }
+              },
+              "yield": 85
             },
             {
               "name": "Unmalted Wheat",
@@ -79,7 +88,8 @@
               "amount": {
                 "units": "lb",
                 "mass": 1.5
-              }
+              },
+              "yield": 85
             },
             {
               "name": "Pale Malt(2-row)",
@@ -92,7 +102,8 @@
               "amount": {
                 "units": "lb",
                 "mass": 8.0
-              }
+              },
+              "yield": 85
             },
             {
               "name": "Crystal Malt",
@@ -105,10 +116,11 @@
               "amount": {
                 "units": "lb",
                 "mass": 1.0
-              }
+              },
+              "yield": 85
             }
           ],
-          "adjuncts": [
+          "miscellaneous_additions": [
             {
               "name": "Bitter Orange Peel",
               "type": "spice",
@@ -151,7 +163,7 @@
             {
               "name": "Juniper Berries",
               "type": "fruit",
-              "use": "secondary",
+              "use": "fermentation",
               "amount_as_weight": {
                 "units": "oz",
                 "mass": 1.0
@@ -175,7 +187,7 @@
               }
             }
           ],
-          "yeast_additions": [
+          "culture_additions": [
             {
               "name": "English Ale",
               "type": "ale",

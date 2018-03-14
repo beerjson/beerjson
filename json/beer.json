@@ -1,18 +1,20 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id":
-    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/BeerXML.json",
+    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/beer.json",
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "beer_xml": {
+    "beerjson": {
       "allOf": [
         {
           "type": "object",
-          "description": "Root element of all BeerXML 3 documents.",
+          "description": "Root element of all beerjson documents.",
           "additionalProperties": false,
           "properties": {
             "version": {
+              "description":
+                "Explicitly encode beerjson version within list of records.",
               "$ref": "measureable_units.json#/definitions/VersionType"
             },
             "fermentables": {
@@ -20,7 +22,7 @@
               "description":
                 "Records for any ingredient that contributes to the gravity of the beer.",
               "items": {
-                "$ref": "grain.json#/definitions/FermentableType"
+                "$ref": "fermentables.json#/definitions/FermentableType"
               }
             },
             "miscellaneous_ingredients": {
@@ -42,9 +44,9 @@
             "cultures": {
               "type": "array",
               "description":
-                "Records detailing the wide array of unique yeast cultures.",
+                "Records detailing the wide array of unique cultures.",
               "items": {
-                "$ref": "yeast.json#/definitions/CultureInformation"
+                "$ref": "culture.json#/definitions/CultureInformation"
               }
             },
             "profiles": {
@@ -136,5 +138,5 @@
       ]
     }
   },
-  "required": ["beer_xml"]
+  "required": ["beerjson"]
 }

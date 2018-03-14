@@ -8,7 +8,7 @@
     "StyleBase": {
       "type": "object",
       "description":
-        "The descriptive base type for both beer style guideline records and recipe style provisions. Provides unique properties to identify individual beer styles",
+        "The descriptive base type for both style guideline records, and recipe style provisions. Provides unique properties to identify individual styles",
       "properties": {
         "name": {
           "type": "string"
@@ -32,19 +32,12 @@
           "$ref": "#/definitions/StyleCategories"
         }
       },
-      "required": [
-        "name",
-        "category",
-        "category_number",
-        "style_letter",
-        "style_guide",
-        "type"
-      ]
+      "required": ["name", "category", "style_guide", "type"]
     },
     "StyleType": {
       "type": "object",
       "description":
-        "StyleType provide information for BJCP Style categorization",
+        "StyleType provide information for Style categorization",
       "allOf": [
         { "$ref": "#/definitions/StyleBase" },
         {
@@ -95,12 +88,6 @@
             }
           }
         }
-      ],
-      "required": [
-        "original_gravity",
-        "final_gravity",
-        "international_bitterness_units",
-        "color"
       ]
     },
     "RecipeStyleType": {
@@ -110,7 +97,7 @@
     },
     "StyleCategories": {
       "type": "string",
-      "enum": ["lager", "ale", "mead", "wheat", "mixed", "cider"]
+      "enum": ["beer", "cider", "kombucha", "mead", "other", "soda", "wine"]
     }
   }
 }

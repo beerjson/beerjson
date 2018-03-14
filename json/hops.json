@@ -16,9 +16,9 @@
         "origin": {
           "type": "string"
         },
-		"form": {
-              "type": "string",
-              "enum": ["extract", "leaf", "leaf (wet)", "pellet", "powder", "plug"]
+        "form": {
+          "type": "string",
+          "enum": ["extract", "leaf", "leaf (wet)", "pellet", "powder", "plug"]
         },
         "alpha_acid_units": {
           "type": "number"
@@ -27,7 +27,7 @@
           "type": "number"
         }
       },
-      "required": ["name", "origin", "alpha_acid_units"]
+      "required": ["name", "alpha_acid_units"]
     },
     "VarietyInformation": {
       "type": "object",
@@ -109,21 +109,15 @@
         "allOf": [
           { "$ref": "#/definitions/HopVarietyBase" },
           {
-            "form": {
-              "type": "string",
-              "enum": ["extract", "leaf", "leaf (wet)", "pellet", "powder", "plug"]
-            }
-          },
-          {
             "use": {
               "type": "string",
               "enum": [
-				"mash",
-				"first wort",
-				"boil",
-				"continuous boil addition",
-				"whirlpool",
-				"hop stand",
+                "mash",
+                "first wort",
+                "boil",
+                "continuous boil addition",
+                "whirlpool",
+                "hop stand",
                 "dry hop",
                 "hopback"
               ]
@@ -133,17 +127,18 @@
             "amount": {
               "$ref": "measureable_units.json#/definitions/MassType"
             },
-			"volume": {
+            "volume": {
               "$ref": "measureable_units.json#/definitions/VolumeType"
             },
             "time": {
               "$ref": "measureable_units.json#/definitions/TimeType"
             },
-			"temperature": {
+            "temperature": {
               "$ref": "measureable_units.json#/definitions/TemperatureType"
             }
           }
-        ]
+        ],
+        "required": ["amount"]
       }
     },
     "IBUEstimateType": {

@@ -8,6 +8,9 @@
     "json-dup-key-validator": "^1.0.2",
     "prettier": "1.8.2",
     "ramda": "^0.25.0"
+    "pixl-xml": "^1.0.10",
+    "prettier": "1.8.2",
+    "lodash": "^4.17.5"
   },
   "scripts": {
     "test": "node tests/tests.js",

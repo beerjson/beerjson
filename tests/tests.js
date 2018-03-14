@@ -1,10 +1,12 @@
+const importFromBeerXml = require('../js/beerxml-to-beerjson')
+
 const JsonLint = require('json-dup-key-validator')
 const Ajv = require('ajv')
 const ajv = new Ajv()
 ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-04'))
 ajv.addSchema(require('../json/fermentation'))
 ajv.addSchema(require('../json/fermentation_step'))
-ajv.addSchema(require('../json/grain'))
+ajv.addSchema(require('../json/fermentables'))
 ajv.addSchema(require('../json/hops'))
 ajv.addSchema(require('../json/mash_step'))
 ajv.addSchema(require('../json/mash'))
@@ -13,24 +15,32 @@ ajv.addSchema(require('../json/misc'))
 ajv.addSchema(require('../json/recipes'))
 ajv.addSchema(require('../json/style'))
 ajv.addSchema(require('../json/water'))
-ajv.addSchema(require('../json/yeast'))
+ajv.addSchema(require('../json/culture'))
 ajv.addSchema(require('../json/equipment'))
 
-const validate = ajv.compile(require('../json/BeerXML'))
+const validate = ajv.compile(require('../json/beer'))
+const fs = require('fs')
 
 const testJson = path => {
   console.log(path)
-  const rawJSON = require('fs').readFileSync(
-    __dirname + '/' + path + '.json',
-    'utf8'
-  )
+  const rawJSON = fs.readFileSync(__dirname + '/' + path + '.json', 'utf8')
 
   if (!validate(JsonLint.parse(rawJSON))) {
-    console.log(validate.errors)
+    console.log(JSON.stringify(validate.errors, null, 2))
     process.exit(1)
   }
 }
 
+const testXMLtoJSON = path => {
+  console.log(path)
+  const xmlString = fs.readFileSync(__dirname + '/' + path + '.xml', 'utf8')
+  const recipe = importFromBeerXml(xmlString)
+
+  if (!validate(JsonLint.parse(recipe))) {
+    console.log(JSON.stringify(validate.errors, null, 2))
+    process.exit(1)
+  }
+}
 testJson('generic/cultures')
 testJson('generic/equipment')
 testJson('generic/fermentable')
@@ -57,3 +67,12 @@ testJson('real/StyleBohemianPilsner')
 testJson('real/StyleDryIrishStoutWithAllFields')
 testJson('real/MashSingleStepInfusion')
 testJson('real/MashTwoStepTemperature')
+
+testXMLtoJSON('data/GenericOneHF')
+testXMLtoJSON('data/Kolsh')
+testXMLtoJSON('data/Londonpride')
+testXMLtoJSON('data/punk-ipa-2010-current')
+testXMLtoJSON('data/RRSummerBitter')
+
+testJson('styles/bjcp_styleguide-2015')
+testJson('styles/ba_styleguide-2017')

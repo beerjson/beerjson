@@ -1,25 +1,39 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id":
-    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/yeast.json",
+    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/culture.json",
   "type": "object",
   "additionalProperties": false,
   "definitions": {
     "CultureBase": {
       "type": "object",
       "description":
-        "The descriptive base type for both yeast culture records and yeast recipe additions. Provides unique properties to identify individual records of a yeast culture",
+        "The descriptive base type for both culture records, and recipe additions. Provides unique properties to identify individual records of a culture",
       "properties": {
         "name": {
           "type": "string"
         },
         "type": {
           "type": "string",
-          "enum": ["ale", "lager", "wheat", "wine", "champagne", "bacteria", "mixed-culture"]
+          "enum": [
+            "ale",
+            "bacteria",
+            "brett",
+            "champagne",
+            "kviek",
+            "lacto",
+            "lager",
+            "malolactic",
+            "mixed-culture",
+            "other",
+            "pedio",
+            "spontaneous",
+            "wine"
+          ]
         },
         "form": {
           "type": "string",
-          "enum": ["liquid", "dry", "slant", "culture"]
+          "enum": ["liquid", "dry", "slant", "culture", "dregs"]
         },
         "laboratory": {
           "type": "string"
@@ -28,12 +42,12 @@
           "type": "string"
         }
       },
-      "required": ["name", "type", "form", "laboratory", "product_id"]
+      "required": ["name", "type", "form"]
     },
     "CultureInformation": {
       "type": "object",
       "description":
-        "CultureInformation collects the attributes of a yeast culture to store as record information",
+        "CultureInformation collects the attributes of a microbial culture to store as record information",
       "allOf": [
         { "$ref": "#/definitions/CultureBase" },
         {
@@ -81,10 +95,10 @@
         }
       ]
     },
-    "YeastAdditionType": {
+    "CultureAdditionType": {
       "type": "array",
       "description":
-        "YeastAdditionType collects the attributes of a yeast ingredient for use in a recipe",
+        "CultureAdditionType collects the attributes of a culture ingredient for use in a recipe",
       "items": {
         "allOf": [
           { "$ref": "#/definitions/CultureBase" },
@@ -94,6 +108,15 @@
                 "type": "integer"
               },
               "add_to_fermentation_step": {
+                "type": "integer"
+              },
+              "addition_time": {
+                "$ref": "measureable_units.json#/definitions/TimeType"
+              },
+              "addition_sg": {
+                "$ref": "measureable_units.json#/definitions/DensityRangeType"
+              },
+              "cell_count_billions": {
                 "type": "integer"
               },
               "amount": {
