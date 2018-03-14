@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+          <RECIPES>
+  <RECIPE>
+    <NAME>PUNK IPA 2010 - CURRENT</NAME>
+    <VERSION></VERSION>
+    <TYPE>All Grain</TYPE>
+    <BREWER>BREWDOG</BREWER>
+    <ASST_BREWER/>
+    <BATCH_SIZE>20</BATCH_SIZE>
+    <BOIL_SIZE>25</BOIL_SIZE>
+    <BOIL_TIME>60</BOIL_TIME>
+    <EFFICIENCY>79.25</EFFICIENCY>
+    <OG>1053.0</OG>
+    <FG>1011.0</FG>
+    <FERMENTABLES>
+            <FERMENTABLE>
+        <NAME>Extra Pale</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Grain</TYPE>
+        <AMOUNT>4.38</AMOUNT>
+        <YIELD>82.00</YIELD>
+        <COLOR>2</COLOR>
+      </FERMENTABLE>
+            <FERMENTABLE>
+        <NAME>Caramalt</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Grain</TYPE>
+        <AMOUNT>0.25</AMOUNT>
+        <YIELD>71.00</YIELD>
+        <COLOR>15</COLOR>
+      </FERMENTABLE>
+          </FERMENTABLES>
+    <HOPS>
+                      <HOP>
+          <NAME>Chinook</NAME>
+          <VERSION>1</VERSION>
+          <ORIGIN></ORIGIN>
+          <ALPHA>12.60</ALPHA>
+          <AMOUNT>0.02</AMOUNT>
+
+                    <USE>Boil</USE>
+          <TIME>60</TIME>
+                    <TYPE>Bittering</TYPE>
+          <FORM>Pellet</FORM>
+          <BETA>0.00</BETA>
+        </HOP>
+                      <HOP>
+          <NAME>Ahtanum</NAME>
+          <VERSION>1</VERSION>
+          <ORIGIN></ORIGIN>
+          <ALPHA>5.40</ALPHA>
+          <AMOUNT>0.0125</AMOUNT>
+
+                    <USE>Boil</USE>
+          <TIME>60</TIME>
+                    <TYPE>Bittering</TYPE>
+          <FORM>Pellet</FORM>
+          <BETA>0.00</BETA>
+        </HOP>
+                      <HOP>
+          <NAME>Chinook</NAME>
+          <VERSION>1</VERSION>
+          <ORIGIN></ORIGIN>
+          <ALPHA>12.60</ALPHA>
+          <AMOUNT>0.02</AMOUNT>
+
+                    <USE>Boil</USE>
+          <TIME>30</TIME>
+                    <TYPE>Bittering</TYPE>
+          <FORM>Pellet</FORM>
+          <BETA>0.00</BETA>
+        </HOP>
+                      <HOP>
+          <NAME>Ahtanum</NAME>
+          <VERSION>1</VERSION>
+          <ORIGIN></ORIGIN>
+          <ALPHA>5.40</ALPHA>
+          <AMOUNT>0.0125</AMOUNT>
+
+                    <USE>Boil</USE>
+          <TIME>30</TIME>
+                    <TYPE>Bittering</TYPE>
+          <FORM>Pellet</FORM>
+          <BETA>0.00</BETA>
+        </HOP>
+                      <HOP>
+          <NAME>Chinook</NAME>
+          <VERSION>1</VERSION>
+          <ORIGIN></ORIGIN>
+          <ALPHA>12.60</ALPHA>
+          <AMOUNT>0.0275</AMOUNT>
+
+                    <USE>Boil</USE>
+          <TIME>0</TIME>
+                    <TYPE>Bittering</TYPE>
+          <FORM>Pellet</FORM>
+          <BETA>0.00</BETA>
+        </HOP>
+                      <HOP>
+          <NAME>Ahtanum</NAME>
+          <VERSION>1</VERSION>
+          <ORIGIN></ORIGIN>
+          <ALPHA>5.40</ALPHA>
+          <AMOUNT>0.0125</AMOUNT>
+
+                    <USE>Boil</USE>
+          <TIME>0</TIME>
+                    <TYPE>Bittering</TYPE>
+          <FORM>Pellet</FORM>
+          <BETA>0.00</BETA>
+        </HOP>
+                      <HOP>
+          <NAME>Simcoe</NAME>
+          <VERSION>1</VERSION>
+          <ORIGIN></ORIGIN>
+          <ALPHA>12.80</ALPHA>
+          <AMOUNT>0.0125</AMOUNT>
+
+                    <USE>Boil</USE>
+          <TIME>0</TIME>
+                    <TYPE>Bittering</TYPE>
+          <FORM>Pellet</FORM>
+          <BETA>0.00</BETA>
+        </HOP>
+                      <HOP>
+          <NAME>Nelson Sauvin</NAME>
+          <VERSION>1</VERSION>
+          <ORIGIN></ORIGIN>
+          <ALPHA>12.00</ALPHA>
+          <AMOUNT>0.0125</AMOUNT>
+
+                    <USE>Boil</USE>
+          <TIME>0</TIME>
+                    <TYPE>Bittering</TYPE>
+          <FORM>Pellet</FORM>
+          <BETA>0.00</BETA>
+        </HOP>
+                      <HOP>
+          <NAME>Chinook</NAME>
+          <VERSION>1</VERSION>
+          <ORIGIN></ORIGIN>
+          <ALPHA>12.60</ALPHA>
+          <AMOUNT>0.0475</AMOUNT>
+
+                    <USE>Dry Hop</USE>
+          <TIME>10080</TIME>
+                    <TYPE>Bittering</TYPE>
+          <FORM>Pellet</FORM>
+          <BETA>0.00</BETA>
+        </HOP>
+                      <HOP>
+          <NAME>Ahtanum</NAME>
+          <VERSION>1</VERSION>
+          <ORIGIN></ORIGIN>
+          <ALPHA>5.40</ALPHA>
+          <AMOUNT>0.0375</AMOUNT>
+
+                    <USE>Dry Hop</USE>
+          <TIME>10080</TIME>
+                    <TYPE>Bittering</TYPE>
+          <FORM>Pellet</FORM>
+          <BETA>0.00</BETA>
+        </HOP>
+                      <HOP>
+          <NAME>Simcoe</NAME>
+          <VERSION>1</VERSION>
+          <ORIGIN></ORIGIN>
+          <ALPHA>12.80</ALPHA>
+          <AMOUNT>0.0375</AMOUNT>
+
+                    <USE>Dry Hop</USE>
+          <TIME>10080</TIME>
+                    <TYPE>Bittering</TYPE>
+          <FORM>Pellet</FORM>
+          <BETA>0.00</BETA>
+        </HOP>
+                      <HOP>
+          <NAME>Nelson Sauvin</NAME>
+          <VERSION>1</VERSION>
+          <ORIGIN></ORIGIN>
+          <ALPHA>12.00</ALPHA>
+          <AMOUNT>0.02</AMOUNT>
+
+                    <USE>Dry Hop</USE>
+          <TIME>10080</TIME>
+                    <TYPE>Bittering</TYPE>
+          <FORM>Pellet</FORM>
+          <BETA>0.00</BETA>
+        </HOP>
+                      <HOP>
+          <NAME>Cascade</NAME>
+          <VERSION>1</VERSION>
+          <ORIGIN></ORIGIN>
+          <ALPHA>6.80</ALPHA>
+          <AMOUNT>0.0375</AMOUNT>
+
+                    <USE>Dry Hop</USE>
+          <TIME>10080</TIME>
+                    <TYPE>Bittering</TYPE>
+          <FORM>Pellet</FORM>
+          <BETA>0.00</BETA>
+        </HOP>
+                      <HOP>
+          <NAME>Amarillo</NAME>
+          <VERSION>1</VERSION>
+          <ORIGIN></ORIGIN>
+          <ALPHA>8.90</ALPHA>
+          <AMOUNT>0.01</AMOUNT>
+
+                    <USE>Dry Hop</USE>
+          <TIME>10080</TIME>
+                    <TYPE>Bittering</TYPE>
+          <FORM>Pellet</FORM>
+          <BETA>0.00</BETA>
+        </HOP>
+          </HOPS>
+    <YEASTS>
+              <YEAST>
+          <NAME>Wyeast 1056 - American Ale</NAME>
+          <VERSION>1</VERSION>
+          <TYPE>Ale</TYPE>
+          <FORM>Liquid</FORM>
+          <AMOUNT>0.0350000</AMOUNT>
+        </YEAST>
+          </YEASTS>
+    <MISCS>
+      
+          </MISCS>
+    <MASH>
+      <NAME>Mash</NAME>
+      <VERSION>1</VERSION>
+      <GRAIN_TEMP></GRAIN_TEMP>
+      <MASH_STEPS>
+                        <MASH_STEP>
+            <NAME>Mash step</NAME>
+            <VERSION>1</VERSION>
+            <TYPE>Temperature</TYPE>
+            <STEP_TEMP>66</STEP_TEMP>
+            <STEP_TIME>75</STEP_TIME>
+          </MASH_STEP>
+                                  </MASH_STEPS>
+    </MASH>
+                    
+                        <PRIMARY_TEMP>19</PRIMARY_TEMP>
+              
+      </RECIPE>
+</RECIPES>

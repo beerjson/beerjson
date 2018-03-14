@@ -52,7 +52,6 @@
             "brewhouse": {
               "$ref": "measureable_units.json#/definitions/PercentType"
             }
-
           },
           "required": ["brewhouse"]
         },
@@ -132,7 +131,7 @@
         "name",
         "type",
         "author",
-		"efficiency",
+        "efficiency",
         "batch_size",
         "boil_size",
         "boil_time",

@@ -1,3 +1,5 @@
+const importFromBeerXml = require('../js/beerxml-to-beerjson')
+
 const JsonLint = require('json-dup-key-validator')
 const Ajv = require('ajv')
 const ajv = new Ajv()
@@ -17,13 +19,11 @@ ajv.addSchema(require('../json/culture'))
 ajv.addSchema(require('../json/equipment'))
 
 const validate = ajv.compile(require('../json/beer'))
+const fs = require('fs')
 
 const testJson = path => {
   console.log(path)
-  const rawJSON = require('fs').readFileSync(
-    __dirname + '/' + path + '.json',
-    'utf8'
-  )
+  const rawJSON = fs.readFileSync(__dirname + '/' + path + '.json', 'utf8')
 
   if (!validate(JsonLint.parse(rawJSON))) {
     console.log(JSON.stringify(validate.errors, null, 2))
@@ -31,6 +31,16 @@ const testJson = path => {
   }
 }
 
+const testXMLtoJSON = path => {
+  console.log(path)
+  const xmlString = fs.readFileSync(__dirname + '/' + path + '.xml', 'utf8')
+  const recipe = importFromBeerXml(xmlString)
+
+  if (!validate(JsonLint.parse(recipe))) {
+    console.log(JSON.stringify(validate.errors, null, 2))
+    process.exit(1)
+  }
+}
 testJson('generic/cultures')
 testJson('generic/equipment')
 testJson('generic/fermentable')
@@ -57,6 +67,12 @@ testJson('real/StyleBohemianPilsner')
 testJson('real/StyleDryIrishStoutWithAllFields')
 testJson('real/MashSingleStepInfusion')
 testJson('real/MashTwoStepTemperature')
+
+testXMLtoJSON('data/GenericOneHF')
+testXMLtoJSON('data/Kolsh')
+testXMLtoJSON('data/Londonpride')
+testXMLtoJSON('data/punk-ipa-2010-current')
+testXMLtoJSON('data/RRSummerBitter')
 
 testJson('styles/bjcp_styleguide-2015')
 testJson('styles/ba_styleguide-2017')

@@ -33,7 +33,8 @@
               "amount": {
                 "units": "kg",
                 "mass": 5
-              }
+              },
+              "yield": 85
             }
           ],
           "hop_bill": [
