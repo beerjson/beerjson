@@ -109,21 +109,21 @@
         "allOf": [
           { "$ref": "#/definitions/HopVarietyBase" },
           {
-            "use": {
-              "type": "string",
-              "enum": [
-                "mash",
-                "first wort",
-                "boil",
-                "continuous boil addition",
-                "whirlpool",
-                "hop stand",
-                "dry hop",
-                "hopback"
-              ]
-            }
-          },
-          {
+            "properties": {
+              "use": {
+                "type": "string",
+                "enum": [
+                  "mash",
+                  "first wort",
+                  "boil",
+                  "continuous boil addition",
+                  "whirlpool",
+                  "hop stand",
+                  "dry hop",
+                  "hopback"
+                ]
+              }
+            },
             "amount": {
               "$ref": "measureable_units.json#/definitions/MassType"
             },
