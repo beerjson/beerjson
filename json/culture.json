@@ -104,6 +104,9 @@
           { "$ref": "#/definitions/CultureBase" },
           {
             "properties": {
+              "attenuation": {
+                "$ref": "measureable_units.json#/definitions/PercentType"
+              },
               "times_cultured": {
                 "type": "integer"
               },

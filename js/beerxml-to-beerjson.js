@@ -119,6 +119,9 @@ const importFromBeerXml = xml => {
                 getArrayNode(_.get(r, ['YEASTS', 'YEAST'])),
                 culture => ({
                   name: culture['NAME'],
+                  ...(!_.isEmpty(culture['ATTENUATION'])
+                    ? { attenuation: Number(culture['ATTENUATION']) }
+                    : {}),
                   type: _.lowerCase(culture['TYPE']),
                   form: _.lowerCase(culture['FORM']),
                   ...(!_.isEmpty(culture['AMOUNT_IS_WEIGHT']) &&
