@@ -68,10 +68,11 @@ testJson('real/StyleDryIrishStoutWithAllFields')
 testJson('real/MashSingleStepInfusion')
 testJson('real/MashTwoStepTemperature')
 
-testJson('styles/bjcp_styleguide-2015')
-
 testXMLtoJSON('data/GenericOneHF')
 testXMLtoJSON('data/Kolsh')
 testXMLtoJSON('data/Londonpride')
 testXMLtoJSON('data/punk-ipa-2010-current')
 testXMLtoJSON('data/RRSummerBitter')
+
+testJson('styles/bjcp_styleguide-2015')
+testJson('styles/ba_styleguide-2017')
