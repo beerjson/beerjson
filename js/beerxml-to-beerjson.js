@@ -72,7 +72,9 @@ const importFromBeerXml = xml => {
                 ...(!_.isEmpty(hop['BETA'])
                   ? { beta_acid_units: Number(hop['BETA']) }
                   : {}),
-                ...(!_.isEmpty(hop['USE']) ? { use: Number(hop['USE']) } : {}),
+                ...(!_.isEmpty(hop['USE'])
+                  ? { use: _.lowerCase(hop['USE']) }
+                  : {}),
                 amount: {
                   units: 'kg',
                   mass: Number(hop['AMOUNT'])
