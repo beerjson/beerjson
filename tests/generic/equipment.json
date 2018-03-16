@@ -1,7 +1,7 @@
 {
   "beerjson": {
     "version": 2.06,
-    "equipment": [
+    "equipments": [
       {
         "name": "10Gal Mashtun",
         "type": "Mash Tun",

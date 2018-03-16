@@ -1,7 +1,7 @@
 {
   "beerjson": {
     "version": 2.06,
-    "procedure": [
+    "procedures": [
       {
         "name": "mash",
         "grain_temperature": 68,

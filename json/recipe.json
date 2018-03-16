@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id":
-    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/recipes.json",
+    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/recipe.json",
   "type": "object",
   "additionalProperties": false,
   "definitions": {
@@ -63,19 +63,39 @@
           "additionalProperties": false,
           "properties": {
             "fermentable_bill": {
-              "$ref": "fermentables.json#/definitions/FermentableAdditionType"
+              "type": "array",
+              "description": "fermentable_bill collects all the fermentable ingredients for use in a recipe",
+              "items": {
+                "$ref": "fermentable.json#/definitions/FermentableAdditionType"
+              }
             },
             "hop_bill": {
-              "$ref": "hops.json#/definitions/HopAdditionType"
+              "type": "array",
+              "description": "hop_bill collects all the hops for use in a recipe",
+              "items": {
+                "$ref": "hop.json#/definitions/HopAdditionType"
+              }
             },
             "miscellaneous_additions": {
-              "$ref": "misc.json#/definitions/MiscellaneousAdditionType"
+              "type": "array",
+              "description": "miscellaneous_additions collects all the miscellaneous items for use in a recipe",
+              "items": {
+                "$ref": "misc.json#/definitions/MiscellaneousAdditionType"
+              }
             },
             "culture_additions": {
-              "$ref": "culture.json#/definitions/CultureAdditionType"
+              "type": "array",
+              "description": "culture_additions collects all the culture items for use in a recipe",
+              "items": {
+                "$ref": "culture.json#/definitions/CultureAdditionType"
+              }
             },
-            "water_profile": {
-              "$ref": "water.json#/definitions/WaterAdditionType"
+            "water_additions": {
+              "type": "array",
+              "description": "water_additions collects all the water items for use in a recipe",
+              "items": {
+                "$ref": "water.json#/definitions/WaterAdditionType"
+              }
             }
           },
           "required": ["fermentable_bill"]
@@ -96,7 +116,7 @@
           "$ref": "measureable_units.json#/definitions/PercentType"
         },
         "ibu_estimate": {
-          "$ref": "hops.json#/definitions/IBUEstimateType"
+          "$ref": "hop.json#/definitions/IBUEstimateType"
         },
         "color_estimate": {
           "$ref": "measureable_units.json#/definitions/ColorType"
