@@ -27,7 +27,7 @@
           "type": "number"
         }
       },
-      "required": ["name", "origin", "alpha_acid_units"]
+      "required": ["name", "alpha_acid_units"]
     },
     "VarietyInformation": {
       "type": "object",
@@ -109,21 +109,21 @@
         "allOf": [
           { "$ref": "#/definitions/HopVarietyBase" },
           {
-            "use": {
-              "type": "string",
-              "enum": [
-                "mash",
-                "first wort",
-                "boil",
-                "continuous boil addition",
-                "whirlpool",
-                "hop stand",
-                "dry hop",
-                "hopback"
-              ]
-            }
-          },
-          {
+            "properties": {
+              "use": {
+                "type": "string",
+                "enum": [
+                  "mash",
+                  "first wort",
+                  "boil",
+                  "continuous boil addition",
+                  "whirlpool",
+                  "hop stand",
+                  "dry hop",
+                  "hopback"
+                ]
+              }
+            },
             "amount": {
               "$ref": "measureable_units.json#/definitions/MassType"
             },
@@ -137,7 +137,8 @@
               "$ref": "measureable_units.json#/definitions/TemperatureType"
             }
           }
-        ]
+        ],
+        "required": ["amount"]
       }
     },
     "IBUEstimateType": {
