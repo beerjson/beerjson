@@ -1,7 +1,7 @@
 {
   "beerjson": {
     "version": 2.06,
-    "fermentation": [
+    "fermentations": [
       {
         "name": "Ale, Single Stage",
         "type": "Single Stage",

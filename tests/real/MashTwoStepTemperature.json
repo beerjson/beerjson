@@ -1,7 +1,7 @@
 {
   "beerjson": {
     "version": 2.01,
-    "procedure": [
+    "procedures": [
       {
         "name": "Two Step Temperature, 68C",
         "grain_temperature": {

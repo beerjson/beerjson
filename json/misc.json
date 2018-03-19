@@ -64,37 +64,35 @@
       ]
     },
     "MiscellaneousAdditionType": {
-      "type": "array",
+      "type": "object",
       "description":
-        "MiscellaneousAdditionType collects the attributes of an ingredient for use in a recipe",
-      "items": {
-        "allOf": [
-          { "$ref": "#/definitions/MiscellaneousBase" },
-          {
-            "properties": {
-              "time": {
-                "$ref": "measureable_units.json#/definitions/TimeType"
-              },
-              "amount": {
-                "$ref": "measureable_units.json#/definitions/VolumeType"
-              },
-              "amount_as_weight": {
-                "$ref": "measureable_units.json#/definitions/MassType"
-              }
+        "MiscellaneousAdditionType collects the attributes of each miscellaneous ingredient for use in a recipe",
+      "allOf": [
+        { "$ref": "#/definitions/MiscellaneousBase" },
+        {
+          "properties": {
+            "time": {
+              "$ref": "measureable_units.json#/definitions/TimeType"
+            },
+            "amount": {
+              "$ref": "measureable_units.json#/definitions/VolumeType"
+            },
+            "amount_as_weight": {
+              "$ref": "measureable_units.json#/definitions/MassType"
             }
-          },
-          {
-            "oneOf": [
-              {
-                "required": ["amount"]
-              },
-              {
-                "required": ["amount_as_weight"]
-              }
-            ]
           }
-        ]
-      }
+        },
+        {
+          "oneOf": [
+            {
+              "required": ["amount"]
+            },
+            {
+              "required": ["amount_as_weight"]
+            }
+          ]
+        }
+      ]
     }
   }
 }
