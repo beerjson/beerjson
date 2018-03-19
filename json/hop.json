@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id":
-    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/hops.json",
+    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/hop.json",
   "type": "object",
   "additionalProperties": false,
   "definitions": {
@@ -102,44 +102,51 @@
       ]
     },
     "HopAdditionType": {
-      "type": "array",
+      "type": "object",
       "description":
-        "HopAdditionType collects the attributes of a hop ingredient for use in a recipe hop bil",
-      "items": {
-        "allOf": [
-          { "$ref": "#/definitions/HopVarietyBase" },
-          {
-            "properties": {
-              "use": {
-                "type": "string",
-                "enum": [
-                  "mash",
-                  "first wort",
-                  "boil",
-                  "continuous boil addition",
-                  "whirlpool",
-                  "hop stand",
-                  "dry hop",
-                  "hopback"
-                ]
-              }
-            },
-            "amount": {
-              "$ref": "measureable_units.json#/definitions/MassType"
-            },
-            "volume": {
-              "$ref": "measureable_units.json#/definitions/VolumeType"
-            },
-            "time": {
-              "$ref": "measureable_units.json#/definitions/TimeType"
-            },
-            "temperature": {
-              "$ref": "measureable_units.json#/definitions/TemperatureType"
+        "HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bil",
+      "allOf": [
+        { "$ref": "#/definitions/HopVarietyBase" },
+        {
+          "properties": {
+            "use": {
+              "type": "string",
+              "enum": [
+                "mash",
+                "first wort",
+                "boil",
+                "continuous boil addition",
+                "whirlpool",
+                "hop stand",
+                "dry hop",
+                "hopback"
+              ]
             }
+          },
+          "amount": {
+            "$ref": "measureable_units.json#/definitions/MassType"
+          },
+          "volume": {
+            "$ref": "measureable_units.json#/definitions/VolumeType"
+          },
+          "time": {
+            "$ref": "measureable_units.json#/definitions/TimeType"
+          },
+          "temperature": {
+            "$ref": "measureable_units.json#/definitions/TemperatureType"
           }
-        ],
-        "required": ["amount"]
-      }
+        },
+        {
+          "oneOf": [
+            {
+              "required": ["amount"]
+            },
+            {
+              "required": ["volume"]
+            }
+          ]
+        }
+      ]
     },
     "IBUEstimateType": {
       "properties": {

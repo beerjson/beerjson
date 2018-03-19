@@ -147,7 +147,7 @@ const importFromBeerXml = xml => {
               ),
               ...(!_.isEmpty(r['WATERS'])
                 ? {
-                    water_profile: _.map(
+                    water_additions: _.map(
                       getArrayNode(_.get(r, ['WATERS', 'WATER'])),
                       water => ({
                         name: water['NAME'],

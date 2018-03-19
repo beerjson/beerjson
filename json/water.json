@@ -61,19 +61,17 @@
       ]
     },
     "WaterAdditionType": {
-      "type": "array",
+      "type": "object",
       "description":
-        "WaterAdditionType collects the attributes of a water salt addition for use in a recipe",
-      "items": {
-        "allOf": [
-          { "$ref": "#/definitions/WaterBase" },
-          {
-            "amount": {
-              "$ref": "measureable_units.json#/definitions/VolumeType"
-            }
+        "WaterAdditionType collects the attributes of each water addition for use in a recipe",
+      "allOf": [
+        { "$ref": "#/definitions/WaterBase" },
+        {
+          "amount": {
+            "$ref": "measureable_units.json#/definitions/VolumeType"
           }
-        ]
-      }
+        }
+      ]
     }
   }
 }
