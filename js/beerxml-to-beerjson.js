@@ -72,7 +72,9 @@ const importFromBeerXml = xml => {
                 ...(!_.isEmpty(hop['BETA'])
                   ? { beta_acid_units: Number(hop['BETA']) }
                   : {}),
-                ...(!_.isEmpty(hop['USE']) ? { use: Number(hop['USE']) } : {}),
+                ...(!_.isEmpty(hop['USE'])
+                  ? { use: _.lowerCase(hop['USE']) }
+                  : {}),
                 amount: {
                   units: 'kg',
                   mass: Number(hop['AMOUNT'])
@@ -117,6 +119,9 @@ const importFromBeerXml = xml => {
                 getArrayNode(_.get(r, ['YEASTS', 'YEAST'])),
                 culture => ({
                   name: culture['NAME'],
+                  ...(!_.isEmpty(culture['ATTENUATION'])
+                    ? { attenuation: Number(culture['ATTENUATION']) }
+                    : {}),
                   type: _.lowerCase(culture['TYPE']),
                   form: _.lowerCase(culture['FORM']),
                   ...(!_.isEmpty(culture['AMOUNT_IS_WEIGHT']) &&
@@ -142,7 +147,7 @@ const importFromBeerXml = xml => {
               ),
               ...(!_.isEmpty(r['WATERS'])
                 ? {
-                    water_profile: _.map(
+                    water_additions: _.map(
                       getArrayNode(_.get(r, ['WATERS', 'WATER'])),
                       water => ({
                         name: water['NAME'],

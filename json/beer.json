@@ -22,7 +22,7 @@
               "description":
                 "Records for any ingredient that contributes to the gravity of the beer.",
               "items": {
-                "$ref": "fermentables.json#/definitions/FermentableType"
+                "$ref": "fermentable.json#/definitions/FermentableType"
               }
             },
             "miscellaneous_ingredients": {
@@ -38,7 +38,7 @@
               "description":
                 "Records detailing the many properties of unique hop varieties.",
               "items": {
-                "$ref": "hops.json#/definitions/VarietyInformation"
+                "$ref": "hop.json#/definitions/VarietyInformation"
               }
             },
             "cultures": {
@@ -65,7 +65,7 @@
                 "$ref": "style.json#/definitions/StyleType"
               }
             },
-            "procedure": {
+            "procedures": {
               "type": "array",
               "description":
                 "A collection of steps providing process information for common mashing procedures.",
@@ -73,7 +73,7 @@
                 "$ref": "mash.json#/definitions/MashProcedureType"
               }
             },
-            "fermentation": {
+            "fermentations": {
               "type": "array",
               "description":
                 "A collection of steps providing process information for common fermentation procedures.",
@@ -87,10 +87,10 @@
               "description":
                 "Records containing a minimal collection of the description of ingredients, procedures and other required parameters necessary to recreate a batch of beer.",
               "items": {
-                "$ref": "recipes.json#/definitions/RecipeType"
+                "$ref": "recipe.json#/definitions/RecipeType"
               }
             },
-            "equipment": {
+            "equipments": {
               "type": "array",
               "description":
                 "Provides necessary information for brewing equipment.",
@@ -122,16 +122,16 @@
               "required": ["styles"]
             },
             {
-              "required": ["procedure"]
+              "required": ["procedures"]
             },
             {
-              "required": ["fermentation"]
+              "required": ["fermentations"]
             },
             {
               "required": ["recipes"]
             },
             {
-              "required": ["equipment"]
+              "required": ["equipments"]
             }
           ]
         }

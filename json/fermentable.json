@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id":
-    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/fermentables.json",
+    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/fermentable.json",
   "type": "object",
   "additionalProperties": false,
   "definitions": {
@@ -100,28 +100,26 @@
       "required": ["yield_dry_basis"]
     },
     "FermentableAdditionType": {
-      "type": "array",
+      "type": "object",
       "description":
-        "FermentableAdditionType collects the attributes of a fermentable ingredient for use in a recipe fermentable bill",
-      "items": {
-        "allOf": [
-          { "$ref": "#/definitions/FermentableBase" },
-          {
-            "properties": {
-              "amount": {
-                "$ref": "measureable_units.json#/definitions/MassType"
-              },
-              "yield": {
-                "type": "number"
-              },
-              "add_after_boil": {
-                "type": "boolean"
-              }
+        "FermentableAdditionType collects the attributes of each fermentable ingredient for use in a recipe fermentable bill",
+      "allOf": [
+        { "$ref": "#/definitions/FermentableBase" },
+        {
+          "properties": {
+            "amount": {
+              "$ref": "measureable_units.json#/definitions/MassType"
             },
-            "required": ["amount", "yield"]
-          }
-        ]
-      }
+            "yield": {
+              "type": "number"
+            },
+            "add_after_boil": {
+              "type": "boolean"
+            }
+          },
+          "required": ["amount", "yield"]
+        }
+      ]
     }
   }
 }
