@@ -28,9 +28,9 @@
           "name": "Specialty",
           "category": "Experimental and Historic",
           "category_number": 24,
-          "style_letter": "",
+          "style_letter": "A",
           "style_guide": "BJCP 1999",
-          "type": "mixed"
+          "type": "beer"
         },
 
         "ingredients": {
