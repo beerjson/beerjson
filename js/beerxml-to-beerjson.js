@@ -4,6 +4,9 @@ const _ = require('lodash')
 const parseBool = s => s === 'TRUE'
 const getArrayNode = node => Array.from(Array.isArray(node) ? node : [node])
 
+const getStyleType = type =>
+  type === 'lager' || type === 'ale' ? 'beer' : type
+
 const importFromBeerXml = xml => {
   try {
     const r = XML.parse(xml).RECIPE
@@ -42,7 +45,7 @@ const importFromBeerXml = xml => {
                     name: _.get(r, ['STYLE', 'NAME']),
                     category: _.get(r, ['STYLE', 'CATEGORY']),
                     style_guide: _.get(r, ['STYLE', 'STYLE_GUIDE']),
-                    type: _.lowerCase(_.get(r, ['STYLE', 'TYPE']))
+                    type: getStyleType(_.lowerCase(_.get(r, ['STYLE', 'TYPE'])))
                   }
                 }
               : {}),
