@@ -36,7 +36,16 @@ const importFromBeerXml = xml => {
             efficiency: {
               brewhouse: Number(r['EFFICIENCY'])
             },
-            ...(!_.isEmpty(r['STYLE']) ? { style: r['STYLE'] } : {}),
+            ...(!_.isEmpty(r['STYLE'])
+              ? {
+                  style: {
+                    name: _.get(r, ['STYLE', 'NAME']),
+                    category: _.get(r, ['STYLE', 'CATEGORY']),
+                    style_guide: _.get(r, ['STYLE', 'STYLE_GUIDE']),
+                    type: _.lowerCase(_.get(r, ['STYLE', 'TYPE']))
+                  }
+                }
+              : {}),
             ingredients: {
               fermentable_bill: _.map(
                 getArrayNode(_.get(r, ['FERMENTABLES', 'FERMENTABLE'])),
