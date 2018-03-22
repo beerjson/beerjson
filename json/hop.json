@@ -124,10 +124,14 @@
             }
           },
           "amount": {
-            "$ref": "measureable_units.json#/definitions/MassType"
-          },
-          "volume": {
-            "$ref": "measureable_units.json#/definitions/VolumeType"
+            "oneOf": [
+              { "$ref": "measureable_units.json#/definitions/VolumeType"
+              },
+              { "$ref": "measureable_units.json#/definitions/MassType"
+              },
+              { "$ref": "measureable_units.json#/definitions/UnitType"
+              }
+            ]
           },
           "time": {
             "$ref": "measureable_units.json#/definitions/TimeType"
@@ -136,15 +140,7 @@
             "$ref": "measureable_units.json#/definitions/TemperatureType"
           }
         },
-        {
-          "oneOf": [
-            {
-              "required": ["amount"]
-            },
-            {
-              "required": ["volume"]
-            }
-          ]
+        { "required": ["amount"]
         }
       ]
     },

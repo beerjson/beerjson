@@ -6,115 +6,126 @@
 	"definitions": {
 		"VolumeType": {
 			"properties": {
-				"units": {
+				"unit": {
 					"$ref": "#/definitions/VolumeUnitType"
 				},
-				"volume": {
+				"value": {
 					"type": "number"
 				}
 			},
-			"required": ["units", "volume"]
+			"required": ["unit", "value"]
 		},
 		"MassType": {
 			"properties": {
-				"units": {
+				"unit": {
 					"$ref": "#/definitions/MassUnitType"
 				},
-				"mass": {
+				"value": {
 					"type": "number"
 				}
 			},
-			"required": ["units", "mass"]
+			"required": ["unit", "value"]
 		},
 		"TemperatureType": {
 			"properties": {
-				"units": {
+				"unit": {
 					"$ref": "#/definitions/TemperatureUnitType"
 				},
-				"degrees": {
+				"value": {
 					"type": "number"
 				}
 			},
-			"required": ["units", "degrees"]
+			"required": ["unit", "value"]
 		},
 		"PressureType": {
 			"properties": {
-				"units": {
+				"unit": {
 					"$ref": "#/definitions/PressureUnitType"
 				},
-				"pressure": {
+				"value": {
 					"type": "number"
 				}
 			},
-			"required": ["units", "pressure"]
+			"required": ["unit", "value"]
 		},
 
 		"AcidityType": {
 			"properties": {
-				"units": {
+				"unit": {
 					"$ref": "#/definitions/AcidityUnitType"
 				},
-				"Acidity": {
+				"value": {
 					"type": "number"
 				}
 			},
-			"required": ["units", "acidity"]
+			"required": ["unit", "value"]
 		},
 
 		"TimeType": {
 			"properties": {
-				"units": {
+				"unit": {
 					"$ref": "#/definitions/TimeUnitType"
 				},
-				"duration": {
+				"value": {
 					"type": "number"
 				}
 			},
-			"required": ["units", "duration"]
+			"required": ["unit", "value"]
 		},
 		"ColorType": {
 			"properties": {
-				"units": {
+				"unit": {
 					"$ref": "#/definitions/ColorUnitType"
 				},
-				"scale": {
+				"value": {
 					"type": "number"
 				}
 			},
-			"required": ["units", "scale"]
+			"required": ["unit", "value"]
 		},
 		"DensityType": {
 			"properties": {
-				"units": {
+				"unit": {
 					"$ref": "#/definitions/DensityUnitType"
 				},
-				"density": {
+				"value": {
 					"type": "number"
 				}
 			},
-			"required": ["units", "density"]
+			"required": ["unit", "value"]
 		},
 		"SpecificHeatType": {
 			"properties": {
-				"units": {
-					"$ref": "#/definitions/SpecificHeatType"
+				"unit": {
+					"$ref": "#/definitions/SpecificHeatUnitType"
 				},
-				"specific heat": {
+				"value": {
 					"type": "number"
 				}
 			},
-			"required": ["units", "specific heat"]
+			"required": ["unit", "value"]
 		},
 		"SpecificVolumeType": {
 			"properties": {
-				"units": {
-					"$ref": "#/definitions/SpecificVolumeType"
+				"unit": {
+					"$ref": "#/definitions/SpecificVolumeUnitType"
 				},
-				"specific volume": {
+				"value": {
 					"type": "number"
 				}
 			},
-			"required": ["units", "specific volume"]
+			"required": ["unit", "value"]
+		},
+		"UnitType": {
+			"properties": {
+				"unit": {
+					"$ref": "#/definitions/UnitUnitType"
+				},
+				"value": {
+					"type": "number"
+				}
+			},
+			"required": ["unit", "value"]
 		},
 		"QuantitativeRangeType": {
 			"type": "object",
@@ -228,6 +239,18 @@
 		"DensityUnitType": {
 			"type": "string",
 			"enum": ["sg", "plato"]
+		},
+		"SpecificHeatUnitType": {
+			"type": "string",
+			"enum": ["J/(kg K)", "BTU/(lb F)"]
+		},
+		"SpecificVolumeUnitType": {
+			"type": "string",
+			"enum": ["m^3/kg", "ft^3/lb"]
+		},
+		"UnitUnitType": {
+			"type": "string",
+			"enum": ["1", "unit", "each", "dimensionless"]
 		},
 		"DateType": {
 			"type": "string",

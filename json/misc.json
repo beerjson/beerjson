@@ -51,13 +51,17 @@
               "additionalProperties": false,
               "properties": {
                 "amount": {
-                  "$ref": "measureable_units.json#/definitions/VolumeType"
-                },
-                "amount_as_weight": {
-                  "$ref": "measureable_units.json#/definitions/MassType"
+                  "oneOf": [
+                    { "$ref": "measureable_units.json#/definitions/VolumeType"
+                    },
+                    { "$ref": "measureable_units.json#/definitions/MassType"
+                    },
+                    { "$ref": "measureable_units.json#/definitions/UnitType"
+                    }
+                  ]
                 }
               },
-              "required": ["amount", "amount_as_weight"]
+              "required": ["amount"]
             }
           }
         }
@@ -75,22 +79,18 @@
               "$ref": "measureable_units.json#/definitions/TimeType"
             },
             "amount": {
-              "$ref": "measureable_units.json#/definitions/VolumeType"
-            },
-            "amount_as_weight": {
-              "$ref": "measureable_units.json#/definitions/MassType"
+              "oneOf": [
+                { "$ref": "measureable_units.json#/definitions/VolumeType"
+                },
+                { "$ref": "measureable_units.json#/definitions/MassType"
+                },
+                { "$ref": "measureable_units.json#/definitions/UnitType"
+                }
+              ]
             }
           }
         },
-        {
-          "oneOf": [
-            {
-              "required": ["amount"]
-            },
-            {
-              "required": ["amount_as_weight"]
-            }
-          ]
+        { "required": ["amount"]
         }
       ]
     }
