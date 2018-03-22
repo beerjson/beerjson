@@ -77,23 +77,13 @@
               "type": "object",
               "additionalProperties": false,
               "properties": {
-                "extract": {
-                  "$ref": "measureable_units.json#/definitions/VolumeType"
-                },
-                "leaf": {
-                  "$ref": "measureable_units.json#/definitions/MassType"
-                },
-                "leaf (wet)": {
-                  "$ref": "measureable_units.json#/definitions/MassType"
-                },
-                "pellet": {
-                  "$ref": "measureable_units.json#/definitions/MassType"
-                },
-                "powder": {
-                  "$ref": "measureable_units.json#/definitions/MassType"
-                },
-                "plug": {
-                  "$ref": "measureable_units.json#/definitions/MassType"
+                "amount": {
+                  "oneOf": [
+                    { "$ref": "measureable_units.json#/definitions/VolumeType"
+                    },
+                    { "$ref": "measureable_units.json#/definitions/MassType"
+                    }
+                  ]
                 }
               }
             }
@@ -128,8 +118,6 @@
               { "$ref": "measureable_units.json#/definitions/VolumeType"
               },
               { "$ref": "measureable_units.json#/definitions/MassType"
-              },
-              { "$ref": "measureable_units.json#/definitions/UnitType"
               }
             ]
           },
