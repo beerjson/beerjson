@@ -25,16 +25,16 @@ const importFromBeerXml = xml => {
               ? { created: new Date(r['DATE']).toISOString() }
               : {}),
             batch_size: {
-              units: 'l',
-              volume: Number(r['BATCH_SIZE'])
+              unit: 'l',
+              value: Number(r['BATCH_SIZE'])
             },
             boil_size: {
-              units: 'l',
-              volume: Number(r['BOIL_SIZE'])
+              unit: 'l',
+              value: Number(r['BOIL_SIZE'])
             },
             boil_time: {
-              units: 'min',
-              duration: Number(r['BOIL_TIME'])
+              unit: 'min',
+              value: Number(r['BOIL_TIME'])
             },
             efficiency: {
               brewhouse: Number(r['EFFICIENCY'])
@@ -56,12 +56,12 @@ const importFromBeerXml = xml => {
                   name: fermentable['NAME'],
                   type: _.lowerCase(fermentable['TYPE']),
                   color: {
-                    units: 'L',
-                    scale: Number(fermentable['COLOR'])
+                    unit: 'L',
+                    value: Number(fermentable['COLOR'])
                   },
                   amount: {
-                    units: 'kg',
-                    mass: Number(fermentable['AMOUNT'])
+                    unit: 'kg',
+                    value: Number(fermentable['AMOUNT'])
                   },
                   origin: fermentable['ORIGIN'],
                   supplier: fermentable['SUPPLIER'],
@@ -88,12 +88,12 @@ const importFromBeerXml = xml => {
                   ? { use: _.lowerCase(hop['USE']) }
                   : {}),
                 amount: {
-                  units: 'kg',
-                  mass: Number(hop['AMOUNT'])
+                  unit: 'kg',
+                  value: Number(hop['AMOUNT'])
                 },
                 time: {
-                  units: 'min',
-                  duration: Number(hop['TIME'])
+                  unit: 'min',
+                  value: Number(hop['TIME'])
                 }
               })),
               ...(!_.isEmpty(r['MISCS'])
@@ -107,9 +107,9 @@ const importFromBeerXml = xml => {
                         ...(!_.isEmpty(misc['AMOUNT_IS_WEIGHT']) &&
                         parseBool(misc['AMOUNT_IS_WEIGHT'])
                           ? {
-                              amount_as_weight: {
-                                units: 'kg',
-                                mass: Number(misc['AMOUNT'])
+                              amount: {
+                                unit: 'kg',
+                                value: Number(misc['AMOUNT'])
                               }
                             }
                           : {}),
@@ -118,8 +118,8 @@ const importFromBeerXml = xml => {
                         _.isEmpty(misc['AMOUNT_IS_WEIGHT'])
                           ? {
                               amount: {
-                                units: 'l',
-                                volume: Number(misc['AMOUNT'])
+                                unit: 'l',
+                                value: Number(misc['AMOUNT'])
                               }
                             }
                           : {})
@@ -139,9 +139,9 @@ const importFromBeerXml = xml => {
                   ...(!_.isEmpty(culture['AMOUNT_IS_WEIGHT']) &&
                   parseBool(culture['AMOUNT_IS_WEIGHT'])
                     ? {
-                        amount_as_weight: {
-                          units: 'kg',
-                          mass: Number(culture['AMOUNT'])
+                        amount: {
+                          unit: 'kg',
+                          value: Number(culture['AMOUNT'])
                         }
                       }
                     : {}),
@@ -150,8 +150,8 @@ const importFromBeerXml = xml => {
                   _.isEmpty(culture['AMOUNT_IS_WEIGHT'])
                     ? {
                         amount: {
-                          units: 'l',
-                          volume: Number(culture['AMOUNT'])
+                          unit: 'l',
+                          value: Number(culture['AMOUNT'])
                         }
                       }
                     : {})
@@ -170,8 +170,8 @@ const importFromBeerXml = xml => {
                         sodium: Number(water['SODIUM']),
                         magnesium: Number(water['MAGNESIUM']),
                         amount: {
-                          units: 'l',
-                          volume: Number(water['AMOUNT'])
+                          unit: 'l',
+                          value: Number(water['AMOUNT'])
                         }
                       })
                     )
@@ -181,8 +181,8 @@ const importFromBeerXml = xml => {
             mash: {
               name: _.get(r, ['MASH', 'NAME']),
               grain_temperature: {
-                units: 'C',
-                degrees: Number(_.get(r, ['MASH', 'GRAIN_TEMP']))
+                unit: 'C',
+                value: Number(_.get(r, ['MASH', 'GRAIN_TEMP']))
               },
               mash_steps: _.map(
                 getArrayNode(_.get(r, ['MASH', 'MASH_STEPS', 'MASH_STEP'])),
@@ -190,34 +190,34 @@ const importFromBeerXml = xml => {
                   name: mash_step['NAME'],
                   type: _.lowerCase(mash_step['TYPE']),
                   step_temperature: {
-                    units: 'C',
-                    degrees: Number(mash_step['STEP_TEMP'])
+                    unit: 'C',
+                    value: Number(mash_step['STEP_TEMP'])
                   },
                   step_time: {
-                    units: 'min',
-                    duration: Number(mash_step['STEP_TIME'])
+                    unit: 'min',
+                    value: Number(mash_step['STEP_TIME'])
                   },
                   ...(!_.isEmpty(mash_step['RAMP_TIME'])
                     ? {
                         step_time: {
-                          units: 'min',
-                          duration: Number(mash_step['RAMP_TIME'])
+                          unit: 'min',
+                          value: Number(mash_step['RAMP_TIME'])
                         }
                       }
                     : {}),
                   ...(!_.isEmpty(mash_step['END_TEMP'])
                     ? {
                         end_temperature: {
-                          units: 'C',
-                          degrees: Number(mash_step['END_TEMP'])
+                          unit: 'C',
+                          value: Number(mash_step['END_TEMP'])
                         }
                       }
                     : {}),
                   ...(!_.isEmpty(mash_step['INFUSE_AMOUNT'])
                     ? {
                         infuse_amount: {
-                          units: 'l',
-                          volume: Number(mash_step['INFUSE_AMOUNT'])
+                          unit: 'l',
+                          value: Number(mash_step['INFUSE_AMOUNT'])
                         }
                       }
                     : {})

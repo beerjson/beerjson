@@ -10,12 +10,12 @@
         "product_id": "1007",
         "temperature_range": {
           "minimum": {
-            "units": "C",
-            "degrees": 12.8
+            "unit": "C",
+            "value": 12.8
           },
           "maximum": {
-            "units": "C",
-            "degrees": 20.0
+            "unit": "C",
+            "value": 20.0
           }
         },
         "flocculation": "low",

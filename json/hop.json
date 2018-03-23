@@ -77,23 +77,13 @@
               "type": "object",
               "additionalProperties": false,
               "properties": {
-                "extract": {
-                  "$ref": "measureable_units.json#/definitions/VolumeType"
-                },
-                "leaf": {
-                  "$ref": "measureable_units.json#/definitions/MassType"
-                },
-                "leaf (wet)": {
-                  "$ref": "measureable_units.json#/definitions/MassType"
-                },
-                "pellet": {
-                  "$ref": "measureable_units.json#/definitions/MassType"
-                },
-                "powder": {
-                  "$ref": "measureable_units.json#/definitions/MassType"
-                },
-                "plug": {
-                  "$ref": "measureable_units.json#/definitions/MassType"
+                "amount": {
+                  "oneOf": [
+                    { "$ref": "measureable_units.json#/definitions/VolumeType"
+                    },
+                    { "$ref": "measureable_units.json#/definitions/MassType"
+                    }
+                  ]
                 }
               }
             }
@@ -124,10 +114,12 @@
             }
           },
           "amount": {
-            "$ref": "measureable_units.json#/definitions/MassType"
-          },
-          "volume": {
-            "$ref": "measureable_units.json#/definitions/VolumeType"
+            "oneOf": [
+              { "$ref": "measureable_units.json#/definitions/VolumeType"
+              },
+              { "$ref": "measureable_units.json#/definitions/MassType"
+              }
+            ]
           },
           "time": {
             "$ref": "measureable_units.json#/definitions/TimeType"
@@ -136,15 +128,7 @@
             "$ref": "measureable_units.json#/definitions/TemperatureType"
           }
         },
-        {
-          "oneOf": [
-            {
-              "required": ["amount"]
-            },
-            {
-              "required": ["volume"]
-            }
-          ]
+        { "required": ["amount"]
         }
       ]
     },

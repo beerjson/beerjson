@@ -11,22 +11,22 @@
         "type": "beer",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.035
+            "unit": "sg",
+            "value": 1.035
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.05
+            "unit": "sg",
+            "value": 1.05
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.007
+            "unit": "sg",
+            "value": 1.007
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.011
+            "unit": "sg",
+            "value": 1.011
           }
         },
         "international_bitterness_units": {
@@ -35,12 +35,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 35.0
+            "unit": "SRM",
+            "value": 35.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 200.0
+            "unit": "SRM",
+            "value": 200.0
           }
         },
         "carbonation": {

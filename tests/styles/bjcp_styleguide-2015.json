@@ -26,22 +26,22 @@
         "tags": "session-strength, pale-color, bottom-fermented, lagered, north-america, traditional-style, pale-lager-family, balanced",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.028
+            "unit": "sg",
+            "value": 1.028
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.04
+            "unit": "sg",
+            "value": 1.04
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 0.998
+            "unit": "sg",
+            "value": 0.998
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           }
         },
         "international_bitterness_units": {
@@ -50,12 +50,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 2.0
+            "unit": "SRM",
+            "value": 2.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 3.0
+            "unit": "SRM",
+            "value": 3.0
           }
         },
         "alcohol_by_volume": {
@@ -87,22 +87,22 @@
         "tags": "standard-strength, pale-color, bottom-fermented, lagered, north-america, traditional-style, pale-lager-family, balanced",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.04
+            "unit": "sg",
+            "value": 1.04
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.05
+            "unit": "sg",
+            "value": 1.05
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.004
+            "unit": "sg",
+            "value": 1.004
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           }
         },
         "international_bitterness_units": {
@@ -111,12 +111,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 2.0
+            "unit": "SRM",
+            "value": 2.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 4.0
+            "unit": "SRM",
+            "value": 4.0
           }
         },
         "alcohol_by_volume": {
@@ -148,22 +148,22 @@
         "tags": "standard-strength, pale-color, any-fermentation, north-america, traditional-style, pale-ale-family, balanced",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.042
+            "unit": "sg",
+            "value": 1.042
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.055
+            "unit": "sg",
+            "value": 1.055
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.006
+            "unit": "sg",
+            "value": 1.006
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.012
+            "unit": "sg",
+            "value": 1.012
           }
         },
         "international_bitterness_units": {
@@ -172,12 +172,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 2.5
+            "unit": "SRM",
+            "value": 2.5
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 5.0
+            "unit": "SRM",
+            "value": 5.0
           }
         },
         "alcohol_by_volume": {
@@ -209,22 +209,22 @@
         "tags": "standard-strength, pale-color, any-fermentation, north-america, craft-style, wheat-beer-family, balanced",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.04
+            "unit": "sg",
+            "value": 1.04
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.055
+            "unit": "sg",
+            "value": 1.055
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.013
+            "unit": "sg",
+            "value": 1.013
           }
         },
         "international_bitterness_units": {
@@ -233,12 +233,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 3.0
+            "unit": "SRM",
+            "value": 3.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 6.0
+            "unit": "SRM",
+            "value": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -270,22 +270,22 @@
         "tags": "standard-strength, pale-color, bottom-fermented, lagered, traditional-style, pale-lager-family, balanced",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.042
+            "unit": "sg",
+            "value": 1.042
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.05
+            "unit": "sg",
+            "value": 1.05
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.012
+            "unit": "sg",
+            "value": 1.012
           }
         },
         "international_bitterness_units": {
@@ -294,12 +294,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 2.0
+            "unit": "SRM",
+            "value": 2.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 6.0
+            "unit": "SRM",
+            "value": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -331,22 +331,22 @@
         "tags": "standard-strength, amber-color, bottom-fermented, lagered, traditional-style, amber-lager-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.042
+            "unit": "sg",
+            "value": 1.042
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.055
+            "unit": "sg",
+            "value": 1.055
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.014
+            "unit": "sg",
+            "value": 1.014
           }
         },
         "international_bitterness_units": {
@@ -355,12 +355,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 7.0
+            "unit": "SRM",
+            "value": 7.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 14.0
+            "unit": "SRM",
+            "value": 14.0
           }
         },
         "alcohol_by_volume": {
@@ -392,22 +392,22 @@
         "tags": "standard-strength, dark-color, bottom-fermented, lagered, traditional-style, dark-lager-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.044
+            "unit": "sg",
+            "value": 1.044
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.056
+            "unit": "sg",
+            "value": 1.056
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.012
+            "unit": "sg",
+            "value": 1.012
           }
         },
         "international_bitterness_units": {
@@ -416,12 +416,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 14.0
+            "unit": "SRM",
+            "value": 14.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 22.0
+            "unit": "SRM",
+            "value": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -453,22 +453,22 @@
         "tags": "session-strength, pale-color, bottom-fermented, lagered, central-europe, traditional-style, pale-lager-family, bitter, hoppy",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.028
+            "unit": "sg",
+            "value": 1.028
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.044
+            "unit": "sg",
+            "value": 1.044
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.014
+            "unit": "sg",
+            "value": 1.014
           }
         },
         "international_bitterness_units": {
@@ -477,12 +477,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 3.0
+            "unit": "SRM",
+            "value": 3.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 6.0
+            "unit": "SRM",
+            "value": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -514,22 +514,22 @@
         "tags": "standard-strength, pale-color, bottom-fermented, lagered, central-europe, traditional-style, pilsner-family, balanced, hoppy",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.044
+            "unit": "sg",
+            "value": 1.044
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.06
+            "unit": "sg",
+            "value": 1.06
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.013
+            "unit": "sg",
+            "value": 1.013
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.017
+            "unit": "sg",
+            "value": 1.017
           }
         },
         "international_bitterness_units": {
@@ -538,12 +538,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 3.5
+            "unit": "SRM",
+            "value": 3.5
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 6.0
+            "unit": "SRM",
+            "value": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -575,22 +575,22 @@
         "tags": "standard-strength, amber-color, bottom-fermented, lagered, central-europe, traditional-style, amber-lager-family, balanced",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.044
+            "unit": "sg",
+            "value": 1.044
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.06
+            "unit": "sg",
+            "value": 1.06
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.013
+            "unit": "sg",
+            "value": 1.013
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.017
+            "unit": "sg",
+            "value": 1.017
           }
         },
         "international_bitterness_units": {
@@ -599,12 +599,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 10.0
+            "unit": "SRM",
+            "value": 10.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 16.0
+            "unit": "SRM",
+            "value": 16.0
           }
         },
         "alcohol_by_volume": {
@@ -636,22 +636,22 @@
         "tags": "standard-strength, dark-color, bottom-fermented, lagered, central-europe, traditional-style, dark-lager-family, balanced",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.044
+            "unit": "sg",
+            "value": 1.044
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.06
+            "unit": "sg",
+            "value": 1.06
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.013
+            "unit": "sg",
+            "value": 1.013
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.017
+            "unit": "sg",
+            "value": 1.017
           }
         },
         "international_bitterness_units": {
@@ -660,12 +660,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 14.0
+            "unit": "SRM",
+            "value": 14.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 35.0
+            "unit": "SRM",
+            "value": 35.0
           }
         },
         "alcohol_by_volume": {
@@ -697,22 +697,22 @@
         "tags": "standard-strength, pale-color, bottom-fermented, lagered, central-europe, traditional-style, pale-lager-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.044
+            "unit": "sg",
+            "value": 1.044
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.048
+            "unit": "sg",
+            "value": 1.048
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.006
+            "unit": "sg",
+            "value": 1.006
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.012
+            "unit": "sg",
+            "value": 1.012
           }
         },
         "international_bitterness_units": {
@@ -721,12 +721,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 3.0
+            "unit": "SRM",
+            "value": 3.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 5.0
+            "unit": "SRM",
+            "value": 5.0
           }
         },
         "alcohol_by_volume": {
@@ -758,22 +758,22 @@
         "tags": "standard-strength, pale-color, bottom-fermented, lagered, central-europe, traditional-style, pale-lager-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.054
+            "unit": "sg",
+            "value": 1.054
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.057
+            "unit": "sg",
+            "value": 1.057
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.012
+            "unit": "sg",
+            "value": 1.012
           }
         },
         "international_bitterness_units": {
@@ -782,12 +782,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 4.0
+            "unit": "SRM",
+            "value": 4.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 7.0
+            "unit": "SRM",
+            "value": 7.0
           }
         },
         "alcohol_by_volume": {
@@ -819,22 +819,22 @@
         "tags": "high-strength, pale-color, bottom-fermented, lagered, central-europe, traditional-style, bock-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.064
+            "unit": "sg",
+            "value": 1.064
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.072
+            "unit": "sg",
+            "value": 1.072
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.011
+            "unit": "sg",
+            "value": 1.011
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.018
+            "unit": "sg",
+            "value": 1.018
           }
         },
         "international_bitterness_units": {
@@ -843,12 +843,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 6.0
+            "unit": "SRM",
+            "value": 6.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 11.0
+            "unit": "SRM",
+            "value": 11.0
           }
         },
         "alcohol_by_volume": {
@@ -880,22 +880,22 @@
         "tags": "session-strength, pale-color, bottom-fermented, lagered, central-europe, traditional-style, pale-lager-family, bitter, hoppy",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.026
+            "unit": "sg",
+            "value": 1.026
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.034
+            "unit": "sg",
+            "value": 1.034
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.006
+            "unit": "sg",
+            "value": 1.006
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           }
         },
         "international_bitterness_units": {
@@ -904,12 +904,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 2.0
+            "unit": "SRM",
+            "value": 2.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 5.0
+            "unit": "SRM",
+            "value": 5.0
           }
         },
         "alcohol_by_volume": {
@@ -941,22 +941,22 @@
         "tags": "standard-strength, pale-color, top-fermented, lagered, central-europe, traditional-style, pale-ale-family, balanced",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.044
+            "unit": "sg",
+            "value": 1.044
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.05
+            "unit": "sg",
+            "value": 1.05
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.007
+            "unit": "sg",
+            "value": 1.007
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.011
+            "unit": "sg",
+            "value": 1.011
           }
         },
         "international_bitterness_units": {
@@ -965,12 +965,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 3.5
+            "unit": "SRM",
+            "value": 3.5
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 5.0
+            "unit": "SRM",
+            "value": 5.0
           }
         },
         "alcohol_by_volume": {
@@ -1002,22 +1002,22 @@
         "tags": "standard-strength, pale-color, bottom-fermented, lagered, central-europe, traditional-style, pale-lager-family, balanced,",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.048
+            "unit": "sg",
+            "value": 1.048
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.056
+            "unit": "sg",
+            "value": 1.056
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.015
+            "unit": "sg",
+            "value": 1.015
           }
         },
         "international_bitterness_units": {
@@ -1026,12 +1026,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 4.0
+            "unit": "SRM",
+            "value": 4.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 7.0
+            "unit": "SRM",
+            "value": 7.0
           }
         },
         "alcohol_by_volume": {
@@ -1063,22 +1063,22 @@
         "tags": "standard-strength, pale-color, bottom-fermented, lagered, central-europe, traditional-style, pilsner-family, bitter, hoppy",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.044
+            "unit": "sg",
+            "value": 1.044
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.05
+            "unit": "sg",
+            "value": 1.05
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.013
+            "unit": "sg",
+            "value": 1.013
           }
         },
         "international_bitterness_units": {
@@ -1087,12 +1087,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 2.0
+            "unit": "SRM",
+            "value": 2.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 5.0
+            "unit": "SRM",
+            "value": 5.0
           }
         },
         "alcohol_by_volume": {
@@ -1124,22 +1124,22 @@
         "tags": "standard-strength, amber-color, bottom-fermented, lagered, central-europe, traditional-style, amber-lager-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.054
+            "unit": "sg",
+            "value": 1.054
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.06
+            "unit": "sg",
+            "value": 1.06
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.014
+            "unit": "sg",
+            "value": 1.014
           }
         },
         "international_bitterness_units": {
@@ -1148,12 +1148,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 8.0
+            "unit": "SRM",
+            "value": 8.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 17.0
+            "unit": "SRM",
+            "value": 17.0
           }
         },
         "alcohol_by_volume": {
@@ -1185,22 +1185,22 @@
         "tags": "standard-strength, amber-color, bottom-fermented, lagered, central-europe, traditional-style, amber-lager-family, malty, smoke",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.05
+            "unit": "sg",
+            "value": 1.05
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.057
+            "unit": "sg",
+            "value": 1.057
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.012
+            "unit": "sg",
+            "value": 1.012
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.016
+            "unit": "sg",
+            "value": 1.016
           }
         },
         "international_bitterness_units": {
@@ -1209,12 +1209,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 12.0
+            "unit": "SRM",
+            "value": 12.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 22.0
+            "unit": "SRM",
+            "value": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -1246,22 +1246,22 @@
         "tags": "high-strength, amber-color, bottom-fermented, lagered, central-europe, traditional-style, bock-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.064
+            "unit": "sg",
+            "value": 1.064
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.072
+            "unit": "sg",
+            "value": 1.072
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.013
+            "unit": "sg",
+            "value": 1.013
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.019
+            "unit": "sg",
+            "value": 1.019
           }
         },
         "international_bitterness_units": {
@@ -1270,12 +1270,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 14.0
+            "unit": "SRM",
+            "value": 14.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 22.0
+            "unit": "SRM",
+            "value": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -1307,22 +1307,22 @@
         "tags": "standard-strength, amber-color, bottom-fermented, lagered, central-europe, traditional-style, amber-lager-family, balanced",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.048
+            "unit": "sg",
+            "value": 1.048
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.055
+            "unit": "sg",
+            "value": 1.055
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.014
+            "unit": "sg",
+            "value": 1.014
           }
         },
         "international_bitterness_units": {
@@ -1331,12 +1331,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 9.0
+            "unit": "SRM",
+            "value": 9.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 15.0
+            "unit": "SRM",
+            "value": 15.0
           }
         },
         "alcohol_by_volume": {
@@ -1368,22 +1368,22 @@
         "tags": "standard-strength, amber-color, top-fermented, lagered, central-europe, traditional-style, amber-ale-family, bitter",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.044
+            "unit": "sg",
+            "value": 1.044
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.052
+            "unit": "sg",
+            "value": 1.052
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.014
+            "unit": "sg",
+            "value": 1.014
           }
         },
         "international_bitterness_units": {
@@ -1392,12 +1392,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 11.0
+            "unit": "SRM",
+            "value": 11.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 17.0
+            "unit": "SRM",
+            "value": 17.0
           }
         },
         "alcohol_by_volume": {
@@ -1430,22 +1430,22 @@
         "entry_instructions": "The entrant must specify whether the entry is a Pale Kellerbier (based on Helles) or an Amber Kellerbier (based on M\u00e4rzen). The entrant may specify another type of Kellerbier based on other base styles such as Pils, Bock, Schwarzbier, but should supply a style description for judges. Kellerbier: Pale Kellerbier\n A very common seasonal summer beer brewed by many of the Munich area breweries and served in the beer gardens, where they are very popular.",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.048
+            "unit": "sg",
+            "value": 1.048
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.054
+            "unit": "sg",
+            "value": 1.054
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.012
+            "unit": "sg",
+            "value": 1.012
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.016
+            "unit": "sg",
+            "value": 1.016
           }
         },
         "international_bitterness_units": {
@@ -1454,12 +1454,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 7.0
+            "unit": "SRM",
+            "value": 7.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 17.0
+            "unit": "SRM",
+            "value": 17.0
           }
         },
         "alcohol_by_volume": {
@@ -1491,22 +1491,22 @@
         "tags": "standard-strength, dark-color, bottom-fermented, lagered, central-europe, traditional-style, malty, dark-lager-family",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.048
+            "unit": "sg",
+            "value": 1.048
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.056
+            "unit": "sg",
+            "value": 1.056
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.016
+            "unit": "sg",
+            "value": 1.016
           }
         },
         "international_bitterness_units": {
@@ -1515,12 +1515,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 14.0
+            "unit": "SRM",
+            "value": 14.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 28.0
+            "unit": "SRM",
+            "value": 28.0
           }
         },
         "alcohol_by_volume": {
@@ -1552,22 +1552,22 @@
         "tags": "standard-strength, dark-color, bottom-fermented, lagered, central-europe, traditional-style, balanced, dark-lager-family",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.046
+            "unit": "sg",
+            "value": 1.046
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.052
+            "unit": "sg",
+            "value": 1.052
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.016
+            "unit": "sg",
+            "value": 1.016
           }
         },
         "international_bitterness_units": {
@@ -1576,12 +1576,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 17.0
+            "unit": "SRM",
+            "value": 17.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 30.0
+            "unit": "SRM",
+            "value": 30.0
           }
         },
         "alcohol_by_volume": {
@@ -1614,22 +1614,22 @@
         "entry_instructions": "The entrant will specify whether the entry is a pale or a dark variant.",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.072
+            "unit": "sg",
+            "value": 1.072
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.112
+            "unit": "sg",
+            "value": 1.112
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.016
+            "unit": "sg",
+            "value": 1.016
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.024
+            "unit": "sg",
+            "value": 1.024
           }
         },
         "international_bitterness_units": {
@@ -1638,12 +1638,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 6.0
+            "unit": "SRM",
+            "value": 6.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 25.0
+            "unit": "SRM",
+            "value": 25.0
           }
         },
         "alcohol_by_volume": {
@@ -1675,22 +1675,22 @@
         "tags": "very-high-strength, amber-color, bottom-fermented, lagered, central-europe, traditional-style, bock-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.078
+            "unit": "sg",
+            "value": 1.078
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.12
+            "unit": "sg",
+            "value": 1.12
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.02
+            "unit": "sg",
+            "value": 1.02
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.035
+            "unit": "sg",
+            "value": 1.035
           }
         },
         "international_bitterness_units": {
@@ -1699,12 +1699,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 18.0
+            "unit": "SRM",
+            "value": 18.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 30.0
+            "unit": "SRM",
+            "value": 30.0
           }
         },
         "alcohol_by_volume": {
@@ -1736,22 +1736,22 @@
         "tags": "high-strength, dark-color, any-fermentation, lagered, eastern-europe, traditional-style, porter-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.06
+            "unit": "sg",
+            "value": 1.06
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.09
+            "unit": "sg",
+            "value": 1.09
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.016
+            "unit": "sg",
+            "value": 1.016
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.024
+            "unit": "sg",
+            "value": 1.024
           }
         },
         "international_bitterness_units": {
@@ -1760,12 +1760,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 17.0
+            "unit": "SRM",
+            "value": 17.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 30.0
+            "unit": "SRM",
+            "value": 30.0
           }
         },
         "alcohol_by_volume": {
@@ -1796,22 +1796,22 @@
         "tags": "standard-strength, pale-color, top-fermented, central-europe, traditional-style, wheat-beer-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.044
+            "unit": "sg",
+            "value": 1.044
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.052
+            "unit": "sg",
+            "value": 1.052
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.014
+            "unit": "sg",
+            "value": 1.014
           }
         },
         "international_bitterness_units": {
@@ -1820,12 +1820,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 2.0
+            "unit": "SRM",
+            "value": 2.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 6.0
+            "unit": "SRM",
+            "value": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -1857,22 +1857,22 @@
         "tags": "standard-strength, amber-color, top-fermented, central-europe, traditional-style, wheat-beer-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.044
+            "unit": "sg",
+            "value": 1.044
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.056
+            "unit": "sg",
+            "value": 1.056
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.014
+            "unit": "sg",
+            "value": 1.014
           }
         },
         "international_bitterness_units": {
@@ -1881,12 +1881,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 14.0
+            "unit": "SRM",
+            "value": 14.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 23.0
+            "unit": "SRM",
+            "value": 23.0
           }
         },
         "alcohol_by_volume": {
@@ -1919,22 +1919,22 @@
         "entry_instructions": "The entrant will specify whether the entry is a pale or a dark version.",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.064
+            "unit": "sg",
+            "value": 1.064
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.09
+            "unit": "sg",
+            "value": 1.09
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.015
+            "unit": "sg",
+            "value": 1.015
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.022
+            "unit": "sg",
+            "value": 1.022
           }
         },
         "international_bitterness_units": {
@@ -1943,12 +1943,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 6.0
+            "unit": "SRM",
+            "value": 6.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 25.0
+            "unit": "SRM",
+            "value": 25.0
           }
         },
         "alcohol_by_volume": {
@@ -1980,22 +1980,22 @@
         "tags": "session-strength, amber-color, top-fermented, british-isles, traditional-style, amber-ale-family, bitter",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.03
+            "unit": "sg",
+            "value": 1.03
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.039
+            "unit": "sg",
+            "value": 1.039
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.007
+            "unit": "sg",
+            "value": 1.007
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.011
+            "unit": "sg",
+            "value": 1.011
           }
         },
         "international_bitterness_units": {
@@ -2004,12 +2004,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 8.0
+            "unit": "SRM",
+            "value": 8.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 14.0
+            "unit": "SRM",
+            "value": 14.0
           }
         },
         "alcohol_by_volume": {
@@ -2041,22 +2041,22 @@
         "tags": "standard-strength, amber-color, top-fermented, british-isles, traditional-style, amber-ale-family, bitter",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.04
+            "unit": "sg",
+            "value": 1.04
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.048
+            "unit": "sg",
+            "value": 1.048
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.012
+            "unit": "sg",
+            "value": 1.012
           }
         },
         "international_bitterness_units": {
@@ -2065,12 +2065,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 8.0
+            "unit": "SRM",
+            "value": 8.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 16.0
+            "unit": "SRM",
+            "value": 16.0
           }
         },
         "alcohol_by_volume": {
@@ -2102,22 +2102,22 @@
         "tags": "session-strength, amber-color, top-fermented, british-isles, traditional-style, amber-ale-family, bitter",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.048
+            "unit": "sg",
+            "value": 1.048
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.06
+            "unit": "sg",
+            "value": 1.06
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.016
+            "unit": "sg",
+            "value": 1.016
           }
         },
         "international_bitterness_units": {
@@ -2126,12 +2126,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 8.0
+            "unit": "SRM",
+            "value": 8.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 18.0
+            "unit": "SRM",
+            "value": 18.0
           }
         },
         "alcohol_by_volume": {
@@ -2163,22 +2163,22 @@
         "tags": "standard-strength, pale-color, top-fermented, british-isles, craft-style, pale-ale-family, bitter, hoppy",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.038
+            "unit": "sg",
+            "value": 1.038
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.053
+            "unit": "sg",
+            "value": 1.053
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.006
+            "unit": "sg",
+            "value": 1.006
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.012
+            "unit": "sg",
+            "value": 1.012
           }
         },
         "international_bitterness_units": {
@@ -2187,12 +2187,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 2.0
+            "unit": "SRM",
+            "value": 2.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 6.0
+            "unit": "SRM",
+            "value": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -2224,22 +2224,22 @@
         "tags": "standard-strength, pale-color, top-fermented, pacific, traditional-style, pale-ale-family, bitter",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.038
+            "unit": "sg",
+            "value": 1.038
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.05
+            "unit": "sg",
+            "value": 1.05
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.004
+            "unit": "sg",
+            "value": 1.004
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.006
+            "unit": "sg",
+            "value": 1.006
           }
         },
         "international_bitterness_units": {
@@ -2248,12 +2248,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 4.0
+            "unit": "SRM",
+            "value": 4.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 7.0
+            "unit": "SRM",
+            "value": 7.0
           }
         },
         "alcohol_by_volume": {
@@ -2285,22 +2285,22 @@
         "tags": "high-strength, pale-color, top-fermented, british-isles, traditional-style, ipa-family, bitter, hoppy",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.05
+            "unit": "sg",
+            "value": 1.05
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.075
+            "unit": "sg",
+            "value": 1.075
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.018
+            "unit": "sg",
+            "value": 1.018
           }
         },
         "international_bitterness_units": {
@@ -2309,12 +2309,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 6.0
+            "unit": "SRM",
+            "value": 6.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 14.0
+            "unit": "SRM",
+            "value": 14.0
           }
         },
         "alcohol_by_volume": {
@@ -2346,22 +2346,22 @@
         "tags": "session-strength, dark-color, top-fermented, british-isles, traditional-style, brown-ale-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.03
+            "unit": "sg",
+            "value": 1.03
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.038
+            "unit": "sg",
+            "value": 1.038
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.013
+            "unit": "sg",
+            "value": 1.013
           }
         },
         "international_bitterness_units": {
@@ -2370,12 +2370,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 12.0
+            "unit": "SRM",
+            "value": 12.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 25.0
+            "unit": "SRM",
+            "value": 25.0
           }
         },
         "alcohol_by_volume": {
@@ -2407,22 +2407,22 @@
         "tags": "standard-strength, amber-color, top-fermented, british-isles, traditional-style, brown-ale-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.04
+            "unit": "sg",
+            "value": 1.04
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.052
+            "unit": "sg",
+            "value": 1.052
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.013
+            "unit": "sg",
+            "value": 1.013
           }
         },
         "international_bitterness_units": {
@@ -2431,12 +2431,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 12.0
+            "unit": "SRM",
+            "value": 12.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 22.0
+            "unit": "SRM",
+            "value": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -2468,22 +2468,22 @@
         "tags": "standard-strength, dark-color, top-fermented, british-isles, traditional-style, porter-family, malty, roasty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.04
+            "unit": "sg",
+            "value": 1.04
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.052
+            "unit": "sg",
+            "value": 1.052
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.014
+            "unit": "sg",
+            "value": 1.014
           }
         },
         "international_bitterness_units": {
@@ -2492,12 +2492,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 20.0
+            "unit": "SRM",
+            "value": 20.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 30.0
+            "unit": "SRM",
+            "value": 30.0
           }
         },
         "alcohol_by_volume": {
@@ -2528,22 +2528,22 @@
         "tags": "session-strength, amber-color, top-fermented, british-isles, traditional-style, amber-ale-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.03
+            "unit": "sg",
+            "value": 1.03
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.035
+            "unit": "sg",
+            "value": 1.035
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.013
+            "unit": "sg",
+            "value": 1.013
           }
         },
         "international_bitterness_units": {
@@ -2552,12 +2552,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 17.0
+            "unit": "SRM",
+            "value": 17.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 22.0
+            "unit": "SRM",
+            "value": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -2588,22 +2588,22 @@
         "tags": "session-strength, amber-color, top-fermented, british-isles, traditional-style, amber-ale-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.035
+            "unit": "sg",
+            "value": 1.035
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.04
+            "unit": "sg",
+            "value": 1.04
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.015
+            "unit": "sg",
+            "value": 1.015
           }
         },
         "international_bitterness_units": {
@@ -2612,12 +2612,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 13.0
+            "unit": "SRM",
+            "value": 13.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 22.0
+            "unit": "SRM",
+            "value": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -2648,22 +2648,22 @@
         "tags": "standard-strength, amber-color, top-fermented, british-isles, traditional-style, amber-ale-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.04
+            "unit": "sg",
+            "value": 1.04
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.06
+            "unit": "sg",
+            "value": 1.06
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.016
+            "unit": "sg",
+            "value": 1.016
           }
         },
         "international_bitterness_units": {
@@ -2672,12 +2672,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 13.0
+            "unit": "SRM",
+            "value": 13.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 22.0
+            "unit": "SRM",
+            "value": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -2709,22 +2709,22 @@
         "tags": "standard-strength, amber-color, top-fermented, british-isles, traditional-style, amber-ale-family, balanced",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.036
+            "unit": "sg",
+            "value": 1.036
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.046
+            "unit": "sg",
+            "value": 1.046
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.014
+            "unit": "sg",
+            "value": 1.014
           }
         },
         "international_bitterness_units": {
@@ -2733,12 +2733,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 9.0
+            "unit": "SRM",
+            "value": 9.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 14.0
+            "unit": "SRM",
+            "value": 14.0
           }
         },
         "alcohol_by_volume": {
@@ -2770,22 +2770,22 @@
         "tags": "standard-strength, dark-color, top-fermented, british-isles, traditional-style, stout-family, bitter, roasty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.036
+            "unit": "sg",
+            "value": 1.036
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.044
+            "unit": "sg",
+            "value": 1.044
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.007
+            "unit": "sg",
+            "value": 1.007
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.011
+            "unit": "sg",
+            "value": 1.011
           }
         },
         "international_bitterness_units": {
@@ -2794,12 +2794,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 25.0
+            "unit": "SRM",
+            "value": 25.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 40.0
+            "unit": "SRM",
+            "value": 40.0
           }
         },
         "alcohol_by_volume": {
@@ -2831,22 +2831,22 @@
         "tags": "high-strength, dark-color, top-fermented, british-isles, traditional-style, stout-family, bitter, roasty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.052
+            "unit": "sg",
+            "value": 1.052
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.062
+            "unit": "sg",
+            "value": 1.062
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.014
+            "unit": "sg",
+            "value": 1.014
           }
         },
         "international_bitterness_units": {
@@ -2855,12 +2855,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 25.0
+            "unit": "SRM",
+            "value": 25.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 40.0
+            "unit": "SRM",
+            "value": 40.0
           }
         },
         "alcohol_by_volume": {
@@ -2892,22 +2892,22 @@
         "tags": "standard-strength, dark-color, top-fermented, british-isles, traditional-style, stout-family, malty, roasty, sweet",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.044
+            "unit": "sg",
+            "value": 1.044
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.06
+            "unit": "sg",
+            "value": 1.06
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.012
+            "unit": "sg",
+            "value": 1.012
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.024
+            "unit": "sg",
+            "value": 1.024
           }
         },
         "international_bitterness_units": {
@@ -2916,12 +2916,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 30.0
+            "unit": "SRM",
+            "value": 30.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 40.0
+            "unit": "SRM",
+            "value": 40.0
           }
         },
         "alcohol_by_volume": {
@@ -2953,22 +2953,22 @@
         "tags": "standard-strength, dark-color, top-fermented, british-isles, traditional-style, stout-family, balanced, roasty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.045
+            "unit": "sg",
+            "value": 1.045
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.065
+            "unit": "sg",
+            "value": 1.065
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.018
+            "unit": "sg",
+            "value": 1.018
           }
         },
         "international_bitterness_units": {
@@ -2977,12 +2977,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 22.0
+            "unit": "SRM",
+            "value": 22.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 40.0
+            "unit": "SRM",
+            "value": 40.0
           }
         },
         "alcohol_by_volume": {
@@ -3014,22 +3014,22 @@
         "tags": "high-strength, dark-color, top-fermented, british-isles, traditional-style, stout-family, malty, roasty, sweet",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.056
+            "unit": "sg",
+            "value": 1.056
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.075
+            "unit": "sg",
+            "value": 1.075
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.018
+            "unit": "sg",
+            "value": 1.018
           }
         },
         "international_bitterness_units": {
@@ -3038,12 +3038,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 30.0
+            "unit": "SRM",
+            "value": 30.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 40.0
+            "unit": "SRM",
+            "value": 40.0
           }
         },
         "alcohol_by_volume": {
@@ -3075,22 +3075,22 @@
         "tags": "high-strength, dark-color, top-fermented, british-isles, traditional-style, stout-family, balanced, roasty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.056
+            "unit": "sg",
+            "value": 1.056
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.075
+            "unit": "sg",
+            "value": 1.075
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.018
+            "unit": "sg",
+            "value": 1.018
           }
         },
         "international_bitterness_units": {
@@ -3099,12 +3099,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 30.0
+            "unit": "SRM",
+            "value": 30.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 40.0
+            "unit": "SRM",
+            "value": 40.0
           }
         },
         "alcohol_by_volume": {
@@ -3136,22 +3136,22 @@
         "tags": "high-strength, amber-color, top-fermented, british-isles, traditional-style, strong-ale-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.055
+            "unit": "sg",
+            "value": 1.055
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.08
+            "unit": "sg",
+            "value": 1.08
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.015
+            "unit": "sg",
+            "value": 1.015
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.022
+            "unit": "sg",
+            "value": 1.022
           }
         },
         "international_bitterness_units": {
@@ -3160,12 +3160,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 8.0
+            "unit": "SRM",
+            "value": 8.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 22.0
+            "unit": "SRM",
+            "value": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -3197,22 +3197,22 @@
         "tags": "high-strength, amber-color, top-fermented, british-isles, traditional-style, strong-ale-family, malty, aged",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.055
+            "unit": "sg",
+            "value": 1.055
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.088
+            "unit": "sg",
+            "value": 1.088
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.015
+            "unit": "sg",
+            "value": 1.015
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.022
+            "unit": "sg",
+            "value": 1.022
           }
         },
         "international_bitterness_units": {
@@ -3221,12 +3221,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 10.0
+            "unit": "SRM",
+            "value": 10.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 22.0
+            "unit": "SRM",
+            "value": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -3258,22 +3258,22 @@
         "tags": "high-strength, amber-color, top-fermented, british-isles, traditional-style, strong-ale-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.07
+            "unit": "sg",
+            "value": 1.07
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.13
+            "unit": "sg",
+            "value": 1.13
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.018
+            "unit": "sg",
+            "value": 1.018
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.04
+            "unit": "sg",
+            "value": 1.04
           }
         },
         "international_bitterness_units": {
@@ -3282,12 +3282,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 14.0
+            "unit": "SRM",
+            "value": 14.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 25.0
+            "unit": "SRM",
+            "value": 25.0
           }
         },
         "alcohol_by_volume": {
@@ -3319,22 +3319,22 @@
         "tags": "very-high-strength, amber-color, top-fermented, british-isles, traditional-style, strong-ale-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.08
+            "unit": "sg",
+            "value": 1.08
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.12
+            "unit": "sg",
+            "value": 1.12
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.018
+            "unit": "sg",
+            "value": 1.018
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.03
+            "unit": "sg",
+            "value": 1.03
           }
         },
         "international_bitterness_units": {
@@ -3343,12 +3343,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 8.0
+            "unit": "SRM",
+            "value": 8.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 22.0
+            "unit": "SRM",
+            "value": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -3380,22 +3380,22 @@
         "tags": "standard-strength, pale-color, any-fermentation, north-america, craft-style, pale-ale-family, balanced",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.038
+            "unit": "sg",
+            "value": 1.038
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.054
+            "unit": "sg",
+            "value": 1.054
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.013
+            "unit": "sg",
+            "value": 1.013
           }
         },
         "international_bitterness_units": {
@@ -3404,12 +3404,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 3.0
+            "unit": "SRM",
+            "value": 3.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 6.0
+            "unit": "SRM",
+            "value": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -3441,22 +3441,22 @@
         "tags": "standard-strength, pale-color, top-fermented, north-america, craft-style, pale-ale-family, bitter, hoppy",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.045
+            "unit": "sg",
+            "value": 1.045
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.06
+            "unit": "sg",
+            "value": 1.06
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.015
+            "unit": "sg",
+            "value": 1.015
           }
         },
         "international_bitterness_units": {
@@ -3465,12 +3465,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 5.0
+            "unit": "SRM",
+            "value": 5.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 10.0
+            "unit": "SRM",
+            "value": 10.0
           }
         },
         "alcohol_by_volume": {
@@ -3502,22 +3502,22 @@
         "tags": "standard-strength, amber-color, top-fermented, north-america, craft-style, amber-ale-family, balanced, hoppy",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.045
+            "unit": "sg",
+            "value": 1.045
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.06
+            "unit": "sg",
+            "value": 1.06
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.015
+            "unit": "sg",
+            "value": 1.015
           }
         },
         "international_bitterness_units": {
@@ -3526,12 +3526,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 10.0
+            "unit": "SRM",
+            "value": 10.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 17.0
+            "unit": "SRM",
+            "value": 17.0
           }
         },
         "alcohol_by_volume": {
@@ -3563,22 +3563,22 @@
         "tags": "standard-strength, amber-color, bottom-fermented, north-america, traditional-style, amber-lager-family, bitter, hoppy",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.048
+            "unit": "sg",
+            "value": 1.048
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.054
+            "unit": "sg",
+            "value": 1.054
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.011
+            "unit": "sg",
+            "value": 1.011
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.014
+            "unit": "sg",
+            "value": 1.014
           }
         },
         "international_bitterness_units": {
@@ -3587,12 +3587,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 10.0
+            "unit": "SRM",
+            "value": 10.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 14.0
+            "unit": "SRM",
+            "value": 14.0
           }
         },
         "alcohol_by_volume": {
@@ -3624,22 +3624,22 @@
         "tags": "standard-strength, dark-color, top-fermented, north-america, craft-style, brown-ale-family, balanced, hoppy",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.045
+            "unit": "sg",
+            "value": 1.045
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.06
+            "unit": "sg",
+            "value": 1.06
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.016
+            "unit": "sg",
+            "value": 1.016
           }
         },
         "international_bitterness_units": {
@@ -3648,12 +3648,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 18.0
+            "unit": "SRM",
+            "value": 18.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 35.0
+            "unit": "SRM",
+            "value": 35.0
           }
         },
         "alcohol_by_volume": {
@@ -3685,22 +3685,22 @@
         "tags": "standard-strength, dark-color, top-fermented, north-america, craft-style, porter-family, bitter, roasty, hoppy",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.05
+            "unit": "sg",
+            "value": 1.05
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.07
+            "unit": "sg",
+            "value": 1.07
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.012
+            "unit": "sg",
+            "value": 1.012
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.018
+            "unit": "sg",
+            "value": 1.018
           }
         },
         "international_bitterness_units": {
@@ -3709,12 +3709,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 22.0
+            "unit": "SRM",
+            "value": 22.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 40.0
+            "unit": "SRM",
+            "value": 40.0
           }
         },
         "alcohol_by_volume": {
@@ -3746,22 +3746,22 @@
         "tags": "high-strength, dark-color, top-fermented, north-america, craft-style, stout-family, bitter, roasty, hoppy",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.05
+            "unit": "sg",
+            "value": 1.05
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.075
+            "unit": "sg",
+            "value": 1.075
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.022
+            "unit": "sg",
+            "value": 1.022
           }
         },
         "international_bitterness_units": {
@@ -3770,12 +3770,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 30.0
+            "unit": "SRM",
+            "value": 30.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 40.0
+            "unit": "SRM",
+            "value": 40.0
           }
         },
         "alcohol_by_volume": {
@@ -3807,22 +3807,22 @@
         "tags": "very-high-strength, dark-color, top-fermented, british-isles, north-america, traditional-style, craft-style, stout-family, malty, bitter, roasty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.075
+            "unit": "sg",
+            "value": 1.075
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.115
+            "unit": "sg",
+            "value": 1.115
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.018
+            "unit": "sg",
+            "value": 1.018
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.03
+            "unit": "sg",
+            "value": 1.03
           }
         },
         "international_bitterness_units": {
@@ -3831,12 +3831,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 30.0
+            "unit": "SRM",
+            "value": 30.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 40.0
+            "unit": "SRM",
+            "value": 40.0
           }
         },
         "alcohol_by_volume": {
@@ -3868,22 +3868,22 @@
         "tags": "high-strength, pale-color, top-fermented, north-america, craft-style, ipa-family, bitter, hoppy",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.056
+            "unit": "sg",
+            "value": 1.056
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.07
+            "unit": "sg",
+            "value": 1.07
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.014
+            "unit": "sg",
+            "value": 1.014
           }
         },
         "international_bitterness_units": {
@@ -3892,12 +3892,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 6.0
+            "unit": "SRM",
+            "value": 6.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 14.0
+            "unit": "SRM",
+            "value": 14.0
           }
         },
         "alcohol_by_volume": {
@@ -3953,22 +3953,22 @@
         "tags": "very-high-strength, pale-color, top-fermented, north-america, craft-style, ipa-family, bitter, hoppy",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.065
+            "unit": "sg",
+            "value": 1.065
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.085
+            "unit": "sg",
+            "value": 1.085
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.018
+            "unit": "sg",
+            "value": 1.018
           }
         },
         "international_bitterness_units": {
@@ -3977,12 +3977,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 6.0
+            "unit": "SRM",
+            "value": 6.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 14.0
+            "unit": "SRM",
+            "value": 14.0
           }
         },
         "alcohol_by_volume": {
@@ -4014,22 +4014,22 @@
         "tags": "high-strength, amber-color, top-fermented, north-america, craft-style, strong-ale-family, bitter, hoppy",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.062
+            "unit": "sg",
+            "value": 1.062
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.09
+            "unit": "sg",
+            "value": 1.09
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.014
+            "unit": "sg",
+            "value": 1.014
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.024
+            "unit": "sg",
+            "value": 1.024
           }
         },
         "international_bitterness_units": {
@@ -4038,12 +4038,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 7.0
+            "unit": "SRM",
+            "value": 7.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 19.0
+            "unit": "SRM",
+            "value": 19.0
           }
         },
         "alcohol_by_volume": {
@@ -4075,22 +4075,22 @@
         "tags": "very-high-strength, amber-color, top-fermented, north-america, craft-style, strong-ale-family, bitter, hoppy",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.08
+            "unit": "sg",
+            "value": 1.08
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.12
+            "unit": "sg",
+            "value": 1.12
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.016
+            "unit": "sg",
+            "value": 1.016
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.03
+            "unit": "sg",
+            "value": 1.03
           }
         },
         "international_bitterness_units": {
@@ -4099,12 +4099,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 10.0
+            "unit": "SRM",
+            "value": 10.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 19.0
+            "unit": "SRM",
+            "value": 19.0
           }
         },
         "alcohol_by_volume": {
@@ -4136,22 +4136,22 @@
         "tags": "very-high-strength, amber-color, top-fermented, north-america, craft-style, strong-ale-family, wheat-beer-family, balanced, hoppy",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.08
+            "unit": "sg",
+            "value": 1.08
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.12
+            "unit": "sg",
+            "value": 1.12
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.016
+            "unit": "sg",
+            "value": 1.016
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.03
+            "unit": "sg",
+            "value": 1.03
           }
         },
         "international_bitterness_units": {
@@ -4160,12 +4160,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 8.0
+            "unit": "SRM",
+            "value": 8.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 15.0
+            "unit": "SRM",
+            "value": 15.0
           }
         },
         "alcohol_by_volume": {
@@ -4197,22 +4197,22 @@
         "tags": "session-beer, pale-color, top-fermented, central-europe, traditional-style, wheat-beer-family, sour",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.028
+            "unit": "sg",
+            "value": 1.028
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.032
+            "unit": "sg",
+            "value": 1.032
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.003
+            "unit": "sg",
+            "value": 1.003
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.006
+            "unit": "sg",
+            "value": 1.006
           }
         },
         "international_bitterness_units": {
@@ -4221,12 +4221,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 2.0
+            "unit": "SRM",
+            "value": 2.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 3.0
+            "unit": "SRM",
+            "value": 3.0
           }
         },
         "alcohol_by_volume": {
@@ -4258,22 +4258,22 @@
         "tags": "standard-strength, amber-color, top-fermenting, western-europe, traditional-style, sour-ale-family, balanced, sour, wood",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.048
+            "unit": "sg",
+            "value": 1.048
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.057
+            "unit": "sg",
+            "value": 1.057
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.002
+            "unit": "sg",
+            "value": 1.002
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.012
+            "unit": "sg",
+            "value": 1.012
           }
         },
         "international_bitterness_units": {
@@ -4282,12 +4282,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 10.0
+            "unit": "SRM",
+            "value": 10.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 16.0
+            "unit": "SRM",
+            "value": 16.0
           }
         },
         "alcohol_by_volume": {
@@ -4319,22 +4319,22 @@
         "tags": "standard-strength, dark-color, top-fermented, western-europe, traditional-style, sour-ale-family, malty, sour",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.04
+            "unit": "sg",
+            "value": 1.04
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.074
+            "unit": "sg",
+            "value": 1.074
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.012
+            "unit": "sg",
+            "value": 1.012
           }
         },
         "international_bitterness_units": {
@@ -4343,12 +4343,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 15.0
+            "unit": "SRM",
+            "value": 15.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 22.0
+            "unit": "SRM",
+            "value": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -4380,22 +4380,22 @@
         "tags": "standard-strength, pale-color, wild-fermented, western-europe, traditional-style, wheat-beer-family, sour",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.04
+            "unit": "sg",
+            "value": 1.04
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.054
+            "unit": "sg",
+            "value": 1.054
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.001
+            "unit": "sg",
+            "value": 1.001
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           }
         },
         "international_bitterness_units": {
@@ -4404,12 +4404,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 3.0
+            "unit": "SRM",
+            "value": 3.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 7.0
+            "unit": "SRM",
+            "value": 7.0
           }
         },
         "alcohol_by_volume": {
@@ -4441,22 +4441,22 @@
         "tags": "high-strength, pale-color, wild-fermented, western-europe, traditional-style, wheat-beer-family, aged, sour",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.04
+            "unit": "sg",
+            "value": 1.04
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.06
+            "unit": "sg",
+            "value": 1.06
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.0
+            "unit": "sg",
+            "value": 1.0
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.006
+            "unit": "sg",
+            "value": 1.006
           }
         },
         "international_bitterness_units": {
@@ -4465,12 +4465,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 3.0
+            "unit": "SRM",
+            "value": 3.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 7.0
+            "unit": "SRM",
+            "value": 7.0
           }
         },
         "alcohol_by_volume": {
@@ -4503,22 +4503,22 @@
         "entry_instructions": "The type of fruit used must be specified. The brewer must declare a carbonation level (low, medium, high) and a sweetness level (low/none, medium, high).",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.04
+            "unit": "sg",
+            "value": 1.04
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.06
+            "unit": "sg",
+            "value": 1.06
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.0
+            "unit": "sg",
+            "value": 1.0
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           }
         },
         "international_bitterness_units": {
@@ -4527,12 +4527,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 3.0
+            "unit": "SRM",
+            "value": 3.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 7.0
+            "unit": "SRM",
+            "value": 7.0
           }
         },
         "alcohol_by_volume": {
@@ -4564,22 +4564,22 @@
         "tags": "standard-strength, pale-color, top-fermented, western-europe, traditional-style, wheat-beer-family, spice",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.044
+            "unit": "sg",
+            "value": 1.044
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.052
+            "unit": "sg",
+            "value": 1.052
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.012
+            "unit": "sg",
+            "value": 1.012
           }
         },
         "international_bitterness_units": {
@@ -4588,12 +4588,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 2.0
+            "unit": "SRM",
+            "value": 2.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 4.0
+            "unit": "SRM",
+            "value": 4.0
           }
         },
         "alcohol_by_volume": {
@@ -4625,22 +4625,22 @@
         "tags": "standard-strength, amber-color, top-fermented, western-europe, traditional-style, pale-ale-family, balanced",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.048
+            "unit": "sg",
+            "value": 1.048
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.054
+            "unit": "sg",
+            "value": 1.054
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.014
+            "unit": "sg",
+            "value": 1.014
           }
         },
         "international_bitterness_units": {
@@ -4649,12 +4649,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 8.0
+            "unit": "SRM",
+            "value": 8.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 14.0
+            "unit": "SRM",
+            "value": 14.0
           }
         },
         "alcohol_by_volume": {
@@ -4687,22 +4687,22 @@
         "entry_instructions": "Entrant must specify blond, amber, or brown bi\u00e8re de garde. If no color is specified, the judge should attempt to judge based on initial observation, expecting a malt flavor and balance that matches the color.",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.06
+            "unit": "sg",
+            "value": 1.06
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.08
+            "unit": "sg",
+            "value": 1.08
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.016
+            "unit": "sg",
+            "value": 1.016
           }
         },
         "international_bitterness_units": {
@@ -4711,12 +4711,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 6.0
+            "unit": "SRM",
+            "value": 6.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 19.0
+            "unit": "SRM",
+            "value": 19.0
           }
         },
         "alcohol_by_volume": {
@@ -4748,22 +4748,22 @@
         "tags": "high-strength, pale-color, top-fermented, western-europe, traditional-style, balanced",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.062
+            "unit": "sg",
+            "value": 1.062
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.075
+            "unit": "sg",
+            "value": 1.075
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.018
+            "unit": "sg",
+            "value": 1.018
           }
         },
         "international_bitterness_units": {
@@ -4772,12 +4772,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 4.0
+            "unit": "SRM",
+            "value": 4.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 7.0
+            "unit": "SRM",
+            "value": 7.0
           }
         },
         "alcohol_by_volume": {
@@ -4810,22 +4810,22 @@
         "entry_instructions": "The entrant must specify the strength (table, standard, super) and the color (pale, dark).",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.048
+            "unit": "sg",
+            "value": 1.048
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.065
+            "unit": "sg",
+            "value": 1.065
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.002
+            "unit": "sg",
+            "value": 1.002
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           }
         },
         "international_bitterness_units": {
@@ -4834,12 +4834,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 5.0
+            "unit": "SRM",
+            "value": 5.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 14.0
+            "unit": "SRM",
+            "value": 14.0
           }
         },
         "alcohol_by_volume": {
@@ -4871,22 +4871,22 @@
         "tags": "very-high-strength, pale-color, top-fermented, western-europe, traditional-style, bitter",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.07
+            "unit": "sg",
+            "value": 1.07
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.095
+            "unit": "sg",
+            "value": 1.095
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.005
+            "unit": "sg",
+            "value": 1.005
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.016
+            "unit": "sg",
+            "value": 1.016
           }
         },
         "international_bitterness_units": {
@@ -4895,12 +4895,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 3.0
+            "unit": "SRM",
+            "value": 3.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 6.0
+            "unit": "SRM",
+            "value": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -4932,22 +4932,22 @@
         "tags": "standard-strength, pale-color, top-fermenting, western-europe, craft-style, bitter, hoppy",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.044
+            "unit": "sg",
+            "value": 1.044
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.054
+            "unit": "sg",
+            "value": 1.054
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.004
+            "unit": "sg",
+            "value": 1.004
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           }
         },
         "international_bitterness_units": {
@@ -4956,12 +4956,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 3.0
+            "unit": "SRM",
+            "value": 3.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 5.0
+            "unit": "SRM",
+            "value": 5.0
           }
         },
         "alcohol_by_volume": {
@@ -4993,22 +4993,22 @@
         "tags": "high-strength, amber-color, top-fermented, western-europe, traditional-style, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.062
+            "unit": "sg",
+            "value": 1.062
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.075
+            "unit": "sg",
+            "value": 1.075
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.018
+            "unit": "sg",
+            "value": 1.018
           }
         },
         "international_bitterness_units": {
@@ -5017,12 +5017,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 10.0
+            "unit": "SRM",
+            "value": 10.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 17.0
+            "unit": "SRM",
+            "value": 17.0
           }
         },
         "alcohol_by_volume": {
@@ -5054,22 +5054,22 @@
         "tags": "high-strength, pale-color, top-fermented, western-europe, traditional-style, bitter",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.075
+            "unit": "sg",
+            "value": 1.075
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.085
+            "unit": "sg",
+            "value": 1.085
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.014
+            "unit": "sg",
+            "value": 1.014
           }
         },
         "international_bitterness_units": {
@@ -5078,12 +5078,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 4.5
+            "unit": "SRM",
+            "value": 4.5
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 7.0
+            "unit": "SRM",
+            "value": 7.0
           }
         },
         "alcohol_by_volume": {
@@ -5115,22 +5115,22 @@
         "tags": "very-high-strength, amber-color, top-fermented, western-europe, traditional-style, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.075
+            "unit": "sg",
+            "value": 1.075
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.11
+            "unit": "sg",
+            "value": 1.11
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.024
+            "unit": "sg",
+            "value": 1.024
           }
         },
         "international_bitterness_units": {
@@ -5139,12 +5139,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 12.0
+            "unit": "SRM",
+            "value": 12.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 22.0
+            "unit": "SRM",
+            "value": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -5176,22 +5176,22 @@
         "tags": "standard-strength, pale-color, top-fermented, central-europe, historical-style, wheat-beer-family, sour, spice",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.036
+            "unit": "sg",
+            "value": 1.036
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.056
+            "unit": "sg",
+            "value": 1.056
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.006
+            "unit": "sg",
+            "value": 1.006
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           }
         },
         "international_bitterness_units": {
@@ -5200,12 +5200,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 3.0
+            "unit": "SRM",
+            "value": 3.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 4.0
+            "unit": "SRM",
+            "value": 4.0
           }
         },
         "alcohol_by_volume": {
@@ -5237,22 +5237,22 @@
         "tags": "standard-strength, amber-color, top-fermented, north-america, historical-style, balanced",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.044
+            "unit": "sg",
+            "value": 1.044
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.055
+            "unit": "sg",
+            "value": 1.055
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.018
+            "unit": "sg",
+            "value": 1.018
           }
         },
         "international_bitterness_units": {
@@ -5261,12 +5261,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 11.0
+            "unit": "SRM",
+            "value": 11.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 20.0
+            "unit": "SRM",
+            "value": 20.0
           }
         },
         "alcohol_by_volume": {
@@ -5297,22 +5297,22 @@
         "tags": "standard-strength, pale-color, top-fermented, central-europe, historical-style, wheat-beer-family, sour, smoke",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.032
+            "unit": "sg",
+            "value": 1.032
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.04
+            "unit": "sg",
+            "value": 1.04
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.004
+            "unit": "sg",
+            "value": 1.004
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.008
+            "unit": "sg",
+            "value": 1.008
           }
         },
         "international_bitterness_units": {
@@ -5321,12 +5321,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 3.0
+            "unit": "SRM",
+            "value": 3.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 6.0
+            "unit": "SRM",
+            "value": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -5358,22 +5358,22 @@
         "tags": "session-strength, dark-color, top-fermented, british-isles, historical-style, brown-ale-family, malty, sweet",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.033
+            "unit": "sg",
+            "value": 1.033
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.038
+            "unit": "sg",
+            "value": 1.038
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.012
+            "unit": "sg",
+            "value": 1.012
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.015
+            "unit": "sg",
+            "value": 1.015
           }
         },
         "international_bitterness_units": {
@@ -5382,12 +5382,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 22.0
+            "unit": "SRM",
+            "value": 22.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 35.0
+            "unit": "SRM",
+            "value": 35.0
           }
         },
         "alcohol_by_volume": {
@@ -5418,22 +5418,22 @@
         "tags": "session-strength, pale-color, top-fermented, central-europe, historical-style, wheat-beer-family, bitter, smoke",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.028
+            "unit": "sg",
+            "value": 1.028
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.032
+            "unit": "sg",
+            "value": 1.032
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.006
+            "unit": "sg",
+            "value": 1.006
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.012
+            "unit": "sg",
+            "value": 1.012
           }
         },
         "international_bitterness_units": {
@@ -5442,12 +5442,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 3.0
+            "unit": "SRM",
+            "value": 3.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 6.0
+            "unit": "SRM",
+            "value": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -5479,22 +5479,22 @@
         "tags": "standard-strength, pale-color, bottom-fermented, lagered, north-america, historical-style, pilsner-family, bitter, hoppy",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.044
+            "unit": "sg",
+            "value": 1.044
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.06
+            "unit": "sg",
+            "value": 1.06
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.015
+            "unit": "sg",
+            "value": 1.015
           }
         },
         "international_bitterness_units": {
@@ -5503,12 +5503,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 3.0
+            "unit": "SRM",
+            "value": 3.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 6.0
+            "unit": "SRM",
+            "value": 6.0
           }
         },
         "alcohol_by_volume": {
@@ -5540,22 +5540,22 @@
         "tags": "standard-strength, dark-color, any-fermentation, north-america, historical-style, porter-family, malty",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.046
+            "unit": "sg",
+            "value": 1.046
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.06
+            "unit": "sg",
+            "value": 1.06
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.016
+            "unit": "sg",
+            "value": 1.016
           }
         },
         "international_bitterness_units": {
@@ -5564,12 +5564,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 18.0
+            "unit": "SRM",
+            "value": 18.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 30.0
+            "unit": "SRM",
+            "value": 30.0
           }
         },
         "alcohol_by_volume": {
@@ -5601,22 +5601,22 @@
         "tags": "standard-strength, amber-color, top-fermenting, central-europe, historical-style, wheat-beer-family",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.046
+            "unit": "sg",
+            "value": 1.046
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.056
+            "unit": "sg",
+            "value": 1.056
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.014
+            "unit": "sg",
+            "value": 1.014
           }
         },
         "international_bitterness_units": {
@@ -5625,12 +5625,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 14.0
+            "unit": "SRM",
+            "value": 14.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 19.0
+            "unit": "SRM",
+            "value": 19.0
           }
         },
         "alcohol_by_volume": {
@@ -5661,22 +5661,22 @@
         "tags": "high-strength, amber-color, top-fermented, central-europe, historical-style, spic",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.076
+            "unit": "sg",
+            "value": 1.076
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.12
+            "unit": "sg",
+            "value": 1.12
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.016
+            "unit": "sg",
+            "value": 1.016
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.02
+            "unit": "sg",
+            "value": 1.02
           }
         },
         "international_bitterness_units": {
@@ -5685,12 +5685,12 @@
         },
         "color": {
           "minimum": {
-            "units": "SRM",
-            "scale": 4.0
+            "unit": "SRM",
+            "value": 4.0
           },
           "maximum": {
-            "units": "SRM",
-            "scale": 22.0
+            "unit": "SRM",
+            "value": 22.0
           }
         },
         "alcohol_by_volume": {
@@ -6342,22 +6342,22 @@
         "entry_instructions": "Entrants MUST specify carbonation level (3 levels). Entrants MUST specify sweetness (5 categories). If OG is substantially above typical range, entrant should explain, e.g., particular variety of apple giving high-gravity juice. Varieties: Common (Winesap, Macintosh, Golden Delicious, Braeburn, Jonathan), multi-use (Northern Spy, Russets, Baldwin), crabapples, any suitable wildings.",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.045
+            "unit": "sg",
+            "value": 1.045
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.065
+            "unit": "sg",
+            "value": 1.065
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 0.995
+            "unit": "sg",
+            "value": 0.995
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.02
+            "unit": "sg",
+            "value": 1.02
           }
         },
         "alcohol_by_volume": {
@@ -6384,22 +6384,22 @@
         "entry_instructions": "Entrants MUST specify carbonation level (3 levels). Entrants MUST specify sweetness (dry through medium-sweet, 4 levels). Entrants MAY specify variety of apple for a single varietal cider; if specified, varietal character will be expected. Varieties: Kingston Black, Stoke Red, Dabinett, Porter's Perfection, Nehou, Yarlington Mill, Major, various Jerseys, etc.",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.05
+            "unit": "sg",
+            "value": 1.05
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.075
+            "unit": "sg",
+            "value": 1.075
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 0.995
+            "unit": "sg",
+            "value": 0.995
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.015
+            "unit": "sg",
+            "value": 1.015
           }
         },
         "alcohol_by_volume": {
@@ -6426,22 +6426,22 @@
         "entry_instructions": "Entrants MUST specify carbonation level (3 levels). Entrants MUST specify sweetness (medium to sweet only, 3 levels). Entrants MAY specify variety of apple for a single varietal cider; if specified, varietal character will be expected. Varieties: Nehou, Muscadet de Dieppe, Reine des Pommes, Michelin, etc.",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.05
+            "unit": "sg",
+            "value": 1.05
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.065
+            "unit": "sg",
+            "value": 1.065
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.02
+            "unit": "sg",
+            "value": 1.02
           }
         },
         "alcohol_by_volume": {
@@ -6468,22 +6468,22 @@
         "entry_instructions": "Entrants MUST specify carbonation level (3 levels). Entrants MUST specify sweetness (5 categories). Varieties: Bartlett, Kiefer, Comice, Conference, etc.",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.05
+            "unit": "sg",
+            "value": 1.05
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.06
+            "unit": "sg",
+            "value": 1.06
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.0
+            "unit": "sg",
+            "value": 1.0
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.02
+            "unit": "sg",
+            "value": 1.02
           }
         },
         "alcohol_by_volume": {
@@ -6510,22 +6510,22 @@
         "entry_instructions": "Entrants MUST specify carbonation level (3 levels). Entrants MUST specify sweetness (5 categories). Entrants MUST state variety of pear(s) used. Varieties: Butt, Gin, Brandy, Barland, Blakeney Red, Thorn, Moorcroft, etc.",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.05
+            "unit": "sg",
+            "value": 1.05
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.07
+            "unit": "sg",
+            "value": 1.07
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.0
+            "unit": "sg",
+            "value": 1.0
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.02
+            "unit": "sg",
+            "value": 1.02
           }
         },
         "alcohol_by_volume": {
@@ -6551,22 +6551,22 @@
         "entry_instructions": "Entrants MUST specify if the cider was barrel-fermented or aged. Entrants MUST specify carbonation level (3 levels). Entrants MUST specify sweetness (5 levels). Varieties: Northern Spy, Roxbury Russet, Golden Russet, Baldwin, etc.; many traditional New England apples.",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.06
+            "unit": "sg",
+            "value": 1.06
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.1
+            "unit": "sg",
+            "value": 1.1
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 0.995
+            "unit": "sg",
+            "value": 0.995
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.02
+            "unit": "sg",
+            "value": 1.02
           }
         },
         "alcohol_by_volume": {
@@ -6592,22 +6592,22 @@
         "entry_instructions": "Entrants MUST specify carbonation level (3 levels). Entrants MUST specify sweetness (5 categories). Entrants MUST specify all fruit(s) and/or fruit juice(s) added.",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.045
+            "unit": "sg",
+            "value": 1.045
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.07
+            "unit": "sg",
+            "value": 1.07
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 0.995
+            "unit": "sg",
+            "value": 0.995
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           }
         },
         "alcohol_by_volume": {
@@ -6633,22 +6633,22 @@
         "entry_instructions": "Entrants MUST specify carbonation level (3 levels). Entrants MUST specify sweetness (5 levels).",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.07
+            "unit": "sg",
+            "value": 1.07
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.1
+            "unit": "sg",
+            "value": 1.1
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 0.995
+            "unit": "sg",
+            "value": 0.995
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.02
+            "unit": "sg",
+            "value": 1.02
           }
         },
         "alcohol_by_volume": {
@@ -6673,22 +6673,22 @@
         "entry_instructions": "Entrants MUST specify starting gravity, final gravity or residual sugar, and alcohol level. Entrants MUST specify carbonation level (3 levels). Varieties: Usually North American classic table fruit such as McIntosh or Cortland.",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.13
+            "unit": "sg",
+            "value": 1.13
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.18
+            "unit": "sg",
+            "value": 1.18
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.06
+            "unit": "sg",
+            "value": 1.06
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.085
+            "unit": "sg",
+            "value": 1.085
           }
         },
         "alcohol_by_volume": {
@@ -6714,22 +6714,22 @@
         "entry_instructions": "Entrants MUST specify carbonation level (3 levels). Entrants MUST specify sweetness (5 categories). Entrants MUST specify all botanicals added. If hops are used, entrant must specify variety/varieties used.",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.045
+            "unit": "sg",
+            "value": 1.045
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.07
+            "unit": "sg",
+            "value": 1.07
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 0.995
+            "unit": "sg",
+            "value": 0.995
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.01
+            "unit": "sg",
+            "value": 1.01
           }
         },
         "alcohol_by_volume": {
@@ -6754,22 +6754,22 @@
         "entry_instructions": "Entrants MUST specify all ingredients. Entrants MUST specify carbonation level (3 levels). Entrants MUST specify sweetness (5 categories).",
         "original_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 1.045
+            "unit": "sg",
+            "value": 1.045
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.1
+            "unit": "sg",
+            "value": 1.1
           }
         },
         "final_gravity": {
           "minimum": {
-            "units": "sg",
-            "density": 0.995
+            "unit": "sg",
+            "value": 0.995
           },
           "maximum": {
-            "units": "sg",
-            "density": 1.02
+            "unit": "sg",
+            "value": 1.02
           }
         },
         "alcohol_by_volume": {
