@@ -242,11 +242,11 @@
 		},
 		"SpecificHeatUnitType": {
 			"type": "string",
-			"enum": ["J/(kg K)", "BTU/(lb F)"]
+			"enum": ["Cal/(g C)","J/(kg K)", "BTU/(lb F)"]
 		},
 		"SpecificVolumeUnitType": {
 			"type": "string",
-			"enum": ["m^3/kg", "ft^3/lb"]
+			"enum": ["qt/lb", "gal/lb", "gal/oz","l/g", "l/kg", "ozfl/oz", "m^3/kg", "ft^3/lb"]
 		},
 		"UnitUnitType": {
 			"type": "string",
