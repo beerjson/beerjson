@@ -199,7 +199,7 @@ const importFromBeerXml = xml => {
                   },
                   ...(!_.isEmpty(mash_step['RAMP_TIME'])
                     ? {
-                        step_time: {
+                        ramp_time: {
                           unit: 'min',
                           value: Number(mash_step['RAMP_TIME'])
                         }
