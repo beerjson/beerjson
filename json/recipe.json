@@ -68,7 +68,8 @@
                 "fermentable_bill collects all the fermentable ingredients for use in a recipe",
               "items": {
                 "$ref": "fermentable.json#/definitions/FermentableAdditionType"
-              }
+              },
+              "minItems": 1
             },
             "hop_bill": {
               "type": "array",
@@ -76,7 +77,8 @@
                 "hop_bill collects all the hops for use in a recipe",
               "items": {
                 "$ref": "hop.json#/definitions/HopAdditionType"
-              }
+              },
+              "minItems": 1
             },
             "miscellaneous_additions": {
               "type": "array",
@@ -84,7 +86,8 @@
                 "miscellaneous_additions collects all the miscellaneous items for use in a recipe",
               "items": {
                 "$ref": "misc.json#/definitions/MiscellaneousAdditionType"
-              }
+              },
+              "minItems": 1
             },
             "culture_additions": {
               "type": "array",
@@ -92,7 +95,8 @@
                 "culture_additions collects all the culture items for use in a recipe",
               "items": {
                 "$ref": "culture.json#/definitions/CultureAdditionType"
-              }
+              },
+              "minItems": 1
             },
             "water_additions": {
               "type": "array",
@@ -100,7 +104,8 @@
                 "water_additions collects all the water items for use in a recipe",
               "items": {
                 "$ref": "water.json#/definitions/WaterAdditionType"
-              }
+              },
+              "minItems": 1
             }
           },
           "required": ["fermentable_bill"]
