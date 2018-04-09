@@ -43,13 +43,25 @@ const formatProperties = requiredList =>
   )
 
 const formatTypeDefinition = ([typeName, typeDef]) =>
-  `## ${typeName}
+  `## ${typeName} 
 
 ${R.propOr('*no description yet*', 'description', typeDef)}
 
 \`${typeName}\` type: \`${typeDef.type}\`
 
-${formatProperties(R.propOr([], 'required', typeDef))(typeDef)}
+${R.cond([
+    [
+      R.has('allOf'),
+      typeDef =>
+        formatProperties(R.propOr([], 'required', typeDef))(
+          R.mergeAll(R.prop('allOf', typeDef))
+        )
+    ],
+    [
+      R.T,
+      typeDef => formatProperties(R.propOr([], 'required', typeDef))(typeDef)
+    ]
+  ])(typeDef)}
 `
 
 const addTypeHeader = str => `The schema defines the following types:\n\n${str}`
