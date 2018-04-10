@@ -52,15 +52,26 @@ ${R.propOr('*no description yet*', 'description', typeDef)}
 ${R.cond([
     [
       R.has('allOf'),
-      typeDef =>
-        formatProperties(R.propOr([], 'required', typeDef))(
-          R.mergeAll(R.prop('allOf', typeDef))
-        )
+      R.pipe(
+        R.prop('allOf'),
+        R.mergeAll,
+        R.prop('$ref'),
+        ref => `Parent: ${formatTypeRef(ref)}`
+      )
     ],
+    [R.T, () => '']
+  ])(typeDef)}
+
+${R.cond([
     [
-      R.T,
-      typeDef => formatProperties(R.propOr([], 'required', typeDef))(typeDef)
-    ]
+      R.has('allOf'),
+      R.pipe(
+        R.prop('allOf'),
+        R.mergeAll,
+        formatProperties(R.propOr([], 'required'))
+      )
+    ],
+    [R.T, formatProperties(R.propOr([], 'required'))]
   ])(typeDef)}
 `
 
