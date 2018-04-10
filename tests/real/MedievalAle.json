@@ -7,16 +7,16 @@
         "type": "all grain",
         "author": "",
         "batch_size": {
-          "units": "gal",
-          "volume": 5.5
+          "unit": "gal",
+          "value": 5.5
         },
         "boil_size": {
-          "units": "gal",
-          "volume": 5.5
+          "unit": "gal",
+          "value": 5.5
         },
         "boil_time": {
-          "units": "min",
-          "duration": 90.0
+          "unit": "min",
+          "value": 90.0
         },
         "efficiency": {
           "conversion": 92.0,
@@ -28,9 +28,9 @@
           "name": "Specialty",
           "category": "Experimental and Historic",
           "category_number": 24,
-          "style_letter": "",
+          "style_letter": "A",
           "style_guide": "BJCP 1999",
-          "type": "mixed"
+          "type": "beer"
         },
 
         "ingredients": {
@@ -39,13 +39,13 @@
               "name": "Buckwheat Honey",
               "type": "adjunct",
               "color": {
-                "units": "L",
-                "scale": 0.0
+                "unit": "L",
+                "value": 0.0
               },
               "origin": "America",
               "amount": {
-                "units": "lb",
-                "mass": 2.148
+                "unit": "lb",
+                "value": 2.148
               },
               "yield": 85
             },
@@ -53,13 +53,13 @@
               "name": "Flaked Barley",
               "type": "adjunct",
               "color": {
-                "units": "L",
-                "scale": 2.2
+                "unit": "L",
+                "value": 2.2
               },
               "origin": "America",
               "amount": {
-                "units": "lb",
-                "mass": 0.5
+                "unit": "lb",
+                "value": 0.5
               },
               "yield": 85
             },
@@ -67,13 +67,13 @@
               "name": "Roasted Barley",
               "type": "grain",
               "color": {
-                "units": "L",
-                "scale": 450.0
+                "unit": "L",
+                "value": 450.0
               },
               "origin": "America",
               "amount": {
-                "units": "lb",
-                "mass": 0.25
+                "unit": "lb",
+                "value": 0.25
               },
               "yield": 85
             },
@@ -81,13 +81,13 @@
               "name": "Unmalted Wheat",
               "type": "grain",
               "color": {
-                "units": "L",
-                "scale": 2.7
+                "unit": "L",
+                "value": 2.7
               },
               "origin": "America",
               "amount": {
-                "units": "lb",
-                "mass": 1.5
+                "unit": "lb",
+                "value": 1.5
               },
               "yield": 85
             },
@@ -95,13 +95,13 @@
               "name": "Pale Malt(2-row)",
               "type": "grain",
               "color": {
-                "units": "L",
-                "scale": 1.8
+                "unit": "L",
+                "value": 1.8
               },
               "origin": "America",
               "amount": {
-                "units": "lb",
-                "mass": 8.0
+                "unit": "lb",
+                "value": 8.0
               },
               "yield": 85
             },
@@ -109,13 +109,13 @@
               "name": "Crystal Malt",
               "type": "grain",
               "color": {
-                "units": "L",
-                "scale": 60.0
+                "unit": "L",
+                "value": 60.0
               },
               "origin": "America",
               "amount": {
-                "units": "lb",
-                "mass": 1.0
+                "unit": "lb",
+                "value": 1.0
               },
               "yield": 85
             }
@@ -125,65 +125,65 @@
               "name": "Bitter Orange Peel",
               "type": "spice",
               "use": "boil",
-              "amount_as_weight": {
-                "units": "oz",
-                "mass": 0.63
+              "amount": {
+                "unit": "oz",
+                "value": 0.63
               },
               "time": {
-                "units": "min",
-                "duration": 60
+                "unit": "min",
+                "value": 60
               }
             },
             {
               "name": "Licorice Stick",
               "type": "spice",
               "use": "boil",
-              "amount_as_weight": {
-                "units": "oz",
-                "mass": 0.75
+              "amount": {
+                "unit": "oz",
+                "value": 0.75
               },
               "time": {
-                "units": "min",
-                "duration": 60
+                "unit": "min",
+                "value": 60
               }
             },
             {
               "name": "Mugwort",
               "type": "herb",
               "use": "boil",
-              "amount_as_weight": {
-                "units": "oz",
-                "mass": 1.0
+              "amount": {
+                "unit": "oz",
+                "value": 1.0
               },
               "time": {
-                "units": "min",
-                "duration": 60.0
+                "unit": "min",
+                "value": 60.0
               }
             },
             {
               "name": "Juniper Berries",
               "type": "fruit",
               "use": "fermentation",
-              "amount_as_weight": {
-                "units": "oz",
-                "mass": 1.0
+              "amount": {
+                "unit": "oz",
+                "value": 1.0
               },
               "time": {
-                "units": "day",
-                "duration": 0.0
+                "unit": "day",
+                "value": 0.0
               }
             },
             {
               "name": "Lemon Balm",
               "type": "herb",
               "use": "boil",
-              "amount_as_weight": {
-                "units": "oz",
-                "mass": 3.0
+              "amount": {
+                "unit": "oz",
+                "value": 3.0
               },
               "time": {
-                "units": "min",
-                "duration": 0.0
+                "unit": "min",
+                "value": 0.0
               }
             }
           ],
@@ -195,8 +195,8 @@
               "laboratory": "Ithaca Beer C",
               "product_id": "",
               "amount": {
-                "units": "ml",
-                "volume": 0.0
+                "unit": "ml",
+                "value": 0.0
               }
             }
           ]
@@ -204,8 +204,8 @@
         "mash": {
           "name": "Simple Mash Type - Single Step",
           "grain_temperature": {
-            "units": "F",
-            "degrees": 80.0
+            "unit": "F",
+            "value": 80.0
           },
           "notes": "",
           "mash_steps": [
@@ -213,38 +213,38 @@
               "name": "Saccharification Rest",
               "type": "infusion",
               "infuse_amount": {
-                "units": "qt",
-                "volume": 22.5
+                "unit": "qt",
+                "value": 22.5
               },
               "step_temperature": {
-                "units": "F",
-                "degrees": 158.0
+                "unit": "F",
+                "value": 158.0
               },
               "step_time": {
-                "units": "min",
-                "duration": 70.0
+                "unit": "min",
+                "value": 70.0
               },
               "ramp_time": {
-                "units": "min",
-                "duration": 5.0
+                "unit": "min",
+                "value": 5.0
               },
               "end_temperature": {
-                "units": "F",
-                "degrees": 158.0
+                "unit": "F",
+                "value": 158.0
               },
               "description": "Add 22.50 qt of water at 165.0 F",
               "water_grain_ratio": 2.09,
               "infuse_temperature": {
-                "units": "F",
-                "degrees": 165.0
+                "unit": "F",
+                "value": 165.0
               }
             }
           ]
         },
         "notes": "",
         "original_gravity": {
-          "units": "sg",
-          "density": 1.059
+          "unit": "sg",
+          "value": 1.059
         },
         "ibu_estimate": {
           "method": "Other",

@@ -7,12 +7,12 @@
         "type": "all grain",
         "author": "me",
         "batch_size": {
-          "units": "gal",
-          "volume": 5
+          "unit": "gal",
+          "value": 5
         },
         "boil_size": {
-          "units": "gal",
-          "volume": 5
+          "unit": "gal",
+          "value": 5
         },
         "boil_time": 90,
         "efficiency": {
@@ -27,12 +27,12 @@
               "name": "pale ale",
               "type": "grain",
               "color": {
-                "units": "SRM",
-                "scale": 3.0
+                "unit": "SRM",
+                "value": 3.0
               },
               "amount": {
-                "units": "kg",
-                "mass": 5
+                "unit": "kg",
+                "value": 5
               },
               "yield": 85
             }
@@ -54,14 +54,66 @@
               "farnesene": 1,
               "inventory": {
                 "pellet": {
-                  "units": "g",
-                  "mass": 30.0
+                  "unit": "g",
+                  "value": 30.0
                 }
               },
               "use": "dry hop",
               "amount": {
-                "units": "g",
-                "mass": 10.0
+                "unit": "g",
+                "value": 10.0
+              }
+            },
+            {
+              "name": "Distilled El Dorado Hop Oil",
+              "origin": "US",
+              "form": "extract",
+              "alpha_acid_units": 0.0,
+              "type": "aroma",
+              "notes":
+                "Distilled hop oil is an amazing new product we are making available to homebrewers.  Distilled hop oil varies from other oils in that it is produced from fresh hops, as opposed to dried and processed pellets.  Distilled hop oil delivers the same wet hop character that was previously only possible to acquire with the use of freshly harvested hops.  The oil is extremely shelf stable, so you can now brew a consistant fresh hop IPA all year long. Extremely volatile, this oil should only be used for aromatic applications; typically applied at bottling/kegging.",
+              "use": "dry hop",
+              "amount": {
+                "unit": "ml",
+                "value": 1.0
+              }
+            }
+          ],
+          "culture_additions": [
+            {
+              "name": "Burlington Ale",
+              "type": "ale",
+              "form": "liquid",
+              "laboratory": "White Labs",
+              "product_id": "WLP095",
+              "add_to_fermentation_step": 1,
+              "amount": {
+                "unit": "ml",
+                "value": 40.0
+              }
+            },
+            {
+              "name": "California Ale Yeast",
+              "type": "ale",
+              "form": "liquid",
+              "laboratory": "White Labs",
+              "product_id": "WLP001",
+              "add_to_fermentation_step": 2,
+              "amount": {
+                "unit": "each",
+                "value": 1
+              }
+            },
+            {
+              "name": "US-05",
+              "type": "ale",
+              "form": "dry",
+              "laboratory": "Safale",
+              "product_id": "WLP001",
+              "add_to_fermentation_step": 3,
+              "amount": {
+                "unit": "g",
+                "value": 11.5
               }
             }
           ]
@@ -75,46 +127,46 @@
             {
               "name": "Primary",
               "start_temperature": {
-                "units": "C",
-                "degrees": 19.4
+                "unit": "C",
+                "value": 19.4
               },
               "end_temperature": {
-                "units": "C",
-                "degrees": 19.4
+                "unit": "C",
+                "value": 19.4
               },
               "step_time": {
-                "units": "day",
-                "duration": 14.0
+                "unit": "day",
+                "value": 14.0
               }
             },
             {
               "name": "Secondary",
               "start_temperature": {
-                "units": "C",
-                "degrees": 18.3
+                "unit": "C",
+                "value": 18.3
               },
               "end_temperature": {
-                "units": "C",
-                "degrees": 18.3
+                "unit": "C",
+                "value": 18.3
               },
               "step_time": {
-                "units": "day",
-                "duration": 10.0
+                "unit": "day",
+                "value": 10.0
               }
             },
             {
               "name": "Tertiary",
               "start_temperature": {
-                "units": "C",
-                "degrees": 18.3
+                "unit": "C",
+                "value": 18.3
               },
               "end_temperature": {
-                "units": "C",
-                "degrees": 18.3
+                "unit": "C",
+                "value": 18.3
               },
               "step_time": {
-                "units": "day",
-                "duration": 7
+                "unit": "day",
+                "value": 7
               }
             }
           ]

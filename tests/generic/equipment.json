@@ -6,12 +6,12 @@
         "name": "10Gal Mashtun",
         "type": "Mash Tun",
         "loss": {
-          "units": "gal",
-          "volume": 1
+          "unit": "gal",
+          "value": 1
         },
         "maximum_volume": {
-          "units": "gal",
-          "volume": 1
+          "unit": "gal",
+          "value": 1
         }
       }
     ]

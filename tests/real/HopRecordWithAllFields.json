@@ -5,11 +5,12 @@
       {
         "name": "Super Hops",
         "origin": "Planet Krypton",
+        "form": "leaf",
         "alpha_acid_units": 4.5,
         "beta_acid_units": 5.5,
         "type": "bittering",
         "notes":
-          "This hop is a really cool hops - you can use it for anything. It leaps over buildings in a single bound, is faster than a speeding bullet and makes really bitter beer.",
+          "This hop is a really cool hops - you can use it for anything. It leaps over buildings in a single bound, is faster than a speeding bullet and makes really aromatic beers.",
         "percent_lost": 30,
         "substitutes": "Goldings, Fuggles, Super Alpha",
         "humulene": 2.34,
@@ -17,17 +18,31 @@
         "cohumulone": 13.2,
         "myrcene": 24.2,
         "inventory": {
-          "leaf": {
-            "units": "oz",
-            "mass": 2.0
-          },
-          "pellet": {
-            "units": "oz",
-            "mass": 0.5
-          },
-          "plug": {
-            "units": "oz",
-            "mass": 0.0
+          "amount": {
+            "unit": "oz",
+            "value": 2.0
+          }
+        }
+      },
+      {
+        "name": "Lex Luthor Hops",
+        "origin": "Planet Earth",
+        "form": "extract",
+        "alpha_acid_units": 4.5,
+        "beta_acid_units": 5.5,
+        "type": "bittering",
+        "notes":
+          "This hop is a really dangerous hop - you can use it with extreme care. It cracks buildings in a single bound, is smarter than your average vilain, and makes really bitter beer.",
+        "percent_lost": 30,
+        "substitutes": "Goldings, Fuggles, Super Alpha",
+        "humulene": 2.34,
+        "caryophyllene": 1.23,
+        "cohumulone": 13.2,
+        "myrcene": 24.2,
+        "inventory": {
+          "amount": {
+            "unit": "ozfl",
+            "value": 2.0
           }
         }
       }
