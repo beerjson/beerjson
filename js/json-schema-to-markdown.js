@@ -68,10 +68,10 @@ ${R.cond([
       R.pipe(
         R.prop('allOf'),
         R.mergeAll,
-        formatProperties(R.propOr([], 'required'))
+        formatProperties(R.propOr([], 'required', typeDef))
       )
     ],
-    [R.T, formatProperties(R.propOr([], 'required'))]
+    [R.T, formatProperties(R.propOr([], 'required', typeDef))]
   ])(typeDef)}
 `
 
