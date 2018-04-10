@@ -1,10 +1,12 @@
 The schema defines the following types:
 
-## RecipeType
+## RecipeType 
 
-RecipeType composes the information stored in a beer_xml recipe
+RecipeType composes the information stored in a beerjson recipe
 
 `RecipeType` type: `object`
+
+
 
 ### Properties
 
@@ -18,7 +20,7 @@ RecipeType composes the information stored in a beer_xml recipe
 | **batch_size** | [VolumeType](measureable_units.json.md#volumetype)|  | :white_check_mark: |
 | **boil_size** | [VolumeType](measureable_units.json.md#volumetype)|  | :white_check_mark: |
 | **boil_time** | [TimeType](measureable_units.json.md#timetype)|  | :white_check_mark: |
-| **efficiency** | [PercentType](measureable_units.json.md#percenttype)|  |  |
+| **efficiency** | object|  | :white_check_mark: |
 | **style** | [RecipeStyleType](#recipestyletype)|  |  |
 | **ingredients** | object|  | :white_check_mark: |
 | **mash** | [MashProcedureType](mash.json.md#mashproceduretype)|  |  |
@@ -26,7 +28,7 @@ RecipeType composes the information stored in a beer_xml recipe
 | **original_gravity** | [DensityType](measureable_units.json.md#densitytype)|  |  |
 | **final_gravity** | [DensityType](measureable_units.json.md#densitytype)|  |  |
 | **alcohol_by_volume** | [PercentType](measureable_units.json.md#percenttype)|  |  |
-| **ibu_estimate** | [IBUEstimateType](hops.json.md#ibuestimatetype)|  |  |
+| **ibu_estimate** | [IBUEstimateType](hop.json.md#ibuestimatetype)|  |  |
 | **color_estimate** | [ColorType](measureable_units.json.md#colortype)|  |  |
 | **beer_pH** | [AcidityType](measureable_units.json.md#aciditytype)|  |  |
 | **carbonation** | number|  |  |
@@ -34,10 +36,12 @@ RecipeType composes the information stored in a beer_xml recipe
 | **taste** | object|  |  |
 | **calories_per_pint** | number|  |  |
 
-## RecipeStyleType
+## RecipeStyleType 
 
 Recipe Style Type Description
 
 `RecipeStyleType` type: `undefined`
+
+
 
 

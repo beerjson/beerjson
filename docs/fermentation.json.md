@@ -1,10 +1,12 @@
 The schema defines the following types:
 
-## FermentationProcedureType
+## FermentationProcedureType 
 
 FermentationProcedureType defines the procedure for performing fermenting
 
 `FermentationProcedureType` type: `object`
+
+
 
 ### Properties
 

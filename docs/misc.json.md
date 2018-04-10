@@ -1,30 +1,50 @@
 The schema defines the following types:
 
-## MiscellaneousBase
+## MiscellaneousBase 
 
-MiscellaneousBase provides unique properties to identify individual records of adjunct ingredients
+MiscellaneousBase provides unique properties to identify individual records of ingredients
 
 `MiscellaneousBase` type: `object`
+
+
 
 ### Properties
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 | **name** | string|  | :white_check_mark: |
-| **type** |  'spice'  , 'fining'  , 'water agent'  , 'herb'  , 'fruit'  , 'flavor'  , 'other' |  | :white_check_mark: |
-| **use** |  'boil'  , 'mash'  , 'primary'  , 'secondary'  , 'bottling' |  | :white_check_mark: |
+| **type** |  'spice'  , 'fining'  , 'water agent'  , 'herb'  , 'fruit'  , 'flavor'  , 'wood'  , 'other' |  | :white_check_mark: |
+| **use** |  'boil'  , 'mash'  , 'fermentation'  , 'packaging' |  | :white_check_mark: |
 
-## MiscellaneousType
+## MiscellaneousType 
 
-MiscellaneousType collects the attributes of a adjunct ingredient to store as record information
+MiscellaneousType collects the attributes of an ingredient to store as record information
 
 `MiscellaneousType` type: `object`
 
+Parent: [MiscellaneousBase](#miscellaneousbase)
 
-## MiscellaneousAdditionType
+### Properties
 
-MiscellaneousAdditionType collects the attributes of an adjunct ingredient for use in a recipe adjunct bill
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **use_for** | string|  |  |
+| **notes** | string|  |  |
+| **inventory** | object|  |  |
 
-`MiscellaneousAdditionType` type: `array`
+## MiscellaneousAdditionType 
 
+MiscellaneousAdditionType collects the attributes of each miscellaneous ingredient for use in a recipe
+
+`MiscellaneousAdditionType` type: `object`
+
+Parent: [MiscellaneousBase](#miscellaneousbase)
+
+### Properties
+
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **time** | [TimeType](measureable_units.json.md#timetype)|  |  |
+| **amount** | [VolumeType](measureable_units.json.md#volumetype)|  |  |
+| **amount_as_weight** | [MassType](measureable_units.json.md#masstype)|  |  |
 

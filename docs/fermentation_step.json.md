@@ -1,10 +1,12 @@
 The schema defines the following types:
 
-## FermentationStepType
+## FermentationStepType 
 
 FermentationStepType - a per step representation of a fermentation action
 
 `FermentationStepType` type: `object`
+
+
 
 ### Properties
 

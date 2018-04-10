@@ -1,10 +1,12 @@
 The schema defines the following types:
 
-## StyleBase
+## StyleBase 
 
-The descriptive base type for both beer style guideline records and recipe style provisions. Provides unique properties to identify individual beer styles
+The descriptive base type for both style guideline records, and recipe style provisions. Provides unique properties to identify individual styles
 
 `StyleBase` type: `object`
+
+
 
 ### Properties
 
@@ -12,29 +14,53 @@ The descriptive base type for both beer style guideline records and recipe style
 |---|----|-----------|--------|
 | **name** | string|  | :white_check_mark: |
 | **category** | string|  | :white_check_mark: |
-| **category_number** | integer|  | :white_check_mark: |
-| **style_letter** | string|  | :white_check_mark: |
+| **category_number** | integer|  |  |
+| **style_letter** | string|  |  |
 | **style_guide** | string|  | :white_check_mark: |
 | **type** | [StyleCategories](#stylecategories)|  | :white_check_mark: |
 
-## StyleType
+## StyleType 
 
-StyleType provide information for BJCP Style categorization
+StyleType provide information for Style categorization
 
 `StyleType` type: `object`
 
+Parent: [StyleBase](#stylebase)
 
-## RecipeStyleType
+### Properties
+
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **original_gravity** | [DensityRangeType](measureable_units.json.md#densityrangetype)|  |  |
+| **final_gravity** | [DensityRangeType](measureable_units.json.md#densityrangetype)|  |  |
+| **international_bitterness_units** | [QuantitativeRangeType](measureable_units.json.md#quantitativerangetype)|  |  |
+| **color** | [ColorRangeType](measureable_units.json.md#colorrangetype)|  |  |
+| **carbonation** | [QuantitativeRangeType](measureable_units.json.md#quantitativerangetype)|  |  |
+| **alcohol_by_volume** | [PercentRangeType](measureable_units.json.md#percentrangetype)|  |  |
+| **notes** | string|  |  |
+| **aroma** | string|  |  |
+| **appearance** | string|  |  |
+| **flavor** | string|  |  |
+| **mouthfeel** | string|  |  |
+| **overall_impression** | string|  |  |
+| **ingredients** | string|  |  |
+| **examples** | string|  |  |
+
+## RecipeStyleType 
 
 RecipeStyleType defines style information stored in a recipe record
 
 `RecipeStyleType` type: `undefined`
 
+Parent: [StyleBase](#stylebase)
 
-## StyleCategories
+
+## StyleCategories 
 
 *no description yet*
 
 `StyleCategories` type: `string`
+
+
 
 

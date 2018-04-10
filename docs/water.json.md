@@ -1,10 +1,12 @@
 The schema defines the following types:
 
-## WaterBase
+## WaterBase 
 
 WaterBase provides unique properties to identify individual records of regional brewing water
 
 `WaterBase` type: `object`
+
+
 
 ### Properties
 
@@ -18,17 +20,27 @@ WaterBase provides unique properties to identify individual records of regional 
 | **sodium** | number|  | :white_check_mark: |
 | **magnesium** | number|  | :white_check_mark: |
 
-## WaterType
+## WaterType 
 
 WaterType collects the attributes of a regional brewing water to store as record information
 
 `WaterType` type: `object`
 
+Parent: [WaterBase](#waterbase)
 
-## WaterAdditionType
+### Properties
 
-WaterAdditionType collects the attributes of a water salt addition for use in a recipe
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **pH** | number|  |  |
+| **notes** | string|  |  |
 
-`WaterAdditionType` type: `array`
+## WaterAdditionType 
+
+WaterAdditionType collects the attributes of each water addition for use in a recipe
+
+`WaterAdditionType` type: `object`
+
+Parent: [WaterBase](#waterbase)
 
 
