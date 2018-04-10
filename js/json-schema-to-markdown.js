@@ -59,7 +59,7 @@ ${R.cond([
         ref => `Parent: ${formatTypeRef(ref)}`
       )
     ],
-    [R.T, () => '']
+    [R.T, () => {}]
   ])(typeDef)}
 
 ${R.cond([
