@@ -42,25 +42,27 @@ const formatProperties = requiredList =>
     R.ifElse(R.isEmpty, R.empty, addTableHeader)
   )
 
-const formatParentType = R.pipe(
-  R.prop('$ref'),
-  ref => `Parent: ${formatTypeRef(ref)}`
+const formatParentType = R.ifElse(
+  R.has('$ref'),
+  R.pipe(
+    R.prop('$ref'),
+    ref => `Parent: ${formatTypeRef(ref)}
+
+`
+  ),
+  R.always('')
 )
 
 const formatPropertyList = typeDef =>
-  R.cond([
-    [
-      R.has('allOf'),
-      R.pipe(
-        R.prop('allOf'),
-        R.mergeAll,
-        allof => `${formatParentType(allof)}
+  R.pipe(
+    R.when(R.has('allOf'), R.pipe(R.prop('allOf'), R.mergeAll)),
 
-${formatProperties(R.propOr([], 'required', typeDef))(allof)}`
-      )
-    ],
-    [R.T, formatProperties(R.propOr([], 'required', typeDef))]
-  ])(typeDef)
+    t =>
+      R.join('', [
+        formatParentType(t),
+        formatProperties(R.propOr([], 'required', typeDef))(t)
+      ])
+  )(typeDef)
 
 const formatTypeDefinition = ([typeName, typeDef]) =>
   `## ${typeName} 
