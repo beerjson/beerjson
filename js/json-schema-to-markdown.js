@@ -41,20 +41,26 @@ const formatProperties = requiredList =>
     R.reduce((md, pair) => md + formatPropDefinition(requiredList)(pair), ''),
     R.ifElse(R.isEmpty, R.empty, addTableHeader)
   )
-const formatParentType = R.cond([
-  [
-    R.has('allOf'),
-    R.pipe(
-      R.prop('allOf'),
-      R.mergeAll,
-      R.prop('$ref'),
-      ref => `Parent: ${formatTypeRef(ref)}`
-    )
-  ],
-  [R.T, R.always('')]
-])
 
-//const formatPropertyList =
+const formatParentType = R.pipe(
+  R.prop('$ref'),
+  ref => `Parent: ${formatTypeRef(ref)}`
+)
+
+const formatPropertyList = typeDef =>
+  R.cond([
+    [
+      R.has('allOf'),
+      R.pipe(
+        R.prop('allOf'),
+        R.mergeAll,
+        allof => `${formatParentType(allof)}
+
+${formatProperties(R.propOr([], 'required', typeDef))(allof)}`
+      )
+    ],
+    [R.T, formatProperties(R.propOr([], 'required', typeDef))]
+  ])(typeDef)
 
 const formatTypeDefinition = ([typeName, typeDef]) =>
   `## ${typeName} 
@@ -63,19 +69,7 @@ ${R.propOr('*no description yet*', 'description', typeDef)}
 
 \`${typeName}\` type: \`${typeDef.type}\`
 
-${formatParentType(typeDef)} 
-
-${R.cond([
-    [
-      R.has('allOf'),
-      R.pipe(
-        R.prop('allOf'),
-        R.mergeAll,
-        formatProperties(R.propOr([], 'required', typeDef))
-      )
-    ],
-    [R.T, formatProperties(R.propOr([], 'required', typeDef))]
-  ])(typeDef)}
+${formatPropertyList(typeDef)}
 `
 
 const addTypeHeader = str => `The schema defines the following types:\n\n${str}`
@@ -91,4 +85,3 @@ const jsonSchemaToMarkdown = formatDefinitions
 
 module.exports = jsonSchemaToMarkdown
 module.exports.formatTypeDefinition = formatTypeDefinition
-module.exports.formatParentType = formatParentType
