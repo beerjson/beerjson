@@ -6,14 +6,12 @@ The schema defines the following types:
 
 `VolumeType` type: `undefined`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | [VolumeUnitType](#volumeunittype)|  | :white_check_mark: |
-| **volume** | number|  | :white_check_mark: |
+| **unit** | [VolumeUnitType](#volumeunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
 ## MassType 
 
@@ -21,14 +19,12 @@ The schema defines the following types:
 
 `MassType` type: `undefined`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | [MassUnitType](#massunittype)|  | :white_check_mark: |
-| **mass** | number|  | :white_check_mark: |
+| **unit** | [MassUnitType](#massunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
 ## TemperatureType 
 
@@ -36,14 +32,12 @@ The schema defines the following types:
 
 `TemperatureType` type: `undefined`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | [TemperatureUnitType](#temperatureunittype)|  | :white_check_mark: |
-| **degrees** | number|  | :white_check_mark: |
+| **unit** | [TemperatureUnitType](#temperatureunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
 ## PressureType 
 
@@ -51,14 +45,12 @@ The schema defines the following types:
 
 `PressureType` type: `undefined`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | [PressureUnitType](#pressureunittype)|  | :white_check_mark: |
-| **pressure** | number|  | :white_check_mark: |
+| **unit** | [PressureUnitType](#pressureunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
 ## AcidityType 
 
@@ -66,14 +58,12 @@ The schema defines the following types:
 
 `AcidityType` type: `undefined`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | [AcidityUnitType](#acidityunittype)|  | :white_check_mark: |
-| **Acidity** | number|  |  |
+| **unit** | [AcidityUnitType](#acidityunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
 ## TimeType 
 
@@ -81,14 +71,12 @@ The schema defines the following types:
 
 `TimeType` type: `undefined`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | [TimeUnitType](#timeunittype)|  | :white_check_mark: |
-| **duration** | number|  | :white_check_mark: |
+| **unit** | [TimeUnitType](#timeunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
 ## ColorType 
 
@@ -96,14 +84,12 @@ The schema defines the following types:
 
 `ColorType` type: `undefined`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | [ColorUnitType](#colorunittype)|  | :white_check_mark: |
-| **scale** | number|  | :white_check_mark: |
+| **unit** | [ColorUnitType](#colorunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
 ## DensityType 
 
@@ -111,14 +97,12 @@ The schema defines the following types:
 
 `DensityType` type: `undefined`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | [DensityUnitType](#densityunittype)|  | :white_check_mark: |
-| **density** | number|  | :white_check_mark: |
+| **unit** | [DensityUnitType](#densityunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
 ## SpecificHeatType 
 
@@ -126,14 +110,12 @@ The schema defines the following types:
 
 `SpecificHeatType` type: `undefined`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | [SpecificHeatType](#specificheattype)|  | :white_check_mark: |
-| **specific heat** | number|  | :white_check_mark: |
+| **unit** | [SpecificHeatUnitType](#specificheatunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
 ## SpecificVolumeType 
 
@@ -141,22 +123,31 @@ The schema defines the following types:
 
 `SpecificVolumeType` type: `undefined`
 
+### Properties
 
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **unit** | [SpecificVolumeUnitType](#specificvolumeunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
+
+## UnitType 
+
+*no description yet*
+
+`UnitType` type: `undefined`
 
 ### Properties
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **units** | [SpecificVolumeType](#specificvolumetype)|  | :white_check_mark: |
-| **specific volume** | number|  | :white_check_mark: |
+| **unit** | [UnitUnitType](#unitunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
 ## QuantitativeRangeType 
 
 *no description yet*
 
 `QuantitativeRangeType` type: `object`
-
-
 
 ### Properties
 
@@ -171,8 +162,6 @@ The schema defines the following types:
 
 `TemperatureRangeType` type: `object`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|
@@ -185,8 +174,6 @@ The schema defines the following types:
 *no description yet*
 
 `ColorRangeType` type: `object`
-
-
 
 ### Properties
 
@@ -201,8 +188,6 @@ The schema defines the following types:
 
 `DensityRangeType` type: `object`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|
@@ -215,8 +200,6 @@ The schema defines the following types:
 *no description yet*
 
 `PercentRangeType` type: `object`
-
-
 
 ### Properties
 
@@ -232,15 +215,11 @@ The schema defines the following types:
 `VolumeUnitType` type: `string`
 
 
-
-
 ## MassUnitType 
 
 *no description yet*
 
 `MassUnitType` type: `string`
-
-
 
 
 ## TemperatureUnitType 
@@ -250,15 +229,11 @@ The schema defines the following types:
 `TemperatureUnitType` type: `string`
 
 
-
-
 ## AcidityUnitType 
 
 *no description yet*
 
 `AcidityUnitType` type: `string`
-
-
 
 
 ## PressureUnitType 
@@ -268,15 +243,11 @@ The schema defines the following types:
 `PressureUnitType` type: `string`
 
 
-
-
 ## TimeUnitType 
 
 *no description yet*
 
 `TimeUnitType` type: `string`
-
-
 
 
 ## ColorUnitType 
@@ -286,8 +257,6 @@ The schema defines the following types:
 `ColorUnitType` type: `string`
 
 
-
-
 ## DensityUnitType 
 
 *no description yet*
@@ -295,6 +264,25 @@ The schema defines the following types:
 `DensityUnitType` type: `string`
 
 
+## SpecificHeatUnitType 
+
+*no description yet*
+
+`SpecificHeatUnitType` type: `string`
+
+
+## SpecificVolumeUnitType 
+
+*no description yet*
+
+`SpecificVolumeUnitType` type: `string`
+
+
+## UnitUnitType 
+
+*no description yet*
+
+`UnitUnitType` type: `string`
 
 
 ## DateType 
@@ -304,15 +292,11 @@ The schema defines the following types:
 `DateType` type: `string`
 
 
-
-
 ## PercentType 
 
 *no description yet*
 
 `PercentType` type: `number`
-
-
 
 
 ## QualitativeRangeType 
@@ -322,14 +306,10 @@ The schema defines the following types:
 `QualitativeRangeType` type: `string`
 
 
-
-
 ## VersionType 
 
 *no description yet*
 
 `VersionType` type: `number`
-
-
 
 

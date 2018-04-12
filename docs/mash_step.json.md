@@ -6,8 +6,6 @@ MashStepType - a per step representation occuring within the mash
 
 `MashStepType` type: `object`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|

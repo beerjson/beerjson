@@ -6,8 +6,6 @@ WaterBase provides unique properties to identify individual records of regional 
 
 `WaterBase` type: `object`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|

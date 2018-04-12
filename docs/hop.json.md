@@ -6,8 +6,6 @@ HopVarietyBase provides unique properties to identify individual records of a ho
 
 `HopVarietyBase` type: `object`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|
@@ -61,8 +59,6 @@ Parent: [HopVarietyBase](#hopvarietybase)
 
 `IBUEstimateType` type: `undefined`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|
@@ -74,7 +70,5 @@ Parent: [HopVarietyBase](#hopvarietybase)
 *no description yet*
 
 `IBUMethodType` type: `string`
-
-
 
 

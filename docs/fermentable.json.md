@@ -6,8 +6,6 @@ FermentableBase provides unique properties to identify individual records of fer
 
 `FermentableBase` type: `object`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|

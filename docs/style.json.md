@@ -6,8 +6,6 @@ The descriptive base type for both style guideline records, and recipe style pro
 
 `StyleBase` type: `object`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|
@@ -60,7 +58,5 @@ Parent: [StyleBase](#stylebase)
 *no description yet*
 
 `StyleCategories` type: `string`
-
-
 
 

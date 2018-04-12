@@ -6,8 +6,6 @@ MiscellaneousBase provides unique properties to identify individual records of i
 
 `MiscellaneousBase` type: `object`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|
@@ -45,6 +43,5 @@ Parent: [MiscellaneousBase](#miscellaneousbase)
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 | **time** | [TimeType](measureable_units.json.md#timetype)|  |  |
-| **amount** | [VolumeType](measureable_units.json.md#volumetype)|  |  |
-| **amount_as_weight** | [MassType](measureable_units.json.md#masstype)|  |  |
+| **amount** | undefined|  |  |
 

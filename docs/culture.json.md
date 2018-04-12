@@ -6,8 +6,6 @@ The descriptive base type for both culture records, and recipe additions. Provid
 
 `CultureBase` type: `object`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|
@@ -57,6 +55,5 @@ Parent: [CultureBase](#culturebase)
 | **addition_time** | [TimeType](measureable_units.json.md#timetype)|  |  |
 | **addition_sg** | [DensityRangeType](measureable_units.json.md#densityrangetype)|  |  |
 | **cell_count_billions** | integer|  |  |
-| **amount** | [VolumeType](measureable_units.json.md#volumetype)|  |  |
-| **amount_as_weight** | [MassType](measureable_units.json.md#masstype)|  |  |
+| **amount** | undefined|  |  |
 

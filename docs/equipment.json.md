@@ -6,8 +6,6 @@ The descriptive base type for brew day equipment. Provides unique properties to 
 
 `EquipmentBase` type: `object`
 
-
-
 ### Properties
 
 |   |Type|Description|Required|
