@@ -41,6 +41,20 @@ const formatProperties = requiredList =>
     R.reduce((md, pair) => md + formatPropDefinition(requiredList)(pair), ''),
     R.ifElse(R.isEmpty, R.empty, addTableHeader)
   )
+const formatParentType = R.cond([
+  [
+    R.has('allOf'),
+    R.pipe(
+      R.prop('allOf'),
+      R.mergeAll,
+      R.prop('$ref'),
+      ref => `Parent: ${formatTypeRef(ref)}`
+    )
+  ],
+  [R.T, R.always('')]
+])
+
+//const formatPropertyList =
 
 const formatTypeDefinition = ([typeName, typeDef]) =>
   `## ${typeName} 
@@ -49,18 +63,7 @@ ${R.propOr('*no description yet*', 'description', typeDef)}
 
 \`${typeName}\` type: \`${typeDef.type}\`
 
-${R.cond([
-    [
-      R.has('allOf'),
-      R.pipe(
-        R.prop('allOf'),
-        R.mergeAll,
-        R.prop('$ref'),
-        ref => `Parent: ${formatTypeRef(ref)}`
-      )
-    ],
-    [R.T, () => {}]
-  ])(typeDef)}
+${formatParentType(typeDef)} 
 
 ${R.cond([
     [
@@ -87,3 +90,5 @@ const formatDefinitions = R.pipe(
 const jsonSchemaToMarkdown = formatDefinitions
 
 module.exports = jsonSchemaToMarkdown
+module.exports.formatTypeDefinition = formatTypeDefinition
+module.exports.formatParentType = formatParentType
