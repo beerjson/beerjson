@@ -52,7 +52,7 @@ const formatParentType = R.ifElse(
   ),
   R.always('')
 )
-
+const getRequiredList = R.propOr([], 'required')
 const formatPropertyList = typeDef =>
   R.pipe(
     R.when(R.has('allOf'), R.pipe(R.prop('allOf'), R.mergeAll)),
@@ -60,7 +60,7 @@ const formatPropertyList = typeDef =>
     t =>
       R.join('', [
         formatParentType(t),
-        formatProperties(R.propOr([], 'required', typeDef))(t)
+        formatProperties(getRequiredList(typeDef))(t)
       ])
   )(typeDef)
 
@@ -87,3 +87,4 @@ const jsonSchemaToMarkdown = formatDefinitions
 
 module.exports = jsonSchemaToMarkdown
 module.exports.formatTypeDefinition = formatTypeDefinition
+module.exports.formatPropertyList = formatPropertyList
