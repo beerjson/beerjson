@@ -14,7 +14,3 @@ test('formatTypeDefinition', () => {
     ])
   ).toMatchSnapshot()
 })
-
-test('formatObjectDefinition', () => {
-  expect(parse.formatPropertyList(objSchema)).toMatchSnapshot()
-})
