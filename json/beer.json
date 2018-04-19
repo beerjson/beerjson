@@ -23,7 +23,8 @@
                 "Records for any ingredient that contributes to the gravity of the beer.",
               "items": {
                 "$ref": "fermentable.json#/definitions/FermentableType"
-              }
+              },
+              "minItems": 1
             },
             "miscellaneous_ingredients": {
               "type": "array",
@@ -31,7 +32,8 @@
                 "Records for adjuncts which do not contribute to the gravity of the beer.",
               "items": {
                 "$ref": "misc.json#/definitions/MiscellaneousType"
-              }
+              },
+              "minItems": 1
             },
             "hop_varieties": {
               "type": "array",
@@ -39,7 +41,8 @@
                 "Records detailing the many properties of unique hop varieties.",
               "items": {
                 "$ref": "hop.json#/definitions/VarietyInformation"
-              }
+              },
+              "minItems": 1
             },
             "cultures": {
               "type": "array",
@@ -47,7 +50,8 @@
                 "Records detailing the wide array of unique cultures.",
               "items": {
                 "$ref": "culture.json#/definitions/CultureInformation"
-              }
+              },
+              "minItems": 1
             },
             "profiles": {
               "type": "array",
@@ -55,7 +59,8 @@
                 "Records for regional water profiles used in style-specific beer brewing.",
               "items": {
                 "$ref": "water.json#/definitions/WaterType"
-              }
+              },
+              "minItems": 1
             },
             "styles": {
               "type": "array",
@@ -63,7 +68,8 @@
                 "Records detailing the characteristics of the beer styles for which judging guidelines have been established.",
               "items": {
                 "$ref": "style.json#/definitions/StyleType"
-              }
+              },
+              "minItems": 1
             },
             "procedures": {
               "type": "array",
@@ -71,7 +77,8 @@
                 "A collection of steps providing process information for common mashing procedures.",
               "items": {
                 "$ref": "mash.json#/definitions/MashProcedureType"
-              }
+              },
+              "minItems": 1
             },
             "fermentations": {
               "type": "array",
@@ -80,7 +87,8 @@
               "items": {
                 "$ref":
                   "fermentation.json#/definitions/FermentationProcedureType"
-              }
+              },
+              "minItems": 1
             },
             "recipes": {
               "type": "array",
@@ -88,7 +96,8 @@
                 "Records containing a minimal collection of the description of ingredients, procedures and other required parameters necessary to recreate a batch of beer.",
               "items": {
                 "$ref": "recipe.json#/definitions/RecipeType"
-              }
+              },
+              "minItems": 1
             },
             "equipments": {
               "type": "array",
@@ -96,7 +105,8 @@
                 "Provides necessary information for brewing equipment.",
               "items": {
                 "$ref": "equipment.json#/definitions/EquipmentType"
-              }
+              },
+              "minItems": 1
             }
           },
           "required": ["version"]
