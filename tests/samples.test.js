@@ -48,6 +48,7 @@ const testXMLtoJSON = path => {
   })
 }
 
+testJson('generic/beer')
 testJson('generic/cultures')
 testJson('generic/equipment')
 testJson('generic/fermentable')
