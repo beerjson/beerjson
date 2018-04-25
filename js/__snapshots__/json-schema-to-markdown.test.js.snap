@@ -63,15 +63,6 @@ Parent: [FermentableBase](#fermentablebase)
 "
 `;
 
-exports[`formatObjectDefinition 1`] = `
-"### Properties
-
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **beerjson** | undefined|  | :white_check_mark: |
-"
-`;
-
 exports[`formatTypeDefinition 1`] = `
 "## FermentableBase 
 
