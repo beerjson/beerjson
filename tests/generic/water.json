@@ -3,14 +3,56 @@
     "version": 2.06,
     "profiles": [
       {
-        "name": "name",
-        "calcium": 295.0,
-        "bicarbonate": 300.0,
-        "sulfate": 725.0,
-        "chloride": 25.0,
-        "sodium": 55.0,
-        "magnesium": 45.0,
-        "pH": 8.0
+        "name": "metropolis city water",
+              "calcium": {
+                "unit": "ppm",
+                "value": 275.0
+              },
+              "bicarbonate": {
+                "unit": "ppm",
+                "value": 270.0
+              },
+              "carbonate": {
+                "unit": "ppm",
+                "value": 0.0
+              },
+              "sodium": {
+                "unit": "ppm",
+                "value": 25.0
+              },
+              "potassium": {
+                "unit": "ppm",
+                "value": 0.0
+              },
+              "iron": {
+                "unit": "ppm",
+                "value": 0.0
+              },
+              "nitrate": {
+                "unit": "ppm",
+                "value": 0.0
+              },
+              "nitrite": {
+                "unit": "ppm",
+                "value": 0.0
+              },
+              "flouride": {
+                "unit": "ppm",
+                "value": 0.0
+              },
+              "sulfate": {
+                "unit": "ppm",
+                "value": 610.0
+              },
+              "magnesium": {
+                "unit": "ppm",
+                "value": 40.0
+              },
+              "chloride": {
+                "unit": "ppm",
+                "value": 35.0
+              },
+              "pH": 7.0
       }
     ]
   }
