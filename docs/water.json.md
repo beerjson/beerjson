@@ -1,60 +1,44 @@
-The schema defines the following properties:
+The schema defines the following types:
 
----
-
-# Sub Schemas
-
-The schema defines the following additional types:
-
-## WaterBase
-`WaterBase` (object)
+## WaterBase 
 
 WaterBase provides unique properties to identify individual records of regional brewing water
 
-Properties of the `WaterBase` object:
+`WaterBase` type: `object`
 
-* [name](#name)
-* [calcium](#calcium)
-* [bicarbonate](#bicarbonate)
-* [sulfate](#sulfate)
-* [chloride](#chloride)
-* [sodium](#sodium)
-* [magnesium](#magnesium)
+### Properties
 
-### name
- `name` (string, required)
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **name** | string|  | :white_check_mark: |
+| **calcium** | number|  | :white_check_mark: |
+| **bicarbonate** | number|  | :white_check_mark: |
+| **sulfate** | number|  | :white_check_mark: |
+| **chloride** | number|  | :white_check_mark: |
+| **sodium** | number|  | :white_check_mark: |
+| **magnesium** | number|  | :white_check_mark: |
 
-### calcium
- `calcium` (number, required)
-
-### bicarbonate
- `bicarbonate` (number, required)
-
-### sulfate
- `sulfate` (number, required)
-
-### chloride
- `chloride` (number, required)
-
-### sodium
- `sodium` (number, required)
-
-### magnesium
- `magnesium` (number, required)
-
-## WaterType
-`WaterType` (object)
+## WaterType 
 
 WaterType collects the attributes of a regional brewing water to store as record information
 
-## WaterAdditionType
-`WaterAdditionType` (object)
+`WaterType` type: `object`
 
-WaterAdditionType collects the attributes of a water salt addition for use in a recipe
+Parent: [WaterBase](#waterbase)
 
-Properties of the `WaterAdditionType` object:
+### Properties
 
-* [addition](#addition)
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **pH** | number|  |  |
+| **notes** | string|  |  |
 
-### addition
- `addition` (, required)
+## WaterAdditionType 
+
+WaterAdditionType collects the attributes of each water addition for use in a recipe
+
+`WaterAdditionType` type: `object`
+
+Parent: [WaterBase](#waterbase)
+
+

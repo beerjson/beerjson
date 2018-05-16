@@ -21,26 +21,34 @@ ajv.addSchema(require('../json/equipment'))
 const validate = ajv.compile(require('../json/beer'))
 const fs = require('fs')
 
-const testJson = path => {
-  console.log(path)
-  const rawJSON = fs.readFileSync(__dirname + '/' + path + '.json', 'utf8')
-
-  if (!validate(JsonLint.parse(rawJSON))) {
-    console.log(JSON.stringify(validate.errors, null, 2))
-    process.exit(1)
+expect.extend({
+  toBeValidBeerJson(received) {
+    const passed = validate(received)
+    return {
+      message: () => JSON.stringify(validate.errors, null, 2),
+      pass: passed
+    }
   }
+})
+
+const testJson = path => {
+  test('validate JSON ' + path, () => {
+    const rawJSON = fs.readFileSync(__dirname + '/' + path + '.json', 'utf8')
+
+    expect(JsonLint.parse(rawJSON)).toBeValidBeerJson()
+  })
 }
 
 const testXMLtoJSON = path => {
-  console.log(path)
-  const xmlString = fs.readFileSync(__dirname + '/' + path + '.xml', 'utf8')
-  const recipe = importFromBeerXml(xmlString)
+  test('XML -> JSON ' + path, () => {
+    const xmlString = fs.readFileSync(__dirname + '/' + path + '.xml', 'utf8')
+    const recipe = importFromBeerXml(xmlString)
 
-  if (!validate(JsonLint.parse(recipe))) {
-    console.log(JSON.stringify(validate.errors, null, 2))
-    process.exit(1)
-  }
+    expect(JsonLint.parse(recipe)).toBeValidBeerJson()
+  })
 }
+
+testJson('generic/beer')
 testJson('generic/cultures')
 testJson('generic/equipment')
 testJson('generic/fermentable')
