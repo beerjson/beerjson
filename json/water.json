@@ -14,22 +14,40 @@
           "type": "string"
         },
         "calcium": {
-          "type": "number"
+          "$ref": "measureable_units.json#/definitions/ConcentrationType"
         },
         "bicarbonate": {
-          "type": "number"
+          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+        },
+		"carbonate": {
+          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+        },
+		"potassium": {
+          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+        },
+		"iron": {
+          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+        },
+		"nitrate": {
+          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+        },
+		"nitrite": {
+          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+        },
+		"flouride": {
+          "$ref": "measureable_units.json#/definitions/ConcentrationType"
         },
         "sulfate": {
-          "type": "number"
+          "$ref": "measureable_units.json#/definitions/ConcentrationType"
         },
         "chloride": {
-          "type": "number"
+          "$ref": "measureable_units.json#/definitions/ConcentrationType"
         },
         "sodium": {
-          "type": "number"
+          "$ref": "measureable_units.json#/definitions/ConcentrationType"
         },
         "magnesium": {
-          "type": "number"
+          "$ref": "measureable_units.json#/definitions/ConcentrationType"
         }
       },
       "required": [
