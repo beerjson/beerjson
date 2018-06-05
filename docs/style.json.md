@@ -1,56 +1,62 @@
-The schema defines the following properties:
+The schema defines the following types:
 
----
+## StyleBase 
 
-# Sub Schemas
+The descriptive base type for both style guideline records, and recipe style provisions. Provides unique properties to identify individual styles
 
-The schema defines the following additional types:
+`StyleBase` type: `object`
 
-## StyleBase
-`StyleBase` (object)
+### Properties
 
-The descriptive base type for both beer style guideline records and recipe style provisions. Provides unique properties to identify individual beer styles
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **name** | string|  | :white_check_mark: |
+| **category** | string|  | :white_check_mark: |
+| **category_number** | integer|  |  |
+| **style_letter** | string|  |  |
+| **style_guide** | string|  | :white_check_mark: |
+| **type** | [StyleCategories](#stylecategories)|  | :white_check_mark: |
 
-Properties of the `StyleBase` object:
+## StyleType 
 
-* [name](#name)
-* [category](#category)
-* [category_number](#category_number)
-* [style_letter](#style_letter)
-* [style_guide](#style_guide)
-* [type](#type)
+StyleType provide information for Style categorization
 
-### name
- `name` (string, required)
+`StyleType` type: `object`
 
-### category
- `category` (string, required)
+Parent: [StyleBase](#stylebase)
 
-### category_number
- `category_number` (integer, required)
+### Properties
 
-### style_letter
- `style_letter` (string, required)
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **original_gravity** | [DensityRangeType](measureable_units.json.md#densityrangetype)|  |  |
+| **final_gravity** | [DensityRangeType](measureable_units.json.md#densityrangetype)|  |  |
+| **international_bitterness_units** | [QuantitativeRangeType](measureable_units.json.md#quantitativerangetype)|  |  |
+| **color** | [ColorRangeType](measureable_units.json.md#colorrangetype)|  |  |
+| **carbonation** | [QuantitativeRangeType](measureable_units.json.md#quantitativerangetype)|  |  |
+| **alcohol_by_volume** | [PercentRangeType](measureable_units.json.md#percentrangetype)|  |  |
+| **notes** | string|  |  |
+| **aroma** | string|  |  |
+| **appearance** | string|  |  |
+| **flavor** | string|  |  |
+| **mouthfeel** | string|  |  |
+| **overall_impression** | string|  |  |
+| **ingredients** | string|  |  |
+| **examples** | string|  |  |
 
-Additional restrictions:
-
-* Regex pattern: `[A-Z ]`
-
-### style_guide
- `style_guide` (string, required)
-
-### type
- `type` (StyleCategories, required)
-
-## StyleType
-`StyleType` (object)
-
-StyleType provide information for BJCP Style categorization
-
-## RecipeStyleType
-`RecipeStyleType` (undefined)
+## RecipeStyleType 
 
 RecipeStyleType defines style information stored in a recipe record
 
-## StyleCategories
-`StyleCategories` (string)
+`RecipeStyleType` type: `undefined`
+
+Parent: [StyleBase](#stylebase)
+
+
+## StyleCategories 
+
+*no description yet*
+
+`StyleCategories` type: `string`
+
+

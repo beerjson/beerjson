@@ -1,66 +1,47 @@
-The schema defines the following properties:
+The schema defines the following types:
 
----
+## MiscellaneousBase 
 
-# Sub Schemas
+MiscellaneousBase provides unique properties to identify individual records of ingredients
 
-The schema defines the following additional types:
+`MiscellaneousBase` type: `object`
 
-## MiscellaneousBase
-`MiscellaneousBase` (object)
+### Properties
 
-MiscellaneousBase provides unique properties to identify individual records of adjunct ingredients
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **name** | string|  | :white_check_mark: |
+| **type** |  'spice'  , 'fining'  , 'water agent'  , 'herb'  , 'fruit'  , 'flavor'  , 'wood'  , 'other' |  | :white_check_mark: |
+| **use** |  'boil'  , 'mash'  , 'fermentation'  , 'packaging' |  | :white_check_mark: |
 
-Properties of the `MiscellaneousBase` object:
+## MiscellaneousType 
 
-* [name](#name)
-* [type](#type)
-* [use](#use)
+MiscellaneousType collects the attributes of an ingredient to store as record information
 
-### name
- `name` (string, required)
+`MiscellaneousType` type: `object`
 
-### type
- `type` (string, enum, required)
+Parent: [MiscellaneousBase](#miscellaneousbase)
 
-This element must be one of the following enum values:
+### Properties
 
-* `spice`
-* `fining`
-* `water agent`
-* `herb`
-* `fruit`
-* `flavor`
-* `wood`
-* `other`
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **use_for** | string|  |  |
+| **notes** | string|  |  |
+| **inventory** | object|  |  |
 
-### use
- `use` (string, enum, required)
+## MiscellaneousAdditionType 
 
-This element must be one of the following enum values:
+MiscellaneousAdditionType collects the attributes of each miscellaneous ingredient for use in a recipe
 
-* `boil`
-* `mash`
-* `fermentation`
-* `packaging`
+`MiscellaneousAdditionType` type: `object`
 
-## MiscellaneousType
-`MiscellaneousType` (object)
+Parent: [MiscellaneousBase](#miscellaneousbase)
 
-MiscellaneousType collects the attributes of a adjunct ingredient to store as record information
+### Properties
 
-## MiscellaneousAdditionType
-`MiscellaneousAdditionType` (object)
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **time** | [TimeType](measureable_units.json.md#timetype)|  |  |
+| **amount** | undefined|  |  |
 
-MiscellaneousAdditionType collects the attributes of an adjunct ingredient for use in a recipe adjunct bill
-
-Properties of the `MiscellaneousAdditionType` object:
-
-* [addition](#addition)
-
-### addition
- `addition` (, required)
-
-The object must be one of the following types:
-
-* `undefined`

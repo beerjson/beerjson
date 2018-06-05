@@ -1,204 +1,315 @@
-The schema defines the following properties:
+The schema defines the following types:
 
----
+## VolumeType 
 
-# Sub Schemas
+*no description yet*
 
-The schema defines the following additional types:
+`VolumeType` type: `undefined`
 
-## VolumeType
-`VolumeType` (undefined)
+### Properties
 
-* [volume](#volume)
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **unit** | [VolumeUnitType](#volumeunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
-### volume
- `volume` (VolumeUnitType)
+## MassType 
 
-## MassType
-`MassType` (undefined)
+*no description yet*
 
-* [mass](#mass)
+`MassType` type: `undefined`
 
-### mass
- `mass` (MassUnitType)
+### Properties
 
-## TemperatureType
-`TemperatureType` (undefined)
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **unit** | [MassUnitType](#massunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
-* [degrees](#degrees)
+## TemperatureType 
 
-### degrees
- `degrees` (TemperatureUnitType)
+*no description yet*
 
-## DistanceType
-`DistanceType` (undefined)
+`TemperatureType` type: `undefined`
 
-* [length](#length)
+### Properties
 
-### length
- `length` (DistanceUnitType)
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **unit** | [TemperatureUnitType](#temperatureunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
-## PressureType
-`PressureType` (undefined)
+## PressureType 
 
-* [pressure](#pressure)
+*no description yet*
 
-### pressure
- `pressure` (PressureUnitType)
- 
- ## AcidityType
-`AcidityType` (undefined)
+`PressureType` type: `undefined`
 
-* [acidity](#acidity)
+### Properties
 
-### Acidity
- `acidity` (AcidityUnitType)
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **unit** | [PressureUnitType](#pressureunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
-## TimeType
-`TimeType` (undefined)
+## AcidityType 
 
-* [duration](#duration)
+*no description yet*
 
-### duration
- `duration` (TimeUnitType)
+`AcidityType` type: `undefined`
 
-## ColorType
-`ColorType` (undefined)
+### Properties
 
-* [scale](#scale)
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **unit** | [AcidityUnitType](#acidityunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
-### scale
- `scale` (ColorUnitType)
+## TimeType 
 
-## DensityType
-`DensityType` (undefined)
+*no description yet*
 
-* [density](#density)
+`TimeType` type: `undefined`
 
-### density
- `density` (DensityUnitType)
- 
- ## SpecificHeatType
-`SpecificHeatType` (undefined)
+### Properties
 
-* [specificheat](#specificheat)
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **unit** | [TimeUnitType](#timeunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
-### specificheat
- `specific heat` (SpecificHeatUnitType)
+## ColorType 
 
- ## SpecificVolumeType
-`SpecificVolumeType` (undefined)
+*no description yet*
 
-* [specificvolume](#specificvolume)
+`ColorType` type: `undefined`
 
-### specificvolume
- `specific volume` (SpecificVolumeType)
+### Properties
 
-## QuantitativeRangeType
-`QuantitativeRangeType` (object)
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **unit** | [ColorUnitType](#colorunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
-Properties of the `QuantitativeRangeType` object:
+## DensityType 
 
-* [minimum](#minimum)
-* [maximum](#maximum)
+*no description yet*
 
-### minimum
- `minimum` (number, required)
+`DensityType` type: `undefined`
 
-### maximum
- `maximum` (number, required)
+### Properties
 
-## TemperatureRangeType
-`TemperatureRangeType` (object)
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **unit** | [DensityUnitType](#densityunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
-Properties of the `TemperatureRangeType` object:
+## SpecificHeatType 
 
-* [minimum](#minimum)
-* [maximum](#maximum)
+*no description yet*
 
-### minimum
- `minimum` (TemperatureType, required)
+`SpecificHeatType` type: `undefined`
 
-### maximum
- `maximum` (TemperatureType, required)
+### Properties
 
-## ColorRangeType
-`ColorRangeType` (object)
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **unit** | [SpecificHeatUnitType](#specificheatunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
-Properties of the `ColorRangeType` object:
+## SpecificVolumeType 
 
-* [minimum](#minimum)
-* [maximum](#maximum)
+*no description yet*
 
-### minimum
- `minimum` (ColorType, required)
+`SpecificVolumeType` type: `undefined`
 
-### maximum
- `maximum` (ColorType, required)
+### Properties
 
-## DensityRangeType
-`DensityRangeType` (object)
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **unit** | [SpecificVolumeUnitType](#specificvolumeunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
-Properties of the `DensityRangeType` object:
+## UnitType 
 
-* [minimum](#minimum)
-* [maximum](#maximum)
+*no description yet*
 
-### minimum
- `minimum` (DensityType, required)
+`UnitType` type: `undefined`
 
-### maximum
- `maximum` (DensityType, required)
+### Properties
 
-## PercentRangeType
-`PercentRangeType` (object)
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **unit** | [UnitUnitType](#unitunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
 
-Properties of the `PercentRangeType` object:
+## QuantitativeRangeType 
 
-* [minimum](#minimum)
-* [maximum](#maximum)
+*no description yet*
 
-### minimum
- `minimum` (PercentType, required)
+`QuantitativeRangeType` type: `object`
 
-### maximum
- `maximum` (PercentType, required)
+### Properties
 
-## VolumeUnitType
-`VolumeUnitType` (string)
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **minimum** | number|  | :white_check_mark: |
+| **maximum** | number|  | :white_check_mark: |
 
-## MassUnitType
-`MassUnitType` (string)
+## TemperatureRangeType 
 
-## TemperatureUnitType
-`TemperatureUnitType` (string)
+*no description yet*
 
-## DistanceUnitType
-`DistanceUnitType` (string)
+`TemperatureRangeType` type: `object`
 
-## PressureUnitType
-`PressureUnitType` (string)
+### Properties
 
-## AcidityUnitType
-`AcidityUnitType` (string)
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **minimum** | [TemperatureType](#temperaturetype)|  | :white_check_mark: |
+| **maximum** | [TemperatureType](#temperaturetype)|  | :white_check_mark: |
 
-## TimeUnitType
-`TimeUnitType` (string)
+## ColorRangeType 
 
-## ColorUnitType
-`ColorUnitType` (string)
+*no description yet*
 
-## DensityUnitType
-`DensityUnitType` (string)
+`ColorRangeType` type: `object`
 
-## DateType
-`DateType` (string)
+### Properties
 
-## PercentType
-`PercentType` (number)
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **minimum** | [ColorType](#colortype)|  | :white_check_mark: |
+| **maximum** | [ColorType](#colortype)|  | :white_check_mark: |
 
-## QualitativeRangeType
-`QualitativeRangeType` (string)
+## DensityRangeType 
 
-## VersionType
-`VersionType` (number)
+*no description yet*
+
+`DensityRangeType` type: `object`
+
+### Properties
+
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **minimum** | [DensityType](#densitytype)|  | :white_check_mark: |
+| **maximum** | [DensityType](#densitytype)|  | :white_check_mark: |
+
+## PercentRangeType 
+
+*no description yet*
+
+`PercentRangeType` type: `object`
+
+### Properties
+
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **minimum** | [PercentType](#percenttype)|  | :white_check_mark: |
+| **maximum** | [PercentType](#percenttype)|  | :white_check_mark: |
+
+## VolumeUnitType 
+
+*no description yet*
+
+`VolumeUnitType` type: `string`
+
+
+## MassUnitType 
+
+*no description yet*
+
+`MassUnitType` type: `string`
+
+
+## TemperatureUnitType 
+
+*no description yet*
+
+`TemperatureUnitType` type: `string`
+
+
+## AcidityUnitType 
+
+*no description yet*
+
+`AcidityUnitType` type: `string`
+
+
+## PressureUnitType 
+
+*no description yet*
+
+`PressureUnitType` type: `string`
+
+
+## TimeUnitType 
+
+*no description yet*
+
+`TimeUnitType` type: `string`
+
+
+## ColorUnitType 
+
+*no description yet*
+
+`ColorUnitType` type: `string`
+
+
+## DensityUnitType 
+
+*no description yet*
+
+`DensityUnitType` type: `string`
+
+
+## SpecificHeatUnitType 
+
+*no description yet*
+
+`SpecificHeatUnitType` type: `string`
+
+
+## SpecificVolumeUnitType 
+
+*no description yet*
+
+`SpecificVolumeUnitType` type: `string`
+
+
+## UnitUnitType 
+
+*no description yet*
+
+`UnitUnitType` type: `string`
+
+
+## DateType 
+
+*no description yet*
+
+`DateType` type: `string`
+
+
+## PercentType 
+
+*no description yet*
+
+`PercentType` type: `number`
+
+
+## QualitativeRangeType 
+
+*no description yet*
+
+`QualitativeRangeType` type: `string`
+
+
+## VersionType 
+
+*no description yet*
+
+`VersionType` type: `number`
+
+
