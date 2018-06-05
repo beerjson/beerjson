@@ -116,6 +116,60 @@
                 "value": 11.5
               }
             }
+          ],
+          "water_additions": [
+            {
+              "name": "Metropolis City Water",
+              "calcium": {
+                "unit": "ppm",
+                "value": 275.0
+              },
+              "bicarbonate": {
+                "unit": "ppm",
+                "value": 270.0
+              },
+              "carbonate": {
+                "unit": "ppm",
+                "value": 0.0
+              },
+              "sodium": {
+                "unit": "ppm",
+                "value": 25.0
+              },
+              "potassium": {
+                "unit": "ppm",
+                "value": 0.0
+              },
+              "iron": {
+                "unit": "ppm",
+                "value": 0.0
+              },
+              "nitrate": {
+                "unit": "ppm",
+                "value": 0.0
+              },
+              "nitrite": {
+                "unit": "ppm",
+                "value": 0.0
+              },
+              "flouride": {
+                "unit": "ppm",
+                "value": 0.0
+              },
+              "sulfate": {
+                "unit": "ppm",
+                "value": 610.0
+              },
+              "magnesium": {
+                "unit": "ppm",
+                "value": 40.0
+              },
+              "chloride": {
+                "unit": "ppm",
+                "value": 35.0
+              },
+              "pH": 7.0
+            }
           ]
         },
         "fermentation": {
