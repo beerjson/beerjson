@@ -56,7 +56,7 @@ testJson('generic/hop_varieties')
 testJson('generic/miscellaneous_ingredients')
 testJson('generic/procedure')
 testJson('generic/fermentation')
-testJson('generic/profiles')
+testJson('generic/water')
 testJson('generic/recipes')
 testJson('generic/styles')
 
