@@ -11,7 +11,7 @@ The descriptive base type for both culture records, and recipe additions. Provid
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 | **name** | string|  | :white_check_mark: |
-| **type** |  'ale'  , 'bacteria'  , 'brett'  , 'champagne'  , 'kviek'  , 'lacto'  , 'lager'  , 'malolactic'  , 'mixed-culture'  , 'other'  , 'pedio'  , 'spontaneous'  , 'wine' |  | :white_check_mark: |
+| **type** |  'ale'  , 'bacteria'  , 'brett'  , 'champagne'  , 'kveik'  , 'lacto'  , 'lager'  , 'malolactic'  , 'mixed-culture'  , 'other'  , 'pedio'  , 'spontaneous'  , 'wine' |  | :white_check_mark: |
 | **form** |  'liquid'  , 'dry'  , 'slant'  , 'culture'  , 'dregs' |  | :white_check_mark: |
 | **laboratory** | string|  |  |
 | **product_id** | string|  |  |
