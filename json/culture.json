@@ -59,10 +59,10 @@
               "$ref": "measureable_units.json#/definitions/QualitativeRangeType"
             },
             "attenuation": {
-              "$ref": "measureable_units.json#/definitions/PercentType"
+              "$ref": "measureable_units.json#/definitions/PercentRangeType"
             },
             "alcohol_tolerance": {
-              "$ref": "measureable_units.json#/definitions/PercentRangeType"
+              "$ref": "measureable_units.json#/definitions/PercentType"
             },
             "notes": {
               "type": "string"
