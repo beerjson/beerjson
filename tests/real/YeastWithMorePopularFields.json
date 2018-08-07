@@ -10,16 +10,20 @@
         "product_id": "1007",
         "temperature_range": {
           "minimum": {
-            "unit": "C",
-            "value": 12.8
+            "unit": "F",
+            "value": 55.0
           },
           "maximum": {
-            "unit": "C",
-            "value": 20.0
+            "unit": "F",
+            "value": 68.0
           }
         },
         "flocculation": "low",
-        "attenuation": 75.0,
+        "attenuation":  {
+          "minimum":  73.0,
+          "maximum": 77.0
+        },
+        "alcohol_tolerance": 11.0,
         "notes":
           "Crisp dry flavor with a hint of mild flavor. Great for many continental ales.",
         "best_for": "German Ales, Alts, Kolsch, Dry Stouts"
