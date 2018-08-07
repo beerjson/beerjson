@@ -16,6 +16,10 @@
     "test": "jest",
     "gen-docs": "node js/gen-docs.js"
   },
+  "jest": {
+    "verbose": true,
+    "testURL": "http://localhost/"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/beerjson/beerjson.git"
