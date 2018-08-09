@@ -11,10 +11,10 @@
         },
         "origin": "United Kingdom",
         "supplier": "Fussybrewer Malting",
-        "yield_dry_basis": {
+        "yield": {
           "fine_grind": 74.0,
           "fine_coarse_difference": 1.5,
-          "coarse_grind": 0
+          "coarse_grind": 72.5
         },
         "notes":
           "Darker crystal malt. Adds body and improves head retention. Also called caramel malt.",

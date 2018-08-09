@@ -1,256 +1,260 @@
 {
-  "beerjson": {
-    "version": 2.06,
-    "recipes": [
-      {
-        "name": "#20 1058 Medieval Ale",
-        "type": "all grain",
-        "author": "",
-        "batch_size": {
-          "unit": "gal",
-          "value": 5.5
-        },
-        "boil_size": {
-          "unit": "gal",
-          "value": 5.5
-        },
-        "boil_time": {
-          "unit": "min",
-          "value": 90.0
-        },
-        "efficiency": {
-          "conversion": 92.0,
-          "lauter": 80.5,
-          "mash": 74.0,
-          "brewhouse": 74.1
-        },
-        "style": {
-          "name": "Specialty",
-          "category": "Experimental and Historic",
-          "category_number": 24,
-          "style_letter": "A",
-          "style_guide": "BJCP 1999",
-          "type": "beer"
-        },
+	"beerjson": {
+		"version": 2.06,
+		"recipes": [{
+			"name": "#20 1058 Medieval Ale",
+			"type": "all grain",
+			"author": "",
+			"batch_size": {
+				"unit": "gal",
+				"value": 5.5
+			},
+			"boil_size": {
+				"unit": "gal",
+				"value": 5.5
+			},
+			"boil_time": {
+				"unit": "min",
+				"value": 90.0
+			},
+			"efficiency": {
+				"conversion": 92.0,
+				"lauter": 80.5,
+				"mash": 74.0,
+				"brewhouse": 74.1
+			},
+			"style": {
+				"name": "Specialty",
+				"category": "Experimental and Historic",
+				"category_number": 24,
+				"style_letter": "A",
+				"style_guide": "BJCP 1999",
+				"type": "beer"
+			},
 
-        "ingredients": {
-          "fermentable_bill": [
-            {
-              "name": "Buckwheat Honey",
-              "type": "adjunct",
-              "color": {
-                "unit": "L",
-                "value": 0.0
-              },
-              "origin": "America",
-              "amount": {
-                "unit": "lb",
-                "value": 2.148
-              },
-              "yield": 85
-            },
-            {
-              "name": "Flaked Barley",
-              "type": "adjunct",
-              "color": {
-                "unit": "L",
-                "value": 2.2
-              },
-              "origin": "America",
-              "amount": {
-                "unit": "lb",
-                "value": 0.5
-              },
-              "yield": 85
-            },
-            {
-              "name": "Roasted Barley",
-              "type": "grain",
-              "color": {
-                "unit": "L",
-                "value": 450.0
-              },
-              "origin": "America",
-              "amount": {
-                "unit": "lb",
-                "value": 0.25
-              },
-              "yield": 85
-            },
-            {
-              "name": "Unmalted Wheat",
-              "type": "grain",
-              "color": {
-                "unit": "L",
-                "value": 2.7
-              },
-              "origin": "America",
-              "amount": {
-                "unit": "lb",
-                "value": 1.5
-              },
-              "yield": 85
-            },
-            {
-              "name": "Pale Malt(2-row)",
-              "type": "grain",
-              "color": {
-                "unit": "L",
-                "value": 1.8
-              },
-              "origin": "America",
-              "amount": {
-                "unit": "lb",
-                "value": 8.0
-              },
-              "yield": 85
-            },
-            {
-              "name": "Crystal Malt",
-              "type": "grain",
-              "color": {
-                "unit": "L",
-                "value": 60.0
-              },
-              "origin": "America",
-              "amount": {
-                "unit": "lb",
-                "value": 1.0
-              },
-              "yield": 85
-            }
-          ],
-          "miscellaneous_additions": [
-            {
-              "name": "Bitter Orange Peel",
-              "type": "spice",
-              "use": "boil",
-              "amount": {
-                "unit": "oz",
-                "value": 0.63
-              },
-              "time": {
-                "unit": "min",
-                "value": 60
-              }
-            },
-            {
-              "name": "Licorice Stick",
-              "type": "spice",
-              "use": "boil",
-              "amount": {
-                "unit": "oz",
-                "value": 0.75
-              },
-              "time": {
-                "unit": "min",
-                "value": 60
-              }
-            },
-            {
-              "name": "Mugwort",
-              "type": "herb",
-              "use": "boil",
-              "amount": {
-                "unit": "oz",
-                "value": 1.0
-              },
-              "time": {
-                "unit": "min",
-                "value": 60.0
-              }
-            },
-            {
-              "name": "Juniper Berries",
-              "type": "fruit",
-              "use": "fermentation",
-              "amount": {
-                "unit": "oz",
-                "value": 1.0
-              },
-              "time": {
-                "unit": "day",
-                "value": 0.0
-              }
-            },
-            {
-              "name": "Lemon Balm",
-              "type": "herb",
-              "use": "boil",
-              "amount": {
-                "unit": "oz",
-                "value": 3.0
-              },
-              "time": {
-                "unit": "min",
-                "value": 0.0
-              }
-            }
-          ],
-          "culture_additions": [
-            {
-              "name": "English Ale",
-              "type": "ale",
-              "form": "liquid",
-              "laboratory": "Ithaca Beer C",
-              "product_id": "",
-              "amount": {
-                "unit": "ml",
-                "value": 0.0
-              }
-            }
-          ]
-        },
-        "mash": {
-          "name": "Simple Mash Type - Single Step",
-          "grain_temperature": {
-            "unit": "F",
-            "value": 80.0
-          },
-          "notes": "",
-          "mash_steps": [
-            {
-              "name": "Saccharification Rest",
-              "type": "infusion",
-              "infuse_amount": {
-                "unit": "qt",
-                "value": 22.5
-              },
-              "step_temperature": {
-                "unit": "F",
-                "value": 158.0
-              },
-              "step_time": {
-                "unit": "min",
-                "value": 70.0
-              },
-              "ramp_time": {
-                "unit": "min",
-                "value": 5.0
-              },
-              "end_temperature": {
-                "unit": "F",
-                "value": 158.0
-              },
-              "description": "Add 22.50 qt of water at 165.0 F",
-              "water_grain_ratio": 2.09,
-              "infuse_temperature": {
-                "unit": "F",
-                "value": 165.0
-              }
-            }
-          ]
-        },
-        "notes": "",
-        "original_gravity": {
-          "unit": "sg",
-          "value": 1.059
-        },
-        "ibu_estimate": {
-          "method": "Other",
-          "value": 0
-        }
-      }
-    ]
-  }
+			"ingredients": {
+				"fermentable_bill": [{
+						"name": "Buckwheat Honey",
+						"type": "honey",
+						"color": {
+							"unit": "L",
+							"value": 0.0
+						},
+						"origin": "America",
+						"amount": {
+							"unit": "lb",
+							"value": 2.148
+						},
+						"yield": {
+							"potential": 37.0
+						}
+					},
+					{
+						"name": "Flaked Barley",
+						"type": "adjunct",
+						"color": {
+							"unit": "L",
+							"value": 2.2
+						},
+						"origin": "America",
+						"amount": {
+							"unit": "lb",
+							"value": 0.5
+						},
+						"yield": {
+							"potential": 33.0
+						}
+					},
+					{
+						"name": "Roasted Barley",
+						"type": "grain",
+						"color": {
+							"unit": "L",
+							"value": 450.0
+						},
+						"origin": "America",
+						"amount": {
+							"unit": "lb",
+							"value": 0.25
+						},
+						"yield": {
+							"potential": 37.0
+						}
+					},
+					{
+						"name": "Unmalted Wheat",
+						"type": "grain",
+						"color": {
+							"unit": "L",
+							"value": 2.7
+						},
+						"origin": "America",
+						"amount": {
+							"unit": "lb",
+							"value": 1.5
+						},
+						"yield": {
+							"potential": 37.0
+						}
+					},
+					{
+						"name": "Pale Malt(2-row)",
+						"type": "grain",
+						"color": {
+							"unit": "L",
+							"value": 1.8
+						},
+						"origin": "America",
+						"amount": {
+							"unit": "lb",
+							"value": 8.0
+						},
+						"yield": {
+							"potential": 37.0
+						}
+					},
+					{
+						"name": "Crystal Malt",
+						"type": "grain",
+						"color": {
+							"unit": "L",
+							"value": 60.0
+						},
+						"origin": "America",
+						"amount": {
+							"unit": "lb",
+							"value": 1.0
+						},
+						"yield": {
+							"potential": 37.0
+						}
+					}
+				],
+				"miscellaneous_additions": [{
+						"name": "Bitter Orange Peel",
+						"type": "spice",
+						"use": "boil",
+						"amount": {
+							"unit": "oz",
+							"value": 0.63
+						},
+						"time": {
+							"unit": "min",
+							"value": 60
+						}
+					},
+					{
+						"name": "Licorice Stick",
+						"type": "spice",
+						"use": "boil",
+						"amount": {
+							"unit": "oz",
+							"value": 0.75
+						},
+						"time": {
+							"unit": "min",
+							"value": 60
+						}
+					},
+					{
+						"name": "Mugwort",
+						"type": "herb",
+						"use": "boil",
+						"amount": {
+							"unit": "oz",
+							"value": 1.0
+						},
+						"time": {
+							"unit": "min",
+							"value": 60.0
+						}
+					},
+					{
+						"name": "Juniper Berries",
+						"type": "fruit",
+						"use": "fermentation",
+						"amount": {
+							"unit": "oz",
+							"value": 1.0
+						},
+						"time": {
+							"unit": "day",
+							"value": 0.0
+						}
+					},
+					{
+						"name": "Lemon Balm",
+						"type": "herb",
+						"use": "boil",
+						"amount": {
+							"unit": "oz",
+							"value": 3.0
+						},
+						"time": {
+							"unit": "min",
+							"value": 0.0
+						}
+					}
+				],
+				"culture_additions": [{
+					"name": "English Ale",
+					"type": "ale",
+					"form": "liquid",
+					"laboratory": "Ithaca Beer C",
+					"product_id": "",
+					"amount": {
+						"unit": "ml",
+						"value": 0.0
+					}
+				}]
+			},
+			"mash": {
+				"name": "Simple Mash Type - Single Step",
+				"grain_temperature": {
+					"unit": "F",
+					"value": 80.0
+				},
+				"notes": "",
+				"mash_steps": [{
+					"name": "Saccharification Rest",
+					"type": "infusion",
+					"infuse_amount": {
+						"unit": "qt",
+						"value": 22.5
+					},
+					"step_temperature": {
+						"unit": "F",
+						"value": 158.0
+					},
+					"step_time": {
+						"unit": "min",
+						"value": 70.0
+					},
+					"ramp_time": {
+						"unit": "min",
+						"value": 5.0
+					},
+					"end_temperature": {
+						"unit": "F",
+						"value": 158.0
+					},
+					"description": "Add 22.50 qt of water at 165.0 F",
+					"water_grain_ratio": 2.09,
+					"infuse_temperature": {
+						"unit": "F",
+						"value": 165.0
+					}
+				}]
+			},
+			"notes": "",
+			"original_gravity": {
+				"unit": "sg",
+				"value": 1.059
+			},
+			"ibu_estimate": {
+				"method": "Other",
+				"value": 0
+			}
+		}]
+	}
 }

@@ -34,8 +34,11 @@
                 "unit": "kg",
                 "value": 5
               },
-              "yield": 85
+              "yield": {
+                "fine_grind": 78
+              }
             }
+			
           ],
           "hop_bill": [
             {

@@ -9,9 +9,9 @@
           "unit": "L",
           "value": 3.0
         },
-        "yield_dry_basis": {
+        "yield": {
           "fine_grind": 73.4,
-          "coarse_grind": 0
+          "coarse_grind": 71
         }
       }
     ]
