@@ -9,9 +9,8 @@
           "unit": "L",
           "value": 13
         },
-        "yield_dry_basis": {
-          "fine_grind": 78.0,
-          "coarse_grind": 0
+        "yield": {
+          "potential": 36.0
         },
         "notes": "Hopped amber extract suitable as a base for english ales.",
         "ibu_gal_per_lb": 16.6
