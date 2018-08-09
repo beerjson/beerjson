@@ -51,7 +51,7 @@
 					},
 					{
 						"name": "Flaked Barley",
-						"type": "adjunct",
+						"type": "grain",
 						"color": {
 							"unit": "L",
 							"value": 2.2
