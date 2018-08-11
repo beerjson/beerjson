@@ -49,7 +49,7 @@
 					"properties": {
 						"yield": {
 							"type": "object",
-							"minItems": 1,
+							"minProperties": 1,
 							"additionalProperties": false,
 							"properties": {
 								"fine_grind": {
@@ -126,9 +126,9 @@
 						"amount": {
 							"oneOf": [
 								{ "$ref": "measureable_units.json#/definitions/VolumeType"
-									},
-									{ "$ref": "measureable_units.json#/definitions/MassType"
-									}
+								},
+								{ "$ref": "measureable_units.json#/definitions/MassType"
+								}
                   ]
                 }
 					},
