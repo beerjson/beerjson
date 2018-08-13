@@ -9,9 +9,9 @@
           "unit": "SRM",
           "value": 3.0
         },
-        "yield_dry_basis": {
-          "fine_grind": 1,
-          "coarse_grind": 1
+        "yield": {
+          "fine_grind": 80,
+          "coarse_grind": 76
         }
       }
     ]

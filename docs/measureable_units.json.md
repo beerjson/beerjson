@@ -117,6 +117,19 @@ The schema defines the following types:
 | **unit** | [SpecificHeatUnitType](#specificheatunittype)|  | :white_check_mark: |
 | **value** | number|  | :white_check_mark: |
 
+## ConcentrationType 
+
+*no description yet*
+
+`ConcentrationType` type: `undefined`
+
+### Properties
+
+|   |Type|Description|Required|
+|---|----|-----------|--------|
+| **unit** | [ConcentrationUnitType](#concentrationunittype)|  | :white_check_mark: |
+| **value** | number|  | :white_check_mark: |
+
 ## SpecificVolumeType 
 
 *no description yet*
@@ -262,6 +275,13 @@ The schema defines the following types:
 *no description yet*
 
 `DensityUnitType` type: `string`
+
+
+## ConcentrationUnitType 
+
+*no description yet*
+
+`ConcentrationUnitType` type: `string`
 
 
 ## SpecificHeatUnitType 
