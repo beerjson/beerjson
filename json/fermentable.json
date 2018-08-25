@@ -15,9 +15,6 @@
 					"type": "string",
 					"enum": ["dry extract", "extract", "grain", "sugar", "fruit", "juice", "honey", "other"]
 				},
-				"color": {
-					"$ref": "measureable_units.json#/definitions/ColorType"
-				},
 				"origin": {
 					"type": "string"
 				},
@@ -66,6 +63,22 @@
 								}
 							}
 						},
+						"bitterness": {
+							"type": "object",
+							"minProperties": 1,
+							"additionalProperties": false,
+							"properties": {
+								"ibu_per_lb_per_gal": {
+									"type": "number"
+								},
+								"ibu_per_kg_per_liter": {
+									"type": "number"
+								},
+								"ibu": {
+									"type": "number"
+								}
+							}
+						},
 						"notes": {
 							"type": "string"
 						},
@@ -90,9 +103,6 @@
 						"recommend_mash": {
 							"type": "boolean"
 						},
-						"ibu_gal_per_lb": {
-							"type": "number"
-						},
 						"color": {
 							"$ref": "measureable_units.json#/definitions/ColorType"
 						},
@@ -101,15 +111,16 @@
 							"additionalProperties": false,
 							"properties": {
 								"amount": {
-									"oneOf": [
-									{ "$ref": "measureable_units.json#/definitions/VolumeType"
-									},
-									{ "$ref": "measureable_units.json#/definitions/MassType"
-									}
-                  ]
-                }
-              }
-            }
+									"oneOf": [{
+											"$ref": "measureable_units.json#/definitions/VolumeType"
+										},
+										{
+											"$ref": "measureable_units.json#/definitions/MassType"
+										}
+									]
+								}
+							}
+						}
 					}
 				}
 			],
@@ -124,13 +135,14 @@
 				{
 					"properties": {
 						"amount": {
-							"oneOf": [
-								{ "$ref": "measureable_units.json#/definitions/VolumeType"
+							"oneOf": [{
+									"$ref": "measureable_units.json#/definitions/VolumeType"
 								},
-								{ "$ref": "measureable_units.json#/definitions/MassType"
+								{
+									"$ref": "measureable_units.json#/definitions/MassType"
 								}
-                  ]
-                }
+							]
+						}
 					},
 					"required": ["amount"]
 				}
