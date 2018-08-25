@@ -1,141 +1,186 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":
-    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/culture.json",
-  "type": "object",
-  "additionalProperties": false,
-  "definitions": {
-    "CultureBase": {
-      "type": "object",
-      "description":
-        "The descriptive base type for both culture records, and recipe additions. Provides unique properties to identify individual records of a culture",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "type": {
-          "type": "string",
-          "enum": [
-            "ale",
-            "bacteria",
-            "brett",
-            "champagne",
-            "kveik",
-            "lacto",
-            "lager",
-            "malolactic",
-            "mixed-culture",
-            "other",
-            "pedio",
-            "spontaneous",
-            "wine"
-          ]
-        },
-        "form": {
-          "type": "string",
-          "enum": ["liquid", "dry", "slant", "culture", "dregs"]
-        },
-        "laboratory": {
-          "type": "string"
-        },
-        "product_id": {
-          "type": "string"
-        }
-      },
-      "required": ["name", "type", "form"]
-    },
-    "CultureInformation": {
-      "type": "object",
-      "description":
-        "CultureInformation collects the attributes of a microbial culture to store as record information",
-      "allOf": [
-        { "$ref": "#/definitions/CultureBase" },
-        {
-          "properties": {
-            "temperature_range": {
-              "$ref": "measureable_units.json#/definitions/TemperatureRangeType"
-            },
-            "flocculation": {
-              "$ref": "measureable_units.json#/definitions/QualitativeRangeType"
-            },
-            "attenuation": {
-              "$ref": "measureable_units.json#/definitions/PercentRangeType"
-            },
-            "alcohol_tolerance": {
-              "$ref": "measureable_units.json#/definitions/PercentType"
-            },
-            "notes": {
-              "type": "string"
-            },
-            "best_for": {
-              "type": "string"
-            },
-            "max_reuse": {
-              "type": "integer"
-            },
-            "inventory": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "liquid": {
-                  "$ref": "measureable_units.json#/definitions/VolumeType"
-                },
-                "dry": {
-                  "$ref": "measureable_units.json#/definitions/MassType"
-                },
-                "slant": {
-                  "$ref": "measureable_units.json#/definitions/VolumeType"
-                },
-                "culture": {
-                  "$ref": "measureable_units.json#/definitions/VolumeType"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "CultureAdditionType": {
-      "type": "object",
-      "description":
-        "CultureAdditionType collects the attributes of each culture ingredient for use in a recipe",
-      "allOf": [
-        { "$ref": "#/definitions/CultureBase" },
-        {
-          "properties": {
-            "attenuation": {
-              "$ref": "measureable_units.json#/definitions/PercentType"
-            },
-            "times_cultured": {
-              "type": "integer"
-            },
-            "add_to_fermentation_step": {
-              "type": "integer"
-            },
-            "addition_time": {
-              "$ref": "measureable_units.json#/definitions/TimeType"
-            },
-            "addition_sg": {
-              "$ref": "measureable_units.json#/definitions/DensityRangeType"
-            },
-            "cell_count_billions": {
-              "type": "integer"
-            },
-            "amount": {
-              "oneOf": [
-                { "$ref": "measureable_units.json#/definitions/VolumeType"
-                },
-                { "$ref": "measureable_units.json#/definitions/MassType"
-                },
-                { "$ref": "measureable_units.json#/definitions/UnitType"
-                }
-              ]
-            }
-          }
-        },
-        { "required": ["amount"]
-        }
-      ]
-    }
-  }
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/culture.json",
+	"type": "object",
+	"additionalProperties": false,
+	"definitions": {
+		"CultureBase": {
+			"type": "object",
+			"description": "The descriptive base type for both culture records, and recipe additions. Provides unique properties to identify individual records of a culture",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"type": {
+					"type": "string",
+					"enum": [
+						"ale",
+						"bacteria",
+						"brett",
+						"champagne",
+						"kveik",
+						"lacto",
+						"lager",
+						"malolactic",
+						"mixed-culture",
+						"other",
+						"pedio",
+						"spontaneous",
+						"wine"
+					]
+				},
+				"form": {
+					"type": "string",
+					"enum": ["liquid", "dry", "slant", "culture", "dregs"]
+				},
+				"laboratory": {
+					"type": "string"
+				},
+				"product_id": {
+					"type": "string"
+				}
+			},
+			"required": ["name", "type", "form"]
+		},
+		"CultureInformation": {
+			"type": "object",
+			"description": "CultureInformation collects the attributes of a microbial culture to store as record information",
+			"allOf": [{
+					"$ref": "#/definitions/CultureBase"
+				},
+				{
+					"properties": {
+						"temperature_range": {
+							"$ref": "measureable_units.json#/definitions/TemperatureRangeType"
+						},
+						"flocculation": {
+							"$ref": "measureable_units.json#/definitions/QualitativeRangeType"
+						},
+						"attenuation": {
+							"$ref": "measureable_units.json#/definitions/PercentRangeType"
+						},
+						"alcohol_tolerance": {
+							"$ref": "measureable_units.json#/definitions/PercentType"
+						},
+						"notes": {
+							"type": "string"
+						},
+						"best_for": {
+							"type": "string"
+						},
+						"max_reuse": {
+							"type": "integer"
+						},
+						"inventory": {
+							"type": "object",
+							"additionalProperties": false,
+							"properties": {
+								"liquid": {
+									"$ref": "measureable_units.json#/definitions/VolumeType"
+								},
+								"dry": {
+									"$ref": "measureable_units.json#/definitions/MassType"
+								},
+								"slant": {
+									"$ref": "measureable_units.json#/definitions/VolumeType"
+								},
+								"culture": {
+									"$ref": "measureable_units.json#/definitions/VolumeType"
+								}
+							}
+						}
+					}
+				}
+			]
+		},
+		"CultureAdditionType": {
+			"type": "object",
+			"description": "CultureAdditionType collects the attributes of each culture ingredient for use in a recipe",
+			"allOf": [{
+					"$ref": "#/definitions/CultureBase"
+				},
+				{
+					"properties": {
+						"attenuation": {
+							"$ref": "measureable_units.json#/definitions/PercentType"
+						},
+						"times_cultured": {
+							"type": "integer"
+						},
+						"timing": {
+							"type": "object",
+							"additionalProperties": false,
+							"properties": {
+								"use": {
+									"oneOf": [{
+										"add_to_mash": {
+											"type": "object",
+											"step": {
+												"type": "integer"
+											},
+											"time": {
+												"$ref": "measureable_units.json#/definitions/TimeType"
+											},
+											"duration": {
+												"$ref": "measureable_units.json#/definitions/TimeType"
+											}
+										},
+										"add_to_boil": {
+											"type": "object",
+											"step": {
+												"type": "integer"
+											},
+											"time": {
+												"$ref": "measureable_units.json#/definitions/TimeType"
+											},
+											"duration": {
+												"$ref": "measureable_units.json#/definitions/TimeType"
+											}
+										},
+										"add_to_fermentation": {
+											"type": "object",
+											"step": {
+												"type": "integer"
+											},
+											"time": {
+												"$ref": "measureable_units.json#/definitions/TimeType"
+											},
+											"specific_gravity": {
+												"$ref": "measureable_units.json#/definitions/DensityType"
+											},
+											"pH": {
+												"$ref": "measureable_units.json#/definitions/AcidityType"
+											},
+											"duration": {
+												"$ref": "measureable_units.json#/definitions/TimeType"
+											}
+										}
+									}]
+								}
+							}
+						},
+
+						"cell_count_billions": {
+							"type": "integer"
+						},
+						"amount": {
+							"oneOf": [{
+									"$ref": "measureable_units.json#/definitions/VolumeType"
+								},
+								{
+									"$ref": "measureable_units.json#/definitions/MassType"
+								},
+								{
+									"$ref": "measureable_units.json#/definitions/UnitType"
+								}
+							]
+						}
+					}
+				},
+				{
+					"required": ["amount"]
+				}
+			]
+		}
+	}
 }

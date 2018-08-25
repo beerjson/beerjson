@@ -5,7 +5,16 @@
       {
         "name": "Irish Moss",
         "type": "fining",
-        "use": "boil"
+		"timing": {
+							"use": {
+								"add_to_boil": {
+									"time": {
+										"unit": "min",
+										"value": 5
+									}
+								}
+							}
+						}
       }
     ]
   }

@@ -47,11 +47,6 @@ HopAdditionType collects the attributes of each hop ingredient for use in a reci
 
 Parent: [HopVarietyBase](#hopvarietybase)
 
-### Properties
-
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **use** |  'mash'  , 'first wort'  , 'boil'  , 'continuous boil addition'  , 'whirlpool'  , 'hop stand'  , 'dry hop'  , 'hopback' |  |  |
 
 ## IBUEstimateType 
 
