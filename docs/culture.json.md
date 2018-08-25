@@ -30,8 +30,8 @@ Parent: [CultureBase](#culturebase)
 |---|----|-----------|--------|
 | **temperature_range** | [TemperatureRangeType](measureable_units.json.md#temperaturerangetype)|  |  |
 | **flocculation** | [QualitativeRangeType](measureable_units.json.md#qualitativerangetype)|  |  |
-| **attenuation** | [PercentType](measureable_units.json.md#percenttype)|  |  |
-| **alcohol_tolerance** | [PercentRangeType](measureable_units.json.md#percentrangetype)|  |  |
+| **attenuation** | [PercentRangeType](measureable_units.json.md#percentrangetype)|  |  |
+| **alcohol_tolerance** | [PercentType](measureable_units.json.md#percenttype)|  |  |
 | **notes** | string|  |  |
 | **best_for** | string|  |  |
 | **max_reuse** | integer|  |  |
