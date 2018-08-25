@@ -1,147 +1,186 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":
-    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/hop.json",
-  "type": "object",
-  "additionalProperties": false,
-  "definitions": {
-    "HopVarietyBase": {
-      "type": "object",
-      "description":
-        "HopVarietyBase provides unique properties to identify individual records of a hop variety",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "origin": {
-          "type": "string"
-        },
-        "form": {
-          "type": "string",
-          "enum": ["extract", "leaf", "leaf (wet)", "pellet", "powder", "plug"]
-        },
-        "alpha_acid_units": {
-          "type": "number"
-        },
-        "beta_acid_units": {
-          "type": "number"
-        }
-      },
-      "required": ["name", "alpha_acid_units"]
-    },
-    "VarietyInformation": {
-      "type": "object",
-      "description":
-        "VarietyInformation collects the attributes of a hop variety to store as record information",
-      "allOf": [
-        { "$ref": "#/definitions/HopVarietyBase" },
-        {
-          "properties": {
-            "type": {
-              "type": "string",
-              "enum": [
-                "aroma",
-                "bittering",
-                "flavor",
-                "aroma/bittering",
-                "bittering/flavor",
-                "aroma/flavor",
-                "aroma/bittering/flavor"
-              ]
-            },
-            "notes": {
-              "type": "string"
-            },
-            "percent_lost": {
-              "$ref": "measureable_units.json#/definitions/PercentType"
-            },
-            "substitutes": {
-              "type": "string"
-            },
-            "humulene": {
-              "type": "number"
-            },
-            "caryophyllene": {
-              "type": "number"
-            },
-            "cohumulone": {
-              "type": "number"
-            },
-            "myrcene": {
-              "type": "number"
-            },
-            "farnesene": {
-              "type": "number"
-            },
-            "inventory": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "amount": {
-                  "oneOf": [
-                    { "$ref": "measureable_units.json#/definitions/VolumeType"
-                    },
-                    { "$ref": "measureable_units.json#/definitions/MassType"
-                    }
-                  ]
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "HopAdditionType": {
-      "type": "object",
-      "description":
-        "HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bil",
-      "allOf": [
-        { "$ref": "#/definitions/HopVarietyBase" },
-        {
-          "properties": {
-            "use": {
-              "type": "string",
-              "enum": [
-                "mash",
-                "first wort",
-                "boil",
-                "continuous boil addition",
-                "whirlpool",
-                "hop stand",
-                "dry hop",
-                "hopback"
-              ]
-            }
-          },
-          "amount": {
-            "oneOf": [
-              { "$ref": "measureable_units.json#/definitions/VolumeType"
-              },
-              { "$ref": "measureable_units.json#/definitions/MassType"
-              }
-            ]
-          },
-          "time": {
-            "$ref": "measureable_units.json#/definitions/TimeType"
-          },
-          "temperature": {
-            "$ref": "measureable_units.json#/definitions/TemperatureType"
-          }
-        },
-        { "required": ["amount"]
-        }
-      ]
-    },
-    "IBUEstimateType": {
-      "properties": {
-        "method": {
-          "$ref": "#/definitions/IBUMethodType"
-        }
-      }
-    },
-    "IBUMethodType": {
-      "type": "string",
-      "enum": ["Rager", "Tinseth", "Garetz", "Other"]
-    }
-  }
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/hop.json",
+	"type": "object",
+	"additionalProperties": false,
+	"definitions": {
+		"HopVarietyBase": {
+			"type": "object",
+			"description": "HopVarietyBase provides unique properties to identify individual records of a hop variety",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"origin": {
+					"type": "string"
+				},
+				"form": {
+					"type": "string",
+					"enum": ["extract", "leaf", "leaf (wet)", "pellet", "powder", "plug"]
+				},
+				"alpha_acid_units": {
+					"type": "number"
+				},
+				"beta_acid_units": {
+					"type": "number"
+				}
+			},
+			"required": ["name", "alpha_acid_units"]
+		},
+		"VarietyInformation": {
+			"type": "object",
+			"description": "VarietyInformation collects the attributes of a hop variety to store as record information",
+			"allOf": [{
+					"$ref": "#/definitions/HopVarietyBase"
+				},
+				{
+					"properties": {
+						"type": {
+							"type": "string",
+							"enum": [
+								"aroma",
+								"bittering",
+								"flavor",
+								"aroma/bittering",
+								"bittering/flavor",
+								"aroma/flavor",
+								"aroma/bittering/flavor"
+							]
+						},
+						"notes": {
+							"type": "string"
+						},
+						"percent_lost": {
+							"$ref": "measureable_units.json#/definitions/PercentType"
+						},
+						"substitutes": {
+							"type": "string"
+						},
+						"humulene": {
+							"type": "number"
+						},
+						"caryophyllene": {
+							"type": "number"
+						},
+						"cohumulone": {
+							"type": "number"
+						},
+						"myrcene": {
+							"type": "number"
+						},
+						"farnesene": {
+							"type": "number"
+						},
+						"inventory": {
+							"type": "object",
+							"additionalProperties": false,
+							"properties": {
+								"amount": {
+									"oneOf": [{
+											"$ref": "measureable_units.json#/definitions/VolumeType"
+										},
+										{
+											"$ref": "measureable_units.json#/definitions/MassType"
+										}
+									]
+								}
+							}
+						}
+					}
+				}
+			]
+		},
+		"HopAdditionType": {
+			"type": "object",
+			"description": "HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bil",
+			"allOf": [{
+					"$ref": "#/definitions/HopVarietyBase"
+				},
+				{
+					"timing": {
+						"type": "object",
+						"additionalProperties": false,
+						"properties": {
+							"use": {
+								"oneOf": [{
+									"add_to_mash": {
+										"type": "object",
+										"step": {
+											"type": "integer"
+										},
+										"time": {
+											"$ref": "measureable_units.json#/definitions/TimeType"
+										},
+										"duration": {
+											"$ref": "measureable_units.json#/definitions/TimeType"
+										}
+									},
+									"add_to_boil": {
+										"type": "object",
+										"step": {
+											"type": "integer"
+										},
+										"time": {
+											"$ref": "measureable_units.json#/definitions/TimeType"
+										},
+										"continous": {
+										"type": "boolean"
+										},
+										"duration": {
+											"$ref": "measureable_units.json#/definitions/TimeType"
+										}
+									},
+									"add_to_fermentation": {
+										"type": "object",
+										"step": {
+											"type": "integer"
+										},
+										"time": {
+											"$ref": "measureable_units.json#/definitions/TimeType"
+										},
+										"specific_gravity": {
+											"$ref": "measureable_units.json#/definitions/DensityType"
+										},
+										"pH": {
+											"$ref": "measureable_units.json#/definitions/AcidityType"
+										},
+										"duration": {
+											"$ref": "measureable_units.json#/definitions/TimeType"
+										}
+									}
+								}]
+							}
+						}
+					},
+
+					"amount": {
+						"oneOf": [{
+								"$ref": "measureable_units.json#/definitions/VolumeType"
+							},
+							{
+								"$ref": "measureable_units.json#/definitions/MassType"
+							}
+						]
+					},
+					"temperature": {
+						"$ref": "measureable_units.json#/definitions/TemperatureType"
+					}
+				},
+				{
+					"required": ["amount"]
+				}
+			]
+		},
+		"IBUEstimateType": {
+			"properties": {
+				"method": {
+					"$ref": "#/definitions/IBUMethodType"
+				}
+			}
+		},
+		"IBUMethodType": {
+			"type": "string",
+			"enum": ["Rager", "Tinseth", "Garetz", "Other"]
+		}
+	}
 }

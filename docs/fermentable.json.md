@@ -53,5 +53,6 @@ Parent: [FermentableBase](#fermentablebase)
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
+| **timing** | object|  |  |
 | **amount** | undefined|  |  |
 

@@ -4,8 +4,7 @@
     "miscellaneous_ingredients": [
       {
         "name": "name",
-        "type": "fining",
-        "use": "boil"
+        "type": "fining"
       }
     ]
   }

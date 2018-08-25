@@ -133,6 +133,58 @@
 				},
 				{
 					"properties": {
+						"timing": {
+							"type": "object",
+							"additionalProperties": false,
+							"properties": {
+								"use": {
+									"oneOf": [{
+										"add_to_mash": {
+											"type": "object",
+											"step": {
+												"type": "integer"
+											},
+											"time": {
+												"$ref": "measureable_units.json#/definitions/TimeType"
+											},
+											"duration": {
+												"$ref": "measureable_units.json#/definitions/TimeType"
+											}
+										},
+										"add_to_boil": {
+											"type": "object",
+											"step": {
+												"type": "integer"
+											},
+											"time": {
+												"$ref": "measureable_units.json#/definitions/TimeType"
+											},
+											"duration": {
+												"$ref": "measureable_units.json#/definitions/TimeType"
+											}
+										},
+										"add_to_fermentation": {
+											"type": "object",
+											"step": {
+												"type": "integer"
+											},
+											"time": {
+												"$ref": "measureable_units.json#/definitions/TimeType"
+											},
+											"specific_gravity": {
+												"$ref": "measureable_units.json#/definitions/DensityType"
+											},
+											"pH": {
+												"$ref": "measureable_units.json#/definitions/AcidityType"
+											},
+											"duration": {
+												"$ref": "measureable_units.json#/definitions/TimeType"
+											}
+										}
+									}]
+								}
+							}
+						},
 						"amount": {
 							"oneOf": [{
 									"$ref": "measureable_units.json#/definitions/VolumeType"
