@@ -65,7 +65,6 @@
 						},
 						"bitterness": {
 							"type": "object",
-							"minProperties": 1,
 							"additionalProperties": false,
 							"properties": {
 								"ibu_per_lb_per_gal": {
