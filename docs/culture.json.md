@@ -51,9 +51,7 @@ Parent: [CultureBase](#culturebase)
 |---|----|-----------|--------|
 | **attenuation** | [PercentType](measureable_units.json.md#percenttype)|  |  |
 | **times_cultured** | integer|  |  |
-| **add_to_fermentation_step** | integer|  |  |
-| **addition_time** | [TimeType](measureable_units.json.md#timetype)|  |  |
-| **addition_sg** | [DensityRangeType](measureable_units.json.md#densityrangetype)|  |  |
+| **timing** | object|  |  |
 | **cell_count_billions** | integer|  |  |
 | **amount** | undefined|  |  |
 

@@ -12,8 +12,10 @@
         "yield": {
           "potential": 37.0
         },
-        "notes": "Hopped amber extract suitable as a base for english ales.",
-        "ibu_gal_per_lb": 16.6
+		"bitterness": {
+          "ibu_per_lb_per_gal": 16.6
+        },
+        "notes": "Hopped amber extract suitable as a base for english ales."
       }
     ]
   }

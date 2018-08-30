@@ -130,69 +130,100 @@
 						}
 					}
 				],
-				"miscellaneous_additions": [{
+				"miscellaneous_additions": [
+				{
 						"name": "Bitter Orange Peel",
 						"type": "spice",
-						"use": "boil",
 						"amount": {
 							"unit": "oz",
 							"value": 0.63
 						},
-						"time": {
-							"unit": "min",
-							"value": 60
+						"timing": {
+							"use": {
+								"add_to_boil": {
+									"time": {
+										"unit": "min",
+										"value": 60
+									}
+								}
+							}
 						}
 					},
 					{
 						"name": "Licorice Stick",
 						"type": "spice",
-						"use": "boil",
 						"amount": {
 							"unit": "oz",
 							"value": 0.75
 						},
-						"time": {
-							"unit": "min",
-							"value": 60
+						"timing": {
+							"use": {
+								"add_to_boil": {
+									"time": {
+										"unit": "min",
+										"value": 60
+									}
+								}
+							}
 						}
 					},
 					{
 						"name": "Mugwort",
 						"type": "herb",
-						"use": "boil",
 						"amount": {
 							"unit": "oz",
 							"value": 1.0
 						},
-						"time": {
-							"unit": "min",
-							"value": 60.0
+						"timing": {
+							"use": {
+								"add_to_boil": {
+									"time": {
+										"unit": "min",
+										"value": 60
+									}
+								}
+							}
 						}
 					},
 					{
 						"name": "Juniper Berries",
-						"type": "fruit",
-						"use": "fermentation",
+						"type": "spice",
 						"amount": {
 							"unit": "oz",
 							"value": 1.0
 						},
-						"time": {
-							"unit": "day",
-							"value": 0.0
+"timing": {
+							"use": {
+								"add_to_fermentation": {
+									"time": {
+										"unit": "day",
+										"value": 15
+									},
+									"duration": { 
+										"unit": "day",
+										"value": 14
+									}
+
+								}
+							}
 						}
 					},
 					{
 						"name": "Lemon Balm",
 						"type": "herb",
-						"use": "boil",
 						"amount": {
 							"unit": "oz",
 							"value": 3.0
 						},
-						"time": {
-							"unit": "min",
-							"value": 0.0
+						"timing": {
+							"use": {
+								"add_to_boil": {
+									"time": {
+										"unit": "min",
+										"value": 0.0
+									}
+								}
+							}
 						}
 					}
 				],

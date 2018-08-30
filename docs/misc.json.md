@@ -11,8 +11,7 @@ MiscellaneousBase provides unique properties to identify individual records of i
 |   |Type|Description|Required|
 |---|----|-----------|--------|
 | **name** | string|  | :white_check_mark: |
-| **type** |  'spice'  , 'fining'  , 'water agent'  , 'herb'  , 'fruit'  , 'flavor'  , 'wood'  , 'other' |  | :white_check_mark: |
-| **use** |  'boil'  , 'mash'  , 'fermentation'  , 'packaging' |  | :white_check_mark: |
+| **type** |  'spice'  , 'fining'  , 'water agent'  , 'herb'  , 'flavor'  , 'wood'  , 'other' |  | :white_check_mark: |
 
 ## MiscellaneousType 
 
@@ -42,6 +41,6 @@ Parent: [MiscellaneousBase](#miscellaneousbase)
 
 |   |Type|Description|Required|
 |---|----|-----------|--------|
-| **time** | [TimeType](measureable_units.json.md#timetype)|  |  |
+| **timing** | object|  |  |
 | **amount** | undefined|  |  |
 
