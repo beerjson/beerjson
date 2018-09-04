@@ -1,14 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":
-    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/fermentable.json",
+  "id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/fermentable.json",
   "type": "object",
   "additionalProperties": false,
   "definitions": {
     "FermentableBase": {
       "type": "object",
-      "description":
-        "FermentableBase provides unique properties to identify individual records of fermentable ingredients",
+      "description": "FermentableBase provides unique properties to identify individual records of fermentable ingredients",
       "properties": {
         "name": {
           "type": "string"
@@ -49,8 +47,7 @@
     },
     "FermentableType": {
       "type": "object",
-      "description":
-        "FermentableType collects the attributes of a fermentable ingredient to store as record information",
+      "description": "FermentableType collects the attributes of a fermentable ingredient to store as record information",
       "allOf": [
         {
           "$ref": "#/definitions/FermentableBase"
@@ -141,8 +138,7 @@
     },
     "FermentableAdditionType": {
       "type": "object",
-      "description":
-        "FermentableAdditionType collects the attributes of each fermentable ingredient for use in a recipe fermentable bill",
+      "description": "FermentableAdditionType collects the attributes of each fermentable ingredient for use in a recipe fermentable bill",
       "allOf": [
         {
           "$ref": "#/definitions/FermentableBase"
@@ -189,12 +185,10 @@
                           "$ref": "measureable_units.json#/definitions/TimeType"
                         },
                         "specific_gravity": {
-                          "$ref":
-                            "measureable_units.json#/definitions/DensityType"
+                          "$ref": "measureable_units.json#/definitions/DensityType"
                         },
                         "pH": {
-                          "$ref":
-                            "measureable_units.json#/definitions/AcidityType"
+                          "$ref": "measureable_units.json#/definitions/AcidityType"
                         },
                         "duration": {
                           "$ref": "measureable_units.json#/definitions/TimeType"

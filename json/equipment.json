@@ -1,14 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":
-    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/equipment.json",
+  "id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/equipment.json",
   "type": "object",
   "additionalProperties": false,
   "definitions": {
     "EquipmentBase": {
       "type": "object",
-      "description":
-        "The descriptive base type for brew day equipment. Provides unique properties to fully describe the recipe.",
+      "description": "The descriptive base type for brew day equipment. Provides unique properties to fully describe the recipe.",
       "properties": {
         "name": {
           "type": "string"
@@ -36,8 +34,7 @@
     },
     "EquipmentType": {
       "type": "object",
-      "description":
-        "EquipmentType provides necessary information for brewing equipment",
+      "description": "EquipmentType provides necessary information for brewing equipment",
       "allOf": [
         {
           "$ref": "#/definitions/EquipmentBase"

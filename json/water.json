@@ -1,14 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":
-    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/water.json",
+  "id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/water.json",
   "type": "object",
   "additionalProperties": false,
   "definitions": {
     "WaterBase": {
       "type": "object",
-      "description":
-        "WaterBase provides unique properties to identify individual records of regional brewing water",
+      "description": "WaterBase provides unique properties to identify individual records of regional brewing water",
       "properties": {
         "name": {
           "type": "string"
@@ -62,8 +60,7 @@
     },
     "WaterType": {
       "type": "object",
-      "description":
-        "WaterType collects the attributes of a regional brewing water to store as record information",
+      "description": "WaterType collects the attributes of a regional brewing water to store as record information",
       "allOf": [
         { "$ref": "#/definitions/WaterBase" },
         {
@@ -80,8 +77,7 @@
     },
     "WaterAdditionType": {
       "type": "object",
-      "description":
-        "WaterAdditionType collects the attributes of each water addition for use in a recipe",
+      "description": "WaterAdditionType collects the attributes of each water addition for use in a recipe",
       "allOf": [
         { "$ref": "#/definitions/WaterBase" },
         {

@@ -1,14 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":
-    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/mash.json",
+  "id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/mash.json",
   "type": "object",
   "additionalProperties": false,
   "definitions": {
     "MashProcedureType": {
       "type": "object",
-      "description":
-        "MashProcedureType defines the procedure for performing unique mashing styles",
+      "description": "MashProcedureType defines the procedure for performing unique mashing styles",
       "additionalProperties": false,
       "properties": {
         "name": {
