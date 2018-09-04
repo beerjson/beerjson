@@ -36,8 +36,7 @@
     },
     "StyleType": {
       "type": "object",
-      "description":
-        "StyleType provide information for Style categorization",
+      "description": "StyleType provide information for Style categorization",
       "allOf": [
         { "$ref": "#/definitions/StyleBase" },
         {

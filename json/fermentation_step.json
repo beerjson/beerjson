@@ -29,17 +29,17 @@
         "free_rise": {
           "type": "boolean"
         },
-        "start_gravity":{
-          "type":"number"
+        "start_gravity": {
+          "type": "number"
         },
-        "end_gravity":{
-          "type":"number"
+        "end_gravity": {
+          "type": "number"
         },
-        "start_ph":{
-          "type":"number"
+        "start_ph": {
+          "type": "number"
         },
-        "end_ph":{
-          "type":"number"
+        "end_ph": {
+          "type": "number"
         },
         "vessel": {
           "type": "string"

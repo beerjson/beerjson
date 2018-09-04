@@ -19,22 +19,22 @@
         "bicarbonate": {
           "$ref": "measureable_units.json#/definitions/ConcentrationType"
         },
-		"carbonate": {
+        "carbonate": {
           "$ref": "measureable_units.json#/definitions/ConcentrationType"
         },
-		"potassium": {
+        "potassium": {
           "$ref": "measureable_units.json#/definitions/ConcentrationType"
         },
-		"iron": {
+        "iron": {
           "$ref": "measureable_units.json#/definitions/ConcentrationType"
         },
-		"nitrate": {
+        "nitrate": {
           "$ref": "measureable_units.json#/definitions/ConcentrationType"
         },
-		"nitrite": {
+        "nitrite": {
           "$ref": "measureable_units.json#/definitions/ConcentrationType"
         },
-		"flouride": {
+        "flouride": {
           "$ref": "measureable_units.json#/definitions/ConcentrationType"
         },
         "sulfate": {
