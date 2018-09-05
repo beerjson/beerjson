@@ -1,14 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":
-    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/fermentation.json",
+  "id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/fermentation.json",
   "type": "object",
   "additionalProperties": false,
   "definitions": {
     "FermentationProcedureType": {
       "type": "object",
-      "description":
-        "FermentationProcedureType defines the procedure for performing fermenting",
+      "description": "FermentationProcedureType defines the procedure for performing fermenting",
       "additionalProperties": false,
       "properties": {
         "name": {

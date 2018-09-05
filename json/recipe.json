@@ -1,14 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id":
-    "https://raw.githubusercontent.com/beerjson/beerjson/master/json/recipe.json",
+  "id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/recipe.json",
   "type": "object",
   "additionalProperties": false,
   "definitions": {
     "RecipeType": {
       "type": "object",
-      "description":
-        "RecipeType composes the information stored in a beerjson recipe",
+      "description": "RecipeType composes the information stored in a beerjson recipe",
       "additionalProperties": false,
       "properties": {
         "name": {
@@ -64,40 +62,35 @@
           "properties": {
             "fermentable_bill": {
               "type": "array",
-              "description":
-                "fermentable_bill collects all the fermentable ingredients for use in a recipe",
+              "description": "fermentable_bill collects all the fermentable ingredients for use in a recipe",
               "items": {
                 "$ref": "fermentable.json#/definitions/FermentableAdditionType"
               }
             },
             "hop_bill": {
               "type": "array",
-              "description":
-                "hop_bill collects all the hops for use in a recipe",
+              "description": "hop_bill collects all the hops for use in a recipe",
               "items": {
                 "$ref": "hop.json#/definitions/HopAdditionType"
               }
             },
             "miscellaneous_additions": {
               "type": "array",
-              "description":
-                "miscellaneous_additions collects all the miscellaneous items for use in a recipe",
+              "description": "miscellaneous_additions collects all the miscellaneous items for use in a recipe",
               "items": {
                 "$ref": "misc.json#/definitions/MiscellaneousAdditionType"
               }
             },
             "culture_additions": {
               "type": "array",
-              "description":
-                "culture_additions collects all the culture items for use in a recipe",
+              "description": "culture_additions collects all the culture items for use in a recipe",
               "items": {
                 "$ref": "culture.json#/definitions/CultureAdditionType"
               }
             },
             "water_additions": {
               "type": "array",
-              "description":
-                "water_additions collects all the water items for use in a recipe",
+              "description": "water_additions collects all the water items for use in a recipe",
               "items": {
                 "$ref": "water.json#/definitions/WaterAdditionType"
               }
