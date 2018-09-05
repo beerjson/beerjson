@@ -1,6 +1,6 @@
 The schema defines the following types:
 
-## FermentableBase 
+## FermentableBase
 
 FermentableBase provides unique properties to identify individual records of fermentable ingredients
 
@@ -8,15 +8,15 @@ FermentableBase provides unique properties to identify individual records of fer
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **name** | string|  | :white_check_mark: |
-| **type** |  'dry extract'  , 'extract'  , 'grain'  , 'sugar'  , 'fruit'  , 'juice'  , 'honey'  , 'other' |  | :white_check_mark: |
-| **origin** | string|  |  |
-| **supplier** | string|  |  |
-| **grain_group** |  'base'  , 'caramel'  , 'flaked'  , 'roasted'  , 'specialty'  , 'smoked'  , 'adjunct' |  |  |
+|                 | Type                                                                                  | Description | Required           |
+| --------------- | ------------------------------------------------------------------------------------- | ----------- | ------------------ |
+| **name**        | string                                                                                |             | :white_check_mark: |
+| **type**        | 'dry extract' , 'extract' , 'grain' , 'sugar' , 'fruit' , 'juice' , 'honey' , 'other' |             | :white_check_mark: |
+| **origin**      | string                                                                                |             |                    |
+| **supplier**    | string                                                                                |             |                    |
+| **grain_group** | 'base' , 'caramel' , 'flaked' , 'roasted' , 'specialty' , 'smoked' , 'adjunct'        |             |                    |
 
-## FermentableType 
+## FermentableType
 
 FermentableType collects the attributes of a fermentable ingredient to store as record information
 
@@ -26,22 +26,22 @@ Parent: [FermentableBase](#fermentablebase)
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **yield** | object|  | :white_check_mark: |
-| **bitterness** | object|  |  |
-| **notes** | string|  |  |
-| **moisture** | [PercentType](measureable_units.json.md#percenttype)|  |  |
-| **alpha_amylase** | number|  |  |
-| **diastatic_power** | number|  |  |
-| **protein** | [PercentType](measureable_units.json.md#percenttype)|  |  |
-| **soluble_nitrogen_ratio** | number|  |  |
-| **max_in_batch** | [PercentType](measureable_units.json.md#percenttype)|  |  |
-| **recommend_mash** | boolean|  |  |
-| **color** | [ColorType](measureable_units.json.md#colortype)|  | :white_check_mark: |
-| **inventory** | object|  |  |
+|                            | Type                                                               | Description | Required           |
+| -------------------------- | ------------------------------------------------------------------ | ----------- | ------------------ |
+| **yield**                  | object                                                             |             | :white_check_mark: |
+| **bitterness**             | object                                                             |             |                    |
+| **notes**                  | string                                                             |             |                    |
+| **moisture**               | [PercentType](measureable_units.json.md#percenttype)               |             |                    |
+| **alpha_amylase**          | number                                                             |             |                    |
+| **diastatic_power**        | [DiastaticPowerType](measureable_units.json.md#diastaticpowertype) |             |                    |
+| **protein**                | [PercentType](measureable_units.json.md#percenttype)               |             |                    |
+| **soluble_nitrogen_ratio** | number                                                             |             |                    |
+| **max_in_batch**           | [PercentType](measureable_units.json.md#percenttype)               |             |                    |
+| **recommend_mash**         | boolean                                                            |             |                    |
+| **color**                  | [ColorType](measureable_units.json.md#colortype)                   |             | :white_check_mark: |
+| **inventory**              | object                                                             |             |                    |
 
-## FermentableAdditionType 
+## FermentableAdditionType
 
 FermentableAdditionType collects the attributes of each fermentable ingredient for use in a recipe fermentable bill
 
@@ -51,8 +51,7 @@ Parent: [FermentableBase](#fermentablebase)
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **timing** | object|  |  |
-| **amount** | undefined|  |  |
-
+|            | Type      | Description | Required |
+| ---------- | --------- | ----------- | -------- |
+| **timing** | object    |             |          |
+| **amount** | undefined |             |          |

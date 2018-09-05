@@ -6,7 +6,7 @@
         "name": "Crystal 40 L",
         "type": "grain",
         "color": {
-          "unit": "L",
+          "unit": "Lovi",
           "value": 40.0
         },
         "origin": "United Kingdom",
@@ -16,8 +16,7 @@
           "fine_coarse_difference": 1.5,
           "coarse_grind": 72.5
         },
-        "notes":
-          "Darker crystal malt. Adds body and improves head retention. Also called caramel malt.",
+        "notes": "Darker crystal malt. Adds body and improves head retention. Also called caramel malt.",
         "moisture": 4.0,
         "diastatic_power": 0.0,
         "protein": 13.2,

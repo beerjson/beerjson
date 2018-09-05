@@ -26,6 +26,17 @@
       },
       "required": ["unit", "value"]
     },
+    "DiastaticPowerType": {
+      "properties": {
+        "unit": {
+          "$ref": "#/definitions/DiastaticPowerUnitType"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": ["unit", "value"]
+    },
     "TemperatureType": {
       "properties": {
         "unit": {
@@ -83,10 +94,10 @@
       },
       "required": ["unit", "value"]
     },
-    "DensityType": {
+    "GravityType": {
       "properties": {
         "unit": {
-          "$ref": "#/definitions/DensityUnitType"
+          "$ref": "#/definitions/GravityUnitType"
         },
         "value": {
           "type": "number"
@@ -177,15 +188,15 @@
       },
       "required": ["minimum", "maximum"]
     },
-    "DensityRangeType": {
+    "GravityRangeType": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "minimum": {
-          "$ref": "#/definitions/DensityType"
+          "$ref": "#/definitions/GravityType"
         },
         "maximum": {
-          "$ref": "#/definitions/DensityType"
+          "$ref": "#/definitions/GravityType"
         }
       },
       "required": ["minimum", "maximum"]
@@ -210,13 +221,13 @@
         "l",
         "tsp",
         "tbsp",
-        "ozfl",
+        "floz",
         "cup",
         "pt",
         "qt",
         "gal",
         "bbl",
-        "iozfl",
+        "ifloz",
         "ipt",
         "iqt",
         "igal",
@@ -227,10 +238,15 @@
       "type": "string",
       "enum": ["mg", "g", "kg", "lb", "oz"]
     },
+    "DiastaticPowerUnitType": {
+      "type": "string",
+      "enum": ["Lintner", "WK"]
+    },
     "TemperatureUnitType": {
       "type": "string",
       "enum": ["C", "F"]
     },
+
     "AcidityUnitType": {
       "type": "string",
       "enum": ["pH"]
@@ -245,11 +261,15 @@
     },
     "ColorUnitType": {
       "type": "string",
-      "enum": ["EBC", "L", "SRM"]
+      "enum": ["EBC", "Lovi", "SRM"]
+    },
+    "GravityUnitType": {
+      "type": "string",
+      "enum": ["sg", "plato", "brix"]
     },
     "DensityUnitType": {
       "type": "string",
-      "enum": ["sg", "plato"]
+      "enum": ["sg", "plato", "brix"]
     },
     "ConcentrationUnitType": {
       "type": "string",
@@ -267,7 +287,7 @@
         "gal/oz",
         "l/g",
         "l/kg",
-        "ozfl/oz",
+        "floz/oz",
         "m^3/kg",
         "ft^3/lb"
       ]

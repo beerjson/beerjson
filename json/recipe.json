@@ -105,10 +105,10 @@
           "type": "string"
         },
         "original_gravity": {
-          "$ref": "measureable_units.json#/definitions/DensityType"
+          "$ref": "measureable_units.json#/definitions/GravityType"
         },
         "final_gravity": {
-          "$ref": "measureable_units.json#/definitions/DensityType"
+          "$ref": "measureable_units.json#/definitions/GravityType"
         },
         "alcohol_by_volume": {
           "$ref": "measureable_units.json#/definitions/PercentType"

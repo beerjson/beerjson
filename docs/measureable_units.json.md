@@ -1,335 +1,343 @@
 The schema defines the following types:
 
-## VolumeType 
+## VolumeType
 
-*no description yet*
+_no description yet_
 
 `VolumeType` type: `undefined`
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **unit** | [VolumeUnitType](#volumeunittype)|  | :white_check_mark: |
-| **value** | number|  | :white_check_mark: |
+|           | Type                              | Description | Required           |
+| --------- | --------------------------------- | ----------- | ------------------ |
+| **unit**  | [VolumeUnitType](#volumeunittype) |             | :white_check_mark: |
+| **value** | number                            |             | :white_check_mark: |
 
-## MassType 
+## MassType
 
-*no description yet*
+_no description yet_
 
 `MassType` type: `undefined`
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **unit** | [MassUnitType](#massunittype)|  | :white_check_mark: |
-| **value** | number|  | :white_check_mark: |
+|           | Type                          | Description | Required           |
+| --------- | ----------------------------- | ----------- | ------------------ |
+| **unit**  | [MassUnitType](#massunittype) |             | :white_check_mark: |
+| **value** | number                        |             | :white_check_mark: |
 
-## TemperatureType 
+## DiastaticPowerType
 
-*no description yet*
+_no description yet_
+
+`DiastaticPowerType` type: `undefined`
+
+### Properties
+
+|           | Type                                              | Description | Required           |
+| --------- | ------------------------------------------------- | ----------- | ------------------ |
+| **unit**  | [DiastaticPowerUnitType](#diastaticpowerunittype) |             | :white_check_mark: |
+| **value** | number                                            |             | :white_check_mark: |
+
+## TemperatureType
+
+_no description yet_
 
 `TemperatureType` type: `undefined`
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **unit** | [TemperatureUnitType](#temperatureunittype)|  | :white_check_mark: |
-| **value** | number|  | :white_check_mark: |
+|           | Type                                        | Description | Required           |
+| --------- | ------------------------------------------- | ----------- | ------------------ |
+| **unit**  | [TemperatureUnitType](#temperatureunittype) |             | :white_check_mark: |
+| **value** | number                                      |             | :white_check_mark: |
 
-## PressureType 
+## PressureType
 
-*no description yet*
+_no description yet_
 
 `PressureType` type: `undefined`
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **unit** | [PressureUnitType](#pressureunittype)|  | :white_check_mark: |
-| **value** | number|  | :white_check_mark: |
+|           | Type                                  | Description | Required           |
+| --------- | ------------------------------------- | ----------- | ------------------ |
+| **unit**  | [PressureUnitType](#pressureunittype) |             | :white_check_mark: |
+| **value** | number                                |             | :white_check_mark: |
 
-## AcidityType 
+## AcidityType
 
-*no description yet*
+_no description yet_
 
 `AcidityType` type: `undefined`
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **unit** | [AcidityUnitType](#acidityunittype)|  | :white_check_mark: |
-| **value** | number|  | :white_check_mark: |
+|           | Type                                | Description | Required           |
+| --------- | ----------------------------------- | ----------- | ------------------ |
+| **unit**  | [AcidityUnitType](#acidityunittype) |             | :white_check_mark: |
+| **value** | number                              |             | :white_check_mark: |
 
-## TimeType 
+## TimeType
 
-*no description yet*
+_no description yet_
 
 `TimeType` type: `undefined`
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **unit** | [TimeUnitType](#timeunittype)|  | :white_check_mark: |
-| **value** | number|  | :white_check_mark: |
+|           | Type                          | Description | Required           |
+| --------- | ----------------------------- | ----------- | ------------------ |
+| **unit**  | [TimeUnitType](#timeunittype) |             | :white_check_mark: |
+| **value** | number                        |             | :white_check_mark: |
 
-## ColorType 
+## ColorType
 
-*no description yet*
+_no description yet_
 
 `ColorType` type: `undefined`
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **unit** | [ColorUnitType](#colorunittype)|  | :white_check_mark: |
-| **value** | number|  | :white_check_mark: |
+|           | Type                            | Description | Required           |
+| --------- | ------------------------------- | ----------- | ------------------ |
+| **unit**  | [ColorUnitType](#colorunittype) |             | :white_check_mark: |
+| **value** | number                          |             | :white_check_mark: |
 
-## DensityType 
+## GravityType
 
-*no description yet*
+_no description yet_
 
-`DensityType` type: `undefined`
+`GravityType` type: `undefined`
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **unit** | [DensityUnitType](#densityunittype)|  | :white_check_mark: |
-| **value** | number|  | :white_check_mark: |
+|           | Type                                | Description | Required           |
+| --------- | ----------------------------------- | ----------- | ------------------ |
+| **unit**  | [GravityUnitType](#gravityunittype) |             | :white_check_mark: |
+| **value** | number                              |             | :white_check_mark: |
 
-## SpecificHeatType 
+## SpecificHeatType
 
-*no description yet*
+_no description yet_
 
 `SpecificHeatType` type: `undefined`
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **unit** | [SpecificHeatUnitType](#specificheatunittype)|  | :white_check_mark: |
-| **value** | number|  | :white_check_mark: |
+|           | Type                                          | Description | Required           |
+| --------- | --------------------------------------------- | ----------- | ------------------ |
+| **unit**  | [SpecificHeatUnitType](#specificheatunittype) |             | :white_check_mark: |
+| **value** | number                                        |             | :white_check_mark: |
 
-## ConcentrationType 
+## ConcentrationType
 
-*no description yet*
+_no description yet_
 
 `ConcentrationType` type: `undefined`
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **unit** | [ConcentrationUnitType](#concentrationunittype)|  | :white_check_mark: |
-| **value** | number|  | :white_check_mark: |
+|           | Type                                            | Description | Required           |
+| --------- | ----------------------------------------------- | ----------- | ------------------ |
+| **unit**  | [ConcentrationUnitType](#concentrationunittype) |             | :white_check_mark: |
+| **value** | number                                          |             | :white_check_mark: |
 
-## SpecificVolumeType 
+## SpecificVolumeType
 
-*no description yet*
+_no description yet_
 
 `SpecificVolumeType` type: `undefined`
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **unit** | [SpecificVolumeUnitType](#specificvolumeunittype)|  | :white_check_mark: |
-| **value** | number|  | :white_check_mark: |
+|           | Type                                              | Description | Required           |
+| --------- | ------------------------------------------------- | ----------- | ------------------ |
+| **unit**  | [SpecificVolumeUnitType](#specificvolumeunittype) |             | :white_check_mark: |
+| **value** | number                                            |             | :white_check_mark: |
 
-## UnitType 
+## UnitType
 
-*no description yet*
+_no description yet_
 
 `UnitType` type: `undefined`
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **unit** | [UnitUnitType](#unitunittype)|  | :white_check_mark: |
-| **value** | number|  | :white_check_mark: |
+|           | Type                          | Description | Required           |
+| --------- | ----------------------------- | ----------- | ------------------ |
+| **unit**  | [UnitUnitType](#unitunittype) |             | :white_check_mark: |
+| **value** | number                        |             | :white_check_mark: |
 
-## QuantitativeRangeType 
+## QuantitativeRangeType
 
-*no description yet*
+_no description yet_
 
 `QuantitativeRangeType` type: `object`
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **minimum** | number|  | :white_check_mark: |
-| **maximum** | number|  | :white_check_mark: |
+|             | Type   | Description | Required           |
+| ----------- | ------ | ----------- | ------------------ |
+| **minimum** | number |             | :white_check_mark: |
+| **maximum** | number |             | :white_check_mark: |
 
-## TemperatureRangeType 
+## TemperatureRangeType
 
-*no description yet*
+_no description yet_
 
 `TemperatureRangeType` type: `object`
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **minimum** | [TemperatureType](#temperaturetype)|  | :white_check_mark: |
-| **maximum** | [TemperatureType](#temperaturetype)|  | :white_check_mark: |
+|             | Type                                | Description | Required           |
+| ----------- | ----------------------------------- | ----------- | ------------------ |
+| **minimum** | [TemperatureType](#temperaturetype) |             | :white_check_mark: |
+| **maximum** | [TemperatureType](#temperaturetype) |             | :white_check_mark: |
 
-## ColorRangeType 
+## ColorRangeType
 
-*no description yet*
+_no description yet_
 
 `ColorRangeType` type: `object`
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **minimum** | [ColorType](#colortype)|  | :white_check_mark: |
-| **maximum** | [ColorType](#colortype)|  | :white_check_mark: |
+|             | Type                    | Description | Required           |
+| ----------- | ----------------------- | ----------- | ------------------ |
+| **minimum** | [ColorType](#colortype) |             | :white_check_mark: |
+| **maximum** | [ColorType](#colortype) |             | :white_check_mark: |
 
-## DensityRangeType 
+## GravityRangeType
 
-*no description yet*
+_no description yet_
 
-`DensityRangeType` type: `object`
+`GravityRangeType` type: `object`
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **minimum** | [DensityType](#densitytype)|  | :white_check_mark: |
-| **maximum** | [DensityType](#densitytype)|  | :white_check_mark: |
+|             | Type                        | Description | Required           |
+| ----------- | --------------------------- | ----------- | ------------------ |
+| **minimum** | [GravityType](#gravitytype) |             | :white_check_mark: |
+| **maximum** | [GravityType](#gravitytype) |             | :white_check_mark: |
 
-## PercentRangeType 
+## PercentRangeType
 
-*no description yet*
+_no description yet_
 
 `PercentRangeType` type: `object`
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **minimum** | [PercentType](#percenttype)|  | :white_check_mark: |
-| **maximum** | [PercentType](#percenttype)|  | :white_check_mark: |
+|             | Type                        | Description | Required           |
+| ----------- | --------------------------- | ----------- | ------------------ |
+| **minimum** | [PercentType](#percenttype) |             | :white_check_mark: |
+| **maximum** | [PercentType](#percenttype) |             | :white_check_mark: |
 
-## VolumeUnitType 
+## VolumeUnitType
 
-*no description yet*
+_no description yet_
 
 `VolumeUnitType` type: `string`
 
+## MassUnitType
 
-## MassUnitType 
-
-*no description yet*
+_no description yet_
 
 `MassUnitType` type: `string`
 
+## DiastaticPowerUnitType
 
-## TemperatureUnitType 
+_no description yet_
 
-*no description yet*
+`DiastaticPowerUnitType` type: `string`
+
+## TemperatureUnitType
+
+_no description yet_
 
 `TemperatureUnitType` type: `string`
 
+## AcidityUnitType
 
-## AcidityUnitType 
-
-*no description yet*
+_no description yet_
 
 `AcidityUnitType` type: `string`
 
+## PressureUnitType
 
-## PressureUnitType 
-
-*no description yet*
+_no description yet_
 
 `PressureUnitType` type: `string`
 
+## TimeUnitType
 
-## TimeUnitType 
-
-*no description yet*
+_no description yet_
 
 `TimeUnitType` type: `string`
 
+## ColorUnitType
 
-## ColorUnitType 
-
-*no description yet*
+_no description yet_
 
 `ColorUnitType` type: `string`
 
+## GravityUnitType
 
-## DensityUnitType 
+_no description yet_
 
-*no description yet*
+`GravityUnitType` type: `string`
+
+## DensityUnitType
+
+_no description yet_
 
 `DensityUnitType` type: `string`
 
+## ConcentrationUnitType
 
-## ConcentrationUnitType 
-
-*no description yet*
+_no description yet_
 
 `ConcentrationUnitType` type: `string`
 
+## SpecificHeatUnitType
 
-## SpecificHeatUnitType 
-
-*no description yet*
+_no description yet_
 
 `SpecificHeatUnitType` type: `string`
 
+## SpecificVolumeUnitType
 
-## SpecificVolumeUnitType 
-
-*no description yet*
+_no description yet_
 
 `SpecificVolumeUnitType` type: `string`
 
+## UnitUnitType
 
-## UnitUnitType 
-
-*no description yet*
+_no description yet_
 
 `UnitUnitType` type: `string`
 
+## DateType
 
-## DateType 
-
-*no description yet*
+_no description yet_
 
 `DateType` type: `string`
 
+## PercentType
 
-## PercentType 
-
-*no description yet*
+_no description yet_
 
 `PercentType` type: `number`
 
+## QualitativeRangeType
 
-## QualitativeRangeType 
-
-*no description yet*
+_no description yet_
 
 `QualitativeRangeType` type: `string`
 
+## VersionType
 
-## VersionType 
-
-*no description yet*
+_no description yet_
 
 `VersionType` type: `number`
-
-
