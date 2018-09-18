@@ -69,7 +69,7 @@
                   "$ref": "measureable_units.json#/definitions/PercentType"
                 },
                 "potential": {
-                  "$ref": "measureable_units.json#/definitions/DensityType"
+                  "$ref": "measureable_units.json#/definitions/GravityType"
                 }
               }
             },
@@ -98,7 +98,7 @@
               "type": "number"
             },
             "diastatic_power": {
-              "type": "number"
+              "$ref": "measureable_units.json#/definitions/DiastaticPowerType"
             },
             "protein": {
               "$ref": "measureable_units.json#/definitions/PercentType"

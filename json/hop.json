@@ -127,7 +127,7 @@
                       "time": {
                         "$ref": "measureable_units.json#/definitions/TimeType"
                       },
-                      "continous": {
+                      "continuous": {
                         "type": "boolean"
                       },
                       "duration": {
@@ -143,7 +143,7 @@
                         "$ref": "measureable_units.json#/definitions/TimeType"
                       },
                       "specific_gravity": {
-                        "$ref": "measureable_units.json#/definitions/DensityType"
+                        "$ref": "measureable_units.json#/definitions/GravityType"
                       },
                       "pH": {
                         "$ref": "measureable_units.json#/definitions/AcidityType"

@@ -40,10 +40,10 @@
         {
           "properties": {
             "original_gravity": {
-              "$ref": "measureable_units.json#/definitions/DensityRangeType"
+              "$ref": "measureable_units.json#/definitions/GravityRangeType"
             },
             "final_gravity": {
-              "$ref": "measureable_units.json#/definitions/DensityRangeType"
+              "$ref": "measureable_units.json#/definitions/GravityRangeType"
             },
             "international_bitterness_units": {
               "$ref": "measureable_units.json#/definitions/QuantitativeRangeType"

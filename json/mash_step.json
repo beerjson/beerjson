@@ -41,7 +41,7 @@
           "type": "string"
         },
         "water_grain_ratio": {
-          "type": "number"
+          "$ref": "measureable_units.json#/definitions/SpecificVolumeType"
         },
         "decoction_amount": {
           "$ref": "measureable_units.json#/definitions/VolumeType"

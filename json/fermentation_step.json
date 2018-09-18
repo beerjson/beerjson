@@ -28,16 +28,16 @@
           "type": "boolean"
         },
         "start_gravity": {
-          "type": "number"
+          "$ref": "measureable_units.json#/definitions/GravityType"
         },
         "end_gravity": {
-          "type": "number"
+          "$ref": "measureable_units.json#/definitions/GravityType"
         },
         "start_ph": {
-          "type": "number"
+          "$ref": "measureable_units.json#/definitions/AcidityType"
         },
         "end_ph": {
-          "type": "number"
+          "$ref": "measureable_units.json#/definitions/AcidityType"
         },
         "vessel": {
           "type": "string"
