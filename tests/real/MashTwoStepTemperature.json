@@ -16,7 +16,7 @@
           {
             "name": "Protein Rest",
             "type": "temperature",
-            "infuse_amount": {
+            "amount": {
               "unit": "l",
               "value": 15.0
             },
@@ -36,7 +36,7 @@
           {
             "name": "Conversion Step, 68 C",
             "type": "temperature",
-            "infuse_amount": {
+            "amount": {
               "unit": "l",
               "value": 15.0
             },

@@ -32,7 +32,6 @@
           "style_guide": "BJCP 1999",
           "type": "beer"
         },
-
         "ingredients": {
           "fermentable_bill": [
             {
@@ -253,7 +252,7 @@
             {
               "name": "Saccharification Rest",
               "type": "infusion",
-              "infuse_amount": {
+              "amount": {
                 "unit": "qt",
                 "value": 22.5
               },
