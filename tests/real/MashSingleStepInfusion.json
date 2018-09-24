@@ -12,7 +12,7 @@
           {
             "name": "Conversion Step, 68C",
             "type": "infusion",
-            "infuse_amount": {
+            "amount": {
               "unit": "l",
               "value": 10.0
             },

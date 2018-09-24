@@ -6,7 +6,7 @@
         "name": "Pale 2-row Malt",
         "type": "grain",
         "color": {
-          "unit": "L",
+          "unit": "Lovi",
           "value": 3.0
         },
         "yield": {

@@ -19,7 +19,7 @@
           "$ref": "measureable_units.json#/definitions/TemperatureType"
         },
         "pH": {
-          "type": "number"
+          "$ref": "measureable_units.json#/definitions/AcidityType"
         },
         "notes": {
           "type": "string"

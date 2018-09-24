@@ -39,7 +39,7 @@ const mash_steps = r =>
         : {}),
       ...(!_.isEmpty(mash_step['INFUSE_AMOUNT'])
         ? {
-            infuse_amount: {
+            amount: {
               unit: 'l',
               value: Number(mash_step['INFUSE_AMOUNT'])
             }
