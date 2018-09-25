@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/pricelessbrewing/beerjson/master/json/package.json",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "PackagingProcedureType": {
+      "type": "object",
+      "description": "PackagingProcedureType describes the procedure for packaging your beverage",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "packaged_volume": {
+          "$ref": "measureable_units.json#/definitions/VolumeType"
+        },
+        "description": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "packaging_vessel": {
+          "type": "array",
+          "items": {
+            "$ref": "packaging_vessel.json#/definitions/PackagingVesselType"
+          }
+        }
+      },
+      "required": ["name"]
+    }
+  }
+}
