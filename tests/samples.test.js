@@ -17,6 +17,8 @@ ajv.addSchema(require('../json/style'))
 ajv.addSchema(require('../json/water'))
 ajv.addSchema(require('../json/culture'))
 ajv.addSchema(require('../json/equipment'))
+ajv.addSchema(require('../json/packaging'))
+ajv.addSchema(require('../json/packaging_vessel'))
 
 const validate = ajv.compile(require('../json/beer'))
 const fs = require('fs')

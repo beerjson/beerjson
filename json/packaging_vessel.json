@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/pricelessbrewing/beerjson/master/json/packaging_vessel.json",
+  "id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/packaging_vessel.json",
   "type": "object",
   "additionalProperties": false,
   "definitions": {
