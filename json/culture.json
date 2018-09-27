@@ -157,13 +157,30 @@
                         "duration": {
                           "$ref": "measureable_units.json#/definitions/TimeType"
                         }
+                      },
+                      "add_to_package": {
+                        "type": "object",
+                        "step": {
+                          "type": "integer"
+                        },
+                        "time": {
+                          "$ref": "measureable_units.json#/definitions/TimeType"
+                        },
+                        "specific_gravity": {
+                          "$ref": "measureable_units.json#/definitions/GravityType"
+                        },
+                        "pH": {
+                          "$ref": "measureable_units.json#/definitions/AcidityType"
+                        },
+                        "duration": {
+                          "$ref": "measureable_units.json#/definitions/TimeType"
+                        }
                       }
                     }
                   ]
                 }
               }
             },
-
             "cell_count_billions": {
               "type": "integer"
             },

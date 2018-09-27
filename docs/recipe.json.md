@@ -31,5 +31,6 @@ RecipeType composes the information stored in a beerjson recipe
 | **beer_pH**           | [AcidityType](measureable_units.json.md#aciditytype)                        |             |                    |
 | **carbonation**       | number                                                                      |             |                    |
 | **fermentation**      | [FermentationProcedureType](fermentation.json.md#fermentationproceduretype) |             |                    |
+| **packaging**         | [PackagingProcedureType](packaging.json.md#packagingproceduretype)          |             |                    |
 | **taste**             | object                                                                      |             |                    |
 | **calories_per_pint** | number                                                                      |             |                    |

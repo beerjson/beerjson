@@ -82,6 +82,13 @@
           "items": {
             "$ref": "equipment.json#/definitions/EquipmentType"
           }
+        },
+        "packaging": {
+          "type": "array",
+          "description": "A collection of steps providing process information for common packaging procedures.",
+          "items": {
+            "$ref": "packaging.json#/definitions/PackagingProcedureType"
+          }
         }
       },
       "required": ["version"]
