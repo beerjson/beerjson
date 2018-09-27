@@ -13,6 +13,5 @@ FermentationProcedureType defines the procedure for performing fermenting
 | **name**               | string |             | :white_check_mark: |
 | **type**               | string |             |                    |
 | **description**        | string |             |                    |
-| **volume_packaged**    | string |             |                    |
 | **notes**              | string |             |                    |
 | **fermentation_steps** | array  |             | :white_check_mark: |

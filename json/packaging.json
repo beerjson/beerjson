@@ -21,7 +21,7 @@
         "notes": {
           "type": "string"
         },
-        "packaging_vessel": {
+        "packaging_vessels": {
           "type": "array",
           "items": {
             "$ref": "packaging_vessel.json#/definitions/PackagingVesselType"

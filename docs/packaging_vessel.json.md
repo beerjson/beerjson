@@ -17,10 +17,10 @@ PackagingVesselType - a per vessel representation of a packaging process
 | **start_temperature** | [TemperatureType](measureable_units.json.md#temperaturetype) |             |                    |
 | **end_temperature**   | [TemperatureType](measureable_units.json.md#temperaturetype) |             |                    |
 | **step_time**         | [TimeType](measureable_units.json.md#timetype)               |             |                    |
-| **start_gravity**     | [GravityUnitType](measureable_units.json.md#gravityunittype) |             |                    |
-| **end_gravity**       | [GravityUnitType](measureable_units.json.md#gravityunittype) |             |                    |
-| **start_ph**          | [AcidityUnitType](measureable_units.json.md#acidityunittype) |             |                    |
-| **end_ph**            | [AcidityUnitType](measureable_units.json.md#acidityunittype) |             |                    |
+| **start_gravity**     | [GravityType](measureable_units.json.md#gravitytype)         |             |                    |
+| **end_gravity**       | [GravityType](measureable_units.json.md#gravitytype)         |             |                    |
+| **start_ph**          | [AcidityType](measureable_units.json.md#aciditytype)         |             |                    |
+| **end_ph**            | [AcidityType](measureable_units.json.md#aciditytype)         |             |                    |
 | **carbonation**       | number                                                       |             |                    |
 | **vessel_volume**     | [VolumeType](measureable_units.json.md#volumetype)           |             |                    |
 | **vessel_quantity**   | number                                                       |             |                    |

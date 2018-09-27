@@ -8,10 +8,10 @@ PackagingProcedureType describes the procedure for packaging your beverage
 
 ### Properties
 
-|                      | Type                                               | Description | Required           |
-| -------------------- | -------------------------------------------------- | ----------- | ------------------ |
-| **name**             | string                                             |             | :white_check_mark: |
-| **packaged_volume**  | [VolumeType](measureable_units.json.md#volumetype) |             |                    |
-| **description**      | string                                             |             |                    |
-| **notes**            | string                                             |             |                    |
-| **packaging_vessel** | array                                              |             |                    |
+|                       | Type                                               | Description | Required           |
+| --------------------- | -------------------------------------------------- | ----------- | ------------------ |
+| **name**              | string                                             |             | :white_check_mark: |
+| **packaged_volume**   | [VolumeType](measureable_units.json.md#volumetype) |             |                    |
+| **description**       | string                                             |             |                    |
+| **notes**             | string                                             |             |                    |
+| **packaging_vessels** | array                                              |             |                    |

@@ -1,0 +1,302 @@
+{
+  "beerjson": {
+    "version": 2.06,
+    "recipes": [
+      {
+        "name": "MTF Spelt Saison brett C added at kegging",
+        "type": "all grain",
+        "author": "",
+        "batch_size": {
+          "unit": "gal",
+          "value": 5.5
+        },
+        "boil_size": {
+          "unit": "gal",
+          "value": 5.5
+        },
+        "boil_time": {
+          "unit": "min",
+          "value": 90
+        },
+        "efficiency": {
+          "conversion": 90,
+          "lauter": 83.5,
+          "mash": 75,
+          "brewhouse": 75
+        },
+        "style": {
+          "name": "Brett Beer",
+          "category": "American Wild Ale",
+          "category_number": 28,
+          "category_id": "28",
+          "style_id": "28A",
+          "style_letter": "A",
+          "style_guide": "BJCP2015",
+          "type": "beer"
+        },
+        "ingredients": {
+          "fermentable_bill": [
+            {
+              "name": "Pilsner",
+              "type": "grain",
+              "color": {
+                "unit": "Lovi",
+                "value": 1
+              },
+              "origin": "Germany",
+              "amount": {
+                "unit": "lb",
+                "value": 6.6
+              },
+              "yield": {
+                "potential": 38
+              }
+            },
+            {
+              "name": "Unmalted Spelt",
+              "type": "grain",
+              "color": {
+                "unit": "Lovi",
+                "value": 5
+              },
+              "amount": {
+                "unit": "lb",
+                "value": 2.8
+              },
+              "yield": {
+                "potential": 30
+              }
+            }
+          ],
+          "hop_bill": [
+            {
+              "name": "EKG",
+              "origin": "UK",
+              "alpha_acid_units": 5,
+              "amount": {
+                "unit": "oz",
+                "value": 1.15
+              },
+              "timing": {
+                "use": {
+                  "add_to_boil": {
+                    "time": {
+                      "unit": "min",
+                      "value": 60
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "EKG",
+              "origin": "UK",
+              "alpha_acid_units": 5,
+              "amount": {
+                "unit": "oz",
+                "value": 0.6
+              },
+              "timing": {
+                "use": {
+                  "add_to_boil": {
+                    "time": {
+                      "unit": "min",
+                      "value": 20
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "EKG",
+              "origin": "UK",
+              "alpha_acid_units": 5,
+              "amount": {
+                "unit": "oz",
+                "value": 1
+              },
+              "timing": {
+                "use": {
+                  "add_to_boil": {
+                    "time": {
+                      "unit": "min",
+                      "value": 2
+                    }
+                  }
+                }
+              }
+            }
+          ],
+          "culture_additions": [
+            {
+              "name": "Farmhouse Ale",
+              "type": "ale",
+              "form": "liquid",
+              "laboratory": "WYeast",
+              "product_id": "",
+              "amount": {
+                "unit": "ml",
+                "value": 125
+              }
+            },
+            {
+              "name": "Brett Claussenii",
+              "type": "brett",
+              "form": "liquid",
+              "laboratory": "WYeast",
+              "product_id": "",
+              "amount": {
+                "unit": "ml",
+                "value": 100
+              },
+              "timing": {
+                "use": {
+                  "add_to_package": {
+                    "step": 1,
+                    "duration": {
+                      "unit": "month",
+                      "value": 3
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "mash": {
+          "name": "Stepped infusion",
+          "grain_temperature": {
+            "unit": "F",
+            "value": 72
+          },
+          "notes": "",
+          "mash_steps": [
+            {
+              "name": "Protein Rest",
+              "type": "infusion",
+              "amount": {
+                "unit": "gal",
+                "value": 7.7
+              },
+              "step_temperature": {
+                "unit": "F",
+                "value": 131
+              },
+              "step_time": {
+                "unit": "min",
+                "value": 20
+              },
+              "water_grain_ratio": {
+                "unit": "qt/lb",
+                "value": 3.27
+              },
+              "infuse_temperature": {
+                "unit": "F",
+                "value": 134.6
+              }
+            },
+            {
+              "name": "Sach Rest",
+              "type": "temperature",
+              "step_temperature": {
+                "unit": "F",
+                "value": 145
+              },
+              "step_time": {
+                "unit": "min",
+                "value": 45
+              }
+            },
+            {
+              "name": "Sach Rest",
+              "type": "temperature",
+              "step_temperature": {
+                "unit": "F",
+                "value": 154
+              },
+              "step_time": {
+                "unit": "min",
+                "value": 20
+              }
+            }
+          ]
+        },
+        "fermentation": {
+          "name": "Ale, Single Stage",
+          "type": "Single Stage",
+          "description": "Initial temp at 74F, no temp control. Allowed to free rise to a max temp of 82F.",
+          "fermentation_steps": [
+            {
+              "name": "Free rise",
+              "start_temperature": {
+                "unit": "F",
+                "value": 74
+              },
+              "free_rise": true,
+              "start_gravity": {
+                "unit": "sg",
+                "value": 1.046
+              },
+              "end_gravity": {
+                "unit": "sg",
+                "value": 1.012
+              },
+              "end_temperature": {
+                "unit": "F",
+                "value": 82
+              },
+              "step_time": {
+                "unit": "day",
+                "value": 7
+              }
+            }
+          ]
+        },
+        "packaging": {
+          "name": "Kegged",
+          "packaged_volume": {
+            "unit": "gal",
+            "value": 5
+          },
+          "description": "Keg finished beer into a keg, which was dosed with Brett C",
+          "packaging_vessels": [
+            {
+              "name": "pinlock",
+              "type": "keg",
+              "vessel_volume": {
+                "unit": "gal",
+                "value": 5
+              },
+              "start_gravity": {
+                "unit": "sg",
+                "value": 1.012
+              },
+              "end_gravity": {
+                "unit": "sg",
+                "value": 1.01
+              },
+              "vessel_quantity": 1,
+              "step_time": {
+                "unit": "month",
+                "value": 3
+              }
+            }
+          ]
+        },
+        "notes": "",
+        "original_gravity": {
+          "unit": "sg",
+          "value": 1.046
+        },
+        "final_gravity": {
+          "unit": "sg",
+          "value": 1.01
+        },
+        "ibu_estimate": {
+          "method": "Tinseth",
+          "value": 27
+        }
+      }
+    ]
+  }
+}

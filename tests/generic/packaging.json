@@ -1,0 +1,26 @@
+{
+  "beerjson": {
+    "version": 2.06,
+    "packaging": [
+      {
+        "name": "Kegged",
+        "packaged_volume": {
+          "unit": "gal",
+          "value": 15.0
+        },
+        "description": "Keg finished beer into three pinlocks",
+        "packaging_vessels": [
+          {
+            "name": "pinlock",
+            "type": "keg",
+            "vessel_volume": {
+              "unit": "gal",
+              "value": 5.0
+            },
+            "vessel_quantity": 3
+          }
+        ]
+      }
+    ]
+  }
+}

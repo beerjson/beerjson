@@ -32,16 +32,16 @@
           "$ref": "measureable_units.json#/definitions/TimeType"
         },
         "start_gravity": {
-          "$ref": "measureable_units.json#/definitions/GravityUnitType"
+          "$ref": "measureable_units.json#/definitions/GravityType"
         },
         "end_gravity": {
-          "$ref": "measureable_units.json#/definitions/GravityUnitType"
+          "$ref": "measureable_units.json#/definitions/GravityType"
         },
         "start_ph": {
-          "$ref": "measureable_units.json#/definitions/AcidityUnitType"
+          "$ref": "measureable_units.json#/definitions/AcidityType"
         },
         "end_ph": {
-          "$ref": "measureable_units.json#/definitions/AcidityUnitType"
+          "$ref": "measureable_units.json#/definitions/AcidityType"
         },
         "carbonation": {
           "type": "number"
