@@ -1,0 +1,18 @@
+{
+  "beerjson": {
+    "version": 2.06,
+    "boil": {
+      "name": "60 minute boil",
+      "type": "Single Stage",
+      "description": "A standard 60 min boil",
+      "boil_size": {
+        "unit": "gal",
+        "value": 7
+      },
+      "boil_time": {
+        "unit": "min",
+        "value": 60
+      }
+    }
+  }
+}

@@ -10,25 +10,20 @@
           "unit": "gal",
           "value": 5
         },
-        "boil_size": {
-          "unit": "gal",
-          "value": 5
-        },
-        "boil_time": 90,
         "efficiency": {
-          "conversion": 92.0,
+          "conversion": 92,
           "lauter": 80.5,
-          "mash": 74.0,
+          "mash": 74,
           "brewhouse": 74.1
         },
         "ingredients": {
-          "fermentable_bill": [
+          "fermentable_additions": [
             {
               "name": "pale ale",
               "type": "grain",
               "color": {
                 "unit": "Lovi",
-                "value": 3.0
+                "value": 3
               },
               "amount": {
                 "unit": "kg",
@@ -39,7 +34,7 @@
               }
             }
           ],
-          "hop_bill": [
+          "hop_additions": [
             {
               "name": "Citra",
               "origin": "US",
@@ -56,26 +51,26 @@
               "inventory": {
                 "pellet": {
                   "unit": "g",
-                  "value": 30.0
+                  "value": 30
                 }
               },
               "use": "dry hop",
               "amount": {
                 "unit": "g",
-                "value": 10.0
+                "value": 10
               }
             },
             {
               "name": "Distilled El Dorado Hop Oil",
               "origin": "US",
               "form": "extract",
-              "alpha_acid_units": 0.0,
+              "alpha_acid_units": 0,
               "type": "aroma",
               "notes": "Distilled hop oil is an amazing new product we are making available to homebrewers.  Distilled hop oil varies from other oils in that it is produced from fresh hops, as opposed to dried and processed pellets.  Distilled hop oil delivers the same wet hop character that was previously only possible to acquire with the use of freshly harvested hops.  The oil is extremely shelf stable, so you can now brew a consistant fresh hop IPA all year long. Extremely volatile, this oil should only be used for aromatic applications; typically applied at bottling/kegging.",
               "use": "dry hop",
               "amount": {
                 "unit": "ml",
-                "value": 1.0
+                "value": 1
               }
             }
           ],
@@ -89,7 +84,7 @@
               "add_to_fermentation_step": 1,
               "amount": {
                 "unit": "ml",
-                "value": 40.0
+                "value": 40
               }
             },
             {
@@ -122,57 +117,70 @@
               "name": "Metropolis City Water",
               "calcium": {
                 "unit": "ppm",
-                "value": 275.0
+                "value": 275
               },
               "bicarbonate": {
                 "unit": "ppm",
-                "value": 270.0
+                "value": 270
               },
               "carbonate": {
                 "unit": "ppm",
-                "value": 0.0
+                "value": 0
               },
               "sodium": {
                 "unit": "ppm",
-                "value": 25.0
+                "value": 25
               },
               "potassium": {
                 "unit": "ppm",
-                "value": 0.0
+                "value": 0
               },
               "iron": {
                 "unit": "ppm",
-                "value": 0.0
+                "value": 0
               },
               "nitrate": {
                 "unit": "ppm",
-                "value": 0.0
+                "value": 0
               },
               "nitrite": {
                 "unit": "ppm",
-                "value": 0.0
+                "value": 0
               },
               "flouride": {
                 "unit": "ppm",
-                "value": 0.0
+                "value": 0
               },
               "sulfate": {
                 "unit": "ppm",
-                "value": 610.0
+                "value": 610
               },
               "magnesium": {
                 "unit": "ppm",
-                "value": 40.0
+                "value": 40
               },
               "chloride": {
                 "unit": "ppm",
-                "value": 35.0
+                "value": 35
               },
-              "pH": 7.0
+              "pH": 7
             }
           ]
         },
-        "fermentation": {
+        "boil": {
+          "name": "60 minute boil",
+          "type": "Single Stage",
+          "description": "A standard 60 min boil",
+          "boil_size": {
+            "unit": "gal",
+            "value": 7
+          },
+          "boil_time": {
+            "unit": "min",
+            "value": 60
+          }
+        },
+        "fermentations": {
           "name": "Ale, Single Stage",
           "type": "Single Stage",
           "description": "A simple single stage fermentation, often used by extract brewers or for classic ales.",
@@ -189,7 +197,7 @@
               },
               "step_time": {
                 "unit": "day",
-                "value": 14.0
+                "value": 14
               }
             },
             {
@@ -204,7 +212,7 @@
               },
               "step_time": {
                 "unit": "day",
-                "value": 10.0
+                "value": 10
               }
             },
             {

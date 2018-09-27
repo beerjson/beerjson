@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/boil_step.json",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "FermentationStepType": {
+      "type": "object",
+      "description": "BoilStepType - a per step representation of a boil process, can be used to support preboil steps, non-boiling pasteurization steps, boiling, whirlpool steps, and chilling.",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "start_temperature": {
+          "$ref": "measureable_units.json#/definitions/TemperatureType"
+        },
+        "end_temperature": {
+          "$ref": "measureable_units.json#/definitions/TemperatureType"
+        },
+        "ramp_time": {
+          "$ref": "measureable_units.json#/definitions/TimeType"
+        },
+        "step_time": {
+          "$ref": "measureable_units.json#/definitions/TimeType"
+        },
+        "start_gravity": {
+          "$ref": "measureable_units.json#/definitions/GravityType"
+        },
+        "end_gravity": {
+          "$ref": "measureable_units.json#/definitions/GravityType"
+        },
+        "start_ph": {
+          "$ref": "measureable_units.json#/definitions/AcidityType"
+        },
+        "end_ph": {
+          "$ref": "measureable_units.json#/definitions/AcidityType"
+        },
+        "chilling_type": {
+          "type": "string",
+          "enum": ["batch", "inline"]
+        }
+      },
+      "required": ["name"]
+    }
+  }
+}

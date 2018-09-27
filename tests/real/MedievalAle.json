@@ -10,18 +10,10 @@
           "unit": "gal",
           "value": 5.5
         },
-        "boil_size": {
-          "unit": "gal",
-          "value": 5.5
-        },
-        "boil_time": {
-          "unit": "min",
-          "value": 90.0
-        },
         "efficiency": {
-          "conversion": 92.0,
+          "conversion": 92,
           "lauter": 80.5,
-          "mash": 74.0,
+          "mash": 74,
           "brewhouse": 74.1
         },
         "style": {
@@ -33,13 +25,13 @@
           "type": "beer"
         },
         "ingredients": {
-          "fermentable_bill": [
+          "fermentable_additions": [
             {
               "name": "Buckwheat Honey",
               "type": "honey",
               "color": {
                 "unit": "Lovi",
-                "value": 0.0
+                "value": 0
               },
               "origin": "America",
               "amount": {
@@ -47,7 +39,7 @@
                 "value": 2.148
               },
               "yield": {
-                "potential": 37.0
+                "potential": 37
               }
             },
             {
@@ -63,7 +55,7 @@
                 "value": 0.5
               },
               "yield": {
-                "potential": 33.0
+                "potential": 33
               }
             },
             {
@@ -71,7 +63,7 @@
               "type": "grain",
               "color": {
                 "unit": "Lovi",
-                "value": 450.0
+                "value": 450
               },
               "origin": "America",
               "amount": {
@@ -79,7 +71,7 @@
                 "value": 0.25
               },
               "yield": {
-                "potential": 37.0
+                "potential": 37
               }
             },
             {
@@ -95,7 +87,7 @@
                 "value": 1.5
               },
               "yield": {
-                "potential": 37.0
+                "potential": 37
               }
             },
             {
@@ -108,10 +100,10 @@
               "origin": "America",
               "amount": {
                 "unit": "lb",
-                "value": 8.0
+                "value": 8
               },
               "yield": {
-                "potential": 37.0
+                "potential": 37
               }
             },
             {
@@ -119,15 +111,15 @@
               "type": "grain",
               "color": {
                 "unit": "Lovi",
-                "value": 60.0
+                "value": 60
               },
               "origin": "America",
               "amount": {
                 "unit": "lb",
-                "value": 1.0
+                "value": 1
               },
               "yield": {
-                "potential": 37.0
+                "potential": 37
               }
             }
           ],
@@ -173,7 +165,7 @@
               "type": "herb",
               "amount": {
                 "unit": "oz",
-                "value": 1.0
+                "value": 1
               },
               "timing": {
                 "use": {
@@ -191,7 +183,7 @@
               "type": "spice",
               "amount": {
                 "unit": "oz",
-                "value": 1.0
+                "value": 1
               },
               "timing": {
                 "use": {
@@ -213,14 +205,14 @@
               "type": "herb",
               "amount": {
                 "unit": "oz",
-                "value": 3.0
+                "value": 3
               },
               "timing": {
                 "use": {
                   "add_to_boil": {
                     "time": {
                       "unit": "min",
-                      "value": 0.0
+                      "value": 0
                     }
                   }
                 }
@@ -236,16 +228,16 @@
               "product_id": "",
               "amount": {
                 "unit": "ml",
-                "value": 0.0
+                "value": 0
               }
             }
           ]
         },
-        "mash": {
+        "mashes": {
           "name": "Simple Mash Type - Single Step",
           "grain_temperature": {
             "unit": "F",
-            "value": 80.0
+            "value": 80
           },
           "notes": "",
           "mash_steps": [
@@ -258,19 +250,19 @@
               },
               "step_temperature": {
                 "unit": "F",
-                "value": 158.0
+                "value": 158
               },
               "step_time": {
                 "unit": "min",
-                "value": 70.0
+                "value": 70
               },
               "ramp_time": {
                 "unit": "min",
-                "value": 5.0
+                "value": 5
               },
               "end_temperature": {
                 "unit": "F",
-                "value": 158.0
+                "value": 158
               },
               "description": "Add 22.50 qt of water at 165.0 F",
               "water_grain_ratio": {
@@ -279,10 +271,23 @@
               },
               "infuse_temperature": {
                 "unit": "F",
-                "value": 165.0
+                "value": 165
               }
             }
           ]
+        },
+        "boil": {
+          "name": "60 minute boil",
+          "type": "Single Stage",
+          "description": "A standard 60 min boil",
+          "boil_size": {
+            "unit": "gal",
+            "value": 5.5
+          },
+          "boil_time": {
+            "unit": "min",
+            "value": 90
+          }
         },
         "notes": "",
         "original_gravity": {
