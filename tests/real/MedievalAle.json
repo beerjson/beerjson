@@ -233,7 +233,7 @@
             }
           ]
         },
-        "mashes": {
+        "mash": {
           "name": "Simple Mash Type - Single Step",
           "grain_temperature": {
             "unit": "F",
@@ -278,7 +278,6 @@
         },
         "boil": {
           "name": "60 minute boil",
-          "type": "Single Stage",
           "description": "A standard 60 min boil",
           "boil_size": {
             "unit": "gal",

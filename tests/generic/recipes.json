@@ -169,7 +169,6 @@
         },
         "boil": {
           "name": "60 minute boil",
-          "type": "Single Stage",
           "description": "A standard 60 min boil",
           "boil_size": {
             "unit": "gal",
@@ -180,7 +179,7 @@
             "value": 60
           }
         },
-        "fermentations": {
+        "fermentation": {
           "name": "Ale, Single Stage",
           "type": "Single Stage",
           "description": "A simple single stage fermentation, often used by extract brewers or for classic ales.",

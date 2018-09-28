@@ -155,7 +155,7 @@
             }
           ]
         },
-        "mashes": {
+        "mash": {
           "name": "Stepped infusion",
           "grain_temperature": {
             "unit": "F",
@@ -215,7 +215,6 @@
         },
         "boil": {
           "name": "60 minute boil",
-          "type": "Single Stage",
           "description": "A standard 60 min boil",
           "boil_size": {
             "unit": "gal",
@@ -226,7 +225,7 @@
             "value": 90
           }
         },
-        "fermentations": {
+        "fermentation": {
           "name": "Ale, Single Stage",
           "type": "Single Stage",
           "description": "Initial temp at 74F, no temp control. Allowed to free rise to a max temp of 82F.",

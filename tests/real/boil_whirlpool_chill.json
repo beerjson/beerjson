@@ -1,86 +1,87 @@
 {
   "beerjson": {
     "version": 2.06,
-    "boil": {
-      "name": "60 minute boil",
-      "type": "Single Stage",
-      "description": "A standard 60 min boil",
-      "boil_size": {
-        "unit": "gal",
-        "value": 7
-      },
-      "boil_time": {
-        "unit": "min",
-        "value": 60
-      }
-    },
-    "boil_steps": [
+    "boil": [
       {
-        "name": "preboil",
-        "start_temperature": {
-          "unit": "F",
-          "value": 170
+        "name": "60 minute boil",
+        "description": "A standard 60 min boil",
+        "boil_size": {
+          "unit": "gal",
+          "value": 7
         },
-        "end_temperature": {
-          "unit": "F",
-          "value": 212
-        },
-        "step_time": {
-          "unit": "min",
-          "value": 15
-        }
-      },
-      {
-        "name": "boil",
-        "start_temperature": {
-          "unit": "F",
-          "value": 212
-        },
-        "end_temperature": {
-          "unit": "F",
-          "value": 212
-        },
-        "step_time": {
+        "boil_time": {
           "unit": "min",
           "value": 60
-        }
-      },
-      {
-        "name": "chill to whirlpool, hold at 180F for 20 minutes",
-        "description": "chill to whirlpool, hold at 180F for 20 minutes",
-        "start_temperature": {
-          "unit": "F",
-          "value": 212
         },
-        "end_temperature": {
-          "unit": "F",
-          "value": 180
-        },
-        "ramp_time": {
-          "unit": "min",
-          "value": 2
-        },
-        "step_time": {
-          "unit": "min",
-          "value": 20
-        },
-        "chilling_type": "batch"
-      },
-      {
-        "name": "chilled with immersion chiller",
-        "start_temperature": {
-          "unit": "F",
-          "value": 180
-        },
-        "end_temperature": {
-          "unit": "F",
-          "value": 75
-        },
-        "step_time": {
-          "unit": "min",
-          "value": 25
-        },
-        "chilling_type": "batch"
+        "boil_steps": [
+          {
+            "name": "preboil",
+            "start_temperature": {
+              "unit": "F",
+              "value": 170
+            },
+            "end_temperature": {
+              "unit": "F",
+              "value": 212
+            },
+            "step_time": {
+              "unit": "min",
+              "value": 15
+            }
+          },
+          {
+            "name": "boil",
+            "start_temperature": {
+              "unit": "F",
+              "value": 212
+            },
+            "end_temperature": {
+              "unit": "F",
+              "value": 212
+            },
+            "step_time": {
+              "unit": "min",
+              "value": 60
+            }
+          },
+          {
+            "name": "chill to whirlpool, hold at 180F for 20 minutes",
+            "description": "chill to whirlpool, hold at 180F for 20 minutes",
+            "start_temperature": {
+              "unit": "F",
+              "value": 212
+            },
+            "end_temperature": {
+              "unit": "F",
+              "value": 180
+            },
+            "ramp_time": {
+              "unit": "min",
+              "value": 2
+            },
+            "step_time": {
+              "unit": "min",
+              "value": 20
+            },
+            "chilling_type": "batch"
+          },
+          {
+            "name": "chilled with immersion chiller",
+            "start_temperature": {
+              "unit": "F",
+              "value": 180
+            },
+            "end_temperature": {
+              "unit": "F",
+              "value": 75
+            },
+            "step_time": {
+              "unit": "min",
+              "value": 25
+            },
+            "chilling_type": "batch"
+          }
+        ]
       }
     ]
   }
