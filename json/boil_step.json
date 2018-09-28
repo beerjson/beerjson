@@ -4,7 +4,7 @@
   "type": "object",
   "additionalProperties": false,
   "definitions": {
-    "FermentationStepType": {
+    "BoilStepType": {
       "type": "object",
       "description": "BoilStepType - a per step representation of a boil process, can be used to support preboil steps, non-boiling pasteurization steps, boiling, whirlpool steps, and chilling.",
       "additionalProperties": false,

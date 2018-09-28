@@ -4,7 +4,7 @@
   "type": "object",
   "additionalProperties": false,
   "definitions": {
-    "FermentationProcedureType": {
+    "BoilProcedureType": {
       "type": "object",
       "description": "BoilProcedureType defines the procedure for performing a boil. An boil procedure with no steps is the same as a standard single step boil.",
       "additionalProperties": false,
@@ -27,11 +27,11 @@
         "boil_steps": {
           "type": "array",
           "items": {
-            "$ref": "fermentation_step.json#/definitions/BoilStepType"
+            "$ref": "boil_step.json#/definitions/BoilStepType"
           }
         }
       },
-      "required": ["name", "boil_size", "boil_time"]
+      "required": ["boil_size", "boil_time"]
     }
   }
 }
