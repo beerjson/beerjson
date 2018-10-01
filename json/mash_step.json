@@ -48,10 +48,10 @@
         "infuse_temperature": {
           "$ref": "measureable_units.json#/definitions/TemperatureType"
         },
-        "initial_pH": {
+        "start_pH": {
           "$ref": "measureable_units.json#/definitions/AcidityType"
         },
-        "final_pH": {
+        "end_pH": {
           "$ref": "measureable_units.json#/definitions/AcidityType"
         }
       },

@@ -16,8 +16,6 @@ RecipeType composes the information stored in a beerjson recipe
 | **coauthor**          | string                                                                      |             |                    |
 | **created**           | [DateType](measureable_units.json.md#datetype)                              |             |                    |
 | **batch_size**        | [VolumeType](measureable_units.json.md#volumetype)                          |             | :white_check_mark: |
-| **boil_size**         | [VolumeType](measureable_units.json.md#volumetype)                          |             | :white_check_mark: |
-| **boil_time**         | [TimeType](measureable_units.json.md#timetype)                              |             | :white_check_mark: |
 | **efficiency**        | object                                                                      |             | :white_check_mark: |
 | **style**             | [RecipeStyleType](style.json.md#recipestyletype)                            |             |                    |
 | **ingredients**       | object                                                                      |             | :white_check_mark: |
@@ -32,5 +30,6 @@ RecipeType composes the information stored in a beerjson recipe
 | **carbonation**       | number                                                                      |             |                    |
 | **fermentation**      | [FermentationProcedureType](fermentation.json.md#fermentationproceduretype) |             |                    |
 | **packaging**         | [PackagingProcedureType](packaging.json.md#packagingproceduretype)          |             |                    |
+| **boil**              | [BoilProcedureType](boil.json.md#boilproceduretype)                         |             |                    |
 | **taste**             | object                                                                      |             |                    |
 | **calories_per_pint** | number                                                                      |             |                    |
