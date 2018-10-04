@@ -50,6 +50,9 @@
             "boil_rate_per_hour": {
               "$ref": "measureable_units.json#/definitions/VolumeType"
             },
+            "drain_rate_per_minute": {
+              "$ref": "measureable_units.json#/definitions/VolumeType"
+            },
             "weight": {
               "$ref": "measureable_units.json#/definitions/MassType"
             },

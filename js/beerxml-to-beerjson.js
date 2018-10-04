@@ -210,13 +210,15 @@ const importFromBeerXml = xml => {
               unit: 'l',
               value: Number(r['BATCH_SIZE'])
             },
-            boil_size: {
-              unit: 'l',
-              value: Number(r['BOIL_SIZE'])
-            },
-            boil_time: {
-              unit: 'min',
-              value: Number(r['BOIL_TIME'])
+            boil: {
+              boil_size: {
+                unit: 'l',
+                value: Number(r['BOIL_SIZE'])
+              },
+              boil_time: {
+                unit: 'min',
+                value: Number(r['BOIL_TIME'])
+              }
             },
             efficiency: {
               brewhouse: Number(r['EFFICIENCY'])
@@ -232,8 +234,8 @@ const importFromBeerXml = xml => {
                 }
               : {}),
             ingredients: {
-              fermentable_bill: fermentable_bill(r),
-              hop_bill: hop_bill(r),
+              fermentable_additions: fermentable_bill(r),
+              hop_additions: hop_bill(r),
               ...(!_.isEmpty(r['MISCS'])
                 ? {
                     miscellaneous_additions: miscellaneous_additions(r)

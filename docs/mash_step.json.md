@@ -20,5 +20,5 @@ MashStepType - a per step representation occurring within the mash
 | **description**        | string                                                                                                   |             |                    |
 | **water_grain_ratio**  | [SpecificVolumeType](measureable_units.json.md#specificvolumetype)                                       |             |                    |
 | **infuse_temperature** | [TemperatureType](measureable_units.json.md#temperaturetype)                                             |             |                    |
-| **initial_pH**         | [AcidityType](measureable_units.json.md#aciditytype)                                                     |             |                    |
-| **final_pH**           | [AcidityType](measureable_units.json.md#aciditytype)                                                     |             |                    |
+| **start_pH**           | [AcidityType](measureable_units.json.md#aciditytype)                                                     |             |                    |
+| **end_pH**             | [AcidityType](measureable_units.json.md#aciditytype)                                                     |             |                    |

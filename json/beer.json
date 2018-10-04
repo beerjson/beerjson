@@ -55,7 +55,7 @@
             "$ref": "style.json#/definitions/StyleType"
           }
         },
-        "procedures": {
+        "mashes": {
           "type": "array",
           "description": "A collection of steps providing process information for common mashing procedures.",
           "items": {
@@ -81,6 +81,13 @@
           "description": "Provides necessary information for brewing equipment.",
           "items": {
             "$ref": "equipment.json#/definitions/EquipmentType"
+          }
+        },
+        "boil": {
+          "type": "array",
+          "description": "A collection of steps providing process information for common packaging procedures.",
+          "items": {
+            "$ref": "boil.json#/definitions/BoilProcedureType"
           }
         },
         "packaging": {

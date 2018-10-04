@@ -28,12 +28,6 @@
         "batch_size": {
           "$ref": "measureable_units.json#/definitions/VolumeType"
         },
-        "boil_size": {
-          "$ref": "measureable_units.json#/definitions/VolumeType"
-        },
-        "boil_time": {
-          "$ref": "measureable_units.json#/definitions/TimeType"
-        },
         "efficiency": {
           "type": "object",
           "additionalProperties": false,
@@ -60,16 +54,16 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "fermentable_bill": {
+            "fermentable_additions": {
               "type": "array",
-              "description": "fermentable_bill collects all the fermentable ingredients for use in a recipe",
+              "description": "fermentable_additions collects all the fermentable ingredients for use in a recipe",
               "items": {
                 "$ref": "fermentable.json#/definitions/FermentableAdditionType"
               }
             },
-            "hop_bill": {
+            "hop_additions": {
               "type": "array",
-              "description": "hop_bill collects all the hops for use in a recipe",
+              "description": "hop_additions collects all the hops for use in a recipe",
               "items": {
                 "$ref": "hop.json#/definitions/HopAdditionType"
               }
@@ -96,7 +90,7 @@
               }
             }
           },
-          "required": ["fermentable_bill"]
+          "required": ["fermentable_additions"]
         },
         "mash": {
           "$ref": "mash.json#/definitions/MashProcedureType"
@@ -131,6 +125,9 @@
         "packaging": {
           "$ref": "packaging.json#/definitions/PackagingProcedureType"
         },
+        "boil": {
+          "$ref": "boil.json#/definitions/BoilProcedureType"
+        },
         "taste": {
           "type": "object",
           "additionalProperties": false,
@@ -154,8 +151,6 @@
         "author",
         "efficiency",
         "batch_size",
-        "boil_size",
-        "boil_time",
         "ingredients"
       ]
     }
