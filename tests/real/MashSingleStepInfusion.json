@@ -1,7 +1,7 @@
 {
   "beerjson": {
     "version": 2.01,
-    "procedures": [
+    "mashes": [
       {
         "name": "Single Step Infusion, 68 C",
         "grain_temperature": {

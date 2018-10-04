@@ -10,14 +10,6 @@
           "unit": "gal",
           "value": 5.5
         },
-        "boil_size": {
-          "unit": "gal",
-          "value": 5.5
-        },
-        "boil_time": {
-          "unit": "min",
-          "value": 90
-        },
         "efficiency": {
           "conversion": 90,
           "lauter": 83.5,
@@ -35,7 +27,7 @@
           "type": "beer"
         },
         "ingredients": {
-          "fermentable_bill": [
+          "fermentable_additions": [
             {
               "name": "Pilsner",
               "type": "grain",
@@ -68,7 +60,7 @@
               }
             }
           ],
-          "hop_bill": [
+          "hop_additions": [
             {
               "name": "EKG",
               "origin": "UK",
@@ -220,6 +212,18 @@
               }
             }
           ]
+        },
+        "boil": {
+          "name": "60 minute boil",
+          "description": "A standard 60 min boil",
+          "boil_size": {
+            "unit": "gal",
+            "value": 7
+          },
+          "boil_time": {
+            "unit": "min",
+            "value": 90
+          }
         },
         "fermentation": {
           "name": "Ale, Single Stage",
