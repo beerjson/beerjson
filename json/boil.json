@@ -6,7 +6,7 @@
   "definitions": {
     "BoilProcedureType": {
       "type": "object",
-      "description": "BoilProcedureType defines the procedure for performing a boil. An boil procedure with no steps is the same as a standard single step boil.",
+      "description": "BoilProcedureType defines the procedure for performing a boil. A boil procedure with no steps is the same as a standard single step boil.",
       "additionalProperties": false,
       "properties": {
         "name": {
@@ -18,7 +18,7 @@
         "notes": {
           "type": "string"
         },
-        "boil_size": {
+        "pre_boil_size": {
           "$ref": "measureable_units.json#/definitions/VolumeType"
         },
         "boil_time": {
@@ -31,7 +31,7 @@
           }
         }
       },
-      "required": ["boil_size", "boil_time"]
+      "required": ["pre_boil_size", "boil_time"]
     }
   }
 }

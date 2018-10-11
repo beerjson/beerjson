@@ -85,7 +85,7 @@
         },
         "boil": {
           "type": "array",
-          "description": "A collection of steps providing process information for common packaging procedures.",
+          "description": "A collection of steps providing process information for common boil procedures.",
           "items": {
             "$ref": "boil.json#/definitions/BoilProcedureType"
           }

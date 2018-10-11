@@ -51,7 +51,7 @@ Parent: [FermentableBase](#fermentablebase)
 
 ### Properties
 
-|            | Type      | Description | Required |
-| ---------- | --------- | ----------- | -------- |
-| **timing** | object    |             |          |
-| **amount** | undefined |             |          |
+|            | Type      | Description                                                                                                                     | Required |
+| ---------- | --------- | ------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| **timing** | object    | The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step. |          |
+| **amount** | undefined |                                                                                                                                 |          |

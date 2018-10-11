@@ -111,6 +111,7 @@
             },
             "timing": {
               "type": "object",
+              "description": "The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step.",
               "additionalProperties": false,
               "properties": {
                 "use": {

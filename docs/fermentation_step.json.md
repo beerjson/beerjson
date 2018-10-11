@@ -2,7 +2,7 @@ The schema defines the following types:
 
 ## FermentationStepType
 
-FermentationStepType - a per step representation of a fermentation action
+FermentationStepType - a per step representation of a fermentation action. Free rise is used to indicate a fermentation step where the exothermic fermentation is allowed to raise the temp without restriction.
 
 `FermentationStepType` type: `object`
 

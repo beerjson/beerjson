@@ -1,6 +1,6 @@
 The schema defines the following types:
 
-## CultureBase 
+## CultureBase
 
 The descriptive base type for both culture records, and recipe additions. Provides unique properties to identify individual records of a culture
 
@@ -8,15 +8,15 @@ The descriptive base type for both culture records, and recipe additions. Provid
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **name** | string|  | :white_check_mark: |
-| **type** |  'ale'  , 'bacteria'  , 'brett'  , 'champagne'  , 'kveik'  , 'lacto'  , 'lager'  , 'malolactic'  , 'mixed-culture'  , 'other'  , 'pedio'  , 'spontaneous'  , 'wine' |  | :white_check_mark: |
-| **form** |  'liquid'  , 'dry'  , 'slant'  , 'culture'  , 'dregs' |  | :white_check_mark: |
-| **laboratory** | string|  |  |
-| **product_id** | string|  |  |
+|                | Type                                                                                                                                                   | Description | Required           |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ------------------ |
+| **name**       | string                                                                                                                                                 |             | :white_check_mark: |
+| **type**       | 'ale' , 'bacteria' , 'brett' , 'champagne' , 'kveik' , 'lacto' , 'lager' , 'malolactic' , 'mixed-culture' , 'other' , 'pedio' , 'spontaneous' , 'wine' |             | :white_check_mark: |
+| **form**       | 'liquid' , 'dry' , 'slant' , 'culture' , 'dregs'                                                                                                       |             | :white_check_mark: |
+| **laboratory** | string                                                                                                                                                 |             |                    |
+| **product_id** | string                                                                                                                                                 |             |                    |
 
-## CultureInformation 
+## CultureInformation
 
 CultureInformation collects the attributes of a microbial culture to store as record information
 
@@ -26,18 +26,18 @@ Parent: [CultureBase](#culturebase)
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **temperature_range** | [TemperatureRangeType](measureable_units.json.md#temperaturerangetype)|  |  |
-| **flocculation** | [QualitativeRangeType](measureable_units.json.md#qualitativerangetype)|  |  |
-| **attenuation** | [PercentRangeType](measureable_units.json.md#percentrangetype)|  |  |
-| **alcohol_tolerance** | [PercentType](measureable_units.json.md#percenttype)|  |  |
-| **notes** | string|  |  |
-| **best_for** | string|  |  |
-| **max_reuse** | integer|  |  |
-| **inventory** | object|  |  |
+|                       | Type                                                                   | Description | Required |
+| --------------------- | ---------------------------------------------------------------------- | ----------- | -------- |
+| **temperature_range** | [TemperatureRangeType](measureable_units.json.md#temperaturerangetype) |             |          |
+| **flocculation**      | [QualitativeRangeType](measureable_units.json.md#qualitativerangetype) |             |          |
+| **attenuation**       | [PercentRangeType](measureable_units.json.md#percentrangetype)         |             |          |
+| **alcohol_tolerance** | [PercentType](measureable_units.json.md#percenttype)                   |             |          |
+| **notes**             | string                                                                 |             |          |
+| **best_for**          | string                                                                 |             |          |
+| **max_reuse**         | integer                                                                |             |          |
+| **inventory**         | object                                                                 |             |          |
 
-## CultureAdditionType 
+## CultureAdditionType
 
 CultureAdditionType collects the attributes of each culture ingredient for use in a recipe
 
@@ -47,11 +47,10 @@ Parent: [CultureBase](#culturebase)
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **attenuation** | [PercentType](measureable_units.json.md#percenttype)|  |  |
-| **times_cultured** | integer|  |  |
-| **timing** | object|  |  |
-| **cell_count_billions** | integer|  |  |
-| **amount** | undefined|  |  |
-
+|                         | Type                                                 | Description                                                                                                                     | Required |
+| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| **attenuation**         | [PercentType](measureable_units.json.md#percenttype) |                                                                                                                                 |          |
+| **times_cultured**      | integer                                              |                                                                                                                                 |          |
+| **timing**              | object                                               | The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step. |          |
+| **cell_count_billions** | integer                                              |                                                                                                                                 |          |
+| **amount**              | undefined                                            |                                                                                                                                 |          |
