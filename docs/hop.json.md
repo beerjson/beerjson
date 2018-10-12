@@ -26,14 +26,14 @@ Parent: [HopVarietyBase](#hopvarietybase)
 
 ### Properties
 
-|                  | Type                                                                                                                  | Description | Required |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------- | ----------- | -------- |
-| **type**         | 'aroma' , 'bittering' , 'flavor' , 'aroma/bittering' , 'bittering/flavor' , 'aroma/flavor' , 'aroma/bittering/flavor' |             |          |
-| **notes**        | string                                                                                                                |             |          |
-| **percent_lost** | [PercentType](measureable_units.json.md#percenttype)                                                                  |             |          |
-| **substitutes**  | string                                                                                                                |             |          |
-| **oil_content**  | object                                                                                                                |             |          |
-| **inventory**    | object                                                                                                                |             |          |
+|                  | Type                                                                                                                  | Description                                                                                               | Required |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | -------- |
+| **type**         | 'aroma' , 'bittering' , 'flavor' , 'aroma/bittering' , 'bittering/flavor' , 'aroma/flavor' , 'aroma/bittering/flavor' |                                                                                                           |          |
+| **notes**        | string                                                                                                                |                                                                                                           |          |
+| **percent_lost** | [PercentType](measureable_units.json.md#percenttype)                                                                  |                                                                                                           |          |
+| **substitutes**  | string                                                                                                                |                                                                                                           |          |
+| **oil_content**  | object                                                                                                                | oil_content collects all information of a hop variety pertaining to oil content, polyphenols, and thiols. |          |
+| **inventory**    | object                                                                                                                |                                                                                                           |          |
 
 ## HopAdditionType
 

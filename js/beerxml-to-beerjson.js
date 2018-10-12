@@ -211,7 +211,7 @@ const importFromBeerXml = xml => {
               value: Number(r['BATCH_SIZE'])
             },
             boil: {
-              boil_size: {
+              pre_boil_size: {
                 unit: 'l',
                 value: Number(r['BOIL_SIZE'])
               },

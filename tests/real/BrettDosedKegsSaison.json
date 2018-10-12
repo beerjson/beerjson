@@ -216,7 +216,7 @@
         "boil": {
           "name": "60 minute boil",
           "description": "A standard 60 min boil",
-          "boil_size": {
+          "pre_boil_size": {
             "unit": "gal",
             "value": 7
           },

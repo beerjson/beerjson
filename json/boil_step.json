@@ -40,6 +40,7 @@
           "$ref": "measureable_units.json#/definitions/AcidityType"
         },
         "chilling_type": {
+          "description": "Chilling type seperates batch chilling, ie immersion chillers, where the entire volume of wort is brought down in temperture as a whole, vs inline chilling where the wort is chilled while it is being drained, which can leave a significant amount of hop isomerization and hop oils isomerizing in the boil kettle.",
           "type": "string",
           "enum": ["batch", "inline"]
         }

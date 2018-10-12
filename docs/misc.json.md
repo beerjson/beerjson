@@ -1,6 +1,6 @@
 The schema defines the following types:
 
-## MiscellaneousBase 
+## MiscellaneousBase
 
 MiscellaneousBase provides unique properties to identify individual records of ingredients
 
@@ -8,12 +8,12 @@ MiscellaneousBase provides unique properties to identify individual records of i
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **name** | string|  | :white_check_mark: |
-| **type** |  'spice'  , 'fining'  , 'water agent'  , 'herb'  , 'flavor'  , 'wood'  , 'other' |  | :white_check_mark: |
+|          | Type                                                                      | Description | Required           |
+| -------- | ------------------------------------------------------------------------- | ----------- | ------------------ |
+| **name** | string                                                                    |             | :white_check_mark: |
+| **type** | 'spice' , 'fining' , 'water agent' , 'herb' , 'flavor' , 'wood' , 'other' |             | :white_check_mark: |
 
-## MiscellaneousType 
+## MiscellaneousType
 
 MiscellaneousType collects the attributes of an ingredient to store as record information
 
@@ -23,13 +23,13 @@ Parent: [MiscellaneousBase](#miscellaneousbase)
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **use_for** | string|  |  |
-| **notes** | string|  |  |
-| **inventory** | object|  |  |
+|               | Type   | Description | Required |
+| ------------- | ------ | ----------- | -------- |
+| **use_for**   | string |             |          |
+| **notes**     | string |             |          |
+| **inventory** | object |             |          |
 
-## MiscellaneousAdditionType 
+## MiscellaneousAdditionType
 
 MiscellaneousAdditionType collects the attributes of each miscellaneous ingredient for use in a recipe
 
@@ -39,8 +39,7 @@ Parent: [MiscellaneousBase](#miscellaneousbase)
 
 ### Properties
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
-| **timing** | object|  |  |
-| **amount** | undefined|  |  |
-
+|            | Type      | Description                                                                                                                     | Required |
+| ---------- | --------- | ------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| **timing** | object    | The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step. |          |
+| **amount** | undefined |                                                                                                                                 |          |

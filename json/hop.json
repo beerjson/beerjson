@@ -59,6 +59,7 @@
             },
             "oil_content": {
               "type": "object",
+              "description": "oil_content collects all information of a hop variety pertaining to oil content, polyphenols, and thiols.",
               "properties": {
                 "total_oil_ml_per_100g": {
                   "type": "number"
@@ -135,6 +136,7 @@
         {
           "timing": {
             "type": "object",
+            "description": "The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step.",
             "additionalProperties": false,
             "properties": {
               "use": {
