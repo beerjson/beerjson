@@ -36,7 +36,9 @@
       "type": "object",
       "description": "StyleType provide information for Style categorization",
       "allOf": [
-        { "$ref": "#/definitions/StyleBase" },
+        {
+          "$ref": "#/definitions/StyleBase"
+        },
         {
           "properties": {
             "original_gravity": {
@@ -46,13 +48,13 @@
               "$ref": "measureable_units.json#/definitions/GravityRangeType"
             },
             "international_bitterness_units": {
-              "$ref": "measureable_units.json#/definitions/QuantitativeRangeType"
+              "$ref": "measureable_units.json#/definitions/BitternessRangeType"
             },
             "color": {
               "$ref": "measureable_units.json#/definitions/ColorRangeType"
             },
             "carbonation": {
-              "$ref": "measureable_units.json#/definitions/QuantitativeRangeType"
+              "$ref": "measureable_units.json#/definitions/CarbonationRangeType"
             },
             "alcohol_by_volume": {
               "$ref": "measureable_units.json#/definitions/PercentRangeType"
@@ -87,7 +89,11 @@
     },
     "RecipeStyleType": {
       "description": "RecipeStyleType defines style information stored in a recipe record",
-      "allOf": [{ "$ref": "#/definitions/StyleBase" }]
+      "allOf": [
+        {
+          "$ref": "#/definitions/StyleBase"
+        }
+      ]
     },
     "StyleCategories": {
       "type": "string",

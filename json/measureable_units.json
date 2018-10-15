@@ -59,7 +59,6 @@
       },
       "required": ["unit", "value"]
     },
-
     "AcidityType": {
       "properties": {
         "unit": {
@@ -71,7 +70,6 @@
       },
       "required": ["unit", "value"]
     },
-
     "TimeType": {
       "properties": {
         "unit": {
@@ -87,6 +85,28 @@
       "properties": {
         "unit": {
           "$ref": "#/definitions/ColorUnitType"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": ["unit", "value"]
+    },
+    "CarbonationType": {
+      "properties": {
+        "unit": {
+          "$ref": "#/definitions/CarbonationUnitType"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": ["unit", "value"]
+    },
+    "BitternessType": {
+      "properties": {
+        "unit": {
+          "$ref": "#/definitions/BitternessUnitType"
         },
         "value": {
           "type": "number"
@@ -158,6 +178,32 @@
         },
         "maximum": {
           "type": "number"
+        }
+      },
+      "required": ["minimum", "maximum"]
+    },
+    "CarbonationRangeType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "minimum": {
+          "$ref": "#/definitions/CarbonationType"
+        },
+        "maximum": {
+          "$ref": "#/definitions/CarbonationType"
+        }
+      },
+      "required": ["minimum", "maximum"]
+    },
+    "BitternessRangeType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "minimum": {
+          "$ref": "#/definitions/BitternessType"
+        },
+        "maximum": {
+          "$ref": "#/definitions/BitternessType"
         }
       },
       "required": ["minimum", "maximum"]
@@ -246,7 +292,6 @@
       "type": "string",
       "enum": ["C", "F"]
     },
-
     "AcidityUnitType": {
       "type": "string",
       "enum": ["pH"]
@@ -262,6 +307,14 @@
     "ColorUnitType": {
       "type": "string",
       "enum": ["EBC", "Lovi", "SRM"]
+    },
+    "CarbonationUnitType": {
+      "type": "string",
+      "enum": ["vols"]
+    },
+    "BitternessUnitType": {
+      "type": "string",
+      "enum": ["IBUs"]
     },
     "GravityUnitType": {
       "type": "string",
