@@ -169,19 +169,6 @@
       },
       "required": ["unit", "value"]
     },
-    "QuantitativeRangeType": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "minimum": {
-          "type": "number"
-        },
-        "maximum": {
-          "type": "number"
-        }
-      },
-      "required": ["minimum", "maximum"]
-    },
     "CarbonationRangeType": {
       "type": "object",
       "additionalProperties": false,
