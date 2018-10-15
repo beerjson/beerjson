@@ -30,8 +30,14 @@
           }
         },
         "international_bitterness_units": {
-          "minimum": 30.0,
-          "maximum": 50.0
+          "minimum": {
+            "unit": "IBUs",
+            "value": 30.0
+          },
+          "maximum": {
+            "unit": "IBUs",
+            "value": 50.0
+          }
         },
         "color": {
           "minimum": {
@@ -44,19 +50,28 @@
           }
         },
         "carbonation": {
-          "minimum": 1.6,
-          "maximum": 2.1
+          "minimum": {
+            "unit": "vols",
+            "value": 1.6
+          },
+          "maximum": {
+            "unit": "vols",
+            "value": 2.1
+          }
         },
         "alcohol_by_volume": {
-          "minimum": 3.2,
-          "maximum": 5.5
+          "minimum": {
+            "unit": "%",
+            "value": 3.2
+          },
+          "maximum": {
+            "unit": "%",
+            "value": 5.5
+          }
         },
-        "notes":
-          "Famous Irish Stout. Dry, roasted, almost coffee like flavor. Often soured with pasteurized sour beer.",
-        "profile":
-          "Full body perception due to flaked barley, though starting gravity may be low. Dry roasted flavor.",
-        "ingredients":
-          "Made with black barley and flaked barley, Hard water. Irish Ale Yeast.",
+        "notes": "Famous Irish Stout. Dry, roasted, almost coffee like flavor. Often soured with pasteurized sour beer.",
+        "profile": "Full body perception due to flaked barley, though starting gravity may be low. Dry roasted flavor.",
+        "ingredients": "Made with black barley and flaked barley, Hard water. Irish Ale Yeast.",
         "examples": "Guinness"
       }
     ]

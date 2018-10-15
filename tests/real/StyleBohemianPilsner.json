@@ -30,8 +30,14 @@
           }
         },
         "international_bitterness_units": {
-          "minimum": 35.0,
-          "maximum": 45.0
+          "minimum": {
+            "unit": "IBUs",
+            "value": 35.0
+          },
+          "maximum": {
+            "unit": "IBUs",
+            "value": 45.0
+          }
         },
         "color": {
           "minimum": {
@@ -43,8 +49,7 @@
             "value": 5.0
           }
         },
-        "notes":
-          "Famous beer of Pilsen, Czech republic. Light to medium body with some sweetness. Saaz hop flavor and aroma with no lingering bitterness."
+        "notes": "Famous beer of Pilsen, Czech republic. Light to medium body with some sweetness. Saaz hop flavor and aroma with no lingering bitterness."
       }
     ]
   }

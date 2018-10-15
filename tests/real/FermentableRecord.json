@@ -10,8 +10,14 @@
           "value": 3.0
         },
         "yield": {
-          "fine_grind": 73.4,
-          "coarse_grind": 71
+          "fine_grind": {
+            "unit": "%",
+            "value": 73.4
+          },
+          "coarse_grind": {
+            "unit": "%",
+            "value": 71
+          }
         }
       }
     ]

@@ -5,6 +5,8 @@
   "additionalProperties": false,
   "definitions": {
     "VolumeType": {
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
         "unit": {
           "$ref": "#/definitions/VolumeUnitType"
@@ -16,6 +18,8 @@
       "required": ["unit", "value"]
     },
     "MassType": {
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
         "unit": {
           "$ref": "#/definitions/MassUnitType"
@@ -27,6 +31,8 @@
       "required": ["unit", "value"]
     },
     "DiastaticPowerType": {
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
         "unit": {
           "$ref": "#/definitions/DiastaticPowerUnitType"
@@ -38,6 +44,8 @@
       "required": ["unit", "value"]
     },
     "TemperatureType": {
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
         "unit": {
           "$ref": "#/definitions/TemperatureUnitType"
@@ -49,6 +57,8 @@
       "required": ["unit", "value"]
     },
     "PressureType": {
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
         "unit": {
           "$ref": "#/definitions/PressureUnitType"
@@ -60,6 +70,8 @@
       "required": ["unit", "value"]
     },
     "AcidityType": {
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
         "unit": {
           "$ref": "#/definitions/AcidityUnitType"
@@ -71,6 +83,8 @@
       "required": ["unit", "value"]
     },
     "TimeType": {
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
         "unit": {
           "$ref": "#/definitions/TimeUnitType"
@@ -82,6 +96,8 @@
       "required": ["unit", "value"]
     },
     "ColorType": {
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
         "unit": {
           "$ref": "#/definitions/ColorUnitType"
@@ -93,6 +109,8 @@
       "required": ["unit", "value"]
     },
     "CarbonationType": {
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
         "unit": {
           "$ref": "#/definitions/CarbonationUnitType"
@@ -104,6 +122,8 @@
       "required": ["unit", "value"]
     },
     "BitternessType": {
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
         "unit": {
           "$ref": "#/definitions/BitternessUnitType"
@@ -115,6 +135,8 @@
       "required": ["unit", "value"]
     },
     "GravityType": {
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
         "unit": {
           "$ref": "#/definitions/GravityUnitType"
@@ -126,6 +148,8 @@
       "required": ["unit", "value"]
     },
     "SpecificHeatType": {
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
         "unit": {
           "$ref": "#/definitions/SpecificHeatUnitType"
@@ -137,6 +161,8 @@
       "required": ["unit", "value"]
     },
     "ConcentrationType": {
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
         "unit": {
           "$ref": "#/definitions/ConcentrationUnitType"
@@ -148,6 +174,8 @@
       "required": ["unit", "value"]
     },
     "SpecificVolumeType": {
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
         "unit": {
           "$ref": "#/definitions/SpecificVolumeUnitType"
@@ -159,6 +187,8 @@
       "required": ["unit", "value"]
     },
     "UnitType": {
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
         "unit": {
           "$ref": "#/definitions/UnitUnitType"
@@ -341,7 +371,21 @@
       "pattern": "\\d{4}-\\d{2}-\\d{2}|\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}"
     },
     "PercentType": {
-      "type": "number"
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "unit": {
+          "$ref": "#/definitions/PercentUnitType"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": ["unit", "value"]
+    },
+    "PercentUnitType": {
+      "type": "string",
+      "enum": ["%"]
     },
     "QualitativeRangeType": {
       "type": "string",

@@ -10,20 +10,44 @@
         "style_guide": "BJCP",
         "type": "beer",
         "original_gravity": {
-          "minimum": 1,
-          "maximum": 1
+          "minimum": {
+            "unit": "sg",
+            "value": 1
+          },
+          "maximum": {
+            "unit": "sg",
+            "value": 1
+          }
         },
         "final_gravity": {
-          "minimum": 1,
-          "maximum": 1
+          "minimum": {
+            "unit": "sg",
+            "value": 1
+          },
+          "maximum": {
+            "unit": "sg",
+            "value": 1
+          }
         },
         "international_bitterness_units": {
-          "minimum": 1,
-          "maximum": 1
+          "minimum": {
+            "unit": "IBUs",
+            "value": 1
+          },
+          "maximum": {
+            "unit": "IBUs",
+            "value": 1
+          }
         },
         "color": {
-          "minimum": 1,
-          "maximum": 1
+          "minimum": {
+            "unit": "SRM",
+            "value": 1
+          },
+          "maximum": {
+            "unit": "SRM",
+            "value": 1
+          }
         }
       }
     ]

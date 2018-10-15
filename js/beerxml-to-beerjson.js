@@ -65,7 +65,10 @@ const mash = r => {
       : {}),
     ...(!_.isEmpty(_.get(r, ['MASH', 'PH']))
       ? {
-          pH: Number(_.get(r, ['MASH', 'PH']))
+          pH: {
+            unit: 'pH',
+            value: Number(_.get(r, ['MASH', 'PH']))
+          }
         }
       : {}),
     notes: _.get(r, ['MASH', 'NOTES']),
@@ -92,7 +95,12 @@ const culture_additions = r =>
   _.map(getArrayNode(_.get(r, ['YEASTS', 'YEAST'])), culture => ({
     name: culture['NAME'],
     ...(!_.isEmpty(culture['ATTENUATION'])
-      ? { attenuation: Number(culture['ATTENUATION']) }
+      ? {
+          attenuation: {
+            unit: '%',
+            value: Number(culture['ATTENUATION'])
+          }
+        }
       : {}),
     type: _.lowerCase(culture['TYPE']),
     form: _.lowerCase(culture['FORM']),
@@ -221,7 +229,10 @@ const importFromBeerXml = xml => {
               }
             },
             efficiency: {
-              brewhouse: Number(r['EFFICIENCY'])
+              brewhouse: {
+                unit: '%',
+                value: Number(r['EFFICIENCY'])
+              }
             },
             ...(!_.isEmpty(r['STYLE'])
               ? {

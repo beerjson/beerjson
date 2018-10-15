@@ -10,7 +10,10 @@
         "beta_acid_units": 5.5,
         "type": "bittering",
         "notes": "This hop is a really cool hops - you can use it for anything. It leaps over buildings in a single bound, is faster than a speeding bullet and makes really aromatic beers.",
-        "percent_lost": 30,
+        "percent_lost": {
+          "unit": "%",
+          "value": 30
+        },
         "substitutes": "Goldings, Fuggles, Super Alpha",
         "humulene": 2.34,
         "caryophyllene": 1.23,
@@ -31,7 +34,10 @@
         "beta_acid_units": 5.5,
         "type": "bittering",
         "notes": "This hop is a really dangerous hop - you can use it with extreme care. It cracks buildings in a single bound, is smarter than your average vilain, and makes really bitter beer.",
-        "percent_lost": 30,
+        "percent_lost": {
+          "unit": "%",
+          "value": 30
+        },
         "substitutes": "Goldings, Fuggles, Super Alpha",
         "humulene": 2.34,
         "caryophyllene": 1.23,
