@@ -10,7 +10,10 @@
           "value": 13
         },
         "yield": {
-          "potential": 37.0
+          "potential": {
+            "unit": "sg",
+            "value": 1.036
+          }
         },
         "bitterness": {
           "ibu_per_lb_per_gal": 16.6

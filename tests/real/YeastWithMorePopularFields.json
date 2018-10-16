@@ -19,13 +19,21 @@
           }
         },
         "flocculation": "low",
-        "attenuation":  {
-          "minimum":  73.0,
-          "maximum": 77.0
+        "attenuation": {
+          "minimum": {
+            "unit": "%",
+            "value": 73.0
+          },
+          "maximum": {
+            "unit": "%",
+            "value": 77.0
+          }
         },
-        "alcohol_tolerance": 11.0,
-        "notes":
-          "Crisp dry flavor with a hint of mild flavor. Great for many continental ales.",
+        "alcohol_tolerance": {
+          "unit": "%",
+          "value": 11.0
+        },
+        "notes": "Crisp dry flavor with a hint of mild flavor. Great for many continental ales.",
         "best_for": "German Ales, Alts, Kolsch, Dry Stouts"
       }
     ]

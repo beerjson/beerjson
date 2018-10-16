@@ -11,10 +11,22 @@
           "value": 5
         },
         "efficiency": {
-          "conversion": 92,
-          "lauter": 80.5,
-          "mash": 74,
-          "brewhouse": 74.1
+          "conversion": {
+            "unit": "%",
+            "value": 92
+          },
+          "lauter": {
+            "unit": "%",
+            "value": 80.5
+          },
+          "mash": {
+            "unit": "%",
+            "value": 74
+          },
+          "brewhouse": {
+            "unit": "%",
+            "value": 74.1
+          }
         },
         "ingredients": {
           "fermentable_additions": [

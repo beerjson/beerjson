@@ -11,10 +11,22 @@
           "value": 5.5
         },
         "efficiency": {
-          "conversion": 90,
-          "lauter": 83.5,
-          "mash": 75,
-          "brewhouse": 75
+          "conversion": {
+            "unit": "%",
+            "value": 90
+          },
+          "lauter": {
+            "unit": "%",
+            "value": 83.5
+          },
+          "mash": {
+            "unit": "%",
+            "value": 75
+          },
+          "brewhouse": {
+            "unit": "%",
+            "value": 75
+          }
         },
         "style": {
           "name": "Brett Beer",
