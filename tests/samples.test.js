@@ -37,58 +37,32 @@ expect.extend({
 
 const testJson = path => {
   test('validate JSON ' + path, () => {
-    const rawJSON = fs.readFileSync(__dirname + '/' + path + '.json', 'utf8')
+    const rawJSON = fs.readFileSync(path, 'utf8')
 
     expect(JsonLint.parse(rawJSON)).toBeValidBeerJson()
   })
 }
 
-const testXMLtoJSON = path => {
-  test('XML -> JSON ' + path, () => {
-    const xmlString = fs.readFileSync(__dirname + '/' + path + '.xml', 'utf8')
+const convertFromXML = (dataDir, convertedDir) => {
+  fs.readdirSync(dataDir).forEach(file => {
+    const xmlString = fs.readFileSync(dataDir + file, 'utf8')
     const recipe = importFromBeerXml(xmlString)
-
-    expect(JsonLint.parse(recipe)).toBeValidBeerJson()
+    fs.writeFileSync(convertedDir + file.replace('.xml', '.json'), recipe)
   })
 }
 
-testJson('generic/beer')
-testJson('generic/cultures')
-testJson('generic/equipment')
-testJson('generic/fermentable')
-testJson('generic/hop_varieties')
-testJson('generic/miscellaneous_ingredients')
-testJson('generic/mash')
-testJson('generic/fermentation')
-testJson('generic/water')
-testJson('generic/recipes')
-testJson('generic/styles')
-testJson('generic/packaging')
-testJson('generic/boil')
+const testsDir = __dirname
 
-testJson('real/MedievalAle')
-testJson('real/FermentableRecord')
-testJson('real/HoppedExtract')
-testJson('real/CrystalMaltSpecialtyGrain')
-testJson('real/IrishMoss')
-testJson('real/CorianderSpice')
-testJson('real/HopWithRequiredFieldsOnly')
-testJson('real/HopRecordWithAllFields')
-testJson('real/YeastWithRequiredFieldsOnly')
-testJson('real/YeastWithMorePopularFields')
-testJson('real/SampleWaterProfile')
-testJson('real/StyleBohemianPilsner')
-testJson('real/StyleDryIrishStoutWithAllFields')
-testJson('real/MashSingleStepInfusion')
-testJson('real/MashTwoStepTemperature')
-testJson('real/BrettDosedKegsSaison')
-testJson('real/boil_whirlpool_chill')
+const runTests = () => {
+  fs.readdirSync(testsDir).forEach(dir => {
+    if (dir !== 'xml' && dir !== 'samples.test.js') {
+      fs.readdirSync(testsDir + '/' + dir).forEach(file => {
+        testJson(testsDir + '/' + dir + '/' + file)
+      })
+    }
+  })
+}
 
-testXMLtoJSON('data/GenericOneHF')
-testXMLtoJSON('data/Kolsh')
-testXMLtoJSON('data/Londonpride')
-testXMLtoJSON('data/punk-ipa-2010-current')
-testXMLtoJSON('data/RRSummerBitter')
+convertFromXML(testsDir + '/xml/', testsDir + '/converted/')
 
-testJson('styles/bjcp_styleguide-2015')
-testJson('styles/ba_styleguide-2017')
+runTests()
