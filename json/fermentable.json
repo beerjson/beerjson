@@ -41,9 +41,31 @@
             "smoked",
             "adjunct"
           ]
+        },
+        "yield": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": false,
+          "properties": {
+            "fine_grind": {
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "coarse_grind": {
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "fine_coarse_difference": {
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "potential": {
+              "$ref": "measureable_units.json#/definitions/GravityType"
+            }
+          }
+        },
+        "color": {
+          "$ref": "measureable_units.json#/definitions/ColorType"
         }
       },
-      "required": ["name", "type"]
+      "required": ["name", "type", "yield", "color"]
     },
     "FermentableType": {
       "type": "object",
@@ -54,40 +76,6 @@
         },
         {
           "properties": {
-            "yield": {
-              "type": "object",
-              "minProperties": 1,
-              "additionalProperties": false,
-              "properties": {
-                "fine_grind": {
-                  "$ref": "measureable_units.json#/definitions/PercentType"
-                },
-                "coarse_grind": {
-                  "$ref": "measureable_units.json#/definitions/PercentType"
-                },
-                "fine_coarse_difference": {
-                  "$ref": "measureable_units.json#/definitions/PercentType"
-                },
-                "potential": {
-                  "$ref": "measureable_units.json#/definitions/GravityType"
-                }
-              }
-            },
-            "bitterness": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "ibu_per_lb_per_gal": {
-                  "type": "number"
-                },
-                "ibu_per_kg_per_liter": {
-                  "type": "number"
-                },
-                "ibu": {
-                  "type": "number"
-                }
-              }
-            },
             "notes": {
               "type": "string"
             },
@@ -112,9 +100,6 @@
             "recommend_mash": {
               "type": "boolean"
             },
-            "color": {
-              "$ref": "measureable_units.json#/definitions/ColorType"
-            },
             "inventory": {
               "type": "object",
               "additionalProperties": false,
@@ -133,8 +118,7 @@
             }
           }
         }
-      ],
-      "required": ["yield", "color"]
+      ]
     },
     "FermentableAdditionType": {
       "type": "object",
