@@ -1,0 +1,87 @@
+{
+  "beerjson": {
+    "version": 2.06,
+    "recipes": [
+      {
+        "name": "London pride",
+        "type": "all grain",
+        "author": "RR",
+        "batch_size": { "unit": "l", "value": 40 },
+        "boil": {
+          "pre_boil_size": { "unit": "l", "value": 47 },
+          "boil_time": { "unit": "min", "value": 60 }
+        },
+        "efficiency": { "brewhouse": { "unit": "%", "value": 65 } },
+        "style": {
+          "name": "Best Bitter",
+          "category": "British Bitter",
+          "style_guide": "BJCP",
+          "type": "beer"
+        },
+        "ingredients": {
+          "fermentable_additions": [
+            {
+              "name": "Pale 2-Row",
+              "type": "grain",
+              "color": { "unit": "L", "value": 2.5 },
+              "amount": { "unit": "kg", "value": 9 },
+              "origin": "United Kingdom",
+              "group": "base",
+              "yield": 82.61,
+              "add_after_boil": false
+            },
+            {
+              "name": "Cara Plus 200",
+              "type": "grain",
+              "color": { "unit": "L", "value": 76 },
+              "amount": { "unit": "kg", "value": 0.6 },
+              "origin": "Finland",
+              "group": "base",
+              "yield": 76.09,
+              "add_after_boil": false
+            }
+          ],
+          "hop_additions": [
+            {
+              "name": "Target",
+              "alpha_acid_units": 11.5,
+              "form": "pellet",
+              "use": "boil",
+              "amount": { "unit": "kg", "value": 0.03 },
+              "time": { "unit": "min", "value": 60 }
+            },
+            {
+              "name": "Target",
+              "alpha_acid_units": 11.5,
+              "form": "pellet",
+              "use": "boil",
+              "amount": { "unit": "kg", "value": 0.03 },
+              "time": { "unit": "min", "value": 15 }
+            }
+          ],
+          "culture_additions": [
+            {
+              "name": "English Ale Yeast WLP002",
+              "attenuation": { "unit": "%", "value": 66.5 },
+              "type": "ale",
+              "form": "liquid",
+              "amount": { "unit": "l", "value": 0.1 }
+            }
+          ]
+        },
+        "mash": {
+          "name": "Mash Steps",
+          "grain_temperature": { "unit": "C", "value": 20 },
+          "mash_steps": [
+            {
+              "name": "",
+              "type": "temperature",
+              "step_temperature": { "unit": "C", "value": 65 },
+              "step_time": { "unit": "min", "value": 60 }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

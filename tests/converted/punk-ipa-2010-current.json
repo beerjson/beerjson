@@ -1,0 +1,186 @@
+{
+  "beerjson": {
+    "version": 2.06,
+    "recipes": [
+      {
+        "name": "PUNK IPA 2010 - CURRENT",
+        "type": "all grain",
+        "author": "BREWDOG",
+        "batch_size": { "unit": "l", "value": 20 },
+        "boil": {
+          "pre_boil_size": { "unit": "l", "value": 25 },
+          "boil_time": { "unit": "min", "value": 60 }
+        },
+        "efficiency": { "brewhouse": { "unit": "%", "value": 79.25 } },
+        "ingredients": {
+          "fermentable_additions": [
+            {
+              "name": "Extra Pale",
+              "type": "grain",
+              "color": { "unit": "L", "value": 2 },
+              "amount": { "unit": "kg", "value": 4.38 },
+              "group": "base",
+              "yield": 82
+            },
+            {
+              "name": "Caramalt",
+              "type": "grain",
+              "color": { "unit": "L", "value": 15 },
+              "amount": { "unit": "kg", "value": 0.25 },
+              "group": "base",
+              "yield": 71
+            }
+          ],
+          "hop_additions": [
+            {
+              "name": "Chinook",
+              "alpha_acid_units": 12.6,
+              "form": "pellet",
+              "beta_acid_units": 0,
+              "use": "boil",
+              "amount": { "unit": "kg", "value": 0.02 },
+              "time": { "unit": "min", "value": 60 }
+            },
+            {
+              "name": "Ahtanum",
+              "alpha_acid_units": 5.4,
+              "form": "pellet",
+              "beta_acid_units": 0,
+              "use": "boil",
+              "amount": { "unit": "kg", "value": 0.0125 },
+              "time": { "unit": "min", "value": 60 }
+            },
+            {
+              "name": "Chinook",
+              "alpha_acid_units": 12.6,
+              "form": "pellet",
+              "beta_acid_units": 0,
+              "use": "boil",
+              "amount": { "unit": "kg", "value": 0.02 },
+              "time": { "unit": "min", "value": 30 }
+            },
+            {
+              "name": "Ahtanum",
+              "alpha_acid_units": 5.4,
+              "form": "pellet",
+              "beta_acid_units": 0,
+              "use": "boil",
+              "amount": { "unit": "kg", "value": 0.0125 },
+              "time": { "unit": "min", "value": 30 }
+            },
+            {
+              "name": "Chinook",
+              "alpha_acid_units": 12.6,
+              "form": "pellet",
+              "beta_acid_units": 0,
+              "use": "boil",
+              "amount": { "unit": "kg", "value": 0.0275 },
+              "time": { "unit": "min", "value": 0 }
+            },
+            {
+              "name": "Ahtanum",
+              "alpha_acid_units": 5.4,
+              "form": "pellet",
+              "beta_acid_units": 0,
+              "use": "boil",
+              "amount": { "unit": "kg", "value": 0.0125 },
+              "time": { "unit": "min", "value": 0 }
+            },
+            {
+              "name": "Simcoe",
+              "alpha_acid_units": 12.8,
+              "form": "pellet",
+              "beta_acid_units": 0,
+              "use": "boil",
+              "amount": { "unit": "kg", "value": 0.0125 },
+              "time": { "unit": "min", "value": 0 }
+            },
+            {
+              "name": "Nelson Sauvin",
+              "alpha_acid_units": 12,
+              "form": "pellet",
+              "beta_acid_units": 0,
+              "use": "boil",
+              "amount": { "unit": "kg", "value": 0.0125 },
+              "time": { "unit": "min", "value": 0 }
+            },
+            {
+              "name": "Chinook",
+              "alpha_acid_units": 12.6,
+              "form": "pellet",
+              "beta_acid_units": 0,
+              "use": "dry hop",
+              "amount": { "unit": "kg", "value": 0.0475 },
+              "time": { "unit": "min", "value": 10080 }
+            },
+            {
+              "name": "Ahtanum",
+              "alpha_acid_units": 5.4,
+              "form": "pellet",
+              "beta_acid_units": 0,
+              "use": "dry hop",
+              "amount": { "unit": "kg", "value": 0.0375 },
+              "time": { "unit": "min", "value": 10080 }
+            },
+            {
+              "name": "Simcoe",
+              "alpha_acid_units": 12.8,
+              "form": "pellet",
+              "beta_acid_units": 0,
+              "use": "dry hop",
+              "amount": { "unit": "kg", "value": 0.0375 },
+              "time": { "unit": "min", "value": 10080 }
+            },
+            {
+              "name": "Nelson Sauvin",
+              "alpha_acid_units": 12,
+              "form": "pellet",
+              "beta_acid_units": 0,
+              "use": "dry hop",
+              "amount": { "unit": "kg", "value": 0.02 },
+              "time": { "unit": "min", "value": 10080 }
+            },
+            {
+              "name": "Cascade",
+              "alpha_acid_units": 6.8,
+              "form": "pellet",
+              "beta_acid_units": 0,
+              "use": "dry hop",
+              "amount": { "unit": "kg", "value": 0.0375 },
+              "time": { "unit": "min", "value": 10080 }
+            },
+            {
+              "name": "Amarillo",
+              "alpha_acid_units": 8.9,
+              "form": "pellet",
+              "beta_acid_units": 0,
+              "use": "dry hop",
+              "amount": { "unit": "kg", "value": 0.01 },
+              "time": { "unit": "min", "value": 10080 }
+            }
+          ],
+          "culture_additions": [
+            {
+              "name": "Wyeast 1056 - American Ale",
+              "type": "ale",
+              "form": "liquid",
+              "amount": { "unit": "l", "value": 0.035 }
+            }
+          ]
+        },
+        "mash": {
+          "name": "Mash",
+          "grain_temperature": { "unit": "C", "value": 0 },
+          "mash_steps": [
+            {
+              "name": "Mash step",
+              "type": "temperature",
+              "step_temperature": { "unit": "C", "value": 66 },
+              "step_time": { "unit": "min", "value": 75 }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
