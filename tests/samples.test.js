@@ -1,3 +1,4 @@
+const prettier = require('prettier')
 const importFromBeerXml = require('../js/beerxml-to-beerjson')
 
 const JsonLint = require('json-dup-key-validator')
@@ -46,7 +47,8 @@ const testJson = path => {
 const convertFromXML = (dataDir, convertedDir) => {
   fs.readdirSync(dataDir).forEach(file => {
     const xmlString = fs.readFileSync(dataDir + file, 'utf8')
-    const recipe = importFromBeerXml(xmlString)
+    const rawRecipe = importFromBeerXml(xmlString)
+    const recipe = prettier.format(rawRecipe, { parser: 'json' })
     fs.writeFileSync(convertedDir + file.replace('.xml', '.json'), recipe)
   })
 }
