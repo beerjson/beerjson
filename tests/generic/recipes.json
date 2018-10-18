@@ -42,7 +42,10 @@
                 "value": 5
               },
               "yield": {
-                "fine_grind": 78
+                "fine_grind": {
+                  "unit": "%",
+                  "value": 78
+                }
               }
             }
           ],

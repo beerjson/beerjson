@@ -23,21 +23,21 @@
             {
               "name": "Pale 2-Row",
               "type": "grain",
-              "color": { "unit": "L", "value": 2.5 },
+              "color": { "unit": "Lovi", "value": 2.5 },
               "amount": { "unit": "kg", "value": 9 },
               "origin": "United Kingdom",
               "group": "base",
-              "yield": 82.61,
+              "yield": { "potential": { "unit": "sg", "value": 1.0380006 } },
               "add_after_boil": false
             },
             {
               "name": "Cara Plus 200",
               "type": "grain",
-              "color": { "unit": "L", "value": 76 },
+              "color": { "unit": "Lovi", "value": 76 },
               "amount": { "unit": "kg", "value": 0.6 },
               "origin": "Finland",
               "group": "base",
-              "yield": 76.09,
+              "yield": { "potential": { "unit": "sg", "value": 1.0350014 } },
               "add_after_boil": false
             }
           ],

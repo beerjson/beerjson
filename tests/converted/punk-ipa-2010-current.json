@@ -17,18 +17,18 @@
             {
               "name": "Extra Pale",
               "type": "grain",
-              "color": { "unit": "L", "value": 2 },
+              "color": { "unit": "Lovi", "value": 2 },
               "amount": { "unit": "kg", "value": 4.38 },
               "group": "base",
-              "yield": 82
+              "yield": { "potential": { "unit": "sg", "value": 1.03772 } }
             },
             {
               "name": "Caramalt",
               "type": "grain",
-              "color": { "unit": "L", "value": 15 },
+              "color": { "unit": "Lovi", "value": 15 },
               "amount": { "unit": "kg", "value": 0.25 },
               "group": "base",
-              "yield": 71
+              "yield": { "potential": { "unit": "sg", "value": 1.03266 } }
             }
           ],
           "hop_additions": [
