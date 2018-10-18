@@ -129,7 +129,7 @@
               "yield": {
                 "potential": {
                   "unit": "sg",
-                  "value": 37
+                  "value": 1037
                 }
               }
             },
@@ -148,7 +148,7 @@
               "yield": {
                 "potential": {
                   "unit": "sg",
-                  "value": 37
+                  "value": 1037
                 }
               }
             }
