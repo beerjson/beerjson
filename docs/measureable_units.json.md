@@ -4,7 +4,7 @@ The schema defines the following types:
 
 _no description yet_
 
-`VolumeType` type: `undefined`
+`VolumeType` type: `object`
 
 ### Properties
 
@@ -17,7 +17,7 @@ _no description yet_
 
 _no description yet_
 
-`MassType` type: `undefined`
+`MassType` type: `object`
 
 ### Properties
 
@@ -30,7 +30,7 @@ _no description yet_
 
 _no description yet_
 
-`DiastaticPowerType` type: `undefined`
+`DiastaticPowerType` type: `object`
 
 ### Properties
 
@@ -43,7 +43,7 @@ _no description yet_
 
 _no description yet_
 
-`TemperatureType` type: `undefined`
+`TemperatureType` type: `object`
 
 ### Properties
 
@@ -56,7 +56,7 @@ _no description yet_
 
 _no description yet_
 
-`PressureType` type: `undefined`
+`PressureType` type: `object`
 
 ### Properties
 
@@ -69,7 +69,7 @@ _no description yet_
 
 _no description yet_
 
-`AcidityType` type: `undefined`
+`AcidityType` type: `object`
 
 ### Properties
 
@@ -82,7 +82,7 @@ _no description yet_
 
 _no description yet_
 
-`TimeType` type: `undefined`
+`TimeType` type: `object`
 
 ### Properties
 
@@ -95,7 +95,7 @@ _no description yet_
 
 _no description yet_
 
-`ColorType` type: `undefined`
+`ColorType` type: `object`
 
 ### Properties
 
@@ -104,11 +104,37 @@ _no description yet_
 | **unit**  | [ColorUnitType](#colorunittype) |             | :white_check_mark: |
 | **value** | number                          |             | :white_check_mark: |
 
+## CarbonationType
+
+_no description yet_
+
+`CarbonationType` type: `object`
+
+### Properties
+
+|           | Type                                        | Description | Required           |
+| --------- | ------------------------------------------- | ----------- | ------------------ |
+| **unit**  | [CarbonationUnitType](#carbonationunittype) |             | :white_check_mark: |
+| **value** | number                                      |             | :white_check_mark: |
+
+## BitternessType
+
+_no description yet_
+
+`BitternessType` type: `object`
+
+### Properties
+
+|           | Type                                      | Description | Required           |
+| --------- | ----------------------------------------- | ----------- | ------------------ |
+| **unit**  | [BitternessUnitType](#bitternessunittype) |             | :white_check_mark: |
+| **value** | number                                    |             | :white_check_mark: |
+
 ## GravityType
 
 _no description yet_
 
-`GravityType` type: `undefined`
+`GravityType` type: `object`
 
 ### Properties
 
@@ -121,7 +147,7 @@ _no description yet_
 
 _no description yet_
 
-`SpecificHeatType` type: `undefined`
+`SpecificHeatType` type: `object`
 
 ### Properties
 
@@ -134,7 +160,7 @@ _no description yet_
 
 _no description yet_
 
-`ConcentrationType` type: `undefined`
+`ConcentrationType` type: `object`
 
 ### Properties
 
@@ -147,7 +173,7 @@ _no description yet_
 
 _no description yet_
 
-`SpecificVolumeType` type: `undefined`
+`SpecificVolumeType` type: `object`
 
 ### Properties
 
@@ -160,7 +186,7 @@ _no description yet_
 
 _no description yet_
 
-`UnitType` type: `undefined`
+`UnitType` type: `object`
 
 ### Properties
 
@@ -169,18 +195,31 @@ _no description yet_
 | **unit**  | [UnitUnitType](#unitunittype) |             | :white_check_mark: |
 | **value** | number                        |             | :white_check_mark: |
 
-## QuantitativeRangeType
+## CarbonationRangeType
 
 _no description yet_
 
-`QuantitativeRangeType` type: `object`
+`CarbonationRangeType` type: `object`
 
 ### Properties
 
-|             | Type   | Description | Required           |
-| ----------- | ------ | ----------- | ------------------ |
-| **minimum** | number |             | :white_check_mark: |
-| **maximum** | number |             | :white_check_mark: |
+|             | Type                                | Description | Required           |
+| ----------- | ----------------------------------- | ----------- | ------------------ |
+| **minimum** | [CarbonationType](#carbonationtype) |             | :white_check_mark: |
+| **maximum** | [CarbonationType](#carbonationtype) |             | :white_check_mark: |
+
+## BitternessRangeType
+
+_no description yet_
+
+`BitternessRangeType` type: `object`
+
+### Properties
+
+|             | Type                              | Description | Required           |
+| ----------- | --------------------------------- | ----------- | ------------------ |
+| **minimum** | [BitternessType](#bitternesstype) |             | :white_check_mark: |
+| **maximum** | [BitternessType](#bitternesstype) |             | :white_check_mark: |
 
 ## TemperatureRangeType
 
@@ -282,6 +321,18 @@ _no description yet_
 
 `ColorUnitType` type: `string`
 
+## CarbonationUnitType
+
+_no description yet_
+
+`CarbonationUnitType` type: `string`
+
+## BitternessUnitType
+
+_no description yet_
+
+`BitternessUnitType` type: `string`
+
 ## GravityUnitType
 
 _no description yet_
@@ -328,7 +379,20 @@ _no description yet_
 
 _no description yet_
 
-`PercentType` type: `number`
+`PercentType` type: `object`
+
+### Properties
+
+|           | Type                                | Description | Required           |
+| --------- | ----------------------------------- | ----------- | ------------------ |
+| **unit**  | [PercentUnitType](#percentunittype) |             | :white_check_mark: |
+| **value** | number                              |             | :white_check_mark: |
+
+## PercentUnitType
+
+_no description yet_
+
+`PercentUnitType` type: `string`
 
 ## QualitativeRangeType
 
