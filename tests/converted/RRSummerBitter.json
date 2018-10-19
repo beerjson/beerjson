@@ -24,23 +24,23 @@
             {
               "name": "Pale Malt, Maris Otter",
               "type": "grain",
-              "color": { "unit": "L", "value": 3 },
+              "color": { "unit": "Lovi", "value": 3 },
               "amount": { "unit": "kg", "value": 6.9999955 },
               "origin": "United Kingdom",
               "supplier": "Maris Otter",
               "group": "base",
-              "yield": 82.5,
+              "yield": { "potential": { "unit": "sg", "value": 1.03795 } },
               "add_after_boil": false
             },
             {
               "name": "Cara 50",
               "type": "grain",
-              "color": { "unit": "L", "value": 25.3807107 },
+              "color": { "unit": "Lovi", "value": 25.3807107 },
               "amount": { "unit": "kg", "value": 0.9999994 },
               "origin": "Belgium",
               "supplier": "",
               "group": "base",
-              "yield": 75,
+              "yield": { "potential": { "unit": "sg", "value": 1.0345 } },
               "add_after_boil": false
             }
           ],

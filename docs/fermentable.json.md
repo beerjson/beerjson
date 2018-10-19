@@ -15,6 +15,8 @@ FermentableBase provides unique properties to identify individual records of fer
 | **origin**      | string                                                                                |             |                    |
 | **supplier**    | string                                                                                |             |                    |
 | **grain_group** | 'base' , 'caramel' , 'flaked' , 'roasted' , 'specialty' , 'smoked' , 'adjunct'        |             |                    |
+| **yield**       | object                                                                                |             | :white_check_mark: |
+| **color**       | [ColorType](measureable_units.json.md#colortype)                                      |             | :white_check_mark: |
 
 ## FermentableType
 
@@ -26,20 +28,17 @@ Parent: [FermentableBase](#fermentablebase)
 
 ### Properties
 
-|                            | Type                                                               | Description | Required           |
-| -------------------------- | ------------------------------------------------------------------ | ----------- | ------------------ |
-| **yield**                  | object                                                             |             | :white_check_mark: |
-| **bitterness**             | object                                                             |             |                    |
-| **notes**                  | string                                                             |             |                    |
-| **moisture**               | [PercentType](measureable_units.json.md#percenttype)               |             |                    |
-| **alpha_amylase**          | number                                                             |             |                    |
-| **diastatic_power**        | [DiastaticPowerType](measureable_units.json.md#diastaticpowertype) |             |                    |
-| **protein**                | [PercentType](measureable_units.json.md#percenttype)               |             |                    |
-| **soluble_nitrogen_ratio** | number                                                             |             |                    |
-| **max_in_batch**           | [PercentType](measureable_units.json.md#percenttype)               |             |                    |
-| **recommend_mash**         | boolean                                                            |             |                    |
-| **color**                  | [ColorType](measureable_units.json.md#colortype)                   |             | :white_check_mark: |
-| **inventory**              | object                                                             |             |                    |
+|                            | Type                                                               | Description | Required |
+| -------------------------- | ------------------------------------------------------------------ | ----------- | -------- |
+| **notes**                  | string                                                             |             |          |
+| **moisture**               | [PercentType](measureable_units.json.md#percenttype)               |             |          |
+| **alpha_amylase**          | number                                                             |             |          |
+| **diastatic_power**        | [DiastaticPowerType](measureable_units.json.md#diastaticpowertype) |             |          |
+| **protein**                | [PercentType](measureable_units.json.md#percenttype)               |             |          |
+| **soluble_nitrogen_ratio** | number                                                             |             |          |
+| **max_in_batch**           | [PercentType](measureable_units.json.md#percenttype)               |             |          |
+| **recommend_mash**         | boolean                                                            |             |          |
+| **inventory**              | object                                                             |             |          |
 
 ## FermentableAdditionType
 

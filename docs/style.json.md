@@ -27,22 +27,22 @@ Parent: [StyleBase](#stylebase)
 
 ### Properties
 
-|                                    | Type                                                                     | Description | Required |
-| ---------------------------------- | ------------------------------------------------------------------------ | ----------- | -------- |
-| **original_gravity**               | [GravityRangeType](measureable_units.json.md#gravityrangetype)           |             |          |
-| **final_gravity**                  | [GravityRangeType](measureable_units.json.md#gravityrangetype)           |             |          |
-| **international_bitterness_units** | [QuantitativeRangeType](measureable_units.json.md#quantitativerangetype) |             |          |
-| **color**                          | [ColorRangeType](measureable_units.json.md#colorrangetype)               |             |          |
-| **carbonation**                    | [QuantitativeRangeType](measureable_units.json.md#quantitativerangetype) |             |          |
-| **alcohol_by_volume**              | [PercentRangeType](measureable_units.json.md#percentrangetype)           |             |          |
-| **notes**                          | string                                                                   |             |          |
-| **aroma**                          | string                                                                   |             |          |
-| **appearance**                     | string                                                                   |             |          |
-| **flavor**                         | string                                                                   |             |          |
-| **mouthfeel**                      | string                                                                   |             |          |
-| **overall_impression**             | string                                                                   |             |          |
-| **ingredients**                    | string                                                                   |             |          |
-| **examples**                       | string                                                                   |             |          |
+|                                    | Type                                                                   | Description | Required |
+| ---------------------------------- | ---------------------------------------------------------------------- | ----------- | -------- |
+| **original_gravity**               | [GravityRangeType](measureable_units.json.md#gravityrangetype)         |             |          |
+| **final_gravity**                  | [GravityRangeType](measureable_units.json.md#gravityrangetype)         |             |          |
+| **international_bitterness_units** | [BitternessRangeType](measureable_units.json.md#bitternessrangetype)   |             |          |
+| **color**                          | [ColorRangeType](measureable_units.json.md#colorrangetype)             |             |          |
+| **carbonation**                    | [CarbonationRangeType](measureable_units.json.md#carbonationrangetype) |             |          |
+| **alcohol_by_volume**              | [PercentRangeType](measureable_units.json.md#percentrangetype)         |             |          |
+| **notes**                          | string                                                                 |             |          |
+| **aroma**                          | string                                                                 |             |          |
+| **appearance**                     | string                                                                 |             |          |
+| **flavor**                         | string                                                                 |             |          |
+| **mouthfeel**                      | string                                                                 |             |          |
+| **overall_impression**             | string                                                                 |             |          |
+| **ingredients**                    | string                                                                 |             |          |
+| **examples**                       | string                                                                 |             |          |
 
 ## RecipeStyleType
 

@@ -7,6 +7,8 @@ const getArrayNode = node => Array.from(Array.isArray(node) ? node : [node])
 const getStyleType = type =>
   type === 'lager' || type === 'ale' ? 'beer' : type
 
+const potential = y => (y * 0.01 * 46) / 1000 + 1
+
 const mash_steps = r =>
   _.map(
     getArrayNode(_.get(r, ['MASH', 'MASH_STEPS', 'MASH_STEP'])),
@@ -178,7 +180,7 @@ const fermentable_bill = r =>
       name: fermentable['NAME'],
       type: _.lowerCase(fermentable['TYPE']),
       color: {
-        unit: 'L',
+        unit: 'Lovi',
         value: Number(fermentable['COLOR'])
       },
       amount: {
@@ -188,7 +190,12 @@ const fermentable_bill = r =>
       origin: fermentable['ORIGIN'],
       supplier: fermentable['SUPPLIER'],
       group: 'base',
-      yield: Number(fermentable['YIELD']),
+      yield: {
+        potential: {
+          unit: 'sg',
+          value: potential(Number(fermentable['YIELD']))
+        }
+      },
       ...(!_.isEmpty(fermentable['ADD_AFTER_BOIL'])
         ? {
             add_after_boil: parseBool(fermentable['ADD_AFTER_BOIL'])

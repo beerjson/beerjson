@@ -51,7 +51,10 @@
                 "value": 2.148
               },
               "yield": {
-                "potential": 37
+                "potential": {
+                  "unit": "sg",
+                  "value": 1037
+                }
               }
             },
             {
@@ -67,7 +70,10 @@
                 "value": 0.5
               },
               "yield": {
-                "potential": 33
+                "potential": {
+                  "unit": "sg",
+                  "value": 1033
+                }
               }
             },
             {
@@ -83,7 +89,10 @@
                 "value": 0.25
               },
               "yield": {
-                "potential": 37
+                "potential": {
+                  "unit": "sg",
+                  "value": 1037
+                }
               }
             },
             {
@@ -99,7 +108,10 @@
                 "value": 1.5
               },
               "yield": {
-                "potential": 37
+                "potential": {
+                  "unit": "sg",
+                  "value": 1037
+                }
               }
             },
             {
@@ -115,7 +127,10 @@
                 "value": 8
               },
               "yield": {
-                "potential": 37
+                "potential": {
+                  "unit": "sg",
+                  "value": 1037
+                }
               }
             },
             {
@@ -131,7 +146,10 @@
                 "value": 1
               },
               "yield": {
-                "potential": 37
+                "potential": {
+                  "unit": "sg",
+                  "value": 1037
+                }
               }
             }
           ],

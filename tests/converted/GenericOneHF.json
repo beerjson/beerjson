@@ -25,12 +25,12 @@
             {
               "name": "Pilsner (2 Row) Ger",
               "type": "grain",
-              "color": { "unit": "L", "value": 2 },
+              "color": { "unit": "Lovi", "value": 2 },
               "amount": { "unit": "kg", "value": 3.2412931 },
               "origin": "Germany",
               "supplier": "",
               "group": "base",
-              "yield": 81,
+              "yield": { "potential": { "unit": "sg", "value": 1.03726 } },
               "add_after_boil": false
             }
           ],

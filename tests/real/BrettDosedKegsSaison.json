@@ -53,7 +53,10 @@
                 "value": 6.6
               },
               "yield": {
-                "potential": 38
+                "potential": {
+                  "unit": "sg",
+                  "value": 1038
+                }
               }
             },
             {
@@ -68,7 +71,10 @@
                 "value": 2.8
               },
               "yield": {
-                "potential": 30
+                "potential": {
+                  "unit": "sg",
+                  "value": 1030
+                }
               }
             }
           ],

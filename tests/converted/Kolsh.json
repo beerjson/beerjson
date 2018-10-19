@@ -25,34 +25,34 @@
             {
               "name": "Pilsner (2 Row) Ger",
               "type": "grain",
-              "color": { "unit": "L", "value": 2 },
+              "color": { "unit": "Lovi", "value": 2 },
               "amount": { "unit": "kg", "value": 3.2412931 },
               "origin": "Germany",
               "supplier": "",
               "group": "base",
-              "yield": 81,
+              "yield": { "potential": { "unit": "sg", "value": 1.03726 } },
               "add_after_boil": false
             },
             {
               "name": "Vienna Malt",
               "type": "grain",
-              "color": { "unit": "L", "value": 3.4974619 },
+              "color": { "unit": "Lovi", "value": 3.4974619 },
               "amount": { "unit": "kg", "value": 0.8640194 },
               "origin": "Germany",
               "supplier": "",
               "group": "base",
-              "yield": 78,
+              "yield": { "potential": { "unit": "sg", "value": 1.03588 } },
               "add_after_boil": false
             },
             {
               "name": "Cara-Pils/Dextrine",
               "type": "grain",
-              "color": { "unit": "L", "value": 2 },
+              "color": { "unit": "Lovi", "value": 2 },
               "amount": { "unit": "kg", "value": 0.2164116 },
               "origin": "US",
               "supplier": "",
               "group": "base",
-              "yield": 72,
+              "yield": { "potential": { "unit": "sg", "value": 1.03312 } },
               "add_after_boil": false
             }
           ],
