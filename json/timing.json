@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/timing.json",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "TimingType": {
+      "type": "object",
+      "description": "The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step.",
+      "additionalProperties": false,
+      "properties": {
+        "use": {
+          "oneOf": [
+            {
+              "add_to_mash": {
+                "type": "object",
+                "step": {
+                  "type": "integer"
+                },
+                "time": {
+                  "$ref": "measureable_units.json#/definitions/TimeType"
+                },
+                "duration": {
+                  "$ref": "measureable_units.json#/definitions/TimeType"
+                }
+              },
+              "add_to_boil": {
+                "type": "object",
+                "step": {
+                  "type": "integer"
+                },
+                "time": {
+                  "$ref": "measureable_units.json#/definitions/TimeType"
+                },
+                "continuous": {
+                  "type": "boolean"
+                },
+                "duration": {
+                  "$ref": "measureable_units.json#/definitions/TimeType"
+                }
+              },
+              "add_to_fermentation": {
+                "type": "object",
+                "step": {
+                  "type": "integer"
+                },
+                "time": {
+                  "$ref": "measureable_units.json#/definitions/TimeType"
+                },
+                "specific_gravity": {
+                  "$ref": "measureable_units.json#/definitions/GravityType"
+                },
+                "pH": {
+                  "$ref": "measureable_units.json#/definitions/AcidityType"
+                },
+                "duration": {
+                  "$ref": "measureable_units.json#/definitions/TimeType"
+                }
+              },
+              "add_to_package": {
+                "type": "object",
+                "step": {
+                  "type": "integer"
+                },
+                "time": {
+                  "$ref": "measureable_units.json#/definitions/TimeType"
+                },
+                "specific_gravity": {
+                  "$ref": "measureable_units.json#/definitions/GravityType"
+                },
+                "pH": {
+                  "$ref": "measureable_units.json#/definitions/AcidityType"
+                },
+                "duration": {
+                  "$ref": "measureable_units.json#/definitions/TimeType"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
