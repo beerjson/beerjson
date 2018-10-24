@@ -48,7 +48,10 @@
               "form": "pellet",
               "use": "boil",
               "amount": { "unit": "kg", "value": 0.03 },
-              "time": { "unit": "min", "value": 60 }
+              "timing": {
+                "time": { "unit": "min", "value": 60 },
+                "use": "add_to_boil"
+              }
             },
             {
               "name": "Target",
@@ -56,7 +59,10 @@
               "form": "pellet",
               "use": "boil",
               "amount": { "unit": "kg", "value": 0.03 },
-              "time": { "unit": "min", "value": 15 }
+              "timing": {
+                "time": { "unit": "min", "value": 15 },
+                "use": "add_to_boil"
+              }
             }
           ],
           "culture_additions": [

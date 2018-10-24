@@ -133,18 +133,20 @@
           "$ref": "#/definitions/HopVarietyBase"
         },
         {
-          "timing": {
-            "$ref": "timing.json#/definitions/TimingType"
-          },
-          "amount": {
-            "oneOf": [
-              {
-                "$ref": "measureable_units.json#/definitions/VolumeType"
-              },
-              {
-                "$ref": "measureable_units.json#/definitions/MassType"
-              }
-            ]
+          "properties": {
+            "timing": {
+              "$ref": "timing.json#/definitions/TimingType"
+            },
+            "amount": {
+              "oneOf": [
+                {
+                  "$ref": "measureable_units.json#/definitions/VolumeType"
+                },
+                {
+                  "$ref": "measureable_units.json#/definitions/MassType"
+                }
+              ]
+            }
           }
         },
         {

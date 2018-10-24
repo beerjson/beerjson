@@ -53,7 +53,10 @@
               "beta_acid_units": 5,
               "use": "boil",
               "amount": { "unit": "kg", "value": 0.04 },
-              "time": { "unit": "min", "value": 60 }
+              "timing": {
+                "time": { "unit": "min", "value": 60 },
+                "use": "add_to_boil"
+              }
             },
             {
               "name": "Goldings, East Kent",
@@ -63,7 +66,10 @@
               "beta_acid_units": 3.5,
               "use": "boil",
               "amount": { "unit": "kg", "value": 0.015 },
-              "time": { "unit": "min", "value": 30 }
+              "timing": {
+                "time": { "unit": "min", "value": 30 },
+                "use": "add_to_boil"
+              }
             },
             {
               "name": "Goldings, East Kent",
@@ -73,7 +79,10 @@
               "beta_acid_units": 3.5,
               "use": "boil",
               "amount": { "unit": "kg", "value": 0.015 },
-              "time": { "unit": "min", "value": 15 }
+              "timing": {
+                "time": { "unit": "min", "value": 15 },
+                "use": "add_to_boil"
+              }
             }
           ],
           "culture_additions": [

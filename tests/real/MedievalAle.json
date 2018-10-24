@@ -162,14 +162,11 @@
                 "value": 0.63
               },
               "timing": {
-                "use": {
-                  "add_to_boil": {
-                    "time": {
-                      "unit": "min",
-                      "value": 60
-                    }
-                  }
-                }
+                "time": {
+                  "unit": "min",
+                  "value": 60
+                },
+                "use": "add_to_boil"
               }
             },
             {
@@ -180,14 +177,11 @@
                 "value": 0.75
               },
               "timing": {
-                "use": {
-                  "add_to_boil": {
-                    "time": {
-                      "unit": "min",
-                      "value": 60
-                    }
-                  }
-                }
+                "time": {
+                  "unit": "min",
+                  "value": 60
+                },
+                "use": "add_to_boil"
               }
             },
             {
@@ -198,14 +192,11 @@
                 "value": 1
               },
               "timing": {
-                "use": {
-                  "add_to_boil": {
-                    "time": {
-                      "unit": "min",
-                      "value": 60
-                    }
-                  }
-                }
+                "time": {
+                  "unit": "min",
+                  "value": 60
+                },
+                "use": "add_to_boil"
               }
             },
             {
@@ -216,18 +207,15 @@
                 "value": 1
               },
               "timing": {
-                "use": {
-                  "add_to_fermentation": {
-                    "time": {
-                      "unit": "day",
-                      "value": 15
-                    },
-                    "duration": {
-                      "unit": "day",
-                      "value": 14
-                    }
-                  }
-                }
+                "time": {
+                  "unit": "day",
+                  "value": 15
+                },
+                "duration": {
+                  "unit": "day",
+                  "value": 14
+                },
+                "use": "add_to_fermentation"
               }
             },
             {
@@ -238,13 +226,9 @@
                 "value": 3
               },
               "timing": {
-                "use": {
-                  "add_to_boil": {
-                    "time": {
-                      "unit": "min",
-                      "value": 0
-                    }
-                  }
+                "time": {
+                  "unit": "min",
+                  "value": 0
                 }
               }
             }

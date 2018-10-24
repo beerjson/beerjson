@@ -4,79 +4,40 @@
   "type": "object",
   "additionalProperties": false,
   "definitions": {
+    "UseType": {
+      "type": "string",
+      "enum": [
+        "add_to_mash",
+        "add_to_boil",
+        "add_to_fermentation",
+        "add_to_package"
+      ]
+    },
     "TimingType": {
       "type": "object",
       "description": "The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step.",
       "additionalProperties": false,
       "properties": {
+        "time": {
+          "$ref": "measureable_units.json#/definitions/TimeType"
+        },
+        "duration": {
+          "$ref": "measureable_units.json#/definitions/TimeType"
+        },
+        "continuous": {
+          "type": "boolean"
+        },
+        "specific_gravity": {
+          "$ref": "measureable_units.json#/definitions/GravityType"
+        },
+        "pH": {
+          "$ref": "measureable_units.json#/definitions/AcidityType"
+        },
+        "step": {
+          "type": "integer"
+        },
         "use": {
-          "oneOf": [
-            {
-              "add_to_mash": {
-                "type": "object",
-                "step": {
-                  "type": "integer"
-                },
-                "time": {
-                  "$ref": "measureable_units.json#/definitions/TimeType"
-                },
-                "duration": {
-                  "$ref": "measureable_units.json#/definitions/TimeType"
-                }
-              },
-              "add_to_boil": {
-                "type": "object",
-                "step": {
-                  "type": "integer"
-                },
-                "time": {
-                  "$ref": "measureable_units.json#/definitions/TimeType"
-                },
-                "continuous": {
-                  "type": "boolean"
-                },
-                "duration": {
-                  "$ref": "measureable_units.json#/definitions/TimeType"
-                }
-              },
-              "add_to_fermentation": {
-                "type": "object",
-                "step": {
-                  "type": "integer"
-                },
-                "time": {
-                  "$ref": "measureable_units.json#/definitions/TimeType"
-                },
-                "specific_gravity": {
-                  "$ref": "measureable_units.json#/definitions/GravityType"
-                },
-                "pH": {
-                  "$ref": "measureable_units.json#/definitions/AcidityType"
-                },
-                "duration": {
-                  "$ref": "measureable_units.json#/definitions/TimeType"
-                }
-              },
-              "add_to_package": {
-                "type": "object",
-                "step": {
-                  "type": "integer"
-                },
-                "time": {
-                  "$ref": "measureable_units.json#/definitions/TimeType"
-                },
-                "specific_gravity": {
-                  "$ref": "measureable_units.json#/definitions/GravityType"
-                },
-                "pH": {
-                  "$ref": "measureable_units.json#/definitions/AcidityType"
-                },
-                "duration": {
-                  "$ref": "measureable_units.json#/definitions/TimeType"
-                }
-              }
-            }
-          ]
+          "$ref": "#/definitions/UseType"
         }
       }
     }

@@ -39,7 +39,10 @@
               "beta_acid_units": 0,
               "use": "boil",
               "amount": { "unit": "kg", "value": 0.02 },
-              "time": { "unit": "min", "value": 60 }
+              "timing": {
+                "time": { "unit": "min", "value": 60 },
+                "use": "add_to_boil"
+              }
             },
             {
               "name": "Ahtanum",
@@ -48,7 +51,10 @@
               "beta_acid_units": 0,
               "use": "boil",
               "amount": { "unit": "kg", "value": 0.0125 },
-              "time": { "unit": "min", "value": 60 }
+              "timing": {
+                "time": { "unit": "min", "value": 60 },
+                "use": "add_to_boil"
+              }
             },
             {
               "name": "Chinook",
@@ -57,7 +63,10 @@
               "beta_acid_units": 0,
               "use": "boil",
               "amount": { "unit": "kg", "value": 0.02 },
-              "time": { "unit": "min", "value": 30 }
+              "timing": {
+                "time": { "unit": "min", "value": 30 },
+                "use": "add_to_boil"
+              }
             },
             {
               "name": "Ahtanum",
@@ -66,7 +75,10 @@
               "beta_acid_units": 0,
               "use": "boil",
               "amount": { "unit": "kg", "value": 0.0125 },
-              "time": { "unit": "min", "value": 30 }
+              "timing": {
+                "time": { "unit": "min", "value": 30 },
+                "use": "add_to_boil"
+              }
             },
             {
               "name": "Chinook",
@@ -75,7 +87,10 @@
               "beta_acid_units": 0,
               "use": "boil",
               "amount": { "unit": "kg", "value": 0.0275 },
-              "time": { "unit": "min", "value": 0 }
+              "timing": {
+                "time": { "unit": "min", "value": 0 },
+                "use": "add_to_boil"
+              }
             },
             {
               "name": "Ahtanum",
@@ -84,7 +99,10 @@
               "beta_acid_units": 0,
               "use": "boil",
               "amount": { "unit": "kg", "value": 0.0125 },
-              "time": { "unit": "min", "value": 0 }
+              "timing": {
+                "time": { "unit": "min", "value": 0 },
+                "use": "add_to_boil"
+              }
             },
             {
               "name": "Simcoe",
@@ -93,7 +111,10 @@
               "beta_acid_units": 0,
               "use": "boil",
               "amount": { "unit": "kg", "value": 0.0125 },
-              "time": { "unit": "min", "value": 0 }
+              "timing": {
+                "time": { "unit": "min", "value": 0 },
+                "use": "add_to_boil"
+              }
             },
             {
               "name": "Nelson Sauvin",
@@ -102,7 +123,10 @@
               "beta_acid_units": 0,
               "use": "boil",
               "amount": { "unit": "kg", "value": 0.0125 },
-              "time": { "unit": "min", "value": 0 }
+              "timing": {
+                "time": { "unit": "min", "value": 0 },
+                "use": "add_to_boil"
+              }
             },
             {
               "name": "Chinook",
@@ -111,7 +135,10 @@
               "beta_acid_units": 0,
               "use": "dry hop",
               "amount": { "unit": "kg", "value": 0.0475 },
-              "time": { "unit": "min", "value": 10080 }
+              "timing": {
+                "time": { "unit": "min", "value": 10080 },
+                "use": "add_to_boil"
+              }
             },
             {
               "name": "Ahtanum",
@@ -120,7 +147,10 @@
               "beta_acid_units": 0,
               "use": "dry hop",
               "amount": { "unit": "kg", "value": 0.0375 },
-              "time": { "unit": "min", "value": 10080 }
+              "timing": {
+                "time": { "unit": "min", "value": 10080 },
+                "use": "add_to_boil"
+              }
             },
             {
               "name": "Simcoe",
@@ -129,7 +159,10 @@
               "beta_acid_units": 0,
               "use": "dry hop",
               "amount": { "unit": "kg", "value": 0.0375 },
-              "time": { "unit": "min", "value": 10080 }
+              "timing": {
+                "time": { "unit": "min", "value": 10080 },
+                "use": "add_to_boil"
+              }
             },
             {
               "name": "Nelson Sauvin",
@@ -138,7 +171,10 @@
               "beta_acid_units": 0,
               "use": "dry hop",
               "amount": { "unit": "kg", "value": 0.02 },
-              "time": { "unit": "min", "value": 10080 }
+              "timing": {
+                "time": { "unit": "min", "value": 10080 },
+                "use": "add_to_boil"
+              }
             },
             {
               "name": "Cascade",
@@ -147,7 +183,10 @@
               "beta_acid_units": 0,
               "use": "dry hop",
               "amount": { "unit": "kg", "value": 0.0375 },
-              "time": { "unit": "min", "value": 10080 }
+              "timing": {
+                "time": { "unit": "min", "value": 10080 },
+                "use": "add_to_boil"
+              }
             },
             {
               "name": "Amarillo",
@@ -156,7 +195,10 @@
               "beta_acid_units": 0,
               "use": "dry hop",
               "amount": { "unit": "kg", "value": 0.01 },
-              "time": { "unit": "min", "value": 10080 }
+              "timing": {
+                "time": { "unit": "min", "value": 10080 },
+                "use": "add_to_boil"
+              }
             }
           ],
           "culture_additions": [
