@@ -29,7 +29,9 @@
       "type": "object",
       "description": "MiscellaneousType collects the attributes of an ingredient to store as record information",
       "allOf": [
-        { "$ref": "#/definitions/MiscellaneousBase" },
+        {
+          "$ref": "#/definitions/MiscellaneousBase"
+        },
         {
           "properties": {
             "use_for": {
@@ -66,83 +68,14 @@
       "type": "object",
       "description": "MiscellaneousAdditionType collects the attributes of each miscellaneous ingredient for use in a recipe",
       "allOf": [
-        { "$ref": "#/definitions/MiscellaneousBase" },
+        {
+          "$ref": "#/definitions/MiscellaneousBase"
+        },
         {
           "properties": {
             "timing": {
-              "type": "object",
-              "description": "The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step.",
-              "additionalProperties": false,
-              "properties": {
-                "use": {
-                  "oneOf": [
-                    {
-                      "add_to_mash": {
-                        "type": "object",
-                        "step": {
-                          "type": "integer"
-                        },
-                        "time": {
-                          "$ref": "measureable_units.json#/definitions/TimeType"
-                        },
-                        "duration": {
-                          "$ref": "measureable_units.json#/definitions/TimeType"
-                        }
-                      },
-                      "add_to_boil": {
-                        "type": "object",
-                        "step": {
-                          "type": "integer"
-                        },
-                        "time": {
-                          "$ref": "measureable_units.json#/definitions/TimeType"
-                        },
-                        "duration": {
-                          "$ref": "measureable_units.json#/definitions/TimeType"
-                        }
-                      },
-                      "add_to_fermentation": {
-                        "type": "object",
-                        "step": {
-                          "type": "integer"
-                        },
-                        "time": {
-                          "$ref": "measureable_units.json#/definitions/TimeType"
-                        },
-                        "specific_gravity": {
-                          "$ref": "measureable_units.json#/definitions/DensityType"
-                        },
-                        "pH": {
-                          "$ref": "measureable_units.json#/definitions/AcidityType"
-                        },
-                        "duration": {
-                          "$ref": "measureable_units.json#/definitions/TimeType"
-                        }
-                      },
-                      "add_to_package": {
-                        "type": "object",
-                        "step": {
-                          "type": "integer"
-                        },
-                        "time": {
-                          "$ref": "measureable_units.json#/definitions/TimeType"
-                        },
-                        "specific_gravity": {
-                          "$ref": "measureable_units.json#/definitions/GravityType"
-                        },
-                        "pH": {
-                          "$ref": "measureable_units.json#/definitions/AcidityType"
-                        },
-                        "duration": {
-                          "$ref": "measureable_units.json#/definitions/TimeType"
-                        }
-                      }
-                    }
-                  ]
-                }
-              }
+              "$ref": "timing.json#/definitions/TimingType"
             },
-
             "amount": {
               "oneOf": [
                 {

@@ -65,7 +65,10 @@
               "beta_acid_units": 4,
               "use": "boil",
               "amount": { "unit": "kg", "value": 0.0332677 },
-              "time": { "unit": "min", "value": 60 }
+              "timing": {
+                "time": { "unit": "min", "value": 60 },
+                "use": "add_to_boil"
+              }
             },
             {
               "name": "Hallertauer",
@@ -75,7 +78,10 @@
               "beta_acid_units": 4,
               "use": "boil",
               "amount": { "unit": "kg", "value": 0.0166339 },
-              "time": { "unit": "min", "value": 20 }
+              "timing": {
+                "time": { "unit": "min", "value": 20 },
+                "use": "add_to_boil"
+              }
             }
           ],
           "miscellaneous_additions": [

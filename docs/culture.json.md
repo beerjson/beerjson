@@ -47,10 +47,10 @@ Parent: [CultureBase](#culturebase)
 
 ### Properties
 
-|                         | Type                                                 | Description                                                                                                                     | Required |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| **attenuation**         | [PercentType](measureable_units.json.md#percenttype) |                                                                                                                                 |          |
-| **times_cultured**      | integer                                              |                                                                                                                                 |          |
-| **timing**              | object                                               | The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step. |          |
-| **cell_count_billions** | integer                                              |                                                                                                                                 |          |
-| **amount**              | undefined                                            |                                                                                                                                 |          |
+|                         | Type                                                 | Description | Required |
+| ----------------------- | ---------------------------------------------------- | ----------- | -------- |
+| **attenuation**         | [PercentType](measureable_units.json.md#percenttype) |             |          |
+| **times_cultured**      | integer                                              |             |          |
+| **timing**              | [TimingType](timing.json.md#timingtype)              |             |          |
+| **cell_count_billions** | integer                                              |             |          |
+| **amount**              | undefined                                            |             |          |

@@ -105,7 +105,6 @@
                 }
               }
             },
-
             "inventory": {
               "type": "object",
               "additionalProperties": false,
@@ -134,73 +133,20 @@
           "$ref": "#/definitions/HopVarietyBase"
         },
         {
-          "timing": {
-            "type": "object",
-            "description": "The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step.",
-            "additionalProperties": false,
-            "properties": {
-              "use": {
-                "oneOf": [
-                  {
-                    "add_to_mash": {
-                      "type": "object",
-                      "step": {
-                        "type": "integer"
-                      },
-                      "time": {
-                        "$ref": "measureable_units.json#/definitions/TimeType"
-                      },
-                      "duration": {
-                        "$ref": "measureable_units.json#/definitions/TimeType"
-                      }
-                    },
-                    "add_to_boil": {
-                      "type": "object",
-                      "step": {
-                        "type": "integer"
-                      },
-                      "time": {
-                        "$ref": "measureable_units.json#/definitions/TimeType"
-                      },
-                      "continuous": {
-                        "type": "boolean"
-                      },
-                      "duration": {
-                        "$ref": "measureable_units.json#/definitions/TimeType"
-                      }
-                    },
-                    "add_to_fermentation": {
-                      "type": "object",
-                      "step": {
-                        "type": "integer"
-                      },
-                      "time": {
-                        "$ref": "measureable_units.json#/definitions/TimeType"
-                      },
-                      "specific_gravity": {
-                        "$ref": "measureable_units.json#/definitions/GravityType"
-                      },
-                      "pH": {
-                        "$ref": "measureable_units.json#/definitions/AcidityType"
-                      },
-                      "duration": {
-                        "$ref": "measureable_units.json#/definitions/TimeType"
-                      }
-                    }
-                  }
-                ]
-              }
+          "properties": {
+            "timing": {
+              "$ref": "timing.json#/definitions/TimingType"
+            },
+            "amount": {
+              "oneOf": [
+                {
+                  "$ref": "measureable_units.json#/definitions/VolumeType"
+                },
+                {
+                  "$ref": "measureable_units.json#/definitions/MassType"
+                }
+              ]
             }
-          },
-          "amount": {
-            "oneOf": [
-              {
-                "$ref": "measureable_units.json#/definitions/VolumeType"
-              },
-              {
-                "$ref": "measureable_units.json#/definitions/MassType"
-              }
-            ]
           }
         },
         {

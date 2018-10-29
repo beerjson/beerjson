@@ -167,9 +167,12 @@ const hop_bill = r =>
       unit: 'kg',
       value: Number(hop['AMOUNT'])
     },
-    time: {
-      unit: 'min',
-      value: Number(hop['TIME'])
+    timing: {
+      time: {
+        unit: 'min',
+        value: Number(hop['TIME'])
+      },
+      use: 'add_to_boil'
     }
   }))
 
