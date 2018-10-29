@@ -43,6 +43,13 @@ HopAdditionType collects the attributes of each hop ingredient for use in a reci
 
 Parent: [HopVarietyBase](#hopvarietybase)
 
+### Properties
+
+|            | Type                                    | Description | Required |
+| ---------- | --------------------------------------- | ----------- | -------- |
+| **timing** | [TimingType](timing.json.md#timingtype) |             |          |
+| **amount** | undefined                               |             |          |
+
 ## IBUEstimateType
 
 _no description yet_
