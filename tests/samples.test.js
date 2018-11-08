@@ -58,7 +58,7 @@ const testsDir = __dirname
 
 const runTests = () => {
   fs.readdirSync(testsDir).forEach(dir => {
-    if (dir !== 'xml' && dir !== 'samples.test.js') {
+    if (dir !== 'xml' && dir !== 'samples.test.js' && !dir.startsWith('.')) {
       fs.readdirSync(testsDir + '/' + dir).forEach(file => {
         testJson(testsDir + '/' + dir + '/' + file)
       })
