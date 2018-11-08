@@ -113,5 +113,3 @@ const formatRootSchema = R.pipe(
 const jsonSchemaToMarkdown = s => formatRootSchema(s) + formatDefinitions(s)
 
 module.exports = jsonSchemaToMarkdown
-module.exports.formatTypeDefinition = formatTypeDefinition
-module.exports.formatPropertyList = formatPropertyList
