@@ -16,9 +16,21 @@ const formatEnum = R.reduce(
 )
 
 const formatPropType = R.cond([
-  [R.has('enum'), R.pipe(R.prop('enum'), formatEnum)],
+  [
+    R.has('enum'),
+    R.pipe(
+      R.prop('enum'),
+      formatEnum
+    )
+  ],
   [R.has('type'), R.prop('type')],
-  [R.has('$ref'), R.pipe(R.prop('$ref'), formatTypeRef)]
+  [
+    R.has('$ref'),
+    R.pipe(
+      R.prop('$ref'),
+      formatTypeRef
+    )
+  ]
 ])
 
 const formatPropDefinition = requiredList => ([propName, propDef]) =>
@@ -55,7 +67,13 @@ const formatParentType = R.ifElse(
 const getRequiredList = R.propOr([], 'required')
 const formatPropertyList = typeDef =>
   R.pipe(
-    R.when(R.has('allOf'), R.pipe(R.prop('allOf'), R.mergeAll)),
+    R.when(
+      R.has('allOf'),
+      R.pipe(
+        R.prop('allOf'),
+        R.mergeAll
+      )
+    ),
 
     t =>
       R.join('', [
@@ -82,8 +100,17 @@ const formatDefinitions = R.pipe(
   R.reduce((md, pair) => md + formatTypeDefinition(pair), ''),
   R.ifElse(R.isEmpty, R.empty, addTypeHeader)
 )
+const log = x => {
+  console.log('LOG', x)
+  return x
+}
 
-const jsonSchemaToMarkdown = formatDefinitions
+const formatRootSchema = R.pipe(
+  R.path(['properties', 'beerjson']),
+  R.ifElse(R.isNil, R.always(''), formatPropertyList)
+)
+
+const jsonSchemaToMarkdown = s => formatRootSchema(s) + formatDefinitions(s)
 
 module.exports = jsonSchemaToMarkdown
 module.exports.formatTypeDefinition = formatTypeDefinition
