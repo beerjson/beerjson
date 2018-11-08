@@ -1,19 +1,27 @@
 const R = require('ramda')
 
-const formatTypeRef = ref => {
+const parseTypeRefStr = ref => {
   const regex = /^(\S+)?#\/definitions\/(\S+)/
   const matches = ref.match(regex)
   const fileName = matches[1]
   const typeName = matches[2]
-  return `[${typeName}](${fileName ? fileName + '.md' : ''}#${R.toLower(
-    typeName
-  )})`
+  return { typeName, fileName }
 }
+
+const formatTypeRef = ({ typeName, fileName }) =>
+  `[${typeName}](${fileName ? fileName + '.md' : ''}#${R.toLower(typeName)})`
 
 const formatEnum = R.reduce(
   (str, val) => (str ? str + ` , '${val}' ` : ` '${val}' `),
   ''
 )
+const formatPropDefinition = requiredList => ([propName, propDef]) =>
+  `| **${propName}** | ${formatPropType(propDef)}| ${R.propOr(
+    '',
+    'description',
+    propDef
+  )} | ${R.contains(propName, requiredList) ? ':white_check_mark:' : ''} |
+`
 
 const formatPropType = R.cond([
   [
@@ -28,18 +36,12 @@ const formatPropType = R.cond([
     R.has('$ref'),
     R.pipe(
       R.prop('$ref'),
+      parseTypeRefStr,
       formatTypeRef
     )
   ]
 ])
 
-const formatPropDefinition = requiredList => ([propName, propDef]) =>
-  `| **${propName}** | ${formatPropType(propDef)}| ${R.propOr(
-    '',
-    'description',
-    propDef
-  )} | ${R.contains(propName, requiredList) ? ':white_check_mark:' : ''} |
-`
 const addTableHeader = str => `### Properties
 
 |   |Type|Description|Required|
@@ -58,6 +60,7 @@ const formatParentType = R.ifElse(
   R.has('$ref'),
   R.pipe(
     R.prop('$ref'),
+    parseTypeRefStr,
     ref => `Parent: ${formatTypeRef(ref)}
 
 `

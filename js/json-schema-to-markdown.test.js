@@ -5,6 +5,13 @@ const rootSchema = require('../json/beer.json')
 const rewire = require('rewire')
 const parseRewire = rewire('././json-schema-to-markdown.js')
 const formatTypeDefinition = parseRewire.__get__('formatTypeDefinition')
+const formatTypeRef = parseRewire.__get__('formatTypeRef')
+
+test('Type reference format', () => {
+  expect(formatTypeRef({ typeName: 'type', fileName: 'file' })).toBe(
+    '[type](file.md#type)'
+  )
+})
 
 test('fermentable docs should match snapshot', () => {
   expect(parse(typeSchema)).toMatchSnapshot()
