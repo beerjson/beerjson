@@ -1,5 +1,3 @@
-const R = require('ramda')
-
 const parseTypeRefStr = ref => {
   const regex = /^(\S+)?#\/definitions\/(\S+)/
   const matches = ref.match(regex)
@@ -9,38 +7,24 @@ const parseTypeRefStr = ref => {
 }
 
 const formatTypeRef = ({ typeName, fileName }) =>
-  `[${typeName}](${fileName ? fileName + '.md' : ''}#${R.toLower(typeName)})`
+  `[${typeName}](${fileName ? fileName + '.md' : ''}#${typeName.toLowerCase()})`
 
-const formatEnum = R.reduce(
-  (str, val) => (str ? str + ` , '${val}' ` : ` '${val}' `),
-  ''
-)
+const formatEnum = enumValues =>
+  enumValues.reduce(
+    (str, val) => (str ? str + ` , '${val}' ` : ` '${val}' `),
+    ''
+  )
 const formatPropDefinition = requiredList => ([propName, propDef]) =>
-  `| **${propName}** | ${formatPropType(propDef)}| ${R.propOr(
-    '',
-    'description',
-    propDef
-  )} | ${R.contains(propName, requiredList) ? ':white_check_mark:' : ''} |
+  `| **${propName}** | ${formatPropType(propDef)}| ${
+    propDef.description ? propDef.description : ''
+  } | ${requiredList.includes(propName) ? ':white_check_mark:' : ''} |
 `
 
-const formatPropType = R.cond([
-  [
-    R.has('enum'),
-    R.pipe(
-      R.prop('enum'),
-      formatEnum
-    )
-  ],
-  [R.has('type'), R.prop('type')],
-  [
-    R.has('$ref'),
-    R.pipe(
-      R.prop('$ref'),
-      parseTypeRefStr,
-      formatTypeRef
-    )
-  ]
-])
+const formatPropType = propType => {
+  if (propType.enum) return formatEnum(propType.enum)
+  if (propType.type) return propType.type
+  if (propType.$ref) return formatTypeRef(parseTypeRefStr(propType.$ref))
+}
 
 const addTableHeader = str => `### Properties
 
@@ -48,47 +32,38 @@ const addTableHeader = str => `### Properties
 |---|----|-----------|--------|
 ${str}`
 
-const formatProperties = requiredList =>
-  R.pipe(
-    R.prop('properties'),
-    R.toPairs,
-    R.reduce((md, pair) => md + formatPropDefinition(requiredList)(pair), ''),
-    R.ifElse(R.isEmpty, R.empty, addTableHeader)
+const mapProps = (obj, mapFn) =>
+  obj ? Object.keys(obj).map((key, index) => mapFn(key, obj[key])) : []
+
+const formatProperties = requiredList => def => {
+  const result = mapProps(def.properties, (propName, typeDef) => [
+    propName,
+    typeDef
+  ]).reduce((acc, pair) => acc + formatPropDefinition(requiredList)(pair), '')
+  return result !== '' ? addTableHeader(result) : ''
+}
+
+const formatParentType = ({ $ref }) =>
+  $ref ? `Parent: ${formatTypeRef(parseTypeRefStr($ref))}\n\n` : ''
+
+const getRequiredList = ({ required = [] }) => required
+
+const log = x => {
+  console.log('LOG', x)
+  return x
+}
+
+const formatPropertyList = def => {
+  const newdef = def.allOf ? { ...def.allOf[0], ...def.allOf[1] } : def
+  return (
+    formatParentType(newdef) + formatProperties(getRequiredList(def))(newdef)
   )
-
-const formatParentType = R.ifElse(
-  R.has('$ref'),
-  R.pipe(
-    R.prop('$ref'),
-    parseTypeRefStr,
-    ref => `Parent: ${formatTypeRef(ref)}
-
-`
-  ),
-  R.always('')
-)
-const getRequiredList = R.propOr([], 'required')
-const formatPropertyList = typeDef =>
-  R.pipe(
-    R.when(
-      R.has('allOf'),
-      R.pipe(
-        R.prop('allOf'),
-        R.mergeAll
-      )
-    ),
-
-    t =>
-      R.join('', [
-        formatParentType(t),
-        formatProperties(getRequiredList(typeDef))(t)
-      ])
-  )(typeDef)
+}
 
 const formatTypeDefinition = ([typeName, typeDef]) =>
   `## ${typeName} 
 
-${R.propOr('*no description yet*', 'description', typeDef)}
+${typeDef.description ? typeDef.description : '*no description yet*'}
 
 \`${typeName}\` type: \`${typeDef.type}\`
 
@@ -97,21 +72,16 @@ ${formatPropertyList(typeDef)}
 
 const addTypeHeader = str => `The schema defines the following types:\n\n${str}`
 
-const formatDefinitions = R.pipe(
-  R.prop('definitions'),
-  R.toPairs,
-  R.reduce((md, pair) => md + formatTypeDefinition(pair), ''),
-  R.ifElse(R.isEmpty, R.empty, addTypeHeader)
-)
-const log = x => {
-  console.log('LOG', x)
-  return x
+const formatDefinitions = schema => {
+  const result = mapProps(schema.definitions, (typeName, typeDef) => [
+    typeName,
+    typeDef
+  ]).reduce((acc, pair) => acc + formatTypeDefinition(pair), '')
+  return result !== '' ? addTypeHeader(result) : ''
 }
-
-const formatRootSchema = R.pipe(
-  R.path(['properties', 'beerjson']),
-  R.ifElse(R.isNil, R.always(''), formatPropertyList)
-)
+const formatRootSchema = ({ properties: { beerjson } = {} }) => {
+  return beerjson ? formatPropertyList(beerjson) : ''
+}
 
 const jsonSchemaToMarkdown = s => formatRootSchema(s) + formatDefinitions(s)
 

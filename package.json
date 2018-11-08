@@ -12,7 +12,6 @@
     "lodash": "^4.17.5",
     "pixl-xml": "^1.0.10",
     "prettier": "1.14.2",
-    "ramda": "^0.25.0",
     "rewire": "^4.0.1"
   },
   "scripts": {
