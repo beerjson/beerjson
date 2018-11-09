@@ -8,7 +8,7 @@ The descriptive base type for both culture records, and recipe additions. Provid
 
 ### Properties
 
-|                | Type                                                                                                                                                   | Description | Required           |
+| | Type                                                                                                                                                   | Description | Required           |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | ------------------ |
 | **name**       | string                                                                                                                                                 |             | :white_check_mark: |
 | **type**       | 'ale' , 'bacteria' , 'brett' , 'champagne' , 'kveik' , 'lacto' , 'lager' , 'malolactic' , 'mixed-culture' , 'other' , 'pedio' , 'spontaneous' , 'wine' |             | :white_check_mark: |
