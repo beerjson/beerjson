@@ -21,7 +21,10 @@
   },
   "jest": {
     "verbose": true,
-    "testURL": "http://localhost/"
+    "testURL": "http://localhost/",
+    "watchPathIgnorePatterns": [
+      "converted"
+    ]
   },
   "repository": {
     "type": "git",
