@@ -14,9 +14,9 @@ RecipeType composes the information stored in a beerjson recipe
 | **coauthor** |  | string|  |
 | **created** |  | [DateType](measureable_units.json.md#datetype)|  |
 | **batch_size** | :white_check_mark: | [VolumeType](measureable_units.json.md#volumetype)|  |
-| **efficiency** | :white_check_mark: | object|  |
+| **efficiency** | :white_check_mark: | :x: object|  |
 | **style** |  | [RecipeStyleType](style.json.md#recipestyletype)|  |
-| **ingredients** | :white_check_mark: | object|  |
+| **ingredients** | :white_check_mark: | :x: object|  |
 | **mash** |  | [MashProcedureType](mash.json.md#mashproceduretype)|  |
 | **notes** |  | string|  |
 | **original_gravity** |  | [GravityType](measureable_units.json.md#gravitytype)|  |
@@ -29,6 +29,6 @@ RecipeType composes the information stored in a beerjson recipe
 | **fermentation** |  | [FermentationProcedureType](fermentation.json.md#fermentationproceduretype)|  |
 | **packaging** |  | [PackagingProcedureType](packaging.json.md#packagingproceduretype)|  |
 | **boil** |  | [BoilProcedureType](boil.json.md#boilproceduretype)|  |
-| **taste** |  | object|  |
+| **taste** |  | :x: object|  |
 | **calories_per_pint** |  | number|  |
 

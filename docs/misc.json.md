@@ -21,7 +21,7 @@ MiscellaneousType collects the attributes of an ingredient to store as record in
 |--|--|--|--|
 | **use_for** |  | string|  |
 | **notes** |  | string|  |
-| **inventory** |  | object|  |
+| **inventory** |  | :x: object|  |
 
 ## MiscellaneousAdditionType 
 

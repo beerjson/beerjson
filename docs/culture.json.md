@@ -29,7 +29,7 @@ CultureInformation collects the attributes of a microbial culture to store as re
 | **notes** |  | string|  |
 | **best_for** |  | string|  |
 | **max_reuse** |  | integer|  |
-| **inventory** |  | object|  |
+| **inventory** |  | :x: object|  |
 
 ## CultureAdditionType 
 

@@ -13,7 +13,7 @@ FermentableBase provides unique properties to identify individual records of fer
 | **origin** |  | string|  |
 | **supplier** |  | string|  |
 | **grain_group** |  | `"base"`<br/>`"caramel"`<br/>`"flaked"`<br/>`"roasted"`<br/>`"specialty"`<br/>`"smoked"`<br/>`"adjunct"`|  |
-| **yield** | :white_check_mark: | object|  |
+| **yield** | :white_check_mark: | :x: object|  |
 | **color** | :white_check_mark: | [ColorType](measureable_units.json.md#colortype)|  |
 
 ## FermentableType 
@@ -32,7 +32,7 @@ FermentableType collects the attributes of a fermentable ingredient to store as 
 | **soluble_nitrogen_ratio** |  | number|  |
 | **max_in_batch** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **recommend_mash** |  | boolean|  |
-| **inventory** |  | object|  |
+| **inventory** |  | :x: object|  |
 
 ## FermentableAdditionType 
 

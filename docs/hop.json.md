@@ -26,8 +26,8 @@ VarietyInformation collects the attributes of a hop variety to store as record i
 | **notes** |  | string|  |
 | **percent_lost** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **substitutes** |  | string|  |
-| **oil_content** |  | object| oil_content collects all information of a hop variety pertaining to oil content, polyphenols, and thiols. |
-| **inventory** |  | object|  |
+| **oil_content** |  | :x: object| oil_content collects all information of a hop variety pertaining to oil content, polyphenols, and thiols. |
+| **inventory** |  | :x: object|  |
 
 ## HopAdditionType 
 

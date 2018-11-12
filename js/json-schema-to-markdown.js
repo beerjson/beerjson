@@ -29,6 +29,13 @@ const formatPropDefinition = requiredList => ([propName, propDef]) =>
 const formatPropType = propType => {
   if (propType.enum) return formatEnum(propType.enum)
   if (propType.type === 'array') return formatArray(propType.items)
+  if (propType.type === 'object') {
+    console.log(
+      `Warning. Cannot generate docs for nested object schema, consider extracting type: `,
+      propType
+    )
+    return ':x: ' + propType.type
+  }
   if (propType.type) return propType.type
   if (propType.$ref) return formatTypeRef(parseTypeRefStr(propType.$ref))
 }
