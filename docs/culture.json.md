@@ -29,7 +29,7 @@ CultureInformation collects the attributes of a microbial culture to store as re
 | **notes** |  | string|  |
 | **best_for** |  | string|  |
 | **max_reuse** |  | integer|  |
-| **inventory** |  | :x: object|  |
+| **inventory** |  | [CultureInventoryType](#cultureinventorytype)|  |
 
 ## CultureAdditionType 
 
@@ -44,4 +44,17 @@ CultureAdditionType collects the attributes of each culture ingredient for use i
 | **timing** |  | [TimingType](timing.json.md#timingtype)|  |
 | **cell_count_billions** |  | integer|  |
 | **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype) or  [UnitType](measureable_units.json.md#unittype)|  |
+
+## CultureInventoryType 
+
+*no description yet*
+
+**CultureInventoryType** is an object with these properties:
+
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **liquid** |  | [VolumeType](measureable_units.json.md#volumetype)|  |
+| **dry** |  | [MassType](measureable_units.json.md#masstype)|  |
+| **slant** |  | [VolumeType](measureable_units.json.md#volumetype)|  |
+| **culture** |  | [VolumeType](measureable_units.json.md#volumetype)|  |
 

@@ -73,22 +73,7 @@
               "type": "integer"
             },
             "inventory": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "liquid": {
-                  "$ref": "measureable_units.json#/definitions/VolumeType"
-                },
-                "dry": {
-                  "$ref": "measureable_units.json#/definitions/MassType"
-                },
-                "slant": {
-                  "$ref": "measureable_units.json#/definitions/VolumeType"
-                },
-                "culture": {
-                  "$ref": "measureable_units.json#/definitions/VolumeType"
-                }
-              }
+              "$ref": "#/definitions/CultureInventoryType"
             }
           }
         }
@@ -134,6 +119,24 @@
           "required": ["amount"]
         }
       ]
+    },
+    "CultureInventoryType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "liquid": {
+          "$ref": "measureable_units.json#/definitions/VolumeType"
+        },
+        "dry": {
+          "$ref": "measureable_units.json#/definitions/MassType"
+        },
+        "slant": {
+          "$ref": "measureable_units.json#/definitions/VolumeType"
+        },
+        "culture": {
+          "$ref": "measureable_units.json#/definitions/VolumeType"
+        }
+      }
     }
   }
 }

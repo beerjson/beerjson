@@ -21,7 +21,7 @@ MiscellaneousType collects the attributes of an ingredient to store as record in
 |--|--|--|--|
 | **use_for** |  | string|  |
 | **notes** |  | string|  |
-| **inventory** |  | :x: object|  |
+| **inventory** |  | [MiscellaneousInventoryType](#miscellaneousinventorytype)|  |
 
 ## MiscellaneousAdditionType 
 
@@ -33,4 +33,14 @@ MiscellaneousAdditionType collects the attributes of each miscellaneous ingredie
 |--|--|--|--|
 | **timing** |  | [TimingType](timing.json.md#timingtype)|  |
 | **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype) or  [UnitType](measureable_units.json.md#unittype)|  |
+
+## MiscellaneousInventoryType 
+
+*no description yet*
+
+**MiscellaneousInventoryType** is an object with these properties:
+
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **amount** | :white_check_mark: |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype) or  [UnitType](measureable_units.json.md#unittype)|  |
 

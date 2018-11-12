@@ -42,25 +42,7 @@
             "adjunct"
           ]
         },
-        "yield": {
-          "type": "object",
-          "minProperties": 1,
-          "additionalProperties": false,
-          "properties": {
-            "fine_grind": {
-              "$ref": "measureable_units.json#/definitions/PercentType"
-            },
-            "coarse_grind": {
-              "$ref": "measureable_units.json#/definitions/PercentType"
-            },
-            "fine_coarse_difference": {
-              "$ref": "measureable_units.json#/definitions/PercentType"
-            },
-            "potential": {
-              "$ref": "measureable_units.json#/definitions/GravityType"
-            }
-          }
-        },
+        "yield": { "$ref": "#/definitions/YieldType" },
         "color": {
           "$ref": "measureable_units.json#/definitions/ColorType"
         }
@@ -100,22 +82,7 @@
             "recommend_mash": {
               "type": "boolean"
             },
-            "inventory": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "amount": {
-                  "oneOf": [
-                    {
-                      "$ref": "measureable_units.json#/definitions/VolumeType"
-                    },
-                    {
-                      "$ref": "measureable_units.json#/definitions/MassType"
-                    }
-                  ]
-                }
-              }
-            }
+            "inventory": { "$ref": "#/definitions/FermentableInventoryType" }
           }
         }
       ]
@@ -146,6 +113,41 @@
           "required": ["amount"]
         }
       ]
+    },
+    "YieldType": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+        "fine_grind": {
+          "$ref": "measureable_units.json#/definitions/PercentType"
+        },
+        "coarse_grind": {
+          "$ref": "measureable_units.json#/definitions/PercentType"
+        },
+        "fine_coarse_difference": {
+          "$ref": "measureable_units.json#/definitions/PercentType"
+        },
+        "potential": {
+          "$ref": "measureable_units.json#/definitions/GravityType"
+        }
+      }
+    },
+    "FermentableInventoryType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "oneOf": [
+            {
+              "$ref": "measureable_units.json#/definitions/VolumeType"
+            },
+            {
+              "$ref": "measureable_units.json#/definitions/MassType"
+            }
+          ]
+        }
+      }
     }
   }
 }
