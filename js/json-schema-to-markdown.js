@@ -59,11 +59,11 @@ const formatPropertyList = (name, def) => {
       parseTypeRefStr($ref)
     )}${
       def.allOf[1]
-        ? ` and these additional properties:\n${formatProps(def.allOf[1])}`
-        : '\n'
+        ? ` and these additional properties:\n\n${formatProps(def.allOf[1])}`
+        : '\n\n'
     }`
   } else {
-    return `**${name}** is an object with these properties:\n${formatProps(
+    return `**${name}** is an object with these properties:\n\n${formatProps(
       def
     )}`
   }

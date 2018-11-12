@@ -5,6 +5,7 @@ The schema defines the following types:
 The descriptive base type for brew day equipment. Provides unique properties to fully describe the recipe.
 
 **EquipmentBase** is an object with these properties:
+
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **name** | :white_check_mark: | string|  |
@@ -17,6 +18,7 @@ The descriptive base type for brew day equipment. Provides unique properties to 
 EquipmentType provides necessary information for brewing equipment
 
 **EquipmentType** is an object with all properties from [EquipmentBase](#equipmentbase) and these additional properties:
+
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **loss** | :white_check_mark: | [VolumeType](measureable_units.json.md#volumetype)|  |

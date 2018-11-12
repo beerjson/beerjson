@@ -5,6 +5,7 @@ The schema defines the following types:
 FermentableBase provides unique properties to identify individual records of fermentable ingredients
 
 **FermentableBase** is an object with these properties:
+
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **name** | :white_check_mark: | string|  |
@@ -20,6 +21,7 @@ FermentableBase provides unique properties to identify individual records of fer
 FermentableType collects the attributes of a fermentable ingredient to store as record information
 
 **FermentableType** is an object with all properties from [FermentableBase](#fermentablebase) and these additional properties:
+
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **notes** |  | string|  |
@@ -37,6 +39,7 @@ FermentableType collects the attributes of a fermentable ingredient to store as 
 FermentableAdditionType collects the attributes of each fermentable ingredient for use in a recipe fermentable bill
 
 **FermentableAdditionType** is an object with all properties from [FermentableBase](#fermentablebase) and these additional properties:
+
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **timing** |  | [TimingType](timing.json.md#timingtype)|  |

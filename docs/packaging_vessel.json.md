@@ -5,6 +5,7 @@ The schema defines the following types:
 PackagingVesselType - a per vessel representation of a packaging process
 
 **PackagingVesselType** is an object with these properties:
+
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **name** | :white_check_mark: | string|  |

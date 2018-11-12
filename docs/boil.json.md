@@ -5,6 +5,7 @@ The schema defines the following types:
 BoilProcedureType defines the procedure for performing a boil. A boil procedure with no steps is the same as a standard single step boil.
 
 **BoilProcedureType** is an object with these properties:
+
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **name** |  | string|  |
