@@ -7,10 +7,7 @@ exports[`fermentable docs should match snapshot 1`] = `
 
 FermentableBase provides unique properties to identify individual records of fermentable ingredients
 
-\`FermentableBase\` type: \`object\`
-
-### Propertiesw
-
+**FermentableBase** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **name** | :white_check_mark: | string|  |
@@ -25,12 +22,7 @@ FermentableBase provides unique properties to identify individual records of fer
 
 FermentableType collects the attributes of a fermentable ingredient to store as record information
 
-\`FermentableType\` type: \`object\`
-
-Parent: [FermentableBase](#fermentablebase)
-
-### Propertiesw
-
+**FermentableType** is an object with all properties from [FermentableBase](#fermentablebase) and these additional properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **notes** |  | string|  |
@@ -47,12 +39,7 @@ Parent: [FermentableBase](#fermentablebase)
 
 FermentableAdditionType collects the attributes of each fermentable ingredient for use in a recipe fermentable bill
 
-\`FermentableAdditionType\` type: \`object\`
-
-Parent: [FermentableBase](#fermentablebase)
-
-### Propertiesw
-
+**FermentableAdditionType** is an object with all properties from [FermentableBase](#fermentablebase) and these additional properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **timing** |  | [TimingType](timing.json.md#timingtype)|  |
@@ -66,10 +53,7 @@ exports[`formatTypeDefinition 1`] = `
 
 FermentableBase provides unique properties to identify individual records of fermentable ingredients
 
-\`FermentableBase\` type: \`object\`
-
-### Propertiesw
-
+**FermentableBase** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **name** | :white_check_mark: | string|  |
@@ -84,8 +68,7 @@ FermentableBase provides unique properties to identify individual records of fer
 `;
 
 exports[`root schema docs 1`] = `
-"### Propertiesw
-
+"**beerjson** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **version** | :white_check_mark: | [VersionType](measureable_units.json.md#versiontype)| Explicitly encode beerjson version within list of records. |

@@ -4,10 +4,7 @@ The schema defines the following types:
 
 RecipeType composes the information stored in a beerjson recipe
 
-`RecipeType` type: `object`
-
-### Properties
-
+**RecipeType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **name** | :white_check_mark: | string|  |

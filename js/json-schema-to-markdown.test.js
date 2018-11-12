@@ -6,6 +6,7 @@ const rewire = require('rewire')
 const parseRewire = rewire('././json-schema-to-markdown.js')
 const formatTypeDefinition = parseRewire.__get__('formatTypeDefinition')
 const formatTypeRef = parseRewire.__get__('formatTypeRef')
+const formatPropertyList = parseRewire.__get__('formatPropertyList')
 const mapProps = parseRewire.__get__('mapProps')
 
 test('mapProps utility test that it maps and creates a new object', () => {
@@ -23,6 +24,14 @@ test('Type reference format', () => {
   expect(formatTypeRef({ typeName: 'type', fileName: 'file' })).toBe(
     '[type](file.md#type)'
   )
+})
+
+test('test property list with single allOf entry', () => {
+  expect(
+    formatPropertyList('name', {
+      allOf: [{ $ref: '#/definitions/StyleBase' }]
+    })
+  ).toBeDefined()
 })
 
 test('fermentable docs should match snapshot', () => {

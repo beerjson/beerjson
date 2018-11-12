@@ -28,9 +28,7 @@ const formatPropType = propType => {
   if (propType.$ref) return formatTypeRef(parseTypeRefStr(propType.$ref))
 }
 
-const addTableHeader = str => `### Properties
-
-|Name|Required|Type|Description|
+const addTableHeader = str => `|Name|Required|Type|Description|
 |--|--|--|--|
 ${str}`
 
@@ -45,9 +43,6 @@ const formatProperties = requiredList => def => {
   return result !== '' ? addTableHeader(result) : ''
 }
 
-const formatParentType = ({ $ref }) =>
-  $ref ? `Parent: ${formatTypeRef(parseTypeRefStr($ref))}\n\n` : ''
-
 const getRequiredList = ({ required = [] }) => required
 
 const log = x => {
@@ -55,11 +50,23 @@ const log = x => {
   return x
 }
 
-const formatPropertyList = def => {
-  const newdef = def.allOf ? { ...def.allOf[0], ...def.allOf[1] } : def
-  return (
-    formatParentType(newdef) + formatProperties(getRequiredList(def))(newdef)
-  )
+const formatPropertyList = (name, def) => {
+  const formatProps = formatProperties(getRequiredList(def))
+  if (def.allOf) {
+    console.log(def.allOf[1] ? 'yes' : 'no')
+    const { $ref } = def.allOf[0]
+    return `**${name}** is an object with all properties from ${formatTypeRef(
+      parseTypeRefStr($ref)
+    )}${
+      def.allOf[1]
+        ? ` and these additional properties:\n${formatProps(def.allOf[1])}`
+        : '\n'
+    }`
+  } else {
+    return `**${name}** is an object with these properties:\n${formatProps(
+      def
+    )}`
+  }
 }
 
 const formatTypeDefinition = ([typeName, typeDef]) =>
@@ -67,9 +74,7 @@ const formatTypeDefinition = ([typeName, typeDef]) =>
 
 ${typeDef.description ? typeDef.description : '*no description yet*'}
 
-\`${typeName}\` type: \`${typeDef.type}\`
-
-${formatPropertyList(typeDef)}
+${formatPropertyList(typeName, typeDef)}
 `
 
 const addTypeHeader = str => `The schema defines the following types:\n\n${str}`
@@ -82,7 +87,7 @@ const formatDefinitions = schema => {
   return result !== '' ? addTypeHeader(result) : ''
 }
 const formatRootSchema = ({ properties: { beerjson } = {} }) => {
-  return beerjson ? formatPropertyList(beerjson) : ''
+  return beerjson ? formatPropertyList('beerjson', beerjson) : ''
 }
 
 const jsonSchemaToMarkdown = s => formatRootSchema(s) + formatDefinitions(s)

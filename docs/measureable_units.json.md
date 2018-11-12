@@ -4,10 +4,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`VolumeType` type: `object`
-
-### Properties
-
+**VolumeType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | :white_check_mark: | [VolumeUnitType](#volumeunittype)|  |
@@ -17,10 +14,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`MassType` type: `object`
-
-### Properties
-
+**MassType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | :white_check_mark: | [MassUnitType](#massunittype)|  |
@@ -30,10 +24,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`DiastaticPowerType` type: `object`
-
-### Properties
-
+**DiastaticPowerType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | :white_check_mark: | [DiastaticPowerUnitType](#diastaticpowerunittype)|  |
@@ -43,10 +34,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`TemperatureType` type: `object`
-
-### Properties
-
+**TemperatureType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | :white_check_mark: | [TemperatureUnitType](#temperatureunittype)|  |
@@ -56,10 +44,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`PressureType` type: `object`
-
-### Properties
-
+**PressureType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | :white_check_mark: | [PressureUnitType](#pressureunittype)|  |
@@ -69,10 +54,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`AcidityType` type: `object`
-
-### Properties
-
+**AcidityType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | :white_check_mark: | [AcidityUnitType](#acidityunittype)|  |
@@ -82,10 +64,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`TimeType` type: `object`
-
-### Properties
-
+**TimeType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | :white_check_mark: | [TimeUnitType](#timeunittype)|  |
@@ -95,10 +74,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`ColorType` type: `object`
-
-### Properties
-
+**ColorType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | :white_check_mark: | [ColorUnitType](#colorunittype)|  |
@@ -108,10 +84,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`CarbonationType` type: `object`
-
-### Properties
-
+**CarbonationType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | :white_check_mark: | [CarbonationUnitType](#carbonationunittype)|  |
@@ -121,10 +94,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`BitternessType` type: `object`
-
-### Properties
-
+**BitternessType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | :white_check_mark: | [BitternessUnitType](#bitternessunittype)|  |
@@ -134,10 +104,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`GravityType` type: `object`
-
-### Properties
-
+**GravityType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | :white_check_mark: | [GravityUnitType](#gravityunittype)|  |
@@ -147,10 +114,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`SpecificHeatType` type: `object`
-
-### Properties
-
+**SpecificHeatType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | :white_check_mark: | [SpecificHeatUnitType](#specificheatunittype)|  |
@@ -160,10 +124,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`ConcentrationType` type: `object`
-
-### Properties
-
+**ConcentrationType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | :white_check_mark: | [ConcentrationUnitType](#concentrationunittype)|  |
@@ -173,10 +134,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`SpecificVolumeType` type: `object`
-
-### Properties
-
+**SpecificVolumeType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | :white_check_mark: | [SpecificVolumeUnitType](#specificvolumeunittype)|  |
@@ -186,10 +144,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`UnitType` type: `object`
-
-### Properties
-
+**UnitType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | :white_check_mark: | [UnitUnitType](#unitunittype)|  |
@@ -199,10 +154,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`CarbonationRangeType` type: `object`
-
-### Properties
-
+**CarbonationRangeType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **minimum** | :white_check_mark: | [CarbonationType](#carbonationtype)|  |
@@ -212,10 +164,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`BitternessRangeType` type: `object`
-
-### Properties
-
+**BitternessRangeType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **minimum** | :white_check_mark: | [BitternessType](#bitternesstype)|  |
@@ -225,10 +174,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`TemperatureRangeType` type: `object`
-
-### Properties
-
+**TemperatureRangeType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **minimum** | :white_check_mark: | [TemperatureType](#temperaturetype)|  |
@@ -238,10 +184,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`ColorRangeType` type: `object`
-
-### Properties
-
+**ColorRangeType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **minimum** | :white_check_mark: | [ColorType](#colortype)|  |
@@ -251,10 +194,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`GravityRangeType` type: `object`
-
-### Properties
-
+**GravityRangeType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **minimum** | :white_check_mark: | [GravityType](#gravitytype)|  |
@@ -264,10 +204,7 @@ The schema defines the following types:
 
 *no description yet*
 
-`PercentRangeType` type: `object`
-
-### Properties
-
+**PercentRangeType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **minimum** | :white_check_mark: | [PercentType](#percenttype)|  |
@@ -277,129 +214,109 @@ The schema defines the following types:
 
 *no description yet*
 
-`VolumeUnitType` type: `string`
-
+**VolumeUnitType** is an object with these properties:
 
 ## MassUnitType 
 
 *no description yet*
 
-`MassUnitType` type: `string`
-
+**MassUnitType** is an object with these properties:
 
 ## DiastaticPowerUnitType 
 
 *no description yet*
 
-`DiastaticPowerUnitType` type: `string`
-
+**DiastaticPowerUnitType** is an object with these properties:
 
 ## TemperatureUnitType 
 
 *no description yet*
 
-`TemperatureUnitType` type: `string`
-
+**TemperatureUnitType** is an object with these properties:
 
 ## AcidityUnitType 
 
 *no description yet*
 
-`AcidityUnitType` type: `string`
-
+**AcidityUnitType** is an object with these properties:
 
 ## PressureUnitType 
 
 *no description yet*
 
-`PressureUnitType` type: `string`
-
+**PressureUnitType** is an object with these properties:
 
 ## TimeUnitType 
 
 *no description yet*
 
-`TimeUnitType` type: `string`
-
+**TimeUnitType** is an object with these properties:
 
 ## ColorUnitType 
 
 *no description yet*
 
-`ColorUnitType` type: `string`
-
+**ColorUnitType** is an object with these properties:
 
 ## CarbonationUnitType 
 
 *no description yet*
 
-`CarbonationUnitType` type: `string`
-
+**CarbonationUnitType** is an object with these properties:
 
 ## BitternessUnitType 
 
 *no description yet*
 
-`BitternessUnitType` type: `string`
-
+**BitternessUnitType** is an object with these properties:
 
 ## GravityUnitType 
 
 *no description yet*
 
-`GravityUnitType` type: `string`
-
+**GravityUnitType** is an object with these properties:
 
 ## DensityUnitType 
 
 *no description yet*
 
-`DensityUnitType` type: `string`
-
+**DensityUnitType** is an object with these properties:
 
 ## ConcentrationUnitType 
 
 *no description yet*
 
-`ConcentrationUnitType` type: `string`
-
+**ConcentrationUnitType** is an object with these properties:
 
 ## SpecificHeatUnitType 
 
 *no description yet*
 
-`SpecificHeatUnitType` type: `string`
-
+**SpecificHeatUnitType** is an object with these properties:
 
 ## SpecificVolumeUnitType 
 
 *no description yet*
 
-`SpecificVolumeUnitType` type: `string`
-
+**SpecificVolumeUnitType** is an object with these properties:
 
 ## UnitUnitType 
 
 *no description yet*
 
-`UnitUnitType` type: `string`
-
+**UnitUnitType** is an object with these properties:
 
 ## DateType 
 
 *no description yet*
 
-`DateType` type: `string`
-
+**DateType** is an object with these properties:
 
 ## PercentType 
 
 *no description yet*
 
-`PercentType` type: `object`
-
-### Properties
-
+**PercentType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | :white_check_mark: | [PercentUnitType](#percentunittype)|  |
@@ -409,20 +326,17 @@ The schema defines the following types:
 
 *no description yet*
 
-`PercentUnitType` type: `string`
-
+**PercentUnitType** is an object with these properties:
 
 ## QualitativeRangeType 
 
 *no description yet*
 
-`QualitativeRangeType` type: `string`
-
+**QualitativeRangeType** is an object with these properties:
 
 ## VersionType 
 
 *no description yet*
 
-`VersionType` type: `number`
-
+**VersionType** is an object with these properties:
 

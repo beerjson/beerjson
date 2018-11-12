@@ -4,10 +4,7 @@ The schema defines the following types:
 
 The descriptive base type for both style guideline records, and recipe style provisions. Provides unique properties to identify individual styles
 
-`StyleBase` type: `object`
-
-### Properties
-
+**StyleBase** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **name** | :white_check_mark: | string|  |
@@ -21,12 +18,7 @@ The descriptive base type for both style guideline records, and recipe style pro
 
 StyleType provide information for Style categorization
 
-`StyleType` type: `object`
-
-Parent: [StyleBase](#stylebase)
-
-### Properties
-
+**StyleType** is an object with all properties from [StyleBase](#stylebase) and these additional properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **original_gravity** |  | [GravityRangeType](measureable_units.json.md#gravityrangetype)|  |
@@ -48,15 +40,11 @@ Parent: [StyleBase](#stylebase)
 
 RecipeStyleType defines style information stored in a recipe record
 
-`RecipeStyleType` type: `undefined`
-
-Parent: [StyleBase](#stylebase)
-
+**RecipeStyleType** is an object with all properties from [StyleBase](#stylebase)
 
 ## StyleCategories 
 
 *no description yet*
 
-`StyleCategories` type: `string`
-
+**StyleCategories** is an object with these properties:
 

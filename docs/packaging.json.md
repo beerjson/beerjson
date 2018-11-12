@@ -4,10 +4,7 @@ The schema defines the following types:
 
 PackagingProcedureType describes the procedure for packaging your beverage
 
-`PackagingProcedureType` type: `object`
-
-### Properties
-
+**PackagingProcedureType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **name** | :white_check_mark: | string|  |

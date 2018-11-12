@@ -4,10 +4,7 @@ The schema defines the following types:
 
 BoilStepType - a per step representation of a boil process, can be used to support preboil steps, non-boiling pasteurization steps, boiling, whirlpool steps, and chilling.
 
-`BoilStepType` type: `object`
-
-### Properties
-
+**BoilStepType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **name** | :white_check_mark: | string|  |

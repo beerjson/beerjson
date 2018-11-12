@@ -4,10 +4,7 @@ The schema defines the following types:
 
 WaterBase provides unique properties to identify individual records of regional brewing water
 
-`WaterBase` type: `object`
-
-### Properties
-
+**WaterBase** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **name** | :white_check_mark: | string|  |
@@ -28,12 +25,7 @@ WaterBase provides unique properties to identify individual records of regional 
 
 WaterType collects the attributes of a regional brewing water to store as record information
 
-`WaterType` type: `object`
-
-Parent: [WaterBase](#waterbase)
-
-### Properties
-
+**WaterType** is an object with all properties from [WaterBase](#waterbase) and these additional properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **pH** |  | number|  |
@@ -43,8 +35,5 @@ Parent: [WaterBase](#waterbase)
 
 WaterAdditionType collects the attributes of each water addition for use in a recipe
 
-`WaterAdditionType` type: `object`
-
-Parent: [WaterBase](#waterbase)
-
+**WaterAdditionType** is an object with all properties from [WaterBase](#waterbase) and these additional properties:
 

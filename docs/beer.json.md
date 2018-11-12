@@ -1,5 +1,4 @@
-### Properties
-
+**beerjson** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **version** | :white_check_mark: | [VersionType](measureable_units.json.md#versiontype)| Explicitly encode beerjson version within list of records. |

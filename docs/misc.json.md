@@ -4,10 +4,7 @@ The schema defines the following types:
 
 MiscellaneousBase provides unique properties to identify individual records of ingredients
 
-`MiscellaneousBase` type: `object`
-
-### Properties
-
+**MiscellaneousBase** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **name** | :white_check_mark: | string|  |
@@ -17,12 +14,7 @@ MiscellaneousBase provides unique properties to identify individual records of i
 
 MiscellaneousType collects the attributes of an ingredient to store as record information
 
-`MiscellaneousType` type: `object`
-
-Parent: [MiscellaneousBase](#miscellaneousbase)
-
-### Properties
-
+**MiscellaneousType** is an object with all properties from [MiscellaneousBase](#miscellaneousbase) and these additional properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **use_for** |  | string|  |
@@ -33,12 +25,7 @@ Parent: [MiscellaneousBase](#miscellaneousbase)
 
 MiscellaneousAdditionType collects the attributes of each miscellaneous ingredient for use in a recipe
 
-`MiscellaneousAdditionType` type: `object`
-
-Parent: [MiscellaneousBase](#miscellaneousbase)
-
-### Properties
-
+**MiscellaneousAdditionType** is an object with all properties from [MiscellaneousBase](#miscellaneousbase) and these additional properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **timing** |  | [TimingType](timing.json.md#timingtype)|  |

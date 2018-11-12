@@ -4,10 +4,7 @@ The schema defines the following types:
 
 MashStepType - a per step representation occurring within the mash
 
-`MashStepType` type: `object`
-
-### Properties
-
+**MashStepType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **name** | :white_check_mark: | string|  |

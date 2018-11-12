@@ -4,10 +4,7 @@ The schema defines the following types:
 
 HopVarietyBase provides unique properties to identify individual records of a hop variety
 
-`HopVarietyBase` type: `object`
-
-### Properties
-
+**HopVarietyBase** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **name** | :white_check_mark: | string|  |
@@ -20,12 +17,7 @@ HopVarietyBase provides unique properties to identify individual records of a ho
 
 VarietyInformation collects the attributes of a hop variety to store as record information
 
-`VarietyInformation` type: `object`
-
-Parent: [HopVarietyBase](#hopvarietybase)
-
-### Properties
-
+**VarietyInformation** is an object with all properties from [HopVarietyBase](#hopvarietybase) and these additional properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **type** |  | `"aroma"`<br/>`"bittering"`<br/>`"flavor"`<br/>`"aroma/bittering"`<br/>`"bittering/flavor"`<br/>`"aroma/flavor"`<br/>`"aroma/bittering/flavor"`|  |
@@ -39,12 +31,7 @@ Parent: [HopVarietyBase](#hopvarietybase)
 
 HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bil
 
-`HopAdditionType` type: `object`
-
-Parent: [HopVarietyBase](#hopvarietybase)
-
-### Properties
-
+**HopAdditionType** is an object with all properties from [HopVarietyBase](#hopvarietybase) and these additional properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **timing** |  | [TimingType](timing.json.md#timingtype)|  |
@@ -54,10 +41,7 @@ Parent: [HopVarietyBase](#hopvarietybase)
 
 *no description yet*
 
-`IBUEstimateType` type: `undefined`
-
-### Properties
-
+**IBUEstimateType** is an object with these properties:
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **method** |  | [IBUMethodType](#ibumethodtype)|  |
@@ -66,6 +50,5 @@ Parent: [HopVarietyBase](#hopvarietybase)
 
 *no description yet*
 
-`IBUMethodType` type: `string`
-
+**IBUMethodType** is an object with these properties:
 
