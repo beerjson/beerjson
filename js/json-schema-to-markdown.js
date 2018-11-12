@@ -32,17 +32,14 @@ const formatPropDefinition = requiredList => ([propName, propDef]) =>
     propDef.description ? propDef.description : ''
   } |
 `
+const formatSimpleTypeDefinition = (typeName, typeDef) =>
+  formatPropType(typeDef)
 
 const formatPropType = propType => {
   if (propType.enum) return formatEnum(propType.enum)
   if (propType.type === 'array') return formatArray(propType.items)
-  if (propType.type === 'object') {
-    console.log(
-      `Warning. Cannot generate docs for nested object schema, consider extracting type: `,
-      propType
-    )
-    return ':x: ' + propType.type
-  }
+  if (propType.type === 'object') return ':x: ' + propType.type
+  if (propType.pattern) return `RegExp pattern: \`${propType.pattern}\``
   if (propType.type) return propType.type
   if (propType.$ref) return formatTypeRef(parseTypeRefStr(propType.$ref))
   if (propType.oneOf) return formatOneOf(propType.oneOf)
@@ -64,11 +61,6 @@ const formatProperties = requiredList => def => {
 }
 
 const getRequiredList = ({ required = [] }) => required
-
-const log = x => {
-  console.log('LOG', x)
-  return x
-}
 
 const formatPropertyList = (name, def) => {
   const formatProps = formatProperties(getRequiredList(def))
@@ -93,7 +85,11 @@ const formatTypeDefinition = ([typeName, typeDef]) =>
 
 ${typeDef.description ? typeDef.description : '*no description yet*'}
 
-${formatPropertyList(typeName, typeDef)}
+${
+    typeDef.type === 'object'
+      ? formatPropertyList(typeName, typeDef)
+      : formatSimpleTypeDefinition(typeName, typeDef)
+  }
 `
 
 const addTypeHeader = str => `The schema defines the following types:\n\n${str}`

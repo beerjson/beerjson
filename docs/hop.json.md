@@ -44,16 +44,9 @@ HopAdditionType collects the attributes of each hop ingredient for use in a reci
 
 *no description yet*
 
-**IBUEstimateType** is an object with these properties:
-
-|Name|Required|Type|Description|
-|--|--|--|--|
-| **method** |  | [IBUMethodType](#ibumethodtype)|  |
-
+undefined
 ## IBUMethodType 
 
 *no description yet*
 
-**IBUMethodType** is an object with these properties:
-
-
+`"Rager"`<br/>`"Tinseth"`<br/>`"Garetz"`<br/>`"Other"`

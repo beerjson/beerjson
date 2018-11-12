@@ -235,121 +235,87 @@ The schema defines the following types:
 
 *no description yet*
 
-**VolumeUnitType** is an object with these properties:
-
-
+`"ml"`<br/>`"l"`<br/>`"tsp"`<br/>`"tbsp"`<br/>`"floz"`<br/>`"cup"`<br/>`"pt"`<br/>`"qt"`<br/>`"gal"`<br/>`"bbl"`<br/>`"ifloz"`<br/>`"ipt"`<br/>`"iqt"`<br/>`"igal"`<br/>`"ibbl"`
 ## MassUnitType 
 
 *no description yet*
 
-**MassUnitType** is an object with these properties:
-
-
+`"mg"`<br/>`"g"`<br/>`"kg"`<br/>`"lb"`<br/>`"oz"`
 ## DiastaticPowerUnitType 
 
 *no description yet*
 
-**DiastaticPowerUnitType** is an object with these properties:
-
-
+`"Lintner"`<br/>`"WK"`
 ## TemperatureUnitType 
 
 *no description yet*
 
-**TemperatureUnitType** is an object with these properties:
-
-
+`"C"`<br/>`"F"`
 ## AcidityUnitType 
 
 *no description yet*
 
-**AcidityUnitType** is an object with these properties:
-
-
+`"pH"`
 ## PressureUnitType 
 
 *no description yet*
 
-**PressureUnitType** is an object with these properties:
-
-
+`"kPa"`<br/>`"psi"`<br/>`"bar"`
 ## TimeUnitType 
 
 *no description yet*
 
-**TimeUnitType** is an object with these properties:
-
-
+`"sec"`<br/>`"min"`<br/>`"hr"`<br/>`"day"`<br/>`"week"`<br/>`"month"`<br/>`"year"`
 ## ColorUnitType 
 
 *no description yet*
 
-**ColorUnitType** is an object with these properties:
-
-
+`"EBC"`<br/>`"Lovi"`<br/>`"SRM"`
 ## CarbonationUnitType 
 
 *no description yet*
 
-**CarbonationUnitType** is an object with these properties:
-
-
+`"vols"`
 ## BitternessUnitType 
 
 *no description yet*
 
-**BitternessUnitType** is an object with these properties:
-
-
+`"IBUs"`
 ## GravityUnitType 
 
 *no description yet*
 
-**GravityUnitType** is an object with these properties:
-
-
+`"sg"`<br/>`"plato"`<br/>`"brix"`
 ## DensityUnitType 
 
 *no description yet*
 
-**DensityUnitType** is an object with these properties:
-
-
+`"sg"`<br/>`"plato"`<br/>`"brix"`
 ## ConcentrationUnitType 
 
 *no description yet*
 
-**ConcentrationUnitType** is an object with these properties:
-
-
+`"ppm"`<br/>`"ppb"`<br/>`"mg/l"`
 ## SpecificHeatUnitType 
 
 *no description yet*
 
-**SpecificHeatUnitType** is an object with these properties:
-
-
+`"Cal/(g C)"`<br/>`"J/(kg K)"`<br/>`"BTU/(lb F)"`
 ## SpecificVolumeUnitType 
 
 *no description yet*
 
-**SpecificVolumeUnitType** is an object with these properties:
-
-
+`"qt/lb"`<br/>`"gal/lb"`<br/>`"gal/oz"`<br/>`"l/g"`<br/>`"l/kg"`<br/>`"floz/oz"`<br/>`"m^3/kg"`<br/>`"ft^3/lb"`
 ## UnitUnitType 
 
 *no description yet*
 
-**UnitUnitType** is an object with these properties:
-
-
+`"1"`<br/>`"unit"`<br/>`"each"`<br/>`"dimensionless"`
 ## DateType 
 
 *no description yet*
 
-**DateType** is an object with these properties:
-
-
+RegExp pattern: `\d{4}-\d{2}-\d{2}|\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}`
 ## PercentType 
 
 *no description yet*
@@ -365,20 +331,14 @@ The schema defines the following types:
 
 *no description yet*
 
-**PercentUnitType** is an object with these properties:
-
-
+`"%"`
 ## QualitativeRangeType 
 
 *no description yet*
 
-**QualitativeRangeType** is an object with these properties:
-
-
+`"very low"`<br/>`"low"`<br/>`"medium low"`<br/>`"medium"`<br/>`"medium high"`<br/>`"high"`<br/>`"very high"`
 ## VersionType 
 
 *no description yet*
 
-**VersionType** is an object with these properties:
-
-
+number

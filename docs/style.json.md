@@ -11,7 +11,7 @@ The descriptive base type for both style guideline records, and recipe style pro
 | **name** | :white_check_mark: | string|  |
 | **category** | :white_check_mark: | string|  |
 | **category_number** |  | integer|  |
-| **style_letter** |  | string|  |
+| **style_letter** |  | RegExp pattern: `[A-Z ]`|  |
 | **style_guide** | :white_check_mark: | string|  |
 | **type** | :white_check_mark: | [StyleCategories](#stylecategories)|  |
 
@@ -42,13 +42,9 @@ StyleType provide information for Style categorization
 
 RecipeStyleType defines style information stored in a recipe record
 
-**RecipeStyleType** is an object with all properties from [StyleBase](#stylebase)
-
-
+undefined
 ## StyleCategories 
 
 *no description yet*
 
-**StyleCategories** is an object with these properties:
-
-
+`"beer"`<br/>`"cider"`<br/>`"kombucha"`<br/>`"mead"`<br/>`"other"`<br/>`"soda"`<br/>`"wine"`

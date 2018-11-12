@@ -53,6 +53,17 @@ FermentableAdditionType collects the attributes of each fermentable ingredient f
 
 exports[`format oneOf property type should match snapshot 1`] = `" [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)"`;
 
+exports[`format simple type should match snapshot 1`] = `
+"## SpecificVolumeUnitType 
+
+*no description yet*
+
+\`\\"qt/lb\\"\`<br/>\`\\"gal/lb\\"\`<br/>\`\\"gal/oz\\"\`<br/>\`\\"l/g\\"\`<br/>\`\\"l/kg\\"\`<br/>\`\\"floz/oz\\"\`<br/>\`\\"m^3/kg\\"\`<br/>\`\\"ft^3/lb\\"\`
+"
+`;
+
+exports[`format type with pattern should match snapshot 1`] = `"RegExp pattern: \`\\\\d{4}-\\\\d{2}-\\\\d{2}|\\\\d{4}-\\\\d{2}-\\\\d{2}T\\\\d{2}:\\\\d{2}:\\\\d{2}\`"`;
+
 exports[`formatArray should match snapshot 1`] = `"array of [FermentableType](fermentable.json.md#fermentabletype)"`;
 
 exports[`formatTypeDefinition 1`] = `

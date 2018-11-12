@@ -4,9 +4,7 @@ The schema defines the following types:
 
 *no description yet*
 
-**UseType** is an object with these properties:
-
-
+`"add_to_mash"`<br/>`"add_to_boil"`<br/>`"add_to_fermentation"`<br/>`"add_to_package"`
 ## TimingType 
 
 The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step.

@@ -73,3 +73,33 @@ test('format oneOf property type should match snapshot', () => {
     })
   ).toMatchSnapshot()
 })
+
+test('format simple type should match snapshot', () => {
+  expect(
+    formatTypeDefinition([
+      'SpecificVolumeUnitType',
+      {
+        type: 'string',
+        enum: [
+          'qt/lb',
+          'gal/lb',
+          'gal/oz',
+          'l/g',
+          'l/kg',
+          'floz/oz',
+          'm^3/kg',
+          'ft^3/lb'
+        ]
+      }
+    ])
+  ).toMatchSnapshot()
+})
+
+test('format type with pattern should match snapshot', () => {
+  expect(
+    formatPropType({
+      type: 'string',
+      pattern: '\\d{4}-\\d{2}-\\d{2}|\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}'
+    })
+  ).toMatchSnapshot()
+})
