@@ -13,5 +13,5 @@ BoilProcedureType defines the procedure for performing a boil. A boil procedure 
 | **notes** |  | string|  |
 | **pre_boil_size** | :white_check_mark: | [VolumeType](measureable_units.json.md#volumetype)|  |
 | **boil_time** | :white_check_mark: | [TimeType](measureable_units.json.md#timetype)|  |
-| **boil_steps** |  | array|  |
+| **boil_steps** |  | array of [BoilStepType](boil_step.json.md#boilsteptype)|  |
 

@@ -13,5 +13,5 @@ MashProcedureType defines the procedure for performing unique mashing styles
 | **sparge_temperature** |  | [TemperatureType](measureable_units.json.md#temperaturetype)|  |
 | **pH** |  | [AcidityType](measureable_units.json.md#aciditytype)|  |
 | **notes** |  | string|  |
-| **mash_steps** | :white_check_mark: | array|  |
+| **mash_steps** | :white_check_mark: | array of [MashStepType](mash_step.json.md#mashsteptype)|  |
 

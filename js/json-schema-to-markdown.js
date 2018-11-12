@@ -14,6 +14,10 @@ const formatEnum = enumValues =>
     (str, val) => (str ? str + `<br/>\`"${val}"\`` : `\`"${val}"\``),
     ''
   )
+
+const formatArray = ({ $ref }) =>
+  `array of ${formatTypeRef(parseTypeRefStr($ref))}`
+
 const formatPropDefinition = requiredList => ([propName, propDef]) =>
   `| **${propName}** | ${
     requiredList.includes(propName) ? ':white_check_mark:' : ''
@@ -24,6 +28,7 @@ const formatPropDefinition = requiredList => ([propName, propDef]) =>
 
 const formatPropType = propType => {
   if (propType.enum) return formatEnum(propType.enum)
+  if (propType.type === 'array') return formatArray(propType.items)
   if (propType.type) return propType.type
   if (propType.$ref) return formatTypeRef(parseTypeRefStr(propType.$ref))
 }

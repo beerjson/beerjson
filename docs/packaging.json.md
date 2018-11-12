@@ -12,5 +12,5 @@ PackagingProcedureType describes the procedure for packaging your beverage
 | **packaged_volume** |  | [VolumeType](measureable_units.json.md#volumetype)|  |
 | **description** |  | string|  |
 | **notes** |  | string|  |
-| **packaging_vessels** |  | array|  |
+| **packaging_vessels** |  | array of [PackagingVesselType](packaging_vessel.json.md#packagingvesseltype)|  |
 

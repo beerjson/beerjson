@@ -7,6 +7,7 @@ const parseRewire = rewire('././json-schema-to-markdown.js')
 const formatTypeDefinition = parseRewire.__get__('formatTypeDefinition')
 const formatTypeRef = parseRewire.__get__('formatTypeRef')
 const formatPropertyList = parseRewire.__get__('formatPropertyList')
+const formatArray = parseRewire.__get__('formatArray')
 const mapProps = parseRewire.__get__('mapProps')
 
 test('mapProps utility test that it maps and creates a new object', () => {
@@ -49,4 +50,10 @@ test('formatTypeDefinition', () => {
 
 test('root schema docs', () => {
   expect(parse(rootSchema)).toMatchSnapshot()
+})
+
+test('formatArray should match snapshot', () => {
+  expect(
+    formatArray({ $ref: 'fermentable.json#/definitions/FermentableType' })
+  ).toMatchSnapshot()
 })
