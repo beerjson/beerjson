@@ -1,22 +1,22 @@
 The schema defines the following types:
 
-## HopVarietyBase
+## HopVarietyBase 
 
 HopVarietyBase provides unique properties to identify individual records of a hop variety
 
 `HopVarietyBase` type: `object`
 
-### Properties
+### Propertiesw
 
-|                      | Type                                                             | Description | Required           |
-| -------------------- | ---------------------------------------------------------------- | ----------- | ------------------ |
-| **name**             | string                                                           |             | :white_check_mark: |
-| **origin**           | string                                                           |             |                    |
-| **form**             | 'extract' , 'leaf' , 'leaf (wet)' , 'pellet' , 'powder' , 'plug' |             |                    |
-| **alpha_acid_units** | number                                                           |             | :white_check_mark: |
-| **beta_acid_units**  | number                                                           |             |                    |
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **name** | :white_check_mark: | string|  |
+| **origin** |  | string|  |
+| **form** |  | `"extract"`<br/>`"leaf"`<br/>`"leaf (wet)"`<br/>`"pellet"`<br/>`"powder"`<br/>`"plug"`|  |
+| **alpha_acid_units** | :white_check_mark: | number|  |
+| **beta_acid_units** |  | number|  |
 
-## VarietyInformation
+## VarietyInformation 
 
 VarietyInformation collects the attributes of a hop variety to store as record information
 
@@ -24,18 +24,18 @@ VarietyInformation collects the attributes of a hop variety to store as record i
 
 Parent: [HopVarietyBase](#hopvarietybase)
 
-### Properties
+### Propertiesw
 
-|                  | Type                                                                                                                  | Description                                                                                               | Required |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | -------- |
-| **type**         | 'aroma' , 'bittering' , 'flavor' , 'aroma/bittering' , 'bittering/flavor' , 'aroma/flavor' , 'aroma/bittering/flavor' |                                                                                                           |          |
-| **notes**        | string                                                                                                                |                                                                                                           |          |
-| **percent_lost** | [PercentType](measureable_units.json.md#percenttype)                                                                  |                                                                                                           |          |
-| **substitutes**  | string                                                                                                                |                                                                                                           |          |
-| **oil_content**  | object                                                                                                                | oil_content collects all information of a hop variety pertaining to oil content, polyphenols, and thiols. |          |
-| **inventory**    | object                                                                                                                |                                                                                                           |          |
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **type** |  | `"aroma"`<br/>`"bittering"`<br/>`"flavor"`<br/>`"aroma/bittering"`<br/>`"bittering/flavor"`<br/>`"aroma/flavor"`<br/>`"aroma/bittering/flavor"`|  |
+| **notes** |  | string|  |
+| **percent_lost** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **substitutes** |  | string|  |
+| **oil_content** |  | object| oil_content collects all information of a hop variety pertaining to oil content, polyphenols, and thiols. |
+| **inventory** |  | object|  |
 
-## HopAdditionType
+## HopAdditionType 
 
 HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bil
 
@@ -43,27 +43,29 @@ HopAdditionType collects the attributes of each hop ingredient for use in a reci
 
 Parent: [HopVarietyBase](#hopvarietybase)
 
-### Properties
+### Propertiesw
 
-|            | Type                                    | Description | Required |
-| ---------- | --------------------------------------- | ----------- | -------- |
-| **timing** | [TimingType](timing.json.md#timingtype) |             |          |
-| **amount** | undefined                               |             |          |
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **timing** |  | [TimingType](timing.json.md#timingtype)|  |
+| **amount** |  | undefined|  |
 
-## IBUEstimateType
+## IBUEstimateType 
 
-_no description yet_
+*no description yet*
 
 `IBUEstimateType` type: `undefined`
 
-### Properties
+### Propertiesw
 
-|            | Type                            | Description | Required |
-| ---------- | ------------------------------- | ----------- | -------- |
-| **method** | [IBUMethodType](#ibumethodtype) |             |          |
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **method** |  | [IBUMethodType](#ibumethodtype)|  |
 
-## IBUMethodType
+## IBUMethodType 
 
-_no description yet_
+*no description yet*
 
 `IBUMethodType` type: `string`
+
+

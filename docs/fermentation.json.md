@@ -1,17 +1,18 @@
 The schema defines the following types:
 
-## FermentationProcedureType
+## FermentationProcedureType 
 
 FermentationProcedureType defines the procedure for performing fermenting
 
 `FermentationProcedureType` type: `object`
 
-### Properties
+### Propertiesw
 
-|                        | Type   | Description | Required           |
-| ---------------------- | ------ | ----------- | ------------------ |
-| **name**               | string |             | :white_check_mark: |
-| **type**               | string |             |                    |
-| **description**        | string |             |                    |
-| **notes**              | string |             |                    |
-| **fermentation_steps** | array  |             | :white_check_mark: |
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **name** | :white_check_mark: | string|  |
+| **type** |  | string|  |
+| **description** |  | string|  |
+| **notes** |  | string|  |
+| **fermentation_steps** | :white_check_mark: | array|  |
+

@@ -1,23 +1,23 @@
 The schema defines the following types:
 
-## StyleBase
+## StyleBase 
 
 The descriptive base type for both style guideline records, and recipe style provisions. Provides unique properties to identify individual styles
 
 `StyleBase` type: `object`
 
-### Properties
+### Propertiesw
 
-|                     | Type                                | Description | Required           |
-| ------------------- | ----------------------------------- | ----------- | ------------------ |
-| **name**            | string                              |             | :white_check_mark: |
-| **category**        | string                              |             | :white_check_mark: |
-| **category_number** | integer                             |             |                    |
-| **style_letter**    | string                              |             |                    |
-| **style_guide**     | string                              |             | :white_check_mark: |
-| **type**            | [StyleCategories](#stylecategories) |             | :white_check_mark: |
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **name** | :white_check_mark: | string|  |
+| **category** | :white_check_mark: | string|  |
+| **category_number** |  | integer|  |
+| **style_letter** |  | string|  |
+| **style_guide** | :white_check_mark: | string|  |
+| **type** | :white_check_mark: | [StyleCategories](#stylecategories)|  |
 
-## StyleType
+## StyleType 
 
 StyleType provide information for Style categorization
 
@@ -25,26 +25,26 @@ StyleType provide information for Style categorization
 
 Parent: [StyleBase](#stylebase)
 
-### Properties
+### Propertiesw
 
-|                                    | Type                                                                   | Description | Required |
-| ---------------------------------- | ---------------------------------------------------------------------- | ----------- | -------- |
-| **original_gravity**               | [GravityRangeType](measureable_units.json.md#gravityrangetype)         |             |          |
-| **final_gravity**                  | [GravityRangeType](measureable_units.json.md#gravityrangetype)         |             |          |
-| **international_bitterness_units** | [BitternessRangeType](measureable_units.json.md#bitternessrangetype)   |             |          |
-| **color**                          | [ColorRangeType](measureable_units.json.md#colorrangetype)             |             |          |
-| **carbonation**                    | [CarbonationRangeType](measureable_units.json.md#carbonationrangetype) |             |          |
-| **alcohol_by_volume**              | [PercentRangeType](measureable_units.json.md#percentrangetype)         |             |          |
-| **notes**                          | string                                                                 |             |          |
-| **aroma**                          | string                                                                 |             |          |
-| **appearance**                     | string                                                                 |             |          |
-| **flavor**                         | string                                                                 |             |          |
-| **mouthfeel**                      | string                                                                 |             |          |
-| **overall_impression**             | string                                                                 |             |          |
-| **ingredients**                    | string                                                                 |             |          |
-| **examples**                       | string                                                                 |             |          |
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **original_gravity** |  | [GravityRangeType](measureable_units.json.md#gravityrangetype)|  |
+| **final_gravity** |  | [GravityRangeType](measureable_units.json.md#gravityrangetype)|  |
+| **international_bitterness_units** |  | [BitternessRangeType](measureable_units.json.md#bitternessrangetype)|  |
+| **color** |  | [ColorRangeType](measureable_units.json.md#colorrangetype)|  |
+| **carbonation** |  | [CarbonationRangeType](measureable_units.json.md#carbonationrangetype)|  |
+| **alcohol_by_volume** |  | [PercentRangeType](measureable_units.json.md#percentrangetype)|  |
+| **notes** |  | string|  |
+| **aroma** |  | string|  |
+| **appearance** |  | string|  |
+| **flavor** |  | string|  |
+| **mouthfeel** |  | string|  |
+| **overall_impression** |  | string|  |
+| **ingredients** |  | string|  |
+| **examples** |  | string|  |
 
-## RecipeStyleType
+## RecipeStyleType 
 
 RecipeStyleType defines style information stored in a recipe record
 
@@ -52,8 +52,11 @@ RecipeStyleType defines style information stored in a recipe record
 
 Parent: [StyleBase](#stylebase)
 
-## StyleCategories
 
-_no description yet_
+## StyleCategories 
+
+*no description yet*
 
 `StyleCategories` type: `string`
+
+

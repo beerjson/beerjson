@@ -1,17 +1,18 @@
 The schema defines the following types:
 
-## PackagingProcedureType
+## PackagingProcedureType 
 
 PackagingProcedureType describes the procedure for packaging your beverage
 
 `PackagingProcedureType` type: `object`
 
-### Properties
+### Propertiesw
 
-|                       | Type                                               | Description | Required           |
-| --------------------- | -------------------------------------------------- | ----------- | ------------------ |
-| **name**              | string                                             |             | :white_check_mark: |
-| **packaged_volume**   | [VolumeType](measureable_units.json.md#volumetype) |             |                    |
-| **description**       | string                                             |             |                    |
-| **notes**             | string                                             |             |                    |
-| **packaging_vessels** | array                                              |             |                    |
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **name** | :white_check_mark: | string|  |
+| **packaged_volume** |  | [VolumeType](measureable_units.json.md#volumetype)|  |
+| **description** |  | string|  |
+| **notes** |  | string|  |
+| **packaging_vessels** |  | array|  |
+

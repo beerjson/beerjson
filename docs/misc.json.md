@@ -1,19 +1,19 @@
 The schema defines the following types:
 
-## MiscellaneousBase
+## MiscellaneousBase 
 
 MiscellaneousBase provides unique properties to identify individual records of ingredients
 
 `MiscellaneousBase` type: `object`
 
-### Properties
+### Propertiesw
 
-|          | Type                                                                      | Description | Required           |
-| -------- | ------------------------------------------------------------------------- | ----------- | ------------------ |
-| **name** | string                                                                    |             | :white_check_mark: |
-| **type** | 'spice' , 'fining' , 'water agent' , 'herb' , 'flavor' , 'wood' , 'other' |             | :white_check_mark: |
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **name** | :white_check_mark: | string|  |
+| **type** | :white_check_mark: | `"spice"`<br/>`"fining"`<br/>`"water agent"`<br/>`"herb"`<br/>`"flavor"`<br/>`"wood"`<br/>`"other"`|  |
 
-## MiscellaneousType
+## MiscellaneousType 
 
 MiscellaneousType collects the attributes of an ingredient to store as record information
 
@@ -21,15 +21,15 @@ MiscellaneousType collects the attributes of an ingredient to store as record in
 
 Parent: [MiscellaneousBase](#miscellaneousbase)
 
-### Properties
+### Propertiesw
 
-|               | Type   | Description | Required |
-| ------------- | ------ | ----------- | -------- |
-| **use_for**   | string |             |          |
-| **notes**     | string |             |          |
-| **inventory** | object |             |          |
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **use_for** |  | string|  |
+| **notes** |  | string|  |
+| **inventory** |  | object|  |
 
-## MiscellaneousAdditionType
+## MiscellaneousAdditionType 
 
 MiscellaneousAdditionType collects the attributes of each miscellaneous ingredient for use in a recipe
 
@@ -37,9 +37,10 @@ MiscellaneousAdditionType collects the attributes of each miscellaneous ingredie
 
 Parent: [MiscellaneousBase](#miscellaneousbase)
 
-### Properties
+### Propertiesw
 
-|            | Type                                    | Description | Required |
-| ---------- | --------------------------------------- | ----------- | -------- |
-| **timing** | [TimingType](timing.json.md#timingtype) |             |          |
-| **amount** | undefined                               |             |          |
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **timing** |  | [TimingType](timing.json.md#timingtype)|  |
+| **amount** |  | undefined|  |
+

@@ -11,13 +11,15 @@ const formatTypeRef = ({ typeName, fileName }) =>
 
 const formatEnum = enumValues =>
   enumValues.reduce(
-    (str, val) => (str ? str + ` , '${val}' ` : ` '${val}' `),
+    (str, val) => (str ? str + `<br/>\`"${val}"\`` : `\`"${val}"\``),
     ''
   )
 const formatPropDefinition = requiredList => ([propName, propDef]) =>
-  `| **${propName}** | ${formatPropType(propDef)}| ${
+  `| **${propName}** | ${
+    requiredList.includes(propName) ? ':white_check_mark:' : ''
+  } | ${formatPropType(propDef)}| ${
     propDef.description ? propDef.description : ''
-  } | ${requiredList.includes(propName) ? ':white_check_mark:' : ''} |
+  } |
 `
 
 const formatPropType = propType => {
@@ -26,10 +28,10 @@ const formatPropType = propType => {
   if (propType.$ref) return formatTypeRef(parseTypeRefStr(propType.$ref))
 }
 
-const addTableHeader = str => `### Properties
+const addTableHeader = str => `### Propertiesw
 
-|   |Type|Description|Required|
-|---|----|-----------|--------|
+|Name|Required|Type|Description|
+|--|--|--|--|
 ${str}`
 
 const mapProps = (obj, mapFn) =>
