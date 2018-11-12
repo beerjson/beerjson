@@ -43,5 +43,5 @@ FermentableAdditionType collects the attributes of each fermentable ingredient f
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **timing** |  | [TimingType](timing.json.md#timingtype)|  |
-| **amount** |  | undefined|  |
+| **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)|  |
 

@@ -32,5 +32,5 @@ MiscellaneousAdditionType collects the attributes of each miscellaneous ingredie
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **timing** |  | [TimingType](timing.json.md#timingtype)|  |
-| **amount** |  | undefined|  |
+| **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype) or  [UnitType](measureable_units.json.md#unittype)|  |
 

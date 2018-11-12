@@ -43,5 +43,5 @@ CultureAdditionType collects the attributes of each culture ingredient for use i
 | **times_cultured** |  | integer|  |
 | **timing** |  | [TimingType](timing.json.md#timingtype)|  |
 | **cell_count_billions** |  | integer|  |
-| **amount** |  | undefined|  |
+| **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype) or  [UnitType](measureable_units.json.md#unittype)|  |
 

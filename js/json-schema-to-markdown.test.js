@@ -8,6 +8,7 @@ const formatTypeDefinition = parseRewire.__get__('formatTypeDefinition')
 const formatTypeRef = parseRewire.__get__('formatTypeRef')
 const formatPropertyList = parseRewire.__get__('formatPropertyList')
 const formatArray = parseRewire.__get__('formatArray')
+const formatPropType = parseRewire.__get__('formatPropType')
 const mapProps = parseRewire.__get__('mapProps')
 
 test('mapProps utility test that it maps and creates a new object', () => {
@@ -55,5 +56,20 @@ test('root schema docs', () => {
 test('formatArray should match snapshot', () => {
   expect(
     formatArray({ $ref: 'fermentable.json#/definitions/FermentableType' })
+  ).toMatchSnapshot()
+})
+
+test('format oneOf property type should match snapshot', () => {
+  expect(
+    formatPropType({
+      oneOf: [
+        {
+          $ref: 'measureable_units.json#/definitions/VolumeType'
+        },
+        {
+          $ref: 'measureable_units.json#/definitions/MassType'
+        }
+      ]
+    })
   ).toMatchSnapshot()
 })

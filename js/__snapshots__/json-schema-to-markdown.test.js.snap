@@ -46,10 +46,12 @@ FermentableAdditionType collects the attributes of each fermentable ingredient f
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **timing** |  | [TimingType](timing.json.md#timingtype)|  |
-| **amount** |  | undefined|  |
+| **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)|  |
 
 "
 `;
+
+exports[`format oneOf property type should match snapshot 1`] = `" [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)"`;
 
 exports[`formatArray should match snapshot 1`] = `"array of [FermentableType](fermentable.json.md#fermentabletype)"`;
 

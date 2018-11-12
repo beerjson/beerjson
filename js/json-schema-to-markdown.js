@@ -18,6 +18,13 @@ const formatEnum = enumValues =>
 const formatArray = ({ $ref }) =>
   `array of ${formatTypeRef(parseTypeRefStr($ref))}`
 
+const formatOneOf = types =>
+  types.reduce(
+    (str, { $ref }) =>
+      str + `${str ? ' or ' : ''} ${formatTypeRef(parseTypeRefStr($ref))}`,
+    ''
+  )
+
 const formatPropDefinition = requiredList => ([propName, propDef]) =>
   `| **${propName}** | ${
     requiredList.includes(propName) ? ':white_check_mark:' : ''
@@ -38,6 +45,7 @@ const formatPropType = propType => {
   }
   if (propType.type) return propType.type
   if (propType.$ref) return formatTypeRef(parseTypeRefStr(propType.$ref))
+  if (propType.oneOf) return formatOneOf(propType.oneOf)
 }
 
 const addTableHeader = str => `|Name|Required|Type|Description|
@@ -65,7 +73,6 @@ const log = x => {
 const formatPropertyList = (name, def) => {
   const formatProps = formatProperties(getRequiredList(def))
   if (def.allOf) {
-    console.log(def.allOf[1] ? 'yes' : 'no')
     const { $ref } = def.allOf[0]
     return `**${name}** is an object with all properties from ${formatTypeRef(
       parseTypeRefStr($ref)
