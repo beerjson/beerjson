@@ -6,7 +6,7 @@ BoilProcedureType defines the procedure for performing a boil. A boil procedure 
 
 `BoilProcedureType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|

@@ -6,7 +6,7 @@ PackagingVesselType - a per vessel representation of a packaging process
 
 `PackagingVesselType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|

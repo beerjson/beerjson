@@ -6,7 +6,7 @@ FermentationStepType - a per step representation of a fermentation action. Free 
 
 `FermentationStepType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|

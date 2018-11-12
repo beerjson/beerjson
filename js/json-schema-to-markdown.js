@@ -28,7 +28,7 @@ const formatPropType = propType => {
   if (propType.$ref) return formatTypeRef(parseTypeRefStr(propType.$ref))
 }
 
-const addTableHeader = str => `### Propertiesw
+const addTableHeader = str => `### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|

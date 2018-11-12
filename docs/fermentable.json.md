@@ -6,7 +6,7 @@ FermentableBase provides unique properties to identify individual records of fer
 
 `FermentableBase` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -26,7 +26,7 @@ FermentableType collects the attributes of a fermentable ingredient to store as 
 
 Parent: [FermentableBase](#fermentablebase)
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -48,7 +48,7 @@ FermentableAdditionType collects the attributes of each fermentable ingredient f
 
 Parent: [FermentableBase](#fermentablebase)
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|

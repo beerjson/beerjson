@@ -6,7 +6,7 @@ RecipeType composes the information stored in a beerjson recipe
 
 `RecipeType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|

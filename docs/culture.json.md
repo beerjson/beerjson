@@ -6,7 +6,7 @@ The descriptive base type for both culture records, and recipe additions. Provid
 
 `CultureBase` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -24,7 +24,7 @@ CultureInformation collects the attributes of a microbial culture to store as re
 
 Parent: [CultureBase](#culturebase)
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -45,7 +45,7 @@ CultureAdditionType collects the attributes of each culture ingredient for use i
 
 Parent: [CultureBase](#culturebase)
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|

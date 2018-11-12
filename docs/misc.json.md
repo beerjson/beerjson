@@ -6,7 +6,7 @@ MiscellaneousBase provides unique properties to identify individual records of i
 
 `MiscellaneousBase` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -21,7 +21,7 @@ MiscellaneousType collects the attributes of an ingredient to store as record in
 
 Parent: [MiscellaneousBase](#miscellaneousbase)
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -37,7 +37,7 @@ MiscellaneousAdditionType collects the attributes of each miscellaneous ingredie
 
 Parent: [MiscellaneousBase](#miscellaneousbase)
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|

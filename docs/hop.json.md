@@ -6,7 +6,7 @@ HopVarietyBase provides unique properties to identify individual records of a ho
 
 `HopVarietyBase` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -24,7 +24,7 @@ VarietyInformation collects the attributes of a hop variety to store as record i
 
 Parent: [HopVarietyBase](#hopvarietybase)
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -43,7 +43,7 @@ HopAdditionType collects the attributes of each hop ingredient for use in a reci
 
 Parent: [HopVarietyBase](#hopvarietybase)
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -56,7 +56,7 @@ Parent: [HopVarietyBase](#hopvarietybase)
 
 `IBUEstimateType` type: `undefined`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|

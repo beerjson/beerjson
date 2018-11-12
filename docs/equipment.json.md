@@ -6,7 +6,7 @@ The descriptive base type for brew day equipment. Provides unique properties to 
 
 `EquipmentBase` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -23,7 +23,7 @@ EquipmentType provides necessary information for brewing equipment
 
 Parent: [EquipmentBase](#equipmentbase)
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|

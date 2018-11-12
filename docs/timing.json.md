@@ -13,7 +13,7 @@ The timing object fully describes the timing of an addition with options for bas
 
 `TimingType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|

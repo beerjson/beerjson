@@ -6,7 +6,7 @@ The descriptive base type for both style guideline records, and recipe style pro
 
 `StyleBase` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -25,7 +25,7 @@ StyleType provide information for Style categorization
 
 Parent: [StyleBase](#stylebase)
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|

@@ -6,7 +6,7 @@ FermentationProcedureType defines the procedure for performing fermenting
 
 `FermentationProcedureType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|

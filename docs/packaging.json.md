@@ -6,7 +6,7 @@ PackagingProcedureType describes the procedure for packaging your beverage
 
 `PackagingProcedureType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|

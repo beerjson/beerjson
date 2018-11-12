@@ -6,7 +6,7 @@ The schema defines the following types:
 
 `VolumeType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -19,7 +19,7 @@ The schema defines the following types:
 
 `MassType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -32,7 +32,7 @@ The schema defines the following types:
 
 `DiastaticPowerType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -45,7 +45,7 @@ The schema defines the following types:
 
 `TemperatureType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -58,7 +58,7 @@ The schema defines the following types:
 
 `PressureType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -71,7 +71,7 @@ The schema defines the following types:
 
 `AcidityType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -84,7 +84,7 @@ The schema defines the following types:
 
 `TimeType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -97,7 +97,7 @@ The schema defines the following types:
 
 `ColorType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -110,7 +110,7 @@ The schema defines the following types:
 
 `CarbonationType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -123,7 +123,7 @@ The schema defines the following types:
 
 `BitternessType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -136,7 +136,7 @@ The schema defines the following types:
 
 `GravityType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -149,7 +149,7 @@ The schema defines the following types:
 
 `SpecificHeatType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -162,7 +162,7 @@ The schema defines the following types:
 
 `ConcentrationType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -175,7 +175,7 @@ The schema defines the following types:
 
 `SpecificVolumeType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -188,7 +188,7 @@ The schema defines the following types:
 
 `UnitType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -201,7 +201,7 @@ The schema defines the following types:
 
 `CarbonationRangeType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -214,7 +214,7 @@ The schema defines the following types:
 
 `BitternessRangeType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -227,7 +227,7 @@ The schema defines the following types:
 
 `TemperatureRangeType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -240,7 +240,7 @@ The schema defines the following types:
 
 `ColorRangeType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -253,7 +253,7 @@ The schema defines the following types:
 
 `GravityRangeType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -266,7 +266,7 @@ The schema defines the following types:
 
 `PercentRangeType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -398,7 +398,7 @@ The schema defines the following types:
 
 `PercentType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|

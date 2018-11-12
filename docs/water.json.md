@@ -6,7 +6,7 @@ WaterBase provides unique properties to identify individual records of regional 
 
 `WaterBase` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
@@ -32,7 +32,7 @@ WaterType collects the attributes of a regional brewing water to store as record
 
 Parent: [WaterBase](#waterbase)
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|

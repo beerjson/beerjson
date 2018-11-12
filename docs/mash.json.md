@@ -6,7 +6,7 @@ MashProcedureType defines the procedure for performing unique mashing styles
 
 `MashProcedureType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|

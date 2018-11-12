@@ -1,4 +1,4 @@
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|

@@ -6,7 +6,7 @@ BoilStepType - a per step representation of a boil process, can be used to suppo
 
 `BoilStepType` type: `object`
 
-### Propertiesw
+### Properties
 
 |Name|Required|Type|Description|
 |--|--|--|--|
