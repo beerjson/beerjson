@@ -5,7 +5,7 @@ const rootSchema = require('../json/beer.json')
 const rewire = require('rewire')
 const parseRewire = rewire('././json-schema-to-markdown.js')
 const formatTypeDefinition = parseRewire.__get__('formatTypeDefinition')
-const formatTypeRef = parseRewire.__get__('formatTypeRef')
+const formatParsedTypeRef = parseRewire.__get__('formatParsedTypeRef')
 const formatPropertyList = parseRewire.__get__('formatPropertyList')
 const formatArray = parseRewire.__get__('formatArray')
 const formatPropType = parseRewire.__get__('formatPropType')
@@ -23,7 +23,7 @@ test('mapProps for undefined should be empty array', () => {
 })
 
 test('Type reference format', () => {
-  expect(formatTypeRef({ typeName: 'type', fileName: 'file' })).toBe(
+  expect(formatParsedTypeRef({ typeName: 'type', fileName: 'file' })).toBe(
     '[type](file.md#type)'
   )
 })
