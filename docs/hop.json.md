@@ -26,8 +26,8 @@ VarietyInformation collects the attributes of a hop variety to store as record i
 | **notes** |  | string|  |
 | **percent_lost** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **substitutes** |  | string|  |
-| **oil_content** |  | :x: object| oil_content collects all information of a hop variety pertaining to oil content, polyphenols, and thiols. |
-| **inventory** |  | :x: object|  |
+| **oil_content** |  | [OilContentType](#oilcontenttype)|  |
+| **inventory** |  | [HopInventoryType](#hopinventorytype)|  |
 
 ## HopAdditionType 
 
@@ -50,3 +50,36 @@ undefined
 *no description yet*
 
 `"Rager"`<br/>`"Tinseth"`<br/>`"Garetz"`<br/>`"Other"`
+## OilContentType 
+
+oil_content collects all information of a hop variety pertaining to oil content, polyphenols, and thiols.
+
+**OilContentType** is an object with these properties:
+
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **total_oil_ml_per_100g** |  | number|  |
+| **humulene** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **caryophyllene** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **cohumulone** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **myrcene** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **farnesene** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **geraniol** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **b-pinene** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **linalool** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **limonene** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **nerol** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **pinene** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **polyphenols** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **xanthohumol** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+
+## HopInventoryType 
+
+*no description yet*
+
+**HopInventoryType** is an object with these properties:
+
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)|  |
+

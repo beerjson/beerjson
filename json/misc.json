@@ -40,26 +40,7 @@
             "notes": {
               "type": "string"
             },
-            "inventory": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "amount": {
-                  "oneOf": [
-                    {
-                      "$ref": "measureable_units.json#/definitions/VolumeType"
-                    },
-                    {
-                      "$ref": "measureable_units.json#/definitions/MassType"
-                    },
-                    {
-                      "$ref": "measureable_units.json#/definitions/UnitType"
-                    }
-                  ]
-                }
-              },
-              "required": ["amount"]
-            }
+            "inventory": { "$ref": "#/definitions/MiscellaneousInventoryType" }
           }
         }
       ]
@@ -95,6 +76,26 @@
           "required": ["amount"]
         }
       ]
+    },
+    "MiscellaneousInventoryType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "oneOf": [
+            {
+              "$ref": "measureable_units.json#/definitions/VolumeType"
+            },
+            {
+              "$ref": "measureable_units.json#/definitions/MassType"
+            },
+            {
+              "$ref": "measureable_units.json#/definitions/UnitType"
+            }
+          ]
+        }
+      },
+      "required": ["amount"]
     }
   }
 }

@@ -29,68 +29,13 @@
           "$ref": "measureable_units.json#/definitions/VolumeType"
         },
         "efficiency": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "conversion": {
-              "$ref": "measureable_units.json#/definitions/PercentType"
-            },
-            "lauter": {
-              "$ref": "measureable_units.json#/definitions/PercentType"
-            },
-            "mash": {
-              "$ref": "measureable_units.json#/definitions/PercentType"
-            },
-            "brewhouse": {
-              "$ref": "measureable_units.json#/definitions/PercentType"
-            }
-          },
-          "required": ["brewhouse"]
+          "$ref": "#/definitions/EfficiencyType"
         },
         "style": {
           "$ref": "style.json#/definitions/RecipeStyleType"
         },
         "ingredients": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "fermentable_additions": {
-              "type": "array",
-              "description": "fermentable_additions collects all the fermentable ingredients for use in a recipe",
-              "items": {
-                "$ref": "fermentable.json#/definitions/FermentableAdditionType"
-              }
-            },
-            "hop_additions": {
-              "type": "array",
-              "description": "hop_additions collects all the hops for use in a recipe",
-              "items": {
-                "$ref": "hop.json#/definitions/HopAdditionType"
-              }
-            },
-            "miscellaneous_additions": {
-              "type": "array",
-              "description": "miscellaneous_additions collects all the miscellaneous items for use in a recipe",
-              "items": {
-                "$ref": "misc.json#/definitions/MiscellaneousAdditionType"
-              }
-            },
-            "culture_additions": {
-              "type": "array",
-              "description": "culture_additions collects all the culture items for use in a recipe",
-              "items": {
-                "$ref": "culture.json#/definitions/CultureAdditionType"
-              }
-            },
-            "water_additions": {
-              "type": "array",
-              "description": "water_additions collects all the water items for use in a recipe",
-              "items": {
-                "$ref": "water.json#/definitions/WaterAdditionType"
-              }
-            }
-          },
-          "required": ["fermentable_additions"]
+          "$ref": "#/definitions/IngredientsType"
         },
         "mash": {
           "$ref": "mash.json#/definitions/MashProcedureType"
@@ -129,17 +74,7 @@
           "$ref": "boil.json#/definitions/BoilProcedureType"
         },
         "taste": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "notes": {
-              "type": "string"
-            },
-            "rating": {
-              "type": "number"
-            }
-          },
-          "required": ["notes", "rating"]
+          "$ref": "#/definitions/TasteType"
         },
         "calories_per_pint": {
           "type": "number"
@@ -153,6 +88,80 @@
         "batch_size",
         "ingredients"
       ]
+    },
+    "EfficiencyType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "conversion": {
+          "$ref": "measureable_units.json#/definitions/PercentType"
+        },
+        "lauter": {
+          "$ref": "measureable_units.json#/definitions/PercentType"
+        },
+        "mash": {
+          "$ref": "measureable_units.json#/definitions/PercentType"
+        },
+        "brewhouse": {
+          "$ref": "measureable_units.json#/definitions/PercentType"
+        }
+      },
+      "required": ["brewhouse"]
+    },
+    "IngredientsType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fermentable_additions": {
+          "type": "array",
+          "description": "fermentable_additions collects all the fermentable ingredients for use in a recipe",
+          "items": {
+            "$ref": "fermentable.json#/definitions/FermentableAdditionType"
+          }
+        },
+        "hop_additions": {
+          "type": "array",
+          "description": "hop_additions collects all the hops for use in a recipe",
+          "items": {
+            "$ref": "hop.json#/definitions/HopAdditionType"
+          }
+        },
+        "miscellaneous_additions": {
+          "type": "array",
+          "description": "miscellaneous_additions collects all the miscellaneous items for use in a recipe",
+          "items": {
+            "$ref": "misc.json#/definitions/MiscellaneousAdditionType"
+          }
+        },
+        "culture_additions": {
+          "type": "array",
+          "description": "culture_additions collects all the culture items for use in a recipe",
+          "items": {
+            "$ref": "culture.json#/definitions/CultureAdditionType"
+          }
+        },
+        "water_additions": {
+          "type": "array",
+          "description": "water_additions collects all the water items for use in a recipe",
+          "items": {
+            "$ref": "water.json#/definitions/WaterAdditionType"
+          }
+        }
+      },
+      "required": ["fermentable_additions"]
+    },
+    "TasteType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "notes": {
+          "type": "string"
+        },
+        "rating": {
+          "type": "number"
+        }
+      },
+      "required": ["notes", "rating"]
     }
   }
 }

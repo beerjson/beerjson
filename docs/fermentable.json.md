@@ -13,7 +13,7 @@ FermentableBase provides unique properties to identify individual records of fer
 | **origin** |  | string|  |
 | **supplier** |  | string|  |
 | **grain_group** |  | `"base"`<br/>`"caramel"`<br/>`"flaked"`<br/>`"roasted"`<br/>`"specialty"`<br/>`"smoked"`<br/>`"adjunct"`|  |
-| **yield** | :white_check_mark: | :x: object|  |
+| **yield** | :white_check_mark: | [YieldType](#yieldtype)|  |
 | **color** | :white_check_mark: | [ColorType](measureable_units.json.md#colortype)|  |
 
 ## FermentableType 
@@ -32,7 +32,7 @@ FermentableType collects the attributes of a fermentable ingredient to store as 
 | **soluble_nitrogen_ratio** |  | number|  |
 | **max_in_batch** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **recommend_mash** |  | boolean|  |
-| **inventory** |  | :x: object|  |
+| **inventory** |  | [FermentableInventoryType](#fermentableinventorytype)|  |
 
 ## FermentableAdditionType 
 
@@ -43,5 +43,28 @@ FermentableAdditionType collects the attributes of each fermentable ingredient f
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **timing** |  | [TimingType](timing.json.md#timingtype)|  |
+| **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)|  |
+
+## YieldType 
+
+*no description yet*
+
+**YieldType** is an object with these properties:
+
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **fine_grind** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **coarse_grind** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **fine_coarse_difference** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **potential** |  | [GravityType](measureable_units.json.md#gravitytype)|  |
+
+## FermentableInventoryType 
+
+*no description yet*
+
+**FermentableInventoryType** is an object with these properties:
+
+|Name|Required|Type|Description|
+|--|--|--|--|
 | **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)|  |
 
