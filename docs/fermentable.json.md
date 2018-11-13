@@ -8,13 +8,13 @@ FermentableBase provides unique properties to identify individual records of fer
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | :white_check_mark: | string|  |
-| **type** | :white_check_mark: | `"dry extract"`<br/>`"extract"`<br/>`"grain"`<br/>`"sugar"`<br/>`"fruit"`<br/>`"juice"`<br/>`"honey"`<br/>`"other"`|  |
+| **name** | ✅ | string|  |
+| **type** | ✅ | `"dry extract"`<br/>`"extract"`<br/>`"grain"`<br/>`"sugar"`<br/>`"fruit"`<br/>`"juice"`<br/>`"honey"`<br/>`"other"`|  |
 | **origin** |  | string|  |
 | **supplier** |  | string|  |
 | **grain_group** |  | `"base"`<br/>`"caramel"`<br/>`"flaked"`<br/>`"roasted"`<br/>`"specialty"`<br/>`"smoked"`<br/>`"adjunct"`|  |
-| **yield** | :white_check_mark: | [YieldType](#yieldtype)|  |
-| **color** | :white_check_mark: | [ColorType](measureable_units.json.md#colortype)|  |
+| **yield** | ✅ | [YieldType](#yieldtype)|  |
+| **color** | ✅ | [ColorType](measureable_units.json.md#colortype)|  |
 
 ## FermentableType 
 

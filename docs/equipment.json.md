@@ -8,10 +8,10 @@ The descriptive base type for brew day equipment. Provides unique properties to 
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | :white_check_mark: | string|  |
-| **type** | :white_check_mark: | string|  |
+| **name** | ✅ | string|  |
+| **type** | ✅ | string|  |
 | **form** |  | `"HLT"`<br/>`"Mash Tun"`<br/>`"Lauter Tun"`<br/>`"Brew Kettle"`<br/>`"Fermenter"`<br/>`"Aging Vessel"`<br/>`"Packaging Vessel"`|  |
-| **maximum_volume** | :white_check_mark: | [VolumeType](measureable_units.json.md#volumetype)|  |
+| **maximum_volume** | ✅ | [VolumeType](measureable_units.json.md#volumetype)|  |
 
 ## EquipmentType 
 
@@ -21,7 +21,7 @@ EquipmentType provides necessary information for brewing equipment
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **loss** | :white_check_mark: | [VolumeType](measureable_units.json.md#volumetype)|  |
+| **loss** | ✅ | [VolumeType](measureable_units.json.md#volumetype)|  |
 | **grain_absorption_rate** |  | [SpecificVolumeType](measureable_units.json.md#specificvolumetype)|  |
 | **boil_rate_per_hour** |  | [VolumeType](measureable_units.json.md#volumetype)|  |
 | **drain_rate_per_minute** |  | [VolumeType](measureable_units.json.md#volumetype)|  |

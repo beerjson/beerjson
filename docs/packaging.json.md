@@ -8,7 +8,7 @@ PackagingProcedureType describes the procedure for packaging your beverage
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | :white_check_mark: | string|  |
+| **name** | ✅ | string|  |
 | **packaged_volume** |  | [VolumeType](measureable_units.json.md#volumetype)|  |
 | **description** |  | string|  |
 | **notes** |  | string|  |

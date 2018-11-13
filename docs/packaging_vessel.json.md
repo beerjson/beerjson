@@ -8,7 +8,7 @@ PackagingVesselType - a per vessel representation of a packaging process
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | :white_check_mark: | string|  |
+| **name** | ✅ | string|  |
 | **type** |  | `"keg"`<br/>`"bottle"`<br/>`"cask"`<br/>`"tank"`<br/>`"firkin"`|  |
 | **description** |  | string|  |
 | **package_date** |  | [DateType](measureable_units.json.md#datetype)|  |

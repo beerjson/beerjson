@@ -8,7 +8,7 @@ FermentationStepType - a per step representation of a fermentation action. Free 
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | :white_check_mark: | string|  |
+| **name** | ✅ | string|  |
 | **description** |  | string|  |
 | **start_temperature** |  | [TemperatureType](measureable_units.json.md#temperaturetype)|  |
 | **end_temperature** |  | [TemperatureType](measureable_units.json.md#temperaturetype)|  |

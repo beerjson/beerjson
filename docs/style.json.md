@@ -8,12 +8,12 @@ The descriptive base type for both style guideline records, and recipe style pro
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | :white_check_mark: | string|  |
-| **category** | :white_check_mark: | string|  |
+| **name** | ✅ | string|  |
+| **category** | ✅ | string|  |
 | **category_number** |  | integer|  |
 | **style_letter** |  | RegExp pattern: `[A-Z ]`|  |
-| **style_guide** | :white_check_mark: | string|  |
-| **type** | :white_check_mark: | [StyleCategories](#stylecategories)|  |
+| **style_guide** | ✅ | string|  |
+| **type** | ✅ | [StyleCategories](#stylecategories)|  |
 
 ## StyleType 
 

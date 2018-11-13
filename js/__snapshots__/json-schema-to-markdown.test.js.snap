@@ -11,13 +11,13 @@ FermentableBase provides unique properties to identify individual records of fer
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | :white_check_mark: | string|  |
-| **type** | :white_check_mark: | \`\\"dry extract\\"\`<br/>\`\\"extract\\"\`<br/>\`\\"grain\\"\`<br/>\`\\"sugar\\"\`<br/>\`\\"fruit\\"\`<br/>\`\\"juice\\"\`<br/>\`\\"honey\\"\`<br/>\`\\"other\\"\`|  |
+| **name** | ✅ | string|  |
+| **type** | ✅ | \`\\"dry extract\\"\`<br/>\`\\"extract\\"\`<br/>\`\\"grain\\"\`<br/>\`\\"sugar\\"\`<br/>\`\\"fruit\\"\`<br/>\`\\"juice\\"\`<br/>\`\\"honey\\"\`<br/>\`\\"other\\"\`|  |
 | **origin** |  | string|  |
 | **supplier** |  | string|  |
 | **grain_group** |  | \`\\"base\\"\`<br/>\`\\"caramel\\"\`<br/>\`\\"flaked\\"\`<br/>\`\\"roasted\\"\`<br/>\`\\"specialty\\"\`<br/>\`\\"smoked\\"\`<br/>\`\\"adjunct\\"\`|  |
-| **yield** | :white_check_mark: | [YieldType](#yieldtype)|  |
-| **color** | :white_check_mark: | [ColorType](measureable_units.json.md#colortype)|  |
+| **yield** | ✅ | [YieldType](#yieldtype)|  |
+| **color** | ✅ | [ColorType](measureable_units.json.md#colortype)|  |
 
 ## FermentableType 
 
@@ -98,13 +98,13 @@ FermentableBase provides unique properties to identify individual records of fer
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | :white_check_mark: | string|  |
-| **type** | :white_check_mark: | \`\\"dry extract\\"\`<br/>\`\\"extract\\"\`<br/>\`\\"grain\\"\`<br/>\`\\"sugar\\"\`<br/>\`\\"fruit\\"\`<br/>\`\\"juice\\"\`<br/>\`\\"honey\\"\`<br/>\`\\"other\\"\`|  |
+| **name** | ✅ | string|  |
+| **type** | ✅ | \`\\"dry extract\\"\`<br/>\`\\"extract\\"\`<br/>\`\\"grain\\"\`<br/>\`\\"sugar\\"\`<br/>\`\\"fruit\\"\`<br/>\`\\"juice\\"\`<br/>\`\\"honey\\"\`<br/>\`\\"other\\"\`|  |
 | **origin** |  | string|  |
 | **supplier** |  | string|  |
 | **grain_group** |  | \`\\"base\\"\`<br/>\`\\"caramel\\"\`<br/>\`\\"flaked\\"\`<br/>\`\\"roasted\\"\`<br/>\`\\"specialty\\"\`<br/>\`\\"smoked\\"\`<br/>\`\\"adjunct\\"\`|  |
-| **yield** | :white_check_mark: | [YieldType](#yieldtype)|  |
-| **color** | :white_check_mark: | [ColorType](measureable_units.json.md#colortype)|  |
+| **yield** | ✅ | [YieldType](#yieldtype)|  |
+| **color** | ✅ | [ColorType](measureable_units.json.md#colortype)|  |
 
 "
 `;
@@ -114,7 +114,7 @@ exports[`root schema docs 1`] = `
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **version** | :white_check_mark: | [VersionType](measureable_units.json.md#versiontype)| Explicitly encode beerjson version within list of records. |
+| **version** | ✅ | [VersionType](measureable_units.json.md#versiontype)| Explicitly encode beerjson version within list of records. |
 | **fermentables** |  | array of [FermentableType](fermentable.json.md#fermentabletype)| Records for any ingredient that contributes to the gravity of the beer. |
 | **miscellaneous_ingredients** |  | array of [MiscellaneousType](misc.json.md#miscellaneoustype)| Records for adjuncts which do not contribute to the gravity of the beer. |
 | **hop_varieties** |  | array of [VarietyInformation](hop.json.md#varietyinformation)| Records detailing the many properties of unique hop varieties. |

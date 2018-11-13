@@ -2,7 +2,7 @@
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **version** | :white_check_mark: | [VersionType](measureable_units.json.md#versiontype)| Explicitly encode beerjson version within list of records. |
+| **version** | ✅ | [VersionType](measureable_units.json.md#versiontype)| Explicitly encode beerjson version within list of records. |
 | **fermentables** |  | array of [FermentableType](fermentable.json.md#fermentabletype)| Records for any ingredient that contributes to the gravity of the beer. |
 | **miscellaneous_ingredients** |  | array of [MiscellaneousType](misc.json.md#miscellaneoustype)| Records for adjuncts which do not contribute to the gravity of the beer. |
 | **hop_varieties** |  | array of [VarietyInformation](hop.json.md#varietyinformation)| Records detailing the many properties of unique hop varieties. |

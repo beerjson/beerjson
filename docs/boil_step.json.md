@@ -8,7 +8,7 @@ BoilStepType - a per step representation of a boil process, can be used to suppo
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | :white_check_mark: | string|  |
+| **name** | ✅ | string|  |
 | **description** |  | string|  |
 | **start_temperature** |  | [TemperatureType](measureable_units.json.md#temperaturetype)|  |
 | **end_temperature** |  | [TemperatureType](measureable_units.json.md#temperaturetype)|  |

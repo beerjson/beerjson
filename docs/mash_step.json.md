@@ -8,11 +8,11 @@ MashStepType - a per step representation occurring within the mash
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | :white_check_mark: | string|  |
-| **type** | :white_check_mark: | `"infusion"`<br/>`"temperature"`<br/>`"decoction"`<br/>`"souring mash"`<br/>`"souring wort"`<br/>`"drain mash tun"`<br/>`"sparge"`|  |
+| **name** | ✅ | string|  |
+| **type** | ✅ | `"infusion"`<br/>`"temperature"`<br/>`"decoction"`<br/>`"souring mash"`<br/>`"souring wort"`<br/>`"drain mash tun"`<br/>`"sparge"`|  |
 | **amount** |  | [VolumeType](measureable_units.json.md#volumetype)|  |
-| **step_temperature** | :white_check_mark: | [TemperatureType](measureable_units.json.md#temperaturetype)|  |
-| **step_time** | :white_check_mark: | [TimeType](measureable_units.json.md#timetype)|  |
+| **step_temperature** | ✅ | [TemperatureType](measureable_units.json.md#temperaturetype)|  |
+| **step_time** | ✅ | [TimeType](measureable_units.json.md#timetype)|  |
 | **ramp_time** |  | [TimeType](measureable_units.json.md#timetype)|  |
 | **end_temperature** |  | [TemperatureType](measureable_units.json.md#temperaturetype)|  |
 | **description** |  | string|  |

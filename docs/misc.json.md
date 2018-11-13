@@ -8,8 +8,8 @@ MiscellaneousBase provides unique properties to identify individual records of i
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | :white_check_mark: | string|  |
-| **type** | :white_check_mark: | `"spice"`<br/>`"fining"`<br/>`"water agent"`<br/>`"herb"`<br/>`"flavor"`<br/>`"wood"`<br/>`"other"`|  |
+| **name** | ✅ | string|  |
+| **type** | ✅ | `"spice"`<br/>`"fining"`<br/>`"water agent"`<br/>`"herb"`<br/>`"flavor"`<br/>`"wood"`<br/>`"other"`|  |
 
 ## MiscellaneousType 
 
@@ -42,5 +42,5 @@ MiscellaneousAdditionType collects the attributes of each miscellaneous ingredie
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **amount** | :white_check_mark: |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype) or  [UnitType](measureable_units.json.md#unittype)|  |
+| **amount** | ✅ |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype) or  [UnitType](measureable_units.json.md#unittype)|  |
 

@@ -8,8 +8,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | :white_check_mark: | [VolumeUnitType](#volumeunittype)|  |
-| **value** | :white_check_mark: | number|  |
+| **unit** | ✅ | [VolumeUnitType](#volumeunittype)|  |
+| **value** | ✅ | number|  |
 
 ## MassType 
 
@@ -19,8 +19,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | :white_check_mark: | [MassUnitType](#massunittype)|  |
-| **value** | :white_check_mark: | number|  |
+| **unit** | ✅ | [MassUnitType](#massunittype)|  |
+| **value** | ✅ | number|  |
 
 ## DiastaticPowerType 
 
@@ -30,8 +30,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | :white_check_mark: | [DiastaticPowerUnitType](#diastaticpowerunittype)|  |
-| **value** | :white_check_mark: | number|  |
+| **unit** | ✅ | [DiastaticPowerUnitType](#diastaticpowerunittype)|  |
+| **value** | ✅ | number|  |
 
 ## TemperatureType 
 
@@ -41,8 +41,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | :white_check_mark: | [TemperatureUnitType](#temperatureunittype)|  |
-| **value** | :white_check_mark: | number|  |
+| **unit** | ✅ | [TemperatureUnitType](#temperatureunittype)|  |
+| **value** | ✅ | number|  |
 
 ## PressureType 
 
@@ -52,8 +52,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | :white_check_mark: | [PressureUnitType](#pressureunittype)|  |
-| **value** | :white_check_mark: | number|  |
+| **unit** | ✅ | [PressureUnitType](#pressureunittype)|  |
+| **value** | ✅ | number|  |
 
 ## AcidityType 
 
@@ -63,8 +63,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | :white_check_mark: | [AcidityUnitType](#acidityunittype)|  |
-| **value** | :white_check_mark: | number|  |
+| **unit** | ✅ | [AcidityUnitType](#acidityunittype)|  |
+| **value** | ✅ | number|  |
 
 ## TimeType 
 
@@ -74,8 +74,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | :white_check_mark: | [TimeUnitType](#timeunittype)|  |
-| **value** | :white_check_mark: | number|  |
+| **unit** | ✅ | [TimeUnitType](#timeunittype)|  |
+| **value** | ✅ | number|  |
 
 ## ColorType 
 
@@ -85,8 +85,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | :white_check_mark: | [ColorUnitType](#colorunittype)|  |
-| **value** | :white_check_mark: | number|  |
+| **unit** | ✅ | [ColorUnitType](#colorunittype)|  |
+| **value** | ✅ | number|  |
 
 ## CarbonationType 
 
@@ -96,8 +96,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | :white_check_mark: | [CarbonationUnitType](#carbonationunittype)|  |
-| **value** | :white_check_mark: | number|  |
+| **unit** | ✅ | [CarbonationUnitType](#carbonationunittype)|  |
+| **value** | ✅ | number|  |
 
 ## BitternessType 
 
@@ -107,8 +107,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | :white_check_mark: | [BitternessUnitType](#bitternessunittype)|  |
-| **value** | :white_check_mark: | number|  |
+| **unit** | ✅ | [BitternessUnitType](#bitternessunittype)|  |
+| **value** | ✅ | number|  |
 
 ## GravityType 
 
@@ -118,8 +118,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | :white_check_mark: | [GravityUnitType](#gravityunittype)|  |
-| **value** | :white_check_mark: | number|  |
+| **unit** | ✅ | [GravityUnitType](#gravityunittype)|  |
+| **value** | ✅ | number|  |
 
 ## SpecificHeatType 
 
@@ -129,8 +129,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | :white_check_mark: | [SpecificHeatUnitType](#specificheatunittype)|  |
-| **value** | :white_check_mark: | number|  |
+| **unit** | ✅ | [SpecificHeatUnitType](#specificheatunittype)|  |
+| **value** | ✅ | number|  |
 
 ## ConcentrationType 
 
@@ -140,8 +140,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | :white_check_mark: | [ConcentrationUnitType](#concentrationunittype)|  |
-| **value** | :white_check_mark: | number|  |
+| **unit** | ✅ | [ConcentrationUnitType](#concentrationunittype)|  |
+| **value** | ✅ | number|  |
 
 ## SpecificVolumeType 
 
@@ -151,8 +151,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | :white_check_mark: | [SpecificVolumeUnitType](#specificvolumeunittype)|  |
-| **value** | :white_check_mark: | number|  |
+| **unit** | ✅ | [SpecificVolumeUnitType](#specificvolumeunittype)|  |
+| **value** | ✅ | number|  |
 
 ## UnitType 
 
@@ -162,8 +162,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | :white_check_mark: | [UnitUnitType](#unitunittype)|  |
-| **value** | :white_check_mark: | number|  |
+| **unit** | ✅ | [UnitUnitType](#unitunittype)|  |
+| **value** | ✅ | number|  |
 
 ## CarbonationRangeType 
 
@@ -173,8 +173,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **minimum** | :white_check_mark: | [CarbonationType](#carbonationtype)|  |
-| **maximum** | :white_check_mark: | [CarbonationType](#carbonationtype)|  |
+| **minimum** | ✅ | [CarbonationType](#carbonationtype)|  |
+| **maximum** | ✅ | [CarbonationType](#carbonationtype)|  |
 
 ## BitternessRangeType 
 
@@ -184,8 +184,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **minimum** | :white_check_mark: | [BitternessType](#bitternesstype)|  |
-| **maximum** | :white_check_mark: | [BitternessType](#bitternesstype)|  |
+| **minimum** | ✅ | [BitternessType](#bitternesstype)|  |
+| **maximum** | ✅ | [BitternessType](#bitternesstype)|  |
 
 ## TemperatureRangeType 
 
@@ -195,8 +195,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **minimum** | :white_check_mark: | [TemperatureType](#temperaturetype)|  |
-| **maximum** | :white_check_mark: | [TemperatureType](#temperaturetype)|  |
+| **minimum** | ✅ | [TemperatureType](#temperaturetype)|  |
+| **maximum** | ✅ | [TemperatureType](#temperaturetype)|  |
 
 ## ColorRangeType 
 
@@ -206,8 +206,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **minimum** | :white_check_mark: | [ColorType](#colortype)|  |
-| **maximum** | :white_check_mark: | [ColorType](#colortype)|  |
+| **minimum** | ✅ | [ColorType](#colortype)|  |
+| **maximum** | ✅ | [ColorType](#colortype)|  |
 
 ## GravityRangeType 
 
@@ -217,8 +217,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **minimum** | :white_check_mark: | [GravityType](#gravitytype)|  |
-| **maximum** | :white_check_mark: | [GravityType](#gravitytype)|  |
+| **minimum** | ✅ | [GravityType](#gravitytype)|  |
+| **maximum** | ✅ | [GravityType](#gravitytype)|  |
 
 ## PercentRangeType 
 
@@ -228,8 +228,8 @@ The schema defines the following types:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **minimum** | :white_check_mark: | [PercentType](#percenttype)|  |
-| **maximum** | :white_check_mark: | [PercentType](#percenttype)|  |
+| **minimum** | ✅ | [PercentType](#percenttype)|  |
+| **maximum** | ✅ | [PercentType](#percenttype)|  |
 
 ## VolumeUnitType 
 
@@ -324,8 +324,8 @@ RegExp pattern: `\d{4}-\d{2}-\d{2}|\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}`
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | :white_check_mark: | [PercentUnitType](#percentunittype)|  |
-| **value** | :white_check_mark: | number|  |
+| **unit** | ✅ | [PercentUnitType](#percentunittype)|  |
+| **value** | ✅ | number|  |
 
 ## PercentUnitType 
 

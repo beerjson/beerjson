@@ -8,10 +8,10 @@ HopVarietyBase provides unique properties to identify individual records of a ho
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | :white_check_mark: | string|  |
+| **name** | ✅ | string|  |
 | **origin** |  | string|  |
 | **form** |  | `"extract"`<br/>`"leaf"`<br/>`"leaf (wet)"`<br/>`"pellet"`<br/>`"powder"`<br/>`"plug"`|  |
-| **alpha_acid_units** | :white_check_mark: | number|  |
+| **alpha_acid_units** | ✅ | number|  |
 | **beta_acid_units** |  | number|  |
 
 ## VarietyInformation 

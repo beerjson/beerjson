@@ -8,9 +8,9 @@ FermentationProcedureType defines the procedure for performing fermenting
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | :white_check_mark: | string|  |
+| **name** | ✅ | string|  |
 | **type** |  | string|  |
 | **description** |  | string|  |
 | **notes** |  | string|  |
-| **fermentation_steps** | :white_check_mark: | array of [FermentationStepType](fermentation_step.json.md#fermentationsteptype)|  |
+| **fermentation_steps** | ✅ | array of [FermentationStepType](fermentation_step.json.md#fermentationsteptype)|  |
 

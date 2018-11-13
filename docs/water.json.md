@@ -8,19 +8,19 @@ WaterBase provides unique properties to identify individual records of regional 
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | :white_check_mark: | string|  |
-| **calcium** | :white_check_mark: | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
-| **bicarbonate** | :white_check_mark: | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
+| **name** | ✅ | string|  |
+| **calcium** | ✅ | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
+| **bicarbonate** | ✅ | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
 | **carbonate** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
 | **potassium** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
 | **iron** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
 | **nitrate** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
 | **nitrite** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
 | **flouride** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
-| **sulfate** | :white_check_mark: | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
-| **chloride** | :white_check_mark: | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
-| **sodium** | :white_check_mark: | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
-| **magnesium** | :white_check_mark: | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
+| **sulfate** | ✅ | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
+| **chloride** | ✅ | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
+| **sodium** | ✅ | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
+| **magnesium** | ✅ | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
 
 ## WaterType 
 

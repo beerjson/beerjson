@@ -8,15 +8,15 @@ RecipeType composes the information stored in a beerjson recipe
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | :white_check_mark: | string|  |
-| **type** | :white_check_mark: | `"extract"`<br/>`"partial mash"`<br/>`"all grain"`|  |
-| **author** | :white_check_mark: | string|  |
+| **name** | ✅ | string|  |
+| **type** | ✅ | `"extract"`<br/>`"partial mash"`<br/>`"all grain"`|  |
+| **author** | ✅ | string|  |
 | **coauthor** |  | string|  |
 | **created** |  | [DateType](measureable_units.json.md#datetype)|  |
-| **batch_size** | :white_check_mark: | [VolumeType](measureable_units.json.md#volumetype)|  |
-| **efficiency** | :white_check_mark: | [EfficiencyType](#efficiencytype)|  |
+| **batch_size** | ✅ | [VolumeType](measureable_units.json.md#volumetype)|  |
+| **efficiency** | ✅ | [EfficiencyType](#efficiencytype)|  |
 | **style** |  | [RecipeStyleType](style.json.md#recipestyletype)|  |
-| **ingredients** | :white_check_mark: | [IngredientsType](#ingredientstype)|  |
+| **ingredients** | ✅ | [IngredientsType](#ingredientstype)|  |
 | **mash** |  | [MashProcedureType](mash.json.md#mashproceduretype)|  |
 | **notes** |  | string|  |
 | **original_gravity** |  | [GravityType](measureable_units.json.md#gravitytype)|  |
@@ -43,7 +43,7 @@ RecipeType composes the information stored in a beerjson recipe
 | **conversion** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **lauter** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **mash** |  | [PercentType](measureable_units.json.md#percenttype)|  |
-| **brewhouse** | :white_check_mark: | [PercentType](measureable_units.json.md#percenttype)|  |
+| **brewhouse** | ✅ | [PercentType](measureable_units.json.md#percenttype)|  |
 
 ## IngredientsType 
 
@@ -53,7 +53,7 @@ RecipeType composes the information stored in a beerjson recipe
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **fermentable_additions** | :white_check_mark: | array of [FermentableAdditionType](fermentable.json.md#fermentableadditiontype)| fermentable_additions collects all the fermentable ingredients for use in a recipe |
+| **fermentable_additions** | ✅ | array of [FermentableAdditionType](fermentable.json.md#fermentableadditiontype)| fermentable_additions collects all the fermentable ingredients for use in a recipe |
 | **hop_additions** |  | array of [HopAdditionType](hop.json.md#hopadditiontype)| hop_additions collects all the hops for use in a recipe |
 | **miscellaneous_additions** |  | array of [MiscellaneousAdditionType](misc.json.md#miscellaneousadditiontype)| miscellaneous_additions collects all the miscellaneous items for use in a recipe |
 | **culture_additions** |  | array of [CultureAdditionType](culture.json.md#cultureadditiontype)| culture_additions collects all the culture items for use in a recipe |
@@ -67,6 +67,6 @@ RecipeType composes the information stored in a beerjson recipe
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **notes** | :white_check_mark: | string|  |
-| **rating** | :white_check_mark: | number|  |
+| **notes** | ✅ | string|  |
+| **rating** | ✅ | number|  |
 

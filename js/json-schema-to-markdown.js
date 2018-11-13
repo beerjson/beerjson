@@ -30,7 +30,7 @@ const formatOneOf = types =>
 
 const formatPropDefinition = requiredList => ([propName, propDef]) =>
   `| **${propName}** | ${
-    requiredList.includes(propName) ? ':white_check_mark:' : ''
+    requiredList.includes(propName) ? '✅' : ''
   } | ${formatPropType(propDef)}| ${
     propDef.description ? propDef.description : ''
   } |
@@ -42,7 +42,7 @@ const formatPropType = propType => {
   if (propType.enum) return formatEnum(propType.enum)
   if (propType.type === 'array') return formatArray(propType.items)
   if (propType.type === 'object')
-    return ':x: Cannot generate document for a nested type! ' + propType.type
+    return '❌ Cannot generate document for a nested type! ' + propType.type
   if (propType.pattern) return `RegExp pattern: \`${propType.pattern}\``
   if (propType.type) return propType.type
   if (propType.$ref) return formatTypeRef(propType.$ref)
