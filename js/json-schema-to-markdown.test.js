@@ -4,11 +4,11 @@ const rootSchema = require('../json/beer.json')
 
 const rewire = require('rewire')
 const parseRewire = rewire('././json-schema-to-markdown.js')
-const formatTypeDefinition = parseRewire.__get__('formatTypeDefinition')
+const processTypeDefinition = parseRewire.__get__('processTypeDefinition')
 const formatParsedTypeRef = parseRewire.__get__('formatParsedTypeRef')
 const formatPropertyList = parseRewire.__get__('formatPropertyList')
-const formatArray = parseRewire.__get__('formatArray')
-const formatPropType = parseRewire.__get__('formatPropType')
+const processArray = parseRewire.__get__('processArray')
+const processPropType = parseRewire.__get__('processPropType')
 const mapProps = parseRewire.__get__('mapProps')
 
 test('mapProps utility test that it maps and creates a new object', () => {
@@ -40,9 +40,9 @@ test('fermentable docs should match snapshot', () => {
   expect(parse(typeSchema)).toMatchSnapshot()
 })
 
-test('formatTypeDefinition', () => {
+test('processTypeDefinition', () => {
   expect(
-    formatTypeDefinition([
+    processTypeDefinition([
       'FermentableBase',
       typeSchema.definitions.FermentableBase
     ])
@@ -53,15 +53,15 @@ test('root schema docs', () => {
   expect(parse(rootSchema)).toMatchSnapshot()
 })
 
-test('formatArray should match snapshot', () => {
+test('processArray should match snapshot', () => {
   expect(
-    formatArray({ $ref: 'fermentable.json#/definitions/FermentableType' })
+    processArray({ $ref: 'fermentable.json#/definitions/FermentableType' })
   ).toMatchSnapshot()
 })
 
 test('format oneOf property type should match snapshot', () => {
   expect(
-    formatPropType({
+    processPropType({
       oneOf: [
         {
           $ref: 'measureable_units.json#/definitions/VolumeType'
@@ -76,7 +76,7 @@ test('format oneOf property type should match snapshot', () => {
 
 test('format simple type should match snapshot', () => {
   expect(
-    formatTypeDefinition([
+    processTypeDefinition([
       'SpecificVolumeUnitType',
       {
         type: 'string',
@@ -97,7 +97,7 @@ test('format simple type should match snapshot', () => {
 
 test('format type with pattern should match snapshot', () => {
   expect(
-    formatPropType({
+    processPropType({
       type: 'string',
       pattern: '\\d{4}-\\d{2}-\\d{2}|\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}'
     })

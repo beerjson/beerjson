@@ -1,3 +1,5 @@
+const formatter = require('./markdown-formatter.js')
+
 const mapProps = (obj, mapFn) =>
   obj ? Object.keys(obj).map((key, index) => mapFn(key, obj[key])) : []
 
@@ -14,13 +16,7 @@ const formatParsedTypeRef = ({ typeName, fileName }) =>
 
 const formatTypeRef = ref => formatParsedTypeRef(parseTypeRefStr(ref))
 
-const formatEnum = enumValues =>
-  enumValues.reduce(
-    (str, val) => (str ? str + `<br/>\`"${val}"\`` : `\`"${val}"\``),
-    ''
-  )
-
-const formatArray = ({ $ref }) => `array of ${formatTypeRef($ref)}`
+const processArray = ({ $ref }) => `array of ${formatTypeRef($ref)}`
 
 const formatOneOf = types =>
   types.reduce(
@@ -31,16 +27,16 @@ const formatOneOf = types =>
 const formatPropDefinition = requiredList => ([propName, propDef]) =>
   `| **${propName}** | ${
     requiredList.includes(propName) ? '✅' : ''
-  } | ${formatPropType(propDef)}| ${
+  } | ${processPropType(propDef)}| ${
     propDef.description ? propDef.description : ''
   } |
 `
 const formatSimpleTypeDefinition = (typeName, typeDef) =>
-  formatPropType(typeDef)
+  processPropType(typeDef)
 
-const formatPropType = propType => {
-  if (propType.enum) return formatEnum(propType.enum)
-  if (propType.type === 'array') return formatArray(propType.items)
+const processPropType = propType => {
+  if (propType.enum) return formatter.formatEnum(propType.enum)
+  if (propType.type === 'array') return processArray(propType.items)
   if (propType.type === 'object')
     return '❌ Cannot generate document for a nested type! ' + propType.type
   if (propType.pattern) return `RegExp pattern: \`${propType.pattern}\``
@@ -49,15 +45,8 @@ const formatPropType = propType => {
   if (propType.oneOf) return formatOneOf(propType.oneOf)
 }
 
-const addTableHeader = str =>
-  str
-    ? `|Name|Required|Type|Description|
-|--|--|--|--|
-${str}`
-    : ''
-
 const formatProperties = requiredList => def => {
-  return addTableHeader(
+  return formatter.addPropListWrapper(
     mapProps(def.properties, (propName, typeDef) => [propName, typeDef]).reduce(
       (acc, pair) => acc + formatPropDefinition(requiredList)(pair),
       ''
@@ -85,27 +74,21 @@ const formatPropertyList = (name, def) => {
   }
 }
 
-const formatTypeDefinition = ([typeName, typeDef]) =>
-  `## ${typeName} 
-
-${typeDef.description ? typeDef.description : '*no description yet*'}
-
-${
+const processTypeDefinition = ([typeName, typeDef]) =>
+  formatter.formatTypeDefinition(
+    typeName,
+    typeDef,
     typeDef.type === 'object'
       ? formatPropertyList(typeName, typeDef)
       : formatSimpleTypeDefinition(typeName, typeDef)
-  }
-`
-
-const addTypeHeader = str =>
-  str ? `The schema defines the following types:\n\n${str}` : ''
+  )
 
 const formatDefinitions = schema =>
-  addTypeHeader(
+  formatter.addTypeWrapper(
     mapProps(schema.definitions, (typeName, typeDef) => [
       typeName,
       typeDef
-    ]).reduce((acc, pair) => acc + formatTypeDefinition(pair), '')
+    ]).reduce((acc, pair) => acc + processTypeDefinition(pair), '')
   )
 
 const formatRootSchema = ({ properties: { beerjson } = {} }) => {

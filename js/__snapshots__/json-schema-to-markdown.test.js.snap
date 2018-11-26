@@ -87,9 +87,9 @@ exports[`format simple type should match snapshot 1`] = `
 
 exports[`format type with pattern should match snapshot 1`] = `"RegExp pattern: \`\\\\d{4}-\\\\d{2}-\\\\d{2}|\\\\d{4}-\\\\d{2}-\\\\d{2}T\\\\d{2}:\\\\d{2}:\\\\d{2}\`"`;
 
-exports[`formatArray should match snapshot 1`] = `"array of [FermentableType](fermentable.json.md#fermentabletype)"`;
+exports[`processArray should match snapshot 1`] = `"array of [FermentableType](fermentable.json.md#fermentabletype)"`;
 
-exports[`formatTypeDefinition 1`] = `
+exports[`processTypeDefinition 1`] = `
 "## FermentableBase 
 
 FermentableBase provides unique properties to identify individual records of fermentable ingredients
