@@ -11,44 +11,42 @@ const parseTypeRefStr = ref => {
   return { typeName, fileName }
 }
 
-const formatParsedTypeRef = ({ typeName, fileName }) =>
-  `[${typeName}](${fileName ? fileName + '.md' : ''}#${typeName.toLowerCase()})`
+const processTypeRef = ref =>
+  formatter.formatParsedTypeRef(parseTypeRefStr(ref))
 
-const formatTypeRef = ref => formatParsedTypeRef(parseTypeRefStr(ref))
+const processArray = ({ $ref }) =>
+  formatter.formatArray($ref, processTypeRef($ref))
 
-const processArray = ({ $ref }) => `array of ${formatTypeRef($ref)}`
+const processOneOf = types =>
+  types
+    .map(({ $ref }) => processTypeRef($ref))
+    .reduce(formatter.formatOneOf, '')
 
-const formatOneOf = types =>
-  types.reduce(
-    (str, { $ref }) => str + `${str ? ' or ' : ''} ${formatTypeRef($ref)}`,
-    ''
+const processPropDefinition = requiredList => ([propName, propDef]) =>
+  formatter.formatPropDefinition(
+    propName,
+    requiredList.includes(propName),
+    processPropType(propDef),
+    propDef.description
   )
 
-const formatPropDefinition = requiredList => ([propName, propDef]) =>
-  `| **${propName}** | ${
-    requiredList.includes(propName) ? '✅' : ''
-  } | ${processPropType(propDef)}| ${
-    propDef.description ? propDef.description : ''
-  } |
-`
-const formatSimpleTypeDefinition = (typeName, typeDef) =>
+const processSimpleTypeDefinition = (typeName, typeDef) =>
   processPropType(typeDef)
 
 const processPropType = propType => {
   if (propType.enum) return formatter.formatEnum(propType.enum)
   if (propType.type === 'array') return processArray(propType.items)
-  if (propType.type === 'object')
-    return '❌ Cannot generate document for a nested type! ' + propType.type
-  if (propType.pattern) return `RegExp pattern: \`${propType.pattern}\``
-  if (propType.type) return propType.type
-  if (propType.$ref) return formatTypeRef(propType.$ref)
-  if (propType.oneOf) return formatOneOf(propType.oneOf)
+  if (propType.type === 'object') return formatter.formatNestedType(propType)
+  if (propType.pattern) return formatter.formatPattern(propType.pattern)
+  if (propType.type) return formatter.formatPropTypeName(propType.type)
+  if (propType.$ref) return processTypeRef(propType.$ref)
+  if (propType.oneOf) return processOneOf(propType.oneOf)
 }
 
-const formatProperties = requiredList => def => {
+const processProperties = requiredList => def => {
   return formatter.addPropListWrapper(
     mapProps(def.properties, (propName, typeDef) => [propName, typeDef]).reduce(
-      (acc, pair) => acc + formatPropDefinition(requiredList)(pair),
+      (acc, pair) => acc + processPropDefinition(requiredList)(pair),
       ''
     )
   )
@@ -56,21 +54,17 @@ const formatProperties = requiredList => def => {
 
 const getRequiredList = ({ required = [] }) => required
 
-const formatPropertyList = (name, def) => {
-  const formatProps = formatProperties(getRequiredList(def))
+const processPropertyList = (name, def) => {
+  const processProps = processProperties(getRequiredList(def))
   if (def.allOf) {
     const { $ref } = def.allOf[0]
-    return `**${name}** is an object with all properties from ${formatTypeRef(
-      $ref
-    )}${
-      def.allOf[1]
-        ? ` and these additional properties:\n\n${formatProps(def.allOf[1])}`
-        : '\n\n'
-    }`
+    const formattedType1Ref = processTypeRef($ref)
+    const formattedPropList = def.allOf[1] ? processProps(def.allOf[1]) : ''
+
+    return formatter.formatAllOf(name, formattedType1Ref, formattedPropList)
   } else {
-    return `**${name}** is an object with these properties:\n\n${formatProps(
-      def
-    )}`
+    const formattedPropList = processProps(def)
+    return formatter.formatPropList(name, formattedPropList)
   }
 }
 
@@ -79,8 +73,8 @@ const processTypeDefinition = ([typeName, typeDef]) =>
     typeName,
     typeDef,
     typeDef.type === 'object'
-      ? formatPropertyList(typeName, typeDef)
-      : formatSimpleTypeDefinition(typeName, typeDef)
+      ? processPropertyList(typeName, typeDef)
+      : processSimpleTypeDefinition(typeName, typeDef)
   )
 
 const formatDefinitions = schema =>
@@ -92,7 +86,7 @@ const formatDefinitions = schema =>
   )
 
 const formatRootSchema = ({ properties: { beerjson } = {} }) => {
-  return beerjson ? formatPropertyList('beerjson', beerjson) : ''
+  return beerjson ? processPropertyList('beerjson', beerjson) : ''
 }
 
 const jsonSchemaToMarkdown = s => formatRootSchema(s) + formatDefinitions(s)

@@ -1,12 +1,13 @@
 const parse = require('./json-schema-to-markdown.js')
 const typeSchema = require('../json/fermentable.json')
 const rootSchema = require('../json/beer.json')
+const mdFormatter = require('./markdown-formatter.js')
 
 const rewire = require('rewire')
 const parseRewire = rewire('././json-schema-to-markdown.js')
 const processTypeDefinition = parseRewire.__get__('processTypeDefinition')
-const formatParsedTypeRef = parseRewire.__get__('formatParsedTypeRef')
-const formatPropertyList = parseRewire.__get__('formatPropertyList')
+const formatParsedTypeRef = mdFormatter.formatParsedTypeRef
+const processPropertyList = parseRewire.__get__('processPropertyList')
 const processArray = parseRewire.__get__('processArray')
 const processPropType = parseRewire.__get__('processPropType')
 const mapProps = parseRewire.__get__('mapProps')
@@ -30,7 +31,7 @@ test('Type reference format', () => {
 
 test('test property list with single allOf entry', () => {
   expect(
-    formatPropertyList('name', {
+    processPropertyList('name', {
       allOf: [{ $ref: '#/definitions/StyleBase' }]
     })
   ).toBeDefined()
