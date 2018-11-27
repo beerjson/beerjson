@@ -74,10 +74,26 @@ FermentableAdditionType collects the attributes of each fermentable ingredient f
 "
 `;
 
-exports[`format oneOf property type should match snapshot 1`] = `" [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)"`;
+exports[`format oneOf property type should match snapshot 1`] = `
+"The schema defines the following types:
+
+## typeName 
+
+*no description yet*
+
+**typeName** is an object with these properties:
+
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)|  |
+
+"
+`;
 
 exports[`format simple type should match snapshot 1`] = `
-"## SpecificVolumeUnitType 
+"The schema defines the following types:
+
+## SpecificVolumeUnitType 
 
 *no description yet*
 
@@ -85,27 +101,25 @@ exports[`format simple type should match snapshot 1`] = `
 "
 `;
 
-exports[`format type with pattern should match snapshot 1`] = `"RegExp pattern: \`\\\\d{4}-\\\\d{2}-\\\\d{2}|\\\\d{4}-\\\\d{2}-\\\\d{2}T\\\\d{2}:\\\\d{2}:\\\\d{2}\`"`;
+exports[`format type with pattern should match snapshot 1`] = `
+"The schema defines the following types:
 
-exports[`processArray should match snapshot 1`] = `"array of [FermentableType](fermentable.json.md#fermentabletype)"`;
+## patternType 
 
-exports[`processTypeDefinition 1`] = `
-"## FermentableBase 
+*no description yet*
 
-FermentableBase provides unique properties to identify individual records of fermentable ingredients
+RegExp pattern: \`\\\\d{4}-\\\\d{2}-\\\\d{2}|\\\\d{4}-\\\\d{2}-\\\\d{2}T\\\\d{2}:\\\\d{2}:\\\\d{2}\`
+"
+`;
 
-**FermentableBase** is an object with these properties:
+exports[`processArray should match snapshot 1`] = `
+"The schema defines the following types:
 
-|Name|Required|Type|Description|
-|--|--|--|--|
-| **name** | ✅ | string|  |
-| **type** | ✅ | \`\\"dry extract\\"\`<br/>\`\\"extract\\"\`<br/>\`\\"grain\\"\`<br/>\`\\"sugar\\"\`<br/>\`\\"fruit\\"\`<br/>\`\\"juice\\"\`<br/>\`\\"honey\\"\`<br/>\`\\"other\\"\`|  |
-| **origin** |  | string|  |
-| **supplier** |  | string|  |
-| **grain_group** |  | \`\\"base\\"\`<br/>\`\\"caramel\\"\`<br/>\`\\"flaked\\"\`<br/>\`\\"roasted\\"\`<br/>\`\\"specialty\\"\`<br/>\`\\"smoked\\"\`<br/>\`\\"adjunct\\"\`|  |
-| **yield** | ✅ | [YieldType](#yieldtype)|  |
-| **color** | ✅ | [ColorType](measureable_units.json.md#colortype)|  |
+## name 
 
+*no description yet*
+
+array of [FermentableType](fermentable.json.md#fermentabletype)
 "
 `;
 
@@ -127,5 +141,16 @@ exports[`root schema docs 1`] = `
 | **equipments** |  | array of [EquipmentType](equipment.json.md#equipmenttype)| Provides necessary information for brewing equipment. |
 | **boil** |  | array of [BoilProcedureType](boil.json.md#boilproceduretype)| A collection of steps providing process information for common boil procedures. |
 | **packaging** |  | array of [PackagingProcedureType](packaging.json.md#packagingproceduretype)| A collection of steps providing process information for common packaging procedures. |
+"
+`;
+
+exports[`test property list with single allOf entry 1`] = `
+"The schema defines the following types:
+
+## name 
+
+*no description yet*
+
+undefined
 "
 `;
