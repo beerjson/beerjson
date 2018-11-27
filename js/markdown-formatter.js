@@ -1,4 +1,6 @@
 module.exports = {
+  addFileWrapper: str => str,
+
   addTypeWrapper: str =>
     str ? `The schema defines the following types:\n\n${str}` : '',
 

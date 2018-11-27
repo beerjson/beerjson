@@ -37,6 +37,6 @@ WaterType collects the attributes of a regional brewing water to store as record
 
 WaterAdditionType collects the attributes of each water addition for use in a recipe
 
-**WaterAdditionType** is an object with all properties from [WaterBase](#waterbase) and these additional properties:
+**WaterAdditionType** is an object with all properties from [WaterBase](#waterbase)
 
 

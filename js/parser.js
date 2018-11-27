@@ -91,7 +91,9 @@ const parser = formatter => schema => {
     return beerjson ? processPropertyList('beerjson', beerjson) : ''
   }
 
-  return formatRootSchema(schema) + formatDefinitions(schema)
+  return formatter.addFileWrapper(
+    formatRootSchema(schema) + formatDefinitions(schema)
+  )
 }
 
 module.exports = parser
