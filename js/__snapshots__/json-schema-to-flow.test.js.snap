@@ -13,6 +13,15 @@ exports[`regexp pattern should be rendered as str 1`] = `
 "
 `;
 
+exports[`required allOf property 1`] = `
+"    export type MiscellaneousAdditionType =  MiscellaneousBase & {|
+        timing?: TimingType,
+        amount:  | VolumeType | MassType | UnitType,
+    |}
+
+"
+`;
+
 exports[`root schema type 1`] = `
 "     export type BeerJSON = {|
         version: VersionType,

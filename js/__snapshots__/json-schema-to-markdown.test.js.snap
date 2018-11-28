@@ -46,7 +46,7 @@ FermentableAdditionType collects the attributes of each fermentable ingredient f
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **timing** |  | [TimingType](timing.json.md#timingtype)|  |
-| **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)|  |
+| **amount** | ✅ |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)|  |
 
 ## YieldType 
 
@@ -75,6 +75,22 @@ FermentableAdditionType collects the attributes of each fermentable ingredient f
 `;
 
 exports[`format oneOf property type should match snapshot 1`] = `
+"The schema defines the following types:
+
+## typeName 
+
+*no description yet*
+
+**typeName** is an object with these properties:
+
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)|  |
+
+"
+`;
+
+exports[`format oneOf property type should match snapshot 2`] = `
 "The schema defines the following types:
 
 ## typeName 

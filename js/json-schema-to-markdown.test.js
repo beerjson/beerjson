@@ -68,6 +68,30 @@ test('format oneOf property type should match snapshot', () => {
   ).toMatchSnapshot()
 })
 
+test('format oneOf property type should match snapshot', () => {
+  expect(
+    parse({
+      definitions: {
+        typeName: {
+          type: 'object',
+          properties: {
+            amount: {
+              oneOf: [
+                {
+                  $ref: 'measureable_units.json#/definitions/VolumeType'
+                },
+                {
+                  $ref: 'measureable_units.json#/definitions/MassType'
+                }
+              ]
+            }
+          }
+        }
+      }
+    })
+  ).toMatchSnapshot()
+})
+
 test('format simple type should match snapshot', () => {
   expect(
     parse({

@@ -58,3 +58,43 @@ test('regexp pattern should be rendered as str', () => {
     })
   ).toMatchSnapshot()
 })
+
+test('required allOf property', () => {
+  expect(
+    convert({
+      definitions: {
+        MiscellaneousAdditionType: {
+          type: 'object',
+          description:
+            'MiscellaneousAdditionType collects the attributes of each miscellaneous ingredient for use in a recipe',
+          allOf: [
+            {
+              $ref: '#/definitions/MiscellaneousBase'
+            },
+            {
+              properties: {
+                timing: {
+                  $ref: 'timing.json#/definitions/TimingType'
+                },
+                amount: {
+                  oneOf: [
+                    {
+                      $ref: 'measureable_units.json#/definitions/VolumeType'
+                    },
+                    {
+                      $ref: 'measureable_units.json#/definitions/MassType'
+                    },
+                    {
+                      $ref: 'measureable_units.json#/definitions/UnitType'
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          required: ['amount']
+        }
+      }
+    })
+  ).toMatchSnapshot()
+})

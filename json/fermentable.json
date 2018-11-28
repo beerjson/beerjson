@@ -109,10 +109,10 @@
                 }
               ]
             }
-          },
-          "required": ["amount"]
+          }
         }
-      ]
+      ],
+      "required": ["amount"]
     },
     "YieldType": {
       "type": "object",
