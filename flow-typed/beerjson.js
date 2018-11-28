@@ -2,40 +2,40 @@
 
 type BeerJSON = {
   version: VersionType,
-  fermentables: [FermentableType],
-  miscellaneous_ingredients: [MiscellaneousType],
-  hop_varieties: [VarietyInformation],
-  cultures: [CultureInformation],
-  profiles: [WaterType],
-  styles: [StyleType],
-  mashes: [MashProcedureType],
-  fermentations: [FermentationProcedureType],
-  recipes: [RecipeType],
-  equipments: [EquipmentType],
-  boil: [BoilProcedureType],
-  packaging: [PackagingProcedureType]
+  fermentables?: [FermentableType],
+  miscellaneous_ingredients?: [MiscellaneousType],
+  hop_varieties?: [VarietyInformation],
+  cultures?: [CultureInformation],
+  profiles?: [WaterType],
+  styles?: [StyleType],
+  mashes?: [MashProcedureType],
+  fermentations?: [FermentationProcedureType],
+  recipes?: [RecipeType],
+  equipments?: [EquipmentType],
+  boil?: [BoilProcedureType],
+  packaging?: [PackagingProcedureType]
 }
 type BoilProcedureType = {
-  name: string,
-  description: string,
-  notes: string,
+  name?: string,
+  description?: string,
+  notes?: string,
   pre_boil_size: VolumeType,
   boil_time: TimeType,
-  boil_steps: [BoilStepType]
+  boil_steps?: [BoilStepType]
 }
 
 type BoilStepType = {
   name: string,
-  description: string,
-  start_temperature: TemperatureType,
-  end_temperature: TemperatureType,
-  ramp_time: TimeType,
-  step_time: TimeType,
-  start_gravity: GravityType,
-  end_gravity: GravityType,
-  start_ph: AcidityType,
-  end_ph: AcidityType,
-  chilling_type: 'batch' | 'inline'
+  description?: string,
+  start_temperature?: TemperatureType,
+  end_temperature?: TemperatureType,
+  ramp_time?: TimeType,
+  step_time?: TimeType,
+  start_gravity?: GravityType,
+  end_gravity?: GravityType,
+  start_ph?: AcidityType,
+  end_ph?: AcidityType,
+  chilling_type?: 'batch' | 'inline'
 }
 
 type CultureBase = {
@@ -55,40 +55,40 @@ type CultureBase = {
     | 'spontaneous'
     | 'wine',
   form: 'liquid' | 'dry' | 'slant' | 'culture' | 'dregs',
-  laboratory: string,
-  product_id: string
+  laboratory?: string,
+  product_id?: string
 }
 
 type CultureInformation = CultureBase & {
-  temperature_range: TemperatureRangeType,
-  flocculation: QualitativeRangeType,
-  attenuation: PercentRangeType,
-  alcohol_tolerance: PercentType,
-  notes: string,
-  best_for: string,
-  max_reuse: integer,
-  inventory: CultureInventoryType
+  temperature_range?: TemperatureRangeType,
+  flocculation?: QualitativeRangeType,
+  attenuation?: PercentRangeType,
+  alcohol_tolerance?: PercentType,
+  notes?: string,
+  best_for?: string,
+  max_reuse?: integer,
+  inventory?: CultureInventoryType
 }
 
 type CultureAdditionType = CultureBase & {
-  attenuation: PercentType,
-  times_cultured: integer,
-  timing: TimingType,
-  cell_count_billions: integer,
-  amount: VolumeType | MassType | UnitType
+  attenuation?: PercentType,
+  times_cultured?: integer,
+  timing?: TimingType,
+  cell_count_billions?: integer,
+  amount?: VolumeType | MassType | UnitType
 }
 
 type CultureInventoryType = {
-  liquid: VolumeType,
-  dry: MassType,
-  slant: VolumeType,
-  culture: VolumeType
+  liquid?: VolumeType,
+  dry?: MassType,
+  slant?: VolumeType,
+  culture?: VolumeType
 }
 
 type EquipmentBase = {
   name: string,
   type: string,
-  form:
+  form?:
     | 'HLT'
     | 'Mash Tun'
     | 'Lauter Tun'
@@ -101,12 +101,12 @@ type EquipmentBase = {
 
 type EquipmentType = EquipmentBase & {
   loss: VolumeType,
-  grain_absorption_rate: SpecificVolumeType,
-  boil_rate_per_hour: VolumeType,
-  drain_rate_per_minute: VolumeType,
-  weight: MassType,
-  specific_heat: SpecificHeatType,
-  notes: string
+  grain_absorption_rate?: SpecificVolumeType,
+  boil_rate_per_hour?: VolumeType,
+  drain_rate_per_minute?: VolumeType,
+  weight?: MassType,
+  specific_heat?: SpecificHeatType,
+  notes?: string
 }
 
 type FermentableBase = {
@@ -120,9 +120,9 @@ type FermentableBase = {
     | 'juice'
     | 'honey'
     | 'other',
-  origin: string,
-  supplier: string,
-  grain_group:
+  origin?: string,
+  supplier?: string,
+  grain_group?:
     | 'base'
     | 'caramel'
     | 'flaked'
@@ -135,65 +135,65 @@ type FermentableBase = {
 }
 
 type FermentableType = FermentableBase & {
-  notes: string,
-  moisture: PercentType,
-  alpha_amylase: number,
-  diastatic_power: DiastaticPowerType,
-  protein: PercentType,
-  soluble_nitrogen_ratio: number,
-  max_in_batch: PercentType,
-  recommend_mash: boolean,
-  inventory: FermentableInventoryType
+  notes?: string,
+  moisture?: PercentType,
+  alpha_amylase?: number,
+  diastatic_power?: DiastaticPowerType,
+  protein?: PercentType,
+  soluble_nitrogen_ratio?: number,
+  max_in_batch?: PercentType,
+  recommend_mash?: boolean,
+  inventory?: FermentableInventoryType
 }
 
 type FermentableAdditionType = FermentableBase & {
-  timing: TimingType,
-  amount: VolumeType | MassType
+  timing?: TimingType,
+  amount?: VolumeType | MassType
 }
 
 type YieldType = {
-  fine_grind: PercentType,
-  coarse_grind: PercentType,
-  fine_coarse_difference: PercentType,
-  potential: GravityType
+  fine_grind?: PercentType,
+  coarse_grind?: PercentType,
+  fine_coarse_difference?: PercentType,
+  potential?: GravityType
 }
 
 type FermentableInventoryType = {
-  amount: VolumeType | MassType
+  amount?: VolumeType | MassType
 }
 
 type FermentationProcedureType = {
   name: string,
-  type: string,
-  description: string,
-  notes: string,
+  type?: string,
+  description?: string,
+  notes?: string,
   fermentation_steps: [FermentationStepType]
 }
 
 type FermentationStepType = {
   name: string,
-  description: string,
-  start_temperature: TemperatureType,
-  end_temperature: TemperatureType,
-  step_time: TimeType,
-  free_rise: boolean,
-  start_gravity: GravityType,
-  end_gravity: GravityType,
-  start_ph: AcidityType,
-  end_ph: AcidityType,
-  vessel: string
+  description?: string,
+  start_temperature?: TemperatureType,
+  end_temperature?: TemperatureType,
+  step_time?: TimeType,
+  free_rise?: boolean,
+  start_gravity?: GravityType,
+  end_gravity?: GravityType,
+  start_ph?: AcidityType,
+  end_ph?: AcidityType,
+  vessel?: string
 }
 
 type HopVarietyBase = {
   name: string,
-  origin: string,
-  form: 'extract' | 'leaf' | 'leaf (wet)' | 'pellet' | 'powder' | 'plug',
+  origin?: string,
+  form?: 'extract' | 'leaf' | 'leaf (wet)' | 'pellet' | 'powder' | 'plug',
   alpha_acid_units: number,
-  beta_acid_units: number
+  beta_acid_units?: number
 }
 
 type VarietyInformation = HopVarietyBase & {
-  type:
+  type?:
     | 'aroma'
     | 'bittering'
     | 'flavor'
@@ -201,50 +201,50 @@ type VarietyInformation = HopVarietyBase & {
     | 'bittering/flavor'
     | 'aroma/flavor'
     | 'aroma/bittering/flavor',
-  notes: string,
-  percent_lost: PercentType,
-  substitutes: string,
-  oil_content: OilContentType,
-  inventory: HopInventoryType
+  notes?: string,
+  percent_lost?: PercentType,
+  substitutes?: string,
+  oil_content?: OilContentType,
+  inventory?: HopInventoryType
 }
 
 type HopAdditionType = HopVarietyBase & {
-  timing: TimingType,
-  amount: VolumeType | MassType
+  timing?: TimingType,
+  amount?: VolumeType | MassType
 }
 
 type IBUEstimateType = {
-  method: IBUMethodType
+  method?: IBUMethodType
 }
 
 type IBUMethodType = 'Rager' | 'Tinseth' | 'Garetz' | 'Other'
 type OilContentType = {
-  total_oil_ml_per_100g: number,
-  humulene: PercentType,
-  caryophyllene: PercentType,
-  cohumulone: PercentType,
-  myrcene: PercentType,
-  farnesene: PercentType,
-  geraniol: PercentType,
-  b_pinene: PercentType,
-  linalool: PercentType,
-  limonene: PercentType,
-  nerol: PercentType,
-  pinene: PercentType,
-  polyphenols: PercentType,
-  xanthohumol: PercentType
+  total_oil_ml_per_100g?: number,
+  humulene?: PercentType,
+  caryophyllene?: PercentType,
+  cohumulone?: PercentType,
+  myrcene?: PercentType,
+  farnesene?: PercentType,
+  geraniol?: PercentType,
+  b_pinene?: PercentType,
+  linalool?: PercentType,
+  limonene?: PercentType,
+  nerol?: PercentType,
+  pinene?: PercentType,
+  polyphenols?: PercentType,
+  xanthohumol?: PercentType
 }
 
 type HopInventoryType = {
-  amount: VolumeType | MassType
+  amount?: VolumeType | MassType
 }
 
 type MashProcedureType = {
   name: string,
   grain_temperature: TemperatureType,
-  sparge_temperature: TemperatureType,
-  pH: AcidityType,
-  notes: string,
+  sparge_temperature?: TemperatureType,
+  pH?: AcidityType,
+  notes?: string,
   mash_steps: [MashStepType]
 }
 
@@ -258,16 +258,16 @@ type MashStepType = {
     | 'souring wort'
     | 'drain mash tun'
     | 'sparge',
-  amount: VolumeType,
+  amount?: VolumeType,
   step_temperature: TemperatureType,
   step_time: TimeType,
-  ramp_time: TimeType,
-  end_temperature: TemperatureType,
-  description: string,
-  water_grain_ratio: SpecificVolumeType,
-  infuse_temperature: TemperatureType,
-  start_pH: AcidityType,
-  end_pH: AcidityType
+  ramp_time?: TimeType,
+  end_temperature?: TemperatureType,
+  description?: string,
+  water_grain_ratio?: SpecificVolumeType,
+  infuse_temperature?: TemperatureType,
+  start_pH?: AcidityType,
+  end_pH?: AcidityType
 }
 
 type VolumeType = {
@@ -443,14 +443,14 @@ type MiscellaneousBase = {
 }
 
 type MiscellaneousType = MiscellaneousBase & {
-  use_for: string,
-  notes: string,
-  inventory: MiscellaneousInventoryType
+  use_for?: string,
+  notes?: string,
+  inventory?: MiscellaneousInventoryType
 }
 
 type MiscellaneousAdditionType = MiscellaneousBase & {
-  timing: TimingType,
-  amount: VolumeType | MassType | UnitType
+  timing?: TimingType,
+  amount?: VolumeType | MassType | UnitType
 }
 
 type MiscellaneousInventoryType = {
@@ -459,68 +459,68 @@ type MiscellaneousInventoryType = {
 
 type PackagingProcedureType = {
   name: string,
-  packaged_volume: VolumeType,
-  description: string,
-  notes: string,
-  packaging_vessels: [PackagingVesselType]
+  packaged_volume?: VolumeType,
+  description?: string,
+  notes?: string,
+  packaging_vessels?: [PackagingVesselType]
 }
 
 type PackagingVesselType = {
   name: string,
-  type: 'keg' | 'bottle' | 'cask' | 'tank' | 'firkin',
-  description: string,
-  package_date: DateType,
-  start_temperature: TemperatureType,
-  end_temperature: TemperatureType,
-  step_time: TimeType,
-  start_gravity: GravityType,
-  end_gravity: GravityType,
-  start_ph: AcidityType,
-  end_ph: AcidityType,
-  carbonation: number,
-  vessel_volume: VolumeType,
-  vessel_quantity: number
+  type?: 'keg' | 'bottle' | 'cask' | 'tank' | 'firkin',
+  description?: string,
+  package_date?: DateType,
+  start_temperature?: TemperatureType,
+  end_temperature?: TemperatureType,
+  step_time?: TimeType,
+  start_gravity?: GravityType,
+  end_gravity?: GravityType,
+  start_ph?: AcidityType,
+  end_ph?: AcidityType,
+  carbonation?: number,
+  vessel_volume?: VolumeType,
+  vessel_quantity?: number
 }
 
 type RecipeType = {
   name: string,
   type: 'extract' | 'partial mash' | 'all grain',
   author: string,
-  coauthor: string,
-  created: DateType,
+  coauthor?: string,
+  created?: DateType,
   batch_size: VolumeType,
   efficiency: EfficiencyType,
-  style: RecipeStyleType,
+  style?: RecipeStyleType,
   ingredients: IngredientsType,
-  mash: MashProcedureType,
-  notes: string,
-  original_gravity: GravityType,
-  final_gravity: GravityType,
-  alcohol_by_volume: PercentType,
-  ibu_estimate: IBUEstimateType,
-  color_estimate: ColorType,
-  beer_pH: AcidityType,
-  carbonation: number,
-  fermentation: FermentationProcedureType,
-  packaging: PackagingProcedureType,
-  boil: BoilProcedureType,
-  taste: TasteType,
-  calories_per_pint: number
+  mash?: MashProcedureType,
+  notes?: string,
+  original_gravity?: GravityType,
+  final_gravity?: GravityType,
+  alcohol_by_volume?: PercentType,
+  ibu_estimate?: IBUEstimateType,
+  color_estimate?: ColorType,
+  beer_pH?: AcidityType,
+  carbonation?: number,
+  fermentation?: FermentationProcedureType,
+  packaging?: PackagingProcedureType,
+  boil?: BoilProcedureType,
+  taste?: TasteType,
+  calories_per_pint?: number
 }
 
 type EfficiencyType = {
-  conversion: PercentType,
-  lauter: PercentType,
-  mash: PercentType,
+  conversion?: PercentType,
+  lauter?: PercentType,
+  mash?: PercentType,
   brewhouse: PercentType
 }
 
 type IngredientsType = {
   fermentable_additions: [FermentableAdditionType],
-  hop_additions: [HopAdditionType],
-  miscellaneous_additions: [MiscellaneousAdditionType],
-  culture_additions: [CultureAdditionType],
-  water_additions: [WaterAdditionType]
+  hop_additions?: [HopAdditionType],
+  miscellaneous_additions?: [MiscellaneousAdditionType],
+  culture_additions?: [CultureAdditionType],
+  water_additions?: [WaterAdditionType]
 }
 
 type TasteType = {
@@ -531,27 +531,27 @@ type TasteType = {
 type StyleBase = {
   name: string,
   category: string,
-  category_number: integer,
-  style_letter: string,
+  category_number?: integer,
+  style_letter?: string,
   style_guide: string,
   type: StyleCategories
 }
 
 type StyleType = StyleBase & {
-  original_gravity: GravityRangeType,
-  final_gravity: GravityRangeType,
-  international_bitterness_units: BitternessRangeType,
-  color: ColorRangeType,
-  carbonation: CarbonationRangeType,
-  alcohol_by_volume: PercentRangeType,
-  notes: string,
-  aroma: string,
-  appearance: string,
-  flavor: string,
-  mouthfeel: string,
-  overall_impression: string,
-  ingredients: string,
-  examples: string
+  original_gravity?: GravityRangeType,
+  final_gravity?: GravityRangeType,
+  international_bitterness_units?: BitternessRangeType,
+  color?: ColorRangeType,
+  carbonation?: CarbonationRangeType,
+  alcohol_by_volume?: PercentRangeType,
+  notes?: string,
+  aroma?: string,
+  appearance?: string,
+  flavor?: string,
+  mouthfeel?: string,
+  overall_impression?: string,
+  ingredients?: string,
+  examples?: string
 }
 
 type RecipeStyleType = StyleBase
@@ -570,25 +570,25 @@ type UseType =
   | 'add_to_fermentation'
   | 'add_to_package'
 type TimingType = {
-  time: TimeType,
-  duration: TimeType,
-  continuous: boolean,
-  specific_gravity: GravityType,
-  pH: AcidityType,
-  step: integer,
-  use: UseType
+  time?: TimeType,
+  duration?: TimeType,
+  continuous?: boolean,
+  specific_gravity?: GravityType,
+  pH?: AcidityType,
+  step?: integer,
+  use?: UseType
 }
 
 type WaterBase = {
   name: string,
   calcium: ConcentrationType,
   bicarbonate: ConcentrationType,
-  carbonate: ConcentrationType,
-  potassium: ConcentrationType,
-  iron: ConcentrationType,
-  nitrate: ConcentrationType,
-  nitrite: ConcentrationType,
-  flouride: ConcentrationType,
+  carbonate?: ConcentrationType,
+  potassium?: ConcentrationType,
+  iron?: ConcentrationType,
+  nitrate?: ConcentrationType,
+  nitrite?: ConcentrationType,
+  flouride?: ConcentrationType,
   sulfate: ConcentrationType,
   chloride: ConcentrationType,
   sodium: ConcentrationType,
@@ -596,8 +596,8 @@ type WaterBase = {
 }
 
 type WaterType = WaterBase & {
-  pH: number,
-  notes: string
+  pH?: number,
+  notes?: string
 }
 
 type WaterAdditionType = WaterBase

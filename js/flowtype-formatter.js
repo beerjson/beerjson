@@ -33,5 +33,5 @@ module.exports = {
     '❌ Cannot generate document for a nested type! ' + propType.type,
 
   formatPropDefinition: (propName, required, formattedPropType, description) =>
-    `${tab}${tab}${propName}: ${formattedPropType},\n`
+    `${tab}${tab}${propName}${required ? '' : '?'}: ${formattedPropType},\n`
 }
