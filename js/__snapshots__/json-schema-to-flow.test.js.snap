@@ -2,7 +2,7 @@
 
 exports[`enum format 1`] = `
 "    type EnumType = {
-        enumProp:  | \\"a\\" | \\"b\\",
+        enumProp?:  | \\"a\\" | \\"b\\",
     }
 
 "
@@ -16,18 +16,18 @@ exports[`regexp pattern should be rendered as comment 1`] = `
 exports[`root schema type 1`] = `
 "     type BeerJSON = {
         version: VersionType,
-        fermentables: [FermentableType],
-        miscellaneous_ingredients: [MiscellaneousType],
-        hop_varieties: [VarietyInformation],
-        cultures: [CultureInformation],
-        profiles: [WaterType],
-        styles: [StyleType],
-        mashes: [MashProcedureType],
-        fermentations: [FermentationProcedureType],
-        recipes: [RecipeType],
-        equipments: [EquipmentType],
-        boil: [BoilProcedureType],
-        packaging: [PackagingProcedureType],
+        fermentables?: [FermentableType],
+        miscellaneous_ingredients?: [MiscellaneousType],
+        hop_varieties?: [VarietyInformation],
+        cultures?: [CultureInformation],
+        profiles?: [WaterType],
+        styles?: [StyleType],
+        mashes?: [MashProcedureType],
+        fermentations?: [FermentationProcedureType],
+        recipes?: [RecipeType],
+        equipments?: [EquipmentType],
+        boil?: [BoilProcedureType],
+        packaging?: [PackagingProcedureType],
     }
 "
 `;

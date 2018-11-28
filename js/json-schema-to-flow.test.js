@@ -16,8 +16,8 @@ test('simple schema converted to flow', () => {
     })
   ).toBe(
     `    type ObjType = {
-        strProp: string,
-        numberProp: number,
+        strProp?: string,
+        numberProp?: number,
     }
 
 `
