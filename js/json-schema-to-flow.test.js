@@ -15,10 +15,10 @@ test('simple schema converted to flow', () => {
       }
     })
   ).toBe(
-    `    export type ObjType = {
+    `    export type ObjType = {|
         strProp?: string,
         numberProp?: number,
-    }
+    |}
 
 `
   )

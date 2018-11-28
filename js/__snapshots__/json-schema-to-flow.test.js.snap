@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`enum format 1`] = `
-"    export type EnumType = {
+"    export type EnumType = {|
         enumProp?:  | \\"a\\" | \\"b\\",
-    }
+    |}
 
 "
 `;
@@ -14,7 +14,7 @@ exports[`regexp pattern should be rendered as comment 1`] = `
 `;
 
 exports[`root schema type 1`] = `
-"     export type BeerJSON = {
+"     export type BeerJSON = {|
         version: VersionType,
         fermentables?: [FermentableType],
         miscellaneous_ingredients?: [MiscellaneousType],
@@ -28,6 +28,6 @@ exports[`root schema type 1`] = `
         equipments?: [EquipmentType],
         boil?: [BoilProcedureType],
         packaging?: [PackagingProcedureType],
-    }
+    |}
 "
 `;

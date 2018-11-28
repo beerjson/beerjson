@@ -1,6 +1,6 @@
 // @flow
 
-export type BeerJSON = {
+export type BeerJSON = {|
   version: VersionType,
   fermentables?: [FermentableType],
   miscellaneous_ingredients?: [MiscellaneousType],
@@ -14,17 +14,17 @@ export type BeerJSON = {
   equipments?: [EquipmentType],
   boil?: [BoilProcedureType],
   packaging?: [PackagingProcedureType]
-}
-export type BoilProcedureType = {
+|}
+export type BoilProcedureType = {|
   name?: string,
   description?: string,
   notes?: string,
   pre_boil_size: VolumeType,
   boil_time: TimeType,
   boil_steps?: [BoilStepType]
-}
+|}
 
-export type BoilStepType = {
+export type BoilStepType = {|
   name: string,
   description?: string,
   start_temperature?: TemperatureType,
@@ -36,9 +36,9 @@ export type BoilStepType = {
   start_ph?: AcidityType,
   end_ph?: AcidityType,
   chilling_type?: 'batch' | 'inline'
-}
+|}
 
-export type CultureBase = {
+export type CultureBase = {|
   name: string,
   type:
     | 'ale'
@@ -57,9 +57,9 @@ export type CultureBase = {
   form: 'liquid' | 'dry' | 'slant' | 'culture' | 'dregs',
   laboratory?: string,
   product_id?: string
-}
+|}
 
-export type CultureInformation = CultureBase & {
+export type CultureInformation = CultureBase & {|
   temperature_range?: TemperatureRangeType,
   flocculation?: QualitativeRangeType,
   attenuation?: PercentRangeType,
@@ -68,24 +68,24 @@ export type CultureInformation = CultureBase & {
   best_for?: string,
   max_reuse?: integer,
   inventory?: CultureInventoryType
-}
+|}
 
-export type CultureAdditionType = CultureBase & {
+export type CultureAdditionType = CultureBase & {|
   attenuation?: PercentType,
   times_cultured?: integer,
   timing?: TimingType,
   cell_count_billions?: integer,
   amount?: VolumeType | MassType | UnitType
-}
+|}
 
-export type CultureInventoryType = {
+export type CultureInventoryType = {|
   liquid?: VolumeType,
   dry?: MassType,
   slant?: VolumeType,
   culture?: VolumeType
-}
+|}
 
-export type EquipmentBase = {
+export type EquipmentBase = {|
   name: string,
   type: string,
   form?:
@@ -97,9 +97,9 @@ export type EquipmentBase = {
     | 'Aging Vessel'
     | 'Packaging Vessel',
   maximum_volume: VolumeType
-}
+|}
 
-export type EquipmentType = EquipmentBase & {
+export type EquipmentType = EquipmentBase & {|
   loss: VolumeType,
   grain_absorption_rate?: SpecificVolumeType,
   boil_rate_per_hour?: VolumeType,
@@ -107,9 +107,9 @@ export type EquipmentType = EquipmentBase & {
   weight?: MassType,
   specific_heat?: SpecificHeatType,
   notes?: string
-}
+|}
 
-export type FermentableBase = {
+export type FermentableBase = {|
   name: string,
   type:
     | 'dry extract'
@@ -132,9 +132,9 @@ export type FermentableBase = {
     | 'adjunct',
   yield: YieldType,
   color: ColorType
-}
+|}
 
-export type FermentableType = FermentableBase & {
+export type FermentableType = FermentableBase & {|
   notes?: string,
   moisture?: PercentType,
   alpha_amylase?: number,
@@ -144,33 +144,33 @@ export type FermentableType = FermentableBase & {
   max_in_batch?: PercentType,
   recommend_mash?: boolean,
   inventory?: FermentableInventoryType
-}
+|}
 
-export type FermentableAdditionType = FermentableBase & {
+export type FermentableAdditionType = FermentableBase & {|
   timing?: TimingType,
   amount?: VolumeType | MassType
-}
+|}
 
-export type YieldType = {
+export type YieldType = {|
   fine_grind?: PercentType,
   coarse_grind?: PercentType,
   fine_coarse_difference?: PercentType,
   potential?: GravityType
-}
+|}
 
-export type FermentableInventoryType = {
+export type FermentableInventoryType = {|
   amount?: VolumeType | MassType
-}
+|}
 
-export type FermentationProcedureType = {
+export type FermentationProcedureType = {|
   name: string,
   type?: string,
   description?: string,
   notes?: string,
   fermentation_steps: [FermentationStepType]
-}
+|}
 
-export type FermentationStepType = {
+export type FermentationStepType = {|
   name: string,
   description?: string,
   start_temperature?: TemperatureType,
@@ -182,17 +182,17 @@ export type FermentationStepType = {
   start_ph?: AcidityType,
   end_ph?: AcidityType,
   vessel?: string
-}
+|}
 
-export type HopVarietyBase = {
+export type HopVarietyBase = {|
   name: string,
   origin?: string,
   form?: 'extract' | 'leaf' | 'leaf (wet)' | 'pellet' | 'powder' | 'plug',
   alpha_acid_units: number,
   beta_acid_units?: number
-}
+|}
 
-export type VarietyInformation = HopVarietyBase & {
+export type VarietyInformation = HopVarietyBase & {|
   type?:
     | 'aroma'
     | 'bittering'
@@ -206,19 +206,19 @@ export type VarietyInformation = HopVarietyBase & {
   substitutes?: string,
   oil_content?: OilContentType,
   inventory?: HopInventoryType
-}
+|}
 
-export type HopAdditionType = HopVarietyBase & {
+export type HopAdditionType = HopVarietyBase & {|
   timing?: TimingType,
   amount?: VolumeType | MassType
-}
+|}
 
-export type IBUEstimateType = {
+export type IBUEstimateType = {|
   method?: IBUMethodType
-}
+|}
 
 export type IBUMethodType = 'Rager' | 'Tinseth' | 'Garetz' | 'Other'
-export type OilContentType = {
+export type OilContentType = {|
   total_oil_ml_per_100g?: number,
   humulene?: PercentType,
   caryophyllene?: PercentType,
@@ -233,22 +233,22 @@ export type OilContentType = {
   pinene?: PercentType,
   polyphenols?: PercentType,
   xanthohumol?: PercentType
-}
+|}
 
-export type HopInventoryType = {
+export type HopInventoryType = {|
   amount?: VolumeType | MassType
-}
+|}
 
-export type MashProcedureType = {
+export type MashProcedureType = {|
   name: string,
   grain_temperature: TemperatureType,
   sparge_temperature?: TemperatureType,
   pH?: AcidityType,
   notes?: string,
   mash_steps: [MashStepType]
-}
+|}
 
-export type MashStepType = {
+export type MashStepType = {|
   name: string,
   type:
     | 'infusion'
@@ -268,112 +268,112 @@ export type MashStepType = {
   infuse_temperature?: TemperatureType,
   start_pH?: AcidityType,
   end_pH?: AcidityType
-}
+|}
 
-export type VolumeType = {
+export type VolumeType = {|
   unit: VolumeUnitType,
   value: number
-}
+|}
 
-export type MassType = {
+export type MassType = {|
   unit: MassUnitType,
   value: number
-}
+|}
 
-export type DiastaticPowerType = {
+export type DiastaticPowerType = {|
   unit: DiastaticPowerUnitType,
   value: number
-}
+|}
 
-export type TemperatureType = {
+export type TemperatureType = {|
   unit: TemperatureUnitType,
   value: number
-}
+|}
 
-export type PressureType = {
+export type PressureType = {|
   unit: PressureUnitType,
   value: number
-}
+|}
 
-export type AcidityType = {
+export type AcidityType = {|
   unit: AcidityUnitType,
   value: number
-}
+|}
 
-export type TimeType = {
+export type TimeType = {|
   unit: TimeUnitType,
   value: number
-}
+|}
 
-export type ColorType = {
+export type ColorType = {|
   unit: ColorUnitType,
   value: number
-}
+|}
 
-export type CarbonationType = {
+export type CarbonationType = {|
   unit: CarbonationUnitType,
   value: number
-}
+|}
 
-export type BitternessType = {
+export type BitternessType = {|
   unit: BitternessUnitType,
   value: number
-}
+|}
 
-export type GravityType = {
+export type GravityType = {|
   unit: GravityUnitType,
   value: number
-}
+|}
 
-export type SpecificHeatType = {
+export type SpecificHeatType = {|
   unit: SpecificHeatUnitType,
   value: number
-}
+|}
 
-export type ConcentrationType = {
+export type ConcentrationType = {|
   unit: ConcentrationUnitType,
   value: number
-}
+|}
 
-export type SpecificVolumeType = {
+export type SpecificVolumeType = {|
   unit: SpecificVolumeUnitType,
   value: number
-}
+|}
 
-export type UnitType = {
+export type UnitType = {|
   unit: UnitUnitType,
   value: number
-}
+|}
 
-export type CarbonationRangeType = {
+export type CarbonationRangeType = {|
   minimum: CarbonationType,
   maximum: CarbonationType
-}
+|}
 
-export type BitternessRangeType = {
+export type BitternessRangeType = {|
   minimum: BitternessType,
   maximum: BitternessType
-}
+|}
 
-export type TemperatureRangeType = {
+export type TemperatureRangeType = {|
   minimum: TemperatureType,
   maximum: TemperatureType
-}
+|}
 
-export type ColorRangeType = {
+export type ColorRangeType = {|
   minimum: ColorType,
   maximum: ColorType
-}
+|}
 
-export type GravityRangeType = {
+export type GravityRangeType = {|
   minimum: GravityType,
   maximum: GravityType
-}
+|}
 
-export type PercentRangeType = {
+export type PercentRangeType = {|
   minimum: PercentType,
   maximum: PercentType
-}
+|}
 
 export type VolumeUnitType =
   | 'ml'
@@ -422,10 +422,10 @@ export type SpecificVolumeUnitType =
   | 'ft^3/lb'
 export type UnitUnitType = '1' | 'unit' | 'each' | 'dimensionless'
 export type DateType = string
-export type PercentType = {
+export type PercentType = {|
   unit: PercentUnitType,
   value: number
-}
+|}
 
 export type PercentUnitType = '%'
 export type QualitativeRangeType =
@@ -437,7 +437,7 @@ export type QualitativeRangeType =
   | 'high'
   | 'very high'
 export type VersionType = number
-export type MiscellaneousBase = {
+export type MiscellaneousBase = {|
   name: string,
   type:
     | 'spice'
@@ -447,32 +447,32 @@ export type MiscellaneousBase = {
     | 'flavor'
     | 'wood'
     | 'other'
-}
+|}
 
-export type MiscellaneousType = MiscellaneousBase & {
+export type MiscellaneousType = MiscellaneousBase & {|
   use_for?: string,
   notes?: string,
   inventory?: MiscellaneousInventoryType
-}
+|}
 
-export type MiscellaneousAdditionType = MiscellaneousBase & {
+export type MiscellaneousAdditionType = MiscellaneousBase & {|
   timing?: TimingType,
   amount?: VolumeType | MassType | UnitType
-}
+|}
 
-export type MiscellaneousInventoryType = {
+export type MiscellaneousInventoryType = {|
   amount: VolumeType | MassType | UnitType
-}
+|}
 
-export type PackagingProcedureType = {
+export type PackagingProcedureType = {|
   name: string,
   packaged_volume?: VolumeType,
   description?: string,
   notes?: string,
   packaging_vessels?: [PackagingVesselType]
-}
+|}
 
-export type PackagingVesselType = {
+export type PackagingVesselType = {|
   name: string,
   type?: 'keg' | 'bottle' | 'cask' | 'tank' | 'firkin',
   description?: string,
@@ -487,9 +487,9 @@ export type PackagingVesselType = {
   carbonation?: number,
   vessel_volume?: VolumeType,
   vessel_quantity?: number
-}
+|}
 
-export type RecipeType = {
+export type RecipeType = {|
   name: string,
   type: 'extract' | 'partial mash' | 'all grain',
   author: string,
@@ -513,38 +513,38 @@ export type RecipeType = {
   boil?: BoilProcedureType,
   taste?: TasteType,
   calories_per_pint?: number
-}
+|}
 
-export type EfficiencyType = {
+export type EfficiencyType = {|
   conversion?: PercentType,
   lauter?: PercentType,
   mash?: PercentType,
   brewhouse: PercentType
-}
+|}
 
-export type IngredientsType = {
+export type IngredientsType = {|
   fermentable_additions: [FermentableAdditionType],
   hop_additions?: [HopAdditionType],
   miscellaneous_additions?: [MiscellaneousAdditionType],
   culture_additions?: [CultureAdditionType],
   water_additions?: [WaterAdditionType]
-}
+|}
 
-export type TasteType = {
+export type TasteType = {|
   notes: string,
   rating: number
-}
+|}
 
-export type StyleBase = {
+export type StyleBase = {|
   name: string,
   category: string,
   category_number?: integer,
   style_letter?: string,
   style_guide: string,
   type: StyleCategories
-}
+|}
 
-export type StyleType = StyleBase & {
+export type StyleType = StyleBase & {|
   original_gravity?: GravityRangeType,
   final_gravity?: GravityRangeType,
   international_bitterness_units?: BitternessRangeType,
@@ -559,7 +559,7 @@ export type StyleType = StyleBase & {
   overall_impression?: string,
   ingredients?: string,
   examples?: string
-}
+|}
 
 export type RecipeStyleType = StyleBase
 
@@ -576,7 +576,7 @@ export type UseType =
   | 'add_to_boil'
   | 'add_to_fermentation'
   | 'add_to_package'
-export type TimingType = {
+export type TimingType = {|
   time?: TimeType,
   duration?: TimeType,
   continuous?: boolean,
@@ -584,9 +584,9 @@ export type TimingType = {
   pH?: AcidityType,
   step?: integer,
   use?: UseType
-}
+|}
 
-export type WaterBase = {
+export type WaterBase = {|
   name: string,
   calcium: ConcentrationType,
   bicarbonate: ConcentrationType,
@@ -600,11 +600,11 @@ export type WaterBase = {
   chloride: ConcentrationType,
   sodium: ConcentrationType,
   magnesium: ConcentrationType
-}
+|}
 
-export type WaterType = WaterBase & {
+export type WaterType = WaterBase & {|
   pH?: number,
   notes?: string
-}
+|}
 
 export type WaterAdditionType = WaterBase

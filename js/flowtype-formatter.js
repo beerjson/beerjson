@@ -7,7 +7,7 @@ module.exports = {
   formatTypeDefinition: (typeName, typeDef, formattedDef) =>
     `${tab}export type ${typeName} = ${formattedDef}\n`,
 
-  addPropListWrapper: str => (str ? `{\n${str}${tab}}\n` : ''),
+  addPropListWrapper: str => (str ? `{|\n${str}${tab}|}\n` : ''),
 
   formatEnum: enumValues =>
     enumValues.reduce((str, val) => str + ` | "${val}"`, ''),
