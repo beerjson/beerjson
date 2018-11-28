@@ -1,5 +1,7 @@
 const tab = '    '
 
+const formatInt = type => (type == 'integer' ? 'number' : type)
+
 module.exports = {
   addRootWrapper: str => `${tab} export type BeerJSON = ${str}`,
   addTypeWrapper: str => (str ? `${str}` : ''),
@@ -33,5 +35,7 @@ module.exports = {
     '❌ Cannot generate document for a nested type! ' + propType.type,
 
   formatPropDefinition: (propName, required, formattedPropType, description) =>
-    `${tab}${tab}${propName}${required ? '' : '?'}: ${formattedPropType},\n`
+    `${tab}${tab}${propName}${required ? '' : '?'}: ${formatInt(
+      formattedPropType
+    )},\n`
 }

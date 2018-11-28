@@ -9,7 +9,8 @@ test('simple schema converted to flow', () => {
           type: 'object',
           properties: {
             strProp: { type: 'string' },
-            numberProp: { type: 'number' }
+            numberProp: { type: 'number' },
+            intProp: { type: 'integer' }
           }
         }
       }
@@ -18,6 +19,7 @@ test('simple schema converted to flow', () => {
     `    export type ObjType = {|
         strProp?: string,
         numberProp?: number,
+        intProp?: number,
     |}
 
 `

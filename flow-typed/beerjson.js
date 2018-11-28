@@ -66,15 +66,15 @@ export type CultureInformation = CultureBase & {|
   alcohol_tolerance?: PercentType,
   notes?: string,
   best_for?: string,
-  max_reuse?: integer,
+  max_reuse?: number,
   inventory?: CultureInventoryType
 |}
 
 export type CultureAdditionType = CultureBase & {|
   attenuation?: PercentType,
-  times_cultured?: integer,
+  times_cultured?: number,
   timing?: TimingType,
-  cell_count_billions?: integer,
+  cell_count_billions?: number,
   amount?: VolumeType | MassType | UnitType
 |}
 
@@ -538,7 +538,7 @@ export type TasteType = {|
 export type StyleBase = {|
   name: string,
   category: string,
-  category_number?: integer,
+  category_number?: number,
   style_letter?: string,
   style_guide: string,
   type: StyleCategories
@@ -582,7 +582,7 @@ export type TimingType = {|
   continuous?: boolean,
   specific_gravity?: GravityType,
   pH?: AcidityType,
-  step?: integer,
+  step?: number,
   use?: UseType
 |}
 
