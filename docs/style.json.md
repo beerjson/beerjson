@@ -42,7 +42,9 @@ StyleType provide information for Style categorization
 
 RecipeStyleType defines style information stored in a recipe record
 
-undefined
+**RecipeStyleType** is an object with all properties from [StyleBase](#stylebase)
+
+
 ## StyleCategories 
 
 *no description yet*

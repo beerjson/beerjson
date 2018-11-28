@@ -25,14 +25,14 @@ const parser = formatter => schema => {
     formatter.formatPropDefinition(
       propName,
       requiredList.includes(propName),
-      processPropType(propDef),
+      processPropType(propName, propDef),
       propDef.description
     )
 
   const processSimpleTypeDefinition = (typeName, typeDef) =>
-    processPropType(typeDef)
+    processPropType(typeName, typeDef)
 
-  const processPropType = propType => {
+  const processPropType = (name, propType) => {
     if (propType.enum) return formatter.formatEnum(propType.enum)
     if (propType.type === 'array') return processArray(propType.items)
     if (propType.type === 'object') return formatter.formatNestedType(propType)
@@ -40,6 +40,8 @@ const parser = formatter => schema => {
     if (propType.type) return formatter.formatPropTypeName(propType.type)
     if (propType.$ref) return processTypeRef(propType.$ref)
     if (propType.oneOf) return processOneOf(propType.oneOf)
+
+    throw new Error('Error: missing type attribute for ' + name)
   }
 
   const processProperties = requiredList => def => {
@@ -88,12 +90,12 @@ const parser = formatter => schema => {
     )
 
   const formatRootSchema = ({ properties: { beerjson } = {} }) => {
-    return beerjson ? processPropertyList('beerjson', beerjson) : ''
+    return beerjson
+      ? formatter.addRootWrapper(processPropertyList('beerjson', beerjson))
+      : ''
   }
 
-  return formatter.addFileWrapper(
-    formatRootSchema(schema) + formatDefinitions(schema)
-  )
+  return formatRootSchema(schema) + formatDefinitions(schema)
 }
 
 module.exports = parser

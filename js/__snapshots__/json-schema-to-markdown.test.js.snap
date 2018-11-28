@@ -147,10 +147,12 @@ exports[`root schema docs 1`] = `
 exports[`test property list with single allOf entry 1`] = `
 "The schema defines the following types:
 
-## name 
+## testPropName 
 
 *no description yet*
 
-undefined
+**testPropName** is an object with all properties from [StyleBase](#stylebase)
+
+
 "
 `;

@@ -88,6 +88,7 @@
       ]
     },
     "RecipeStyleType": {
+      "type": "object",
       "description": "RecipeStyleType defines style information stored in a recipe record",
       "allOf": [
         {

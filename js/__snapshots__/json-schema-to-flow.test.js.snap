@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enum format 1`] = `
+"    type EnumType = {
+        enumProp:  | \\"a\\" | \\"b\\",
+    }
+"
+`;
+
+exports[`root schema type 1`] = `
+"     type BeerJSON = {
+        version: VersionType,
+        fermentables: [FermentableType],
+        miscellaneous_ingredients: [MiscellaneousType],
+        hop_varieties: [VarietyInformation],
+        cultures: [CultureInformation],
+        profiles: [WaterType],
+        styles: [StyleType],
+        mashes: [MashProcedureType],
+        fermentations: [FermentationProcedureType],
+        recipes: [RecipeType],
+        equipments: [EquipmentType],
+        boil: [BoilProcedureType],
+        packaging: [PackagingProcedureType],
+    }
+"
+`;

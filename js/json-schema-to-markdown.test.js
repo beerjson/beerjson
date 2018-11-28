@@ -14,7 +14,8 @@ test('test property list with single allOf entry', () => {
   expect(
     parse({
       definitions: {
-        name: {
+        testPropName: {
+          type: 'object',
           allOf: [{ $ref: '#/definitions/StyleBase' }]
         }
       }
@@ -101,4 +102,20 @@ test('format type with pattern should match snapshot', () => {
       }
     })
   ).toMatchSnapshot()
+})
+
+test('type attribute is required', () => {
+  expect(() => {
+    parse({
+      definitions: {
+        IBUEstimateType: {
+          properties: {
+            method: {
+              $ref: '#/definitions/IBUMethodType'
+            }
+          }
+        }
+      }
+    })
+  }).toThrowError()
 })

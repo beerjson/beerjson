@@ -95,6 +95,7 @@
       ]
     },
     "IBUEstimateType": {
+      "type": "object",
       "properties": {
         "method": {
           "$ref": "#/definitions/IBUMethodType"
@@ -130,7 +131,7 @@
         "geraniol": {
           "$ref": "measureable_units.json#/definitions/PercentType"
         },
-        "b-pinene": {
+        "b_pinene": {
           "$ref": "measureable_units.json#/definitions/PercentType"
         },
         "linalool": {

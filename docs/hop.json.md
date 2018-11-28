@@ -44,7 +44,12 @@ HopAdditionType collects the attributes of each hop ingredient for use in a reci
 
 *no description yet*
 
-undefined
+**IBUEstimateType** is an object with these properties:
+
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **method** |  | [IBUMethodType](#ibumethodtype)|  |
+
 ## IBUMethodType 
 
 *no description yet*
@@ -65,7 +70,7 @@ oil_content collects all information of a hop variety pertaining to oil content,
 | **myrcene** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **farnesene** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **geraniol** |  | [PercentType](measureable_units.json.md#percenttype)|  |
-| **b-pinene** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **b_pinene** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **linalool** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **limonene** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **nerol** |  | [PercentType](measureable_units.json.md#percenttype)|  |

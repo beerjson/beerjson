@@ -1,34 +1,30 @@
 const tab = '    '
 
 module.exports = {
-  addFileWrapper: str => `//@flow\n\n${str}`,
-
+  addRootWrapper: str => `${tab} type BeerJSON = ${str}`,
   addTypeWrapper: str => (str ? `${str}` : ''),
 
   formatTypeDefinition: (typeName, typeDef, formattedDef) =>
-    `${tab}type ${typeName} = ${formattedDef}`,
+    `${tab}type ${typeName} = ${formattedDef}\n`,
 
   addPropListWrapper: str => (str ? `{\n${str}${tab}}\n` : ''),
 
   formatEnum: enumValues =>
-    enumValues.reduce((str, val) => (str + str ? ' | ' : '' + `"${val}"`), ''),
+    enumValues.reduce((str, val) => str + ` | "${val}"`, ''),
 
   formatArray: (ref, formattedType) => `[${formattedType}]`,
 
-  formatOneOf: (str, formattedRef) =>
-    str + `${str ? ' or ' : ''} ${formattedRef}`,
+  formatOneOf: (str, formattedRef) => str + ` | ${formattedRef}`,
 
   formatParsedTypeRef: ({ typeName, fileName }) => typeName,
 
-  formatPattern: pattern => `RegExp pattern: \`${pattern}\``,
+  formatPattern: pattern => 'string',
 
   formatPropTypeName: name => name,
 
   formatAllOf: (name, formattedType1Ref, formattedPropList) =>
-    `**${name}** is an object with all properties from ${formattedType1Ref}${
-      formattedPropList
-        ? ` and these additional properties:\n\n${formattedPropList}`
-        : '\n\n'
+    ` ${formattedType1Ref} ${
+      formattedPropList ? `& ${formattedPropList}` : '\n\n'
     }`,
 
   formatPropList: (name, formattedPropList) => formattedPropList,
