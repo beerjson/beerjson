@@ -2,18 +2,18 @@
 
 export type BeerJSON = {|
   version: VersionType,
-  fermentables?: [FermentableType],
-  miscellaneous_ingredients?: [MiscellaneousType],
-  hop_varieties?: [VarietyInformation],
-  cultures?: [CultureInformation],
-  profiles?: [WaterType],
-  styles?: [StyleType],
-  mashes?: [MashProcedureType],
-  fermentations?: [FermentationProcedureType],
-  recipes?: [RecipeType],
-  equipments?: [EquipmentType],
-  boil?: [BoilProcedureType],
-  packaging?: [PackagingProcedureType]
+  fermentables?: FermentableType[],
+  miscellaneous_ingredients?: MiscellaneousType[],
+  hop_varieties?: VarietyInformation[],
+  cultures?: CultureInformation[],
+  profiles?: WaterType[],
+  styles?: StyleType[],
+  mashes?: MashProcedureType[],
+  fermentations?: FermentationProcedureType[],
+  recipes?: RecipeType[],
+  equipments?: EquipmentType[],
+  boil?: BoilProcedureType[],
+  packaging?: PackagingProcedureType[]
 |}
 export type BoilProcedureType = {|
   name?: string,
@@ -21,7 +21,7 @@ export type BoilProcedureType = {|
   notes?: string,
   pre_boil_size: VolumeType,
   boil_time: TimeType,
-  boil_steps?: [BoilStepType]
+  boil_steps?: BoilStepType[]
 |}
 
 export type BoilStepType = {|
@@ -167,7 +167,7 @@ export type FermentationProcedureType = {|
   type?: string,
   description?: string,
   notes?: string,
-  fermentation_steps: [FermentationStepType]
+  fermentation_steps: FermentationStepType[]
 |}
 
 export type FermentationStepType = {|
@@ -245,7 +245,7 @@ export type MashProcedureType = {|
   sparge_temperature?: TemperatureType,
   pH?: AcidityType,
   notes?: string,
-  mash_steps: [MashStepType]
+  mash_steps: MashStepType[]
 |}
 
 export type MashStepType = {|
@@ -469,7 +469,7 @@ export type PackagingProcedureType = {|
   packaged_volume?: VolumeType,
   description?: string,
   notes?: string,
-  packaging_vessels?: [PackagingVesselType]
+  packaging_vessels?: PackagingVesselType[]
 |}
 
 export type PackagingVesselType = {|
@@ -523,11 +523,11 @@ export type EfficiencyType = {|
 |}
 
 export type IngredientsType = {|
-  fermentable_additions: [FermentableAdditionType],
-  hop_additions?: [HopAdditionType],
-  miscellaneous_additions?: [MiscellaneousAdditionType],
-  culture_additions?: [CultureAdditionType],
-  water_additions?: [WaterAdditionType]
+  fermentable_additions: FermentableAdditionType[],
+  hop_additions?: HopAdditionType[],
+  miscellaneous_additions?: MiscellaneousAdditionType[],
+  culture_additions?: CultureAdditionType[],
+  water_additions?: WaterAdditionType[]
 |}
 
 export type TasteType = {|

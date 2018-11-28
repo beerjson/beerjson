@@ -45,7 +45,7 @@ test('root schema type', () => {
   expect(convert(rootSchema)).toMatchSnapshot()
 })
 
-test('regexp pattern should be rendered as comment', () => {
+test('regexp pattern should be rendered as str', () => {
   expect(
     convert({
       definitions: {
