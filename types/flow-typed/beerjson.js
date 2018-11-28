@@ -148,7 +148,7 @@ export type FermentableType = FermentableBase & {|
 
 export type FermentableAdditionType = FermentableBase & {|
   timing?: TimingType,
-  amount?: VolumeType | MassType
+  amount: VolumeType | MassType
 |}
 
 export type YieldType = {|

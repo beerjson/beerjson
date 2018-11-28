@@ -16,7 +16,7 @@
   },
   "scripts": {
     "test": "jest",
-    "gen-docs": "node js/gen-docs.js",
+    "gen-docs": "node js/gen-docs.js ; prettier --write ./types/ts/beerjson.d.ts ; prettier --write ./types/flow-typed/beerjson.js",
     "precommit": "lint-staged"
   },
   "jest": {
