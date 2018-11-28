@@ -1,6 +1,6 @@
 // @flow
 
-type BeerJSON = {
+export type BeerJSON = {
   version: VersionType,
   fermentables?: [FermentableType],
   miscellaneous_ingredients?: [MiscellaneousType],
@@ -15,7 +15,7 @@ type BeerJSON = {
   boil?: [BoilProcedureType],
   packaging?: [PackagingProcedureType]
 }
-type BoilProcedureType = {
+export type BoilProcedureType = {
   name?: string,
   description?: string,
   notes?: string,
@@ -24,7 +24,7 @@ type BoilProcedureType = {
   boil_steps?: [BoilStepType]
 }
 
-type BoilStepType = {
+export type BoilStepType = {
   name: string,
   description?: string,
   start_temperature?: TemperatureType,
@@ -38,7 +38,7 @@ type BoilStepType = {
   chilling_type?: 'batch' | 'inline'
 }
 
-type CultureBase = {
+export type CultureBase = {
   name: string,
   type:
     | 'ale'
@@ -59,7 +59,7 @@ type CultureBase = {
   product_id?: string
 }
 
-type CultureInformation = CultureBase & {
+export type CultureInformation = CultureBase & {
   temperature_range?: TemperatureRangeType,
   flocculation?: QualitativeRangeType,
   attenuation?: PercentRangeType,
@@ -70,7 +70,7 @@ type CultureInformation = CultureBase & {
   inventory?: CultureInventoryType
 }
 
-type CultureAdditionType = CultureBase & {
+export type CultureAdditionType = CultureBase & {
   attenuation?: PercentType,
   times_cultured?: integer,
   timing?: TimingType,
@@ -78,14 +78,14 @@ type CultureAdditionType = CultureBase & {
   amount?: VolumeType | MassType | UnitType
 }
 
-type CultureInventoryType = {
+export type CultureInventoryType = {
   liquid?: VolumeType,
   dry?: MassType,
   slant?: VolumeType,
   culture?: VolumeType
 }
 
-type EquipmentBase = {
+export type EquipmentBase = {
   name: string,
   type: string,
   form?:
@@ -99,7 +99,7 @@ type EquipmentBase = {
   maximum_volume: VolumeType
 }
 
-type EquipmentType = EquipmentBase & {
+export type EquipmentType = EquipmentBase & {
   loss: VolumeType,
   grain_absorption_rate?: SpecificVolumeType,
   boil_rate_per_hour?: VolumeType,
@@ -109,7 +109,7 @@ type EquipmentType = EquipmentBase & {
   notes?: string
 }
 
-type FermentableBase = {
+export type FermentableBase = {
   name: string,
   type:
     | 'dry extract'
@@ -134,7 +134,7 @@ type FermentableBase = {
   color: ColorType
 }
 
-type FermentableType = FermentableBase & {
+export type FermentableType = FermentableBase & {
   notes?: string,
   moisture?: PercentType,
   alpha_amylase?: number,
@@ -146,23 +146,23 @@ type FermentableType = FermentableBase & {
   inventory?: FermentableInventoryType
 }
 
-type FermentableAdditionType = FermentableBase & {
+export type FermentableAdditionType = FermentableBase & {
   timing?: TimingType,
   amount?: VolumeType | MassType
 }
 
-type YieldType = {
+export type YieldType = {
   fine_grind?: PercentType,
   coarse_grind?: PercentType,
   fine_coarse_difference?: PercentType,
   potential?: GravityType
 }
 
-type FermentableInventoryType = {
+export type FermentableInventoryType = {
   amount?: VolumeType | MassType
 }
 
-type FermentationProcedureType = {
+export type FermentationProcedureType = {
   name: string,
   type?: string,
   description?: string,
@@ -170,7 +170,7 @@ type FermentationProcedureType = {
   fermentation_steps: [FermentationStepType]
 }
 
-type FermentationStepType = {
+export type FermentationStepType = {
   name: string,
   description?: string,
   start_temperature?: TemperatureType,
@@ -184,7 +184,7 @@ type FermentationStepType = {
   vessel?: string
 }
 
-type HopVarietyBase = {
+export type HopVarietyBase = {
   name: string,
   origin?: string,
   form?: 'extract' | 'leaf' | 'leaf (wet)' | 'pellet' | 'powder' | 'plug',
@@ -192,7 +192,7 @@ type HopVarietyBase = {
   beta_acid_units?: number
 }
 
-type VarietyInformation = HopVarietyBase & {
+export type VarietyInformation = HopVarietyBase & {
   type?:
     | 'aroma'
     | 'bittering'
@@ -208,17 +208,17 @@ type VarietyInformation = HopVarietyBase & {
   inventory?: HopInventoryType
 }
 
-type HopAdditionType = HopVarietyBase & {
+export type HopAdditionType = HopVarietyBase & {
   timing?: TimingType,
   amount?: VolumeType | MassType
 }
 
-type IBUEstimateType = {
+export type IBUEstimateType = {
   method?: IBUMethodType
 }
 
-type IBUMethodType = 'Rager' | 'Tinseth' | 'Garetz' | 'Other'
-type OilContentType = {
+export type IBUMethodType = 'Rager' | 'Tinseth' | 'Garetz' | 'Other'
+export type OilContentType = {
   total_oil_ml_per_100g?: number,
   humulene?: PercentType,
   caryophyllene?: PercentType,
@@ -235,11 +235,11 @@ type OilContentType = {
   xanthohumol?: PercentType
 }
 
-type HopInventoryType = {
+export type HopInventoryType = {
   amount?: VolumeType | MassType
 }
 
-type MashProcedureType = {
+export type MashProcedureType = {
   name: string,
   grain_temperature: TemperatureType,
   sparge_temperature?: TemperatureType,
@@ -248,7 +248,7 @@ type MashProcedureType = {
   mash_steps: [MashStepType]
 }
 
-type MashStepType = {
+export type MashStepType = {
   name: string,
   type:
     | 'infusion'
@@ -270,112 +270,112 @@ type MashStepType = {
   end_pH?: AcidityType
 }
 
-type VolumeType = {
+export type VolumeType = {
   unit: VolumeUnitType,
   value: number
 }
 
-type MassType = {
+export type MassType = {
   unit: MassUnitType,
   value: number
 }
 
-type DiastaticPowerType = {
+export type DiastaticPowerType = {
   unit: DiastaticPowerUnitType,
   value: number
 }
 
-type TemperatureType = {
+export type TemperatureType = {
   unit: TemperatureUnitType,
   value: number
 }
 
-type PressureType = {
+export type PressureType = {
   unit: PressureUnitType,
   value: number
 }
 
-type AcidityType = {
+export type AcidityType = {
   unit: AcidityUnitType,
   value: number
 }
 
-type TimeType = {
+export type TimeType = {
   unit: TimeUnitType,
   value: number
 }
 
-type ColorType = {
+export type ColorType = {
   unit: ColorUnitType,
   value: number
 }
 
-type CarbonationType = {
+export type CarbonationType = {
   unit: CarbonationUnitType,
   value: number
 }
 
-type BitternessType = {
+export type BitternessType = {
   unit: BitternessUnitType,
   value: number
 }
 
-type GravityType = {
+export type GravityType = {
   unit: GravityUnitType,
   value: number
 }
 
-type SpecificHeatType = {
+export type SpecificHeatType = {
   unit: SpecificHeatUnitType,
   value: number
 }
 
-type ConcentrationType = {
+export type ConcentrationType = {
   unit: ConcentrationUnitType,
   value: number
 }
 
-type SpecificVolumeType = {
+export type SpecificVolumeType = {
   unit: SpecificVolumeUnitType,
   value: number
 }
 
-type UnitType = {
+export type UnitType = {
   unit: UnitUnitType,
   value: number
 }
 
-type CarbonationRangeType = {
+export type CarbonationRangeType = {
   minimum: CarbonationType,
   maximum: CarbonationType
 }
 
-type BitternessRangeType = {
+export type BitternessRangeType = {
   minimum: BitternessType,
   maximum: BitternessType
 }
 
-type TemperatureRangeType = {
+export type TemperatureRangeType = {
   minimum: TemperatureType,
   maximum: TemperatureType
 }
 
-type ColorRangeType = {
+export type ColorRangeType = {
   minimum: ColorType,
   maximum: ColorType
 }
 
-type GravityRangeType = {
+export type GravityRangeType = {
   minimum: GravityType,
   maximum: GravityType
 }
 
-type PercentRangeType = {
+export type PercentRangeType = {
   minimum: PercentType,
   maximum: PercentType
 }
 
-type VolumeUnitType =
+export type VolumeUnitType =
   | 'ml'
   | 'l'
   | 'tsp'
@@ -391,20 +391,27 @@ type VolumeUnitType =
   | 'iqt'
   | 'igal'
   | 'ibbl'
-type MassUnitType = 'mg' | 'g' | 'kg' | 'lb' | 'oz'
-type DiastaticPowerUnitType = 'Lintner' | 'WK'
-type TemperatureUnitType = 'C' | 'F'
-type AcidityUnitType = 'pH'
-type PressureUnitType = 'kPa' | 'psi' | 'bar'
-type TimeUnitType = 'sec' | 'min' | 'hr' | 'day' | 'week' | 'month' | 'year'
-type ColorUnitType = 'EBC' | 'Lovi' | 'SRM'
-type CarbonationUnitType = 'vols'
-type BitternessUnitType = 'IBUs'
-type GravityUnitType = 'sg' | 'plato' | 'brix'
-type DensityUnitType = 'sg' | 'plato' | 'brix'
-type ConcentrationUnitType = 'ppm' | 'ppb' | 'mg/l'
-type SpecificHeatUnitType = 'Cal/(g C)' | 'J/(kg K)' | 'BTU/(lb F)'
-type SpecificVolumeUnitType =
+export type MassUnitType = 'mg' | 'g' | 'kg' | 'lb' | 'oz'
+export type DiastaticPowerUnitType = 'Lintner' | 'WK'
+export type TemperatureUnitType = 'C' | 'F'
+export type AcidityUnitType = 'pH'
+export type PressureUnitType = 'kPa' | 'psi' | 'bar'
+export type TimeUnitType =
+  | 'sec'
+  | 'min'
+  | 'hr'
+  | 'day'
+  | 'week'
+  | 'month'
+  | 'year'
+export type ColorUnitType = 'EBC' | 'Lovi' | 'SRM'
+export type CarbonationUnitType = 'vols'
+export type BitternessUnitType = 'IBUs'
+export type GravityUnitType = 'sg' | 'plato' | 'brix'
+export type DensityUnitType = 'sg' | 'plato' | 'brix'
+export type ConcentrationUnitType = 'ppm' | 'ppb' | 'mg/l'
+export type SpecificHeatUnitType = 'Cal/(g C)' | 'J/(kg K)' | 'BTU/(lb F)'
+export type SpecificVolumeUnitType =
   | 'qt/lb'
   | 'gal/lb'
   | 'gal/oz'
@@ -413,15 +420,15 @@ type SpecificVolumeUnitType =
   | 'floz/oz'
   | 'm^3/kg'
   | 'ft^3/lb'
-type UnitUnitType = '1' | 'unit' | 'each' | 'dimensionless'
-type DateType = string
-type PercentType = {
+export type UnitUnitType = '1' | 'unit' | 'each' | 'dimensionless'
+export type DateType = string
+export type PercentType = {
   unit: PercentUnitType,
   value: number
 }
 
-type PercentUnitType = '%'
-type QualitativeRangeType =
+export type PercentUnitType = '%'
+export type QualitativeRangeType =
   | 'very low'
   | 'low'
   | 'medium low'
@@ -429,8 +436,8 @@ type QualitativeRangeType =
   | 'medium high'
   | 'high'
   | 'very high'
-type VersionType = number
-type MiscellaneousBase = {
+export type VersionType = number
+export type MiscellaneousBase = {
   name: string,
   type:
     | 'spice'
@@ -442,22 +449,22 @@ type MiscellaneousBase = {
     | 'other'
 }
 
-type MiscellaneousType = MiscellaneousBase & {
+export type MiscellaneousType = MiscellaneousBase & {
   use_for?: string,
   notes?: string,
   inventory?: MiscellaneousInventoryType
 }
 
-type MiscellaneousAdditionType = MiscellaneousBase & {
+export type MiscellaneousAdditionType = MiscellaneousBase & {
   timing?: TimingType,
   amount?: VolumeType | MassType | UnitType
 }
 
-type MiscellaneousInventoryType = {
+export type MiscellaneousInventoryType = {
   amount: VolumeType | MassType | UnitType
 }
 
-type PackagingProcedureType = {
+export type PackagingProcedureType = {
   name: string,
   packaged_volume?: VolumeType,
   description?: string,
@@ -465,7 +472,7 @@ type PackagingProcedureType = {
   packaging_vessels?: [PackagingVesselType]
 }
 
-type PackagingVesselType = {
+export type PackagingVesselType = {
   name: string,
   type?: 'keg' | 'bottle' | 'cask' | 'tank' | 'firkin',
   description?: string,
@@ -482,7 +489,7 @@ type PackagingVesselType = {
   vessel_quantity?: number
 }
 
-type RecipeType = {
+export type RecipeType = {
   name: string,
   type: 'extract' | 'partial mash' | 'all grain',
   author: string,
@@ -508,14 +515,14 @@ type RecipeType = {
   calories_per_pint?: number
 }
 
-type EfficiencyType = {
+export type EfficiencyType = {
   conversion?: PercentType,
   lauter?: PercentType,
   mash?: PercentType,
   brewhouse: PercentType
 }
 
-type IngredientsType = {
+export type IngredientsType = {
   fermentable_additions: [FermentableAdditionType],
   hop_additions?: [HopAdditionType],
   miscellaneous_additions?: [MiscellaneousAdditionType],
@@ -523,12 +530,12 @@ type IngredientsType = {
   water_additions?: [WaterAdditionType]
 }
 
-type TasteType = {
+export type TasteType = {
   notes: string,
   rating: number
 }
 
-type StyleBase = {
+export type StyleBase = {
   name: string,
   category: string,
   category_number?: integer,
@@ -537,7 +544,7 @@ type StyleBase = {
   type: StyleCategories
 }
 
-type StyleType = StyleBase & {
+export type StyleType = StyleBase & {
   original_gravity?: GravityRangeType,
   final_gravity?: GravityRangeType,
   international_bitterness_units?: BitternessRangeType,
@@ -554,9 +561,9 @@ type StyleType = StyleBase & {
   examples?: string
 }
 
-type RecipeStyleType = StyleBase
+export type RecipeStyleType = StyleBase
 
-type StyleCategories =
+export type StyleCategories =
   | 'beer'
   | 'cider'
   | 'kombucha'
@@ -564,12 +571,12 @@ type StyleCategories =
   | 'other'
   | 'soda'
   | 'wine'
-type UseType =
+export type UseType =
   | 'add_to_mash'
   | 'add_to_boil'
   | 'add_to_fermentation'
   | 'add_to_package'
-type TimingType = {
+export type TimingType = {
   time?: TimeType,
   duration?: TimeType,
   continuous?: boolean,
@@ -579,7 +586,7 @@ type TimingType = {
   use?: UseType
 }
 
-type WaterBase = {
+export type WaterBase = {
   name: string,
   calcium: ConcentrationType,
   bicarbonate: ConcentrationType,
@@ -595,9 +602,9 @@ type WaterBase = {
   magnesium: ConcentrationType
 }
 
-type WaterType = WaterBase & {
+export type WaterType = WaterBase & {
   pH?: number,
   notes?: string
 }
 
-type WaterAdditionType = WaterBase
+export type WaterAdditionType = WaterBase
