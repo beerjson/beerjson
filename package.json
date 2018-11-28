@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/beerjson/beerjson#readme",
   "lint-staged": {
-    "*.{js,json,css,md, ts}": [
+    "*.{js,json,css,md,ts}": [
       "prettier --write",
       "git add"
     ]
