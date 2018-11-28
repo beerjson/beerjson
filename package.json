@@ -11,8 +11,7 @@
     "lint-staged": "^4.3.0",
     "lodash": "^4.17.5",
     "pixl-xml": "^1.0.10",
-    "prettier": "1.14.2",
-    "rewire": "^4.0.1"
+    "prettier": "1.14.2"
   },
   "scripts": {
     "test": "jest",
