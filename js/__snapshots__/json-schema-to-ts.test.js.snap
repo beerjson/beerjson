@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enum format 1`] = `
+"    export type EnumType = {
+        enumProp?:  | \\"a\\" | \\"b\\",
+    }
+
+"
+`;

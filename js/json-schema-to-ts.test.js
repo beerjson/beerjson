@@ -25,3 +25,18 @@ test('simple schema converted to ts', () => {
 `
   )
 })
+
+test('enum format', () => {
+  expect(
+    convert({
+      definitions: {
+        EnumType: {
+          type: 'object',
+          properties: {
+            enumProp: { type: 'string', enum: ['a', 'b'] }
+          }
+        }
+      }
+    })
+  ).toMatchSnapshot()
+})
