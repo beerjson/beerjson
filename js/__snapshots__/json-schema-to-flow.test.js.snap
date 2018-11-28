@@ -4,6 +4,12 @@ exports[`enum format 1`] = `
 "    type EnumType = {
         enumProp:  | \\"a\\" | \\"b\\",
     }
+
+"
+`;
+
+exports[`regexp pattern should be rendered as comment 1`] = `
+"    type patternType = string
 "
 `;
 
