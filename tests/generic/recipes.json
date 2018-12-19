@@ -69,10 +69,16 @@
                   "value": 30
                 }
               },
-              "use": "dry hop",
               "amount": {
                 "unit": "g",
                 "value": 10
+              },
+              "timing": {
+                "time": {
+                  "unit": "day",
+                  "value": 2
+                },
+                "use": "add_to_fermentation"
               }
             },
             {
@@ -86,6 +92,13 @@
               "amount": {
                 "unit": "ml",
                 "value": 1
+              },
+              "timing": {
+                "time": {
+                  "unit": "min",
+                  "value": 30
+                },
+                "use": "add_to_fermentation"
               }
             }
           ],

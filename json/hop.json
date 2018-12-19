@@ -60,7 +60,9 @@
             "oil_content": {
               "$ref": "#/definitions/OilContentType"
             },
-            "inventory": { "$ref": "#/definitions/HopInventoryType" }
+            "inventory": {
+              "$ref": "#/definitions/HopInventoryType"
+            }
           }
         }
       ]
@@ -90,7 +92,7 @@
           }
         },
         {
-          "required": ["amount"]
+          "required": ["amount", "timing"]
         }
       ]
     },
