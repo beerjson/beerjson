@@ -90,11 +90,9 @@
               ]
             }
           }
-        },
-        {
-          "required": ["amount", "timing"]
         }
-      ]
+      ],
+      "required": ["amount", "timing"]
     },
     "IBUEstimateType": {
       "type": "object",
