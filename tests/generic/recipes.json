@@ -54,8 +54,14 @@
               "name": "Citra",
               "origin": "US",
               "form": "pellet",
-              "alpha_acid_units": 10,
-              "beta_acid_units": 3,
+              "alpha_acid": {
+                "unit": "%",
+                "value": 10
+              },
+              "beta_acid": {
+                "unit": "%",
+                "value": 3
+              },
               "type": "aroma/bittering",
               "notes": "American aroma hop Citra was created by John I. Haas, Inc. and Select Botanicals Group joint venture, the Hop Breeding Company. It was released to the brewing world in 2008.",
               "substitutes": "Simcoe®, Cascade (US), Centennial, Mosaic®",
@@ -79,7 +85,10 @@
               "name": "Distilled El Dorado Hop Oil",
               "origin": "US",
               "form": "extract",
-              "alpha_acid_units": 0,
+              "alpha_acid": {
+                "unit": "%",
+                "value": 0
+              },
               "type": "aroma",
               "notes": "Distilled hop oil is an amazing new product we are making available to homebrewers.  Distilled hop oil varies from other oils in that it is produced from fresh hops, as opposed to dried and processed pellets.  Distilled hop oil delivers the same wet hop character that was previously only possible to acquire with the use of freshly harvested hops.  The oil is extremely shelf stable, so you can now brew a consistant fresh hop IPA all year long. Extremely volatile, this oil should only be used for aromatic applications; typically applied at bottling/kegging.",
               "use": "dry hop",

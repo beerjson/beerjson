@@ -8,12 +8,26 @@
         "author": "BIABrewer.info",
         "coauthor": "Designed by Lloyd Powell",
         "created": "2011-05-07T20:00:00.000Z",
-        "batch_size": { "unit": "l", "value": 19.0028767 },
-        "boil": {
-          "pre_boil_size": { "unit": "l", "value": 30.3767465 },
-          "boil_time": { "unit": "min", "value": 90 }
+        "batch_size": {
+          "unit": "l",
+          "value": 19.0028767
         },
-        "efficiency": { "brewhouse": { "unit": "%", "value": 70 } },
+        "boil": {
+          "pre_boil_size": {
+            "unit": "l",
+            "value": 30.3767465
+          },
+          "boil_time": {
+            "unit": "min",
+            "value": 90
+          }
+        },
+        "efficiency": {
+          "brewhouse": {
+            "unit": "%",
+            "value": 70
+          }
+        },
         "style": {
           "name": "K&#246;lsch",
           "category": "Light Hybrid Beer",
@@ -25,26 +39,49 @@
             {
               "name": "Pilsner (2 Row) Ger",
               "type": "grain",
-              "color": { "unit": "Lovi", "value": 2 },
-              "amount": { "unit": "kg", "value": 3.2412931 },
+              "color": {
+                "unit": "Lovi",
+                "value": 2
+              },
+              "amount": {
+                "unit": "kg",
+                "value": 3.2412931
+              },
               "origin": "Germany",
               "supplier": "",
               "group": "base",
-              "yield": { "potential": { "unit": "sg", "value": 1.03726 } },
+              "yield": {
+                "potential": {
+                  "unit": "sg",
+                  "value": 1.03726
+                }
+              },
               "add_after_boil": false
             }
           ],
           "hop_additions": [
             {
               "name": "Hallertauer",
-              "alpha_acid_units": 4.8,
+              "alpha_acid": {
+                "unit": "%",
+                "value": 4.8
+              },
               "origin": "Germany",
               "form": "pellet",
-              "beta_acid_units": 4,
+              "beta_acid": {
+                "unit": "%",
+                "value": 4
+              },
               "use": "boil",
-              "amount": { "unit": "kg", "value": 0.0332677 },
+              "amount": {
+                "unit": "kg",
+                "value": 0.0332677
+              },
               "timing": {
-                "time": { "unit": "min", "value": 60 },
+                "time": {
+                  "unit": "min",
+                  "value": 60
+                },
                 "use": "add_to_boil"
               }
             }
@@ -54,34 +91,67 @@
               "name": "Whirlfloc Tablet",
               "type": "fining",
               "use": "boil",
-              "amount": { "unit": "l", "value": 0.412685 }
+              "amount": {
+                "unit": "l",
+                "value": 0.412685
+              }
             }
           ],
           "culture_additions": [
             {
               "name": "German Ale",
-              "attenuation": { "unit": "%", "value": 75 },
+              "attenuation": {
+                "unit": "%",
+                "value": 75
+              },
               "type": "ale",
               "form": "liquid",
-              "amount": { "unit": "l", "value": 0.1242095 }
+              "amount": {
+                "unit": "l",
+                "value": 0.1242095
+              }
             }
           ]
         },
         "mash": {
           "name": "BIAB, Light Body",
-          "grain_temperature": { "unit": "C", "value": 22.2 },
-          "sparge_temperature": { "unit": "C", "value": 75.6 },
-          "pH": { "unit": "pH", "value": 5.2 },
+          "grain_temperature": {
+            "unit": "C",
+            "value": 22.2
+          },
+          "sparge_temperature": {
+            "unit": "C",
+            "value": 75.6
+          },
+          "pH": {
+            "unit": "pH",
+            "value": 5.2
+          },
           "notes": "Brew in a bag method where the full boil volume is mashed within the boil vessel and then the grains are withdrawn at the end of the mash.  No sparging.  This is a light body beer profile.",
           "mash_steps": [
             {
               "name": "Saccharification",
               "type": "infusion",
-              "step_temperature": { "unit": "C", "value": 65.5555556 },
-              "step_time": { "unit": "min", "value": 90 },
-              "ramp_time": { "unit": "min", "value": 10 },
-              "end_temperature": { "unit": "C", "value": 65.5555556 },
-              "amount": { "unit": "l", "value": 33.0186377 }
+              "step_temperature": {
+                "unit": "C",
+                "value": 65.5555556
+              },
+              "step_time": {
+                "unit": "min",
+                "value": 90
+              },
+              "ramp_time": {
+                "unit": "min",
+                "value": 10
+              },
+              "end_temperature": {
+                "unit": "C",
+                "value": 65.5555556
+              },
+              "amount": {
+                "unit": "l",
+                "value": 33.0186377
+              }
             }
           ]
         }

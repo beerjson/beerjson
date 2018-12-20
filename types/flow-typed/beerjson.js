@@ -188,8 +188,8 @@ export type HopVarietyBase = {|
   name: string,
   origin?: string,
   form?: 'extract' | 'leaf' | 'leaf (wet)' | 'pellet' | 'powder' | 'plug',
-  alpha_acid_units: number,
-  beta_acid_units?: number
+  alpha_acid: PercentType,
+  beta_acid?: PercentType
 |}
 
 export type VarietyInformation = HopVarietyBase & {|

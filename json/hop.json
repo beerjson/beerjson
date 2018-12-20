@@ -18,14 +18,14 @@
           "type": "string",
           "enum": ["extract", "leaf", "leaf (wet)", "pellet", "powder", "plug"]
         },
-        "alpha_acid_units": {
-          "type": "number"
+        "alpha_acid": {
+          "$ref": "measureable_units.json#/definitions/PercentType"
         },
-        "beta_acid_units": {
-          "type": "number"
+        "beta_acid": {
+          "$ref": "measureable_units.json#/definitions/PercentType"
         }
       },
-      "required": ["name", "alpha_acid_units"]
+      "required": ["name", "alpha_acid"]
     },
     "VarietyInformation": {
       "type": "object",
@@ -60,7 +60,9 @@
             "oil_content": {
               "$ref": "#/definitions/OilContentType"
             },
-            "inventory": { "$ref": "#/definitions/HopInventoryType" }
+            "inventory": {
+              "$ref": "#/definitions/HopInventoryType"
+            }
           }
         }
       ]

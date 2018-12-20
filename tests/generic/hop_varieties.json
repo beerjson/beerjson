@@ -5,7 +5,10 @@
       {
         "name": "name",
         "origin": "US",
-        "alpha_acid_units": 5
+        "alpha_acid": {
+          "unit": "%",
+          "value": 5
+        }
       }
     ]
   }
