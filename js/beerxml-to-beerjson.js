@@ -156,11 +156,19 @@ const miscellaneous_additions = r =>
 const hop_bill = r =>
   _.map(getArrayNode(_.get(r, ['HOPS', 'HOP'])), hop => ({
     name: hop['NAME'],
-    alpha_acid_units: Number(hop['ALPHA']),
+    alpha_acid: {
+      unit: '%',
+      value: Number(hop['ALPHA'])
+    },
     ...(!_.isEmpty(hop['ORIGIN']) ? { origin: hop['ORIGIN'] } : {}),
     ...(!_.isEmpty(hop['FORM']) ? { form: _.lowerCase(hop['FORM']) } : {}),
     ...(!_.isEmpty(hop['BETA'])
-      ? { beta_acid_units: Number(hop['BETA']) }
+      ? {
+          beta_acid: {
+            unit: '%',
+            value: Number(hop['BETA'])
+          }
+        }
       : {}),
     ...(!_.isEmpty(hop['USE']) ? { use: _.lowerCase(hop['USE']) } : {}),
     amount: {

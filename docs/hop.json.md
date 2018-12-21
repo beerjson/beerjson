@@ -11,8 +11,8 @@ HopVarietyBase provides unique properties to identify individual records of a ho
 | **name** | ✅ | string|  |
 | **origin** |  | string|  |
 | **form** |  | `"extract"`<br/>`"leaf"`<br/>`"leaf (wet)"`<br/>`"pellet"`<br/>`"powder"`<br/>`"plug"`|  |
-| **alpha_acid_units** | ✅ | number|  |
-| **beta_acid_units** |  | number|  |
+| **alpha_acid** | ✅ | [PercentType](measureable_units.json.md#percenttype)|  |
+| **beta_acid** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 
 ## VarietyInformation 
 

@@ -82,7 +82,10 @@
             {
               "name": "EKG",
               "origin": "UK",
-              "alpha_acid_units": 5,
+              "alpha_acid": {
+                "unit": "%",
+                "value": 5
+              },
               "amount": {
                 "unit": "oz",
                 "value": 1.15
@@ -98,7 +101,10 @@
             {
               "name": "EKG",
               "origin": "UK",
-              "alpha_acid_units": 5,
+              "alpha_acid": {
+                "unit": "%",
+                "value": 5
+              },
               "amount": {
                 "unit": "oz",
                 "value": 0.6
@@ -114,7 +120,10 @@
             {
               "name": "EKG",
               "origin": "UK",
-              "alpha_acid_units": 5,
+              "alpha_acid": {
+                "unit": "%",
+                "value": 5
+              },
               "amount": {
                 "unit": "oz",
                 "value": 1
