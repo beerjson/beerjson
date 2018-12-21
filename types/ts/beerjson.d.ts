@@ -208,8 +208,8 @@ declare namespace BeerJSON {
   }
 
   export type HopAdditionType = HopVarietyBase & {
-    timing?: TimingType
-    amount?: VolumeType | MassType
+    timing: TimingType
+    amount: VolumeType | MassType
   }
 
   export type IBUEstimateType = {
