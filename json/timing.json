@@ -9,6 +9,7 @@
       "enum": [
         "add_to_mash",
         "add_to_boil",
+        "add_to_steep_whirlpool",
         "add_to_fermentation",
         "add_to_package"
       ]
