@@ -57,7 +57,7 @@
             "flocculation": {
               "$ref": "measureable_units.json#/definitions/QualitativeRangeType"
             },
-            "attenuation": {
+            "attenuation_range": {
               "$ref": "measureable_units.json#/definitions/PercentRangeType"
             },
             "alcohol_tolerance": {
