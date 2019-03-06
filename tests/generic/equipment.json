@@ -3,16 +3,22 @@
     "version": 2.06,
     "equipments": [
       {
-        "name": "10Gal Mashtun",
-        "type": "Mash Tun",
-        "loss": {
-          "unit": "gal",
-          "value": 1
-        },
-        "maximum_volume": {
-          "unit": "gal",
-          "value": 1
-        }
+        "name": "Default set",
+        "equipment_items": [
+          {
+            "name": "10Gal Mashtun",
+            "type": "Mash Tun",
+            "form": "Mash Tun",
+            "loss": {
+              "unit": "gal",
+              "value": 1
+            },
+            "maximum_volume": {
+              "unit": "gal",
+              "value": 1
+            }
+          }
+        ]
       }
     ]
   }

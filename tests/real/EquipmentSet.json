@@ -1,0 +1,39 @@
+{
+  "beerjson": {
+    "version": 2.06,
+    "equipments": [
+      {
+        "name": "Default set",
+        "equipment_items": [
+          {
+            "id": "E6",
+            "name": "All Grain - Large 10 Gal/38 l - Stainless",
+            "type": "All Grain",
+            "form": "Mash Tun",
+            "maximum_volume": {
+              "value": 15,
+              "unit": "gal"
+            },
+            "loss": {
+              "value": 1.75,
+              "unit": "gal"
+            },
+            "boil_rate_per_hour": {
+              "value": 2,
+              "unit": "gal"
+            },
+            "weight": {
+              "value": 20,
+              "unit": "lb"
+            },
+            "specific_heat": {
+              "value": 0.15,
+              "unit": "Cal/(g C)"
+            },
+            "notes": "Popular 10 gal/38 l batch setup for all grain brewing.  Uses two large stainless 15 gal/58 l kegs or pots for the boil pot and mash tun with the tops cut off the keg.  A third keg or large pot is often used as a pot to heat mash tun water."
+          }
+        ]
+      }
+    ]
+  }
+}
