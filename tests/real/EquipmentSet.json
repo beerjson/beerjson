@@ -7,7 +7,6 @@
         "equipment_items": [
           {
             "name": "HLT keg",
-            "type": "All Grain",
             "form": "HLT",
             "maximum_volume": {
               "value": 56.78,
@@ -20,7 +19,6 @@
           },
           {
             "name": "Mash Tun keg",
-            "type": "All Grain",
             "form": "Mash Tun",
             "maximum_volume": {
               "value": 56.78,
@@ -33,7 +31,6 @@
           },
           {
             "name": "Boiler Keg",
-            "type": "All Grain",
             "form": "Brew Kettle",
             "maximum_volume": {
               "value": 56.78,

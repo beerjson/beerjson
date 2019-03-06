@@ -30,7 +30,7 @@
           "$ref": "measureable_units.json#/definitions/VolumeType"
         }
       },
-      "required": ["name", "type", "form", "maximum_volume"]
+      "required": ["name", "form", "maximum_volume"]
     },
     "EquipmentItemType": {
       "type": "object",
