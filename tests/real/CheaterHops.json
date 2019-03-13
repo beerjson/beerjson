@@ -1,0 +1,429 @@
+{
+  "beerjson": {
+    "version": 2.06,
+    "recipes": [
+      {
+        "name": "Cheater hops",
+        "type": "all grain",
+        "author": "Michael Tonsmeire - The Mad Fermentationist",
+        "batch_size": {
+          "unit": "gal",
+          "value": 12
+        },
+        "efficiency": {
+          "brewhouse": {
+            "unit": "%",
+            "value": 71
+          }
+        },
+        "ingredients": {
+          "fermentable_additions": [
+            {
+              "name": "Rahr 2-row Brewer's Malt",
+              "type": "grain",
+              "color": {
+                "unit": "Lovi",
+                "value": 1.8
+              },
+              "amount": {
+                "unit": "lb",
+                "value": 27
+              },
+              "group": "base",
+              "yield": {
+                "potential": {
+                  "unit": "sg",
+                  "value": 1.0374
+                }
+              }
+            },
+            {
+              "name": "Flaked Wheat",
+              "type": "grain",
+              "color": {
+                "unit": "Lovi",
+                "value": 2
+              },
+              "amount": {
+                "unit": "lb",
+                "value": 4
+              },
+              "group": "flaked",
+              "yield": {
+                "potential": {
+                  "unit": "sg",
+                  "value": 1.03542
+                }
+              }
+            },
+            {
+              "name": "Chit",
+              "type": "grain",
+              "color": {
+                "unit": "Lovi",
+                "value": 1.4
+              },
+              "amount": {
+                "unit": "lb",
+                "value": 2
+              },
+              "group": "specialty",
+              "yield": {
+                "potential": {
+                  "unit": "sg",
+                  "value": 1.023
+                }
+              }
+            },
+            {
+              "name": "Crystal 10",
+              "type": "grain",
+              "color": {
+                "unit": "Lovi",
+                "value": 10
+              },
+              "amount": {
+                "unit": "lb",
+                "value": 0.75
+              },
+              "group": "caramel",
+              "yield": {
+                "potential": {
+                  "unit": "sg",
+                  "value": 1.0345
+                }
+              }
+            }
+          ],
+          "hop_additions": [
+            {
+              "name": "Columbus",
+              "alpha_acid": {
+                "unit": "%",
+                "value": 14
+              },
+              "form": "pellet",
+              "beta_acid": {
+                "unit": "%",
+                "value": 0
+              },
+              "amount": {
+                "unit": "oz",
+                "value": 4.0
+              },
+              "timing": {
+                "time": {
+                  "unit": "min",
+                  "value": 15
+                },
+                "use": "add_to_boil"
+              }
+            },
+            {
+              "name": "Simcoe",
+              "alpha_acid": {
+                "unit": "%",
+                "value": 9
+              },
+              "form": "pellet",
+              "beta_acid": {
+                "unit": "%",
+                "value": 0
+              },
+              "amount": {
+                "unit": "oz",
+                "value": 6.0
+              },
+              "timing": {
+                "time": {
+                  "unit": "min",
+                  "value": 30
+                },
+                "use": "add_to_boil",
+                "step": 3
+              }
+            },
+            {
+              "name": "Columbus",
+              "alpha_acid": {
+                "unit": "%",
+                "value": 14
+              },
+              "form": "pellet",
+              "beta_acid": {
+                "unit": "%",
+                "value": 0
+              },
+              "amount": {
+                "unit": "oz",
+                "value": 4.0
+              },
+              "timing": {
+                "time": {
+                  "unit": "min",
+                  "value": 30
+                },
+                "use": "add_to_boil",
+                "step": 3
+              }
+            },
+            {
+              "name": "Amarillo",
+              "alpha_acid": {
+                "unit": "%",
+                "value": 9.2
+              },
+              "form": "pellet",
+              "beta_acid": {
+                "unit": "%",
+                "value": 0
+              },
+              "amount": {
+                "unit": "oz",
+                "value": 2.0
+              },
+              "timing": {
+                "time": {
+                  "unit": "min",
+                  "value": 30
+                },
+                "use": "add_to_boil",
+                "step": 3
+              }
+            },
+            {
+              "name": "Mosaic",
+              "alpha_acid": {
+                "unit": "%",
+                "value": 12.25
+              },
+              "form": "pellet",
+              "beta_acid": {
+                "unit": "%",
+                "value": 0
+              },
+              "amount": {
+                "unit": "oz",
+                "value": 2.0
+              },
+              "timing": {
+                "time": {
+                  "unit": "day",
+                  "value": 3
+                },
+                "use": "add_to_fermentation",
+                "duration": {
+                  "unit": "day",
+                  "value": 3
+                },
+                "step": 1
+              }
+            },
+            {
+              "name": "Belma",
+              "alpha_acid": {
+                "unit": "%",
+                "value": 9.8
+              },
+              "form": "pellet",
+              "beta_acid": {
+                "unit": "%",
+                "value": 0
+              },
+              "amount": {
+                "unit": "oz",
+                "value": 2.0
+              },
+              "timing": {
+                "time": {
+                  "unit": "day",
+                  "value": 3
+                },
+                "use": "add_to_fermentation",
+                "duration": {
+                  "unit": "day",
+                  "value": 3
+                },
+                "step": 1
+              }
+            },
+            {
+              "name": "Mosaic",
+              "alpha_acid": {
+                "unit": "%",
+                "value": 12.25
+              },
+              "form": "pellet",
+              "beta_acid": {
+                "unit": "%",
+                "value": 0
+              },
+              "amount": {
+                "unit": "oz",
+                "value": 2.0
+              },
+              "timing": {
+                "use": "add_to_package"
+              }
+            },
+            {
+              "name": "Belma",
+              "alpha_acid": {
+                "unit": "%",
+                "value": 9.8
+              },
+              "form": "pellet",
+              "beta_acid": {
+                "unit": "%",
+                "value": 0
+              },
+              "amount": {
+                "unit": "oz",
+                "value": 2.0
+              },
+              "timing": {
+                "use": "add_to_package"
+              }
+            },
+            {
+              "name": "Hexalone",
+              "alpha_acid": {
+                "unit": "%",
+                "value": 50
+              },
+              "form": "extract",
+              "beta_acid": {
+                "unit": "%",
+                "value": 0
+              },
+              "amount": {
+                "unit": "ml",
+                "value": 1.0
+              },
+              "timing": {
+                "time": {
+                  "unit": "day",
+                  "value": 3
+                },
+                "use": "add_to_package"
+              }
+            }
+          ],
+          "culture_additions": [
+            {
+              "name": "A20 Citrus",
+              "type": "ale",
+              "form": "liquid",
+              "amount": {
+                "unit": "l",
+                "value": 0.155
+              }
+            }
+          ]
+        },
+        "mash": {
+          "name": "Mash",
+          "grain_temperature": {
+            "unit": "F",
+            "value": 70
+          },
+          "mash_steps": [
+            {
+              "name": "Mash step",
+              "type": "temperature",
+              "step_temperature": {
+                "unit": "F",
+                "value": 156
+              },
+              "step_time": {
+                "unit": "min",
+                "value": 45
+              }
+            }
+          ]
+        },
+        "boil": {
+          "name": "105 minute boil",
+          "description": "A standard 105 min boil followed by a 30 minutes whirlpool",
+          "pre_boil_size": {
+            "unit": "gal",
+            "value": 13.5
+          },
+          "boil_time": {
+            "unit": "min",
+            "value": 105
+          },
+          "boil_steps": [
+            {
+              "name": "preboil",
+              "start_temperature": {
+                "unit": "F",
+                "value": 154
+              },
+              "end_temperature": {
+                "unit": "F",
+                "value": 212
+              },
+              "step_time": {
+                "unit": "min",
+                "value": 10
+              }
+            },
+            {
+              "name": "boil",
+              "start_temperature": {
+                "unit": "F",
+                "value": 212
+              },
+              "end_temperature": {
+                "unit": "F",
+                "value": 212
+              },
+              "step_time": {
+                "unit": "min",
+                "value": 105
+              }
+            },
+            {
+              "name": "30 min whirlpool",
+              "description": "chill to whirlpool, quickly using immersion chiller, hold at 180F for 30 minutes",
+              "start_temperature": {
+                "unit": "F",
+                "value": 212
+              },
+              "end_temperature": {
+                "unit": "F",
+                "value": 180
+              },
+              "ramp_time": {
+                "unit": "min",
+                "value": 3
+              },
+              "step_time": {
+                "unit": "min",
+                "value": 30
+              },
+              "chilling_type": "batch"
+            },
+            {
+              "name": "chilled with immersion chiller",
+              "start_temperature": {
+                "unit": "F",
+                "value": 180
+              },
+              "end_temperature": {
+                "unit": "F",
+                "value": 75
+              },
+              "step_time": {
+                "unit": "min",
+                "value": 15
+              },
+              "chilling_type": "batch"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

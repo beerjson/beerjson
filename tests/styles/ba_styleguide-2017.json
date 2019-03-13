@@ -49,7 +49,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 3
+            "value": 4.2
           }
         },
         "international_bitterness_units": {
@@ -120,7 +120,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.2
+            "value": 4.8
           }
         },
         "international_bitterness_units": {
@@ -191,7 +191,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.8
+            "value": 5.8
           }
         },
         "international_bitterness_units": {
@@ -262,7 +262,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 2.8
+            "value": 3.5
           }
         },
         "international_bitterness_units": {
@@ -333,7 +333,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 3.5
+            "value": 4.1
           }
         },
         "international_bitterness_units": {
@@ -404,7 +404,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.1
+            "value": 5.3
           }
         },
         "international_bitterness_units": {
@@ -475,7 +475,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 3.7
+            "value": 5.1
           }
         },
         "international_bitterness_units": {
@@ -544,7 +544,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.4
+            "value": 5.3
           }
         },
         "international_bitterness_units": {
@@ -615,7 +615,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.5
+            "value": 7.1
           }
         },
         "international_bitterness_units": {
@@ -686,7 +686,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 7
+            "value": 11.3
           }
         },
         "international_bitterness_units": {
@@ -757,7 +757,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 6.3
+            "value": 9.1
           }
         },
         "international_bitterness_units": {
@@ -826,7 +826,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 3.4
+            "value": 4.4
           }
         },
         "international_bitterness_units": {
@@ -895,7 +895,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 3.4
+            "value": 4.4
           }
         },
         "international_bitterness_units": {
@@ -964,7 +964,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.2
+            "value": 6
           }
         },
         "international_bitterness_units": {
@@ -1033,7 +1033,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.4
+            "value": 6
           }
         },
         "international_bitterness_units": {
@@ -1102,7 +1102,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 5.1
+            "value": 6.6
           }
         },
         "international_bitterness_units": {
@@ -1171,7 +1171,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 3.2
+            "value": 6.3
           }
         },
         "international_bitterness_units": {
@@ -1240,7 +1240,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 3.8
+            "value": 6.1
           }
         },
         "international_bitterness_units": {
@@ -1311,7 +1311,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 6.6
+            "value": 8.5
           }
         },
         "international_bitterness_units": {
@@ -1382,7 +1382,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 7
+            "value": 12
           }
         },
         "international_bitterness_units": {
@@ -1451,7 +1451,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 8.5
+            "value": 12.2
           }
         },
         "international_bitterness_units": {
@@ -1520,7 +1520,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4
+            "value": 4.8
           }
         },
         "international_bitterness_units": {
@@ -1591,7 +1591,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.1
+            "value": 5.3
           }
         },
         "international_bitterness_units": {
@@ -1662,7 +1662,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 5.7
+            "value": 9.5
           }
         },
         "international_bitterness_units": {
@@ -1731,7 +1731,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.1
+            "value": 5.1
           }
         },
         "international_bitterness_units": {
@@ -1800,7 +1800,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.4
+            "value": 6.1
           }
         },
         "international_bitterness_units": {
@@ -1869,7 +1869,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.4
+            "value": 5.4
           }
         },
         "international_bitterness_units": {
@@ -1938,7 +1938,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 5.6
+            "value": 7
           }
         },
         "international_bitterness_units": {
@@ -2009,7 +2009,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 6.3
+            "value": 7.5
           }
         },
         "international_bitterness_units": {
@@ -2080,7 +2080,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 3.7
+            "value": 5
           }
         },
         "international_bitterness_units": {
@@ -2151,7 +2151,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -2222,7 +2222,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -2291,7 +2291,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.2
+            "value": 6.3
           }
         },
         "international_bitterness_units": {
@@ -2360,7 +2360,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 6.3
+            "value": 7.6
           }
         },
         "international_bitterness_units": {
@@ -2431,7 +2431,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 5.7
+            "value": 8.9
           }
         },
         "international_bitterness_units": {
@@ -2500,7 +2500,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 7
+            "value": 12
           }
         },
         "international_bitterness_units": {
@@ -2569,7 +2569,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 7
+            "value": 12
           }
         },
         "international_bitterness_units": {
@@ -2640,7 +2640,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 7.6
+            "value": 10.6
           }
         },
         "international_bitterness_units": {
@@ -2709,7 +2709,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 6.1
+            "value": 7.9
           }
         },
         "international_bitterness_units": {
@@ -2778,7 +2778,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 8
+            "value": 10.6
           }
         },
         "international_bitterness_units": {
@@ -2849,7 +2849,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 8.5
+            "value": 12.2
           }
         },
         "international_bitterness_units": {
@@ -2920,7 +2920,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 8.5
+            "value": 12.2
           }
         },
         "international_bitterness_units": {
@@ -2991,7 +2991,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 5.1
+            "value": 8.9
           }
         },
         "international_bitterness_units": {
@@ -3062,7 +3062,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -3133,7 +3133,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.8
+            "value": 5.3
           }
         },
         "international_bitterness_units": {
@@ -3204,7 +3204,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.6
+            "value": 5.6
           }
         },
         "international_bitterness_units": {
@@ -3275,7 +3275,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -3346,7 +3346,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 2.8
+            "value": 5
           }
         },
         "international_bitterness_units": {
@@ -3417,7 +3417,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.4
+            "value": 5.4
           }
         },
         "international_bitterness_units": {
@@ -3488,7 +3488,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.9
+            "value": 5.6
           }
         },
         "international_bitterness_units": {
@@ -3559,7 +3559,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.9
+            "value": 5.6
           }
         },
         "international_bitterness_units": {
@@ -3630,7 +3630,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 2.5
+            "value": 3.5
           }
         },
         "international_bitterness_units": {
@@ -3701,7 +3701,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.8
+            "value": 5.4
           }
         },
         "international_bitterness_units": {
@@ -3772,7 +3772,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.8
+            "value": 5.4
           }
         },
         "international_bitterness_units": {
@@ -3843,7 +3843,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 7
+            "value": 9.5
           }
         },
         "international_bitterness_units": {
@@ -3914,7 +3914,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.9
+            "value": 5.6
           }
         },
         "international_bitterness_units": {
@@ -3985,7 +3985,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.9
+            "value": 5.6
           }
         },
         "international_bitterness_units": {
@@ -4056,7 +4056,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 6.3
+            "value": 7.9
           }
         },
         "international_bitterness_units": {
@@ -4125,7 +4125,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.1
+            "value": 6.3
           }
         },
         "international_bitterness_units": {
@@ -4196,7 +4196,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 7.1
+            "value": 11.2
           }
         },
         "international_bitterness_units": {
@@ -4267,7 +4267,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 7.1
+            "value": 11.2
           }
         },
         "international_bitterness_units": {
@@ -4338,7 +4338,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 6.3
+            "value": 7.6
           }
         },
         "international_bitterness_units": {
@@ -4409,7 +4409,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 7.1
+            "value": 10.1
           }
         },
         "international_bitterness_units": {
@@ -4480,7 +4480,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 9.1
+            "value": 14.2
           }
         },
         "international_bitterness_units": {
@@ -4551,7 +4551,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.8
+            "value": 5.6
           }
         },
         "international_bitterness_units": {
@@ -4620,7 +4620,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.4
+            "value": 6.8
           }
         },
         "international_bitterness_units": {
@@ -4691,7 +4691,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.4
+            "value": 8
           }
         },
         "international_bitterness_units": {
@@ -4762,7 +4762,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.8
+            "value": 6.6
           }
         },
         "international_bitterness_units": {
@@ -4833,7 +4833,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 5
+            "value": 8.2
           }
         },
         "international_bitterness_units": {
@@ -4904,7 +4904,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 5
+            "value": 8.9
           }
         },
         "international_bitterness_units": {
@@ -4975,7 +4975,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 5
+            "value": 8.9
           }
         },
         "international_bitterness_units": {
@@ -5046,7 +5046,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -5117,7 +5117,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0.5
+            "value": 3.5
           }
         },
         "international_bitterness_units": {
@@ -5188,7 +5188,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 2.7
+            "value": 3.7
           }
         },
         "international_bitterness_units": {
@@ -5259,7 +5259,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 9
+            "value": 11
           }
         },
         "international_bitterness_units": {
@@ -5330,7 +5330,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.7
+            "value": 7.9
           }
         },
         "international_bitterness_units": {
@@ -5399,7 +5399,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.2
+            "value": 6.2
           }
         },
         "international_bitterness_units": {
@@ -5468,7 +5468,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.4
+            "value": 6.6
           }
         },
         "international_bitterness_units": {
@@ -5539,7 +5539,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.4
+            "value": 5.4
           }
         },
         "international_bitterness_units": {
@@ -5610,7 +5610,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.4
+            "value": 8.4
           }
         },
         "international_bitterness_units": {
@@ -5681,7 +5681,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 7
+            "value": 8.5
           }
         },
         "international_bitterness_units": {
@@ -5752,7 +5752,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 5.5
+            "value": 6.5
           }
         },
         "international_bitterness_units": {
@@ -5823,7 +5823,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 6
+            "value": 7
           }
         },
         "international_bitterness_units": {
@@ -5892,7 +5892,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 6
+            "value": 7
           }
         },
         "international_bitterness_units": {
@@ -5963,7 +5963,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.6
+            "value": 5.3
           }
         },
         "international_bitterness_units": {
@@ -6034,7 +6034,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.1
+            "value": 5.1
           }
         },
         "international_bitterness_units": {
@@ -6103,7 +6103,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.8
+            "value": 5.6
           }
         },
         "international_bitterness_units": {
@@ -6172,7 +6172,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 5.1
+            "value": 6.1
           }
         },
         "international_bitterness_units": {
@@ -6241,7 +6241,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.8
+            "value": 5.4
           }
         },
         "international_bitterness_units": {
@@ -6310,7 +6310,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 5.1
+            "value": 6
           }
         },
         "international_bitterness_units": {
@@ -6381,7 +6381,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 5.1
+            "value": 6.1
           }
         },
         "international_bitterness_units": {
@@ -6452,7 +6452,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.8
+            "value": 5.3
           }
         },
         "international_bitterness_units": {
@@ -6523,7 +6523,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.8
+            "value": 5.3
           }
         },
         "international_bitterness_units": {
@@ -6592,7 +6592,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 3.8
+            "value": 4.9
           }
         },
         "international_bitterness_units": {
@@ -6661,7 +6661,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 2.5
+            "value": 3.7
           }
         },
         "international_bitterness_units": {
@@ -6730,7 +6730,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.8
+            "value": 5.6
           }
         },
         "international_bitterness_units": {
@@ -6799,7 +6799,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 5.1
+            "value": 6
           }
         },
         "international_bitterness_units": {
@@ -6868,7 +6868,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 6.3
+            "value": 7.6
           }
         },
         "international_bitterness_units": {
@@ -6937,7 +6937,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 6.3
+            "value": 8.1
           }
         },
         "international_bitterness_units": {
@@ -7006,7 +7006,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 6.3
+            "value": 7.6
           }
         },
         "international_bitterness_units": {
@@ -7075,7 +7075,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 6.6
+            "value": 7.9
           }
         },
         "international_bitterness_units": {
@@ -7146,7 +7146,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 8.6
+            "value": 14.3
           }
         },
         "international_bitterness_units": {
@@ -7217,7 +7217,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -7288,7 +7288,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.1
+            "value": 5.1
           }
         },
         "international_bitterness_units": {
@@ -7359,7 +7359,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 3.5
+            "value": 4.4
           }
         },
         "international_bitterness_units": {
@@ -7430,7 +7430,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 3.5
+            "value": 4.4
           }
         },
         "international_bitterness_units": {
@@ -7501,7 +7501,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.9
+            "value": 6
           }
         },
         "international_bitterness_units": {
@@ -7572,7 +7572,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.8
+            "value": 6.3
           }
         },
         "international_bitterness_units": {
@@ -7643,7 +7643,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 6.3
+            "value": 7.6
           }
         },
         "international_bitterness_units": {
@@ -7712,7 +7712,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.8
+            "value": 5.4
           }
         },
         "international_bitterness_units": {
@@ -7783,7 +7783,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 5.1
+            "value": 6
           }
         },
         "international_bitterness_units": {
@@ -7852,7 +7852,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.1
+            "value": 5.6
           }
         },
         "international_bitterness_units": {
@@ -7923,7 +7923,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 7.6
+            "value": 9.3
           }
         },
         "international_bitterness_units": {
@@ -7994,7 +7994,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.1
+            "value": 5.1
           }
         },
         "international_bitterness_units": {
@@ -8065,7 +8065,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.6
+            "value": 5.3
           }
         },
         "international_bitterness_units": {
@@ -8136,7 +8136,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 3.5
+            "value": 5
           }
         },
         "international_bitterness_units": {
@@ -8207,7 +8207,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.3
+            "value": 5.7
           }
         },
         "international_bitterness_units": {
@@ -8278,7 +8278,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.6
+            "value": 5.7
           }
         },
         "international_bitterness_units": {
@@ -8349,7 +8349,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 3.5
+            "value": 5.6
           }
         },
         "international_bitterness_units": {
@@ -8420,7 +8420,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 3.8
+            "value": 5.1
           }
         },
         "international_bitterness_units": {
@@ -8491,7 +8491,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 3.8
+            "value": 5.1
           }
         },
         "international_bitterness_units": {
@@ -8562,7 +8562,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 3.8
+            "value": 5.1
           }
         },
         "international_bitterness_units": {
@@ -8633,7 +8633,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 2.5
+            "value": 12
           }
         },
         "international_bitterness_units": {
@@ -8704,7 +8704,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 3.8
+            "value": 5.1
           }
         },
         "international_bitterness_units": {
@@ -8775,7 +8775,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 2.5
+            "value": 12
           }
         },
         "international_bitterness_units": {
@@ -8846,7 +8846,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 2.5
+            "value": 13.3
           }
         },
         "international_bitterness_units": {
@@ -8917,7 +8917,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 2.5
+            "value": 13.3
           }
         },
         "international_bitterness_units": {
@@ -8988,7 +8988,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 2.5
+            "value": 12
           }
         },
         "international_bitterness_units": {
@@ -9059,7 +9059,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 2.5
+            "value": 12
           }
         },
         "international_bitterness_units": {
@@ -9130,7 +9130,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -9201,7 +9201,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -9272,7 +9272,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 2.5
+            "value": 12
           }
         },
         "international_bitterness_units": {
@@ -9343,7 +9343,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 2.5
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -9414,7 +9414,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 2.5
+            "value": 12
           }
         },
         "international_bitterness_units": {
@@ -9485,7 +9485,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -9556,7 +9556,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -9627,7 +9627,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -9698,7 +9698,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 4.3
+            "value": 10.2
           }
         },
         "international_bitterness_units": {
@@ -9769,7 +9769,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -9840,7 +9840,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -9911,7 +9911,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 3.8
+            "value": 6.3
           }
         },
         "international_bitterness_units": {
@@ -9982,7 +9982,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 3.8
+            "value": 6.3
           }
         },
         "international_bitterness_units": {
@@ -10053,7 +10053,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 6.3
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -10124,7 +10124,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -10195,7 +10195,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -10266,7 +10266,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -10337,7 +10337,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -10408,7 +10408,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -10479,7 +10479,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -10550,7 +10550,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 8
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -10621,7 +10621,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 25
           }
         },
         "international_bitterness_units": {
@@ -10690,7 +10690,7 @@
           },
           "maximum": {
             "unit": "%",
-            "value": 0
+            "value": 0.63
           }
         },
         "international_bitterness_units": {
