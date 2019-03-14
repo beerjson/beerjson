@@ -19,7 +19,7 @@
           }
         },
         "flocculation": "low",
-        "attenuation": {
+        "attenuation_range": {
           "minimum": {
             "unit": "%",
             "value": 73.0
