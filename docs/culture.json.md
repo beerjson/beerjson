@@ -24,7 +24,7 @@ CultureInformation collects the attributes of a microbial culture to store as re
 |--|--|--|--|
 | **temperature_range** |  | [TemperatureRangeType](measureable_units.json.md#temperaturerangetype)|  |
 | **flocculation** |  | [QualitativeRangeType](measureable_units.json.md#qualitativerangetype)|  |
-| **attenuation** |  | [PercentRangeType](measureable_units.json.md#percentrangetype)|  |
+| **attenuation_range** |  | [PercentRangeType](measureable_units.json.md#percentrangetype)|  |
 | **alcohol_tolerance** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **notes** |  | string|  |
 | **best_for** |  | string|  |
