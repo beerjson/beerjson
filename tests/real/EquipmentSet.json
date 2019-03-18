@@ -42,6 +42,43 @@
             }
           }
         ]
+      },
+      {
+        "name": "Pot and Cooler ( 5 Gal/19 L) - All Grain",
+        "equipment_items": [
+          {
+            "name": "5 Gallon cooler as mash tun with false bottom",
+            "form": "Mash Tun",
+            "maximum_volume": {
+              "value": 18.93,
+              "unit": "l"
+            },
+            "loss": {
+              "value": 0.95,
+              "unit": "l"
+            },
+            "weight": {
+              "value": 1.81,
+              "unit": "kg"
+            }
+          },
+          {
+            "name": " 7-9 gallon brewpot capable of boiling at least 6 gallons of wort without spilling over",
+            "form": "Brew Kettle",
+            "maximum_volume": {
+              "value": 56.78,
+              "unit": "l"
+            },
+            "loss": {
+              "value": 7.57,
+              "unit": "l"
+            },
+            "boil_rate_per_hour": {
+              "value": 2.04,
+              "unit": "l"
+            }
+          }
+        ]
       }
     ]
   }
