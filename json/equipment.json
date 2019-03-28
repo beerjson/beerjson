@@ -34,7 +34,7 @@
     },
     "EquipmentItemType": {
       "type": "object",
-      "description": "EquipmentType provides necessary information for brewing equipment",
+      "description": "EquipmentType provides necessary information for individual brewing equipment",
       "allOf": [
         {
           "$ref": "#/definitions/EquipmentBase"
