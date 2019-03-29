@@ -30,11 +30,11 @@
           "$ref": "measureable_units.json#/definitions/VolumeType"
         }
       },
-      "required": ["name", "type", "maximum_volume"]
+      "required": ["name", "form", "maximum_volume"]
     },
-    "EquipmentType": {
+    "EquipmentItemType": {
       "type": "object",
-      "description": "EquipmentType provides necessary information for brewing equipment",
+      "description": "EquipmentType provides necessary information for individual brewing equipment",
       "allOf": [
         {
           "$ref": "#/definitions/EquipmentBase"
@@ -66,6 +66,24 @@
         }
       ],
       "required": ["loss"]
+    },
+    "EquipmentType": {
+      "type": "object",
+      "description": "Provides necessary information for brewing equipment set.",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "equipment_items": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "equipment.json#/definitions/EquipmentItemType"
+          }
+        }
+      },
+      "required": ["name", "equipment_items"]
     }
   }
 }

@@ -87,8 +87,8 @@ export type CultureInventoryType = {|
 
 export type EquipmentBase = {|
   name: string,
-  type: string,
-  form?:
+  type?: string,
+  form:
     | 'HLT'
     | 'Mash Tun'
     | 'Lauter Tun'
@@ -99,7 +99,7 @@ export type EquipmentBase = {|
   maximum_volume: VolumeType
 |}
 
-export type EquipmentType = EquipmentBase & {|
+export type EquipmentItemType = EquipmentBase & {|
   loss: VolumeType,
   grain_absorption_rate?: SpecificVolumeType,
   boil_rate_per_hour?: VolumeType,
@@ -107,6 +107,11 @@ export type EquipmentType = EquipmentBase & {|
   weight?: MassType,
   specific_heat?: SpecificHeatType,
   notes?: string
+|}
+
+export type EquipmentType = {|
+  name: string,
+  equipment_items: EquipmentItemType[]
 |}
 
 export type FermentableBase = {|
