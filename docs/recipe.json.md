@@ -26,6 +26,7 @@ RecipeType composes the information stored in a beerjson recipe
 | **color_estimate** |  | [ColorType](measureable_units.json.md#colortype)|  |
 | **beer_pH** |  | [AcidityType](measureable_units.json.md#aciditytype)|  |
 | **carbonation** |  | number|  |
+| **apparent_attenuation** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **fermentation** |  | [FermentationProcedureType](fermentation.json.md#fermentationproceduretype)|  |
 | **packaging** |  | [PackagingProcedureType](packaging.json.md#packagingproceduretype)|  |
 | **boil** |  | [BoilProcedureType](boil.json.md#boilproceduretype)|  |

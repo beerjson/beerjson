@@ -6,27 +6,13 @@
         "name": "RR Summer Bitter",
         "type": "all grain",
         "author": "RomaRoma",
-        "created": "2017-07-13T21:00:00.000Z",
-        "batch_size": {
-          "unit": "l",
-          "value": 40
-        },
+        "created": "2017-07-14T05:00:00.000Z",
+        "batch_size": { "unit": "l", "value": 40 },
         "boil": {
-          "pre_boil_size": {
-            "unit": "l",
-            "value": 45.6427168
-          },
-          "boil_time": {
-            "unit": "min",
-            "value": 60
-          }
+          "pre_boil_size": { "unit": "l", "value": 45.6427168 },
+          "boil_time": { "unit": "min", "value": 60 }
         },
-        "efficiency": {
-          "brewhouse": {
-            "unit": "%",
-            "value": 75
-          }
-        },
+        "efficiency": { "brewhouse": { "unit": "%", "value": 75 } },
         "style": {
           "name": "English Best Bitter",
           "category": "Bitter Ale",
@@ -38,121 +24,63 @@
             {
               "name": "Pale Malt, Maris Otter",
               "type": "grain",
-              "color": {
-                "unit": "Lovi",
-                "value": 3
-              },
-              "amount": {
-                "unit": "kg",
-                "value": 6.9999955
-              },
+              "color": { "unit": "Lovi", "value": 3 },
+              "amount": { "unit": "kg", "value": 6.9999955 },
               "origin": "United Kingdom",
               "supplier": "Maris Otter",
               "group": "base",
-              "yield": {
-                "potential": {
-                  "unit": "sg",
-                  "value": 1.03795
-                }
-              },
+              "yield": { "potential": { "unit": "sg", "value": 1.03795 } },
               "add_after_boil": false
             },
             {
               "name": "Cara 50",
               "type": "grain",
-              "color": {
-                "unit": "Lovi",
-                "value": 25.3807107
-              },
-              "amount": {
-                "unit": "kg",
-                "value": 0.9999994
-              },
+              "color": { "unit": "Lovi", "value": 25.3807107 },
+              "amount": { "unit": "kg", "value": 0.9999994 },
               "origin": "Belgium",
               "supplier": "",
               "group": "base",
-              "yield": {
-                "potential": {
-                  "unit": "sg",
-                  "value": 1.0345
-                }
-              },
+              "yield": { "potential": { "unit": "sg", "value": 1.0345 } },
               "add_after_boil": false
             }
           ],
           "hop_additions": [
             {
               "name": "Target",
-              "alpha_acid": {
-                "unit": "%",
-                "value": 11
-              },
+              "alpha_acid": { "unit": "%", "value": 11 },
               "origin": "United Kingdom",
               "form": "pellet",
-              "beta_acid": {
-                "unit": "%",
-                "value": 5
-              },
+              "beta_acid": { "unit": "%", "value": 5 },
               "use": "boil",
-              "amount": {
-                "unit": "kg",
-                "value": 0.04
-              },
+              "amount": { "unit": "kg", "value": 0.04 },
               "timing": {
-                "time": {
-                  "unit": "min",
-                  "value": 60
-                },
+                "time": { "unit": "min", "value": 60 },
                 "use": "add_to_boil"
               }
             },
             {
               "name": "Goldings, East Kent",
-              "alpha_acid": {
-                "unit": "%",
-                "value": 5
-              },
+              "alpha_acid": { "unit": "%", "value": 5 },
               "origin": "United Kingdom",
               "form": "pellet",
-              "beta_acid": {
-                "unit": "%",
-                "value": 3.5
-              },
+              "beta_acid": { "unit": "%", "value": 3.5 },
               "use": "boil",
-              "amount": {
-                "unit": "kg",
-                "value": 0.015
-              },
+              "amount": { "unit": "kg", "value": 0.015 },
               "timing": {
-                "time": {
-                  "unit": "min",
-                  "value": 30
-                },
+                "time": { "unit": "min", "value": 30 },
                 "use": "add_to_boil"
               }
             },
             {
               "name": "Goldings, East Kent",
-              "alpha_acid": {
-                "unit": "%",
-                "value": 5
-              },
+              "alpha_acid": { "unit": "%", "value": 5 },
               "origin": "United Kingdom",
               "form": "pellet",
-              "beta_acid": {
-                "unit": "%",
-                "value": 3.5
-              },
+              "beta_acid": { "unit": "%", "value": 3.5 },
               "use": "boil",
-              "amount": {
-                "unit": "kg",
-                "value": 0.015
-              },
+              "amount": { "unit": "kg", "value": 0.015 },
               "timing": {
-                "time": {
-                  "unit": "min",
-                  "value": 15
-                },
+                "time": { "unit": "min", "value": 15 },
                 "use": "add_to_boil"
               }
             }
@@ -160,82 +88,37 @@
           "culture_additions": [
             {
               "name": "Windsor Yeast",
-              "attenuation": {
-                "unit": "%",
-                "value": 75
-              },
+              "attenuation": { "unit": "%", "value": 75 },
               "type": "ale",
               "form": "dry",
-              "amount": {
-                "unit": "l",
-                "value": 0.023659
-              }
+              "amount": { "unit": "l", "value": 0.023659 }
             }
           ]
         },
         "mash": {
           "name": "Temperature Mash, 1 Step, Full Body",
-          "grain_temperature": {
-            "unit": "C",
-            "value": 22.2222222
-          },
-          "sparge_temperature": {
-            "unit": "C",
-            "value": 75.5555556
-          },
-          "pH": {
-            "unit": "pH",
-            "value": 5.4
-          },
+          "grain_temperature": { "unit": "C", "value": 22.2222222 },
+          "sparge_temperature": { "unit": "C", "value": 75.5555556 },
+          "pH": { "unit": "pH", "value": 5.4 },
           "notes": "Temperature mash for use when mashing in a brew pot over a heat source such as the stove.  Use heat to maintain desired temperature during the mash.",
           "mash_steps": [
             {
               "name": "Saccharification",
               "type": "infusion",
-              "step_temperature": {
-                "unit": "C",
-                "value": 68.8888889
-              },
-              "step_time": {
-                "unit": "min",
-                "value": 40
-              },
-              "ramp_time": {
-                "unit": "min",
-                "value": 15
-              },
-              "end_temperature": {
-                "unit": "C",
-                "value": 68.8888889
-              },
-              "amount": {
-                "unit": "l",
-                "value": 20.8636349
-              }
+              "step_temperature": { "unit": "C", "value": 68.8888889 },
+              "step_time": { "unit": "min", "value": 40 },
+              "ramp_time": { "unit": "min", "value": 15 },
+              "end_temperature": { "unit": "C", "value": 68.8888889 },
+              "amount": { "unit": "l", "value": 20.8636349 }
             },
             {
               "name": "Mash Out",
               "type": "temperature",
-              "step_temperature": {
-                "unit": "C",
-                "value": 75.5555556
-              },
-              "step_time": {
-                "unit": "min",
-                "value": 10
-              },
-              "ramp_time": {
-                "unit": "min",
-                "value": 10
-              },
-              "end_temperature": {
-                "unit": "C",
-                "value": 75.5555556
-              },
-              "amount": {
-                "unit": "l",
-                "value": 0
-              }
+              "step_temperature": { "unit": "C", "value": 75.5555556 },
+              "step_time": { "unit": "min", "value": 10 },
+              "ramp_time": { "unit": "min", "value": 10 },
+              "end_temperature": { "unit": "C", "value": 75.5555556 },
+              "amount": { "unit": "l", "value": 0 }
             }
           ]
         }

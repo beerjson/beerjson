@@ -512,6 +512,7 @@ declare namespace BeerJSON {
     color_estimate?: ColorType
     beer_pH?: AcidityType
     carbonation?: number
+    apparent_attenuation?: PercentType
     fermentation?: FermentationProcedureType
     packaging?: PackagingProcedureType
     boil?: BoilProcedureType

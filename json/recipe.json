@@ -64,6 +64,9 @@
         "carbonation": {
           "type": "number"
         },
+        "apparent_attenuation": {
+          "$ref": "measureable_units.json#/definitions/PercentType"
+        },
         "fermentation": {
           "$ref": "fermentation.json#/definitions/FermentationProcedureType"
         },
