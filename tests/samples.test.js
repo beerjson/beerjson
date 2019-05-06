@@ -26,7 +26,7 @@ const convertFromXML = (dataDir, convertedDir) => {
   fs.readdirSync(dataDir).forEach(file => {
     const xmlString = fs.readFileSync(dataDir + file, 'utf8')
     const rawRecipe = importFromBeerXml(xmlString)
-    const recipe = prettier.format(rawRecipe, { parser: 'json' })
+    const recipe = prettier.format(rawRecipe, { parser: 'json-stringify' })
     fs.writeFileSync(convertedDir + file.replace('.xml', '.json'), recipe)
   })
 }
