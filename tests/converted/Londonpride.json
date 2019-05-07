@@ -6,12 +6,26 @@
         "name": "London pride",
         "type": "all grain",
         "author": "RR",
-        "batch_size": { "unit": "l", "value": 40 },
-        "boil": {
-          "pre_boil_size": { "unit": "l", "value": 47 },
-          "boil_time": { "unit": "min", "value": 60 }
+        "batch_size": {
+          "unit": "l",
+          "value": 40
         },
-        "efficiency": { "brewhouse": { "unit": "%", "value": 65 } },
+        "boil": {
+          "pre_boil_size": {
+            "unit": "l",
+            "value": 47
+          },
+          "boil_time": {
+            "unit": "min",
+            "value": 60
+          }
+        },
+        "efficiency": {
+          "brewhouse": {
+            "unit": "%",
+            "value": 65
+          }
+        },
         "style": {
           "name": "Best Bitter",
           "category": "British Bitter",
@@ -23,44 +37,84 @@
             {
               "name": "Pale 2-Row",
               "type": "grain",
-              "color": { "unit": "Lovi", "value": 2.5 },
-              "amount": { "unit": "kg", "value": 9 },
+              "color": {
+                "unit": "Lovi",
+                "value": 2.5
+              },
+              "amount": {
+                "unit": "kg",
+                "value": 9
+              },
               "origin": "United Kingdom",
               "group": "base",
-              "yield": { "potential": { "unit": "sg", "value": 1.0380006 } },
+              "yield": {
+                "potential": {
+                  "unit": "sg",
+                  "value": 1.0380006
+                }
+              },
               "add_after_boil": false
             },
             {
               "name": "Cara Plus 200",
               "type": "grain",
-              "color": { "unit": "Lovi", "value": 76 },
-              "amount": { "unit": "kg", "value": 0.6 },
+              "color": {
+                "unit": "Lovi",
+                "value": 76
+              },
+              "amount": {
+                "unit": "kg",
+                "value": 0.6
+              },
               "origin": "Finland",
               "group": "base",
-              "yield": { "potential": { "unit": "sg", "value": 1.0350014 } },
+              "yield": {
+                "potential": {
+                  "unit": "sg",
+                  "value": 1.0350014
+                }
+              },
               "add_after_boil": false
             }
           ],
           "hop_additions": [
             {
               "name": "Target",
-              "alpha_acid": { "unit": "%", "value": 11.5 },
+              "alpha_acid": {
+                "unit": "%",
+                "value": 11.5
+              },
               "form": "pellet",
               "use": "boil",
-              "amount": { "unit": "kg", "value": 0.03 },
+              "amount": {
+                "unit": "kg",
+                "value": 0.03
+              },
               "timing": {
-                "time": { "unit": "min", "value": 60 },
+                "time": {
+                  "unit": "min",
+                  "value": 60
+                },
                 "use": "add_to_boil"
               }
             },
             {
               "name": "Target",
-              "alpha_acid": { "unit": "%", "value": 11.5 },
+              "alpha_acid": {
+                "unit": "%",
+                "value": 11.5
+              },
               "form": "pellet",
               "use": "boil",
-              "amount": { "unit": "kg", "value": 0.03 },
+              "amount": {
+                "unit": "kg",
+                "value": 0.03
+              },
               "timing": {
-                "time": { "unit": "min", "value": 15 },
+                "time": {
+                  "unit": "min",
+                  "value": 15
+                },
                 "use": "add_to_boil"
               }
             }
@@ -68,22 +122,37 @@
           "culture_additions": [
             {
               "name": "English Ale Yeast WLP002",
-              "attenuation": { "unit": "%", "value": 66.5 },
+              "attenuation": {
+                "unit": "%",
+                "value": 66.5
+              },
               "type": "ale",
               "form": "liquid",
-              "amount": { "unit": "l", "value": 0.1 }
+              "amount": {
+                "unit": "l",
+                "value": 0.1
+              }
             }
           ]
         },
         "mash": {
           "name": "Mash Steps",
-          "grain_temperature": { "unit": "C", "value": 20 },
+          "grain_temperature": {
+            "unit": "C",
+            "value": 20
+          },
           "mash_steps": [
             {
               "name": "",
               "type": "temperature",
-              "step_temperature": { "unit": "C", "value": 65 },
-              "step_time": { "unit": "min", "value": 60 }
+              "step_temperature": {
+                "unit": "C",
+                "value": 65
+              },
+              "step_time": {
+                "unit": "min",
+                "value": 60
+              }
             }
           ]
         }
