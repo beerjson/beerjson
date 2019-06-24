@@ -6,7 +6,7 @@
   "definitions": {
     "RecipeType": {
       "type": "object",
-      "description": "RecipeType composes the information stored in a beerjson recipe",
+      "description": "RecipeType composes the information stored in a beerjson recipe.",
       "additionalProperties": false,
       "properties": {
         "name": {
@@ -14,7 +14,11 @@
         },
         "type": {
           "type": "string",
-          "enum": ["extract", "partial mash", "all grain"]
+          "enum": [
+            "extract",
+            "partial mash",
+            "all grain"
+          ]
         },
         "author": {
           "type": "string"
@@ -26,6 +30,7 @@
           "$ref": "measureable_units.json#/definitions/DateType"
         },
         "batch_size": {
+          "description": "The volume into the fermenter.",
           "$ref": "measureable_units.json#/definitions/VolumeType"
         },
         "efficiency": {
@@ -53,6 +58,7 @@
           "$ref": "measureable_units.json#/definitions/PercentType"
         },
         "ibu_estimate": {
+          "description": "Used to differentiate which IBU formula is being used in a recipe. If formula is modified in any way, eg to support whirlpool/flameout additions etc etc, please use `Other` for transparency.",
           "$ref": "hop.json#/definitions/IBUEstimateType"
         },
         "color_estimate": {
@@ -97,19 +103,25 @@
       "additionalProperties": false,
       "properties": {
         "conversion": {
+          "description": "The percentage of sugar from the grain yield that is extracted and converted during the mash.",
           "$ref": "measureable_units.json#/definitions/PercentType"
         },
         "lauter": {
+          "description": "The percentage of sugar that makes it from the mash tun to the kettle.",
           "$ref": "measureable_units.json#/definitions/PercentType"
         },
         "mash": {
+          "description": "The percentage of sugar that makes it from the grain to the kettle.",
           "$ref": "measureable_units.json#/definitions/PercentType"
         },
         "brewhouse": {
+          "description": "The percentage of sugar that makes it from the grain to the fermenter.",
           "$ref": "measureable_units.json#/definitions/PercentType"
         }
       },
-      "required": ["brewhouse"]
+      "required": [
+        "brewhouse"
+      ]
     },
     "IngredientsType": {
       "type": "object",
@@ -151,7 +163,9 @@
           }
         }
       },
-      "required": ["fermentable_additions"]
+      "required": [
+        "fermentable_additions"
+      ]
     },
     "TasteType": {
       "type": "object",
@@ -164,7 +178,10 @@
           "type": "number"
         }
       },
-      "required": ["notes", "rating"]
+      "required": [
+        "notes",
+        "rating"
+      ]
     }
   }
 }

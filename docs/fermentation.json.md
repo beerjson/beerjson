@@ -2,7 +2,7 @@ The schema defines the following types:
 
 ## FermentationProcedureType 
 
-FermentationProcedureType defines the procedure for performing fermenting
+FermentationProcedureType defines the procedure for performing fermentation.
 
 **FermentationProcedureType** is an object with these properties:
 

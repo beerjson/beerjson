@@ -5,7 +5,7 @@
   "definitions": {
     "MiscellaneousBase": {
       "type": "object",
-      "description": "MiscellaneousBase provides unique properties to identify individual records of ingredients",
+      "description": "MiscellaneousBase provides unique properties to identify individual records of ingredients that are neither hops, nor provide a contribution to the gravity of wort.",
       "properties": {
         "name": {
           "type": "string"
@@ -23,11 +23,14 @@
           ]
         }
       },
-      "required": ["name", "type"]
+      "required": [
+        "name",
+        "type"
+      ]
     },
     "MiscellaneousType": {
       "type": "object",
-      "description": "MiscellaneousType collects the attributes of an ingredient to store as record information",
+      "description": "MiscellaneousType collects the attributes of an ingredient to store as record information.",
       "allOf": [
         {
           "$ref": "#/definitions/MiscellaneousBase"
@@ -40,14 +43,16 @@
             "notes": {
               "type": "string"
             },
-            "inventory": { "$ref": "#/definitions/MiscellaneousInventoryType" }
+            "inventory": {
+              "$ref": "#/definitions/MiscellaneousInventoryType"
+            }
           }
         }
       ]
     },
     "MiscellaneousAdditionType": {
       "type": "object",
-      "description": "MiscellaneousAdditionType collects the attributes of each miscellaneous ingredient for use in a recipe",
+      "description": "MiscellaneousAdditionType collects the attributes of each miscellaneous ingredient for use in a recipe.",
       "allOf": [
         {
           "$ref": "#/definitions/MiscellaneousBase"
@@ -73,7 +78,9 @@
           }
         },
         {
-          "required": ["amount"]
+          "required": [
+            "amount"
+          ]
         }
       ]
     },
@@ -95,7 +102,9 @@
           ]
         }
       },
-      "required": ["amount"]
+      "required": [
+        "amount"
+      ]
     }
   }
 }

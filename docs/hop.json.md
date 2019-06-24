@@ -2,7 +2,7 @@ The schema defines the following types:
 
 ## HopVarietyBase 
 
-HopVarietyBase provides unique properties to identify individual records of a hop variety
+HopVarietyBase provides unique properties to identify individual records of a hop variety.
 
 **HopVarietyBase** is an object with these properties:
 
@@ -10,13 +10,14 @@ HopVarietyBase provides unique properties to identify individual records of a ho
 |--|--|--|--|
 | **name** | ✅ | string|  |
 | **origin** |  | string|  |
+| **year** |  | string|  |
 | **form** |  | `"extract"`<br/>`"leaf"`<br/>`"leaf (wet)"`<br/>`"pellet"`<br/>`"powder"`<br/>`"plug"`|  |
 | **alpha_acid** | ✅ | [PercentType](measureable_units.json.md#percenttype)|  |
 | **beta_acid** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 
 ## VarietyInformation 
 
-VarietyInformation collects the attributes of a hop variety to store as record information
+VarietyInformation collects the attributes of a hop variety to store as record information.
 
 **VarietyInformation** is an object with all properties from [HopVarietyBase](#hopvarietybase) and these additional properties:
 
@@ -24,14 +25,14 @@ VarietyInformation collects the attributes of a hop variety to store as record i
 |--|--|--|--|
 | **type** |  | `"aroma"`<br/>`"bittering"`<br/>`"flavor"`<br/>`"aroma/bittering"`<br/>`"bittering/flavor"`<br/>`"aroma/flavor"`<br/>`"aroma/bittering/flavor"`|  |
 | **notes** |  | string|  |
-| **percent_lost** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **percent_lost** |  | [PercentType](measureable_units.json.md#percenttype)|  Defined as the percentage of hop alpha lost in 6 months of storage. |
 | **substitutes** |  | string|  |
-| **oil_content** |  | [OilContentType](#oilcontenttype)|  |
+| **oil_content** |  | [OilContentType](#oilcontenttype)| Oil Content information object. |
 | **inventory** |  | [HopInventoryType](#hopinventorytype)|  |
 
 ## HopAdditionType 
 
-HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bil
+HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bil.
 
 **HopAdditionType** is an object with all properties from [HopVarietyBase](#hopvarietybase) and these additional properties:
 
@@ -42,7 +43,7 @@ HopAdditionType collects the attributes of each hop ingredient for use in a reci
 
 ## IBUEstimateType 
 
-*no description yet*
+Used to differentiate which IBU formula is being used in a recipe. If formula is modified in any way, eg to support whirlpool/flameout additions etc etc, please use `Other` for transparency.
 
 **IBUEstimateType** is an object with these properties:
 

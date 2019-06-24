@@ -6,7 +6,7 @@
   "definitions": {
     "HopVarietyBase": {
       "type": "object",
-      "description": "HopVarietyBase provides unique properties to identify individual records of a hop variety",
+      "description": "HopVarietyBase provides unique properties to identify individual records of a hop variety.",
       "properties": {
         "name": {
           "type": "string"
@@ -14,9 +14,19 @@
         "origin": {
           "type": "string"
         },
+        "year": {
+          "type": "string"
+        },
         "form": {
           "type": "string",
-          "enum": ["extract", "leaf", "leaf (wet)", "pellet", "powder", "plug"]
+          "enum": [
+            "extract",
+            "leaf",
+            "leaf (wet)",
+            "pellet",
+            "powder",
+            "plug"
+          ]
         },
         "alpha_acid": {
           "$ref": "measureable_units.json#/definitions/PercentType"
@@ -25,11 +35,14 @@
           "$ref": "measureable_units.json#/definitions/PercentType"
         }
       },
-      "required": ["name", "alpha_acid"]
+      "required": [
+        "name",
+        "alpha_acid"
+      ]
     },
     "VarietyInformation": {
       "type": "object",
-      "description": "VarietyInformation collects the attributes of a hop variety to store as record information",
+      "description": "VarietyInformation collects the attributes of a hop variety to store as record information.",
       "allOf": [
         {
           "$ref": "#/definitions/HopVarietyBase"
@@ -52,12 +65,14 @@
               "type": "string"
             },
             "percent_lost": {
+              "description": " Defined as the percentage of hop alpha lost in 6 months of storage.",
               "$ref": "measureable_units.json#/definitions/PercentType"
             },
             "substitutes": {
               "type": "string"
             },
             "oil_content": {
+              "description": "Oil Content information object.",
               "$ref": "#/definitions/OilContentType"
             },
             "inventory": {
@@ -69,7 +84,7 @@
     },
     "HopAdditionType": {
       "type": "object",
-      "description": "HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bil",
+      "description": "HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bil.",
       "allOf": [
         {
           "$ref": "#/definitions/HopVarietyBase"
@@ -92,9 +107,13 @@
           }
         }
       ],
-      "required": ["amount", "timing"]
+      "required": [
+        "amount",
+        "timing"
+      ]
     },
     "IBUEstimateType": {
+      "description": "Used to differentiate which IBU formula is being used in a recipe. If formula is modified in any way, eg to support whirlpool/flameout additions etc etc, please use `Other` for transparency.",
       "type": "object",
       "properties": {
         "method": {
@@ -104,7 +123,12 @@
     },
     "IBUMethodType": {
       "type": "string",
-      "enum": ["Rager", "Tinseth", "Garetz", "Other"]
+      "enum": [
+        "Rager",
+        "Tinseth",
+        "Garetz",
+        "Other"
+      ]
     },
     "OilContentType": {
       "type": "object",

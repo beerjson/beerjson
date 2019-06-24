@@ -6,7 +6,7 @@
   "definitions": {
     "FermentationProcedureType": {
       "type": "object",
-      "description": "FermentationProcedureType defines the procedure for performing fermenting",
+      "description": "FermentationProcedureType defines the procedure for performing fermentation.",
       "additionalProperties": false,
       "properties": {
         "name": {
@@ -29,7 +29,10 @@
           }
         }
       },
-      "required": ["name", "fermentation_steps"]
+      "required": [
+        "name",
+        "fermentation_steps"
+      ]
     }
   }
 }

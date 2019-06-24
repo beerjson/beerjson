@@ -2,7 +2,7 @@ The schema defines the following types:
 
 ## PackagingProcedureType 
 
-PackagingProcedureType describes the procedure for packaging your beverage
+PackagingProcedureType describes the procedure for packaging your beverage.
 
 **PackagingProcedureType** is an object with these properties:
 

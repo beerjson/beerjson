@@ -191,6 +191,7 @@ declare namespace BeerJSON {
   export type HopVarietyBase = {
     name: string
     origin?: string
+    year?: string
     form?: 'extract' | 'leaf' | 'leaf (wet)' | 'pellet' | 'powder' | 'plug'
     alpha_acid: PercentType
     beta_acid?: PercentType
