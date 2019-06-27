@@ -30,11 +30,15 @@
           "$ref": "measureable_units.json#/definitions/VolumeType"
         }
       },
-      "required": ["name", "form", "maximum_volume"]
+      "required": [
+        "name",
+        "form",
+        "maximum_volume"
+      ]
     },
     "EquipmentItemType": {
       "type": "object",
-      "description": "EquipmentType provides necessary information for individual brewing equipment",
+      "description": "EquipmentType provides necessary information for individual brewing equipment.",
       "allOf": [
         {
           "$ref": "#/definitions/EquipmentBase"
@@ -45,18 +49,23 @@
               "$ref": "measureable_units.json#/definitions/VolumeType"
             },
             "grain_absorption_rate": {
+              "description": "The apparent volume absorbed by grain, typical values are 0.125 qt/lb (1.04 L/kg) for a mashtun, 0.08 gal/lb (0.66 L/kg) for BIAB.",
               "$ref": "measureable_units.json#/definitions/SpecificVolumeType"
             },
             "boil_rate_per_hour": {
+              "description": "The volume boiled off during 1 hour, measured before and after at room temperature.",
               "$ref": "measureable_units.json#/definitions/VolumeType"
             },
             "drain_rate_per_minute": {
+              "description": "The volume that leaves the kettle, especially important for non-immersion chillers that cool the wort as it leaves the kettle.",
               "$ref": "measureable_units.json#/definitions/VolumeType"
             },
             "weight": {
+              "description": "The weight of the piece of equipment, especially important for when the mashtun is not preheated.",
               "$ref": "measureable_units.json#/definitions/MassType"
             },
             "specific_heat": {
+              "description": "The specific heat of the piece of equipment, expressed in Cal/(g*C), especially important for when the mashtun is not preheated.",
               "$ref": "measureable_units.json#/definitions/SpecificHeatType"
             },
             "notes": {
@@ -65,7 +74,9 @@
           }
         }
       ],
-      "required": ["loss"]
+      "required": [
+        "loss"
+      ]
     },
     "EquipmentType": {
       "type": "object",
@@ -83,7 +94,10 @@
           }
         }
       },
-      "required": ["name", "equipment_items"]
+      "required": [
+        "name",
+        "equipment_items"
+      ]
     }
   }
 }

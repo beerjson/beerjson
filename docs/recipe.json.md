@@ -2,7 +2,7 @@ The schema defines the following types:
 
 ## RecipeType 
 
-RecipeType composes the information stored in a beerjson recipe
+RecipeType composes the information stored in a beerjson recipe.
 
 **RecipeType** is an object with these properties:
 
@@ -13,7 +13,7 @@ RecipeType composes the information stored in a beerjson recipe
 | **author** | ✅ | string|  |
 | **coauthor** |  | string|  |
 | **created** |  | [DateType](measureable_units.json.md#datetype)|  |
-| **batch_size** | ✅ | [VolumeType](measureable_units.json.md#volumetype)|  |
+| **batch_size** | ✅ | [VolumeType](measureable_units.json.md#volumetype)| The volume into the fermenter. |
 | **efficiency** | ✅ | [EfficiencyType](#efficiencytype)|  |
 | **style** |  | [RecipeStyleType](style.json.md#recipestyletype)|  |
 | **ingredients** | ✅ | [IngredientsType](#ingredientstype)|  |
@@ -22,7 +22,7 @@ RecipeType composes the information stored in a beerjson recipe
 | **original_gravity** |  | [GravityType](measureable_units.json.md#gravitytype)|  |
 | **final_gravity** |  | [GravityType](measureable_units.json.md#gravitytype)|  |
 | **alcohol_by_volume** |  | [PercentType](measureable_units.json.md#percenttype)|  |
-| **ibu_estimate** |  | [IBUEstimateType](hop.json.md#ibuestimatetype)|  |
+| **ibu_estimate** |  | [IBUEstimateType](hop.json.md#ibuestimatetype)| Used to differentiate which IBU formula is being used in a recipe. If formula is modified in any way, eg to support whirlpool/flameout additions etc etc, please use `Other` for transparency. |
 | **color_estimate** |  | [ColorType](measureable_units.json.md#colortype)|  |
 | **beer_pH** |  | [AcidityType](measureable_units.json.md#aciditytype)|  |
 | **carbonation** |  | number|  |
@@ -41,10 +41,10 @@ RecipeType composes the information stored in a beerjson recipe
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **conversion** |  | [PercentType](measureable_units.json.md#percenttype)|  |
-| **lauter** |  | [PercentType](measureable_units.json.md#percenttype)|  |
-| **mash** |  | [PercentType](measureable_units.json.md#percenttype)|  |
-| **brewhouse** | ✅ | [PercentType](measureable_units.json.md#percenttype)|  |
+| **conversion** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of sugar from the grain yield that is extracted and converted during the mash. |
+| **lauter** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of sugar that makes it from the mash tun to the kettle. |
+| **mash** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of sugar that makes it from the grain to the kettle. |
+| **brewhouse** | ✅ | [PercentType](measureable_units.json.md#percenttype)| The percentage of sugar that makes it from the grain to the fermenter. |
 
 ## IngredientsType 
 

@@ -2,7 +2,7 @@ The schema defines the following types:
 
 ## CultureBase 
 
-The descriptive base type for both culture records, and recipe additions. Provides unique properties to identify individual records of a culture
+Provides unique properties to identify individual records of a culture.
 
 **CultureBase** is an object with these properties:
 
@@ -16,7 +16,7 @@ The descriptive base type for both culture records, and recipe additions. Provid
 
 ## CultureInformation 
 
-CultureInformation collects the attributes of a microbial culture to store as record information
+CultureInformation collects the attributes of a microbial culture.
 
 **CultureInformation** is an object with all properties from [CultureBase](#culturebase) and these additional properties:
 
@@ -27,13 +27,13 @@ CultureInformation collects the attributes of a microbial culture to store as re
 | **attenuation_range** |  | [PercentRangeType](measureable_units.json.md#percentrangetype)|  |
 | **alcohol_tolerance** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **notes** |  | string|  |
-| **best_for** |  | string|  |
-| **max_reuse** |  | integer|  |
+| **best_for** |  | string| Recommended styles for a particular culture. |
+| **max_reuse** |  | integer| Maximum number of times to reuse a culture before a new lab source is recommended. |
 | **inventory** |  | [CultureInventoryType](#cultureinventorytype)|  |
 
 ## CultureAdditionType 
 
-CultureAdditionType collects the attributes of each culture ingredient for use in a recipe
+CultureAdditionType collects the attributes of each culture ingredient for use in a recipe.
 
 **CultureAdditionType** is an object with all properties from [CultureBase](#culturebase) and these additional properties:
 

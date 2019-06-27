@@ -22,6 +22,7 @@
           "$ref": "measureable_units.json#/definitions/TemperatureType"
         },
         "ramp_time": {
+          "description": "The amount of time that passes before this step begins. eg moving from a boiling step (step 1) to a whirlpool step (step 2) may take 5 minutes. Step 2 would have a ramp time of 5 minutes, hop isomerization and bitterness calculations will need to account for this accordingly.",
           "$ref": "measureable_units.json#/definitions/TimeType"
         },
         "step_time": {
@@ -40,12 +41,17 @@
           "$ref": "measureable_units.json#/definitions/AcidityType"
         },
         "chilling_type": {
-          "description": "Chilling type seperates batch chilling, ie immersion chillers, where the entire volume of wort is brought down in temperture as a whole, vs inline chilling where the wort is chilled while it is being drained, which can leave a significant amount of hop isomerization and hop oils isomerizing in the boil kettle.",
+          "description": "Chilling type seperates batch chilling, eg immersion chillers, where the entire volume of wort is brought down in temperture as a whole, vs inline chilling where the wort is chilled while it is being drained, which can leave a significant amount of hop isomerization occuring in the boil kettle.",
           "type": "string",
-          "enum": ["batch", "inline"]
+          "enum": [
+            "batch",
+            "inline"
+          ]
         }
       },
-      "required": ["name"]
+      "required": [
+        "name"
+      ]
     }
   }
 }

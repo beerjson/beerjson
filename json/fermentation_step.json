@@ -6,7 +6,7 @@
   "definitions": {
     "FermentationStepType": {
       "type": "object",
-      "description": "FermentationStepType - a per step representation of a fermentation action. Free rise is used to indicate a fermentation step where the exothermic fermentation is allowed to raise the temp without restriction.",
+      "description": "FermentationStepType - a per step representation of a fermentation action.",
       "additionalProperties": false,
       "properties": {
         "name": {
@@ -25,6 +25,7 @@
           "$ref": "measureable_units.json#/definitions/TimeType"
         },
         "free_rise": {
+          "description": "Free rise is used to indicate a fermentation step where the exothermic fermentation is allowed to raise the temperature without restriction This is either True or false.",
           "type": "boolean"
         },
         "start_gravity": {
@@ -43,7 +44,9 @@
           "type": "string"
         }
       },
-      "required": ["name"]
+      "required": [
+        "name"
+      ]
     }
   }
 }

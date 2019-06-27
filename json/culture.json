@@ -6,7 +6,7 @@
   "definitions": {
     "CultureBase": {
       "type": "object",
-      "description": "The descriptive base type for both culture records, and recipe additions. Provides unique properties to identify individual records of a culture",
+      "description": "Provides unique properties to identify individual records of a culture.",
       "properties": {
         "name": {
           "type": "string"
@@ -31,7 +31,13 @@
         },
         "form": {
           "type": "string",
-          "enum": ["liquid", "dry", "slant", "culture", "dregs"]
+          "enum": [
+            "liquid",
+            "dry",
+            "slant",
+            "culture",
+            "dregs"
+          ]
         },
         "laboratory": {
           "type": "string"
@@ -40,11 +46,15 @@
           "type": "string"
         }
       },
-      "required": ["name", "type", "form"]
+      "required": [
+        "name",
+        "type",
+        "form"
+      ]
     },
     "CultureInformation": {
       "type": "object",
-      "description": "CultureInformation collects the attributes of a microbial culture to store as record information",
+      "description": "CultureInformation collects the attributes of a microbial culture.",
       "allOf": [
         {
           "$ref": "#/definitions/CultureBase"
@@ -67,9 +77,11 @@
               "type": "string"
             },
             "best_for": {
+              "description": "Recommended styles for a particular culture.",
               "type": "string"
             },
             "max_reuse": {
+              "description": "Maximum number of times to reuse a culture before a new lab source is recommended.",
               "type": "integer"
             },
             "inventory": {
@@ -81,7 +93,7 @@
     },
     "CultureAdditionType": {
       "type": "object",
-      "description": "CultureAdditionType collects the attributes of each culture ingredient for use in a recipe",
+      "description": "CultureAdditionType collects the attributes of each culture ingredient for use in a recipe.",
       "allOf": [
         {
           "$ref": "#/definitions/CultureBase"
@@ -116,7 +128,9 @@
           }
         },
         {
-          "required": ["amount"]
+          "required": [
+            "amount"
+          ]
         }
       ]
     },
