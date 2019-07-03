@@ -18,7 +18,7 @@ declare namespace BeerJSON {
     name?: string
     description?: string
     notes?: string
-    pre_boil_size: VolumeType
+    pre_boil_size?: VolumeType
     boil_time: TimeType
     boil_steps?: BoilStepType[]
   }
