@@ -31,7 +31,9 @@
           }
         }
       },
-      "required": ["pre_boil_size", "boil_time"]
+      "required": [
+        "boil_time"
+      ]
     }
   }
 }
