@@ -11,7 +11,7 @@ Provides unique properties to identify individual records of a culture.
 | **name** | ✅ | string|  |
 | **type** | ✅ | `"ale"`<br/>`"bacteria"`<br/>`"brett"`<br/>`"champagne"`<br/>`"kveik"`<br/>`"lacto"`<br/>`"lager"`<br/>`"malolactic"`<br/>`"mixed-culture"`<br/>`"other"`<br/>`"pedio"`<br/>`"spontaneous"`<br/>`"wine"`|  |
 | **form** | ✅ | `"liquid"`<br/>`"dry"`<br/>`"slant"`<br/>`"culture"`<br/>`"dregs"`|  |
-| **laboratory** |  | string|  |
+| **producer** |  | string|  |
 | **product_id** |  | string|  |
 
 ## CultureInformation 

@@ -55,7 +55,7 @@ export type CultureBase = {|
     | 'spontaneous'
     | 'wine',
   form: 'liquid' | 'dry' | 'slant' | 'culture' | 'dregs',
-  laboratory?: string,
+  producer?: string,
   product_id?: string
 |}
 
@@ -126,7 +126,7 @@ export type FermentableBase = {|
     | 'honey'
     | 'other',
   origin?: string,
-  supplier?: string,
+  producer?: string,
   grain_group?:
     | 'base'
     | 'caramel'
