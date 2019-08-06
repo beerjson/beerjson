@@ -446,6 +446,7 @@ export type QualitativeRangeType =
 export type VersionType = number
 export type MiscellaneousBase = {|
   name: string,
+  producer: string,
   type:
     | 'spice'
     | 'fining'
