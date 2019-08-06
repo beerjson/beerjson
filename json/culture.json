@@ -39,7 +39,7 @@
             "dregs"
           ]
         },
-        "manufacturer": {
+        "producer": {
           "type": "string"
         },
         "product_id": {

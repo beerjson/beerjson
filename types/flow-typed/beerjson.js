@@ -191,6 +191,7 @@ export type FermentationStepType = {|
 
 export type HopVarietyBase = {|
   name: string,
+  producer: string,
   origin?: string,
   year?: string,
   form?: 'extract' | 'leaf' | 'leaf (wet)' | 'pellet' | 'powder' | 'plug',
@@ -595,6 +596,7 @@ export type TimingType = {|
 
 export type WaterBase = {|
   name: string,
+  producer: string,
   calcium: ConcentrationType,
   bicarbonate: ConcentrationType,
   carbonate?: ConcentrationType,
