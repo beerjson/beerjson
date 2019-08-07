@@ -30,6 +30,7 @@
           "fermentable_additions": [
             {
               "name": "Extra Pale",
+              "producer": "",
               "type": "grain",
               "color": {
                 "unit": "Lovi",
@@ -49,6 +50,7 @@
             },
             {
               "name": "Caramalt",
+              "producer": "",
               "type": "grain",
               "color": {
                 "unit": "Lovi",
@@ -70,6 +72,7 @@
           "hop_additions": [
             {
               "name": "Chinook",
+              "producer": "",
               "alpha_acid": {
                 "unit": "%",
                 "value": 12.6
@@ -94,6 +97,7 @@
             },
             {
               "name": "Ahtanum",
+              "producer": "",
               "alpha_acid": {
                 "unit": "%",
                 "value": 5.4
@@ -118,6 +122,7 @@
             },
             {
               "name": "Chinook",
+              "producer": "",
               "alpha_acid": {
                 "unit": "%",
                 "value": 12.6
@@ -142,6 +147,7 @@
             },
             {
               "name": "Ahtanum",
+              "producer": "",
               "alpha_acid": {
                 "unit": "%",
                 "value": 5.4
@@ -166,6 +172,7 @@
             },
             {
               "name": "Chinook",
+              "producer": "",
               "alpha_acid": {
                 "unit": "%",
                 "value": 12.6
@@ -190,6 +197,7 @@
             },
             {
               "name": "Ahtanum",
+              "producer": "",
               "alpha_acid": {
                 "unit": "%",
                 "value": 5.4
@@ -214,6 +222,7 @@
             },
             {
               "name": "Simcoe",
+              "producer": "",
               "alpha_acid": {
                 "unit": "%",
                 "value": 12.8
@@ -238,6 +247,7 @@
             },
             {
               "name": "Nelson Sauvin",
+              "producer": "",
               "alpha_acid": {
                 "unit": "%",
                 "value": 12
@@ -262,6 +272,7 @@
             },
             {
               "name": "Chinook",
+              "producer": "",
               "alpha_acid": {
                 "unit": "%",
                 "value": 12.6
@@ -286,6 +297,7 @@
             },
             {
               "name": "Ahtanum",
+              "producer": "",
               "alpha_acid": {
                 "unit": "%",
                 "value": 5.4
@@ -310,6 +322,7 @@
             },
             {
               "name": "Simcoe",
+              "producer": "",
               "alpha_acid": {
                 "unit": "%",
                 "value": 12.8
@@ -334,6 +347,7 @@
             },
             {
               "name": "Nelson Sauvin",
+              "producer": "",
               "alpha_acid": {
                 "unit": "%",
                 "value": 12
@@ -358,6 +372,7 @@
             },
             {
               "name": "Cascade",
+              "producer": "",
               "alpha_acid": {
                 "unit": "%",
                 "value": 6.8
@@ -382,6 +397,7 @@
             },
             {
               "name": "Amarillo",
+              "producer": "",
               "alpha_acid": {
                 "unit": "%",
                 "value": 8.9
@@ -408,6 +424,7 @@
           "culture_additions": [
             {
               "name": "Wyeast 1056 - American Ale",
+              "producer": "",
               "type": "ale",
               "form": "liquid",
               "amount": {
