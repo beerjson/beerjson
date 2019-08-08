@@ -9,6 +9,7 @@ WaterBase provides unique properties to identify individual records of regional 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **name** | ✅ | string|  |
+| **producer** |  | string|  |
 | **calcium** | ✅ | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
 | **bicarbonate** | ✅ | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
 | **carbonate** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
