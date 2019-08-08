@@ -10,6 +10,9 @@
         "name": {
           "type": "string"
         },
+        "producer": {
+          "type": "string"
+        },
         "type": {
           "type": "string",
           "enum": [

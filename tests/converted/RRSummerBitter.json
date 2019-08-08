@@ -47,7 +47,7 @@
                 "value": 6.9999955
               },
               "origin": "United Kingdom",
-              "supplier": "Maris Otter",
+              "producer": "Maris Otter",
               "group": "base",
               "yield": {
                 "potential": {
@@ -69,7 +69,7 @@
                 "value": 0.9999994
               },
               "origin": "Belgium",
-              "supplier": "",
+              "producer": "",
               "group": "base",
               "yield": {
                 "potential": {

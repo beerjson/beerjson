@@ -199,7 +199,7 @@ const fermentable_bill = r =>
         value: Number(fermentable['AMOUNT'])
       },
       origin: fermentable['ORIGIN'],
-      supplier: fermentable['SUPPLIER'],
+      producer: fermentable['SUPPLIER'],
       group: 'base',
       yield: {
         potential: {

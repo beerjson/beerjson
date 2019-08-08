@@ -27,7 +27,7 @@
         "origin": {
           "type": "string"
         },
-        "supplier": {
+        "producer": {
           "type": "string"
         },
         "grain_group": {

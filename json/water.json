@@ -11,6 +11,9 @@
         "name": {
           "type": "string"
         },
+        "producer": {
+          "type": "string"
+        },
         "calcium": {
           "$ref": "measureable_units.json#/definitions/ConcentrationType"
         },

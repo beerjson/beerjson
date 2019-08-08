@@ -39,7 +39,7 @@
             "dregs"
           ]
         },
-        "laboratory": {
+        "producer": {
           "type": "string"
         },
         "product_id": {

@@ -9,6 +9,7 @@ HopVarietyBase provides unique properties to identify individual records of a ho
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **name** | ✅ | string|  |
+| **producer** |  | string|  |
 | **origin** |  | string|  |
 | **year** |  | string|  |
 | **form** |  | `"extract"`<br/>`"leaf"`<br/>`"leaf (wet)"`<br/>`"pellet"`<br/>`"powder"`<br/>`"plug"`|  |

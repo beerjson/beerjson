@@ -11,6 +11,9 @@
         "name": {
           "type": "string"
         },
+        "producer": {
+          "type": "string"
+        },
         "origin": {
           "type": "string"
         },
