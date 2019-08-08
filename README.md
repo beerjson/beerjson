@@ -7,6 +7,9 @@ This is a repository for development of BeerJSON interchange format
 specification. It is based on yet unfinished
 [BeerXML 2 standard (PDF)](http://users.speakeasy.net/%7Eantonw/beer_xml/BeerXML_v2_01.pdf).
 
+## Documentation
+Current documentation is published at https://beerjson.github.io/beerjson/
+
 ## Structure of the repository
 
 * Current development is done in the Master branch.
