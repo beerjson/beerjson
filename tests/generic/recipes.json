@@ -218,7 +218,6 @@
         },
         "fermentation": {
           "name": "Ale, Single Stage",
-          "type": "Single Stage",
           "description": "A simple single stage fermentation, often used by extract brewers or for classic ales.",
           "fermentation_steps": [
             {
