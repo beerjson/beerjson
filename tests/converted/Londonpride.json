@@ -46,7 +46,6 @@
                 "value": 9
               },
               "origin": "United Kingdom",
-              "producer": "",
               "group": "base",
               "yield": {
                 "potential": {
@@ -68,7 +67,6 @@
                 "value": 0.6
               },
               "origin": "Finland",
-              "producer": "",
               "group": "base",
               "yield": {
                 "potential": {
@@ -82,7 +80,6 @@
           "hop_additions": [
             {
               "name": "Target",
-              "producer": "",
               "alpha_acid": {
                 "unit": "%",
                 "value": 11.5
@@ -103,7 +100,6 @@
             },
             {
               "name": "Target",
-              "producer": "",
               "alpha_acid": {
                 "unit": "%",
                 "value": 11.5
@@ -126,7 +122,6 @@
           "culture_additions": [
             {
               "name": "English Ale Yeast WLP002",
-              "producer": "",
               "attenuation": {
                 "unit": "%",
                 "value": 66.5

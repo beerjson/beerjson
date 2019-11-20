@@ -67,7 +67,6 @@
                 "value": 4.8
               },
               "origin": "Germany",
-              "producer": "",
               "form": "pellet",
               "beta_acid": {
                 "unit": "%",
@@ -90,7 +89,6 @@
           "miscellaneous_additions": [
             {
               "name": "Whirlfloc Tablet",
-              "producer": "",
               "type": "fining",
               "use": "boil",
               "amount": {
@@ -102,13 +100,11 @@
           "culture_additions": [
             {
               "name": "German Ale",
-              "producer": "",
               "attenuation": {
                 "unit": "%",
                 "value": 75
               },
               "type": "ale",
-              "producer": "",
               "form": "liquid",
               "amount": {
                 "unit": "l",

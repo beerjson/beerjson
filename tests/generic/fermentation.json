@@ -4,9 +4,7 @@
     "fermentations": [
       {
         "name": "Ale, Single Stage",
-        "type": "Single Stage",
-        "description":
-          "A simple single stage fermentation, often used by extract brewers or for classic ales.",
+        "description": "A simple single stage fermentation, often used by extract brewers or for classic ales.",
         "fermentation_steps": [
           {
             "name": "Primary",
@@ -20,7 +18,7 @@
             },
             "step_time": {
               "unit": "day",
-              "value": 14.0
+              "value": 14
             }
           },
           {
@@ -35,7 +33,7 @@
             },
             "step_time": {
               "unit": "day",
-              "value": 10.0
+              "value": 10
             }
           },
           {

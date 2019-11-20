@@ -242,7 +242,6 @@
         },
         "fermentation": {
           "name": "Ale, Single Stage",
-          "type": "Single Stage",
           "description": "Initial temp at 74F, no temp control. Allowed to free rise to a max temp of 82F.",
           "fermentation_steps": [
             {
