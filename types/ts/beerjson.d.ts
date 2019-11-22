@@ -67,6 +67,7 @@ declare namespace BeerJSON {
     best_for?: string
     max_reuse?: number
     inventory?: CultureInventoryType
+    zymocide?: Zymocide
   }
 
   export type CultureAdditionType = CultureBase & {
@@ -82,6 +83,14 @@ declare namespace BeerJSON {
     dry?: MassType
     slant?: VolumeType
     culture?: VolumeType
+  }
+
+  export type Zymocide = {
+    1?: boolean
+    2?: boolean
+    28?: boolean
+    klus?: boolean
+    neutral?: boolean
   }
 
   export type EquipmentBase = {

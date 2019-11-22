@@ -30,6 +30,7 @@ CultureInformation collects the attributes of a microbial culture.
 | **best_for** |  | string| Recommended styles for a particular culture. |
 | **max_reuse** |  | integer| Maximum number of times to reuse a culture before a new lab source is recommended. |
 | **inventory** |  | [CultureInventoryType](#cultureinventorytype)|  |
+| **zymocide** |  | [Zymocide](#zymocide)|  |
 
 ## CultureAdditionType 
 
@@ -57,4 +58,18 @@ CultureAdditionType collects the attributes of each culture ingredient for use i
 | **dry** |  | [MassType](measureable_units.json.md#masstype)|  |
 | **slant** |  | [VolumeType](measureable_units.json.md#volumetype)|  |
 | **culture** |  | [VolumeType](measureable_units.json.md#volumetype)|  |
+
+## Zymocide 
+
+Zymocide, also known as killer yeast properties, is common among wine yeast. There are also some ale and brett yeasts that are immune to some zymocidic properties, these are known as killer neutral.
+
+**Zymocide** is an object with these properties:
+
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **1** |  | boolean|  |
+| **2** |  | boolean|  |
+| **28** |  | boolean|  |
+| **klus** |  | boolean|  |
+| **neutral** |  | boolean|  |
 
