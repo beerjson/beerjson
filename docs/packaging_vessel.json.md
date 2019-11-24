@@ -2,14 +2,14 @@ The schema defines the following types:
 
 ## PackagingVesselType 
 
-PackagingVesselType - a per vessel representation of a packaging process
+PackagingVesselType - a per vessel representation of a packaging process.
 
 **PackagingVesselType** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **name** | ✅ | string|  |
-| **type** |  | `"keg"`<br/>`"bottle"`<br/>`"cask"`<br/>`"tank"`<br/>`"firkin"`|  |
+| **type** |  | `"keg"`<br/>`"bottle"`<br/>`"cask"`<br/>`"tank"`<br/>`"firkin"`<br/>`"other"`|  |
 | **description** |  | string|  |
 | **package_date** |  | [DateType](measureable_units.json.md#datetype)|  |
 | **start_temperature** |  | [TemperatureType](measureable_units.json.md#temperaturetype)|  |
