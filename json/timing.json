@@ -28,6 +28,7 @@
           "$ref": "measureable_units.json#/definitions/TimeType"
         },
         "continuous": {
+          "description": "A continuous addition is spread out evenly and added during the entire process step, eg 60 minute IPA by dogfish head takes all ofthe hop additions and adds them throughout the entire boil.",
           "type": "boolean"
         },
         "specific_gravity": {

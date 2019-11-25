@@ -72,15 +72,19 @@
               "$ref": "measureable_units.json#/definitions/PercentType"
             },
             "alpha_amylase": {
+              "description": "Where diastatic power gives the total amount of all enzymes, alpha amylase, also known as dextrinizing units, refers to only the total amount of alpa amylase in the malted grain. A value of 25-50 is desirable for base malt.",
               "type": "number"
             },
             "diastatic_power": {
+              "description": "Diastatic power is a measurement of malted grains enzymatic content. A value of 35 Lintner is needed to self convert, while a value of 100 or more is desirable.",
               "$ref": "measureable_units.json#/definitions/DiastaticPowerType"
             },
             "protein": {
+              "description": "The percentage of protein. Higher values may indicate a possibility of haze, or lautering issues.",
               "$ref": "measureable_units.json#/definitions/PercentType"
             },
-            "soluble_nitrogen_ratio": {
+            "kolbach_index": {
+              "description": "The Kolbach Index, also known as soluble to total ratio of nitrogen or protein, is used to indcate the degree of malt modification. A value above 35% is desired for simple single infusion mashing, undermodified malt may require multiple step mashes or decoction.",
               "type": "number"
             },
             "max_in_batch": {

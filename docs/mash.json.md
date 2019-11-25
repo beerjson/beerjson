@@ -2,14 +2,14 @@ The schema defines the following types:
 
 ## MashProcedureType 
 
-MashProcedureType defines the procedure for performing unique mashing styles
+This defines the procedure for performing unique mashing processes.
 
 **MashProcedureType** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **name** | ✅ | string|  |
-| **grain_temperature** | ✅ | [TemperatureType](measureable_units.json.md#temperaturetype)|  |
+| **grain_temperature** | ✅ | [TemperatureType](measureable_units.json.md#temperaturetype)| Initial grain temperature prior to the start of the mash. |
 | **sparge_temperature** |  | [TemperatureType](measureable_units.json.md#temperaturetype)|  |
 | **pH** |  | [AcidityType](measureable_units.json.md#aciditytype)|  |
 | **notes** |  | string|  |

@@ -144,7 +144,7 @@ declare namespace BeerJSON {
     alpha_amylase?: number
     diastatic_power?: DiastaticPowerType
     protein?: PercentType
-    soluble_nitrogen_ratio?: number
+    kolbach_index?: number
     max_in_batch?: PercentType
     recommend_mash?: boolean
     inventory?: FermentableInventoryType
@@ -480,7 +480,7 @@ declare namespace BeerJSON {
 
   export type PackagingVesselType = {
     name: string
-    type?: 'keg' | 'bottle' | 'cask' | 'tank' | 'firkin'
+    type?: 'keg' | 'bottle' | 'cask' | 'tank' | 'firkin' | 'other'
     description?: string
     package_date?: DateType
     start_temperature?: TemperatureType
@@ -497,7 +497,16 @@ declare namespace BeerJSON {
 
   export type RecipeType = {
     name: string
-    type: 'extract' | 'partial mash' | 'all grain'
+    type:
+      | 'cider'
+      | 'kombucha'
+      | 'soda'
+      | 'other'
+      | 'mead'
+      | 'wine'
+      | 'extract'
+      | 'partial mash'
+      | 'all grain'
     author: string
     coauthor?: string
     created?: DateType
