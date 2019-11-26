@@ -239,10 +239,6 @@
               "step_temperature": {
                 "unit": "C",
                 "value": 75.5555556
-              },
-              "start_pH": {
-                "unit": "pH",
-                "value": 5.4
               }
             }
           ]

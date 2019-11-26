@@ -51,41 +51,29 @@ const mash_steps = r =>
   )
 
 const mash = r => {
-  const spargeStep = {
-    name: 'Sparge',
-    type: 'sparge',
-    step_time: {
-      unit: 'min',
-      value: 15
-    },
-    ...(!_.isEmpty(_.get(r, ['MASH', 'SPARGE_TEMP']))
-      ? {
-          step_temperature: {
-            unit: 'C',
-            value: Number(_.get(r, ['MASH', 'SPARGE_TEMP']))
-          }
-        }
-      : {}),
-    ...(!_.isEmpty(_.get(r, ['MASH', 'PH']))
-      ? {
-          start_pH: {
-            unit: 'pH',
-            value: Number(_.get(r, ['MASH', 'PH']))
-          }
-        }
-      : {})
-  }
-  console.log(spargeStep)
   return {
     name: _.get(r, ['MASH', 'NAME']),
     grain_temperature: {
       unit: 'C',
       value: Number(_.get(r, ['MASH', 'GRAIN_TEMP']))
     },
-
     notes: _.get(r, ['MASH', 'NOTES']),
-    mash_steps: spargeStep.step_temperature
-      ? [...mash_steps(r), spargeStep]
+    mash_steps: !_.isEmpty(_.get(r, ['MASH', 'SPARGE_TEMP']))
+      ? [
+          ...mash_steps(r),
+          {
+            name: 'Sparge',
+            type: 'sparge',
+            step_time: {
+              unit: 'min',
+              value: 15
+            },
+            step_temperature: {
+              unit: 'C',
+              value: Number(_.get(r, ['MASH', 'SPARGE_TEMP']))
+            }
+          }
+        ]
       : mash_steps(r)
   }
 }
