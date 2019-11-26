@@ -41,9 +41,9 @@ CultureAdditionType collects the attributes of each culture ingredient for use i
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **attenuation** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **attenuation** |  | [PercentType](measureable_units.json.md#percenttype)| The expected, or measured apparent attenuation for a given culture in a given recipe. In comparison to attenuation range, this is a single value. |
 | **times_cultured** |  | integer|  |
-| **timing** |  | [TimingType](timing.json.md#timingtype)|  |
+| **timing** |  | [TimingType](timing.json.md#timingtype)| The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step. |
 | **cell_count_billions** |  | integer|  |
 | **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype) or  [UnitType](measureable_units.json.md#unittype)|  |
 

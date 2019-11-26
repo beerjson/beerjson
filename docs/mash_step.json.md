@@ -2,7 +2,7 @@ The schema defines the following types:
 
 ## MashStepType 
 
-MashStepType - a per step representation occurring within the mash
+MashStepType - a per step representation occurring during the mash.
 
 **MashStepType** is an object with these properties:
 

@@ -6,7 +6,7 @@
   "definitions": {
     "PackagingVesselType": {
       "type": "object",
-      "description": "PackagingVesselType - a per vessel representation of a packaging process",
+      "description": "PackagingVesselType - a per vessel representation of a packaging process.",
       "additionalProperties": false,
       "properties": {
         "name": {
@@ -14,7 +14,14 @@
         },
         "type": {
           "type": "string",
-          "enum": ["keg", "bottle", "cask", "tank", "firkin"]
+          "enum": [
+            "keg",
+            "bottle",
+            "cask",
+            "tank",
+            "firkin",
+            "other"
+          ]
         },
         "description": {
           "type": "string"
@@ -53,7 +60,9 @@
           "type": "number"
         }
       },
-      "required": ["name"]
+      "required": [
+        "name"
+      ]
     }
   }
 }

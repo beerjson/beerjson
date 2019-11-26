@@ -70,6 +70,7 @@
               "$ref": "measureable_units.json#/definitions/PercentType"
             },
             "flocculation": {
+              "description": "Floculation refers to the ability of yeast to aggregate to form large flocs which drop out of suspension.",
               "$ref": "measureable_units.json#/definitions/QualitativeRangeType"
             },
             "attenuation_range": {
@@ -111,12 +112,14 @@
         {
           "properties": {
             "attenuation": {
+              "description": "The expected, or measured apparent attenuation for a given culture in a given recipe. In comparison to attenuation range, this is a single value.",
               "$ref": "measureable_units.json#/definitions/PercentType"
             },
             "times_cultured": {
               "type": "integer"
             },
             "timing": {
+              "description": "The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step.",
               "$ref": "timing.json#/definitions/TimingType"
             },
             "cell_count_billions": {
