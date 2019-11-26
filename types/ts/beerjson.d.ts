@@ -60,12 +60,14 @@ declare namespace BeerJSON {
 
   export type CultureInformation = CultureBase & {
     temperature_range?: TemperatureRangeType
+    alcohol_tolerance?: PercentType
     flocculation?: QualitativeRangeType
     attenuation_range?: PercentRangeType
-    alcohol_tolerance?: PercentType
     notes?: string
     best_for?: string
     max_reuse?: number
+    pof?: boolean
+    glucoamylase?: boolean
     inventory?: CultureInventoryType
   }
 

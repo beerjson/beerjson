@@ -62,7 +62,12 @@
         {
           "properties": {
             "temperature_range": {
+              "description": "The recommended temperature range of fermentation by the culture producer.",
               "$ref": "measureable_units.json#/definitions/TemperatureRangeType"
+            },
+            "alcohol_tolerance": {
+              "description": "The recommended limit of abv by the culture producer before attenuation stops.",
+              "$ref": "measureable_units.json#/definitions/PercentType"
             },
             "flocculation": {
               "description": "Floculation refers to the ability of yeast to aggregate to form large flocs which drop out of suspension.",
@@ -70,9 +75,6 @@
             },
             "attenuation_range": {
               "$ref": "measureable_units.json#/definitions/PercentRangeType"
-            },
-            "alcohol_tolerance": {
-              "$ref": "measureable_units.json#/definitions/PercentType"
             },
             "notes": {
               "type": "string"
@@ -84,6 +86,14 @@
             "max_reuse": {
               "description": "Maximum number of times to reuse a culture before a new lab source is recommended.",
               "type": "integer"
+            },
+            "pof": {
+              "description": "A POF+ culture is capable of producing phenols, which is a common distinctive property of saison, and brett yeasts.",
+              "type": "boolean"
+            },
+            "glucoamylase": {
+              "description": "A glucoamylase positive culture is capable of producing glucoamylase, the enzyme produced through expression of the diastatic gene, which allows yeast to attenuate dextrins and starches leading to a very low FG. This is positive in some saison/brett yeasts as well as the new gulo hybrid by Omega yeast labs.",
+              "type": "boolean"
             },
             "inventory": {
               "$ref": "#/definitions/CultureInventoryType"
