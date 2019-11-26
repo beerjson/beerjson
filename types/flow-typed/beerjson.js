@@ -250,8 +250,6 @@ export type HopInventoryType = {|
 export type MashProcedureType = {|
   name: string,
   grain_temperature: TemperatureType,
-  sparge_temperature?: TemperatureType,
-  pH?: AcidityType,
   notes?: string,
   mash_steps: MashStepType[]
 |}

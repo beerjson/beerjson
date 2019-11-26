@@ -16,12 +16,6 @@
           "description": "Initial grain temperature prior to the start of the mash.",
           "$ref": "measureable_units.json#/definitions/TemperatureType"
         },
-        "sparge_temperature": {
-          "$ref": "measureable_units.json#/definitions/TemperatureType"
-        },
-        "pH": {
-          "$ref": "measureable_units.json#/definitions/AcidityType"
-        },
         "notes": {
           "type": "string"
         },

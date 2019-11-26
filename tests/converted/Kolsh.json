@@ -7,7 +7,7 @@
         "type": "all grain",
         "author": "BIABrewer.info",
         "coauthor": "Designed by Lloyd Powell",
-        "created": "2011-05-08T05:00:00.000Z",
+        "created": "2011-05-07T22:00:00.000Z",
         "batch_size": {
           "unit": "l",
           "value": 19.0028767
@@ -188,14 +188,6 @@
             "unit": "C",
             "value": 22.2
           },
-          "sparge_temperature": {
-            "unit": "C",
-            "value": 75.6
-          },
-          "pH": {
-            "unit": "pH",
-            "value": 5.2
-          },
           "notes": "Brew in a bag method where the full boil volume is mashed within the boil vessel and then the grains are withdrawn at the end of the mash.  No sparging.  This is a light body beer profile.",
           "mash_steps": [
             {
@@ -244,6 +236,22 @@
               "amount": {
                 "unit": "l",
                 "value": 0
+              }
+            },
+            {
+              "name": "Sparge",
+              "type": "sparge",
+              "step_time": {
+                "unit": "min",
+                "value": 15
+              },
+              "step_temperature": {
+                "unit": "C",
+                "value": 75.6
+              },
+              "start_pH": {
+                "unit": "pH",
+                "value": 5.2
               }
             }
           ]

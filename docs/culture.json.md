@@ -24,7 +24,7 @@ CultureInformation collects the attributes of a microbial culture.
 |--|--|--|--|
 | **temperature_range** |  | [TemperatureRangeType](measureable_units.json.md#temperaturerangetype)| The recommended temperature range of fermentation by the culture producer. |
 | **alcohol_tolerance** |  | [PercentType](measureable_units.json.md#percenttype)| The recommended limit of abv by the culture producer before attenuation stops. |
-| **flocculation** |  | [QualitativeRangeType](measureable_units.json.md#qualitativerangetype)|  |
+| **flocculation** |  | [QualitativeRangeType](measureable_units.json.md#qualitativerangetype)| Floculation refers to the ability of yeast to aggregate to form large flocs which drop out of suspension. |
 | **attenuation_range** |  | [PercentRangeType](measureable_units.json.md#percentrangetype)|  |
 | **notes** |  | string|  |
 | **best_for** |  | string| Recommended styles for a particular culture. |
