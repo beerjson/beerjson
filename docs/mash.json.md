@@ -10,8 +10,6 @@ This defines the procedure for performing unique mashing processes.
 |--|--|--|--|
 | **name** | ✅ | string|  |
 | **grain_temperature** | ✅ | [TemperatureType](measureable_units.json.md#temperaturetype)| Initial grain temperature prior to the start of the mash. |
-| **sparge_temperature** |  | [TemperatureType](measureable_units.json.md#temperaturetype)|  |
-| **pH** |  | [AcidityType](measureable_units.json.md#aciditytype)|  |
 | **notes** |  | string|  |
 | **mash_steps** | ✅ | array of [MashStepType](mash_step.json.md#mashsteptype)|  |
 
