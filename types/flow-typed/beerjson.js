@@ -2,11 +2,12 @@
 
 export type BeerJSON = {|
   version: VersionType,
+  timing_object?: TimingType,
   fermentables?: FermentableType[],
   miscellaneous_ingredients?: MiscellaneousType[],
   hop_varieties?: VarietyInformation[],
   cultures?: CultureInformation[],
-  profiles?: WaterType[],
+  profiles?: WaterBase[],
   styles?: StyleType[],
   mashes?: MashProcedureType[],
   fermentations?: FermentationProcedureType[],

@@ -88,6 +88,7 @@
               "type": "number"
             },
             "max_in_batch": {
+              "description": "The recommended maximum percentage to use in a grain bill. ",
               "$ref": "measureable_units.json#/definitions/PercentType"
             },
             "recommend_mash": {

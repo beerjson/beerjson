@@ -2,7 +2,7 @@ The schema defines the following types:
 
 ## WaterBase 
 
-WaterBase provides unique properties to identify individual records of regional brewing water
+WaterBase provides unique properties to identify individual records of  brewing water.
 
 **WaterBase** is an object with these properties:
 
@@ -25,7 +25,7 @@ WaterBase provides unique properties to identify individual records of regional 
 
 ## WaterType 
 
-WaterType collects the attributes of a regional brewing water to store as record information
+WaterType collects the attributes of a brewing water to store as record information
 
 **WaterType** is an object with all properties from [WaterBase](#waterbase) and these additional properties:
 
