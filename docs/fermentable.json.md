@@ -12,6 +12,7 @@ FermentableBase provides unique properties to identify individual records of fer
 | **type** | ✅ | `"dry extract"`<br/>`"extract"`<br/>`"grain"`<br/>`"sugar"`<br/>`"fruit"`<br/>`"juice"`<br/>`"honey"`<br/>`"other"`|  |
 | **origin** |  | string|  |
 | **producer** |  | string|  |
+| **product_id** |  | string|  |
 | **grain_group** |  | `"base"`<br/>`"caramel"`<br/>`"flaked"`<br/>`"roasted"`<br/>`"specialty"`<br/>`"smoked"`<br/>`"adjunct"`|  |
 | **yield** | ✅ | [YieldType](#yieldtype)|  |
 | **color** | ✅ | [ColorType](measureable_units.json.md#colortype)|  |

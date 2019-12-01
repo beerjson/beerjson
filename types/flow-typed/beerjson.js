@@ -129,6 +129,7 @@ export type FermentableBase = {|
     | 'other',
   origin?: string,
   producer?: string,
+  product_id?: string,
   grain_group?:
     | 'base'
     | 'caramel'
@@ -193,6 +194,7 @@ export type FermentationStepType = {|
 export type HopVarietyBase = {|
   name: string,
   producer?: string,
+  product_id?: string,
   origin?: string,
   year?: string,
   form?: 'extract' | 'leaf' | 'leaf (wet)' | 'pellet' | 'powder' | 'plug',
@@ -446,6 +448,7 @@ export type VersionType = number
 export type MiscellaneousBase = {|
   name: string,
   producer?: string,
+  product_id?: string,
   type:
     | 'spice'
     | 'fining'
