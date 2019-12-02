@@ -128,6 +128,7 @@ declare namespace BeerJSON {
       | 'other'
     origin?: string
     producer?: string
+    product_id?: string
     grain_group?:
       | 'base'
       | 'caramel'
@@ -192,6 +193,7 @@ declare namespace BeerJSON {
   export type HopVarietyBase = {
     name: string
     producer?: string
+    product_id?: string
     origin?: string
     year?: string
     form?: 'extract' | 'leaf' | 'leaf (wet)' | 'pellet' | 'powder' | 'plug'
@@ -445,6 +447,7 @@ declare namespace BeerJSON {
   export type MiscellaneousBase = {
     name: string
     producer?: string
+    product_id?: string
     type:
       | 'spice'
       | 'fining'
