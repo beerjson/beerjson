@@ -10,6 +10,7 @@ MiscellaneousBase provides unique properties to identify individual records of i
 |--|--|--|--|
 | **name** | ✅ | string|  |
 | **producer** |  | string|  |
+| **product_id** |  | string|  |
 | **type** | ✅ | `"spice"`<br/>`"fining"`<br/>`"water agent"`<br/>`"herb"`<br/>`"flavor"`<br/>`"wood"`<br/>`"other"`|  |
 
 ## MiscellaneousType 

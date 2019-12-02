@@ -30,6 +30,9 @@
         "producer": {
           "type": "string"
         },
+        "product_id": {
+          "type": "string"
+        },
         "grain_group": {
           "type": "string",
           "enum": [

@@ -13,6 +13,9 @@
         "producer": {
           "type": "string"
         },
+        "product_id": {
+          "type": "string"
+        },
         "type": {
           "type": "string",
           "enum": [
