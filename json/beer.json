@@ -13,6 +13,10 @@
           "description": "Explicitly encode beerjson version within list of records.",
           "$ref": "measureable_units.json#/definitions/VersionType"
         },
+        "timing_object": {
+          "description": "The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step.",
+          "$ref": "timing.json#/definitions/TimingType"
+        },
         "fermentables": {
           "type": "array",
           "description": "Records for any ingredient that contributes to the gravity of the beer.",
@@ -43,9 +47,9 @@
         },
         "profiles": {
           "type": "array",
-          "description": "Records for regional water profiles used in style-specific beer brewing.",
+          "description": "Records for water profiles used in brewing.",
           "items": {
-            "$ref": "water.json#/definitions/WaterType"
+            "$ref": "water.json#/definitions/WaterBase"
           }
         },
         "styles": {
@@ -98,8 +102,12 @@
           }
         }
       },
-      "required": ["version"]
+      "required": [
+        "version"
+      ]
     }
   },
-  "required": ["beerjson"]
+  "required": [
+    "beerjson"
+  ]
 }
