@@ -438,7 +438,7 @@ export type SpecificVolumeUnitType =
   | 'floz/oz'
   | 'm^3/kg'
   | 'ft^3/lb'
-export type UnitUnitType = '1' | 'unit' | 'each' | 'dimensionless'
+export type UnitUnitType = '1' | 'unit' | 'each' | 'dimensionless' | 'pkg'
 export type DateType = string
 export type PercentType = {|
   unit: PercentUnitType,

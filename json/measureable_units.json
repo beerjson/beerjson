@@ -488,7 +488,8 @@
         "1",
         "unit",
         "each",
-        "dimensionless"
+        "dimensionless",
+        "pkg"
       ]
     },
     "DateType": {
