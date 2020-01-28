@@ -310,7 +310,7 @@ UnitType is used where unitless amounts are required, such as 1 apple, or 1 yeas
 
 *no description yet*
 
-`"1"`<br/>`"unit"`<br/>`"each"`<br/>`"dimensionless"`
+`"1"`<br/>`"unit"`<br/>`"each"`<br/>`"dimensionless"`<br/>`"pkg"`
 ## DateType 
 
 *no description yet*
