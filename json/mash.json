@@ -6,20 +6,15 @@
   "definitions": {
     "MashProcedureType": {
       "type": "object",
-      "description": "MashProcedureType defines the procedure for performing unique mashing styles",
+      "description": "This defines the procedure for performing unique mashing processes.",
       "additionalProperties": false,
       "properties": {
         "name": {
           "type": "string"
         },
         "grain_temperature": {
+          "description": "Initial grain temperature prior to the start of the mash.",
           "$ref": "measureable_units.json#/definitions/TemperatureType"
-        },
-        "sparge_temperature": {
-          "$ref": "measureable_units.json#/definitions/TemperatureType"
-        },
-        "pH": {
-          "$ref": "measureable_units.json#/definitions/AcidityType"
         },
         "notes": {
           "type": "string"
@@ -32,7 +27,11 @@
           }
         }
       },
-      "required": ["name", "grain_temperature", "mash_steps"]
+      "required": [
+        "name",
+        "grain_temperature",
+        "mash_steps"
+      ]
     }
   }
 }

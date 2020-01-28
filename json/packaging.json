@@ -6,7 +6,7 @@
   "definitions": {
     "PackagingProcedureType": {
       "type": "object",
-      "description": "PackagingProcedureType describes the procedure for packaging your beverage.",
+      "description": "Describes the procedure for packaging your beverage.",
       "additionalProperties": false,
       "properties": {
         "name": {

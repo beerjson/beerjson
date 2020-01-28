@@ -2,11 +2,12 @@
 
 export type BeerJSON = {|
   version: VersionType,
+  timing_object?: TimingType,
   fermentables?: FermentableType[],
   miscellaneous_ingredients?: MiscellaneousType[],
   hop_varieties?: VarietyInformation[],
   cultures?: CultureInformation[],
-  profiles?: WaterType[],
+  profiles?: WaterBase[],
   styles?: StyleType[],
   mashes?: MashProcedureType[],
   fermentations?: FermentationProcedureType[],
@@ -61,12 +62,14 @@ export type CultureBase = {|
 
 export type CultureInformation = CultureBase & {|
   temperature_range?: TemperatureRangeType,
+  alcohol_tolerance?: PercentType,
   flocculation?: QualitativeRangeType,
   attenuation_range?: PercentRangeType,
-  alcohol_tolerance?: PercentType,
   notes?: string,
   best_for?: string,
   max_reuse?: number,
+  pof?: boolean,
+  glucoamylase?: boolean,
   inventory?: CultureInventoryType,
   zymocide?: Zymocide
 |}
@@ -136,6 +139,7 @@ export type FermentableBase = {|
     | 'other',
   origin?: string,
   producer?: string,
+  product_id?: string,
   grain_group?:
     | 'base'
     | 'caramel'
@@ -154,7 +158,7 @@ export type FermentableType = FermentableBase & {|
   alpha_amylase?: number,
   diastatic_power?: DiastaticPowerType,
   protein?: PercentType,
-  soluble_nitrogen_ratio?: number,
+  kolbach_index?: number,
   max_in_batch?: PercentType,
   recommend_mash?: boolean,
   inventory?: FermentableInventoryType
@@ -200,6 +204,7 @@ export type FermentationStepType = {|
 export type HopVarietyBase = {|
   name: string,
   producer?: string,
+  product_id?: string,
   origin?: string,
   year?: string,
   form?: 'extract' | 'leaf' | 'leaf (wet)' | 'pellet' | 'powder' | 'plug',
@@ -257,8 +262,6 @@ export type HopInventoryType = {|
 export type MashProcedureType = {|
   name: string,
   grain_temperature: TemperatureType,
-  sparge_temperature?: TemperatureType,
-  pH?: AcidityType,
   notes?: string,
   mash_steps: MashStepType[]
 |}
@@ -455,6 +458,7 @@ export type VersionType = number
 export type MiscellaneousBase = {|
   name: string,
   producer?: string,
+  product_id?: string,
   type:
     | 'spice'
     | 'fining'
@@ -490,7 +494,7 @@ export type PackagingProcedureType = {|
 
 export type PackagingVesselType = {|
   name: string,
-  type?: 'keg' | 'bottle' | 'cask' | 'tank' | 'firkin',
+  type?: 'keg' | 'bottle' | 'cask' | 'tank' | 'firkin' | 'other',
   description?: string,
   package_date?: DateType,
   start_temperature?: TemperatureType,
@@ -507,7 +511,16 @@ export type PackagingVesselType = {|
 
 export type RecipeType = {|
   name: string,
-  type: 'extract' | 'partial mash' | 'all grain',
+  type:
+    | 'cider'
+    | 'kombucha'
+    | 'soda'
+    | 'other'
+    | 'mead'
+    | 'wine'
+    | 'extract'
+    | 'partial mash'
+    | 'all grain',
   author: string,
   coauthor?: string,
   created?: DateType,

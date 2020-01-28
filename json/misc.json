@@ -13,6 +13,9 @@
         "producer": {
           "type": "string"
         },
+        "product_id": {
+          "type": "string"
+        },
         "type": {
           "type": "string",
           "enum": [
@@ -41,6 +44,7 @@
         {
           "properties": {
             "use_for": {
+              "description": "Used to describe the purpose of the miscellaneous ingredient, e.g. whirlfloc is used for clarity.",
               "type": "string"
             },
             "notes": {
@@ -63,6 +67,7 @@
         {
           "properties": {
             "timing": {
+              "description": "The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step.",
               "$ref": "timing.json#/definitions/TimingType"
             },
             "amount": {

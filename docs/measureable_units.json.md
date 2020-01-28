@@ -24,7 +24,7 @@ The schema defines the following types:
 
 ## DiastaticPowerType 
 
-*no description yet*
+Diastatic power is a measurement of malted grains enzymatic content. A value of 35 Lintner is needed to self convert, while a value of 100 or more is desirable for base malts.
 
 **DiastaticPowerType** is an object with these properties:
 
@@ -79,7 +79,7 @@ The schema defines the following types:
 
 ## ColorType 
 
-*no description yet*
+ColorType supports both grain color properties, such as Lovibond, and wort color properties such as SRM and EBC.
 
 **ColorType** is an object with these properties:
 
@@ -112,7 +112,7 @@ The schema defines the following types:
 
 ## GravityType 
 
-*no description yet*
+Gravity refers to the both the measurements of percent of sugar content, ie plato and brix, as well as relative density ie specific gravity.
 
 **GravityType** is an object with these properties:
 
@@ -123,7 +123,7 @@ The schema defines the following types:
 
 ## SpecificHeatType 
 
-*no description yet*
+Specific heat is the measurement of the amount of heat required to raise a given mass one degree..
 
 **SpecificHeatType** is an object with these properties:
 
@@ -134,7 +134,7 @@ The schema defines the following types:
 
 ## ConcentrationType 
 
-*no description yet*
+Examples for concentration include ppm, ppb, and mg/l. 
 
 **ConcentrationType** is an object with these properties:
 
@@ -145,7 +145,7 @@ The schema defines the following types:
 
 ## SpecificVolumeType 
 
-*no description yet*
+Specific volume is the inverse of density, with units of volume over mass, ie qt/lb or L/kg. Commonly used for mash thickness.
 
 **SpecificVolumeType** is an object with these properties:
 
@@ -156,7 +156,7 @@ The schema defines the following types:
 
 ## UnitType 
 
-*no description yet*
+UnitType is used where unitless amounts are required, such as 1 apple, or 1 yeast packet.
 
 **UnitType** is an object with these properties:
 

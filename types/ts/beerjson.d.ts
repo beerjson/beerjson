@@ -1,11 +1,12 @@
 declare namespace BeerJSON {
   export type BeerJSON = {
     version: VersionType
+    timing_object?: TimingType
     fermentables?: FermentableType[]
     miscellaneous_ingredients?: MiscellaneousType[]
     hop_varieties?: VarietyInformation[]
     cultures?: CultureInformation[]
-    profiles?: WaterType[]
+    profiles?: WaterBase[]
     styles?: StyleType[]
     mashes?: MashProcedureType[]
     fermentations?: FermentationProcedureType[]
@@ -60,12 +61,14 @@ declare namespace BeerJSON {
 
   export type CultureInformation = CultureBase & {
     temperature_range?: TemperatureRangeType
+    alcohol_tolerance?: PercentType
     flocculation?: QualitativeRangeType
     attenuation_range?: PercentRangeType
-    alcohol_tolerance?: PercentType
     notes?: string
     best_for?: string
     max_reuse?: number
+    pof?: boolean
+    glucoamylase?: boolean
     inventory?: CultureInventoryType
     zymocide?: Zymocide
   }
@@ -135,6 +138,7 @@ declare namespace BeerJSON {
       | 'other'
     origin?: string
     producer?: string
+    product_id?: string
     grain_group?:
       | 'base'
       | 'caramel'
@@ -153,7 +157,7 @@ declare namespace BeerJSON {
     alpha_amylase?: number
     diastatic_power?: DiastaticPowerType
     protein?: PercentType
-    soluble_nitrogen_ratio?: number
+    kolbach_index?: number
     max_in_batch?: PercentType
     recommend_mash?: boolean
     inventory?: FermentableInventoryType
@@ -199,6 +203,7 @@ declare namespace BeerJSON {
   export type HopVarietyBase = {
     name: string
     producer?: string
+    product_id?: string
     origin?: string
     year?: string
     form?: 'extract' | 'leaf' | 'leaf (wet)' | 'pellet' | 'powder' | 'plug'
@@ -256,8 +261,6 @@ declare namespace BeerJSON {
   export type MashProcedureType = {
     name: string
     grain_temperature: TemperatureType
-    sparge_temperature?: TemperatureType
-    pH?: AcidityType
     notes?: string
     mash_steps: MashStepType[]
   }
@@ -454,6 +457,7 @@ declare namespace BeerJSON {
   export type MiscellaneousBase = {
     name: string
     producer?: string
+    product_id?: string
     type:
       | 'spice'
       | 'fining'
@@ -489,7 +493,7 @@ declare namespace BeerJSON {
 
   export type PackagingVesselType = {
     name: string
-    type?: 'keg' | 'bottle' | 'cask' | 'tank' | 'firkin'
+    type?: 'keg' | 'bottle' | 'cask' | 'tank' | 'firkin' | 'other'
     description?: string
     package_date?: DateType
     start_temperature?: TemperatureType
@@ -506,7 +510,16 @@ declare namespace BeerJSON {
 
   export type RecipeType = {
     name: string
-    type: 'extract' | 'partial mash' | 'all grain'
+    type:
+      | 'cider'
+      | 'kombucha'
+      | 'soda'
+      | 'other'
+      | 'mead'
+      | 'wine'
+      | 'extract'
+      | 'partial mash'
+      | 'all grain'
     author: string
     coauthor?: string
     created?: DateType

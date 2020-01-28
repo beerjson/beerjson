@@ -10,6 +10,7 @@ MiscellaneousBase provides unique properties to identify individual records of i
 |--|--|--|--|
 | **name** | ✅ | string|  |
 | **producer** |  | string|  |
+| **product_id** |  | string|  |
 | **type** | ✅ | `"spice"`<br/>`"fining"`<br/>`"water agent"`<br/>`"herb"`<br/>`"flavor"`<br/>`"wood"`<br/>`"other"`|  |
 
 ## MiscellaneousType 
@@ -20,7 +21,7 @@ MiscellaneousType collects the attributes of an ingredient to store as record in
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **use_for** |  | string|  |
+| **use_for** |  | string| Used to describe the purpose of the miscellaneous ingredient, e.g. whirlfloc is used for clarity. |
 | **notes** |  | string|  |
 | **inventory** |  | [MiscellaneousInventoryType](#miscellaneousinventorytype)|  |
 
@@ -32,7 +33,7 @@ MiscellaneousAdditionType collects the attributes of each miscellaneous ingredie
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **timing** |  | [TimingType](timing.json.md#timingtype)|  |
+| **timing** |  | [TimingType](timing.json.md#timingtype)| The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step. |
 | **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype) or  [UnitType](measureable_units.json.md#unittype)|  |
 
 ## MiscellaneousInventoryType 

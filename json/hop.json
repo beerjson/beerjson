@@ -14,6 +14,9 @@
         "producer": {
           "type": "string"
         },
+        "product_id": {
+          "type": "string"
+        },
         "origin": {
           "type": "string"
         },
@@ -95,6 +98,7 @@
         {
           "properties": {
             "timing": {
+              "description": "The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step.",
               "$ref": "timing.json#/definitions/TimingType"
             },
             "amount": {
@@ -135,9 +139,10 @@
     },
     "OilContentType": {
       "type": "object",
-      "description": "oil_content collects all information of a hop variety pertaining to oil content, polyphenols, and thiols.",
+      "description": "oil_content collects all information of a hop variety pertaining to oil content, polyphenols, and thiols. Each individual compound is expressed as a percent of the total oil measurement.",
       "properties": {
         "total_oil_ml_per_100g": {
+          "description": "The total amount of oil, including hydrocarbons, esters, and terpene alcohols in units of ml of oil per 100g of hop mass.",
           "type": "number"
         },
         "humulene": {

@@ -10,6 +10,7 @@ HopVarietyBase provides unique properties to identify individual records of a ho
 |--|--|--|--|
 | **name** | ✅ | string|  |
 | **producer** |  | string|  |
+| **product_id** |  | string|  |
 | **origin** |  | string|  |
 | **year** |  | string|  |
 | **form** |  | `"extract"`<br/>`"leaf"`<br/>`"leaf (wet)"`<br/>`"pellet"`<br/>`"powder"`<br/>`"plug"`|  |
@@ -39,7 +40,7 @@ HopAdditionType collects the attributes of each hop ingredient for use in a reci
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **timing** | ✅ | [TimingType](timing.json.md#timingtype)|  |
+| **timing** | ✅ | [TimingType](timing.json.md#timingtype)| The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step. |
 | **amount** | ✅ |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)|  |
 
 ## IBUEstimateType 
@@ -59,13 +60,13 @@ Used to differentiate which IBU formula is being used in a recipe. If formula is
 `"Rager"`<br/>`"Tinseth"`<br/>`"Garetz"`<br/>`"Other"`
 ## OilContentType 
 
-oil_content collects all information of a hop variety pertaining to oil content, polyphenols, and thiols.
+oil_content collects all information of a hop variety pertaining to oil content, polyphenols, and thiols. Each individual compound is expressed as a percent of the total oil measurement.
 
 **OilContentType** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **total_oil_ml_per_100g** |  | number|  |
+| **total_oil_ml_per_100g** |  | number| The total amount of oil, including hydrocarbons, esters, and terpene alcohols in units of ml of oil per 100g of hop mass. |
 | **humulene** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **caryophyllene** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **cohumulone** |  | [PercentType](measureable_units.json.md#percenttype)|  |

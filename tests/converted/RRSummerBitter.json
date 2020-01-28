@@ -179,14 +179,6 @@
             "unit": "C",
             "value": 22.2222222
           },
-          "sparge_temperature": {
-            "unit": "C",
-            "value": 75.5555556
-          },
-          "pH": {
-            "unit": "pH",
-            "value": 5.4
-          },
           "notes": "Temperature mash for use when mashing in a brew pot over a heat source such as the stove.  Use heat to maintain desired temperature during the mash.",
           "mash_steps": [
             {
@@ -235,6 +227,18 @@
               "amount": {
                 "unit": "l",
                 "value": 0
+              }
+            },
+            {
+              "name": "Sparge",
+              "type": "sparge",
+              "step_time": {
+                "unit": "min",
+                "value": 15
+              },
+              "step_temperature": {
+                "unit": "C",
+                "value": 75.5555556
               }
             }
           ]
