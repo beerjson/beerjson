@@ -1,6 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/beer.json",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/beer.json",
   "type": "object",
   "additionalProperties": false,
   "properties": {
