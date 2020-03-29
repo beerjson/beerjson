@@ -1,6 +1,5 @@
 const Ajv = require('ajv')
 const ajv = new Ajv()
-//ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-04'))
 ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-06.json'));
 ajv.addSchema(require('../json/fermentation'))
 ajv.addSchema(require('../json/fermentation_step'))
