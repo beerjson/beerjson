@@ -88,8 +88,10 @@
           "$ref": "#/definitions/WaterBase"
         },
         {
-          "amount": {
-            "$ref": "measureable_units.json#/definitions/VolumeType"
+          "properties": {
+            "amount": {
+              "$ref": "measureable_units.json#/definitions/VolumeType"
+            }
           }
         }
       ]
