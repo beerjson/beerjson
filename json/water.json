@@ -1,6 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/water.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/water.json",
   "type": "object",
   "additionalProperties": false,
   "definitions": {
@@ -88,8 +88,10 @@
           "$ref": "#/definitions/WaterBase"
         },
         {
-          "amount": {
-            "$ref": "measureable_units.json#/definitions/VolumeType"
+          "properties": {
+            "amount": {
+              "$ref": "measureable_units.json#/definitions/VolumeType"
+            }
           }
         }
       ]
