@@ -1,21 +1,42 @@
 {
   "beerjson": {
-    "version": 2.01,
-    "miscellaneous_ingredients": [
+    "recipes": [
       {
-        "name": "Irish Moss",
-        "type": "fining",
-        "timing": {
-          "use": {
-            "add_to_boil": {
-              "time": {
-                "unit": "min",
-                "value": 5
-              }
-            }
+        "author": "",
+        "batch_size": {
+          "unit": "l",
+          "value": 0
+        },
+        "efficiency": {
+          "brewhouse": {
+            "unit": "%",
+            "value": 0
           }
-        }
+        },
+        "ingredients": {
+          "fermentable_additions": [],
+          "miscellaneous_additions": [
+            {
+              "name": "Irish Moss",
+              "timing": {
+                "time": {
+                  "unit": "min",
+                  "value": 5
+                },
+                "use": "add_to_boil"
+              },
+              "amount":{
+                "unit":"l",
+                "value":5
+              },
+              "type": "fining"
+            }
+          ]
+        },
+        "name": "",
+        "type": "all grain"
       }
-    ]
+    ],
+    "version": 2.01
   }
 }

@@ -32,8 +32,6 @@
           "name": "Brett Beer",
           "category": "American Wild Ale",
           "category_number": 28,
-          "category_id": "28",
-          "style_id": "28A",
           "style_letter": "A",
           "style_guide": "BJCP2015",
           "type": "beer"
@@ -142,7 +140,7 @@
               "name": "Farmhouse Ale",
               "type": "ale",
               "form": "liquid",
-              "laboratory": "WYeast",
+              "producer": "WYeast",
               "product_id": "",
               "amount": {
                 "unit": "ml",
@@ -153,7 +151,7 @@
               "name": "Brett Claussenii",
               "type": "brett",
               "form": "liquid",
-              "laboratory": "WYeast",
+              "producer": "WYeast",
               "product_id": "",
               "amount": {
                 "unit": "ml",
@@ -311,8 +309,7 @@
           "value": 1.01
         },
         "ibu_estimate": {
-          "method": "Tinseth",
-          "value": 27
+          "method": "Tinseth"
         }
       }
     ]

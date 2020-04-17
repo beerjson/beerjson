@@ -6,7 +6,7 @@
         "name": "German Ale",
         "type": "ale",
         "form": "liquid",
-        "laboratory": "Wyeast Labs",
+        "producer": "Wyeast Labs",
         "product_id": "1007",
         "temperature_range": {
           "minimum": {
