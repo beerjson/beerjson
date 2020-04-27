@@ -29,7 +29,7 @@
                 "unit": "lb",
                 "value": 27
               },
-              "group": "base",
+              "grain_group": "base",
               "yield": {
                 "potential": {
                   "unit": "sg",
@@ -48,7 +48,7 @@
                 "unit": "lb",
                 "value": 4
               },
-              "group": "flaked",
+              "grain_group": "flaked",
               "yield": {
                 "potential": {
                   "unit": "sg",
@@ -67,7 +67,7 @@
                 "unit": "lb",
                 "value": 2
               },
-              "group": "specialty",
+              "grain_group": "specialty",
               "yield": {
                 "potential": {
                   "unit": "sg",
@@ -86,7 +86,7 @@
                 "unit": "lb",
                 "value": 0.75
               },
-              "group": "caramel",
+              "grain_group": "caramel",
               "yield": {
                 "potential": {
                   "unit": "sg",

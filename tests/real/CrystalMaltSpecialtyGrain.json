@@ -10,7 +10,7 @@
           "value": 40.0
         },
         "origin": "United Kingdom",
-        "supplier": "Fussybrewer Malting",
+        "producer": "Fussybrewer Malting",
         "yield": {
           "fine_grind": {
             "unit": "%",

@@ -238,7 +238,7 @@
               "name": "English Ale",
               "type": "ale",
               "form": "liquid",
-              "laboratory": "Ithaca Beer C",
+              "producer": "Ithaca Beer C",
               "product_id": "",
               "amount": {
                 "unit": "ml",
@@ -308,8 +308,7 @@
           "value": 1.059
         },
         "ibu_estimate": {
-          "method": "Other",
-          "value": 0
+          "method": "Other"
         }
       }
     ]

@@ -15,11 +15,24 @@
             "value": 1.036
           }
         },
-        "bitterness": {
-          "ibu_per_lb_per_gal": 16.6
-        },
         "notes": "Hopped amber extract suitable as a base for english ales."
       }
-    ]
+    ],
+    "styles": [{
+      "name": "",
+      "category": "",
+      "style_guide": "BJCP2015",
+      "type": "beer",
+      "international_bitterness_units":{
+        "minimum": {
+          "unit": "IBUs",
+          "value": 16.6
+        },
+        "maximum": {
+          "unit": "IBUs",
+          "value": 16.6
+        }
+      }
+    }]
   }
 }

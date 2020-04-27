@@ -21,14 +21,28 @@
           "value": 30
         },
         "substitutes": "Goldings, Fuggles, Super Alpha",
-        "humulene": 2.34,
-        "caryophyllene": 1.23,
-        "cohumulone": 13.2,
-        "myrcene": 24.2,
         "inventory": {
           "amount": {
             "unit": "oz",
             "value": 2.0
+          }
+        },
+        "oil_content": {
+          "humulene": {
+            "unit": "%",
+            "value": 2.34
+          },
+          "caryophyllene": {
+            "unit": "%",
+            "value": 1.23
+          },
+          "cohumulone": {
+            "unit": "%",
+            "value": 13.2
+          },
+          "myrcene": {
+            "unit": "%",
+            "value": 24.2
           }
         }
       },
@@ -51,14 +65,28 @@
           "value": 30
         },
         "substitutes": "Goldings, Fuggles, Super Alpha",
-        "humulene": 2.34,
-        "caryophyllene": 1.23,
-        "cohumulone": 13.2,
-        "myrcene": 24.2,
         "inventory": {
           "amount": {
             "unit": "floz",
             "value": 2.0
+          }
+        },
+        "oil_content": {
+          "humulene": {
+            "unit": "%",
+            "value": 2.34
+          },
+          "caryophyllene": {
+            "unit": "%",
+            "value": 1.23
+          },
+          "cohumulone": {
+            "unit": "%",
+            "value": 13.2
+          },
+          "myrcene": {
+            "unit": "%",
+            "value": 24.2
           }
         }
       }
