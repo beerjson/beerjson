@@ -159,8 +159,8 @@
               },
               "timing": {
                 "duration": {
-                  "unit": "month",
-                  "value": 3
+                  "unit": "day",
+                  "value": 90
                 },
                 "step": 1,
                 "use": "add_to_package"
@@ -293,8 +293,8 @@
               },
               "vessel_quantity": 1,
               "step_time": {
-                "unit": "month",
-                "value": 3
+                "unit": "day",
+                "value": 90
               }
             }
           ]
