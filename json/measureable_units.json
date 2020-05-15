@@ -109,7 +109,7 @@
           "$ref": "#/definitions/TimeUnitType"
         },
         "value": {
-          "type": "number"
+          "type": "integer"
         }
       },
       "required": [
@@ -412,9 +412,7 @@
         "min",
         "hr",
         "day",
-        "week",
-        "month",
-        "year"
+        "week"
       ]
     },
     "ColorUnitType": {
