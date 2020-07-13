@@ -149,7 +149,20 @@ export type FermentableBase = {|
     | 'smoked'
     | 'adjunct',
   yield: YieldType,
-  color: ColorType
+  color: ColorType,
+  glassy?: PercentType,
+  plump?: PercentType,
+  half?: PercentType,
+  mealy?: PercentType,
+  thru?: PercentType,
+  protein?: PercentType,
+  kolbach?: PercentType,
+  friability?: PercentType,
+  di_ph?: AcidityType,
+  viscosity?: ViscosityType,
+  dms_p?: ConcentrationType,
+  fan?: ConcentrationType,
+  beta_glucan?: ConcentrationType
 |}
 
 export type FermentableType = FermentableBase & {|
@@ -363,6 +376,11 @@ export type UnitType = {|
   value: number
 |}
 
+export type ViscosityType = {|
+  unit: ViscosityUnitType,
+  value: number
+|}
+
 export type CarbonationRangeType = {|
   minimum: CarbonationType,
   maximum: CarbonationType
@@ -414,14 +432,7 @@ export type DiastaticPowerUnitType = 'Lintner' | 'WK'
 export type TemperatureUnitType = 'C' | 'F'
 export type AcidityUnitType = 'pH'
 export type PressureUnitType = 'kPa' | 'psi' | 'bar'
-export type TimeUnitType =
-  | 'sec'
-  | 'min'
-  | 'hr'
-  | 'day'
-  | 'week'
-  | 'month'
-  | 'year'
+export type TimeUnitType = 'sec' | 'min' | 'hr' | 'day' | 'week'
 export type ColorUnitType = 'EBC' | 'Lovi' | 'SRM'
 export type CarbonationUnitType = 'vols'
 export type BitternessUnitType = 'IBUs'
@@ -455,6 +466,7 @@ export type QualitativeRangeType =
   | 'high'
   | 'very high'
 export type VersionType = number
+export type ViscosityUnitType = 'cP' | 'mPa-s'
 export type MiscellaneousBase = {|
   name: string,
   producer?: string,
@@ -638,4 +650,6 @@ export type WaterType = WaterBase & {|
   notes?: string
 |}
 
-export type WaterAdditionType = WaterBase
+export type WaterAdditionType = WaterBase & {|
+  amount?: VolumeType
+|}

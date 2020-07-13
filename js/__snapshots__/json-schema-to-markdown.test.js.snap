@@ -19,6 +19,19 @@ FermentableBase provides unique properties to identify individual records of fer
 | **grain_group** |  | \`\\"base\\"\`<br/>\`\\"caramel\\"\`<br/>\`\\"flaked\\"\`<br/>\`\\"roasted\\"\`<br/>\`\\"specialty\\"\`<br/>\`\\"smoked\\"\`<br/>\`\\"adjunct\\"\`|  |
 | **yield** | ✅ | [YieldType](#yieldtype)|  |
 | **color** | ✅ | [ColorType](measureable_units.json.md#colortype)|  |
+| **glassy** |  | [PercentType](measureable_units.json.md#percenttype)| Used to indicate the 'crystallized' percentage of starches for crystal malts. |
+| **plump** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of grain that masses through sieves with gaps of 7/64 and 6/64, desired values of 80% or higher which indicate plump kernels. |
+| **half** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **mealy** |  | [PercentType](measureable_units.json.md#percenttype)| The opposite of glassy, a mealy kernel is one that is not glassy. Base malt should be at least 90%, single step mashes generally require 95% or higher. |
+| **thru** |  | [PercentType](measureable_units.json.md#percenttype)| The Percentage of grain that makes it through a thin mesh screen, typically 5/64 inch. Values less than 3% are desired. |
+| **protein** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of protein. Higher values may indicate haze or lautering issues. |
+| **kolbach** |  | [PercentType](measureable_units.json.md#percenttype)| Kolbach Index The ratio of soluble protein to total protein, a value of less than 30% may suggest difficult lautering. |
+| **friability** |  | [PercentType](measureable_units.json.md#percenttype)| Friability Friability is the measure of a malts ability to crumble during the crush, and is used as an indicator for easy gelatinization of the grain and starches, as well as modification of the malt. Value of 85% of higher indicates a well modified malt and is suitable for single step mashes. Lower values may require a step mash. |
+| **di_ph** |  | [AcidityType](measureable_units.json.md#aciditytype)| The pH of the resultant wort for 1 lb of grain mashed in 1 gallon of distilled water. Used in many water chemistry / mash pH prediction software. |
+| **viscosity** |  | [ViscosityType](measureable_units.json.md#viscositytype)| The measure of wort viscosity, typically associated with the breakdown of beta-glucans. The higher the viscosity, the greater the need for a glucan rest and the less suitable for a fly sparge. |
+| **dms_p** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)| The amount of DMS precursors, namely S-methyl methionine (SMM) and dimethyl sulfoxide (DMSO) in the malt which convert to dimethyl sulfide (DMS). |
+| **fan** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)| Free Amino Nitrogen (FAN) is a critical yeast nutrient. Typical values for base malt is 170. Fermentability - Used in Extracts to indicate a baseline typical attenuation for a typical medium attenuation yeast. |
+| **beta_glucan** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)| Values of 180 or more may suggest a glucan rest and avoiding fly sparging. |
 
 ## FermentableType 
 

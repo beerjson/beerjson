@@ -149,6 +149,19 @@ declare namespace BeerJSON {
       | 'adjunct'
     yield: YieldType
     color: ColorType
+    glassy?: PercentType
+    plump?: PercentType
+    half?: PercentType
+    mealy?: PercentType
+    thru?: PercentType
+    protein?: PercentType
+    kolbach?: PercentType
+    friability?: PercentType
+    di_ph?: AcidityType
+    viscosity?: ViscosityType
+    dms_p?: ConcentrationType
+    fan?: ConcentrationType
+    beta_glucan?: ConcentrationType
   }
 
   export type FermentableType = FermentableBase & {
@@ -362,6 +375,11 @@ declare namespace BeerJSON {
     value: number
   }
 
+  export type ViscosityType = {
+    unit: ViscosityUnitType
+    value: number
+  }
+
   export type CarbonationRangeType = {
     minimum: CarbonationType
     maximum: CarbonationType
@@ -413,14 +431,7 @@ declare namespace BeerJSON {
   export type TemperatureUnitType = 'C' | 'F'
   export type AcidityUnitType = 'pH'
   export type PressureUnitType = 'kPa' | 'psi' | 'bar'
-  export type TimeUnitType =
-    | 'sec'
-    | 'min'
-    | 'hr'
-    | 'day'
-    | 'week'
-    | 'month'
-    | 'year'
+  export type TimeUnitType = 'sec' | 'min' | 'hr' | 'day' | 'week'
   export type ColorUnitType = 'EBC' | 'Lovi' | 'SRM'
   export type CarbonationUnitType = 'vols'
   export type BitternessUnitType = 'IBUs'
@@ -454,6 +465,7 @@ declare namespace BeerJSON {
     | 'high'
     | 'very high'
   export type VersionType = number
+  export type ViscosityUnitType = 'cP' | 'mPa-s'
   export type MiscellaneousBase = {
     name: string
     producer?: string
@@ -637,5 +649,7 @@ declare namespace BeerJSON {
     notes?: string
   }
 
-  export type WaterAdditionType = WaterBase
+  export type WaterAdditionType = WaterBase & {
+    amount?: VolumeType
+  }
 }

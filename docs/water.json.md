@@ -38,6 +38,9 @@ WaterType collects the attributes of a brewing water to store as record informat
 
 WaterAdditionType collects the attributes of each water addition for use in a recipe
 
-**WaterAdditionType** is an object with all properties from [WaterBase](#waterbase)
+**WaterAdditionType** is an object with all properties from [WaterBase](#waterbase) and these additional properties:
 
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **amount** |  | [VolumeType](measureable_units.json.md#volumetype)|  |
 
