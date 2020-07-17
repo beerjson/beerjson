@@ -149,20 +149,7 @@ export type FermentableBase = {|
     | 'smoked'
     | 'adjunct',
   yield: YieldType,
-  color: ColorType,
-  glassy?: PercentType,
-  plump?: PercentType,
-  half?: PercentType,
-  mealy?: PercentType,
-  thru?: PercentType,
-  protein?: PercentType,
-  kolbach?: PercentType,
-  friability?: PercentType,
-  di_ph?: AcidityType,
-  viscosity?: ViscosityType,
-  dms_p?: ConcentrationType,
-  fan?: ConcentrationType,
-  beta_glucan?: ConcentrationType
+  color: ColorType
 |}
 
 export type FermentableType = FermentableBase & {|
@@ -174,7 +161,18 @@ export type FermentableType = FermentableBase & {|
   kolbach_index?: number,
   max_in_batch?: PercentType,
   recommend_mash?: boolean,
-  inventory?: FermentableInventoryType
+  inventory?: FermentableInventoryType,
+  glassy?: PercentType,
+  plump?: PercentType,
+  half?: PercentType,
+  mealy?: PercentType,
+  thru?: PercentType,
+  friability?: PercentType,
+  di_ph?: AcidityType,
+  viscosity?: ViscosityType,
+  dms_p?: ConcentrationType,
+  fan?: ConcentrationType,
+  beta_glucan?: ConcentrationType
 |}
 
 export type FermentableAdditionType = FermentableBase & {|

@@ -149,19 +149,6 @@ declare namespace BeerJSON {
       | 'adjunct'
     yield: YieldType
     color: ColorType
-    glassy?: PercentType
-    plump?: PercentType
-    half?: PercentType
-    mealy?: PercentType
-    thru?: PercentType
-    protein?: PercentType
-    kolbach?: PercentType
-    friability?: PercentType
-    di_ph?: AcidityType
-    viscosity?: ViscosityType
-    dms_p?: ConcentrationType
-    fan?: ConcentrationType
-    beta_glucan?: ConcentrationType
   }
 
   export type FermentableType = FermentableBase & {
@@ -174,6 +161,17 @@ declare namespace BeerJSON {
     max_in_batch?: PercentType
     recommend_mash?: boolean
     inventory?: FermentableInventoryType
+    glassy?: PercentType
+    plump?: PercentType
+    half?: PercentType
+    mealy?: PercentType
+    thru?: PercentType
+    friability?: PercentType
+    di_ph?: AcidityType
+    viscosity?: ViscosityType
+    dms_p?: ConcentrationType
+    fan?: ConcentrationType
+    beta_glucan?: ConcentrationType
   }
 
   export type FermentableAdditionType = FermentableBase & {
