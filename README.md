@@ -65,7 +65,7 @@ or
 npm i
 npm test -- -u
 npm run gen-docs
-npm run pre-commit
+npm run precommit
 ```
 
 ## Version

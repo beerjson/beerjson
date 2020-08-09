@@ -251,6 +251,23 @@
         "value"
       ]
     },
+    "ViscosityType": {
+      "type": "object",
+      "description": "Viscosity of fluids",
+      "additionalProperties": false,
+      "properties": {
+        "unit": {
+          "$ref": "#/definitions/ViscosityUnitType"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "unit",
+        "value"
+      ]
+    },
     "CarbonationRangeType": {
       "type": "object",
       "additionalProperties": false,
@@ -530,6 +547,13 @@
     },
     "VersionType": {
       "type": "number"
+    },
+    "ViscosityUnitType": {
+      "type": "string",
+      "enum": [
+        "cP",
+        "mPa-s"
+      ]
     }
   }
 }

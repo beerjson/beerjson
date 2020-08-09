@@ -165,6 +165,17 @@ UnitType is used where unitless amounts are required, such as 1 apple, or 1 yeas
 | **unit** | ✅ | [UnitUnitType](#unitunittype)|  |
 | **value** | ✅ | number|  |
 
+## ViscosityType 
+
+Viscosity of fluids
+
+**ViscosityType** is an object with these properties:
+
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **unit** | ✅ | [ViscosityUnitType](#viscosityunittype)|  |
+| **value** | ✅ | number|  |
+
 ## CarbonationRangeType 
 
 *no description yet*
@@ -342,3 +353,8 @@ RegExp pattern: `\d{4}-\d{2}-\d{2}|\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}`
 *no description yet*
 
 number
+## ViscosityUnitType 
+
+*no description yet*
+
+`"cP"`<br/>`"mPa-s"`

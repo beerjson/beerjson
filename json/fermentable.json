@@ -100,6 +100,53 @@
             },
             "inventory": {
               "$ref": "#/definitions/FermentableInventoryType"
+            },
+            "glassy": {
+              "description": "Used to indicate the 'crystallized' percentage of starches for crystal malts.",
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "plump": {
+              "description": "The percentage of grain that masses through sieves with gaps of 7/64 and 6/64, desired values of 80% or higher which indicate plump kernels.",
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "half": {
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "mealy": {
+              "description": "The opposite of glassy, a mealy kernel is one that is not glassy. Base malt should be at least 90%, single step mashes generally require 95% or higher.",
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "thru": {
+              "description": "The Percentage of grain that makes it through a thin mesh screen, typically 5/64 inch. Values less than 3% are desired.",
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "friability": {
+              "description": "Friability is the measure of a malts ability to crumble during the crush, and is used as an indicator for easy gelatinization of the grain and starches, as well as modification of the malt. Value of 85% of higher indicates a well modified malt and is suitable for single step mashes. Lower values may require a step mash.",
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "di_ph": {
+              "description": "The pH of the resultant wort for 1 lb of grain mashed in 1 gallon of distilled water. Used in many water chemistry / mash pH prediction software.",
+              "$ref": "measureable_units.json#/definitions/AcidityType"
+            },
+            "viscosity": {
+              "description": "The measure of wort viscosity, typically associated with the breakdown of beta-glucans. The higher the viscosity, the greater the need for a glucan rest and the less suitable for a fly sparge.",
+              "$ref": "measureable_units.json#/definitions/ViscosityType"
+            },
+            "dms_p": {
+              "description": "The amount of DMS precursors, namely S-methyl methionine (SMM) and dimethyl sulfoxide (DMSO) in the malt which convert to dimethyl sulfide (DMS).",
+              "$ref": "measureable_units.json#/definitions/ConcentrationType"
+            },
+            "fan": {
+              "description": "Free Amino Nitrogen (FAN) is a critical yeast nutrient. Typical values for base malt is 170.",
+              "$ref": "measureable_units.json#/definitions/ConcentrationType"
+            },
+            "fermentability": {
+              "description": "Fermentability - Used in Extracts to indicate a baseline typical apparent attenuation for a typical medium attenuation yeast.",
+              "$ref": "measureable_units.json#/definitions/PercentType"
+            },
+            "beta_glucan": {
+              "description": "Values of 180 or more may suggest a glucan rest and avoiding fly sparging.",
+              "$ref": "measureable_units.json#/definitions/ConcentrationType"
             }
           }
         }
