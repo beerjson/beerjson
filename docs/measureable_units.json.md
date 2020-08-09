@@ -75,7 +75,7 @@ Diastatic power is a measurement of malted grains enzymatic content. A value of 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [TimeUnitType](#timeunittype)|  |
-| **value** | ✅ | number|  |
+| **value** | ✅ | integer|  |
 
 ## ColorType 
 
@@ -163,6 +163,17 @@ UnitType is used where unitless amounts are required, such as 1 apple, or 1 yeas
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [UnitUnitType](#unitunittype)|  |
+| **value** | ✅ | number|  |
+
+## ViscosityType 
+
+Viscosity of fluids
+
+**ViscosityType** is an object with these properties:
+
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **unit** | ✅ | [ViscosityUnitType](#viscosityunittype)|  |
 | **value** | ✅ | number|  |
 
 ## CarbonationRangeType 
@@ -265,7 +276,7 @@ UnitType is used where unitless amounts are required, such as 1 apple, or 1 yeas
 
 *no description yet*
 
-`"sec"`<br/>`"min"`<br/>`"hr"`<br/>`"day"`<br/>`"week"`<br/>`"month"`<br/>`"year"`
+`"sec"`<br/>`"min"`<br/>`"hr"`<br/>`"day"`<br/>`"week"`
 ## ColorUnitType 
 
 *no description yet*
@@ -342,3 +353,8 @@ RegExp pattern: `\d{4}-\d{2}-\d{2}|\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}`
 *no description yet*
 
 number
+## ViscosityUnitType 
+
+*no description yet*
+
+`"cP"`<br/>`"mPa-s"`
