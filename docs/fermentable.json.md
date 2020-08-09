@@ -43,7 +43,8 @@ FermentableType collects the attributes of a fermentable ingredient to store as 
 | **di_ph** |  | [AcidityType](measureable_units.json.md#aciditytype)| The pH of the resultant wort for 1 lb of grain mashed in 1 gallon of distilled water. Used in many water chemistry / mash pH prediction software. |
 | **viscosity** |  | [ViscosityType](measureable_units.json.md#viscositytype)| The measure of wort viscosity, typically associated with the breakdown of beta-glucans. The higher the viscosity, the greater the need for a glucan rest and the less suitable for a fly sparge. |
 | **dms_p** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)| The amount of DMS precursors, namely S-methyl methionine (SMM) and dimethyl sulfoxide (DMSO) in the malt which convert to dimethyl sulfide (DMS). |
-| **fan** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)| Free Amino Nitrogen (FAN) is a critical yeast nutrient. Typical values for base malt is 170. Fermentability - Used in Extracts to indicate a baseline typical attenuation for a typical medium attenuation yeast. |
+| **fan** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)| Free Amino Nitrogen (FAN) is a critical yeast nutrient. Typical values for base malt is 170. |
+| **fermentability** |  | [PercentType](measureable_units.json.md#percenttype)| Fermentability - Used in Extracts to indicate a baseline typical apparent attenuation for a typical medium attenuation yeast. |
 | **beta_glucan** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)| Values of 180 or more may suggest a glucan rest and avoiding fly sparging. |
 
 ## FermentableAdditionType 

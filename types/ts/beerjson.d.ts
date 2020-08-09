@@ -171,6 +171,7 @@ declare namespace BeerJSON {
     viscosity?: ViscosityType
     dms_p?: ConcentrationType
     fan?: ConcentrationType
+    fermentability?: PercentType
     beta_glucan?: ConcentrationType
   }
 

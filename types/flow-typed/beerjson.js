@@ -172,6 +172,7 @@ export type FermentableType = FermentableBase & {|
   viscosity?: ViscosityType,
   dms_p?: ConcentrationType,
   fan?: ConcentrationType,
+  fermentability?: PercentType,
   beta_glucan?: ConcentrationType
 |}
 
