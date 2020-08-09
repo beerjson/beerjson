@@ -301,7 +301,7 @@ Viscosity of fluids
 
 *no description yet*
 
-`"sg"`<br/>`"plato"`<br/>`"brix"`
+`"lb/qt"`<br/>`"lb/gal"`<br/>`"oz/gal"`<br/>`"g/L"`<br/>`"lb/bbl"`<br/>`"kg/bbl"`<br/>`"kg/L"`
 ## ConcentrationUnitType 
 
 *no description yet*

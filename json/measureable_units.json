@@ -463,9 +463,13 @@
     "DensityUnitType": {
       "type": "string",
       "enum": [
-        "sg",
-        "plato",
-        "brix"
+        "lb/qt",
+        "lb/gal",
+        "oz/gal",
+        "g/L",
+        "lb/bbl",
+        "kg/bbl",
+        "kg/L"
       ]
     },
     "ConcentrationUnitType": {

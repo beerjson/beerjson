@@ -435,7 +435,14 @@ declare namespace BeerJSON {
   export type CarbonationUnitType = 'vols'
   export type BitternessUnitType = 'IBUs'
   export type GravityUnitType = 'sg' | 'plato' | 'brix'
-  export type DensityUnitType = 'sg' | 'plato' | 'brix'
+  export type DensityUnitType =
+    | 'lb/qt'
+    | 'lb/gal'
+    | 'oz/gal'
+    | 'g/L'
+    | 'lb/bbl'
+    | 'kg/bbl'
+    | 'kg/L'
   export type ConcentrationUnitType = 'ppm' | 'ppb' | 'mg/l'
   export type SpecificHeatUnitType = 'Cal/(g C)' | 'J/(kg K)' | 'BTU/(lb F)'
   export type SpecificVolumeUnitType =
