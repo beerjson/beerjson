@@ -75,7 +75,7 @@ Diastatic power is a measurement of malted grains enzymatic content. A value of 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [TimeUnitType](#timeunittype)|  |
-| **value** | ✅ | number|  |
+| **value** | ✅ | integer|  |
 
 ## ColorType 
 
@@ -265,7 +265,7 @@ UnitType is used where unitless amounts are required, such as 1 apple, or 1 yeas
 
 *no description yet*
 
-`"sec"`<br/>`"min"`<br/>`"hr"`<br/>`"day"`<br/>`"week"`<br/>`"month"`<br/>`"year"`
+`"sec"`<br/>`"min"`<br/>`"hr"`<br/>`"day"`<br/>`"week"`
 ## ColorUnitType 
 
 *no description yet*
