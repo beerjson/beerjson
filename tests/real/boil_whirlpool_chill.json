@@ -45,7 +45,7 @@
             }
           },
           {
-            "name": "chill to whirlpool, hold at 180F for 20 minutes",
+            "name": "Whirlpool",
             "description": "chill to whirlpool, hold at 180F for 20 minutes",
             "start_temperature": {
               "unit": "F",

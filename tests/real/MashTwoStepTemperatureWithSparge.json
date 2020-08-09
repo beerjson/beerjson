@@ -1,0 +1,80 @@
+{
+  "beerjson": {
+    "version": 2.01,
+    "mashes": [
+      {
+        "name": "Two Step Temperature, 68C",
+        "grain_temperature": {
+          "unit": "C",
+          "value": 22
+        },
+        "mash_steps": [
+          {
+            "name": "Protein Rest",
+            "type": "temperature",
+            "amount": {
+              "unit": "l",
+              "value": 15
+            },
+            "water_grain_ratio": {
+              "unit": "l/kg",
+              "value": 3.65
+            },
+            "step_temperature": {
+              "unit": "C",
+              "value": 49
+            },
+            "step_time": {
+              "unit": "min",
+              "value": 20
+            },
+            "ramp_time": {
+              "unit": "min",
+              "value": 10
+            }
+          },
+          {
+            "name": "Conversion Step, 68 C",
+            "type": "temperature",
+            "amount": {
+              "unit": "l",
+              "value": 15
+            },
+            "infuse_temperature": {
+              "unit": "C",
+              "value": 74.6
+            },
+            "step_temperature": {
+              "unit": "C",
+              "value": 68
+            },
+            "step_time": {
+              "unit": "min",
+              "value": 60
+            },
+            "ramp_time": {
+              "unit": "min",
+              "value": 20
+            }
+          },
+          {
+            "name": "Batch sparge",
+            "type": "sparge",
+            "amount": {
+              "unit": "l",
+              "value": 4
+            },
+            "step_temperature": {
+              "unit": "C",
+              "value": 74
+            },
+            "step_time": {
+              "unit": "min",
+              "value": 10
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
