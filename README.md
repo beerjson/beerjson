@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/beerjson/beerjson.svg?branch=master)](https://travis-ci.org/beerjson/beerjson)
 [![Join the chat at https://gitter.im/beerjson/beerjson](https://badges.gitter.im/beerjson/beerjson.svg)](https://gitter.im/beerjson/beerjson?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-# Welcome to BeerJSON 2.0-draft working group repository
+# Welcome to the BeerJSON repository
 
 This is a repository for development of BeerJSON interchange format
 specification. It is based on yet unfinished
@@ -70,7 +70,7 @@ npm run precommit
 
 ## Version
 
-This is BeerJSON 2.0-draft (currently in progress)
+The schema is currently at version BeerJSON 0.90-draft (currently in progress). Official releases will be branched according to Semantic Versioning, starting with release 1.0.0 once completed.
 
 ## State
 
