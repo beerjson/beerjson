@@ -296,8 +296,8 @@ export type MashStepType = {|
   description?: string,
   water_grain_ratio?: SpecificVolumeType,
   infuse_temperature?: TemperatureType,
-  start_pH?: AcidityType,
-  end_pH?: AcidityType
+  start_ph?: AcidityType,
+  end_ph?: AcidityType
 |}
 
 export type VolumeType = {|

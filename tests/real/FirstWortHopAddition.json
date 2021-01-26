@@ -1,0 +1,139 @@
+{
+  "beerjson": {
+    "version": 2.06,
+    "recipes": [
+      {
+        "name": "First Wort Hop Addition",
+        "type": "all grain",
+        "author": "",
+        "batch_size": {
+          "unit": "gal",
+          "value": 12
+        },
+        "efficiency": {
+          "brewhouse": {
+            "unit": "%",
+            "value": 71
+          }
+        },
+        "ingredients": {
+          "fermentable_additions": [
+            {
+              "name": "Base Malt",
+              "type": "grain",
+              "color": {
+                "unit": "Lovi",
+                "value": 1.8
+              },
+              "amount": {
+                "unit": "lb",
+                "value": 27
+              },
+              "grain_group": "base",
+              "yield": {
+                "potential": {
+                  "unit": "sg",
+                  "value": 1.0374
+                }
+              }
+            }
+          ],
+          "hop_additions": [
+            {
+              "name": "Columbus",
+              "alpha_acid": {
+                "unit": "%",
+                "value": 14
+              },
+              "form": "pellet",
+              "beta_acid": {
+                "unit": "%",
+                "value": 0
+              },
+              "amount": {
+                "unit": "oz",
+                "value": 4
+              },
+              "timing": {
+                "time": {
+                  "unit": "min",
+                  "value": 15
+                },
+                "use": "add_to_boil",
+                "step": 1
+              }
+            },
+            {
+              "name": "Simcoe",
+              "alpha_acid": {
+                "unit": "%",
+                "value": 9
+              },
+              "form": "pellet",
+              "beta_acid": {
+                "unit": "%",
+                "value": 0
+              },
+              "amount": {
+                "unit": "oz",
+                "value": 6
+              },
+              "timing": {
+                "time": {
+                  "unit": "min",
+                  "value": 30
+                },
+                "use": "add_to_boil",
+                "step": 1
+              }
+            }
+          ]
+        },
+        "boil": {
+          "name": "105 minute boil",
+          "description": "A standard 105 min boil followed by a 30 minutes whirlpool",
+          "pre_boil_size": {
+            "unit": "gal",
+            "value": 13.5
+          },
+          "boil_time": {
+            "unit": "min",
+            "value": 105
+          },
+          "boil_steps": [
+            {
+              "name": "preboil",
+              "start_temperature": {
+                "unit": "F",
+                "value": 154
+              },
+              "end_temperature": {
+                "unit": "F",
+                "value": 212
+              },
+              "step_time": {
+                "unit": "min",
+                "value": 10
+              }
+            },
+            {
+              "name": "boil",
+              "start_temperature": {
+                "unit": "F",
+                "value": 212
+              },
+              "end_temperature": {
+                "unit": "F",
+                "value": 212
+              },
+              "step_time": {
+                "unit": "min",
+                "value": 105
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
