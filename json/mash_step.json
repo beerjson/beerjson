@@ -51,10 +51,10 @@
           "description": "Temperature of the water for an infusion step.",
           "$ref": "measureable_units.json#/definitions/TemperatureType"
         },
-        "start_pH": {
+        "start_ph": {
           "$ref": "measureable_units.json#/definitions/AcidityType"
         },
-        "end_pH": {
+        "end_ph": {
           "$ref": "measureable_units.json#/definitions/AcidityType"
         }
       },

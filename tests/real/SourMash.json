@@ -1,0 +1,123 @@
+{
+  "beerjson": {
+    "version": 2.01,
+    "recipes": [
+      {
+        "name": "Sour Mash",
+        "type": "all grain",
+        "author": "",
+        "batch_size": {
+          "unit": "gal",
+          "value": 12
+        },
+        "efficiency": {
+          "brewhouse": {
+            "unit": "%",
+            "value": 71
+          }
+        },
+        "ingredients": {
+          "fermentable_additions": [
+            {
+              "name": "Pilsner",
+              "type": "grain",
+              "color": {
+                "unit": "Lovi",
+                "value": 1
+              },
+              "origin": "Germany",
+              "amount": {
+                "unit": "lb",
+                "value": 6.6
+              },
+              "yield": {
+                "potential": {
+                  "unit": "sg",
+                  "value": 1038
+                }
+              }
+            }
+          ],
+          "culture_additions": [
+            {
+              "name": "Lacto Blend",
+              "type": "lacto",
+              "form": "liquid",
+              "producer": "Omega",
+              "product_id": "",
+              "amount": {
+                "unit": "ml",
+                "value": 100
+              },
+              "timing": {
+                "duration": {
+                  "unit": "day",
+                  "value": 90
+                },
+                "use": "add_to_mash",
+                "step": 2
+              }
+            }
+          ]
+        },
+        "mash": {
+          "name": "Mash",
+          "grain_temperature": {
+            "unit": "F",
+            "value": 70
+          },
+          "mash_steps": [
+            {
+              "name": "Mash",
+              "type": "temperature",
+              "amount": {
+                "unit": "l",
+                "value": 15
+              },
+              "step_temperature": {
+                "unit": "C",
+                "value": 66
+              },
+              "step_time": {
+                "unit": "min",
+                "value": 60
+              },
+              "ramp_time": {
+                "unit": "min",
+                "value": 5
+              }
+            },
+            {
+              "name": "Sour Mash",
+              "type": "souring mash",
+              "amount": {
+                "unit": "l",
+                "value": 15
+              },
+              "start_ph": {
+                "unit": "pH",
+                "value": 4.2
+              },
+              "end_ph": {
+                "unit": "pH",
+                "value": 3.2
+              },
+              "step_temperature": {
+                "unit": "C",
+                "value": 46
+              },
+              "step_time": {
+                "unit": "hr",
+                "value": 12
+              },
+              "ramp_time": {
+                "unit": "min",
+                "value": 30
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

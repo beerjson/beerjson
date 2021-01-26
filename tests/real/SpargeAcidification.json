@@ -1,0 +1,195 @@
+{
+  "beerjson": {
+    "version": 2.01,
+    "recipes": [
+      {
+        "name": "Sparge Acidification Example",
+        "type": "all grain",
+        "author": "",
+        "batch_size": {
+          "unit": "gal",
+          "value": 12
+        },
+        "efficiency": {
+          "brewhouse": {
+            "unit": "%",
+            "value": 71
+          }
+        },
+        "ingredients": {
+          "fermentable_additions": [
+            {
+              "name": "Pilsner",
+              "type": "grain",
+              "color": {
+                "unit": "Lovi",
+                "value": 1
+              },
+              "origin": "Germany",
+              "amount": {
+                "unit": "lb",
+                "value": 12
+              },
+              "yield": {
+                "potential": {
+                  "unit": "sg",
+                  "value": 1038
+                }
+              }
+            }
+          ],
+          "culture_additions": [
+            {
+              "name": "Belle Saison",
+              "type": "ale",
+              "form": "liquid",
+              "producer": "Danstar",
+              "product_id": "",
+              "amount": {
+                "unit": "g",
+                "value": 11
+              }
+            }
+          ],
+          "miscellaneous_additions": [
+            {
+              "name": "Gypsum",
+              "type": "water agent",
+              "timing": {
+                "time": {
+                  "unit": "min",
+                  "value": 5
+                },
+                "use": "add_to_mash"
+              },
+              "amount": {
+                "unit": "g",
+                "value": 10
+              }
+            },
+            {
+              "name": "Lactic",
+              "type": "water agent",
+              "amount": {
+                "unit": "ml",
+                "value": 4
+              },
+              "timing": {
+                "time": {
+                  "unit": "min",
+                  "value": 0
+                },
+                "use": "add_to_mash",
+                "step": 2
+              }
+            }
+          ]
+        },
+        "mash": {
+          "name": "Mash",
+          "grain_temperature": {
+            "unit": "F",
+            "value": 70
+          },
+          "mash_steps": [
+            {
+              "name": "Mash",
+              "type": "temperature",
+              "amount": {
+                "unit": "l",
+                "value": 15
+              },
+              "step_temperature": {
+                "unit": "C",
+                "value": 66
+              },
+              "step_time": {
+                "unit": "min",
+                "value": 60
+              },
+              "ramp_time": {
+                "unit": "min",
+                "value": 5
+              }
+            },
+            {
+              "name": "Batch sparge",
+              "type": "sparge",
+              "amount": {
+                "unit": "l",
+                "value": 4
+              },
+              "step_temperature": {
+                "unit": "C",
+                "value": 74
+              },
+              "step_time": {
+                "unit": "min",
+                "value": 10
+              }
+            }
+          ]
+        },
+        "boil": {
+          "name": "60 minute boil",
+          "description": "A standard 60 min boil followed by a 24 hour kettle sour",
+          "pre_boil_size": {
+            "unit": "gal",
+            "value": 13.5
+          },
+          "boil_time": {
+            "unit": "min",
+            "value": 105
+          },
+          "boil_steps": [
+            {
+              "name": "boil",
+              "start_temperature": {
+                "unit": "F",
+                "value": 212
+              },
+              "end_temperature": {
+                "unit": "F",
+                "value": 212
+              },
+              "step_time": {
+                "unit": "min",
+                "value": 60
+              }
+            }
+          ]
+        },
+        "fermentation": {
+          "name": "Ale, Single Stage",
+          "description": "Initial temp at 70F, no temp control. Allowed to free rise to a max temp of 82F.",
+          "fermentation_steps": [
+            {
+              "name": "Free rise",
+              "start_temperature": {
+                "unit": "F",
+                "value": 74
+              },
+              "free_rise": true,
+              "start_gravity": {
+                "unit": "sg",
+                "value": 1.052
+              },
+              "end_gravity": {
+                "unit": "sg",
+                "value": 1.004
+              },
+              "end_temperature": {
+                "unit": "F",
+                "value": 82
+              },
+              "step_time": {
+                "unit": "day",
+                "value": 7
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

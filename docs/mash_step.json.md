@@ -18,6 +18,6 @@ MashStepType - a per step representation occurring during the mash.
 | **description** |  | string|  |
 | **water_grain_ratio** |  | [SpecificVolumeType](measureable_units.json.md#specificvolumetype)| Also known as the mash thickness. eg 1.75 qt/lb or 3.65 L/kg. |
 | **infuse_temperature** |  | [TemperatureType](measureable_units.json.md#temperaturetype)| Temperature of the water for an infusion step. |
-| **start_pH** |  | [AcidityType](measureable_units.json.md#aciditytype)|  |
-| **end_pH** |  | [AcidityType](measureable_units.json.md#aciditytype)|  |
+| **start_ph** |  | [AcidityType](measureable_units.json.md#aciditytype)|  |
+| **end_ph** |  | [AcidityType](measureable_units.json.md#aciditytype)|  |
 

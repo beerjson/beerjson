@@ -30,8 +30,8 @@
             }
           },
           {
-            "name": "Conversion Step, 68 C",
-            "type": "temperature",
+            "name": "Decoction to 68C",
+            "type": "decoction",
             "amount": {
               "unit": "l",
               "value": 15

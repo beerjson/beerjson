@@ -1,0 +1,210 @@
+{
+  "beerjson": {
+    "version": 2.01,
+    "recipes": [
+      {
+        "name": "Kettle Sour",
+        "type": "all grain",
+        "author": "",
+        "batch_size": {
+          "unit": "gal",
+          "value": 12
+        },
+        "efficiency": {
+          "brewhouse": {
+            "unit": "%",
+            "value": 71
+          }
+        },
+        "ingredients": {
+          "fermentable_additions": [
+            {
+              "name": "Pilsner",
+              "type": "grain",
+              "color": {
+                "unit": "Lovi",
+                "value": 1
+              },
+              "origin": "Germany",
+              "amount": {
+                "unit": "lb",
+                "value": 12
+              },
+              "yield": {
+                "potential": {
+                  "unit": "sg",
+                  "value": 1038
+                }
+              }
+            }
+          ],
+          "culture_additions": [
+            {
+              "name": "Belle Saison",
+              "type": "ale",
+              "form": "liquid",
+              "producer": "Danstar",
+              "product_id": "",
+              "amount": {
+                "unit": "g",
+                "value": 11
+              }
+            },
+            {
+              "name": "Lacto Plantarum",
+              "type": "lacto",
+              "form": "liquid",
+              "producer": "",
+              "product_id": "",
+              "amount": {
+                "unit": "ml",
+                "value": 100
+              },
+              "timing": {
+                "duration": {
+                  "unit": "day",
+                  "value": 90
+                },
+                "use": "add_to_boil",
+                "step": 2
+              }
+            }
+          ]
+        },
+        "mash": {
+          "name": "Mash",
+          "grain_temperature": {
+            "unit": "F",
+            "value": 70
+          },
+          "mash_steps": [
+            {
+              "name": "Mash",
+              "type": "temperature",
+              "amount": {
+                "unit": "l",
+                "value": 15
+              },
+              "step_temperature": {
+                "unit": "C",
+                "value": 66
+              },
+              "step_time": {
+                "unit": "min",
+                "value": 60
+              },
+              "ramp_time": {
+                "unit": "min",
+                "value": 5
+              }
+            }
+          ]
+        },
+        "boil": {
+          "name": "60 minute boil",
+          "description": "A standard 60 min boil followed by a 24 hour kettle sour",
+          "pre_boil_size": {
+            "unit": "gal",
+            "value": 13.5
+          },
+          "boil_time": {
+            "unit": "min",
+            "value": 105
+          },
+          "boil_steps": [
+            {
+              "name": "boil",
+              "start_temperature": {
+                "unit": "F",
+                "value": 212
+              },
+              "end_temperature": {
+                "unit": "F",
+                "value": 212
+              },
+              "step_time": {
+                "unit": "min",
+                "value": 60
+              }
+            },
+            {
+              "name": "24 hour sour",
+              "description": "chill to 10F, quickly using immersion chiller, let it fall to room temp for 24 hours.",
+              "start_temperature": {
+                "unit": "F",
+                "value": 100
+              },
+              "end_temperature": {
+                "unit": "F",
+                "value": 72
+              },
+              "start_ph": {
+                "unit": "pH",
+                "value": 4.2
+              },
+              "end_ph": {
+                "unit": "pH",
+                "value": 3.2
+              },
+              "ramp_time": {
+                "unit": "hr",
+                "value": 8
+              },
+              "step_time": {
+                "unit": "hr",
+                "value": 24
+              },
+              "chilling_type": "batch"
+            },
+            {
+              "name": "chilled with immersion chiller",
+              "start_temperature": {
+                "unit": "F",
+                "value": 180
+              },
+              "end_temperature": {
+                "unit": "F",
+                "value": 75
+              },
+              "step_time": {
+                "unit": "min",
+                "value": 15
+              },
+              "chilling_type": "batch"
+            }
+          ]
+        },
+        "fermentation": {
+          "name": "Ale, Single Stage",
+          "description": "Initial temp at 70F, no temp control. Allowed to free rise to a max temp of 82F.",
+          "fermentation_steps": [
+            {
+              "name": "Free rise",
+              "start_temperature": {
+                "unit": "F",
+                "value": 74
+              },
+              "free_rise": true,
+              "start_gravity": {
+                "unit": "sg",
+                "value": 1.052
+              },
+              "end_gravity": {
+                "unit": "sg",
+                "value": 1.004
+              },
+              "end_temperature": {
+                "unit": "F",
+                "value": 82
+              },
+              "step_time": {
+                "unit": "day",
+                "value": 7
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
