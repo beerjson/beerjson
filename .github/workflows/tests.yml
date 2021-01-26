@@ -17,4 +17,5 @@ jobs:
           node-version: 12
 
       - name: Run tests
+        run: npm i      
         run: npm test
