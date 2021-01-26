@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/beerjson/beerjson.svg?branch=master)](https://travis-ci.org/beerjson/beerjson)
+[![Build Status](https://github.com/beerjson/beerjson/workflows/BeerJSON%20tests/badge.svg)](https://github.com/beerjson/beerjson/actions)
 [![Join the chat at https://gitter.im/beerjson/beerjson](https://badges.gitter.im/beerjson/beerjson.svg)](https://gitter.im/beerjson/beerjson?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 # Welcome to the BeerJSON repository
