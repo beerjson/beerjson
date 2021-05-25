@@ -432,7 +432,7 @@ declare namespace BeerJSON {
   export type PressureUnitType = 'kPa' | 'psi' | 'bar'
   export type TimeUnitType = 'sec' | 'min' | 'hr' | 'day' | 'week'
   export type ColorUnitType = 'EBC' | 'Lovi' | 'SRM'
-  export type CarbonationUnitType = 'vols'
+  export type CarbonationUnitType = 'vols' | 'g/l'
   export type BitternessUnitType = 'IBUs'
   export type GravityUnitType = 'sg' | 'plato' | 'brix'
   export type DensityUnitType = 'sg' | 'plato' | 'brix'
