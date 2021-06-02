@@ -173,13 +173,13 @@
       "description": "Zymocide, also known as killer yeast properties, is common among wine yeast. There are also some ale and brett yeasts that are immune to some zymocidic properties, these are known as killer neutral.",
       "additionalProperties": false,
       "properties": {
-        "1": {
+        "no1": {
           "type": "boolean"
         },
-        "2": {
+        "no2": {
           "type": "boolean"
         },
-        "28": {
+        "no28": {
           "type": "boolean"
         },
         "klus": {
