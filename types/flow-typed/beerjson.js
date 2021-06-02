@@ -90,9 +90,9 @@ export type CultureInventoryType = {|
 |}
 
 export type Zymocide = {|
-  1?: boolean,
-  2?: boolean,
-  28?: boolean,
+  no1?: boolean,
+  no2?: boolean,
+  no28?: boolean,
   klus?: boolean,
   neutral?: boolean
 |}
