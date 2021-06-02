@@ -59,9 +59,7 @@ or
 
 ```bash
 npm i
-npm test -- -u
-npm run gen-docs
-npm run precommit
+npm test
 ```
 
 ## Documentation
@@ -78,7 +76,7 @@ npm run gen-docs
 
 ## Version
 
-This brunch contains BeerJSON 1.0.0 specification.
+This brunch contains BeerJSON 1.0 specification.
 
 ## How to contribute
 
@@ -92,3 +90,7 @@ This brunch contains BeerJSON 1.0.0 specification.
   request. And all new entities in the json schema are covered.
 - To chat with others, join our Gitter chat:
   [![Join the chat at https://gitter.im/beerjson/beerjson](https://badges.gitter.im/beerjson/beerjson.svg)](https://gitter.im/beerjson/beerjson?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+## NPM package
+
+NPM package available at [@beerjson/beerjson](https://www.npmjs.com/package/@beerjson/beerjson).
