@@ -36,7 +36,7 @@
           "$ref": "measureable_units.json#/definitions/GravityType"
         },
         "pH": {
-          "description": "Used to indicate when an addition is added based on a desired specific gravity. eg Add brett when pH is 3.4.",
+          "description": "Used to indicate when an addition is added based on a desired specific pH. eg Add brett when pH is 3.4.",
           "$ref": "measureable_units.json#/definitions/AcidityType"
         },
         "step": {
