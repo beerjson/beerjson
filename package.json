@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "BeerJSON format",
   "main": "index.js",
+  "types": "types/ts/beerjson.d.ts",
   "devDependencies": {
     "ajv": "^6.12.0",
     "husky": "^0.14.3",
