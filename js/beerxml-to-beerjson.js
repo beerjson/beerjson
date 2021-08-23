@@ -321,7 +321,7 @@ const importFromBeerXml = xml => {
     const r = XML.parse(xml).RECIPE
     if (Array.isArray(r)) {
       throw new Error(
-        'BrewComputer does not currently support importing several recipes from a single BeerXML file. Please create a separate file for each recipe.'
+        'Converter does not currently support importing several recipes from a single BeerXML file. Please create a separate file for each recipe.'
       )
     }
     const recipe = {
