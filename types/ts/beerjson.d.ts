@@ -516,6 +516,7 @@ declare namespace BeerJSON {
     carbonation?: number
     vessel_volume?: VolumeType
     vessel_quantity?: number
+    graphics?: GraphicType[]
   }
 
   export type RecipeType = {
@@ -649,5 +650,22 @@ declare namespace BeerJSON {
 
   export type WaterAdditionType = WaterBase & {
     amount?: VolumeType
+  }
+
+  export type GraphicType = {
+    position:
+      | 'neck front'
+      | 'neck back'
+      | 'neck wrap around'
+      | 'body front'
+      | 'body back'
+      | 'body warp around'
+      | 'cap'
+    type: 'svg' | 'pdf' | 'png' | 'bmp' | 'jpg'
+    base64_data: string
+    dpi?: number
+    width?: number
+    height?: number
+    units?: 'mm' | 'in'
   }
 }
