@@ -29,7 +29,7 @@ const getFermentableType = type =>
     ? 'other'
     : type
 
-const potential = y => (y * 0.01 * 46) / 1000 + 1
+const potential = y => (y * 0.46) / 1000 + 1
 const mash_steps = r =>
   map(getArrayNode(get(r, ['MASH', 'MASH_STEPS', 'MASH_STEP'])), mash_step => ({
     name: mash_step['NAME'],
