@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/packaging_graphic.json",
+  "$id": "https://raw.githubusercontent.com/ellisgl/beerjson/master/json/packaging_graphic.json",
   "type": "object",
   "additionalProperties": false,
   "definitions": {
