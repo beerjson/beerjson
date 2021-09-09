@@ -36,13 +36,32 @@
             "png",
             "jpg",
             "gif"
-          ]
+          ],
+          "description": "File type"
         },
         "base64_data": {
-          "type": "string"
+          "type": "string",
+          "description": "base64 encoded file."
+        },
+        "url1": {
+          "type": "string",
+          "description": "URL to hosted version of image."
+        },
+        "url2": {
+          "type": "string",
+          "description": "Alternative URL to hosted version of image."
+        },
+        "url3": {
+          "type": "string",
+          "description": "Alternative URL to hosted version of image."
+        },
+        "url4": {
+          "type": "string",
+          "description": "Alternative URL to hosted version of image."
         },
         "dpi": {
-          "type": "number"
+          "type": "number",
+          "description": "Dots per inch."
         },
         "width": {
           "type": "number"
@@ -55,13 +74,13 @@
           "enum": [
             "mm",
             "in"
-          ]
+          ],
+          "description": "The unit type which are used for measurements."
         }
       },
       "required": [
         "position",
-        "type",
-        "base64_data"
+        "type"
       ]
     }
   }

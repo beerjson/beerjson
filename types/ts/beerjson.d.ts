@@ -662,7 +662,11 @@ declare namespace BeerJSON {
       | 'body warp around'
       | 'cap'
     type: 'svg' | 'pdf' | 'png' | 'bmp' | 'jpg'
-    base64_data: string
+    base64_data?: string
+    url1?: string
+    url2?: string
+    url3?: string
+    url4?: string
     dpi?: number
     width?: number
     height?: number
