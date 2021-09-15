@@ -663,10 +663,7 @@ declare namespace BeerJSON {
       | 'cap'
     type: 'svg' | 'pdf' | 'png' | 'bmp' | 'jpg'
     base64_data?: string
-    url1?: string
-    url2?: string
-    url3?: string
-    url4?: string
+    URLS?: Array<string>
     dpi?: number
     width?: number
     height?: number

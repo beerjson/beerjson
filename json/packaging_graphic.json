@@ -43,21 +43,12 @@
           "type": "string",
           "description": "base64 encoded file."
         },
-        "url1": {
-          "type": "string",
-          "description": "URL to hosted version of image."
-        },
-        "url2": {
-          "type": "string",
-          "description": "Alternative URL to hosted version of image."
-        },
-        "url3": {
-          "type": "string",
-          "description": "Alternative URL to hosted version of image."
-        },
-        "url4": {
-          "type": "string",
-          "description": "Alternative URL to hosted version of image."
+        "URLS": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "URLS to hosted version of image."
         },
         "dpi": {
           "type": "number",
