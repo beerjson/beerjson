@@ -30,7 +30,7 @@ FermentableType collects the attributes of a fermentable ingredient to store as 
 | **alpha_amylase** |  | number| Where diastatic power gives the total amount of all enzymes, alpha amylase, also known as dextrinizing units, refers to only the total amount of alpa amylase in the malted grain. A value of 25-50 is desirable for base malt. |
 | **diastatic_power** |  | [DiastaticPowerType](measureable_units.json.md#diastaticpowertype)| Diastatic power is a measurement of malted grains enzymatic content. A value of 35 Lintner is needed to self convert, while a value of 100 or more is desirable. |
 | **protein** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of protein. Higher values may indicate a possibility of haze, or lautering issues. |
-| **kolbach_index** |  | number| The Kolbach Index, also known as soluble to total ratio of nitrogen or protein, is used to indcate the degree of malt modification. A value above 35% is desired for simple single infusion mashing, undermodified malt may require multiple step mashes or decoction. |
+| **kolbach_index** |  | [PercentType](measureable_units.json.md#percenttype)| The Kolbach Index, also known as soluble to total ratio of nitrogen or protein, is used to indcate the degree of malt modification. A value above 35% is desired for simple single infusion mashing, undermodified malt may require multiple step mashes or decoction. |
 | **max_in_batch** |  | [PercentType](measureable_units.json.md#percenttype)| The recommended maximum percentage to use in a grain bill.  |
 | **recommend_mash** |  | boolean| True if the fermentable must be mashed, false if it can be steeped.  |
 | **inventory** |  | [FermentableInventoryType](#fermentableinventorytype)|  |

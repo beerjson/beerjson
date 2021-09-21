@@ -157,7 +157,7 @@ export type FermentableType = FermentableBase & {|
   alpha_amylase?: number,
   diastatic_power?: DiastaticPowerType,
   protein?: PercentType,
-  kolbach_index?: number,
+  kolbach_index?: PercentType,
   max_in_batch?: PercentType,
   recommend_mash?: boolean,
   inventory?: FermentableInventoryType,
