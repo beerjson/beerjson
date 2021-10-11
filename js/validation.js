@@ -1,7 +1,5 @@
 const Ajv = require('ajv')
-const ajv = new Ajv({
-    strictKeywords: true,
-})
+const ajv = new Ajv()
 ajv.addSchema(require('../json/fermentation'))
 ajv.addSchema(require('../json/fermentation_step'))
 ajv.addSchema(require('../json/fermentable'))
