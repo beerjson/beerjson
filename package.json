@@ -1,6 +1,6 @@
 {
   "name": "@beerjson/beerjson",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "BeerJSON format",
   "main": "index.js",
   "types": "types/ts/beerjson.d.ts",
