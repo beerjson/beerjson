@@ -187,12 +187,18 @@ async function go() {
     //console.log(dataFlatten)
     require('fs').writeFileSync('dataFlatten.json', JSON.stringify(dataFlatten))
 
+    const styleguide = {
+      beerjson: {
+        version: 2.01,
+        styles: []
+      }
+    }
+
     for (let i = 0; i < styles.length; i++) {
       const style = styles[i]
 
       const result = {}
       result.name = style
-      result.data = []
       let collect = false
       let param = ''
 
@@ -208,21 +214,25 @@ async function go() {
           if (collect && value != style) {
             console.log(collect, param, key, value)
             if (value.endsWith(':') && value != 'that are either:') {
-              param = value
-              result.data[param] = ''
+              param = value.replace(':', '')
+              result[param] = ''
             } else {
               if (param == '') {
-                param = 'Intro:'
-                result.data[param] = ''
+                param = 'Intro'
+                result[param] = ''
               }
-              result.data[param] = result.data[param] + value
+              result[param] = result[param] + value
             }
           }
         }
       })
 
-      console.log(result)
+      styleguide.beerjson.styles.push(result)
     }
+    require('fs').writeFileSync(
+      'bjcp_styleguide-2021.json',
+      JSON.stringify(styleguide)
+    )
   } catch (error) {
     console.log(error)
   }
