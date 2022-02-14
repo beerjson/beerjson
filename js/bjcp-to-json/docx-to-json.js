@@ -173,6 +173,20 @@ const flattenKeys = require('./flatter').flattenKeys
 const unflattenKeys = require('./flatter').unflattenKeys
 const _ = require('lodash')
 
+const extract = (stringValues, unit) => {
+  const minMax = stringValues.split(' – ')
+  return {
+    minimum: {
+      unit: unit,
+      value: minMax[0]
+    },
+    maximum: {
+      unit: unit,
+      value: minMax[1]
+    }
+  }
+}
+
 async function go() {
   const EasyDocx = require('node-easy-docx')
   const easyDocx = new EasyDocx({
@@ -213,8 +227,8 @@ async function go() {
 
           if (collect && value != style) {
             console.log(collect, param, key, value)
-            if (value.endsWith(':') && value != 'that are either:') {
-              param = value.replace(':', '')
+            if (value.trim().endsWith(':') && value != 'that are either:') {
+              param = value.trim().replace(':', '')
               result[param] = ''
             } else {
               if (param == '') {
@@ -226,6 +240,35 @@ async function go() {
           }
         }
       })
+
+      if (result.OG != null) {
+        result.original_gravity = extract(result.OG, 'sg')
+        delete result.OG
+      }
+
+      if (result.IBUs != null) {
+        result.international_bitterness_units = extract(result.IBUs, 'IBUs')
+        delete result.IBUs
+      }
+
+      if (result.FG != null) {
+        result.final_gravity = extract(result.FG, 'sg')
+        delete result.FG
+      }
+
+      if (result.ABV != null) {
+        result.alcohol_by_volume = extract(result.ABV.replace('%', ''), '%')
+        delete result.ABV
+      }
+
+      if (result.SRM != null) {
+        result.color = extract(result.SRM, 'SRM')
+        delete result.SRM
+      }
+
+      if (result['Vital Statistics'] == '') {
+        delete result['Vital Statistics']
+      }
 
       styleguide.beerjson.styles.push(result)
     }
