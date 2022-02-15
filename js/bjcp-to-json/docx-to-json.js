@@ -109,7 +109,6 @@ const styles = [
     category_id: '5',
     style_id: '5D'
   },
-
   {
     name: 'Märzen',
     category: 'Amber Malty European Lager',
@@ -128,14 +127,30 @@ const styles = [
     category_id: '6',
     style_id: '6C'
   },
-
-  '7. Amber Bitter European Beer',
-  '7A. Vienna Lager',
-  '7B. Altbier',
-
-  '8. Dark European Lager',
-  '8A. Munich Dunkel',
-  '8B. Schwarzbier',
+  {
+    name: 'Vienna Lager',
+    category: 'Amber Bitter European Beer',
+    category_id: '7',
+    style_id: '7A'
+  },
+  {
+    name: 'Altbier',
+    category: 'Amber Bitter European Beer',
+    category_id: '7',
+    style_id: '7B'
+  },
+  {
+    name: 'Munich Dunkel',
+    category: 'Dark European Lager',
+    category_id: '8',
+    style_id: '8A'
+  },
+  {
+    name: 'Schwarzbier',
+    category: 'Dark European Lager',
+    category_id: '8',
+    style_id: '8B'
+  },
 
   '9. Strong European Beer',
   '9A. Doppelbock',
@@ -365,6 +380,9 @@ async function go() {
 
       for (const [key, value] of Object.entries(result)) {
         result[key] = value.trim()
+        if (result[key] == '') {
+          delete result[key]
+        }
       }
 
       if (result.og != null) {

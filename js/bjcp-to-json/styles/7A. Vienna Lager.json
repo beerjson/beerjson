@@ -1,0 +1,69 @@
+{
+  "name": "Vienna Lager",
+  "category": "Amber Bitter European Beer",
+  "category_id": "7",
+  "style_id": "7A",
+  "overall_impression": "A moderate-strength continental amber lager with a soft, smooth maltiness and a balanced, moderate bitterness, yet finishing relatively dry. The malt flavor is clean, bready-rich, and somewhat toasty, with an elegant impression derived from quality base malts and process, not specialty malts or adjuncts.",
+  "aroma": "Moderately-intense malt aroma, with toasty and malty-rich accents. Floral, spicy hop aroma may be low to none. Clean lager character. A significant caramel, biscuity, or roasted aroma is inappropriate.",
+  "appearance": "Light reddish amber to copper color. Bright clarity. Large, off-white, persistent head.",
+  "flavor": "Soft, elegant malt complexity is in the forefront, with a firm enough hop bitterness to provide a balanced finish. The malt flavor tends towards a rich, toasty character, without significant caramel, biscuity, or roast flavors. Fairly dry, soft finish, with both rich malt and hop bitterness present in the aftertaste. Floral, spicy, or herbal hop flavor may be low to none. Clean fermentation profile.",
+  "mouthfeel": "Medium-light to medium body, with a gentle creaminess. Moderate carbonation. Smooth.",
+  "comments": "A standard-strength everyday beer, not a beer brewed for festivals. Many traditional examples have become sweeter and more adjunct-laden, now seeming more like International Amber or Dark Lagers.",
+  "history": "Developed by Anton Dreher in Vienna in 1841, became popular in the mid-late 1800s. The style was brought to Mexico by Santiago Graf and other Austrian immigrant brewers in the late 1800s. Seems to be embraced as a modern craft style in other countries.",
+  "style_comparison": "Similar malt flavor as a Märzen, but lighter in intensity, and body, with a touch more bitterness and dryness in the balance. Lower in alcohol than Märzen or Festbier. Less rich, malty, and hoppythan Czech Amber Lager.",
+  "tags": "standard-strength, amber-color, bottom-fermented, lagered, central-europe, traditional-style, amber-lager-family, balanced",
+  "original_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1.048
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.055
+    }
+  },
+  "international_bitterness_units": {
+    "minimum": {
+      "unit": "IBUs",
+      "value": 18
+    },
+    "maximum": {
+      "unit": "IBUs",
+      "value": 30
+    }
+  },
+  "final_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1.01
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.014
+    }
+  },
+  "alcohol_by_volume": {
+    "minimum": {
+      "unit": "%",
+      "value": 4.7
+    },
+    "maximum": {
+      "unit": "%",
+      "value": 5.5
+    }
+  },
+  "color": {
+    "minimum": {
+      "unit": "SRM",
+      "value": 9
+    },
+    "maximum": {
+      "unit": "SRM",
+      "value": 15
+    }
+  },
+  "ingredients": "Traditionally, best-quality Vienna malt,but can also use Pils and Munich malts. Traditional continental hops. Clean German lager yeast. May use small amounts of specialty malts for color and sweetness.",
+  "examples": "Chuckanut Vienna Lager, Devils Backbone Vienna Lager, Figueroa Mountain Red Lager, Heavy Seas Cutlass, Ottakringer Wiener Original, Schell’s Firebrick, Theresianer Vienna",
+  "style_guide": "BJCP2021",
+  "type": "beer"
+}
