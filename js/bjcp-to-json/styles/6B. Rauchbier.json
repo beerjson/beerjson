@@ -1,0 +1,69 @@
+{
+  "name": "Rauchbier",
+  "category": "Amber Malty European Lager",
+  "category_id": "6",
+  "style_id": "6B",
+  "overall_impression": "Abeechwood-smoked,malty,amber German lager. The expected Märzen profile of toasty-rich malt, restrained bitterness, clean fermentation, and a relatively dry finish is enhanced by anoticeable to intense smoke character.",
+  "aroma": "Blend of smoke and malt, varying in balance and intensity. The beechwood smoke character can range from subtle to fairly strong, and can seem smoky, woody, or bacon-like. The malt character can be low to moderate, and be somewhat rich, toasty, or malty-sweet. The malt and smoke components are often inversely proportional (i.e., when smoke increases, malt decreases, and vice versa). Low floral or spicy hop aroma optional. Clean fermentation profile.",
+  "appearance": "Very clear, with a large, creamy, rich, tan- to cream-colored head. Deep amber to coppery-brown in color, often a little darker than the underlying Märzen style.",
+  "flavor": "Generally follows the aroma profile, with a blend of smoke and malt in varying balance and intensity, yet always mutually supportive. Märzen-like qualities should be evident, particularly a malty, toasty richness, but the beechwood smoke flavor can be low to high. The palate can be somewhat malty, rich, and sweet, yet the finish tends to be medium-dry to dry with the smoke character sometimes enhancing the dryness of the finish. The aftertaste can reflect both malt richness and smoke flavors, with a balanced presentation desirable. Moderate, balanced, hop bitterness. Can have up to a moderate hop flavor with spicy, floral, or herbal notes. Clean lager fermentation character. The quality and character of the smoke is important; it should be cleanly smoky. At higher levels, the smoke can take on a ham- or bacon-like character, which is acceptable as long as it doesn’t veer into the greasy range. Harsh, bitter, burnt, acrid, charred, rubbery, sulfury,or creosote-like smoky-phenolic flavors are inappropriate.",
+  "mouthfeel": "Medium body. Medium to medium-high carbonation. Smooth lager character. Significant astringent, phenolic harshness is inappropriate.",
+  "comments": "Literally smoke beerin German. The smoke character and intensity varies by maltster and brewery, so allow for variation in the style when judging – not all examples are highly smoked.Many other traditional German styles are smoked; those should be entered in the 32A Classic Style Smoked Beer style. This style is only for the more common Märzen-based beer.",
+  "history": "A historical specialty of the city of Bamberg, in the Franconian region of Bavaria in Germany. While smoked beers certainly were made long ago, the origins of this specific style are unclear but must have been developed after Märzen was created.",
+  "style_comparison": "Like a Märzen with but with a balanced, sweet, smoky aroma and flavor and a somewhat darker color.",
+  "tags": "standard-strength, amber-color, bottom-fermented, lagered, central-europe, traditional-style, amber-lager-family, malty, smoke",
+  "original_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1.05
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.057
+    }
+  },
+  "international_bitterness_units": {
+    "minimum": {
+      "unit": "IBUs",
+      "value": 20
+    },
+    "maximum": {
+      "unit": "IBUs",
+      "value": 30
+    }
+  },
+  "final_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1.012
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.016
+    }
+  },
+  "alcohol_by_volume": {
+    "minimum": {
+      "unit": "%",
+      "value": 4.8
+    },
+    "maximum": {
+      "unit": "%",
+      "value": 6
+    }
+  },
+  "color": {
+    "minimum": {
+      "unit": "SRM",
+      "value": 12
+    },
+    "maximum": {
+      "unit": "SRM",
+      "value": 22
+    }
+  },
+  "ingredients": "Märzen-type grist, with the addition of a sizeable quantity of German Rauchmalz (beechwood-smoked Vienna-type malt). Some breweries smoke their own malt. German lager yeast. Traditional German or Czech hops.",
+  "examples": "Cervejaria Bamberg Rauchbier, Göller Rauchbier, Rittmayer Rauchbier, Schlenkerla Rauchbier Märzen, Spezial Rauchbier Märzen",
+  "style_guide": "BJCP2021",
+  "type": "beer"
+}

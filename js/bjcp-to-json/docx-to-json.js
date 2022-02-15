@@ -85,16 +85,49 @@ const styles = [
     style_id: '4C'
   },
 
-  '5. Pale Bitter European Beer',
-  '5A. German Leichtbier',
-  '5B. Kölsch',
-  '5C. German Helles Exportbier',
-  '5D. German Pils',
+  {
+    name: 'German Leichtbier',
+    category: 'Pale Bitter European Beer',
+    category_id: '5',
+    style_id: '5A'
+  },
+  {
+    name: 'Kölsch',
+    category: 'Pale Bitter European Beer',
+    category_id: '5',
+    style_id: '5B'
+  },
+  {
+    name: 'German Helles Exportbier',
+    category: 'Pale Bitter European Beer',
+    category_id: '5',
+    style_id: '5C'
+  },
+  {
+    name: 'German Pils',
+    category: 'Pale Bitter European Beer',
+    category_id: '5',
+    style_id: '5D'
+  },
 
-  '6. Amber Malty European Lager',
-  '6A. Märzen',
-  '6B. Rauchbier',
-  '6C. Dunkles Bock',
+  {
+    name: 'Märzen',
+    category: 'Amber Malty European Lager',
+    category_id: '6',
+    style_id: '6A'
+  },
+  {
+    name: 'Rauchbier',
+    category: 'Amber Malty European Lager',
+    category_id: '6',
+    style_id: '6B'
+  },
+  {
+    name: 'Dunkles Bock',
+    category: 'Amber Malty European Lager',
+    category_id: '6',
+    style_id: '6C'
+  },
 
   '7. Amber Bitter European Beer',
   '7A. Vienna Lager',
@@ -329,6 +362,10 @@ async function go() {
           }
         }
       })
+
+      for (const [key, value] of Object.entries(result)) {
+        result[key] = value.trim()
+      }
 
       if (result.og != null) {
         result.original_gravity = extract(result.og, 'sg')
