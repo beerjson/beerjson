@@ -1,0 +1,69 @@
+{
+  "name": "Helles Bock",
+  "category": "Pale Malty European Lager",
+  "category_id": "4",
+  "style_id": "4C",
+  "overall_impression": " A relatively pale, strong, malty German lager with a nicely attenuated finish that enhances drinkability. The hop character is generally more apparent and the malt character less deeply rich than in other Bocks.",
+  "aroma": "Moderate to strong grainy-sweet malt aroma, often with a lightly toasted quality and low Maillard products. Moderately-low spicy, herbal, or floral hop aroma optional. Clean fermentation profile. Low fruity esters optional. Very light alcohol optional. ",
+  "appearance": " Deep gold to light amber in color. Bright to clear clarity. Large, creamy, persistent, white head.",
+  "flavor": " Moderately to moderately strong grainy-sweet, doughy, bready, or lightly toasty malt flavor dominates with some rich Maillard products providing added interest. Few caramel flavors optional. Low to moderate spicy, herbal, floral, pepperyhop flavor optional, but present in the best examples. Moderate hop bitterness, more so in the balance than in other Bocks. Clean fermentation profile. Well-attenuated, not cloying, with a moderately-dry finish that may taste of both malt and hops.",
+  "mouthfeel": " Medium-bodied. Moderate to moderately-high carbonation. Smooth and clean with no harshness or astringency, despite the increased hop bitterness. Light alcohol warming optional.",
+  "comments": " Also known as Maibock. Compared to darker Bock beers, the hops compensate for the lower level of Maillard products in the balance.",
+  "history": " A fairly recent development in comparison to the other members of the bock family. The serving of Maibock is a seasonal offering associated with springtime and the month of May, and may include a wider color and hopping range than is seen in exported products.",
+  "style_comparison": " Can be thought of as either a pale version of a Dunkles Bock, or a Munich Helles or Festbier brewed to bock strength. While quite malty, this beer typically has less dark and rich malt flavors, and can be drier, hoppier, and more bitter than a Dunkles Bock. Less strong than a pale Doppelbock, but with similar flavors.",
+  "tags": " high-strength, pale-color, bottom-fermented, lagered, central-europe, traditional-style, bock-family, malty",
+  "original_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1.064
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.072
+    }
+  },
+  "international_bitterness_units": {
+    "minimum": {
+      "unit": "IBUs",
+      "value": 23
+    },
+    "maximum": {
+      "unit": "IBUs",
+      "value": 35
+    }
+  },
+  "final_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1.011
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.018
+    }
+  },
+  "alcohol_by_volume": {
+    "minimum": {
+      "unit": "%",
+      "value": 6.3
+    },
+    "maximum": {
+      "unit": "%",
+      "value": 7.4
+    }
+  },
+  "color": {
+    "minimum": {
+      "unit": "SRM",
+      "value": 6
+    },
+    "maximum": {
+      "unit": "SRM",
+      "value": 9
+    }
+  },
+  "ingredients": "A mix of Pils, Vienna, and Munich malts. No adjuncts. Light use of pale crystal type malts possible. Traditional German hops. Clean lager yeast. Decoction mash is traditional, but boiling is less than in Dunkles Bock to restrain color development. Soft water.",
+  "examples": "Altenmünster Maibock, Ayinger Maibock, Chuckanut Maibock, Einbecker Mai-Ur-Bock, Hofbräu Maibock, Mahr’s Heller Bock",
+  "style_guide": "BJCP2021",
+  "type": "beer"
+}

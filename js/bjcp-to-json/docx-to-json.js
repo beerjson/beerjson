@@ -1,37 +1,109 @@
 const styles = [
-  '1. Standard American Beer',
-  '1A. American Light Lager',
-  '1B. American Lager',
-  '1C. Cream Ale',
-  '1D. American Wheat Beer',
-  '2. International Lager',
-  '2A. International Pale Lager',
-  '2B. International Amber Lager',
-  '2C. International Dark Lager',
-  '3. Czech Lager',
-  '3A. Czech Pale Lager',
-  '3B. Czech Premium Pale Lager',
-  '3C. Czech Amber Lager',
-  '3D. Czech Dark Lager',
-  '4. Pale Malty European Lager',
-  '4A. Munich Helles',
-  '4B. Festbier',
-  '4C. Helles Bock',
+  {
+    name: 'American Light Lager',
+    category: 'Standard American Beer',
+    category_id: '1',
+    style_id: '1A'
+  },
+  {
+    name: 'American Lager',
+    category: 'Standard American Beer',
+    category_id: '1',
+    style_id: '1B'
+  },
+  {
+    name: 'Cream Ale',
+    category: 'Standard American Beer',
+    category_id: '1',
+    style_id: '1C'
+  },
+  {
+    name: 'American Wheat Beer',
+    category: 'Standard American Beer',
+    category_id: '1',
+    style_id: '1D'
+  },
+  {
+    name: 'International Pale Lager',
+    category: 'International Lager',
+    category_id: '2',
+    style_id: '2A'
+  },
+  {
+    name: 'International Amber Lager',
+    category: 'International Lager',
+    category_id: '2',
+    style_id: '2B'
+  },
+  {
+    name: 'International Dark Lager',
+    category: 'International Lager',
+    category_id: '2',
+    style_id: '2C'
+  },
+  {
+    name: 'Czech Pale Lager',
+    category: 'Czech Lager',
+    category_id: '3',
+    style_id: '3A'
+  },
+  {
+    name: 'Czech Premium Pale Lager',
+    category: 'Czech Lager',
+    category_id: '3',
+    style_id: '3B'
+  },
+  {
+    name: 'Czech Amber Lager',
+    category: 'Czech Lager',
+    category_id: '3',
+    style_id: '3C'
+  },
+  {
+    name: 'Czech Dark Lager',
+    category: 'Czech Lager',
+    category_id: '3',
+    style_id: '3D'
+  },
+
+  {
+    name: 'Munich Helles',
+    category: 'Pale Malty European Lager',
+    category_id: '4',
+    style_id: '4A'
+  },
+  {
+    name: 'Festbier',
+    category: 'Pale Malty European Lager',
+    category_id: '4',
+    style_id: '4B'
+  },
+  {
+    name: 'Helles Bock',
+    category: 'Pale Malty European Lager',
+    category_id: '4',
+    style_id: '4C'
+  },
+
   '5. Pale Bitter European Beer',
   '5A. German Leichtbier',
   '5B. Kölsch',
   '5C. German Helles Exportbier',
   '5D. German Pils',
+
   '6. Amber Malty European Lager',
   '6A. Märzen',
   '6B. Rauchbier',
   '6C. Dunkles Bock',
+
   '7. Amber Bitter European Beer',
   '7A. Vienna Lager',
   '7B. Altbier',
+
   '8. Dark European Lager',
   '8A. Munich Dunkel',
   '8B. Schwarzbier',
+
   '9. Strong European Beer',
   '9A. Doppelbock',
   '9B. Eisbock',
@@ -40,6 +112,7 @@ const styles = [
   '10A. Weissbier',
   '10B. Dunkles Weissbier',
   '10C. Weizenbock',
+
   '11. British Bitter',
   '11A. Ordinary Bitter',
   '11B. Best Bitter',
@@ -166,7 +239,17 @@ const styles = [
   '34. Specialty Beer',
   '34A. Commercial Specialty Beer',
   '34B. Mixed-Style Beer',
-  '34C. Experimental Beer'
+  '34C. Experimental Beer',
+  'Argentine Styles',
+  'X1. Dorada Pampeana',
+  'X2. IPA Argenta',
+  'Argentine IPA',
+  'Italian Styles',
+  'X3. Italian Grape Ale',
+  'Brazilian Styles',
+  'X4. Catharina Sour',
+  'New Zealand Styles',
+  'X5. New Zealand Pilsner'
 ]
 
 const flattenKeys = require('./flatter').flattenKeys
@@ -178,11 +261,11 @@ const extract = (stringValues, unit) => {
   return {
     minimum: {
       unit: unit,
-      value: minMax[0]
+      value: Number(minMax[0])
     },
     maximum: {
       unit: unit,
-      value: minMax[1]
+      value: Number(minMax[1])
     }
   }
 }
@@ -194,12 +277,16 @@ async function go() {
   })
 
   try {
-    const data = await easyDocx.parseDocx()
-    require('fs').writeFileSync('data.json', JSON.stringify(data))
+    //const data = await easyDocx.parseDocx()
+    //require('fs').writeFileSync('data.json', JSON.stringify(data))
 
-    const dataFlatten = flattenKeys(data)
+    //const dataFlatten = flattenKeys(data)
     //console.log(dataFlatten)
-    require('fs').writeFileSync('dataFlatten.json', JSON.stringify(dataFlatten))
+    //require('fs').writeFileSync('dataFlatten.json', JSON.stringify(dataFlatten))
+
+    const dataFlatten = JSON.parse(
+      require('fs').readFileSync('dataFlattenFixed.json')
+    )
 
     const styleguide = {
       beerjson: {
@@ -211,8 +298,10 @@ async function go() {
     for (let i = 0; i < styles.length; i++) {
       const style = styles[i]
 
-      const result = {}
-      result.name = style
+      const result = { ...style }
+
+      styleName = `${style.style_id}. ${style.name}`
+      console.log(styleName)
       let collect = false
       let param = ''
 
@@ -221,18 +310,18 @@ async function go() {
           if (!key.includes('.items.')) {
             collect = false
           }
-          if (value == style) {
+          if (value == styleName) {
             collect = true
           }
 
-          if (collect && value != style) {
+          if (collect && value != styleName) {
             console.log(collect, param, key, value)
             if (value.trim().endsWith(':') && value != 'that are either:') {
-              param = value.trim().replace(':', '')
+              param = _.snakeCase(value.trim().replace(':', ''))
               result[param] = ''
             } else {
               if (param == '') {
-                param = 'Intro'
+                param = 'notes'
                 result[param] = ''
               }
               result[param] = result[param] + value
@@ -241,40 +330,58 @@ async function go() {
         }
       })
 
-      if (result.OG != null) {
-        result.original_gravity = extract(result.OG, 'sg')
-        delete result.OG
+      if (result.og != null) {
+        result.original_gravity = extract(result.og, 'sg')
+        delete result.og
       }
 
-      if (result.IBUs != null) {
-        result.international_bitterness_units = extract(result.IBUs, 'IBUs')
-        delete result.IBUs
+      if (result.ib_us != null) {
+        result.international_bitterness_units = extract(result.ib_us, 'IBUs')
+        delete result.ib_us
       }
 
-      if (result.FG != null) {
-        result.final_gravity = extract(result.FG, 'sg')
-        delete result.FG
+      if (result.fg != null) {
+        result.final_gravity = extract(result.fg, 'sg')
+        delete result.fg
       }
 
-      if (result.ABV != null) {
-        result.alcohol_by_volume = extract(result.ABV.replace('%', ''), '%')
-        delete result.ABV
+      if (result.abv != null) {
+        result.alcohol_by_volume = extract(result.abv.replace('%', ''), '%')
+        delete result.abv
       }
 
-      if (result.SRM != null) {
-        result.color = extract(result.SRM, 'SRM')
-        delete result.SRM
+      if (result.srm != null) {
+        result.color = extract(result.srm, 'SRM')
+        delete result.srm
       }
 
-      if (result['Vital Statistics'] == '') {
-        delete result['Vital Statistics']
+      if (result['vital_statistics'] == '') {
+        delete result['vital_statistics']
       }
+
+      if (result['characteristic_ingredients'] != null) {
+        result.ingredients = result['characteristic_ingredients'].trim()
+        delete result['characteristic_ingredients']
+      }
+
+      if (result['commercial_examples'] != null) {
+        result.examples = result['commercial_examples'].trim()
+        delete result['commercial_examples']
+      }
+
+      result.style_guide = 'BJCP2021'
+      result.type = 'beer'
+
+      require('fs').writeFileSync(
+        `styles/${styleName}.json`,
+        JSON.stringify(result, null, 4)
+      )
 
       styleguide.beerjson.styles.push(result)
     }
     require('fs').writeFileSync(
       'bjcp_styleguide-2021.json',
-      JSON.stringify(styleguide)
+      JSON.stringify(styleguide, null, 4)
     )
   } catch (error) {
     console.log(error)
