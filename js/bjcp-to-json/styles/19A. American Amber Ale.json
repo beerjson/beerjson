@@ -1,0 +1,69 @@
+{
+  "name": "American Amber Ale",
+  "category": "Amber and Brown American Beer",
+  "category_id": "19",
+  "style_id": "19A",
+  "overall_impression": "A toasty and caramelly, fairly bitter, standard-strength beer with an interesting fruitiness and rustic, woody hop character. Smooth and well carbonated.",
+  "aroma": "Moderate to high herbal, resinous, floral, or minty hops. Light fruitiness acceptable. Low to moderate caramel or toasty malt supports the hops.",
+  "appearance": "Medium amber to light copper color. Generally clear. Moderate off-white head with good retention.",
+  "flavor": "Moderately malty with a pronounced hop bitterness. The malt character usually has toast (not roast) and caramel flavors. Low to moderately high hop flavor, usually showing rustic, traditional American hop qualities (often herbal, resinous, floral, minty). Finish fairly dry and crisp, with a lingering hop bitterness and a firm, grainy malt flavor. Light fruity esters are acceptable, but otherwise clean.",
+  "mouthfeel": "Medium-bodied. Medium to medium-high carbonation.",
+  "comments": "This style is narrowly defined around the prototypical Anchor Steam example, although allowing other typical ingredients of the era. Northern Brewer hops are not a strict requirement for the style.Modern American and New World-type hops (especially citrusy ones) are inappropriate.",
+  "history": "American West Coast original, brewed originally as Steam Beer during the Gold Rush era. Large shallow open fermenters (coolships) were used to compensate for the lack of refrigeration and to take advantage of the cool temperatures in the San Francisco Bay area. Modern versions are based on Anchor Brewing re-launching the style in the 1970s.",
+  "style_comparison": "Superficially similar to an American Amber Ale, but with specific choices for malt and hopping – the hop flavor and aroma is traditional (not modern) American hops, malt flavors are toastier, the hopping is always assertive, and a warm-fermented lager yeast is used. Less attenuated, less carbonated and less fruity than Australian Sparkling ale.",
+  "tags": "standard-strength, amber-color, bottom-fermented, north-america, traditional-style, amber-lager-family, bitter, hoppy",
+  "original_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1.048
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.054
+    }
+  },
+  "international_bitterness_units": {
+    "minimum": {
+      "unit": "IBUs",
+      "value": 30
+    },
+    "maximum": {
+      "unit": "IBUs",
+      "value": 45
+    }
+  },
+  "final_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1.011
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.014
+    }
+  },
+  "alcohol_by_volume": {
+    "minimum": {
+      "unit": "%",
+      "value": 4.5
+    },
+    "maximum": {
+      "unit": "%",
+      "value": 5.5
+    }
+  },
+  "color": {
+    "minimum": {
+      "unit": "SRM",
+      "value": 9
+    },
+    "maximum": {
+      "unit": "SRM",
+      "value": 14
+    }
+  },
+  "ingredients": "Pale ale malt, non-citrusy hops (often Northern Brewer), small amounts of toasted malt or crystal malts. Lager yeast; however, some strains (often with the mention of “California” in the name) work better than others at the warmer fermentation temperatures (55 to 60 °F) typically used. Note that some German yeast strains produce inappropriate sulfury character.",
+  "examples": "Anchor Steam, Steamworks Steam Engine Lager",
+  "style_guide": "BJCP2021",
+  "type": "beer"
+}

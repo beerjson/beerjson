@@ -151,60 +151,248 @@ const styles = [
     category_id: '8',
     style_id: '8B'
   },
+  {
+    name: 'Doppelbock',
+    category: 'Strong European Beer',
+    category_id: '9',
+    style_id: '9A'
+  },
+  {
+    name: 'Eisbock',
+    category: 'Strong European Beer',
+    category_id: '9',
+    style_id: '9B'
+  },
+  {
+    name: 'Baltic Porter',
+    category: 'Strong European Beer',
+    category_id: '9',
+    style_id: '9C'
+  },
+  {
+    name: 'Weissbier',
+    category: 'German Wheat Beer',
+    category_id: '10',
+    style_id: '10A'
+  },
+  {
+    name: 'Dunkles Weissbier',
+    category: 'German Wheat Beer',
+    category_id: '10',
+    style_id: '10B'
+  },
+  {
+    name: 'Weizenbock',
+    category: 'German Wheat Beer',
+    category_id: '10',
+    style_id: '10C'
+  },
+  {
+    name: 'Ordinary Bitter',
+    category: 'British Bitter',
+    category_id: '11',
+    style_id: '11A'
+  },
+  {
+    name: 'Best Bitter',
+    category: 'British Bitter',
+    category_id: '11',
+    style_id: '11B'
+  },
+  {
+    name: 'Strong Bitter',
+    category: 'British Bitter',
+    category_id: '11',
+    style_id: '11C'
+  },
+  {
+    name: 'British Golden Ale',
+    category: 'Pale Commonwealth Beer',
+    category_id: '12',
+    style_id: '12A'
+  },
+  {
+    name: 'Australian Sparkling Ale',
+    category: 'Pale Commonwealth Beer',
+    category_id: '12',
+    style_id: '12B'
+  },
+  {
+    name: 'English IPA',
+    category: 'Pale Commonwealth Beer',
+    category_id: '12',
+    style_id: '12C'
+  },
+  {
+    name: 'Dark Mild',
+    category: 'Brown British Beer',
+    category_id: '13',
+    style_id: '13A'
+  },
+  {
+    name: 'British Brown Ale',
+    category: 'Brown British Beer',
+    category_id: '13',
+    style_id: '13B'
+  },
+  {
+    name: 'English Porter',
+    category: 'Brown British Beer',
+    category_id: '13',
+    style_id: '13C'
+  },
 
-  '9. Strong European Beer',
-  '9A. Doppelbock',
-  '9B. Eisbock',
-  '9C. Baltic Porter',
-  '10. German Wheat Beer',
-  '10A. Weissbier',
-  '10B. Dunkles Weissbier',
-  '10C. Weizenbock',
+  {
+    name: 'Scottish Light',
+    category: 'Scottish Ale',
+    category_id: '14',
+    style_id: '14A'
+  },
+  {
+    name: 'Scottish Heavy',
+    category: 'Scottish Ale',
+    category_id: '14',
+    style_id: '14B'
+  },
+  {
+    name: 'Scottish Export',
+    category: 'Scottish Ale',
+    category_id: '14',
+    style_id: '14C'
+  },
 
-  '11. British Bitter',
-  '11A. Ordinary Bitter',
-  '11B. Best Bitter',
-  '11C. Strong Bitter',
-  '12. Pale Commonwealth Beer',
-  '12A. British Golden Ale',
-  '12B. Australian Sparkling Ale',
-  '12C. English IPA',
-  '13. Brown British Beer',
-  '13A. Dark Mild',
-  '13B. British Brown Ale',
-  '13C. English Porter',
-  '14. Scottish Ale',
-  '14A. Scottish Light',
-  '14B. Scottish Heavy',
-  '14C. Scottish Export',
-  '15. Irish Beer',
-  '15A. Irish Red Ale',
-  '15B. Irish Stout',
-  '15C. Irish Extra Stout',
-  '16. Dark British Beer',
-  '16A. Sweet Stout',
-  '16B. Oatmeal Stout',
-  '16C. Tropical Stout',
-  '16D. Foreign Extra Stout',
-  '17. Strong British Ale',
-  '17A. British Strong Ale',
-  '17B. Old Ale',
-  '17C. Wee Heavy',
-  '17D. English Barley Wine',
-  '18. Pale American Ale',
-  '18A. Blonde Ale',
-  '18B. American Pale Ale',
-  '19. Amber and Brown American Beer',
-  '19A. American Amber Ale',
-  '19B. California Common',
-  '19C. American Brown Ale',
-  '20. American Porter and Stout',
-  '20A. American Porter',
-  '20B. American Stout',
-  '20C. Imperial Stout',
-  '21. IPA',
-  '21A. American IPA',
-  '21B. Specialty IPA',
+  {
+    name: 'Irish Red Ale',
+    category: 'Irish Beer',
+    category_id: '15',
+    style_id: '15A'
+  },
+  {
+    name: 'Irish Stout',
+    category: 'Irish Beer',
+    category_id: '15',
+    style_id: '15B'
+  },
+  {
+    name: 'Irish Extra Stout',
+    category: 'Irish Beer',
+    category_id: '15',
+    style_id: '15C'
+  },
+  {
+    name: 'Sweet Stout',
+    category: 'Dark British Beer',
+    category_id: '16',
+    style_id: '16A'
+  },
+  {
+    name: 'Oatmeal Stout',
+    category: 'Dark British Beer',
+    category_id: '16',
+    style_id: '16B'
+  },
+  {
+    name: 'Tropical Stout',
+    category: 'Dark British Beer',
+    category_id: '16',
+    style_id: '16C'
+  },
+  {
+    name: 'Foreign Extra Stout',
+    category: 'Dark British Beer',
+    category_id: '16',
+    style_id: '16D'
+  },
+  {
+    name: 'British Strong Ale',
+    category: 'Strong British Ale',
+    category_id: '17',
+    style_id: '17A'
+  },
+  {
+    name: 'Old Ale',
+    category: 'Strong British Ale',
+    category_id: '17',
+    style_id: '17B'
+  },
+  {
+    name: 'Wee Heavy',
+    category: 'Strong British Ale',
+    category_id: '17',
+    style_id: '17C'
+  },
+  {
+    name: 'English Barley Wine',
+    category: 'Strong British Ale',
+    category_id: '17',
+    style_id: '17D'
+  },
+  {
+    name: 'Blonde Ale',
+    category: 'Pale American Ale',
+    category_id: '18',
+    style_id: '18A'
+  },
+  {
+    name: 'American Pale Ale',
+    category: 'Pale American Ale',
+    category_id: '18',
+    style_id: '18B'
+  },
+  {
+    name: 'American Amber Ale',
+    category: 'Amber and Brown American Beer',
+    category_id: '19',
+    style_id: '19A'
+  },
+  {
+    name: 'California Common',
+    category: 'Amber and Brown American Beer',
+    category_id: '19',
+    style_id: '19B'
+  },
+  {
+    name: 'American Brown Ale',
+    category: 'Amber and Brown American Beer',
+    category_id: '19',
+    style_id: '19C'
+  },
+  {
+    name: 'American Porter',
+    category: 'American Porter and Stout',
+    category_id: '20',
+    style_id: '20A'
+  },
+  {
+    name: 'American Stout',
+    category: 'American Porter and Stout',
+    category_id: '20',
+    style_id: '20B'
+  },
+  {
+    name: 'Imperial Stout',
+    category: 'American Porter and Stout',
+    category_id: '20',
+    style_id: '20C'
+  },
+  {
+    name: 'American IPA',
+    category: 'IPA',
+    category_id: '21',
+    style_id: '21A'
+  },
+  {
+    name: 'Specialty IPA',
+    category: 'IPA',
+    category_id: '21',
+    style_id: '21B'
+  },
+  {
+    name: 'Hazy IPA',
+    category: 'IPA',
+    category_id: '21',
+    style_id: '21C'
+  },
   'Specialty IPA: Belgian IPA',
   'Specialty IPA: Black IPA',
   'Specialty IPA: Brown IPA',
@@ -212,7 +400,7 @@ const styles = [
   'Specialty IPA: Rye IPA',
   'Specialty IPA: White IPA',
   'Specialty IPA: Brut IPA',
-  '21C. Hazy IPA',
+
   '22. Strong American Ale',
   '22A. Double IPA',
   '22B. American Strong Ale',

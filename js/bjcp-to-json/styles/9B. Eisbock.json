@@ -1,0 +1,69 @@
+{
+  "name": "Eisbock",
+  "category": "Strong European Beer",
+  "category_id": "9",
+  "style_id": "9B",
+  "overall_impression": "A strong, full-bodied, rich, and malty dark German lager often with a viscous quality and strong flavors. Even though flavors are concentrated, the alcohol should be smooth and warming, not burning.",
+  "aroma": "Dominated by rich, intense malt and a definite alcohol presence. The malt can have bready, toasty, qualities, with some caramel or faint chocolate, often with dark fruit notes like plums or grapes. No hop aroma. Alcohol aromas should not be harsh or solventy. Clean fermentation profile.",
+  "appearance": "Deep copper to dark brown in color, often with attractive ruby highlights. Good clarity. Head retention may be moderate to poor. Off-white to deep ivory colored head. Pronounced legs are often evident.",
+  "flavor": "Rich, sweet malt balanced by a significant alcohol presence. The malt can have Maillard products, toasty qualities, some caramel, and occasionally a slight chocolate flavor. May have significant malt-derived dark fruit esters. Hop bitterness just offsets the malt sweetness enough to avoid a cloying character. No hop flavor. Alcohol helps balance the strong malt presence. The finish should be of rich malt with a certain dryness from the alcohol. It should not be sticky, syrupy, or cloyingly sweet. Clean fermentationprofile.",
+  "mouthfeel": "Full to very full-bodied. Low carbonation. Significant alcohol warmth without sharp hotness. Very smooth and silky without harsh edges from alcohol, bitterness, fusels, or other concentrated flavors.",
+  "comments": "Extended lagering is often needed post-freezing to smooth the alcohol and enhance the malt and alcohol balance. Pronounced “ICE-bock.”",
+  "history": "Originating in Kulmbach in Franconiain the late 1800s, although exact origins are not known. Fables describe it as coming from beer accidentally freezing at a brewery.",
+  "style_comparison": "Eisbocks are not simply stronger Doppelbocks; the name refers to the process of freezing and concentrating the beer, and is not a statement on alcohol; some Doppelbocks are stronger than Eisbocks. Not as thick, rich, or sweet as a Wheatwine.",
+  "tags": "very-high-strength, amber-color, bottom-fermented, lagered, central-europe, traditional-style, bock-family, malty",
+  "original_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1.078
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.12
+    }
+  },
+  "international_bitterness_units": {
+    "minimum": {
+      "unit": "IBUs",
+      "value": 25
+    },
+    "maximum": {
+      "unit": "IBUs",
+      "value": 35
+    }
+  },
+  "final_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1.02
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.035
+    }
+  },
+  "alcohol_by_volume": {
+    "minimum": {
+      "unit": "%",
+      "value": 9
+    },
+    "maximum": {
+      "unit": "%",
+      "value": 14
+    }
+  },
+  "color": {
+    "minimum": {
+      "unit": "SRM",
+      "value": 17
+    },
+    "maximum": {
+      "unit": "SRM",
+      "value": 30
+    }
+  },
+  "ingredients": "Same as Doppelbock. Produced by freezing a doppelbock-like beer and removing ice (“freeze distillation”), thus concentrating flavor and alcohol, as well as any defects present. Commercial eisbocks are generally concentrated anywhere from 7% to 33% by volume.",
+  "examples": "Kulmbacher Eisbock",
+  "style_guide": "BJCP2021",
+  "type": "beer"
+}
