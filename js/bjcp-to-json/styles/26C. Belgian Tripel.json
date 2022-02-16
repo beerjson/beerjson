@@ -1,0 +1,69 @@
+{
+  "name": "Belgian Tripel",
+  "category": "Monastic Ale",
+  "category_id": "26",
+  "style_id": "26C",
+  "overall_impression": "A strong,pale, somewhat spicy Belgian ale with a pleasant rounded malt flavor, firm bitterness, and dry finish. Quite aromatic, with spicy, fruity, and light alcohol notes combining with the supportive clean malt character to produce a surprisingly drinkable beverage considering the high alcohol content.",
+  "aroma": "Complex but seamless bouquet of moderate to significant spiciness, moderate fruity esters, low alcohol,low hops, and light malt. Generous spicy, peppery, sometimes clove-like phenols. Esters often reminiscent of citrus fruit, like oranges or lemons, but may sometimes have a slight ripe banana character. A low yet distinctive spicy, floral, sometimes perfumy hop character is optional. Alcohols are soft, spicy, and low in intensity. The malt character is light, with a soft, slightly grainy-sweet, or slightly honey-like impression.",
+  "appearance": "Deep yellow to pale amber in color. Good clarity. Effervescent. Long-lasting, creamy, rocky, white head resulting in characteristic Belgian laceon the glass as it fades.",
+  "flavor": "Flavor profile similar to aroma (same descriptors apply) for malt, esters, phenols, alcohol, and hops. Esters low to moderate, phenols low to moderate, hops low to moderate, alcohol low, all well combined in a coherent presentation. Medium to high bitterness, accentuated by a dry finish. Moderate bitterness in the aftertaste with substantial spicy-fruity yeast character.Should not be sweet.",
+  "mouthfeel": "Medium-light to medium body, although lighter than the substantial gravity would suggest. Highly carbonated. The alcohol content is deceptive, and has little to no obvious warming sensation. Effervescent. Should not be heavy.",
+  "comments": "High in alcohol but does not taste strongly of alcohol. The best examples are sneaky, not obvious. High carbonation and attenuation helps bring out the many flavors and to increase the perception of a dry finish. Most traditional versions have at least 30 IBUs and are very dry.",
+  "history": "Popularized by the monastery at Westmalle, first brewed in 1934.",
+  "style_comparison": "May resemble a Belgian Golden Strong Ale but slightly darker and a bit fuller-bodied, with more emphasis on phenols and less on esters, and fewer late hops. Should not seem like a blond Barleywine.",
+  "tags": "high-strength, pale-color, top-fermented, western-europe, traditional-style, bitter",
+  "original_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1.075
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.085
+    }
+  },
+  "international_bitterness_units": {
+    "minimum": {
+      "unit": "IBUs",
+      "value": 20
+    },
+    "maximum": {
+      "unit": "IBUs",
+      "value": 40
+    }
+  },
+  "final_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1.008
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.014
+    }
+  },
+  "alcohol_by_volume": {
+    "minimum": {
+      "unit": "%",
+      "value": 7.5
+    },
+    "maximum": {
+      "unit": "%",
+      "value": 9.5
+    }
+  },
+  "color": {
+    "minimum": {
+      "unit": "SRM",
+      "value": 4.5
+    },
+    "maximum": {
+      "unit": "SRM",
+      "value": 7
+    }
+  },
+  "ingredients": "Pilsner malt, often pale sugar adjuncts. Continental hops. Spicy-fruity Belgian yeast strains. Spice additions are generally not traditional, and if used, should be a background character only. Fairly soft water.",
+  "examples": "Chimay Tripel, La Rulles Tripel, La Trappe Tripel, St. Bernardus Tripel, Val-Dieu Triple, Westmalle Tripel",
+  "style_guide": "BJCP2021",
+  "type": "beer"
+}

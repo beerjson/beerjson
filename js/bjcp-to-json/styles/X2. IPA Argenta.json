@@ -1,0 +1,67 @@
+{
+  "name": "IPA Argenta",
+  "category": "Argentine Styles",
+  "category_id": "X",
+  "style_id": "X2",
+  "notes": "Suggested style placement: Category 21 (IPA)IPA Especialidad: IPA ARGENTA",
+  "impresion_general": "Una Pale Ale Argentina decididamente amarga y lupulada, refrescante y moderadamente fuerte. La clave del estilo está en la tomabilidad sin asperezas y con un buen balance.",
+  "aroma": "Intenso aroma a lúpulo con carácter floral y cítrico, derivado de los lúpulos argentinos. Muchas versiones tienen dry-hopping, lo que otorga un carácter a hierba adicional, aunque esto no es requerido. Puede hallarse dulzura límpida a malta e inclusive algo de caramelo, pero con menor tenor que en las Ipas inglesas. Un carácter frutal leve de los ésteres es aceptable, al igual que toques fenólicos producto de la fermentación del trigo, que nunca deben ser dominantes y solo deben agregar complejidad. De todos modos, el carácter relativmente neutro de la fermentación es lo más usual. Puede notarse algo de alcohol en las versiones más fuertes. Sin DMS. El diacetil es un demérito importante en esta cerveza ya que apaga el lúpulo, por lo que nunca debe estar presente.",
+  "aspecto": "El color varía de dorado medio a cobre rojizo medio. Algunas versiones pueden tener un tinte anaranjado. Debe ser clara, aunque las versiones con dry-hopping o que contienen trigo no malteado pueden tener una leve turbiedad. Buena espuma persistente.",
+  "sabor": "A lúpulo medio a alto, debiendo reflejar el carácter del lúpulo argentino, con aspectos prominentemente cítricos a pomelo rosado y cáscara de mandarina, que deben dominar. Puede tener también tonos florales como flores de azhar o también herbal y/o resinoso aunque es menos habitual y solo debe agregar complejidad. Amargor medio a medio alto, soportado por una maltosidad limpia que proporciona un balance adecuado.Sabor a malta bajo a medio, límpido, aunque son aceptables bajos niveles acaramelados o picantes por el uso de trigo, sea o no malteado. Sin diacetil. Un bajo carácter frutal es aceptable, pero no requerido. El amargor debe permanecer en el retrogusto pero nunca debe ser áspero. Finish medio seco a seco y refrescante. Puede percibirse algún sabor a alcohol en las versiones más fuertes.",
+  "sensacion_en_boca": "cuerpo medio liviano a medio, suave, sin astringencias derivadas del lúpulo, aunque la moderada a moderada alta carbonatación puede combinarse con el trigo para dar una sensación seca, aún en presencia de la dulzura de la malta. Suave tibieza a alcohol en las versiones más fuertes (no en todas). Menor cuerpo que la IPA inglesa, y más seca que la IPA Americana.",
+  "historia": "La versión Argentina del histórico estilo inglés desarrollada en el marco de una serie de encuentros de la Asociación Civil Somos Cerveceros en 2013, donde se fueron definiendo sus características distintivas. Se diferencia de la IPA Americana por agregado de trigo a la receta de granos y el uso de lúpulos Argentinos que tienen características únicas de sabor y aroma. Se busca que las caracterísiticas cítricas del lúpulo Argentino armonicen con el trigo, como sucede en la Witbier. El agregado de bajas cantidades de trigo puede recordar al grist de la Kölsch, donde también hay un frutado producto de la fermentación.",
+  "ingredientes": "malta pálida (bien modificada y disponible para maceración simple) y una cantidad de trigo como complemento que no debe superar el 15%; El trigo puede ser malteado o sin maltear. EN el caso de agregar caramelos, deben ser limitados y preferentemente utilizando trigo caramelo. Los lúpulos Argentinos como el Cascade, Mapuche y Nugget son los usuales, aunque puede tener Spalt, Victoria y Bullion para agregar complejidad. Levadura americana que da un perfil límpido o levemente frutal. El agua varía de blanda a moderadamente sulfatada.",
+  "ejemplos_comerciales": "Antares Ipa Argenta, Kerze Ipa Argenta.",
+  "original_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1055
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1065
+    }
+  },
+  "international_bitterness_units": {
+    "minimum": {
+      "unit": "IBUs",
+      "value": 35
+    },
+    "maximum": {
+      "unit": "IBUs",
+      "value": 60
+    }
+  },
+  "final_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1008
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1015
+    }
+  },
+  "alcohol_by_volume": {
+    "minimum": {
+      "unit": "%",
+      "value": 5
+    },
+    "maximum": {
+      "unit": "%",
+      "value": 6.5
+    }
+  },
+  "color": {
+    "minimum": {
+      "unit": "SRM",
+      "value": 6
+    },
+    "maximum": {
+      "unit": "SRM",
+      "value": 15
+    }
+  },
+  "style_guide": "BJCP2021",
+  "type": "beer"
+}

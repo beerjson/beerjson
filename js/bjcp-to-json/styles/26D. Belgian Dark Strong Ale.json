@@ -1,0 +1,69 @@
+{
+  "name": "Belgian Dark Strong Ale",
+  "category": "Monastic Ale",
+  "category_id": "26",
+  "style_id": "26D",
+  "overall_impression": "A dark, complex, very strong Belgian ale with a delicious blend of malt richness, dark fruit flavors, and spicy notes. Complex, rich, smooth, and dangerous.",
+  "aroma": "A complex and fairly intense mix of rich maltiness and deep fruit, accentuated by spicy phenols and alcohol. The malt character is moderately-high to high and has a deep, bready-toasty base with dark caramel notes, but no impression of dark or roasted malt. Esters are strong to moderately low, and reminiscent of raisins, plums, dried cherries, figs,dates, or prunes. Spicy phenols like black pepper or vanilla, not clove, may be present as a low to moderate background character. A soft, spicy, perfumy, or rose-like alcohol is low to moderate, but never hot or solvent-like. Hops are usually not noticeable, but if present can add a light spicy, floral, or herbal character.",
+  "appearance": "Deep amber to deep coppery-brown in color (dark in the style name implies more deeply colored than golden, not black). Huge, dense, moussy, persistent cream- to light tan-colored head. Usually clear.",
+  "flavor": "Rich and complex maltiness, but not heavy in the finish. The flavor character is similar to the aroma (same malt, ester, phenol, alcohol, and hop comments apply here as well). Moderately malty-rich on the palate, which can have a sweet impression if bitterness is low. Usually moderately dry to dry finish, although may be up to moderately sweet. Medium-low to moderate bitterness; alcohol provides some of the balance to the malt. Generally malty-rich balance, but can be fairly even with bitterness. The complex and varied flavors should blend smoothly and harmoniously, and often benefit from age. The finish should not be heavy or syrupy.",
+  "mouthfeel": "High carbonation but not sharp. Smooth but noticeable alcohol warmth. Body can range from medium-light to medium-full and creamy. Most are medium-bodied.",
+  "comments": "Also known as a Belgian Quad, mainly outside of Belgium (Quadruple is the name of a specific beer). Has a wider range of interpretation than manyother Belgian styles. Traditional versions tend to be drier than many modern commercial versions, which can be rather sweet and full-bodied. Manyexamples are simply known by their strength or color designation. Some might be labeled Grand Cru, but this is more of a statement of quality than style.",
+  "history": "Westvleteren started making their version just before World War II, with Chimay and Rochefort adding their examples just after. Other monastic breweries created products towards the end of the 20th century, but some secular breweries began producing similar beers starting around 1960.",
+  "style_comparison": "Like a larger Belgian Dubbel, with a fuller body and increased malt richness. Not as bitter or hoppy as a Belgian Tripel, but of similar strength.",
+  "tags": "very-high-strength, amber-color, top-fermented, western-europe, traditional-style, malty",
+  "original_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1.075
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.11
+    }
+  },
+  "international_bitterness_units": {
+    "minimum": {
+      "unit": "IBUs",
+      "value": 20
+    },
+    "maximum": {
+      "unit": "IBUs",
+      "value": 35
+    }
+  },
+  "final_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1.01
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.024
+    }
+  },
+  "alcohol_by_volume": {
+    "minimum": {
+      "unit": "%",
+      "value": 8
+    },
+    "maximum": {
+      "unit": "%",
+      "value": 12
+    }
+  },
+  "color": {
+    "minimum": {
+      "unit": "SRM",
+      "value": 12
+    },
+    "maximum": {
+      "unit": "SRM",
+      "value": 22
+    }
+  },
+  "ingredients": "Spicy-estery Belgian yeast. Impression of a complex grain bill, although many traditional versions are quite simple, with caramelized sugar syrup or unrefined sugars and yeast providing much of the complexity. Continental hops. Spices not typical; if present, should be subtle.",
+  "examples": "Achel Extra Bruin, Boulevard The Sixth Glass, Chimay Blue, Rochefort 10, St. Bernardus Abt 12, Westvleteren 12",
+  "style_guide": "BJCP2021",
+  "type": "beer"
+}

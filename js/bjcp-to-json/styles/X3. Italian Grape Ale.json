@@ -1,0 +1,80 @@
+{
+  "name": "Italian Grape Ale",
+  "category": "Italian Styles",
+  "category_id": "X",
+  "style_id": "X3",
+  "notes": "For uses outside Italy, see 29D Grape Ale.",
+  "aroma": "Médio à alto caráter de fruta, reconhecível e identificável de forma imediata. Uma acidez lática limpa de intensidade baixa à media que complementa a fruta. Malte tipicamente neutro, mas pode apresentar notas de pão e grãos em caráter de apoio. Fermentação limpa sem caráter de levedura selvagem ou funky. Sem aroma de lúpulo. Sem álcool agressivo. Especiarias, ervas e vegetais devem complementar a fruta se estiverem presentes.",
+  "appearance": "Color can range from light gold to copper but some examples can be brown. Reddish/ruby color is usually due to the use of red grape varieties. White to reddish head with generally a medium low retention. Clarity is generally good but some cloudiness may be present.",
+  "flavor": "As with aroma, grape character (must or wine-like) must be present and may range from medium-low to medium-high intensity. Varieties of grape can contribute differently on the flavor profile: in general stone/tropical fruit flavors (peach, pear, apricot, pineapple) can come from white grapes and red fruit flavors (e.g., cherry, strawberry) from red grape varieties. Further fruity character of fermentative origin is also common. Different kinds of special malts can be used but should be supportive and balanced, not so prominent as to overshadow the base beer. Strong roasted and/or chocolate character is inappropriate. Light sour notes, due to the use of grape, are common and may help to improve the drinkability but should not be prominent as in Sour ale/Lambic or similar. Oak flavors, along with some barnyard, earthy, goaty notes can be present but should not be predominant.  Bitterness and hop flavors are low. Diacetyl is absent",
+  "mouthfeel": "Medium-high carbonation improves the perception of aroma. Body is generally from low to medium and some acidity can contribute to increase the perception of dryness. Strong examples can show some warming but without being hot or solventy.",
+  "overall_impression": "A sometimes refreshing, sometimes more complex Italian ale characterized by different varieties of grapes.",
+  "history": "Initially brewed at Birrificio Montegioco and Birrificio Barley in 2006-2007, Italian Grape Ale (IGA) is now produced by many Italian craft breweries. It’s also becoming popular in US and other wine countries. It represents a communion between beer and wine promoted to the large local availability of different varieties of grapes across the country. They can be an expression of territory, biodiversity and creativity of the brewer. Normally seen as a specialty beer in the range of products of the brewery. Breweries call “Wild IGA” or “Sour IGA” any wild/sour version of the style.",
+  "ingredients": "Pils in most of cases or pale base malt with some special malts (if any). Grape content can represent up to 40% of whole grist. Grape or grape must, sometimes extensively boiled before use, can be used at different stages: during boiling or more commonly during primary/secondary fermentation. Yeast can show a neutral character (more common) or a fruity/spicy profile (English and Belgian strains). Wine yeast can be used also in conjunction with other yeasts. Continental hop varieties, mainly German or English, are used in low quantities in order not to excessively characterize the beer.",
+  "style_comparison": "Similar to Fruit Beer but evolved as a standalone style due to the abundance of grapes varieties in Italy.",
+  "tags": "Specialty-beer, FruitBrazilian StylesX4. Catharina SourEstilo sugerido para inscrição: Categoria 29 (Fruit Beer)",
+  "impressao_geral": "Uma cerveja refrescante de trigo, ácida e com frutas, possui um caráter de frutas vivida e uma acidez lática limpa. A graduação alcoólica contida, o corpo leve, a carbonatação elevada, e amargor abaixo da percepção fazem com que a fruta fresca seja o destaque. A fruta não precisa ser de caráter tropical, mas normalmente apresenta este perfil.",
+  "aparencia": "Coloração tipicamente bastante clara – amarela-palha até dourada. Espuma branca de média à alta formação e média à boa retenção. A coloração da espuma e da cerveja podem ser alteradas e ficar com a coloração da fruta. Claridade pode ser bastante límpida até turva. Efervescente.",
+  "sabor": "Sabor de fruta fresca dominante em intensidade média à alta, com uma acidez lática limpa de intensidade baixa à média-alta de forma complementar mas notável. A fruta deve ter um caráter fresco, sem parecer cozida, parecida com geléia ou artificial. O malte é normalmente ausente, se presente pode ter um caráter baixo de grãos ou pão, mas não deve nunca competir com a fruta ou a acidez. Amargor do lúpulo abaixo do limiar de percepção. Final seco com um retrogosto limpo, ácido e frutado. Sem sabor de lúpulo, notas acéticas, diacetil, ou sabores funk oriundos de Brett. Especiarias, ervas e vegetais são opcionais e em caráter complementar à fruta.",
+  "sensacao_de_boca": "Corpo baixo à médio-baixo. Carbonatação média à alta. Sem aquecimento alcoólico. Acidez baixa à média-baixa sem ser agressivamente ácida ou adstringente.",
+  "comentarios": "Melhor servida fresca. A acidez pode fazer com que a cerveja pareça mais seca e com um corpo menor do que a gravidade final sugere. Uma Berliner Weisse com adição de frutas deve ser inscrita na categoria 29A Fruit Beer.",
+  "historia": "Os exemplos individuais existiam com nomes diferentes anteriormente no Brasil, mas o estilo se tornou popular com esse nome depois que foi definido formalmente em 2015 durante uma reunião entre cervejeiros profissionais e caseiros em Santa Catarina. Utilizando ingredientes locais adequados para um clima quente, o estilo se espalhou para outros estados do Brasil e além, sendo um estilo muito popular na América do Sul – tanto em competições comerciais como caseiras.",
+  "ingredientes": "Malte Pilsen com malte de trigo ou trigo não maltado. A técnica de Kettle Sour com o uso de Lacto é a mais comum de ser utilizada, seguida por uma fermentação com uma levedura ale neutra. A fruta é tipicamente adicionada nos estágios finais da fermentação. Frutas da estação frescas, comumente tropicais. Especiarias, ervas e vegetais são opcionais, mas devem sempre estar em caráter de apoio e elevar a percepção da fruta.",
+  "comparacoes_de_estilo": "Como uma Berliner Weisse mais forte, mas com fruta fresca e sem Brett. Menos ácida do que Lambic e Gueuze e sem o caráter da Brett. A partir do guia de estilos 2021, cervejas semelhantes podem ser inscritas no estilo mais amplo 28C Wild Specialty Beer Style.",
+  "ibu": "2 – 8",
+  "exemplos_comerciais": "Armada Daenerys, Blumenau Catharina Sour Pêssego, Istepô Goiabêra, Itajahy Catharina Araçá Sour, Liffey Coroa Real, UNIKA Tangerina Clemenules",
+  "marcacoes": "estilo-craft, fruta, ácida, cerveja-specialty",
+  "original_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1.039
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.048
+    }
+  },
+  "international_bitterness_units": {
+    "minimum": {
+      "unit": "IBUs",
+      "value": 6
+    },
+    "maximum": {
+      "unit": "IBUs",
+      "value": 30
+    }
+  },
+  "final_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1.004
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.012
+    }
+  },
+  "alcohol_by_volume": {
+    "minimum": {
+      "unit": "%",
+      "value": 4
+    },
+    "maximum": {
+      "unit": "%",
+      "value": 5.5
+    }
+  },
+  "color": {
+    "minimum": {
+      "unit": "SRM",
+      "value": 2
+    },
+    "maximum": {
+      "unit": "SRM",
+      "value": 6
+    }
+  },
+  "examples": "Montegioco Open Mind, Birrificio Barley BB5-10, Birrificio del Forte Il Tralcio, Viess Beer al mosto di gewurtztraminer, CRAK IGA Cabernet, Birrificio Apuano Ninkasi, Luppolajo Mons Rubus",
+  "style_guide": "BJCP2021",
+  "type": "beer"
+}
