@@ -393,27 +393,80 @@ const styles = [
     category_id: '21',
     style_id: '21C'
   },
-  'Specialty IPA: Belgian IPA',
-  'Specialty IPA: Black IPA',
-  'Specialty IPA: Brown IPA',
-  'Specialty IPA: Red IPA',
-  'Specialty IPA: Rye IPA',
-  'Specialty IPA: White IPA',
-  'Specialty IPA: Brut IPA',
+  //'Specialty IPA: Belgian IPA',
+  //'Specialty IPA: Black IPA',
+  //'Specialty IPA: Brown IPA',
+  //'Specialty IPA: Red IPA',
+  //'Specialty IPA: Rye IPA',
+  //'Specialty IPA: White IPA',
+  //'Specialty IPA: Brut IPA',
+  {
+    name: 'Double IPA',
+    category: 'Strong American Ale',
+    category_id: '22',
+    style_id: '22A'
+  },
+  {
+    name: 'American Strong Ale',
+    category: 'Strong American Ale',
+    category_id: '22',
+    style_id: '22B'
+  },
+  {
+    name: 'American Barleywine',
+    category: 'Strong American Ale',
+    category_id: '22',
+    style_id: '22C'
+  },
+  {
+    name: 'Wheatwine',
+    category: 'Strong American Ale',
+    category_id: '22',
+    style_id: '22D'
+  },
+  {
+    name: 'Berliner Weisse',
+    category: 'European Sour Ale',
+    category_id: '23',
+    style_id: '23A'
+  },
+  {
+    name: 'Flanders Red Ale',
+    category: 'European Sour Ale',
+    category_id: '23',
+    style_id: '23B'
+  },
+  {
+    name: 'Oud Bruin',
+    category: 'European Sour Ale',
+    category_id: '23',
+    style_id: '23C'
+  },
+  {
+    name: 'Lambic',
+    category: 'European Sour Ale',
+    category_id: '23',
+    style_id: '23D'
+  },
+  {
+    name: 'Gueuze',
+    category: 'European Sour Ale',
+    category_id: '23',
+    style_id: '23E'
+  },
+  {
+    name: 'Fruit Lambic',
+    category: 'European Sour Ale',
+    category_id: '23',
+    style_id: '23F'
+  },
+  {
+    name: 'Gose',
+    category: 'European Sour Ale',
+    category_id: '23',
+    style_id: '23G'
+  },
 
-  '22. Strong American Ale',
-  '22A. Double IPA',
-  '22B. American Strong Ale',
-  '22C. American Barleywine',
-  '22D. Wheatwine',
-  '23. European Sour Ale',
-  '23A. Berliner Weisse',
-  '23B. Flanders Red Ale',
-  '23C. Oud Bruin',
-  '23D. Lambic',
-  '23E. Gueuze',
-  '23F. Fruit Lambic',
-  '23G. Gose',
   '24. Belgian Ale',
   '24A. Witbier',
   '24B. Belgian Pale Ale',

@@ -1,0 +1,69 @@
+{
+  "name": "Lambic",
+  "category": "European Sour Ale",
+  "category_id": "23",
+  "style_id": "23D",
+  "overall_impression": "A very refreshing, highly carbonated, pleasantly sour but balanced wild Belgian wheat beer. The wild beer character can be complex and varied, combining sour, funky, and fruity flavors.",
+  "aroma": "Moderately sour with complex but balanced funkiness accented by fruity notes. The funkiness can be moderate to strong, and can be described as barnyard, leather, earthy, goaty, hay, horsey, or horse blanket. Fruitiness is light to moderate, with a citrus fruit, citrus rind, pome fruit, or rhubarb quality. Malt is supportive, and can be lightly bready, grainy, honey, or wheat-like, if noticeable. Should not have enteric, smoky, cigar-like, or cheesy faults. No hops. Light oak acceptable. Complexity of aroma is valued more than intensity, but a balanced sour presentation is desirable.",
+  "appearance": "Golden color, with excellent clarity and a thick, rocky, mousse-like, white head that seems to last forever. Effervescent.",
+  "flavor": "Sour and funky on the palate, with a similar character as the aroma (same descriptors and intensities apply for funk and fruit). Low bready, grainy malt. Bitterness low to none; sourness provides most of the balance. No hop flavor. Crisp, dry finish, with a tart and funky aftertaste.Light oak, vanilla, and honey are acceptable. Should not have enteric, smoky, cigar-like, or cheesy faults. The beer should not be one dimensionally sour; a balanced, moderately sour presentation is classic, with the funky and fruity notes providing complexity. May be aged.",
+  "mouthfeel": "Light to medium-light body; should not be watery. Has a low to high tart, puckering quality without being sharply astringent. Some versions have a very light warming character. Highly carbonated.",
+  "comments": "Blending young and aged lambic creates a more complex product, and often reflects the personal taste of the blender.A noticeable vinegary or cidery character is considered a fault by Belgian brewers. A good Gueuze is not the most pungent, but possesses a full and tantalizing bouquet, a sharp aroma, and a soft, velvety texture. Lambic is served uncarbonated, while Gueuze is served sparkling. Products marked oude or vieille(“old”) are considered most traditional.",
+  "history": "Same basic history as Lambic, but involves blending, which may be performed outside the brewery. Some of the best examples are produced by blenders, who ferment, age, blend, and package the final product. Some modern producers are sweetening their products post-fermentation to make them more palatable to a wider audience. These guidelines describe the traditional dry product.",
+  "style_comparison": "More complex and carbonated than a Lambic. The sourness isn’t necessarily stronger, but it tends to have more of a well-developed wild character.",
+  "tags": "high-strength, pale-color, wild-fermented, western-europe, traditional-style, wheat-beer-family, aged, sour",
+  "original_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1.04
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.054
+    }
+  },
+  "international_bitterness_units": {
+    "minimum": {
+      "unit": "IBUs",
+      "value": 0
+    },
+    "maximum": {
+      "unit": "IBUs",
+      "value": 10
+    }
+  },
+  "final_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.006
+    }
+  },
+  "alcohol_by_volume": {
+    "minimum": {
+      "unit": "%",
+      "value": 5
+    },
+    "maximum": {
+      "unit": "%",
+      "value": 8
+    }
+  },
+  "color": {
+    "minimum": {
+      "unit": "SRM",
+      "value": 5
+    },
+    "maximum": {
+      "unit": "SRM",
+      "value": 6
+    }
+  },
+  "ingredients": "Same as Lambic, except that one-, two-, and three-year old Lambics are blended, then cellared.",
+  "examples": "3 Fonteinen Oud Gueuze, Cantillon Classic Gueuze 100% Lambic, Girardin Gueuze 1882 (Black label), Hanssens Oude Gueuze, Lindemans Gueuze Cuvée René,Oude Gueuze Boon",
+  "style_guide": "BJCP2021",
+  "type": "beer"
+}

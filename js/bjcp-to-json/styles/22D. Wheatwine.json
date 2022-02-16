@@ -1,0 +1,69 @@
+{
+  "name": "Wheatwine",
+  "category": "Strong American Ale",
+  "category_id": "22",
+  "style_id": "22D",
+  "overall_impression": "A richly textured, high alcohol sipping beer with a significant grainy, bready flavor, and a sleek body. The emphasis is first on the bready, wheaty flavors with malt, hops, fruity yeast, and alcohol complexity.",
+  "aroma": "Hop aroma is mild and can represent just about any hop variety. Moderate to moderately-strong bready, wheaty malt character, often with additional malt complexity such as honey and caramel. A light, clean, alcohol aroma may be noted. Low to medium fruity notes may be apparent. Very low diacetyl optional. Banana-and-clove Weizen yeast character is inappropriate.",
+  "appearance": "Color ranging from gold to deep amber, often with garnet or ruby highlights. Low to medium off-white head. The head may have creamy texture, and good retention. Chill haze is allowable, but usually clears up as the beer gets warmer. High alcohol and viscosity may be visible aslegs.",
+  "flavor": "Moderate to moderately-high bready wheat malt flavor, dominant in the flavor balance over any hop character. Low to moderate toasty, caramel, biscuity, or honey malt notes can add a welcome complexity, but are not required. Low to medium hop flavor, reflecting any variety. Moderate to moderately-high fruitiness, often with a dried-fruit character. Low to moderate bitterness, creating a malty to even balance. Should not be syrupy or under-attenuated.",
+  "mouthfeel": "Medium-full to full body. Chewy, often with a luscious, velvety texture. Low to moderate carbonation. Light to moderate smooth alcohol warmthoptional.",
+  "comments": "Much of the color arises from a lengthy boil. Some commercial examples may be stronger than the Vital Statistics.",
+  "history": "An American craft beer style that was first brewed at the Rubicon Brewing Company in 1988. Usually a winter seasonal, vintage, or one-off release.",
+  "style_comparison": "More than simply a wheat-based Barleywine, many versions have very expressive fruity and hoppy notes, while others develop complexity through oak aging. Less emphasis on the hops than American Barleywine. Has roots in American Wheat Beer rather than any German wheat style, so should not have any Weizen yeast character.",
+  "tags": "very-high-strength, amber-color, top-fermented, north-america, craft-style, strong-ale-family, wheat-beer-family, balanced, hoppy",
+  "original_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1.08
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.12
+    }
+  },
+  "international_bitterness_units": {
+    "minimum": {
+      "unit": "IBUs",
+      "value": 30
+    },
+    "maximum": {
+      "unit": "IBUs",
+      "value": 60
+    }
+  },
+  "final_gravity": {
+    "minimum": {
+      "unit": "sg",
+      "value": 1.016
+    },
+    "maximum": {
+      "unit": "sg",
+      "value": 1.03
+    }
+  },
+  "alcohol_by_volume": {
+    "minimum": {
+      "unit": "%",
+      "value": 8
+    },
+    "maximum": {
+      "unit": "%",
+      "value": 12
+    }
+  },
+  "color": {
+    "minimum": {
+      "unit": "SRM",
+      "value": 6
+    },
+    "maximum": {
+      "unit": "SRM",
+      "value": 14
+    }
+  },
+  "ingredients": "Typically brewed with a combination of American two-row and American wheat. Style commonly uses 50% or more wheat malt. Restrained use of dark malts. Any variety of hops may be used. May be oak-aged.",
+  "examples": "The Bruery White Oak, Castelain Winter Ale, Perennial Heart of Gold, Two Brothers Bare Tree",
+  "style_guide": "BJCP2021",
+  "type": "beer"
+}
