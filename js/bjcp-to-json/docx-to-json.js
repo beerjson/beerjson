@@ -756,6 +756,42 @@ async function go() {
       const style = styles[i]
 
       const result = { ...style }
+      const catName = `${style.category_id}. ${style.category}`
+
+      console.log(catName)
+      let collect = false
+      let param = ''
+
+      _.forEach(dataFlatten, (value, key) => {
+        if (value != null && key.endsWith('.text')) {
+          if (!key.includes('.items.')) {
+            collect = false
+          }
+          if (value == catName) {
+            collect = true
+          }
+
+          if (collect && value != catName) {
+            console.log(collect, param, key, value)
+            if (param == '') {
+              param = 'category_description'
+              result[param] = ''
+            }
+            result[param] = result[param] + value
+          }
+        }
+      })
+
+      if (result.category_description != null) {
+        styles[i].category_description = result.category_description
+      }
+      console.log(catName, styles[i])
+    }
+
+    for (let i = 0; i < styles.length; i++) {
+      const style = styles[i]
+
+      const result = { ...style }
 
       styleName = `${style.style_id}. ${style.name}`
       console.log(styleName)
@@ -847,6 +883,7 @@ async function go() {
 
       styleguide.beerjson.styles.push(result)
     }
+
     require('fs').writeFileSync(
       'bjcp_styleguide-2021.json',
       JSON.stringify(styleguide, null, 4)

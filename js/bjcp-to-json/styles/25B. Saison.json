@@ -3,54 +3,55 @@
   "category": "Strong Belgian Ale",
   "category_id": "25",
   "style_id": "25B",
-  "overall_impression": "A blond, bitter, hoppy table beer that is very dry and highly carbonated. The aggressive fruity-spicy Belgian yeast character and high bitterness is forward in the balance, with a soft, supportive grainy-sweet malt palate, and a spicy-floral hop profile.",
-  "aroma": "Medium-low to medium-high Belgian yeast character, showing a fruity-spicy character along with medium-low to medium spicy or floral hops, rarely enhanced by light herbal or citrusy spice additions. Low to medium-low malt backdrop, withbready, crackery, grainy, or light honey notes. Fruit expression can vary widely (apple, pear, grapefruit, lemon, orange, peach, apricot). Phenols are typically like black pepper or clove. Bubblegum inappropriate.",
-  "appearance": "Pale yellow to medium gold color. Generally good clarity, with a moderate-sized, persistent, billowy white head with characteristic lacing.",
-  "flavor": "Initial malty flavor is light and has a honeyed biscuit, bready, or cracker character. Grainy but soft malt palate, and a crisp, dry, hoppy-bitter finish. Moderate spicy or floral hop flavor on the palate. Moderate esters similar in character to aroma. Light to moderate spicy phenols as found in the aroma. Medium to high bitterness, accentuated by dryness.The yeast and hop character lasts into the aftertaste.",
-  "mouthfeel": "Medium-light to medium body. Smooth. Medium-high to high carbonation, can be somewhat prickly. Should not have noticeable alcohol warmth.",
-  "comments": "Often not labeled or available outside the monastery, or infrequently brewed. Might also be called monk’s beer, Brother’s beer, or simply a Blond (we don’t use this term to avoid confusion with the very different Belgian Blond Ale style). Highly attenuated, generally 85% or more.",
-  "history": "While monastic breweries have a tradition of brewing a lower-strength beer as a monk’s daily ration (Westmalle began making theirs in 1922), the bitter, pale beer this style describes is a relatively modern invention reflecting current tastes. Westvleteren first brewed theirs in 1999, but it replaced older lower-gravity products.",
-  "style_comparison": "Like a top-fermented Belgian interpretation of a German Pils – pale, hoppy, and well-attenuated, but with a strong Belgian yeast character. Has less sweetness, higher attenuation, less character malt, and is more hop-centered than a Belgian Pale Ale. More like a much smaller, more highly-hopped Belgian Tripel (with its bitterness and dryness) than a smaller Belgian Blond Ale.",
+  "category_description": "This category contains the pale, well-attenuated, balanced to bitter beers, often more driven by yeast character than malt flavors, with generally higher alcohol (although a range exists within styles).",
+  "overall_impression": "A very pale, highly attenuated, strong Belgian ale that is more fruity and hoppy than spicy. Complex and delicate, the dry finish, light body, and high carbonationaccentuate the yeast and hop character.Sparkling carbonation and effervescent, forming a rocky white head.",
+  "aroma": "A complex bouquet of fruity esters, herbal hops, and peppery alcohol over a nearly neutral malt base. The esters are moderate to high, often pome fruit, especially pear. Hops are herbal, floral, or spicy, low to moderate. Alcohol and phenols often have a peppery or perfumy quality, low to moderate. Alcohol perception should be soft, not hot or solventy. Nearly neutral malt, possibly slightly grainy-sweet.",
+  "appearance": "Pale yellow to gold in color. Good clarity. Effervescent. Massive, long-lasting, rocky, white head resulting in characteristic Belgian lace on the glass as it fades.",
+  "flavor": "Flavor profile similar to aroma (same descriptors and intensities apply) for esters, hops, malt, phenols, and alcohol. The pear-like esters, peppery alcohol, herbal hops, and soft malt flavors carry through the palate into the long, dry finish and aftertaste. Medium to high bitterness, accentuated by the dry finish and high carbonation, lasts into the aftertaste.",
+  "mouthfeel": "Very highly carbonated.Effervescent. Light to medium body, lighter than the substantial gravity would suggest. Carbonation accentuates the perception of lightness. Smooth but noticeable alcohol warmth, not hot or solventy.",
+  "comments": "References to the devil are included in the names of many commercial examples of this style, referring to their potent alcoholic strength and as a tribute to the original example (Duvel). Traditionally bottle-conditioned.",
+  "history": "Developed by the Moortgat brewery after WWI as a response to the growing popularity of Pilsner beers. Originally a darker beer, it achieved its modern form by the 1970s.",
+  "style_comparison": "Often confused with Belgian Tripel, but is usually paler, lighter-bodied, crisper, and drier. Tends to use yeast that favor ester development (particularly pome fruit) over spiciness in the balance, and has more of a late hop character.",
   "entry_instructions": "The entrant must specify the strength (table, standard, super) and the color (pale, dark). The entrant may identify character grains used.",
-  "tags": "standard-strength, pale-color, top-fermented, western-europe, craft-style, bitter, hoppy",
+  "tags": "very-high-strength, pale-color, top-fermented, western-europe, traditional-style, bitter",
   "original_gravity": {
     "minimum": {
       "unit": "sg",
-      "value": 1.044
+      "value": 1.07
     },
     "maximum": {
       "unit": "sg",
-      "value": 1.054
+      "value": 1.095
     }
   },
   "international_bitterness_units": {
     "minimum": {
       "unit": "IBUs",
-      "value": 25
+      "value": 22
     },
     "maximum": {
       "unit": "IBUs",
-      "value": 45
+      "value": 35
     }
   },
   "final_gravity": {
     "minimum": {
       "unit": "sg",
-      "value": 1.004
+      "value": 1.005
     },
     "maximum": {
       "unit": "sg",
-      "value": 1.01
+      "value": 1.016
     }
   },
   "alcohol_by_volume": {
     "minimum": {
       "unit": "%",
-      "value": 4.8
+      "value": 7.5
     },
     "maximum": {
       "unit": "%",
-      "value": 6
+      "value": 10.5
     }
   },
   "color": {
@@ -60,11 +61,11 @@
     },
     "maximum": {
       "unit": "SRM",
-      "value": 5
+      "value": 6
     }
   },
-  "ingredients": "Pilsner malt. Belgian yeast.Continental hops.",
-  "examples": "Chimay Gold, La Trappe Puur, Russian River Redemption, St. Bernardus Extra 4,Westmalle Extra, Westvleteren Blond",
+  "ingredients": "Pilsner malt with substantial sugary adjuncts. Continental hops. Fruity Belgian yeast. Fairly soft water. Spicing not traditional.",
+  "examples": "Brigand, Delirium Tremens, Duvel, Judas, Lucifer, Russian River Damnation",
   "style_guide": "BJCP2021",
   "type": "beer"
 }
