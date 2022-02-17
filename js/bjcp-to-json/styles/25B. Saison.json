@@ -21,7 +21,7 @@
     },
     "maximum": {
       "unit": "sg",
-      "value": null
+      "value": 1.065
     }
   },
   "international_bitterness_units": {
@@ -41,17 +41,17 @@
     },
     "maximum": {
       "unit": "sg",
-      "value": null
+      "value": 1.008
     }
   },
   "alcohol_by_volume": {
     "minimum": {
       "unit": "%",
-      "value": 3.5
+      "value": 5
     },
     "maximum": {
       "unit": "%",
-      "value": null
+      "value": 7
     }
   },
   "color": {
@@ -61,7 +61,7 @@
     },
     "maximum": {
       "unit": "SRM",
-      "value": null
+      "value": 14
     }
   },
   "ingredients": "Pale base malt. Cereal grains, such as wheat, oats, spelt, or rye. May contain sugary adjuncts. Continental hops. Spicy-fruity Belgian Saison yeast. Spices and herbs are uncommon, but allowable if they don’t dominate.",

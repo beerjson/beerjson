@@ -6,7 +6,7 @@
         "name": "RR Summer Bitter",
         "type": "all grain",
         "author": "RomaRoma",
-        "created": "2017-07-13T22:00:00.000Z",
+        "created": "2017-07-13T21:00:00.000Z",
         "batch_size": {
           "unit": "l",
           "value": 40
@@ -27,12 +27,6 @@
             "value": 75
           }
         },
-        "style": {
-          "name": "English Best Bitter",
-          "category": "Bitter Ale",
-          "style_guide": "AABC 2010",
-          "type": "beer"
-        },
         "ingredients": {
           "fermentable_additions": [
             {
@@ -47,7 +41,7 @@
                 "value": 6.9999955
               },
               "origin": "United Kingdom",
-              "producer": "Maris Otter",
+              "supplier": "Maris Otter",
               "group": "base",
               "yield": {
                 "potential": {
@@ -69,7 +63,7 @@
                 "value": 0.9999994
               },
               "origin": "Belgium",
-              "producer": "",
+              "supplier": "",
               "group": "base",
               "yield": {
                 "potential": {
@@ -160,15 +154,15 @@
           "culture_additions": [
             {
               "name": "Windsor Yeast",
-              "attenuation": {
-                "unit": "%",
-                "value": 75
-              },
               "type": "ale",
               "form": "dry",
               "amount": {
                 "unit": "l",
                 "value": 0.023659
+              },
+              "attenuation": {
+                "unit": "%",
+                "value": 75
               }
             }
           ]
@@ -184,6 +178,7 @@
             {
               "name": "Saccharification",
               "type": "infusion",
+              "description": "Add 20.9 l of water at 75.7 C",
               "step_temperature": {
                 "unit": "C",
                 "value": 68.8888889
@@ -208,6 +203,7 @@
             {
               "name": "Mash Out",
               "type": "temperature",
+              "description": "Heat to 75.6 C over 10 min",
               "step_temperature": {
                 "unit": "C",
                 "value": 75.5555556
@@ -228,20 +224,64 @@
                 "unit": "l",
                 "value": 0
               }
-            },
-            {
-              "name": "Sparge",
-              "type": "sparge",
-              "step_time": {
-                "unit": "min",
-                "value": 15
-              },
-              "step_temperature": {
-                "unit": "C",
-                "value": 75.5555556
-              }
             }
           ]
+        },
+        "style": {
+          "name": "English Best Bitter",
+          "category": "Bitter Ale",
+          "style_guide": "AABC 2010",
+          "type": "beer",
+          "original_gravity": {
+            "minimum": {
+              "unit": "sg",
+              "value": 9.9615385
+            },
+            "maximum": {
+              "unit": "sg",
+              "value": 12.0981888
+            }
+          },
+          "final_gravity": {
+            "minimum": {
+              "unit": "sg",
+              "value": 2.0555556
+            },
+            "maximum": {
+              "unit": "sg",
+              "value": 3.0711462
+            }
+          },
+          "international_bitterness_units": {
+            "minimum": {
+              "unit": "IBUs",
+              "value": 25
+            },
+            "maximum": {
+              "unit": "IBUs",
+              "value": 40
+            }
+          },
+          "alcohol_by_volume": {
+            "minimum": {
+              "unit": "%",
+              "value": 4
+            },
+            "maximum": {
+              "unit": "%",
+              "value": 4.9
+            }
+          },
+          "color": {
+            "minimum": {
+              "unit": "srm",
+              "value": 5
+            },
+            "maximum": {
+              "unit": "srm",
+              "value": 16
+            }
+          }
         }
       }
     ]

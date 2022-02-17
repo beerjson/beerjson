@@ -189,6 +189,10 @@ async function go() {
       'bjcp_styleguide-2021.json',
       JSON.stringify(styleguide, null, 4)
     )
+    require('fs').writeFileSync(
+      '../../tests/styles/bjcp_styleguide-2021.json',
+      JSON.stringify(styleguide, null, 4)
+    )
   } catch (error) {
     console.log(error)
   }

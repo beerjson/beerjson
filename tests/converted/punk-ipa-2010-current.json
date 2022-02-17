@@ -413,6 +413,10 @@
               "amount": {
                 "unit": "l",
                 "value": 0.035
+              },
+              "attenuation": {
+                "unit": "%",
+                "value": 75
               }
             }
           ]
