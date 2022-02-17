@@ -5,68 +5,19 @@
   "style_id": "28C",
   "category_description": "The name American Wild Ale is commonly used by craft brewers and homebrewers. However, the word Wild does not imply that these beers are necessarily spontaneously-fermented; rather, it indicates that they are influenced by microbes other than traditional brewer’s yeasts, or perhaps that they are mixed-fermentation beers. The use of the word American does not mean that the beer has to be based on a Classic Style American beer style, or that the methods are solely practiced in the United States. Base styles in this category do not have to be Classic Styles at all (although they can be); something like, “blond ale, 7%” would be fine, since the underlying style is often lost under the fermentation character.This category is intended for a wide range of beers that do not fit traditional European sour, wild, or spontaneously-fermented styles. All of the styles in this category are Specialty-TypeBeers where many creative interpretations are possible, and the styles are defined only by the use of specific fermentation profiles and ingredients. As specialty styles, the mandatory description provided by the entrant is of the utmost importance to the judge.The styles in this category are differentiated by the types of yeast and bacteria used – see the preamble to each style for more information. We use the conversational shorthand terms used in the brewing industry: Brett for Brettanomyces, Sacch for Saccharomyces, Lacto for Lactobacillus, and Pedio for Pediococcus. See the Glossary for additional information. The Wild Specialty Beer style is for beers for other styles within this category when Specialty-Type Ingredients are added. Background levels of oak may be used in all styles within this category, but beers aged in other woods with unique flavors or barrels that contained other alcohol products must be entered in the Wild Specialty Beer style.",
   "notes": "Intended for variations of a Base Stylebeer from style 28A, 28B, or 28D. These variations may include the additionof one or more Specialty-TypeIngredients; aging in non-traditional wood varieties that impart a significant and identifiable wood character (e.g., Spanish Cedar, Amburana); oraging in barrels previously containing another alcohol (e.g., spirits, wine, cider).",
-  "overall_impression": "A pale, refreshing, sour beer with a clean lactic sourness. A gentle, pale malt flavor supports the lemony sourness with moderate fruity esters.",
-  "aroma": "A sharply sour character is dominant (moderately-high to high). Can have up to a moderately fruity character (often peach, apricot, lemon, or tart apple). No hop aroma. Pale malt dominates, usually biscuity or crackery. Clean fermentation.",
-  "appearance": "Very pale in color. Clarity ranges from clear to somewhat hazy. Large, dense, white head with poor retention. Effervescent.",
-  "flavor": "Clean lactic sourness dominates and can be quite strong. Some complementary, bready, biscuit, crackery,or grainy flavor is generally noticeable. Hop bitterness is undetectable. Never vinegary or bitingly acidic. Pale fruit character can be moderate including a citrusy-lemony or tart apple fruitiness may be detected. Finish is off-dry to dry. Balance dominated by sourness, but some malt and estery fruit flavor should be present. No hop flavor. Clean.",
-  "mouthfeel": "Light body. Moderate to high carbonation. Never hot, although higher gravity examples can have a warming alcohol character. Crisp acidity.",
-  "comments": "A stronger version of a Berliner Weisse-type beer with less restrictive grist, and no Brett. This beer style istypically are used as a base for modern beers that are heavily flavored with fruit, spices, sugars, etc. – those should be entered in 28C Wild Specialty Beer.",
-  "history": "German brewing scientist, Otto Francke, developed what was to become known as the Francke acidification process which allowed the traditional mixed-culture Berliner Weiss methods to be sped up and more consistent; this is also known as kettle souring. Many modern commercial sour beer examples use this method for rapid production, and as an alternative to complex barrel production.",
-  "style_comparison": "Lower gravity examples can be very much like a Brett-free Berliner Weisse. Compared to a Lambic, is generally not as acidic and has a clean lactic sourness with restrained to below sensory threshold funk. Higher in alcohol content than both.",
+  "overall_impression": "An American Wild Ale with fruit, herbs, spices, or other Specialty-Type Ingredients.",
+  "aroma": "Variable by base style. The Specialty-Type Ingredients should be evident, as well as thedefining characteristics of a wild fermentation per the base style. The best examples will blend the aromatics from the fermentation with the special ingredients, creating an aroma that may be difficult to attribute precisely.",
+  "appearance": "Variable by base style, generally showing a color, tint, or hue from any Specialty-Type Ingredient (especially if fruit is used) in both the beer and the head. Clarity can be variable; some haze is not a fault. Head retention is often poor.",
+  "flavor": "Variable by base style. The Specialty-Type Ingredients should be evident, as well as thedefining characteristics of a wild fermentation per the base style. If fruit was fermented, the sweetness is generally gone so that only the fruit esters typically remain. Fruit and other Specialty-Type Ingredients can add sourness of their own; if so, the sourness could be prominent, but should not be overwhelming. The acidity and tannin from any fruit or other Specialty-Type Ingredients can both enhance the dryness of the beer, so care must be taken with the balance. The acidity should enhance the perception of any fruit flavor, not detract from it. Wood notes, if present, add flavor but should be balanced.",
+  "mouthfeel": "Variable by base style. Generally has a light body, lighter than what might be expected from the base style. Generally moderate to high carbonation; carbonation should balance the base style if one is declared. The presence of tannin from some Specialty-Type ingredients (often fruit or wood) can provide a slight astringency, enhance the body, or make the beer seem drier than it is.",
+  "comments": "This style is intended for fruited (and other added Specialty-TypeIngredient) versions of other styles within Category 28, not variations of European wild or sour Classic Styles. Fruited versions of Lambic should be entered in 23F Fruit Lambic. Fruited versions of other sour Classic Styles (e.g., Flanders Red, Oud Bruin, Gose, Berliner Weisse) should be entered in 29A Fruit Beer. Beers with sugars and unfermented fruit added post-fermentation should be entered in 29C Specialty Fruit Beer.",
+  "history": "Modern American craft beer interpretations of Belgian wild ales, or experimentations inspired by Belgian wild ales.",
+  "style_comparison": "Like a fruit, herb, spice, or wood beer, but sour or funky.",
   "entry_instructions": "Entrant must specify anySpecialty-Type Ingredient (e.g., fruit, spice, herb, or wood) used. Entrant must specify eithera description of the beer, identifying yeast or bacteria used and either a Base Style, or the ingredients, specs, or target character of the beer. A general description of the special nature of the beer can cover all the required items.",
-  "tags": "pale-color, top-fermented, sour",
-  "original_gravity": {
-    "minimum": {
-      "unit": "sg",
-      "value": 1.048
-    },
-    "maximum": {
-      "unit": "sg",
-      "value": 1.065
-    }
-  },
-  "international_bitterness_units": {
-    "minimum": {
-      "unit": "IBUs",
-      "value": 3
-    },
-    "maximum": {
-      "unit": "IBUs",
-      "value": 8
-    }
-  },
-  "final_gravity": {
-    "minimum": {
-      "unit": "sg",
-      "value": 1.006
-    },
-    "maximum": {
-      "unit": "sg",
-      "value": 1.013
-    }
-  },
-  "alcohol_by_volume": {
-    "minimum": {
-      "unit": "%",
-      "value": 4.5
-    },
-    "maximum": {
-      "unit": "%",
-      "value": 7
-    }
-  },
-  "color": {
-    "minimum": {
-      "unit": "SRM",
-      "value": 2
-    },
-    "maximum": {
-      "unit": "SRM",
-      "value": 3
-    }
-  },
-  "ingredients": "Most or all of the grist is pale, Pils, or wheat malt in any combination. Lightly-kilned malts for more malt depth may be employed. Carapils-type malts can be used for body.Pale sugars can be used to increase gravity without body. No lactose or maltodextrin. Maybe be produced by kettle souring, co-fermentation culture (yeast and LAB), or using specialty yeast that produce lactic acid. No Brett.",
-  "examples": "Rarely found, as this style is typically the base for other Specialty-Type Beers.",
+  "vital_statistics": "Variable by base style.",
+  "tags": "wild-fermentation, north-america, craft-style, specialty-beer, sour, fruit",
+  "ingredients": "Virtually any style of beer. Any combination of Sacch, Brett, Lacto, Pedio, or other similar fermenters. Can also be a blend of styles. While cherries, raspberries, and peaches are most common, other fruits can be used as well. Vegetables with fruit-like characteristics (e.g., chile, rhubarb, pumpkin) may also be used. Wood or barrel aging is very common, but not required. Wood with unusual or unique flavor characteristics, or wood previously in contact with other types of alcohol is allowable.",
+  "examples": "Cascade Bourbonic Plague, Jester King Atrial Rubicite, New Belgium Dominga Mimosa Sour, New Glarus Wisconsin Belgian Red, Russian River Supplication, The Lost Abbey Cuvee de Tomme",
   "style_guide": "BJCP2021",
   "type": "beer"
 }

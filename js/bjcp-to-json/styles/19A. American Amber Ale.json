@@ -4,43 +4,43 @@
   "category_id": "19",
   "style_id": "19A",
   "category_description": "This category contains modern American amber and brown top-fermented ales and warm-fermented lagers of standard strength that can be balanced to bitter.",
-  "overall_impression": "A toasty and caramelly, fairly bitter, standard-strength beer with an interesting fruitiness and rustic, woody hop character. Smooth and well carbonated.",
-  "aroma": "Moderate to high herbal, resinous, floral, or minty hops. Light fruitiness acceptable. Low to moderate caramel or toasty malt supports the hops.",
-  "appearance": "Medium amber to light copper color. Generally clear. Moderate off-white head with good retention.",
-  "flavor": "Moderately malty with a pronounced hop bitterness. The malt character usually has toast (not roast) and caramel flavors. Low to moderately high hop flavor, usually showing rustic, traditional American hop qualities (often herbal, resinous, floral, minty). Finish fairly dry and crisp, with a lingering hop bitterness and a firm, grainy malt flavor. Light fruity esters are acceptable, but otherwise clean.",
-  "mouthfeel": "Medium-bodied. Medium to medium-high carbonation.",
-  "comments": "This style is narrowly defined around the prototypical Anchor Steam example, although allowing other typical ingredients of the era. Northern Brewer hops are not a strict requirement for the style.Modern American and New World-type hops (especially citrusy ones) are inappropriate.",
-  "history": "American West Coast original, brewed originally as Steam Beer during the Gold Rush era. Large shallow open fermenters (coolships) were used to compensate for the lack of refrigeration and to take advantage of the cool temperatures in the San Francisco Bay area. Modern versions are based on Anchor Brewing re-launching the style in the 1970s.",
-  "style_comparison": "Superficially similar to an American Amber Ale, but with specific choices for malt and hopping – the hop flavor and aroma is traditional (not modern) American hops, malt flavors are toastier, the hopping is always assertive, and a warm-fermented lager yeast is used. Less attenuated, less carbonated and less fruity than Australian Sparkling ale.",
-  "tags": "standard-strength, amber-color, bottom-fermented, north-america, traditional-style, amber-lager-family, bitter, hoppy",
+  "overall_impression": "An amber, hoppy, moderate-strength American craft beer with a malty caramel flavor. The balance can vary quite a bit, with some versions being fairly malty and others being aggressively hoppy. Hoppy and bitter versions should not have clashing flavors with the caramel malt profile.",
+  "aroma": "Low to moderate hop aroma reflective of American or New World hop varieties (citrus, floral, pine, resin, spice, tropical fruit, stone fruit, berry, or melon). A citrusy hop character is common, but not required. Moderately-low to moderately-high maltiness, usually with a moderate caramel character, that can either support, balance, or sometimes mask the hop presentation. Esters vary from moderate to none.",
+  "appearance": "Deep amber to coppery-brown in color, sometimes with a reddish hue. Moderately large off-white head with good retention. Generally quite clear.",
+  "flavor": "Moderate to high hop flavor with similar characteristics as the aroma. Malt flavors are moderate to strong, and usually show an initial malty sweetness followed by a moderate caramel flavorand sometimes toasty or biscuity malt flavors in lesser amounts. Dark or roasted malt flavors absent. Moderate to moderately-high bitterness. Balance can vary from somewhat malty to somewhat bitter. Fruity esters can be moderate to none. Caramel sweetness, hop flavor, and bitterness can linger somewhat into the medium to full yet dry finish.",
+  "mouthfeel": "Medium to medium-full body. Medium to high carbonation. Overall smooth finish without astringency. Stronger versions may have a slight alcohol warmth.",
+  "comments": "Can overlap in color with darker American pale ales, but with a different malt flavor and balance. A range of balance exists in this style, from balanced and malty to more aggressively hopped.",
+  "history": "A modern American craft beer style developed as a variation from American Pale Ales. Mendocino Red Tail Ale was first made in 1983, and was known regionally as a Red Ale. This served as the progenitor of Double Reds (American Strong Ale), Red IPAs, and other hoppy, caramelly beers.",
+  "style_comparison": "Darker, more caramelly, more body, and generally less bitter in the balance than American Pale Ales. Less alcohol, bitterness, and hop character than Red IPAs. Less strength, malt, and hop character than American Strong Ales. Less chocolate and dark caramel than an American Brown Ale.",
+  "tags": "standard-strength, amber-color, top-fermented, north-america, craft-style, amber-ale-family, balanced, hoppy",
   "original_gravity": {
     "minimum": {
       "unit": "sg",
-      "value": 1.048
+      "value": 1.045
     },
     "maximum": {
       "unit": "sg",
-      "value": 1.054
+      "value": 1.06
     }
   },
   "international_bitterness_units": {
     "minimum": {
       "unit": "IBUs",
-      "value": 30
+      "value": 25
     },
     "maximum": {
       "unit": "IBUs",
-      "value": 45
+      "value": 40
     }
   },
   "final_gravity": {
     "minimum": {
       "unit": "sg",
-      "value": 1.011
+      "value": 1.01
     },
     "maximum": {
       "unit": "sg",
-      "value": 1.014
+      "value": 1.015
     }
   },
   "alcohol_by_volume": {
@@ -50,21 +50,21 @@
     },
     "maximum": {
       "unit": "%",
-      "value": 5.5
+      "value": 6.2
     }
   },
   "color": {
     "minimum": {
       "unit": "SRM",
-      "value": 9
+      "value": 10
     },
     "maximum": {
       "unit": "SRM",
-      "value": 14
+      "value": 17
     }
   },
-  "ingredients": "Pale ale malt, non-citrusy hops (often Northern Brewer), small amounts of toasted malt or crystal malts. Lager yeast; however, some strains (often with the mention of “California” in the name) work better than others at the warmer fermentation temperatures (55 to 60 °F) typically used. Note that some German yeast strains produce inappropriate sulfury character.",
-  "examples": "Anchor Steam, Steamworks Steam Engine Lager",
+  "ingredients": "Neutral pale ale malt. Medium to dark crystal malts. American or New World hops, often with citrusy flavors, are common but others may also be used. Neutral to lightly estery yeast.",
+  "examples": "Anderson Valley Boont Amber Ale, Bell’s Amber Ale, Full Sail Amber, North Coast Red Seal Ale, Saint Arnold Amber Ale, Tröegs Hopback Amber Ale",
   "style_guide": "BJCP2021",
   "type": "beer"
 }

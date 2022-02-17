@@ -4,67 +4,67 @@
   "category_id": "17",
   "style_id": "17B",
   "category_description": "This category contains stronger, non-roasty ales of the British Isles.  Covers the style space above bitters, milds, and brown ales while excluding porters and stouts.",
-  "overall_impression": "A strong and richly malty ale witha pleasant fruity or hoppy depth. A wintertime sipper with a full, chewy body and warming alcohol.",
-  "aroma": "Very rich, strongly malty, often with a caramel-like aroma in darker versions or a light toffee character in paler versions. May have a rich character including bready, toasty, or toffee notes.May have moderate to strong fruitiness, often with a dark- or dried-fruit character, particularly in dark versions. The hop aroma may range from mild to assertive, and is typically floral, earthy, tea-like, or marmalade-like. Alcohol may be low to moderate, but are soft and rounded. Aromatic intensity subsides with age, and can develop aquality like sherry, wine, or port.",
-  "appearance": "Color ranging from golden amber to dark brown, often with ruby highlights and significant depth of color. Should not be black or opaque. Low to moderate off-white head.May have low head retention. Brilliant clarity, particularly when aged, although younger versions can have a little haze. High alcohol and viscosity may be visible aslegs.",
-  "flavor": "Medium to high rich, malty sweetness, often complex and multi-layered, with bread, biscuit, and caramel malt flavors (more toffee-like in paler versions) and having a medium to highfruitiness (often with dark or dried fruit aspects). When aged, these fruity components come out more, and darker versions will have a higher level than paler ones. The hop aroma, flavor, and bitterness can vary wildly. Light to strong hops, with an English character (floral, earthy, tea, or marmalade-like) are common. Bitterness can be light to fairly strong, fading with time, so the balance can be malty to somewhat bitter. Stronger versions will have a little alcohol character. The finish and aftertaste can be moderately dry to moderately sweet, often depending on age.Some oxidative or vinous flavors may be present, and often complex alcohol flavors should be evident. Pale versions typically seem more bitter, better attenuated, and more hop-forward than darker versions.",
-  "mouthfeel": "Full-bodied and chewy, with a velvety, luscious texture, declining with age. A smooth warmth from aged alcohol should be present, but shouldn’t burn. Carbonation may be low to moderate, depending on age and conditioning.",
-  "comments": "The richest and strongest of modern English Ales. Their character can change significantly over time; both young and old versions should be appreciated for what they are. The malt profile can vary widely; not all examples will have all possible flavors or aromas. Paler varieties won’t have the caramel and richer malt flavors, nor will they typically have the darker dried fruits – don’t expect flavors and aromatics that are impossible from a beer of that color. Typically written as “Barley Wine” in the UK, and “Barleywine” in the US.",
-  "history": "A modern descendent of the strongest Burton Ales. Bass No. 1 was first called a barleywine in 1872. Traditionally a darker beer until Tennant (now Whitbread) first produced Gold Label, a gold-colored version in 1951. The original style that inspired derivative variations in Belgium, the United States, and elsewhere in the world.",
-  "style_comparison": "Less hoppy and bitter, maltier and fruitier than American Barleywine. Can overlap Old Ale on the lower end of the range, but without heavier signs of age. Not as caramelly and often not as sweet as a Wee Heavy.",
-  "tags": "very-high-strength, amber-color, top-fermented, british-isles, traditional-style, strong-ale-family, malty",
+  "overall_impression": "A stronger-than-averageEnglish ale, though usually not as strong or rich as an English Barley Wine, but usually malty. Warming. Shows positive maturation effects of a well-kept, aged beer.",
+  "aroma": "Malty-sweet with fruity esters, often with a complex blend of driedfruit, vinous, caramel, molasses, toffee, light treacle, or other specialty malt aromas. Some alcohol and nutty oxidative notes are acceptable, akin to those found in Sherry, Port, or Madeira. Hop aroma not usually present.",
+  "appearance": "Deep amber to very dark reddish-brown color, but most are fairly dark. Age and oxidation may darken the beer further. Clear, but can be almost opaque. Moderate to low cream- to light tan-colored head; retention average to poor.",
+  "flavor": "Medium to high malt character with a luscious malt complexity, often with nut, caramel,or molasses-like flavors. Light chocolate or roasted malt flavors are optional, but should never be prominent. Balance is often malty-sweet, but may be well hopped; the impression of bitterness often depends on amount of aging. Moderate to high fruity esters are common, and may take on a dried-fruit or vinous character. The finish may vary from dry to somewhat sweet. Extended aging may contribute oxidative flavors similar to a fine old Sherry, Port, or Madeira. Alcoholic strength should be evident, though not overwhelming. Low diacetyl optional.",
+  "mouthfeel": "Medium to full, chewy body, although older examples may be lower in body due to continued attenuation during conditioning. Alcohol warmth is often evident and always welcome. Low to moderate carbonation, depending on age and conditioning. Light acidity may be present, as well as some tannin if wood-aged; both are optional.",
+  "comments": "Strength and character vary widely. The predominant defining quality for this style is the impression of age, which can manifest itself in different ways (complexity, oxidation, leather, vinous qualities, etc.). Many of these qualities are otherwise faults, but if the resulting character of the beer is pleasantly drinkable and complex, then those characteristics are acceptable. In no way should those allowable characteristics be interpreted as making an undrinkably off-flavored beer as somehow in style. Old Peculier is a well-known but fairly unique beer that is quite different than other Old Ales.",
+  "history": "Historically, an aged ale used as stock ales for blending or enjoyed at full strength (stale or stock refers to beers that were aged or stored for a significant period of time). There are at least two definite types in Britain today, weaker, unaged draught ones that are similar to milds of around 4.5%, and stronger aged ones that are often 6-8% or more.",
+  "style_comparison": "Roughly overlapping the British Strong Ale and the lower end of the English Barley Wine styles, but always having an aged quality. The distinction between an Old Ale and a Barley Wine is somewhat arbitrary above 7% ABV, and generally means having a more significant aged quality.",
+  "tags": "high-strength, amber-color, top-fermented, british-isles, traditional-style, strong-ale-family, malty, aged",
   "original_gravity": {
     "minimum": {
       "unit": "sg",
-      "value": 1.08
+      "value": 1.055
     },
     "maximum": {
       "unit": "sg",
-      "value": 1.12
+      "value": 1.088
     }
   },
   "international_bitterness_units": {
     "minimum": {
       "unit": "IBUs",
-      "value": 35
+      "value": 30
     },
     "maximum": {
       "unit": "IBUs",
-      "value": 70
+      "value": 60
     }
   },
   "final_gravity": {
     "minimum": {
       "unit": "sg",
-      "value": 1.018
+      "value": 1.015
     },
     "maximum": {
       "unit": "sg",
-      "value": 1.03
+      "value": 1.022
     }
   },
   "alcohol_by_volume": {
     "minimum": {
       "unit": "%",
-      "value": 8
+      "value": 5.5
     },
     "maximum": {
       "unit": "%",
-      "value": 12
+      "value": 9
     }
   },
   "color": {
     "minimum": {
       "unit": "SRM",
-      "value": 8
+      "value": 10
     },
     "maximum": {
       "unit": "SRM",
       "value": 22
     }
   },
-  "ingredients": "British pale ale andcrystal malts. Limited use of dark malts. Often uses brewing sugars. English hops. British yeast.",
-  "examples": "Burton Bridge Thomas Sykes Old Ale, Coniston No. 9 Barley Wine, Fuller’s Golden Pride, Hogs Back A over T, J.W. Lee’s Vintage Harvest Ale, Robinson’s Old Tom",
+  "ingredients": "Composition varies, although generally similar to British Strong Ales. The age character is the biggest driver of the final style profile, which is more handling than brewing.",
+  "examples": "Avery Old Jubilation, Berlina Old Ale, Greene King Strong Suffolk Ale, Marston Owd Roger, Theakston Old Peculier",
   "style_guide": "BJCP2021",
   "type": "beer"
 }

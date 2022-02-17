@@ -5,33 +5,33 @@
   "style_id": "17C",
   "category_description": "This category contains stronger, non-roasty ales of the British Isles.  Covers the style space above bitters, milds, and brown ales while excluding porters and stouts.",
   "notes": "See Category 14 Scottish Ale introduction for general characteristics of Scottish beer.",
-  "overall_impression": "A strong and richly malty ale witha pleasant fruity or hoppy depth. A wintertime sipper with a full, chewy body and warming alcohol.",
-  "aroma": "Very rich, strongly malty, often with a caramel-like aroma in darker versions or a light toffee character in paler versions. May have a rich character including bready, toasty, or toffee notes.May have moderate to strong fruitiness, often with a dark- or dried-fruit character, particularly in dark versions. The hop aroma may range from mild to assertive, and is typically floral, earthy, tea-like, or marmalade-like. Alcohol may be low to moderate, but are soft and rounded. Aromatic intensity subsides with age, and can develop aquality like sherry, wine, or port.",
-  "appearance": "Color ranging from golden amber to dark brown, often with ruby highlights and significant depth of color. Should not be black or opaque. Low to moderate off-white head.May have low head retention. Brilliant clarity, particularly when aged, although younger versions can have a little haze. High alcohol and viscosity may be visible aslegs.",
-  "flavor": "Medium to high rich, malty sweetness, often complex and multi-layered, with bread, biscuit, and caramel malt flavors (more toffee-like in paler versions) and having a medium to highfruitiness (often with dark or dried fruit aspects). When aged, these fruity components come out more, and darker versions will have a higher level than paler ones. The hop aroma, flavor, and bitterness can vary wildly. Light to strong hops, with an English character (floral, earthy, tea, or marmalade-like) are common. Bitterness can be light to fairly strong, fading with time, so the balance can be malty to somewhat bitter. Stronger versions will have a little alcohol character. The finish and aftertaste can be moderately dry to moderately sweet, often depending on age.Some oxidative or vinous flavors may be present, and often complex alcohol flavors should be evident. Pale versions typically seem more bitter, better attenuated, and more hop-forward than darker versions.",
-  "mouthfeel": "Full-bodied and chewy, with a velvety, luscious texture, declining with age. A smooth warmth from aged alcohol should be present, but shouldn’t burn. Carbonation may be low to moderate, depending on age and conditioning.",
-  "comments": "The richest and strongest of modern English Ales. Their character can change significantly over time; both young and old versions should be appreciated for what they are. The malt profile can vary widely; not all examples will have all possible flavors or aromas. Paler varieties won’t have the caramel and richer malt flavors, nor will they typically have the darker dried fruits – don’t expect flavors and aromatics that are impossible from a beer of that color. Typically written as “Barley Wine” in the UK, and “Barleywine” in the US.",
-  "history": "A modern descendent of the strongest Burton Ales. Bass No. 1 was first called a barleywine in 1872. Traditionally a darker beer until Tennant (now Whitbread) first produced Gold Label, a gold-colored version in 1951. The original style that inspired derivative variations in Belgium, the United States, and elsewhere in the world.",
-  "style_comparison": "Less hoppy and bitter, maltier and fruitier than American Barleywine. Can overlap Old Ale on the lower end of the range, but without heavier signs of age. Not as caramelly and often not as sweet as a Wee Heavy.",
-  "tags": "very-high-strength, amber-color, top-fermented, british-isles, traditional-style, strong-ale-family, malty",
+  "overall_impression": "Rich, sweet malt depth with caramel, toffee, and fruity flavors. Full-bodied and chewy, with warming alcohol. Restrained bitterness, but not cloying or syrupy.",
+  "aroma": "Strong bready-toasty malt, with a high caramel and toffee aspect. A wide range of supportive caramelized sugar and toasty bread type aromas are possible (toasted breadcrumbs, ladyfingers, English biscuits, graham crackers, nougat, butterscotch, etc.). Faint hint of roast is sometimes noted. Low to moderate dark or dried fruit esters and alcohol. Very low earthy, floral, orange-citrus, or spicy hops optional.",
+  "appearance": "Light copper to dark brown color, often with deep ruby highlights. Clear. Usually has a large tan head, which may not persist. Legs may be evident in stronger versions.",
+  "flavor": "Rich, bready-toasty malt that is often full and sweet on the palate with caramel and toffee flavors, but balanced by alcohol and a hint of grainy roast in the finish. The malt often has caramelized sugar and toasty flavors of the same type as described in the aroma. Medium to low alcohol and esters (plums, raisins, dried fruit, etc.). Bitterness low in the balance, giving a sweet to medium-dry finish. Medium-low hop flavor optional, with similar descriptors as the aroma.",
+  "mouthfeel": "Medium-full to full-bodied, sometimes with a thick, chewy, sometimes creamy, viscosity. A smooth alcohol warmth is usually present and is desirable since it balances the malty sweetness. Moderate carbonation.",
+  "comments": "A range of strengths is allowable; not all versions are very strong. Also known as “Strong Scotch Ale,” the term “wee heavy” means “small strong” and traces to the beer that made the term famous, Fowler’s Wee Heavy, a 12 Guinea Ale.",
+  "history": "Descended from Edinburgh Ales, a stronger malty beer brewed in a range of strengths, similar to Burton Ale (although at half the hopping rate). Modern versions have two main variants, a more modest 5% ABV beer and the more widely known 8-9% ABV beer.  As gravities decreased over times, some of the variations ceased to be produced.",
+  "style_comparison": "Somewhat similar to an English Barley Wine, but often darker and more caramelly.",
+  "tags": "high-strength, amber-color, top-fermented, british-isles, traditional-style, strong-ale-family, malty",
   "original_gravity": {
     "minimum": {
       "unit": "sg",
-      "value": 1.08
+      "value": 1.07
     },
     "maximum": {
       "unit": "sg",
-      "value": 1.12
+      "value": 1.13
     }
   },
   "international_bitterness_units": {
     "minimum": {
       "unit": "IBUs",
-      "value": 35
+      "value": 17
     },
     "maximum": {
       "unit": "IBUs",
-      "value": 70
+      "value": 35
     }
   },
   "final_gravity": {
@@ -41,31 +41,31 @@
     },
     "maximum": {
       "unit": "sg",
-      "value": 1.03
+      "value": 1.04
     }
   },
   "alcohol_by_volume": {
     "minimum": {
       "unit": "%",
-      "value": 8
+      "value": 6.5
     },
     "maximum": {
       "unit": "%",
-      "value": 12
+      "value": 10
     }
   },
   "color": {
     "minimum": {
       "unit": "SRM",
-      "value": 8
+      "value": 14
     },
     "maximum": {
       "unit": "SRM",
-      "value": 22
+      "value": 25
     }
   },
-  "ingredients": "British pale ale andcrystal malts. Limited use of dark malts. Often uses brewing sugars. English hops. British yeast.",
-  "examples": "Burton Bridge Thomas Sykes Old Ale, Coniston No. 9 Barley Wine, Fuller’s Golden Pride, Hogs Back A over T, J.W. Lee’s Vintage Harvest Ale, Robinson’s Old Tom",
+  "ingredients": "Scottish pale ale malt, a wide range of other ingredients are possible, including adjuncts. Some may use crystal malt or darker grains for color. No peat-smoked malt.",
+  "examples": "Belhaven Wee Heavy, Broughton Old Jock, McEwan’s Scotch Ale, Orkney Skull Splitter, Traquair House Ale, The Duck-Rabbit Wee Heavy Scotch-Style Ale",
   "style_guide": "BJCP2021",
   "type": "beer"
 }

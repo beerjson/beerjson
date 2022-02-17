@@ -4,30 +4,30 @@
   "category_id": "25",
   "style_id": "25B",
   "category_description": "This category contains the pale, well-attenuated, balanced to bitter beers, often more driven by yeast character than malt flavors, with generally higher alcohol (although a range exists within styles).",
-  "overall_impression": "A very pale, highly attenuated, strong Belgian ale that is more fruity and hoppy than spicy. Complex and delicate, the dry finish, light body, and high carbonationaccentuate the yeast and hop character.Sparkling carbonation and effervescent, forming a rocky white head.",
-  "aroma": "A complex bouquet of fruity esters, herbal hops, and peppery alcohol over a nearly neutral malt base. The esters are moderate to high, often pome fruit, especially pear. Hops are herbal, floral, or spicy, low to moderate. Alcohol and phenols often have a peppery or perfumy quality, low to moderate. Alcohol perception should be soft, not hot or solventy. Nearly neutral malt, possibly slightly grainy-sweet.",
-  "appearance": "Pale yellow to gold in color. Good clarity. Effervescent. Massive, long-lasting, rocky, white head resulting in characteristic Belgian lace on the glass as it fades.",
-  "flavor": "Flavor profile similar to aroma (same descriptors and intensities apply) for esters, hops, malt, phenols, and alcohol. The pear-like esters, peppery alcohol, herbal hops, and soft malt flavors carry through the palate into the long, dry finish and aftertaste. Medium to high bitterness, accentuated by the dry finish and high carbonation, lasts into the aftertaste.",
-  "mouthfeel": "Very highly carbonated.Effervescent. Light to medium body, lighter than the substantial gravity would suggest. Carbonation accentuates the perception of lightness. Smooth but noticeable alcohol warmth, not hot or solventy.",
-  "comments": "References to the devil are included in the names of many commercial examples of this style, referring to their potent alcoholic strength and as a tribute to the original example (Duvel). Traditionally bottle-conditioned.",
-  "history": "Developed by the Moortgat brewery after WWI as a response to the growing popularity of Pilsner beers. Originally a darker beer, it achieved its modern form by the 1970s.",
-  "style_comparison": "Often confused with Belgian Tripel, but is usually paler, lighter-bodied, crisper, and drier. Tends to use yeast that favor ester development (particularly pome fruit) over spiciness in the balance, and has more of a late hop character.",
+  "overall_impression": "A family of refreshing, highly attenuated, hoppy, and fairly bitter Belgian ales with a very dry finish and high carbonation. Characterized by a fruity, spicy, sometimes phenolic fermentation profile,and the use of cereal grains and sometimes spices for complexity. Several variations in strength and color exist.",
+  "aroma": "A pleasantly aromatic mix of fruity-spicy yeast and hops. The fruity esters are moderate to high, and often have a citrus fruit, pome fruit, or stone fruit character. Low to moderately-high spicy notes are often like black pepper, not clove. Hops are low to moderate and have a continental character (spicy, floral, earthy, or fruity). The malt is often overshadowed, but if detected is lightly grainy. Spices and herbs optional, but must not dominate. Sourness optional (see Comments).Strong versions have more aromatic intensity, and can add a light alcohol and moderate malt character. Table versions have less intensity and not have an alcohol character. Darker versions add malt character associated with darker grains.",
+  "appearance": "Pale gold to deep amber in color, sometimes pale orange. Long-lasting, dense, rocky white to ivory head. Belgian lace. Unfiltered, so clarity is variable (poor to good) and may be hazy. Effervescent. Darker versions can be copper to dark brown. Stronger versions may be a little deeper in color.",
+  "flavor": "A balance of fruity and spicy yeast, hoppy bitterness, and grainy malt with moderate to high bitterness, and a very dry finish. The fruity and spicy aspects are medium-low to medium-high, and hop flavor is low to medium, both with similar character as in the aroma (same descriptors apply). Malt is low to medium, with a soft, grainy palate. Very high attenuation, never with a sweet or heavy finish. Bitter, spicy aftertaste. Spices and herbs optional, but if used must be in harmony with the yeast. Sourness optional (see Comments).Darker versions will have more malt character, including flavors from the darker malts. Stronger versions will have greater malt intensity, and a light alcohol note.",
+  "mouthfeel": "Light to medium-low body. Very high carbonation. Effervescent. Light warming alcohol optional. Sourness rare but optional (see Comments).Stronger versions can have up to medium body and be somewhat warming. Table versions have no warmth.",
+  "comments": "This style generally describes the standard-strength pale version, followed by differences for variations in strength and color. Darker versions tend to have more malt character and less apparent hop bitterness, yielding a more balanced presentation. Stronger versions often have more malt flavor, richness, warmth, and body simply due to the higher gravity.There is no correlation between strength and color.Sourness is totally optional, and if present at low to moderate levels, it may substitute somewhat for bitterness in the balance. A Saison should not be both sour and bitter at the same time. The high attenuation may make the beer seem more bitter than the IBUs suggest. Pale versions are often more bitter and hoppy than darker versions. Yeast selection often drives the balance of fruity and spicy notes, and can change the character significantly; allow for a range of interpretations.Often called Farmhouse ales in the US, but this term is not common in Europe where they are simply part of a larger grouping of artisanal ales. Brettanomyces is not typical for this style; Saisons with Brett should be entered in the 28A Brett Beer style. A Grisette is a well-known type of Saison popular with miners; enter Grisette as 25B Saison, Session Strength, Comment: Grisette with wheat as the character grain.",
+  "history": "A provision ale from Wallonia, the French-speaking part of Belgium. Originally a lower-alcohol product so as to not debilitate farm and field workers, but tavern-strength products also existed. The best known modern saison, Saison Dupont, was first produced in the 1920s. Dupont’s super saison was first produced in 1954, and its brown version in the mid-1980s. Fantôme begain producing its ‘seasonal’ saisons in 1988. While the style retains its rustic image, they are now mostly made in large breweries.",
+  "style_comparison": "The pale, standard strength versions is like a more highly-attenuated, hoppy, and bitter Belgian Blond Ale with a stronger yeast character. At super strength and pale color, similar to a Belgian Tripel, but often with more of a grainy, rustic quality and sometimes with a spicier yeast character.",
   "entry_instructions": "The entrant must specify the strength (table, standard, super) and the color (pale, dark). The entrant may identify character grains used.",
-  "tags": "very-high-strength, pale-color, top-fermented, western-europe, traditional-style, bitter",
+  "tags": "standard-strength, pale-color, top-fermented, western-europe, traditional-style, bitter",
   "original_gravity": {
     "minimum": {
       "unit": "sg",
-      "value": 1.07
+      "value": 1.048
     },
     "maximum": {
       "unit": "sg",
-      "value": 1.095
+      "value": null
     }
   },
   "international_bitterness_units": {
     "minimum": {
       "unit": "IBUs",
-      "value": 22
+      "value": 20
     },
     "maximum": {
       "unit": "IBUs",
@@ -37,35 +37,35 @@
   "final_gravity": {
     "minimum": {
       "unit": "sg",
-      "value": 1.005
+      "value": 1.002
     },
     "maximum": {
       "unit": "sg",
-      "value": 1.016
+      "value": null
     }
   },
   "alcohol_by_volume": {
     "minimum": {
       "unit": "%",
-      "value": 7.5
+      "value": 3.5
     },
     "maximum": {
       "unit": "%",
-      "value": 10.5
+      "value": null
     }
   },
   "color": {
     "minimum": {
       "unit": "SRM",
-      "value": 3
+      "value": 5
     },
     "maximum": {
       "unit": "SRM",
-      "value": 6
+      "value": null
     }
   },
-  "ingredients": "Pilsner malt with substantial sugary adjuncts. Continental hops. Fruity Belgian yeast. Fairly soft water. Spicing not traditional.",
-  "examples": "Brigand, Delirium Tremens, Duvel, Judas, Lucifer, Russian River Damnation",
+  "ingredients": "Pale base malt. Cereal grains, such as wheat, oats, spelt, or rye. May contain sugary adjuncts. Continental hops. Spicy-fruity Belgian Saison yeast. Spices and herbs are uncommon, but allowable if they don’t dominate.",
+  "examples": "Ellezelloise Saison 2000, Lefebvre Saison 1900, Saison Dupont, Saison de Pipaix, Saison Voisin, Boulevard Tank 7",
   "style_guide": "BJCP2021",
   "type": "beer"
 }

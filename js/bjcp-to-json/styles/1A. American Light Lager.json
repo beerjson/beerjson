@@ -4,23 +4,23 @@
   "category_id": "1",
   "style_id": "1A",
   "category_description": "This category describes everyday American beers that have a wide public appeal. Containing both ales and lagers, the beers of this category are not typically complex, and have smooth, accessible flavors. The ales tend to have lager-like qualities, or are designed to appeal to mass-market lager drinkers as crossover beers. Mass-market beers with a more international appeal or origin are described in the International Lager category.",
-  "overall_impression": "A very pale, highly-carbonated, light-bodied, well-attenuated lager with a very neutral flavor profile and low bitterness. Served very cold, it can be a very refreshing and thirst-quenching drink.",
-  "aroma": "Low malt aroma optional, but may be perceived as grainy, sweet, or corn-like, if present. Lightspicy or floral hop aroma optional. While a clean fermentation profile is desirable, a light amount of yeast character is not a fault.",
-  "appearance": "Very pale straw to medium yellow color. White, frothy head seldom persists. Very clear.",
-  "flavor": "Relatively neutral palate with a crisp, dry finish and a moderately-low to low grainy or corn-like flavor that might be perceived as sweetness due to the low bitterness. Moderatelylow hop flavor optional, with a floral, spicy, or herbal quality,if strong enough to distinguish. Low to medium-low bitterness. Balance may vary from slightly malty to slightly bitter, but is usually close to even. High carbonation may accentuate the crispness of the dry finish. Clean fermentation profile.",
-  "mouthfeel": "Low to medium-low body. Very highly carbonated with slight carbonic bite on the tongue.",
-  "comments": "Often what non-craft beer drinkers expect to be served if they order beer in the United States. May be marketed as Pilsner outside Europe, but should not be confused with traditional examples.Strong flavors are a fault. With little malt or hop flavor, the yeast character is what most frequently differentiates brands.",
-  "history": "Evolved from Pre-Prohibition Lager (see Category 27) in the US after Prohibition and World War II. Surviving breweries consolidated, expanded distribution, and heavily promoted a beer style that appealed to a broad range of the population. Became the dominant beer style for many decades, and spawned many international rivals who would develop similarly bland products for the mass market supported by heavy advertising.",
-  "style_comparison": "Stronger, more flavor and body than an American Light Lager. Less bitterness and flavor than an International Pale Lager. Significantly less flavor, hops, and bitterness than traditional European Pilsners.",
-  "tags": "standard-strength, pale-color, bottom-fermented, lagered, north-america, traditional-style, pale-lager-family, balanced",
+  "overall_impression": "A highly carbonated, very light-bodied, nearly flavorless lager designed to be consumed very cold. Very refreshing and thirst-quenching.",
+  "aroma": "Low malt aroma optional, but may be perceived as grainy, sweet, or corn-like, if present. Light spicy, floral, or herbal hop aroma optional. While a clean fermentation profile is desirable, a light amount of yeast character is not a fault.",
+  "appearance": "Very pale straw to pale yellow color. White, frothy head seldom persists. Very clear.",
+  "flavor": "Relatively neutral palate with a crisp, dry finish and a low to very low grainy or corn-like flavor that might be perceived as sweetness due to the low bitterness. Low floral, spicy, or herbal hop flavor optional, but is rarely strong enough to detect. Low to very low bitterness. Balance may vary from slightly malty to slightly bitter, but is usually close to even. High carbonation may accentuate the crispness of the dry finish. Clean fermentation profile.",
+  "mouthfeel": "Very light, sometimes watery, body. Very highly carbonated with slight carbonic bite on the tongue.",
+  "comments": "Designed to appeal to as broad a range of the general public as possible. Strong flavors are a fault. With little malt or hop flavor, the yeast character often is what most differentiates brands.",
+  "history": "Coors briefly made a light lager in the early 1940s. Modern versions were first produced by Rheingold in 1967 to appeal to diet-conscious drinkers, but only became popular starting in 1973 after Miller Brewing acquired the recipe and marketed the beer heavily to sports fans with the “tastes great, less filling” campaign. Beers of this genre became the largest sellers in the United States in the 1990s.",
+  "style_comparison": "A lighter-bodied, lower-alcohol, lower calorie version of an American Lager. Less hop character and bitterness than a German Leichtbier.",
+  "tags": "session-strength, pale-color, bottom-fermented, lagered, north-america, traditional-style, pale-lager-family, balanced",
   "original_gravity": {
     "minimum": {
       "unit": "sg",
-      "value": 1.04
+      "value": 1.028
     },
     "maximum": {
       "unit": "sg",
-      "value": 1.05
+      "value": 1.04
     }
   },
   "international_bitterness_units": {
@@ -30,27 +30,27 @@
     },
     "maximum": {
       "unit": "IBUs",
-      "value": 18
+      "value": 12
     }
   },
   "final_gravity": {
     "minimum": {
       "unit": "sg",
-      "value": 1.004
+      "value": 0.998
     },
     "maximum": {
       "unit": "sg",
-      "value": 1.01
+      "value": 1.008
     }
   },
   "alcohol_by_volume": {
     "minimum": {
       "unit": "%",
-      "value": 4.2
+      "value": 2.8
     },
     "maximum": {
       "unit": "%",
-      "value": 5.3
+      "value": 4.2
     }
   },
   "color": {
@@ -60,11 +60,11 @@
     },
     "maximum": {
       "unit": "SRM",
-      "value": 3.5
+      "value": 3
     }
   },
-  "ingredients": "Two- or six-row barley with up to 40% rice or corn as adjuncts. Lager yeast. Light use of hops.",
-  "examples": "Budweiser, Coors Original, Grain Belt Premium American Lager, Miller High Life, Old Style, Pabst Blue Ribbon, Special Export",
+  "ingredients": "Two- or six-row barley with up to 40% rice or corn as adjuncts. Additional enzymes can further lighten the body and lower carbohydrates. Lager yeast. Negligible hops.",
+  "examples": "Bud Light, Coors Light, Grain Belt Premium Light American Lager, Michelob Light, Miller Lite, Old Milwaukee Light",
   "style_guide": "BJCP2021",
   "type": "beer"
 }

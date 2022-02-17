@@ -4,16 +4,16 @@
   "category_id": "2",
   "style_id": "2A",
   "category_description": "International lagers are the premium, industrial, mass-market lagers produced in most countries in the world. Whether developed from American or European styles, they all tend to have a fairly uniform character and are heavily marketed. Loosely derived from original Pilsner-type lagers, with colored variations having additional malt flavors while retaining a broad appeal. In many countries, the styles will be referred to by their local country names. The use of the term “international” doesn’t mean that any beers are actually labeled as such, but is more of a categorization of similar beers produced worldwide.",
-  "overall_impression": "A smooth, easily-drinkable, malty amber lager with a flavorful caramel or toast character. Usually fairly well-attenuated, often with an adjunct quality and restrained bitterness.",
-  "aroma": "Low to moderate grainy malt aroma often with very low to moderate caramel or toasty malt accents. Occasionally, nutty or biscuity, but never roasty. Low, unobtrusive floral or spicy hop aroma. Clean fermentation profile.",
-  "appearance": "Golden-amber to reddish-copper color. Bright clarity. White to off-white foam stand which may not last.",
-  "flavor": "Low to moderate malt flavor, often with caramel or toasty-bready flavors. Low to medium-low corny sweetness optional. Low to moderate bitterness, giving the beer a malty to fairly even balance. Low to moderate spicy, herbal, or floral hop flavor. Clean fermentation profile. The finish is moderately dry with a moderately malty aftertaste.The beer may seem a touch sweet if the bitterness level is low.",
-  "mouthfeel": "Light to medium body. Medium to high carbonation. Smooth. Some examples can be slightly creamy.",
-  "comments": "A wide spectrum of mass-market amber lagers either developed independently in various countries, or describing rather generic amber beers with more historical relevance that eventually changed into indistinguishable products in modern times.",
-  "history": "Varies by country, but generally represents either an adaptation of the mass-market International Pale Lager, or an evolution of indigenous styles into more generic products.",
-  "style_comparison": "Less well-developed malt flavor than a Vienna Lager, often with an adjunct taste. Less robust flavor and bitterness than Altbier.",
+  "overall_impression": "A highly-attenuated pale lager without strong flavors, typically well-balanced and highly carbonated. Served cold, it is refreshing and thirst-quenching.",
+  "aroma": "Low to medium-low grainy-malty or slightly corny-sweetmalt aroma. Very low to medium spicy, floral, or herbal hop aroma. Clean fermentation profile.",
+  "appearance": "Pale straw to gold color. White, frothy head may not be long lasting. Very clear.",
+  "flavor": "Low to moderate levels of grainy-malt flavor, medium-low to medium bitterness, with a crisp, dry, well-attenuated finish. The grain character can be somewhat neutral, or show a light bready-crackery quality. Moderate corny or malty sweetness optional. Medium floral, spicy, or herbal hop flavor optional. Balance may vary from slightly malty to slightly bitter, but is usually relatively close to even. Neutral aftertaste with light malt and sometimes hop flavors.",
+  "mouthfeel": "Light to medium body. Moderately high to highly carbonated. Can have a slight carbonic bite on the tongue.",
+  "comments": "Tends to have fewer adjuncts than American Lagers. They may be all-malt, although strong flavors are still a fault. A broad category of international mass-market lagers ranging from up-scale American lagers to the typical “import” or “green bottle” international beers found in America and many export markets. Often confusingly labeled as a “Pilsner.” Any skunkiness in commercial beers is a handling fault, not a characteristic of the style.",
+  "history": "In the United States, developed as a premium version of the standard American lager, with a similar history. Outside the US, developed either as an imitation of American-style lagers, or as a more accessible (and often drier and less bitter) version of a Pilsner-type beer. Often heavily marketed and exported by large industrial or multi-national breweries.",
+  "style_comparison": "Generally more bitter and filling than American Lager. Less hoppy and bitter than a German Pils. Less body, malt flavor, and hop character than a Czech Premium Pale Lager. More robust versions can approach a Munich Helles in flavor, but with more of an adjunct quality.",
   "entry_instructions": "Entrant may specify regional variations, if desired (Mexican lager, Dutch lager, etc.).",
-  "tags": "standard-strength, amber-color, bottom-fermented, lagered, traditional-style, amber-lager-family, malty",
+  "tags": "standard-strength, pale-color, bottom-fermented, lagered, traditional-style, pale-lager-family, balanced",
   "original_gravity": {
     "minimum": {
       "unit": "sg",
@@ -21,13 +21,13 @@
     },
     "maximum": {
       "unit": "sg",
-      "value": 1.055
+      "value": 1.05
     }
   },
   "international_bitterness_units": {
     "minimum": {
       "unit": "IBUs",
-      "value": 8
+      "value": 18
     },
     "maximum": {
       "unit": "IBUs",
@@ -41,7 +41,7 @@
     },
     "maximum": {
       "unit": "sg",
-      "value": 1.014
+      "value": 1.012
     }
   },
   "alcohol_by_volume": {
@@ -57,15 +57,15 @@
   "color": {
     "minimum": {
       "unit": "SRM",
-      "value": 6
+      "value": 2
     },
     "maximum": {
       "unit": "SRM",
-      "value": 14
+      "value": 6
     }
   },
-  "ingredients": "Two-row or six-row base malt. Color malts such as Victory, amber, or roast. May be all malt or use adjuncts. Sugars or coloring agents possible. Caramel malt. European or American hops.",
-  "examples": "Abita Amber Lager, Brooklyn Lager, Capital Wisconsin Amber Lager, Dos Equis Amber, Grain Belt NordEast, Yuengling Lager",
+  "ingredients": "Two- or six-row barley. May use rice, corn, or sugar as adjuncts, but are generally all malt.",
+  "examples": "Asahi Super Dry, Birra Moretti, Corona Extra, Devils Backbone Gold Leaf Lager, Full Sail Session Premium Lager, Heineken, Red Stripe, Singha",
   "style_guide": "BJCP2021",
   "type": "beer"
 }

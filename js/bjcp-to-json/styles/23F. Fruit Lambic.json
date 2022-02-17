@@ -4,41 +4,40 @@
   "category_id": "23",
   "style_id": "23F",
   "category_description": "This category contains the traditional sour beer styles of Europe that are still produced, many (but not all) with a wheat component. Most have low bitterness, with the sourness of the beer providing the balance that hop bitterness would otherwise contribute. Some are sweetened or flavored, whether at the brewery or upon consumption.",
-  "overall_impression": "A tart, lightly-bittered historical central European wheat beer with a distinctive but restrained salt and coriander character. Very refreshing, with a dry finish,high carbonation, and bright flavors.Aroma",
+  "overall_impression": "A complex, refreshing, pleasantly sour Belgian wheat beerblending a complementary fermented fruit character with a sour, funky Gueuze.",
   "aroma": "The specified fruit should be the dominant aroma, blending well with similar aromatics as Gueuze (same description applies, but with the addition of a fermented fruit character).",
-  "appearance": "Unfiltered, with a moderate to full haze. Moderate to tall white head with tight bubbles and good retention. Effervescent. Yellow color.",
-  "flavor": "Noticeable sourness, medium-low to medium-high. Moderate bready or doughy malt flavor. Light to moderate fruity character of pome fruit, stone fruit, or lemons. Light to moderate salt character, up to the threshold of taste; the salt should be noticeable (particularly in the initial taste) but not taste overtly salty. Very low bitterness.No hop flavor. Dry, fully-attenuated finish, with acidity not hops balancing the malt. Acidity can be more noticeable in the finish, and enhance the refreshing quality of the beer. The acidity should be balanced, not forward (although historical versions could be very sour). No THP.",
-  "mouthfeel": "High to very high carbonation.Effervescent. Medium-light to medium-full body. Salt may give a slightly tingly, mouthwatering quality and a rounder, thicker mouthfeel. Yeast and wheat can alsoadd a little body, but shouldn’t feel heavy due to the thinning effects of acidity.",
-  "comments": "Historical versions may have been more sour than modern examples due to spontaneous fermentation, and may be blended with syrups as is done with Berliner Weisse, or with caraway liqueur. Modern examples are inoculated with Lacto, and are more balanced and generally don’t need sweetening. Pronounced GOH-zeh.",
-  "history": "Minor style associated with Leipzig but originating in the Middle Ages in the town of Goslar on the Gose River. Documented to have been in Leipzig by 1740. Leipzig was said to have 80 Gose houses in 1900. Production declined significantly after WWII, and ceased entirely in 1966. Modern production was revived in the 1980s in Germany, but the beer was not widely available. Became popular outside of Germany recently as a revival style, and is often used as a base style for fruited sour beers and other Specialty-Type beers.",
-  "style_comparison": "Perceived acidity is not as intense as Berliner Weisse or Gueuze. Restrained use of salt, coriander, and Lacto – should not taste overtly salty. Coriander aroma can be similar to a Witbier. Haziness similar to a Weissbier.",
+  "appearance": "Like Gueuze, but modified by the color of the fruit used, fading in intensity with age.Clarity is often good, although some fruit will not drop bright. If highly carbonated in the traditional manner, will have a thick rocky, generally long-lasting,mousse-like head, sometimes with a hue reflecting the added fruit.",
+  "flavor": "Combines the flavor profile of a Gueuze (same description applies) with noticeable flavor contributions from the added fruit. Traditional versions are dry and tart, with an added fermented fruit flavor. Modern versions may have a variable sweetness, which can offset the acidity. Fruit flavors also fade with age, and lose their vibrancy, so can be low to high in intensity.",
+  "mouthfeel": "Light to medium-light body; should not be watery. Has a low to high tart, puckering quality without being sharply astringent. Some versions have a light warming character. Carbonation can vary from sparkling to nearly still.",
+  "comments": "Produced like Gueuze, with the fruit commonly added halfway through aging,so the yeast and bacteria can ferment all sugars from the fruit; or less commonly by adding fruit to aLambic. The variety of fruit can sometimes be hard to identify since fermented and aged fruit is often perceived differently than the more recognizable fresh fruit. Fruit can bring acidity and tannins, in addition to flavor and aroma; understanding the fermented character of added fruit helps with judging the style.",
+  "history": "Same basic history as Gueuze, including the recent sweetening trend but with fruit in addition to sugar. Fruit was traditionally added by the blender or publican to increase the variety of beers available in local cafés.",
+  "style_comparison": "A Gueuze with fruit, not just a sour Fruit Beer; the wild character must be evident.",
   "entry_instructions": "The type of fruit used must be specified. The brewer must declare a carbonation level (low, medium, high) and a sweetness level (low/none, medium, high).",
-  "tags": "standard-strength, pale-color, top-fermented, central-europe, historical-style, wheat-beer-family, sour, spice",
-  "notes": "Light to moderately fruity aroma of pome fruit. Light sourness, slightly sharp. Noticeable coriander, which can have an aromatic lemony quality, and an intensity up to moderate. Light bready, doughy, yeasty character like uncooked sourdough bread. The acidity and coriander can give a bright, lively impression. The salt may be perceived as a very light, clean sea breeze character or just a general freshness, if noticeable at all.",
+  "tags": "standard-strength, pale-color, wild-fermented, western-europe, traditional-style, wheat-beer-family, sour, fruit",
   "original_gravity": {
     "minimum": {
       "unit": "sg",
-      "value": 1.036
+      "value": 1.04
     },
     "maximum": {
       "unit": "sg",
-      "value": 1.056
+      "value": 1.06
     }
   },
   "international_bitterness_units": {
     "minimum": {
       "unit": "IBUs",
-      "value": 5
+      "value": 0
     },
     "maximum": {
       "unit": "IBUs",
-      "value": 12
+      "value": 10
     }
   },
   "final_gravity": {
     "minimum": {
       "unit": "sg",
-      "value": 1.006
+      "value": 1
     },
     "maximum": {
       "unit": "sg",
@@ -48,11 +47,11 @@
   "alcohol_by_volume": {
     "minimum": {
       "unit": "%",
-      "value": 4.2
+      "value": 5
     },
     "maximum": {
       "unit": "%",
-      "value": 4.8
+      "value": 7
     }
   },
   "color": {
@@ -62,11 +61,11 @@
     },
     "maximum": {
       "unit": "SRM",
-      "value": 4
+      "value": null
     }
   },
-  "ingredients": "Pilsner and wheat malt, restrained use of salt and coriander seed, Lacto. The coriander should have a fresh, citrusy (lemon or bitter orange), bright note, and not be vegetal, celery-like, or ham-like. The salt should have a sea salt or fresh salt character, not a metallic, iodine note.",
-  "examples": "Anderson Valley Gose, Bayerisch Bahnhof Leipziger Gose, Original Ritterguts Gose, Westbrook Gose",
+  "ingredients": "Same base as Gueuze. Fruit added to barrels during fermentation and blending. Traditional fruit include tart cherries, raspberries; modern fruit include peaches, apricots, grapes, and others.May use natural or artificial sweeteners.",
+  "examples": "3 Fonteinen Schaerbeekse Kriek, Cantillon Fou’ Foune, Cantillon Lou Pepe Framboise, Cantillon Vigneronne, Hanssens Oude Kriek,Oude KriekBoon",
   "style_guide": "BJCP2021",
   "type": "beer"
 }
