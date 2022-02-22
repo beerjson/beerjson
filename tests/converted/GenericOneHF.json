@@ -7,7 +7,7 @@
         "type": "all grain",
         "author": "BIABrewer.info",
         "coauthor": "Designed by Lloyd Powell",
-        "created": "2011-05-07T20:00:00.000Z",
+        "created": "2011-05-07T22:00:00.000Z",
         "batch_size": {
           "unit": "l",
           "value": 19.0028767
@@ -28,6 +28,12 @@
             "value": 70
           }
         },
+        "style": {
+          "name": "K&#246;lsch",
+          "category": "Light Hybrid Beer",
+          "style_guide": "BJCP 2008",
+          "type": "beer"
+        },
         "ingredients": {
           "fermentable_additions": [
             {
@@ -42,7 +48,7 @@
                 "value": 3.2412931
               },
               "origin": "Germany",
-              "supplier": "",
+              "producer": "",
               "group": "base",
               "yield": {
                 "potential": {
@@ -88,28 +94,21 @@
               "amount": {
                 "unit": "l",
                 "value": 0.412685
-              },
-              "timing": {
-                "time": {
-                  "unit": "min",
-                  "value": 15
-                },
-                "use": "add_to_boil"
               }
             }
           ],
           "culture_additions": [
             {
               "name": "German Ale",
+              "attenuation": {
+                "unit": "%",
+                "value": 75
+              },
               "type": "ale",
               "form": "liquid",
               "amount": {
                 "unit": "l",
                 "value": 0.1242095
-              },
-              "attenuation": {
-                "unit": "%",
-                "value": 75
               }
             }
           ]
@@ -125,7 +124,6 @@
             {
               "name": "Saccharification",
               "type": "infusion",
-              "description": "Add 33.02 l of water at 69.5 C",
               "step_temperature": {
                 "unit": "C",
                 "value": 65.5555556
@@ -146,64 +144,20 @@
                 "unit": "l",
                 "value": 33.0186377
               }
+            },
+            {
+              "name": "Sparge",
+              "type": "sparge",
+              "step_time": {
+                "unit": "min",
+                "value": 15
+              },
+              "step_temperature": {
+                "unit": "C",
+                "value": 75.6
+              }
             }
           ]
-        },
-        "style": {
-          "name": "K&#246;lsch",
-          "category": "Light Hybrid Beer",
-          "style_guide": "BJCP 2008",
-          "type": "beer",
-          "original_gravity": {
-            "minimum": {
-              "unit": "sg",
-              "value": 1.044
-            },
-            "maximum": {
-              "unit": "sg",
-              "value": 1.05
-            }
-          },
-          "final_gravity": {
-            "minimum": {
-              "unit": "sg",
-              "value": 1.007
-            },
-            "maximum": {
-              "unit": "sg",
-              "value": 1.011
-            }
-          },
-          "international_bitterness_units": {
-            "minimum": {
-              "unit": "IBUs",
-              "value": 20
-            },
-            "maximum": {
-              "unit": "IBUs",
-              "value": 30
-            }
-          },
-          "alcohol_by_volume": {
-            "minimum": {
-              "unit": "%",
-              "value": 4.4
-            },
-            "maximum": {
-              "unit": "%",
-              "value": 5.2
-            }
-          },
-          "color": {
-            "minimum": {
-              "unit": "srm",
-              "value": 3.5
-            },
-            "maximum": {
-              "unit": "srm",
-              "value": 5
-            }
-          }
         }
       }
     ]

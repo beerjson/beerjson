@@ -26,6 +26,12 @@
             "value": 65
           }
         },
+        "style": {
+          "name": "Best Bitter",
+          "category": "British Bitter",
+          "style_guide": "BJCP",
+          "type": "beer"
+        },
         "ingredients": {
           "fermentable_additions": [
             {
@@ -116,15 +122,15 @@
           "culture_additions": [
             {
               "name": "English Ale Yeast WLP002",
+              "attenuation": {
+                "unit": "%",
+                "value": 66.5
+              },
               "type": "ale",
               "form": "liquid",
               "amount": {
                 "unit": "l",
                 "value": 0.1
-              },
-              "attenuation": {
-                "unit": "%",
-                "value": 66.5
               }
             }
           ]
@@ -149,62 +155,6 @@
               }
             }
           ]
-        },
-        "style": {
-          "name": "Best Bitter",
-          "category": "British Bitter",
-          "style_guide": "BJCP",
-          "type": "beer",
-          "original_gravity": {
-            "minimum": {
-              "unit": "sg",
-              "value": 1.04
-            },
-            "maximum": {
-              "unit": "sg",
-              "value": 1.048
-            }
-          },
-          "final_gravity": {
-            "minimum": {
-              "unit": "sg",
-              "value": 1.008
-            },
-            "maximum": {
-              "unit": "sg",
-              "value": 1.012
-            }
-          },
-          "international_bitterness_units": {
-            "minimum": {
-              "unit": "IBUs",
-              "value": 25
-            },
-            "maximum": {
-              "unit": "IBUs",
-              "value": 40
-            }
-          },
-          "alcohol_by_volume": {
-            "minimum": {
-              "unit": "%",
-              "value": 3.8
-            },
-            "maximum": {
-              "unit": "%",
-              "value": 4.6
-            }
-          },
-          "color": {
-            "minimum": {
-              "unit": "srm",
-              "value": 8
-            },
-            "maximum": {
-              "unit": "srm",
-              "value": 16
-            }
-          }
         }
       }
     ]
