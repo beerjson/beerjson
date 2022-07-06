@@ -90,7 +90,7 @@
     },
     "HopAdditionType": {
       "type": "object",
-      "description": "HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bil.",
+      "description": "HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bill.",
       "allOf": [
         {
           "$ref": "#/definitions/HopVarietyBase"
@@ -98,7 +98,7 @@
         {
           "properties": {
             "timing": {
-              "description": "The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step.",
+              "description": "The timing object fully describes the timing of an addition with options for a basis on time, gravity, or pH at any process step.",
               "$ref": "timing.json#/definitions/TimingType"
             },
             "amount": {
@@ -120,7 +120,7 @@
       ]
     },
     "IBUEstimateType": {
-      "description": "Used to differentiate which IBU formula is being used in a recipe. If formula is modified in any way, eg to support whirlpool/flameout additions etc etc, please use `Other` for transparency.",
+      "description": "Used to differentiate the IBU formula used in a recipe. If the formula is modified in any way, e.g. to support whirlpool/flameout additions, then please use `Other` for transparency.",
       "type": "object",
       "properties": {
         "method": {
