@@ -34,18 +34,18 @@ VarietyInformation collects the attributes of a hop variety to store as record i
 
 ## HopAdditionType 
 
-HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bil.
+HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bill.
 
 **HopAdditionType** is an object with all properties from [HopVarietyBase](#hopvarietybase) and these additional properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **timing** | ✅ | [TimingType](timing.json.md#timingtype)| The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step. |
+| **timing** | ✅ | [TimingType](timing.json.md#timingtype)| The timing object fully describes the timing of an addition with options for a basis on time, gravity, or pH at any process step. |
 | **amount** | ✅ |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)|  |
 
 ## IBUEstimateType 
 
-Used to differentiate which IBU formula is being used in a recipe. If formula is modified in any way, eg to support whirlpool/flameout additions etc etc, please use `Other` for transparency.
+Used to differentiate the IBU formula used in a recipe. If the formula is modified in any way, e.g. to support whirlpool/flameout additions, then please use `Other` for transparency.
 
 **IBUEstimateType** is an object with these properties:
 

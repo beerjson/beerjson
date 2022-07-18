@@ -42,6 +42,10 @@
         },
         "vessel": {
           "type": "string"
+        },
+        "vessel_pressure": {
+          "description": "Vessel pressure indicates the pressure applied within the fermentation vessel.",
+          "$ref": "measureable_units.json#/definitions/PressureType"
         }
       },
       "required": [

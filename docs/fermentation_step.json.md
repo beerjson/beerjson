@@ -19,4 +19,5 @@ FermentationStepType - a per step representation of a fermentation action.
 | **start_ph** |  | [AcidityType](measureable_units.json.md#aciditytype)|  |
 | **end_ph** |  | [AcidityType](measureable_units.json.md#aciditytype)|  |
 | **vessel** |  | string|  |
+| **vessel_pressure** |  | [PressureType](measureable_units.json.md#pressuretype)| Vessel pressure indicates the pressure applied within the fermentation vessel. |
 

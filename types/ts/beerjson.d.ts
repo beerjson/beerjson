@@ -209,6 +209,7 @@ declare namespace BeerJSON {
     start_ph?: AcidityType
     end_ph?: AcidityType
     vessel?: string
+    vessel_pressure?: PressureType
   }
 
   export type HopVarietyBase = {

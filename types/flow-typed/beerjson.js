@@ -209,7 +209,8 @@ export type FermentationStepType = {|
   end_gravity?: GravityType,
   start_ph?: AcidityType,
   end_ph?: AcidityType,
-  vessel?: string
+  vessel?: string,
+  vessel_pressure?: PressureType
 |}
 
 export type HopVarietyBase = {|
