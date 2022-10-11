@@ -34,6 +34,10 @@
             "step_time": {
               "unit": "day",
               "value": 10
+            },
+            "vessel_pressure": {
+              "unit": "psi",
+              "value": 5.5
             }
           },
           {
