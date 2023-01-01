@@ -87,7 +87,7 @@
               "$ref": "measureable_units.json#/definitions/PercentType"
             },
             "kolbach_index": {
-              "description": "The Kolbach Index, also known as soluble to total ratio of nitrogen or protein, is used to indcate the degree of malt modification. A value above 35% is desired for simple single infusion mashing, undermodified malt may require multiple step mashes or decoction.",
+              "description": "The Kolbach Index, also known as soluble to total ratio of nitrogen or protein, is used to indicate the degree of malt modification. A value above 35% is desired for simple single infusion mashing, undermodified malt may require multiple step mashes or decoction.",
               "$ref": "measureable_units.json#/definitions/PercentType"
             },
             "max_in_batch": {
@@ -189,11 +189,11 @@
       "additionalProperties": false,
       "properties": {
         "fine_grind": {
-          "description": "Percentage yield compared to succrose of a fine grind. eg 80%",
+          "description": "Percentage yield, compared to sucrose, of a fine grind. eg 80%",
           "$ref": "measureable_units.json#/definitions/PercentType"
         },
         "coarse_grind": {
-          "description": "Percentage yield compared to succrose of a coarse grind. eg 78%",
+          "description": "Percentage yield, compared to sucrose, of a coarse grind. eg 78%",
           "$ref": "measureable_units.json#/definitions/PercentType"
         },
         "fine_coarse_difference": {
