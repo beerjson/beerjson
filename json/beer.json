@@ -45,7 +45,7 @@
           "type": "array",
           "description": "Records for water profiles used in brewing.",
           "items": {
-            "$ref": "water.json#/definitions/WaterBase"
+            "$ref": "water.json#/definitions/WaterType"
           }
         },
         "styles": {

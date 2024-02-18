@@ -7,7 +7,7 @@
 | **miscellaneous_ingredients** |  | array of [MiscellaneousType](misc.json.md#miscellaneoustype)| Records for adjuncts which do not contribute to the gravity of the beer. |
 | **hop_varieties** |  | array of [VarietyInformation](hop.json.md#varietyinformation)| Records detailing the many properties of unique hop varieties. |
 | **cultures** |  | array of [CultureInformation](culture.json.md#cultureinformation)| Records detailing the wide array of unique cultures. |
-| **profiles** |  | array of [WaterBase](water.json.md#waterbase)| Records for water profiles used in brewing. |
+| **profiles** |  | array of [WaterType](water.json.md#watertype)| Records for water profiles used in brewing. |
 | **styles** |  | array of [StyleType](style.json.md#styletype)| Records detailing the characteristics of the beer styles for which judging guidelines have been established. |
 | **mashes** |  | array of [MashProcedureType](mash.json.md#mashproceduretype)| A collection of steps providing process information for common mashing procedures. |
 | **fermentations** |  | array of [FermentationProcedureType](fermentation.json.md#fermentationproceduretype)| A collection of steps providing process information for common fermentation procedures. |
