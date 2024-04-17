@@ -29,7 +29,7 @@ exports[`root schema type 1`] = `
         miscellaneous_ingredients?: MiscellaneousType[],
         hop_varieties?: VarietyInformation[],
         cultures?: CultureInformation[],
-        profiles?: WaterBase[],
+        profiles?: WaterType[],
         styles?: StyleType[],
         mashes?: MashProcedureType[],
         fermentations?: FermentationProcedureType[],
