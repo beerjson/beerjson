@@ -192,7 +192,7 @@ const fermentable_bill = r =>
     },
     origin: fermentable['ORIGIN'],
     supplier: fermentable['SUPPLIER'],
-    group: 'base',
+    grain_group: 'base',
     yield: {
       potential: {
         unit: 'sg',

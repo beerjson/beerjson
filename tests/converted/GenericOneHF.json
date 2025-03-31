@@ -49,7 +49,7 @@
               },
               "origin": "Germany",
               "producer": "",
-              "group": "base",
+              "grain_group": "base",
               "yield": {
                 "potential": {
                   "unit": "sg",

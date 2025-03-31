@@ -48,7 +48,7 @@
               },
               "origin": "United Kingdom",
               "producer": "Maris Otter",
-              "group": "base",
+              "grain_group": "base",
               "yield": {
                 "potential": {
                   "unit": "sg",
@@ -70,7 +70,7 @@
               },
               "origin": "Belgium",
               "producer": "",
-              "group": "base",
+              "grain_group": "base",
               "yield": {
                 "potential": {
                   "unit": "sg",
