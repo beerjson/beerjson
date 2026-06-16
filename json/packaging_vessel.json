@@ -61,7 +61,9 @@
         },
         "graphics": {
           "type": "array",
-          "$ref": "packaging_graphic.json#/definitions/PackagingGraphicType"
+          "items": {
+            "$ref": "packaging_graphic.json#/definitions/PackagingGraphicType"
+          }
         }
       },
       "required": [
