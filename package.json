@@ -7,7 +7,7 @@
   "devDependencies": {
     "ajv": "8.6.3",
     "husky": "7.0.2",
-    "jest": "27.0.3",
+    "jest": "30.4.2",
     "json-dup-key-validator": "^1.0.2",
     "lint-staged": "11.2.3",
     "lodash": "4.18.1",
