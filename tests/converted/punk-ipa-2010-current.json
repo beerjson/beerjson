@@ -39,7 +39,7 @@
                 "unit": "kg",
                 "value": 4.38
               },
-              "group": "base",
+              "grain_group": "base",
               "yield": {
                 "potential": {
                   "unit": "sg",
@@ -58,7 +58,7 @@
                 "unit": "kg",
                 "value": 0.25
               },
-              "group": "base",
+              "grain_group": "base",
               "yield": {
                 "potential": {
                   "unit": "sg",

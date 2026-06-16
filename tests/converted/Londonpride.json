@@ -46,7 +46,7 @@
                 "value": 9
               },
               "origin": "United Kingdom",
-              "group": "base",
+              "grain_group": "base",
               "yield": {
                 "potential": {
                   "unit": "sg",
@@ -67,7 +67,7 @@
                 "value": 0.6
               },
               "origin": "Finland",
-              "group": "base",
+              "grain_group": "base",
               "yield": {
                 "potential": {
                   "unit": "sg",
