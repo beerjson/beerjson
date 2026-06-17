@@ -141,5 +141,5 @@ test('type attribute is required', () => {
         }
       }
     })
-  }).toThrowError()
+  }).toThrow()
 })
