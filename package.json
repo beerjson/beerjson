@@ -21,7 +21,9 @@
   },
   "jest": {
     "verbose": true,
-    "testURL": "http://localhost/",
+    "testEnvironmentOptions": {
+      "url": "http://localhost/"
+    },
     "watchPathIgnorePatterns": [
       "converted"
     ]

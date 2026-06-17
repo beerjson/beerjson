@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`fermentable docs should match snapshot 1`] = `
 "The schema defines the following types:
@@ -12,11 +12,11 @@ FermentableBase provides unique properties to identify individual records of fer
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **name** | ✅ | string|  |
-| **type** | ✅ | \`\\"dry extract\\"\`<br/>\`\\"extract\\"\`<br/>\`\\"grain\\"\`<br/>\`\\"sugar\\"\`<br/>\`\\"fruit\\"\`<br/>\`\\"juice\\"\`<br/>\`\\"honey\\"\`<br/>\`\\"other\\"\`|  |
+| **type** | ✅ | \`"dry extract"\`<br/>\`"extract"\`<br/>\`"grain"\`<br/>\`"sugar"\`<br/>\`"fruit"\`<br/>\`"juice"\`<br/>\`"honey"\`<br/>\`"other"\`|  |
 | **origin** |  | string|  |
 | **producer** |  | string|  |
 | **product_id** |  | string|  |
-| **grain_group** |  | \`\\"base\\"\`<br/>\`\\"caramel\\"\`<br/>\`\\"flaked\\"\`<br/>\`\\"roasted\\"\`<br/>\`\\"specialty\\"\`<br/>\`\\"smoked\\"\`<br/>\`\\"adjunct\\"\`|  |
+| **grain_group** |  | \`"base"\`<br/>\`"caramel"\`<br/>\`"flaked"\`<br/>\`"roasted"\`<br/>\`"specialty"\`<br/>\`"smoked"\`<br/>\`"adjunct"\`|  |
 | **yield** | ✅ | [YieldType](#yieldtype)|  |
 | **color** | ✅ | [ColorType](measureable_units.json.md#colortype)|  |
 
@@ -126,7 +126,7 @@ exports[`format simple type should match snapshot 1`] = `
 
 *no description yet*
 
-\`\\"qt/lb\\"\`<br/>\`\\"gal/lb\\"\`<br/>\`\\"gal/oz\\"\`<br/>\`\\"l/g\\"\`<br/>\`\\"l/kg\\"\`<br/>\`\\"floz/oz\\"\`<br/>\`\\"m^3/kg\\"\`<br/>\`\\"ft^3/lb\\"\`
+\`"qt/lb"\`<br/>\`"gal/lb"\`<br/>\`"gal/oz"\`<br/>\`"l/g"\`<br/>\`"l/kg"\`<br/>\`"floz/oz"\`<br/>\`"m^3/kg"\`<br/>\`"ft^3/lb"\`
 "
 `;
 
@@ -137,7 +137,7 @@ exports[`format type with pattern should match snapshot 1`] = `
 
 *no description yet*
 
-RegExp pattern: \`\\\\d{4}-\\\\d{2}-\\\\d{2}|\\\\d{4}-\\\\d{2}-\\\\d{2}T\\\\d{2}:\\\\d{2}:\\\\d{2}\`
+RegExp pattern: \`\\d{4}-\\d{2}-\\d{2}|\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\`
 "
 `;
 
