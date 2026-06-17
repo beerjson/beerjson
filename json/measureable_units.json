@@ -461,14 +461,6 @@
         "brix"
       ]
     },
-    "DensityUnitType": {
-      "type": "string",
-      "enum": [
-        "sg",
-        "plato",
-        "brix"
-      ]
-    },
     "ConcentrationUnitType": {
       "type": "string",
       "enum": [
