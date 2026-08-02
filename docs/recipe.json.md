@@ -22,7 +22,7 @@ RecipeType composes the information stored in a beerjson recipe.
 | **original_gravity** |  | [GravityType](measureable_units.json.md#gravitytype)| The gravity of wort when transffered to the fermenter. |
 | **final_gravity** |  | [GravityType](measureable_units.json.md#gravitytype)| The gravity of beer at the end of fermentation. |
 | **alcohol_by_volume** |  | [PercentType](measureable_units.json.md#percenttype)|  |
-| **ibu_estimate** |  | [IBUEstimateType](hop.json.md#ibuestimatetype)| Used to differentiate which IBU formula is being used in a recipe. If formula is modified in any way, eg to support whirlpool/flameout additions etc etc, please use `Other` for transparency. |
+| **ibu_estimate** |  | [IBUEstimateType](hop.json.md#ibuestimatetype)| The estimated bitterness of the finished beer together with the IBU formula used to calculate it. If the formula is modified in any way, e.g. to support whirlpool/flameout additions, please use `Other` for transparency. |
 | **color_estimate** |  | [ColorType](measureable_units.json.md#colortype)| The color of the finished beer, using SRM or EBC. |
 | **beer_pH** |  | [AcidityType](measureable_units.json.md#aciditytype)| The final beer pH at the end of fermentation. |
 | **carbonation** |  | number| The final carbonation of the beer when packaged or served. |

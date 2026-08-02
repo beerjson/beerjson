@@ -45,13 +45,14 @@ HopAdditionType collects the attributes of each hop ingredient for use in a reci
 
 ## IBUEstimateType 
 
-Used to differentiate the IBU formula used in a recipe. If the formula is modified in any way, e.g. to support whirlpool/flameout additions, then please use `Other` for transparency.
+Stores the IBU formula used in a recipe and, when available, the resulting estimated bitterness. If the formula is modified in any way, e.g. to support whirlpool/flameout additions, then please use `Other` for transparency.
 
 **IBUEstimateType** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **method** |  | [IBUMethodType](#ibumethodtype)|  |
+| **value** |  | [BitternessType](measureable_units.json.md#bitternesstype)|  |
 
 ## IBUMethodType 
 

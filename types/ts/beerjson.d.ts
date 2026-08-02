@@ -246,6 +246,7 @@ declare namespace BeerJSON {
 
   export type IBUEstimateType = {
     method?: IBUMethodType
+    value?: BitternessType
   }
 
   export type IBUMethodType = 'Rager' | 'Tinseth' | 'Garetz' | 'Other'

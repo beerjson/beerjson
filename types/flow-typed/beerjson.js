@@ -246,7 +246,8 @@ export type HopAdditionType = HopVarietyBase & {|
 |}
 
 export type IBUEstimateType = {|
-  method?: IBUMethodType
+  method?: IBUMethodType,
+  value?: BitternessType
 |}
 
 export type IBUMethodType = 'Rager' | 'Tinseth' | 'Garetz' | 'Other'
