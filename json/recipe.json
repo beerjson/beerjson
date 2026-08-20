@@ -69,7 +69,7 @@
           "$ref": "measureable_units.json#/definitions/PercentType"
         },
         "ibu_estimate": {
-          "description": "Used to differentiate which IBU formula is being used in a recipe. If formula is modified in any way, eg to support whirlpool/flameout additions etc etc, please use `Other` for transparency.",
+          "description": "The estimated bitterness of the finished beer together with the IBU formula used to calculate it. If the formula is modified in any way, e.g. to support whirlpool/flameout additions, please use `Other` for transparency.",
           "$ref": "hop.json#/definitions/IBUEstimateType"
         },
         "color_estimate": {
