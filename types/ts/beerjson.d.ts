@@ -52,6 +52,7 @@ declare namespace BeerJSON {
       | 'other'
       | 'pedio'
       | 'spontaneous'
+      | 'wheat'
       | 'wine'
     form: 'liquid' | 'dry' | 'slant' | 'culture' | 'dregs'
     producer?: string
@@ -667,6 +668,8 @@ declare namespace BeerJSON {
     iron?: ConcentrationType
     nitrate?: ConcentrationType
     nitrite?: ConcentrationType
+    fluoride?: ConcentrationType
+    /** @deprecated */
     flouride?: ConcentrationType
     sulfate: ConcentrationType
     chloride: ConcentrationType

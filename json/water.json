@@ -35,7 +35,13 @@
         "nitrite": {
           "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
+        "fluoride": {
+          "description": "The concentration of fluoride in the water.",
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
+        },
         "flouride": {
+          "deprecated": true,
+          "description": "Misspelling of fluoride, kept so existing documents stay valid. Write fluoride instead; readers should accept either and prefer fluoride when both are present.",
           "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "sulfate": {
