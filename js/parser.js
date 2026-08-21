@@ -13,8 +13,10 @@ const parser = formatter => schema => {
   const processTypeRef = ref =>
     formatter.formatParsedTypeRef(parseTypeRefStr(ref))
 
-  const processArray = ({ $ref }) =>
-    formatter.formatArray($ref, processTypeRef($ref))
+  // `items` is either a $ref to a named type or an inline schema
+  // (e.g. `{ "type": "string" }`).
+  const processArray = items =>
+    formatter.formatArray(items.$ref, processPropType('items', items))
 
   const processOneOf = types =>
     types

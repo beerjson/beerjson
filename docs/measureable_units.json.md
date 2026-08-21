@@ -297,11 +297,6 @@ Viscosity of fluids
 *no description yet*
 
 `"sg"`<br/>`"plato"`<br/>`"brix"`
-## DensityUnitType 
-
-*no description yet*
-
-`"sg"`<br/>`"plato"`<br/>`"brix"`
 ## ConcentrationUnitType 
 
 *no description yet*

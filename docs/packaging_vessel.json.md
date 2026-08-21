@@ -22,4 +22,5 @@ PackagingVesselType - a per vessel representation of a packaging process.
 | **carbonation** |  | number|  |
 | **vessel_volume** |  | [VolumeType](measureable_units.json.md#volumetype)|  |
 | **vessel_quantity** |  | number|  |
+| **graphics** |  | array of [PackagingGraphicType](packaging_graphic.json.md#packaginggraphictype)|  |
 
