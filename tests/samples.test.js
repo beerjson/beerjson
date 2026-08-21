@@ -33,14 +33,17 @@ const convertFromXML = (dataDir, convertedDir) => {
 
 const testsDir = __dirname
 
+// Every directory under tests/ holds BeerJSON documents to validate, except
+// xml/, whose BeerXML sources are converted into converted/ first.
 const runTests = () => {
-  fs.readdirSync(testsDir).forEach(dir => {
-    if (dir !== 'xml' && dir !== 'samples.test.js' && !dir.startsWith('.')) {
+  fs.readdirSync(testsDir)
+    .filter(entry => entry !== 'xml' && !entry.startsWith('.'))
+    .filter(entry => fs.statSync(testsDir + '/' + entry).isDirectory())
+    .forEach(dir => {
       fs.readdirSync(testsDir + '/' + dir).forEach(file => {
         testJson(testsDir + '/' + dir + '/' + file)
       })
-    }
-  })
+    })
 }
 
 convertFromXML(testsDir + '/xml/', testsDir + '/converted/')

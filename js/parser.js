@@ -85,10 +85,10 @@ const parser = formatter => schema => {
 
   const formatDefinitions = schema =>
     formatter.addTypeWrapper(
-      mapProps(schema.$defs, (typeName, typeDef) => [
-        typeName,
-        typeDef
-      ]).reduce((acc, pair) => acc + processTypeDefinition(pair), '')
+      mapProps(schema.$defs, (typeName, typeDef) => [typeName, typeDef]).reduce(
+        (acc, pair) => acc + processTypeDefinition(pair),
+        ''
+      )
     )
 
   const formatRootSchema = ({ properties: { beerjson } = {} }) => {

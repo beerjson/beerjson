@@ -27,9 +27,7 @@ schemaFiles.forEach(fileName =>
 console.log('Generating Flow types...')
 
 let s = '// @flow\n\n'
-schemaFiles.forEach(
-  fileName => (s = s + convert(flowConvert, fileName))
-)
+schemaFiles.forEach(fileName => (s = s + convert(flowConvert, fileName)))
 fs.writeFileSync('./types/flow-typed/beerjson.js', s)
 
 console.log('Generating TypeScript types...')

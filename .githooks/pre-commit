@@ -1,0 +1,48 @@
+#!/bin/sh
+# Pre-commit checks for BeerJSON. Enable with:
+#   git config core.hooksPath .githooks
+#
+# The whole suite runs in well under a second, so it runs in full rather than
+# only on staged files.
+
+set -e
+
+if ! command -v node > /dev/null 2>&1; then
+  echo "Warning: node not found, skipping pre-commit checks"
+  exit 0
+fi
+
+if [ ! -d node_modules ]; then
+  echo "Warning: node_modules missing, skipping pre-commit checks (run 'npm ci')"
+  exit 0
+fi
+
+echo "Checking formatting..."
+if ! npm run --silent format:check; then
+  echo ""
+  echo "ERROR: formatting check failed."
+  echo "Run 'npm run format' to fix."
+  exit 1
+fi
+
+echo "Running tests..."
+if ! npm test --silent > /dev/null; then
+  echo ""
+  echo "ERROR: tests failed. Run 'npm test' to see the failures."
+  exit 1
+fi
+
+# docs/ and types/ are generated from json/. Catch a schema change committed
+# without regenerating them, which CI would reject anyway.
+if ! git diff --cached --quiet -- json; then
+  echo "Schemas changed, checking generated files..."
+  npm run --silent gen-docs > /dev/null
+  if ! git diff --exit-code --quiet -- 'docs/*.json.md' types; then
+    echo ""
+    echo "ERROR: docs/ and types/ are out of date."
+    echo "'npm run gen-docs' has just regenerated them; review and stage the result."
+    exit 1
+  fi
+fi
+
+echo "Pre-commit checks passed."

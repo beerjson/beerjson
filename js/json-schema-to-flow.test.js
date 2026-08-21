@@ -4,7 +4,7 @@ const rootSchema = require('../json/beer.json')
 test('simple schema converted to flow', () => {
   expect(
     convert({
-      "$defs": {
+      $defs: {
         ObjType: {
           type: 'object',
           properties: {
@@ -29,7 +29,7 @@ test('simple schema converted to flow', () => {
 test('enum format', () => {
   expect(
     convert({
-      "$defs": {
+      $defs: {
         EnumType: {
           type: 'object',
           properties: {
@@ -48,7 +48,7 @@ test('root schema type', () => {
 test('regexp pattern should be rendered as str', () => {
   expect(
     convert({
-      "$defs": {
+      $defs: {
         patternType: {
           type: 'string',
           pattern:
@@ -62,7 +62,7 @@ test('regexp pattern should be rendered as str', () => {
 test('required allOf property', () => {
   expect(
     convert({
-      "$defs": {
+      $defs: {
         MiscellaneousAdditionType: {
           type: 'object',
           description:

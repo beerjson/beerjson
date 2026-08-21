@@ -13,7 +13,7 @@ test('Type reference format', () => {
 test('test property list with single allOf entry', () => {
   expect(
     parse({
-      "$defs": {
+      $defs: {
         testPropName: {
           type: 'object',
           allOf: [{ $ref: '#/$defs/StyleBase' }]
@@ -34,7 +34,7 @@ test('root schema docs', () => {
 test('processArray should match snapshot', () => {
   expect(
     parse({
-      "$defs": {
+      $defs: {
         name: {
           type: 'array',
           items: { $ref: 'fermentable.json#/$defs/FermentableType' }
@@ -47,7 +47,7 @@ test('processArray should match snapshot', () => {
 test('format oneOf property type should match snapshot', () => {
   expect(
     parse({
-      "$defs": {
+      $defs: {
         typeName: {
           type: 'object',
           properties: {
@@ -71,7 +71,7 @@ test('format oneOf property type should match snapshot', () => {
 test('format oneOf property type should match snapshot', () => {
   expect(
     parse({
-      "$defs": {
+      $defs: {
         typeName: {
           type: 'object',
           properties: {
@@ -95,7 +95,7 @@ test('format oneOf property type should match snapshot', () => {
 test('format simple type should match snapshot', () => {
   expect(
     parse({
-      "$defs": {
+      $defs: {
         SpecificVolumeUnitType: {
           type: 'string',
           enum: [
@@ -117,7 +117,7 @@ test('format simple type should match snapshot', () => {
 test('format type with pattern should match snapshot', () => {
   expect(
     parse({
-      "$defs": {
+      $defs: {
         patternType: {
           type: 'string',
           pattern:
@@ -131,7 +131,7 @@ test('format type with pattern should match snapshot', () => {
 test('type attribute is required', () => {
   expect(() => {
     parse({
-      "$defs": {
+      $defs: {
         IBUEstimateType: {
           properties: {
             method: {
