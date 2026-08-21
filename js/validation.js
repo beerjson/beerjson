@@ -1,4 +1,7 @@
-const Ajv = require('ajv')
+// The schemas are JSON Schema 2020-12, so the draft-specific ajv entry point is
+// required: the default `ajv` export only understands draft-07 and would reject
+// `unevaluatedProperties`.
+const Ajv = require('ajv/dist/2020')
 const ajv = new Ajv()
 ajv.addSchema(require('../json/fermentation'))
 ajv.addSchema(require('../json/fermentation_step'))

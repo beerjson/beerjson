@@ -1,9 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/packaging_vessel.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/packaging_vessel.json",
   "type": "object",
   "additionalProperties": false,
-  "definitions": {
+  "$defs": {
     "PackagingVesselType": {
       "type": "object",
       "description": "PackagingVesselType - a per vessel representation of a packaging process.",
@@ -27,34 +27,34 @@
           "type": "string"
         },
         "package_date": {
-          "$ref": "measureable_units.json#/definitions/DateType"
+          "$ref": "measureable_units.json#/$defs/DateType"
         },
         "start_temperature": {
-          "$ref": "measureable_units.json#/definitions/TemperatureType"
+          "$ref": "measureable_units.json#/$defs/TemperatureType"
         },
         "end_temperature": {
-          "$ref": "measureable_units.json#/definitions/TemperatureType"
+          "$ref": "measureable_units.json#/$defs/TemperatureType"
         },
         "step_time": {
-          "$ref": "measureable_units.json#/definitions/TimeType"
+          "$ref": "measureable_units.json#/$defs/TimeType"
         },
         "start_gravity": {
-          "$ref": "measureable_units.json#/definitions/GravityType"
+          "$ref": "measureable_units.json#/$defs/GravityType"
         },
         "end_gravity": {
-          "$ref": "measureable_units.json#/definitions/GravityType"
+          "$ref": "measureable_units.json#/$defs/GravityType"
         },
         "start_ph": {
-          "$ref": "measureable_units.json#/definitions/AcidityType"
+          "$ref": "measureable_units.json#/$defs/AcidityType"
         },
         "end_ph": {
-          "$ref": "measureable_units.json#/definitions/AcidityType"
+          "$ref": "measureable_units.json#/$defs/AcidityType"
         },
         "carbonation": {
           "type": "number"
         },
         "vessel_volume": {
-          "$ref": "measureable_units.json#/definitions/VolumeType"
+          "$ref": "measureable_units.json#/$defs/VolumeType"
         },
         "vessel_quantity": {
           "type": "number"
@@ -62,7 +62,7 @@
         "graphics": {
           "type": "array",
           "items": {
-            "$ref": "packaging_graphic.json#/definitions/PackagingGraphicType"
+            "$ref": "packaging_graphic.json#/$defs/PackagingGraphicType"
           }
         }
       },

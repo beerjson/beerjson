@@ -1,6 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/beer.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/beer.json",
   "type": "object",
   "additionalProperties": false,
   "properties": {
@@ -11,90 +11,90 @@
       "properties": {
         "version": {
           "description": "Explicitly encode beerjson version within list of records.",
-          "$ref": "measureable_units.json#/definitions/VersionType"
+          "$ref": "measureable_units.json#/$defs/VersionType"
         },
         "fermentables": {
           "type": "array",
           "description": "Records for any ingredient that contributes to the gravity of the beer.",
           "items": {
-            "$ref": "fermentable.json#/definitions/FermentableType"
+            "$ref": "fermentable.json#/$defs/FermentableType"
           }
         },
         "miscellaneous_ingredients": {
           "type": "array",
           "description": "Records for adjuncts which do not contribute to the gravity of the beer.",
           "items": {
-            "$ref": "misc.json#/definitions/MiscellaneousType"
+            "$ref": "misc.json#/$defs/MiscellaneousType"
           }
         },
         "hop_varieties": {
           "type": "array",
           "description": "Records detailing the many properties of unique hop varieties.",
           "items": {
-            "$ref": "hop.json#/definitions/VarietyInformation"
+            "$ref": "hop.json#/$defs/VarietyInformation"
           }
         },
         "cultures": {
           "type": "array",
           "description": "Records detailing the wide array of unique cultures.",
           "items": {
-            "$ref": "culture.json#/definitions/CultureInformation"
+            "$ref": "culture.json#/$defs/CultureInformation"
           }
         },
         "profiles": {
           "type": "array",
           "description": "Records for water profiles used in brewing.",
           "items": {
-            "$ref": "water.json#/definitions/WaterType"
+            "$ref": "water.json#/$defs/WaterType"
           }
         },
         "styles": {
           "type": "array",
           "description": "Records detailing the characteristics of the beer styles for which judging guidelines have been established.",
           "items": {
-            "$ref": "style.json#/definitions/StyleType"
+            "$ref": "style.json#/$defs/StyleType"
           }
         },
         "mashes": {
           "type": "array",
           "description": "A collection of steps providing process information for common mashing procedures.",
           "items": {
-            "$ref": "mash.json#/definitions/MashProcedureType"
+            "$ref": "mash.json#/$defs/MashProcedureType"
           }
         },
         "fermentations": {
           "type": "array",
           "description": "A collection of steps providing process information for common fermentation procedures.",
           "items": {
-            "$ref": "fermentation.json#/definitions/FermentationProcedureType"
+            "$ref": "fermentation.json#/$defs/FermentationProcedureType"
           }
         },
         "recipes": {
           "type": "array",
           "description": "Records containing a minimal collection of the description of ingredients, procedures and other required parameters necessary to recreate a batch of beer.",
           "items": {
-            "$ref": "recipe.json#/definitions/RecipeType"
+            "$ref": "recipe.json#/$defs/RecipeType"
           }
         },
         "equipments": {
           "type": "array",
           "description": "Provides necessary information for brewing equipment.",
           "items": {
-            "$ref": "equipment.json#/definitions/EquipmentType"
+            "$ref": "equipment.json#/$defs/EquipmentType"
           }
         },
         "boil": {
           "type": "array",
           "description": "A collection of steps providing process information for common boil procedures.",
           "items": {
-            "$ref": "boil.json#/definitions/BoilProcedureType"
+            "$ref": "boil.json#/$defs/BoilProcedureType"
           }
         },
         "packaging": {
           "type": "array",
           "description": "A collection of steps providing process information for common packaging procedures.",
           "items": {
-            "$ref": "packaging.json#/definitions/PackagingProcedureType"
+            "$ref": "packaging.json#/$defs/PackagingProcedureType"
           }
         }
       },

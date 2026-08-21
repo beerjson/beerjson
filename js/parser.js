@@ -3,7 +3,7 @@ const mapProps = (obj, mapFn) =>
 
 const parser = formatter => schema => {
   const parseTypeRefStr = ref => {
-    const regex = /^(\S+)?#\/definitions\/(\S+)/
+    const regex = /^(\S+)?#\/\$defs\/(\S+)/
     const matches = ref.match(regex)
     const fileName = matches[1]
     const typeName = matches[2]
@@ -85,7 +85,7 @@ const parser = formatter => schema => {
 
   const formatDefinitions = schema =>
     formatter.addTypeWrapper(
-      mapProps(schema.definitions, (typeName, typeDef) => [
+      mapProps(schema.$defs, (typeName, typeDef) => [
         typeName,
         typeDef
       ]).reduce((acc, pair) => acc + processTypeDefinition(pair), '')

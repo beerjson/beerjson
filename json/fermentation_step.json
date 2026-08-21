@@ -1,9 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/fermentation_step.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/fermentation_step.json",
   "type": "object",
   "additionalProperties": false,
-  "definitions": {
+  "$defs": {
     "FermentationStepType": {
       "type": "object",
       "description": "FermentationStepType - a per step representation of a fermentation action.",
@@ -16,36 +16,36 @@
           "type": "string"
         },
         "start_temperature": {
-          "$ref": "measureable_units.json#/definitions/TemperatureType"
+          "$ref": "measureable_units.json#/$defs/TemperatureType"
         },
         "end_temperature": {
-          "$ref": "measureable_units.json#/definitions/TemperatureType"
+          "$ref": "measureable_units.json#/$defs/TemperatureType"
         },
         "step_time": {
-          "$ref": "measureable_units.json#/definitions/TimeType"
+          "$ref": "measureable_units.json#/$defs/TimeType"
         },
         "free_rise": {
           "description": "Free rise is used to indicate a fermentation step where the exothermic fermentation is allowed to raise the temperature without restriction This is either True or false.",
           "type": "boolean"
         },
         "start_gravity": {
-          "$ref": "measureable_units.json#/definitions/GravityType"
+          "$ref": "measureable_units.json#/$defs/GravityType"
         },
         "end_gravity": {
-          "$ref": "measureable_units.json#/definitions/GravityType"
+          "$ref": "measureable_units.json#/$defs/GravityType"
         },
         "start_ph": {
-          "$ref": "measureable_units.json#/definitions/AcidityType"
+          "$ref": "measureable_units.json#/$defs/AcidityType"
         },
         "end_ph": {
-          "$ref": "measureable_units.json#/definitions/AcidityType"
+          "$ref": "measureable_units.json#/$defs/AcidityType"
         },
         "vessel": {
           "type": "string"
         },
         "vessel_pressure": {
           "description": "Vessel pressure indicates the pressure applied within the fermentation vessel.",
-          "$ref": "measureable_units.json#/definitions/PressureType"
+          "$ref": "measureable_units.json#/$defs/PressureType"
         }
       },
       "required": [

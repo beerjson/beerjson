@@ -13,10 +13,10 @@ test('Type reference format', () => {
 test('test property list with single allOf entry', () => {
   expect(
     parse({
-      definitions: {
+      "$defs": {
         testPropName: {
           type: 'object',
-          allOf: [{ $ref: '#/definitions/StyleBase' }]
+          allOf: [{ $ref: '#/$defs/StyleBase' }]
         }
       }
     })
@@ -34,10 +34,10 @@ test('root schema docs', () => {
 test('processArray should match snapshot', () => {
   expect(
     parse({
-      definitions: {
+      "$defs": {
         name: {
           type: 'array',
-          items: { $ref: 'fermentable.json#/definitions/FermentableType' }
+          items: { $ref: 'fermentable.json#/$defs/FermentableType' }
         }
       }
     })
@@ -47,17 +47,17 @@ test('processArray should match snapshot', () => {
 test('format oneOf property type should match snapshot', () => {
   expect(
     parse({
-      definitions: {
+      "$defs": {
         typeName: {
           type: 'object',
           properties: {
             amount: {
               oneOf: [
                 {
-                  $ref: 'measureable_units.json#/definitions/VolumeType'
+                  $ref: 'measureable_units.json#/$defs/VolumeType'
                 },
                 {
-                  $ref: 'measureable_units.json#/definitions/MassType'
+                  $ref: 'measureable_units.json#/$defs/MassType'
                 }
               ]
             }
@@ -71,17 +71,17 @@ test('format oneOf property type should match snapshot', () => {
 test('format oneOf property type should match snapshot', () => {
   expect(
     parse({
-      definitions: {
+      "$defs": {
         typeName: {
           type: 'object',
           properties: {
             amount: {
               oneOf: [
                 {
-                  $ref: 'measureable_units.json#/definitions/VolumeType'
+                  $ref: 'measureable_units.json#/$defs/VolumeType'
                 },
                 {
-                  $ref: 'measureable_units.json#/definitions/MassType'
+                  $ref: 'measureable_units.json#/$defs/MassType'
                 }
               ]
             }
@@ -95,7 +95,7 @@ test('format oneOf property type should match snapshot', () => {
 test('format simple type should match snapshot', () => {
   expect(
     parse({
-      definitions: {
+      "$defs": {
         SpecificVolumeUnitType: {
           type: 'string',
           enum: [
@@ -117,7 +117,7 @@ test('format simple type should match snapshot', () => {
 test('format type with pattern should match snapshot', () => {
   expect(
     parse({
-      definitions: {
+      "$defs": {
         patternType: {
           type: 'string',
           pattern:
@@ -131,11 +131,11 @@ test('format type with pattern should match snapshot', () => {
 test('type attribute is required', () => {
   expect(() => {
     parse({
-      definitions: {
+      "$defs": {
         IBUEstimateType: {
           properties: {
             method: {
-              $ref: '#/definitions/IBUMethodType'
+              $ref: '#/$defs/IBUMethodType'
             }
           }
         }

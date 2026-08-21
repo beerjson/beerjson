@@ -1,15 +1,15 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/measureable_units.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/measureable_units.json",
   "type": "object",
   "additionalProperties": false,
-  "definitions": {
+  "$defs": {
     "VolumeType": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "unit": {
-          "$ref": "#/definitions/VolumeUnitType"
+          "$ref": "#/$defs/VolumeUnitType"
         },
         "value": {
           "type": "number"
@@ -25,7 +25,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
-          "$ref": "#/definitions/MassUnitType"
+          "$ref": "#/$defs/MassUnitType"
         },
         "value": {
           "type": "number"
@@ -42,7 +42,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
-          "$ref": "#/definitions/DiastaticPowerUnitType"
+          "$ref": "#/$defs/DiastaticPowerUnitType"
         },
         "value": {
           "type": "number"
@@ -58,7 +58,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
-          "$ref": "#/definitions/TemperatureUnitType"
+          "$ref": "#/$defs/TemperatureUnitType"
         },
         "value": {
           "type": "number"
@@ -74,7 +74,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
-          "$ref": "#/definitions/PressureUnitType"
+          "$ref": "#/$defs/PressureUnitType"
         },
         "value": {
           "type": "number"
@@ -90,7 +90,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
-          "$ref": "#/definitions/AcidityUnitType"
+          "$ref": "#/$defs/AcidityUnitType"
         },
         "value": {
           "type": "number"
@@ -106,7 +106,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
-          "$ref": "#/definitions/TimeUnitType"
+          "$ref": "#/$defs/TimeUnitType"
         },
         "value": {
           "type": "integer"
@@ -123,7 +123,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
-          "$ref": "#/definitions/ColorUnitType"
+          "$ref": "#/$defs/ColorUnitType"
         },
         "value": {
           "type": "number"
@@ -139,7 +139,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
-          "$ref": "#/definitions/CarbonationUnitType"
+          "$ref": "#/$defs/CarbonationUnitType"
         },
         "value": {
           "type": "number"
@@ -155,7 +155,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
-          "$ref": "#/definitions/BitternessUnitType"
+          "$ref": "#/$defs/BitternessUnitType"
         },
         "value": {
           "type": "number"
@@ -172,7 +172,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
-          "$ref": "#/definitions/GravityUnitType"
+          "$ref": "#/$defs/GravityUnitType"
         },
         "value": {
           "type": "number"
@@ -189,7 +189,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
-          "$ref": "#/definitions/SpecificHeatUnitType"
+          "$ref": "#/$defs/SpecificHeatUnitType"
         },
         "value": {
           "type": "number"
@@ -206,7 +206,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
-          "$ref": "#/definitions/ConcentrationUnitType"
+          "$ref": "#/$defs/ConcentrationUnitType"
         },
         "value": {
           "type": "number"
@@ -223,7 +223,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
-          "$ref": "#/definitions/SpecificVolumeUnitType"
+          "$ref": "#/$defs/SpecificVolumeUnitType"
         },
         "value": {
           "type": "number"
@@ -240,7 +240,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
-          "$ref": "#/definitions/UnitUnitType"
+          "$ref": "#/$defs/UnitUnitType"
         },
         "value": {
           "type": "number"
@@ -257,7 +257,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
-          "$ref": "#/definitions/ViscosityUnitType"
+          "$ref": "#/$defs/ViscosityUnitType"
         },
         "value": {
           "type": "number"
@@ -273,10 +273,10 @@
       "additionalProperties": false,
       "properties": {
         "minimum": {
-          "$ref": "#/definitions/CarbonationType"
+          "$ref": "#/$defs/CarbonationType"
         },
         "maximum": {
-          "$ref": "#/definitions/CarbonationType"
+          "$ref": "#/$defs/CarbonationType"
         }
       },
       "required": [
@@ -289,10 +289,10 @@
       "additionalProperties": false,
       "properties": {
         "minimum": {
-          "$ref": "#/definitions/BitternessType"
+          "$ref": "#/$defs/BitternessType"
         },
         "maximum": {
-          "$ref": "#/definitions/BitternessType"
+          "$ref": "#/$defs/BitternessType"
         }
       },
       "required": [
@@ -305,10 +305,10 @@
       "additionalProperties": false,
       "properties": {
         "minimum": {
-          "$ref": "#/definitions/TemperatureType"
+          "$ref": "#/$defs/TemperatureType"
         },
         "maximum": {
-          "$ref": "#/definitions/TemperatureType"
+          "$ref": "#/$defs/TemperatureType"
         }
       },
       "required": [
@@ -321,10 +321,10 @@
       "additionalProperties": false,
       "properties": {
         "minimum": {
-          "$ref": "#/definitions/ColorType"
+          "$ref": "#/$defs/ColorType"
         },
         "maximum": {
-          "$ref": "#/definitions/ColorType"
+          "$ref": "#/$defs/ColorType"
         }
       },
       "required": [
@@ -337,10 +337,10 @@
       "additionalProperties": false,
       "properties": {
         "minimum": {
-          "$ref": "#/definitions/GravityType"
+          "$ref": "#/$defs/GravityType"
         },
         "maximum": {
-          "$ref": "#/definitions/GravityType"
+          "$ref": "#/$defs/GravityType"
         }
       },
       "required": [
@@ -353,10 +353,10 @@
       "additionalProperties": false,
       "properties": {
         "minimum": {
-          "$ref": "#/definitions/PercentType"
+          "$ref": "#/$defs/PercentType"
         },
         "maximum": {
-          "$ref": "#/definitions/PercentType"
+          "$ref": "#/$defs/PercentType"
         }
       },
       "required": [
@@ -509,7 +509,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
-          "$ref": "#/definitions/PercentUnitType"
+          "$ref": "#/$defs/PercentUnitType"
         },
         "value": {
           "type": "number"

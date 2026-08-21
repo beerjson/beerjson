@@ -1,9 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/style.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/style.json",
   "type": "object",
   "additionalProperties": false,
-  "definitions": {
+  "$defs": {
     "StyleBase": {
       "type": "object",
       "description": "The descriptive base type for both style guideline records, and recipe style provisions. Provides unique properties to identify individual styles",
@@ -27,37 +27,42 @@
           "type": "string"
         },
         "type": {
-          "$ref": "#/definitions/StyleCategories"
+          "$ref": "#/$defs/StyleCategories"
         }
       },
-      "required": ["name", "category", "style_guide", "type"]
+      "required": [
+        "name",
+        "category",
+        "style_guide",
+        "type"
+      ]
     },
     "StyleType": {
       "type": "object",
       "description": "StyleType provide information for Style categorization",
       "allOf": [
         {
-          "$ref": "#/definitions/StyleBase"
+          "$ref": "#/$defs/StyleBase"
         },
         {
           "properties": {
             "original_gravity": {
-              "$ref": "measureable_units.json#/definitions/GravityRangeType"
+              "$ref": "measureable_units.json#/$defs/GravityRangeType"
             },
             "final_gravity": {
-              "$ref": "measureable_units.json#/definitions/GravityRangeType"
+              "$ref": "measureable_units.json#/$defs/GravityRangeType"
             },
             "international_bitterness_units": {
-              "$ref": "measureable_units.json#/definitions/BitternessRangeType"
+              "$ref": "measureable_units.json#/$defs/BitternessRangeType"
             },
             "color": {
-              "$ref": "measureable_units.json#/definitions/ColorRangeType"
+              "$ref": "measureable_units.json#/$defs/ColorRangeType"
             },
             "carbonation": {
-              "$ref": "measureable_units.json#/definitions/CarbonationRangeType"
+              "$ref": "measureable_units.json#/$defs/CarbonationRangeType"
             },
             "alcohol_by_volume": {
-              "$ref": "measureable_units.json#/definitions/PercentRangeType"
+              "$ref": "measureable_units.json#/$defs/PercentRangeType"
             },
             "notes": {
               "type": "string"
@@ -92,13 +97,21 @@
       "description": "RecipeStyleType defines style information stored in a recipe record",
       "allOf": [
         {
-          "$ref": "#/definitions/StyleBase"
+          "$ref": "#/$defs/StyleBase"
         }
       ]
     },
     "StyleCategories": {
       "type": "string",
-      "enum": ["beer", "cider", "kombucha", "mead", "other", "soda", "wine"]
+      "enum": [
+        "beer",
+        "cider",
+        "kombucha",
+        "mead",
+        "other",
+        "soda",
+        "wine"
+      ]
     }
   }
 }
