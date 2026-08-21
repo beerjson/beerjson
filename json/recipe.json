@@ -58,7 +58,7 @@
           "type": "string"
         },
         "original_gravity": {
-          "description": "The gravity of wort when transffered to the fermenter.",
+          "description": "The gravity of wort when transferred to the fermenter.",
           "$ref": "measureable_units.json#/$defs/GravityType"
         },
         "final_gravity": {

@@ -19,7 +19,7 @@ RecipeType composes the information stored in a beerjson recipe.
 | **ingredients** | ✅ | [IngredientsType](#ingredientstype)| A collection of all ingredients used for the recipe. |
 | **mash** |  | [MashProcedureType](mash.json.md#mashproceduretype)| This defines the procedure for performing unique mashing processes. |
 | **notes** |  | string|  |
-| **original_gravity** |  | [GravityType](measureable_units.json.md#gravitytype)| The gravity of wort when transffered to the fermenter. |
+| **original_gravity** |  | [GravityType](measureable_units.json.md#gravitytype)| The gravity of wort when transferred to the fermenter. |
 | **final_gravity** |  | [GravityType](measureable_units.json.md#gravitytype)| The gravity of beer at the end of fermentation. |
 | **alcohol_by_volume** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **ibu_estimate** |  | [IBUEstimateType](hop.json.md#ibuestimatetype)| The estimated bitterness of the finished beer together with the IBU formula used to calculate it. If the formula is modified in any way, e.g. to support whirlpool/flameout additions, please use `Other` for transparency. |

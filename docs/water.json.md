@@ -17,7 +17,8 @@ WaterBase provides unique properties to identify individual records of  brewing 
 | **iron** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
 | **nitrate** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
 | **nitrite** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
-| **flouride** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
+| **fluoride** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)| The concentration of fluoride in the water. |
+| **flouride** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)| ⚠️ **Deprecated.** Misspelling of fluoride, kept so existing documents stay valid. Write fluoride instead; readers should accept either and prefer fluoride when both are present. |
 | **sulfate** | ✅ | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
 | **chloride** | ✅ | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
 | **sodium** | ✅ | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |

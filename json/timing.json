@@ -20,7 +20,7 @@
       "additionalProperties": false,
       "properties": {
         "time": {
-          "description": "What time during a process step is added, eg a value of 2 days for a dry hop addition would be added 2 days into the fermentation step.",
+          "description": "When during the process step the addition happens. The reference point depends on use: for add_to_fermentation, add_to_mash and add_to_package it is measured forwards from the start of the step, so 2 days for a dry hop means 2 days after fermentation began; for add_to_boil it is measured backwards from the end of the step, following brewing convention, so 40 min means 40 minutes before the end of the boil.",
           "$ref": "measureable_units.json#/$defs/TimeType"
         },
         "duration": {

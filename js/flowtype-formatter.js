@@ -34,8 +34,16 @@ module.exports = {
   formatNestedType: propType =>
     '❌ Cannot generate document for a nested type! ' + propType.type,
 
-  formatPropDefinition: (propName, required, formattedPropType, description) =>
-    `${tab}${tab}${propName}${required ? '' : '?'}: ${formatInt(
+  formatPropDefinition: (
+    propName,
+    required,
+    formattedPropType,
+    description,
+    deprecated
+  ) =>
+    `${
+      deprecated ? `${tab}${tab}/** @deprecated */\n` : ''
+    }${tab}${tab}${propName}${required ? '' : '?'}: ${formatInt(
       formattedPropType
     )},\n`
 }

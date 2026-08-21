@@ -53,6 +53,7 @@ export type CultureBase = {|
     | 'other'
     | 'pedio'
     | 'spontaneous'
+    | 'wheat'
     | 'wine',
   form: 'liquid' | 'dry' | 'slant' | 'culture' | 'dregs',
   producer?: string,
@@ -668,6 +669,8 @@ export type WaterBase = {|
   iron?: ConcentrationType,
   nitrate?: ConcentrationType,
   nitrite?: ConcentrationType,
+  fluoride?: ConcentrationType,
+  /** @deprecated */
   flouride?: ConcentrationType,
   sulfate: ConcentrationType,
   chloride: ConcentrationType,
