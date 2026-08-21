@@ -11,12 +11,20 @@ module.exports = {
 
   addPropListWrapper: str => (str ? `{|\n${str}${tab}|}\n` : ''),
 
+  // A numeric enum is a union of number literals, not of quoted strings.
   formatEnum: enumValues =>
-    enumValues.reduce((str, val) => str + ` | "${val}"`, ''),
+    enumValues.reduce(
+      (str, val) =>
+        str + (typeof val === 'number' ? ` | ${val}` : ` | "${val}"`),
+      ''
+    ),
 
   formatArray: (ref, formattedType) => `${formattedType}[]`,
 
-  formatOneOf: (str, formattedRef) => str + ` | ${formattedRef}`,
+  // A branch that is itself a union already carries a leading `|`; keeping both
+  // would emit `| | "a"`.
+  formatOneOf: (str, formatted) =>
+    str + ` | ${String(formatted).replace(/^\s*\|\s*/, '')}`,
 
   formatParsedTypeRef: ({ typeName, fileName }) => typeName,
 
