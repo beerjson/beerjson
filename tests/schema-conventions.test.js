@@ -224,6 +224,30 @@ describe('objects and composition', () => {
     expect(found).toEqual([])
   })
 
+  // A composed type without unevaluatedProperties accepts any misspelled key,
+  // because additionalProperties cannot do the job next to an allOf. The four
+  // still open are blocked on format questions, not on effort: their own
+  // examples under tests/ use properties the types do not declare.
+  test('allOf compositions are closed to unknown keys', () => {
+    const found = []
+    for (const file of files) {
+      for (const [name, def] of Object.entries(schemas[file].$defs || {})) {
+        if (!def.allOf) continue
+        if (!('unevaluatedProperties' in def)) found.push(`${file}#${name}`)
+      }
+    }
+    expectOnlyKnown(found, [
+      // Recipe examples put the full variety record on an addition.
+      'hop.json#HopAdditionType',
+      // The BeerXML importer fills these with the style's ranges.
+      'style.json#RecipeStyleType',
+      // The BJCP and BA style guides carry 38 keys the type does not declare.
+      'style.json#StyleType',
+      // A recipe example records the pH of the water it added.
+      'water.json#WaterAdditionType'
+    ])
+  })
+
   // unevaluatedProperties belongs on the outermost composed type only. On a
   // base it would reject every property the extension adds.
   test('unevaluatedProperties is not declared on an allOf base', () => {

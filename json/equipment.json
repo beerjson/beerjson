@@ -39,6 +39,7 @@
     "EquipmentItemType": {
       "type": "object",
       "description": "EquipmentType provides necessary information for individual brewing equipment.",
+      "unevaluatedProperties": false,
       "allOf": [
         {
           "$ref": "#/$defs/EquipmentBase"

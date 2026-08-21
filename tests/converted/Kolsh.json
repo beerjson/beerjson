@@ -42,15 +42,14 @@
                 "value": 3.2412931
               },
               "origin": "Germany",
-              "supplier": "",
+              "producer": "",
               "grain_group": "base",
               "yield": {
                 "potential": {
                   "unit": "sg",
                   "value": 1.03726
                 }
-              },
-              "add_after_boil": false
+              }
             },
             {
               "name": "Vienna Malt",
@@ -64,15 +63,14 @@
                 "value": 0.8640194
               },
               "origin": "Germany",
-              "supplier": "",
+              "producer": "",
               "grain_group": "base",
               "yield": {
                 "potential": {
                   "unit": "sg",
                   "value": 1.03588
                 }
-              },
-              "add_after_boil": false
+              }
             },
             {
               "name": "Cara-Pils/Dextrine",
@@ -86,15 +84,14 @@
                 "value": 0.2164116
               },
               "origin": "US",
-              "supplier": "",
+              "producer": "",
               "grain_group": "base",
               "yield": {
                 "potential": {
                   "unit": "sg",
                   "value": 1.03312
                 }
-              },
-              "add_after_boil": false
+              }
             }
           ],
           "hop_additions": [
@@ -110,7 +107,6 @@
                 "unit": "%",
                 "value": 4
               },
-              "use": "boil",
               "amount": {
                 "unit": "kg",
                 "value": 0.0332677
@@ -135,7 +131,6 @@
                 "unit": "%",
                 "value": 4
               },
-              "use": "boil",
               "amount": {
                 "unit": "kg",
                 "value": 0.0166339
@@ -153,7 +148,6 @@
             {
               "name": "Whirlfloc Tablet",
               "type": "fining",
-              "use": "boil",
               "amount": {
                 "unit": "l",
                 "value": 0.412685
