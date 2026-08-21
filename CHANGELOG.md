@@ -66,6 +66,20 @@ release. The npm package is still 1.0.2, so none of it has reached consumers.
   a message and ajv's params.
 - **`engines: node >= 22`** declared, and CI runs the suite on Node 22 and 24
   ([#216](https://github.com/beerjson/beerjson/issues/216)).
+- **`WaterBase.fluoride`**, spelled correctly
+  ([#214](https://github.com/beerjson/beerjson/issues/214)). The misspelled
+  `flouride` is kept and marked `deprecated`, so existing documents stay valid
+  and writers can migrate on their own schedule. Readers should accept either
+  and prefer `fluoride` when both are present. This is the first use of the
+  deprecation path that 2020-12 makes possible, and it is what #214 was blocked
+  on.
+- **`wheat` as a culture type**
+  ([#217](https://github.com/beerjson/beerjson/issues/217)). It was a yeast type
+  in BeerXML 1.0 with no BeerJSON equivalent, so a Hefeweizen strain had no
+  correct classification.
+- **Deprecations are visible in the generated output.** The markdown reference
+  marks a deprecated property, and the TypeScript and Flow declarations emit
+  `@deprecated`, so an editor strikes it through at the point of use.
 - **Nine of the thirteen `allOf`-composed types now reject unknown keys**, via
   2020-12's `unevaluatedProperties`: `CultureInformation`,
   `CultureAdditionType`, `EquipmentItemType`, `FermentableType`,
@@ -106,9 +120,16 @@ release. The npm package is still 1.0.2, so none of it has reached consumers.
 - **Kolbach Index** is a percentage, and is now typed as one
   ([#187](https://github.com/beerjson/beerjson/pull/187),
   [#186](https://github.com/beerjson/beerjson/issues/186)).
+- **`TimingType.time` now says what it is measured from**
+  ([#220](https://github.com/beerjson/beerjson/issues/220)). The reference point
+  depends on `use`: forwards from the start of the step for mash, fermentation
+  and packaging additions, backwards from the end for boil additions. The
+  previous description gave only the fermentation case, leaving implementers to
+  infer the boil convention.
 - **Typos** in `beer.json` and `fermentable.json` descriptions
   ([#199](https://github.com/beerjson/beerjson/pull/199),
-  [#200](https://github.com/beerjson/beerjson/pull/200)).
+  [#200](https://github.com/beerjson/beerjson/pull/200)), and "transffered" in
+  `recipe.json` ([#204](https://github.com/beerjson/beerjson/issues/204)).
 - **`$id` values** pointed at the `master` branch, renamed to `main` in
   [#235](https://github.com/beerjson/beerjson/pull/235).
 - **ajv** updated to `^8.20.0`, clearing GHSA-2g4f-4pwh-qvx6, and moved to
