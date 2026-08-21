@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh issue list --limit 100 --state open --json number,title,createdAt,updatedAt,labels,comments,author --template '{{range .}}#{{.number}} [{{.createdAt|timeago}}] \\({{len .comments}}c\\) {{.title}} — @{{.author.login}} {{range .labels}}[{{.name}}]{{end}} *)"
+    ]
+  }
+}
