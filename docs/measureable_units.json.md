@@ -2,25 +2,25 @@ The schema defines the following types:
 
 ## VolumeType 
 
-*no description yet*
+A volume, as a magnitude and its unit.
 
 **VolumeType** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [VolumeUnitType](#volumeunittype)|  |
-| **value** | ✅ | number|  |
+| **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## MassType 
 
-*no description yet*
+A mass, as a magnitude and its unit.
 
 **MassType** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [MassUnitType](#massunittype)|  |
-| **value** | ✅ | number|  |
+| **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## DiastaticPowerType 
 
@@ -31,51 +31,51 @@ Diastatic power is a measurement of malted grains enzymatic content. A value of 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [DiastaticPowerUnitType](#diastaticpowerunittype)|  |
-| **value** | ✅ | number|  |
+| **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## TemperatureType 
 
-*no description yet*
+A temperature, as a magnitude and its unit.
 
 **TemperatureType** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [TemperatureUnitType](#temperatureunittype)|  |
-| **value** | ✅ | number|  |
+| **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## PressureType 
 
-*no description yet*
+A pressure, as a magnitude and its unit.
 
 **PressureType** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [PressureUnitType](#pressureunittype)|  |
-| **value** | ✅ | number|  |
+| **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## AcidityType 
 
-*no description yet*
+An acidity, as a magnitude and its unit.
 
 **AcidityType** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [AcidityUnitType](#acidityunittype)|  |
-| **value** | ✅ | number|  |
+| **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## TimeType 
 
-*no description yet*
+A duration, as a magnitude and its unit.
 
 **TimeType** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [TimeUnitType](#timeunittype)|  |
-| **value** | ✅ | integer|  |
+| **value** | ✅ | integer| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## ColorType 
 
@@ -86,29 +86,29 @@ ColorType supports both grain color properties, such as Lovibond, and wort color
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [ColorUnitType](#colorunittype)|  |
-| **value** | ✅ | number|  |
+| **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## CarbonationType 
 
-*no description yet*
+A carbonation level, as a magnitude and its unit.
 
 **CarbonationType** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [CarbonationUnitType](#carbonationunittype)|  |
-| **value** | ✅ | number|  |
+| **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## BitternessType 
 
-*no description yet*
+A bitterness, as a magnitude and its unit.
 
 **BitternessType** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [BitternessUnitType](#bitternessunittype)|  |
-| **value** | ✅ | number|  |
+| **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## GravityType 
 
@@ -119,7 +119,7 @@ Gravity refers to the both the measurements of percent of sugar content, ie plat
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [GravityUnitType](#gravityunittype)|  |
-| **value** | ✅ | number|  |
+| **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## SpecificHeatType 
 
@@ -130,7 +130,7 @@ Specific heat is the measurement of the amount of heat required to raise a given
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [SpecificHeatUnitType](#specificheatunittype)|  |
-| **value** | ✅ | number|  |
+| **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## ConcentrationType 
 
@@ -141,7 +141,7 @@ Examples for concentration include ppm, ppb, and mg/l.
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [ConcentrationUnitType](#concentrationunittype)|  |
-| **value** | ✅ | number|  |
+| **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## SpecificVolumeType 
 
@@ -152,7 +152,7 @@ Specific volume is the inverse of density, with units of volume over mass, ie qt
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [SpecificVolumeUnitType](#specificvolumeunittype)|  |
-| **value** | ✅ | number|  |
+| **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## UnitType 
 
@@ -163,7 +163,7 @@ UnitType is used where unitless amounts are required, such as 1 apple, or 1 yeas
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [UnitUnitType](#unitunittype)|  |
-| **value** | ✅ | number|  |
+| **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## ViscosityType 
 
@@ -174,11 +174,11 @@ Viscosity of fluids
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [ViscosityUnitType](#viscosityunittype)|  |
-| **value** | ✅ | number|  |
+| **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## CarbonationRangeType 
 
-*no description yet*
+A range of carbonation levels, as a minimum and a maximum.
 
 **CarbonationRangeType** is an object with these properties:
 
@@ -189,7 +189,7 @@ Viscosity of fluids
 
 ## BitternessRangeType 
 
-*no description yet*
+A range of bitterness values, as a minimum and a maximum.
 
 **BitternessRangeType** is an object with these properties:
 
@@ -200,7 +200,7 @@ Viscosity of fluids
 
 ## TemperatureRangeType 
 
-*no description yet*
+A range of temperatures, as a minimum and a maximum.
 
 **TemperatureRangeType** is an object with these properties:
 
@@ -211,7 +211,7 @@ Viscosity of fluids
 
 ## ColorRangeType 
 
-*no description yet*
+A range of colors, as a minimum and a maximum.
 
 **ColorRangeType** is an object with these properties:
 
@@ -222,7 +222,7 @@ Viscosity of fluids
 
 ## GravityRangeType 
 
-*no description yet*
+A range of gravities, as a minimum and a maximum.
 
 **GravityRangeType** is an object with these properties:
 
@@ -233,7 +233,7 @@ Viscosity of fluids
 
 ## PercentRangeType 
 
-*no description yet*
+A range of percentages, as a minimum and a maximum.
 
 **PercentRangeType** is an object with these properties:
 
@@ -244,103 +244,103 @@ Viscosity of fluids
 
 ## VolumeUnitType 
 
-*no description yet*
+Units in which a volume may be expressed.
 
 `"ml"`<br/>`"l"`<br/>`"tsp"`<br/>`"tbsp"`<br/>`"floz"`<br/>`"cup"`<br/>`"pt"`<br/>`"qt"`<br/>`"gal"`<br/>`"bbl"`<br/>`"ifloz"`<br/>`"ipt"`<br/>`"iqt"`<br/>`"igal"`<br/>`"ibbl"`
 ## MassUnitType 
 
-*no description yet*
+Units in which a mass may be expressed.
 
 `"mg"`<br/>`"g"`<br/>`"kg"`<br/>`"lb"`<br/>`"oz"`
 ## DiastaticPowerUnitType 
 
-*no description yet*
+Units in which diastatic power may be expressed.
 
 `"Lintner"`<br/>`"WK"`
 ## TemperatureUnitType 
 
-*no description yet*
+Units in which a temperature may be expressed.
 
 `"C"`<br/>`"F"`
 ## AcidityUnitType 
 
-*no description yet*
+Units in which acidity may be expressed.
 
 `"pH"`
 ## PressureUnitType 
 
-*no description yet*
+Units in which a pressure may be expressed.
 
 `"kPa"`<br/>`"psi"`<br/>`"bar"`
 ## TimeUnitType 
 
-*no description yet*
+Units in which a duration may be expressed.
 
 `"sec"`<br/>`"min"`<br/>`"hr"`<br/>`"day"`<br/>`"week"`
 ## ColorUnitType 
 
-*no description yet*
+Units in which a color may be expressed.
 
 `"EBC"`<br/>`"Lovi"`<br/>`"SRM"`
 ## CarbonationUnitType 
 
-*no description yet*
+Units in which carbonation may be expressed.
 
 `"vols"`<br/>`"g/l"`
 ## BitternessUnitType 
 
-*no description yet*
+Units in which bitterness may be expressed.
 
 `"IBUs"`
 ## GravityUnitType 
 
-*no description yet*
+Units in which a gravity may be expressed.
 
 `"sg"`<br/>`"plato"`<br/>`"brix"`
 ## ConcentrationUnitType 
 
-*no description yet*
+Units in which a concentration may be expressed.
 
 `"ppm"`<br/>`"ppb"`<br/>`"mg/l"`
 ## SpecificHeatUnitType 
 
-*no description yet*
+Units in which specific heat may be expressed.
 
 `"Cal/(g C)"`<br/>`"J/(kg K)"`<br/>`"BTU/(lb F)"`
 ## SpecificVolumeUnitType 
 
-*no description yet*
+Units in which a specific volume may be expressed.
 
 `"qt/lb"`<br/>`"gal/lb"`<br/>`"gal/oz"`<br/>`"l/g"`<br/>`"l/kg"`<br/>`"floz/oz"`<br/>`"m^3/kg"`<br/>`"ft^3/lb"`
 ## UnitUnitType 
 
-*no description yet*
+Units in which a countable or dimensionless quantity may be expressed.
 
 `"1"`<br/>`"unit"`<br/>`"each"`<br/>`"dimensionless"`<br/>`"pkg"`
 ## DateType 
 
-*no description yet*
+A date, as ISO 8601 YYYY-MM-DD, optionally with a time as YYYY-MM-DDThh:mm:ss.
 
 RegExp pattern: `\d{4}-\d{2}-\d{2}|\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}`
 ## PercentType 
 
-*no description yet*
+A percentage, as a magnitude and its unit.
 
 **PercentType** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [PercentUnitType](#percentunittype)|  |
-| **value** | ✅ | number|  |
+| **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## PercentUnitType 
 
-*no description yet*
+Units in which a percentage may be expressed.
 
 `"%"`
 ## QualitativeRangeType 
 
-*no description yet*
+A qualitative scale, for a property that is judged rather than measured.
 
 `"very low"`<br/>`"low"`<br/>`"medium low"`<br/>`"medium"`<br/>`"medium high"`<br/>`"high"`<br/>`"very high"`
 ## VersionType 
@@ -350,6 +350,6 @@ The version of the BeerJSON format this document is written against, as MAJOR.MI
  `1`<br/>`1.1` or  `2.01`<br/>`2.06`
 ## ViscosityUnitType 
 
-*no description yet*
+Units in which a viscosity may be expressed.
 
 `"cP"`<br/>`"mPa-s"`

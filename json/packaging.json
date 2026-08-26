@@ -10,18 +10,22 @@
       "additionalProperties": false,
       "properties": {
         "name": {
+          "description": "Name of the packaging procedure.",
           "type": "string"
         },
         "packaged_volume": {
           "$ref": "measureable_units.json#/$defs/VolumeType"
         },
         "description": {
+          "description": "Free text description of the packaging procedure.",
           "type": "string"
         },
         "notes": {
+          "description": "Free text notes about the packaging procedure.",
           "type": "string"
         },
         "packaging_vessels": {
+          "description": "The vessels the beer is packaged into.",
           "type": "array",
           "items": {
             "$ref": "packaging_vessel.json#/$defs/PackagingVesselType"

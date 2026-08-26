@@ -8,10 +8,10 @@ MiscellaneousBase provides unique properties to identify individual records of i
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | ✅ | string|  |
-| **producer** |  | string|  |
-| **product_id** |  | string|  |
-| **type** | ✅ | `"spice"`<br/>`"fining"`<br/>`"water agent"`<br/>`"herb"`<br/>`"flavor"`<br/>`"wood"`<br/>`"other"`|  |
+| **name** | ✅ | string| Name of the ingredient. |
+| **producer** |  | string| The company that produced the ingredient. |
+| **product_id** |  | string| The producer's catalogue number for the ingredient. |
+| **type** | ✅ | `"spice"`<br/>`"fining"`<br/>`"water agent"`<br/>`"herb"`<br/>`"flavor"`<br/>`"wood"`<br/>`"other"`| The kind of ingredient, which indicates what it is used for. |
 
 ## MiscellaneousType 
 
@@ -22,7 +22,7 @@ MiscellaneousType collects the attributes of an ingredient to store as record in
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **use_for** |  | string| Used to describe the purpose of the miscellaneous ingredient, e.g. whirlfloc is used for clarity. |
-| **notes** |  | string|  |
+| **notes** |  | string| Free text notes about the ingredient. |
 | **inventory** |  | [MiscellaneousInventoryType](#miscellaneousinventorytype)|  |
 
 ## MiscellaneousAdditionType 
@@ -34,15 +34,15 @@ MiscellaneousAdditionType collects the attributes of each miscellaneous ingredie
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **timing** |  | [TimingType](timing.json.md#timingtype)| The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step. |
-| **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype) or  [UnitType](measureable_units.json.md#unittype)|  |
+| **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype) or  [UnitType](measureable_units.json.md#unittype)| The quantity added: by mass, by volume, or by unit for a countable item such as a tablet. |
 
 ## MiscellaneousInventoryType 
 
-*no description yet*
+The quantity of a miscellaneous ingredient held in stock.
 
 **MiscellaneousInventoryType** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **amount** | ✅ |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype) or  [UnitType](measureable_units.json.md#unittype)|  |
+| **amount** | ✅ |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype) or  [UnitType](measureable_units.json.md#unittype)| The quantity held in stock: by mass, by volume, or by unit for a countable item. |
 

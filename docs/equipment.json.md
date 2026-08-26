@@ -8,9 +8,9 @@ The descriptive base type for brew day equipment. Provides unique properties to 
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | ✅ | string|  |
-| **type** |  | string|  |
-| **form** | ✅ | `"HLT"`<br/>`"Mash Tun"`<br/>`"Lauter Tun"`<br/>`"Brew Kettle"`<br/>`"Fermenter"`<br/>`"Aging Vessel"`<br/>`"Packaging Vessel"`|  |
+| **name** | ✅ | string| Name of the equipment item. |
+| **type** |  | string| Free text type of the equipment item, such as its material or model. Use form for the role it plays in the brewhouse. |
+| **form** | ✅ | `"HLT"`<br/>`"Mash Tun"`<br/>`"Lauter Tun"`<br/>`"Brew Kettle"`<br/>`"Fermenter"`<br/>`"Aging Vessel"`<br/>`"Packaging Vessel"`| The item's role in the brewhouse. |
 | **maximum_volume** | ✅ | [VolumeType](measureable_units.json.md#volumetype)|  |
 
 ## EquipmentItemType 
@@ -27,7 +27,7 @@ EquipmentType provides necessary information for individual brewing equipment.
 | **drain_rate_per_minute** |  | [VolumeType](measureable_units.json.md#volumetype)| The volume that leaves the kettle, especially important for non-immersion chillers that cool the wort as it leaves the kettle. |
 | **weight** |  | [MassType](measureable_units.json.md#masstype)| The weight of the piece of equipment, especially important for when the mashtun is not preheated. |
 | **specific_heat** |  | [SpecificHeatType](measureable_units.json.md#specificheattype)| The specific heat of the piece of equipment, expressed in Cal/(g*C), especially important for when the mashtun is not preheated. |
-| **notes** |  | string|  |
+| **notes** |  | string| Free text notes about the equipment item. |
 
 ## EquipmentType 
 
@@ -37,6 +37,6 @@ Provides necessary information for brewing equipment set.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | ✅ | string|  |
-| **equipment_items** | ✅ | array of [EquipmentItemType](equipment.json.md#equipmentitemtype)|  |
+| **name** | ✅ | string| Name of the equipment set. |
+| **equipment_items** | ✅ | array of [EquipmentItemType](equipment.json.md#equipmentitemtype)| The vessels and other items that make up the equipment set. |
 

@@ -8,8 +8,8 @@ FermentationProcedureType defines the procedure for performing fermentation.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | ✅ | string|  |
-| **description** |  | string|  |
-| **notes** |  | string|  |
-| **fermentation_steps** | ✅ | array of [FermentationStepType](fermentation_step.json.md#fermentationsteptype)|  |
+| **name** | ✅ | string| Name of the fermentation procedure. |
+| **description** |  | string| Free text description of the fermentation procedure. |
+| **notes** |  | string| Free text notes about the fermentation procedure. |
+| **fermentation_steps** | ✅ | array of [FermentationStepType](fermentation_step.json.md#fermentationsteptype)| The steps that make up the fermentation, in the order they are performed. |
 

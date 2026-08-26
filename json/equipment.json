@@ -9,12 +9,15 @@
       "description": "The descriptive base type for brew day equipment. Provides unique properties to fully describe the recipe.",
       "properties": {
         "name": {
+          "description": "Name of the equipment item.",
           "type": "string"
         },
         "type": {
+          "description": "Free text type of the equipment item, such as its material or model. Use form for the role it plays in the brewhouse.",
           "type": "string"
         },
         "form": {
+          "description": "The item's role in the brewhouse.",
           "type": "string",
           "enum": [
             "HLT",
@@ -70,6 +73,7 @@
               "$ref": "measureable_units.json#/$defs/SpecificHeatType"
             },
             "notes": {
+              "description": "Free text notes about the equipment item.",
               "type": "string"
             }
           }
@@ -85,11 +89,12 @@
       "additionalProperties": false,
       "properties": {
         "name": {
+          "description": "Name of the equipment set.",
           "type": "string"
         },
         "equipment_items": {
+          "description": "The vessels and other items that make up the equipment set.",
           "type": "array",
-          "description": "",
           "items": {
             "$ref": "equipment.json#/$defs/EquipmentItemType"
           }
