@@ -10,9 +10,11 @@
       "additionalProperties": false,
       "properties": {
         "name": {
+          "description": "Name of the fermentation step.",
           "type": "string"
         },
         "description": {
+          "description": "Free text description of the fermentation step.",
           "type": "string"
         },
         "start_temperature": {
@@ -41,6 +43,7 @@
           "$ref": "measureable_units.json#/$defs/AcidityType"
         },
         "vessel": {
+          "description": "Name of the vessel the step takes place in, which is how a transfer between vessels is recorded.",
           "type": "string"
         },
         "vessel_pressure": {

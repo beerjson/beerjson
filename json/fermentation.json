@@ -10,15 +10,19 @@
       "additionalProperties": false,
       "properties": {
         "name": {
+          "description": "Name of the fermentation procedure.",
           "type": "string"
         },
         "description": {
+          "description": "Free text description of the fermentation procedure.",
           "type": "string"
         },
         "notes": {
+          "description": "Free text notes about the fermentation procedure.",
           "type": "string"
         },
         "fermentation_steps": {
+          "description": "The steps that make up the fermentation, in the order they are performed.",
           "type": "array",
           "minItems": 1,
           "items": {

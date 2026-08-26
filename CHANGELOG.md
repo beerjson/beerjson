@@ -14,6 +14,33 @@ than entries written at the time.
 
 ## [Unreleased]
 
+### Added
+
+- **Every property and every type in the format now has a description**, which
+  completes the documentation work tracked by
+  [#89](https://github.com/beerjson/beerjson/issues/89). 121 properties and 42
+  types had none, so the published reference showed blank cells and
+  "_no description yet_" against roughly a third of the format, and the
+  generated TypeScript and Flow declarations carried no explanatory text at all.
+  Under 2020-12 these strings also reach validators, which draft-07 ignored when
+  they sat next to a `$ref`.
+
+  Descriptions say what a value means and, where it is not obvious, what it is
+  measured relative to or which unit it is in. Two ambiguities the format has
+  but does not resolve are named rather than papered over:
+  `RecipeType.calories_per_pint` does not say which pint, and `TasteType.rating`
+  does not define a scale.
+
+- **The conventions test enforces descriptions outright**, replacing the
+  per-file budget: a property or type without one fails, and so does a
+  description that is present but blank.
+
+### Fixed
+
+- **`EquipmentType.equipment_items` had `"description": ""`**, which reads as
+  documented to any tooling checking for the key's presence while rendering as
+  an empty cell in the reference.
+
 ## [1.1.0] - 2026-08-21
 
 Format version **1.1**. The first release since October 2021: everything below

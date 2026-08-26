@@ -10,9 +10,11 @@
       "additionalProperties": false,
       "properties": {
         "name": {
+          "description": "Name of the recipe.",
           "type": "string"
         },
         "type": {
+          "description": "The kind of beverage the recipe produces and, for beer, the mashing approach it uses.",
           "type": "string",
           "enum": [
             "cider",
@@ -27,9 +29,11 @@
           ]
         },
         "author": {
+          "description": "The person who wrote the recipe.",
           "type": "string"
         },
         "coauthor": {
+          "description": "An additional author of the recipe.",
           "type": "string"
         },
         "created": {
@@ -55,6 +59,7 @@
           "$ref": "mash.json#/$defs/MashProcedureType"
         },
         "notes": {
+          "description": "Free text notes about the recipe.",
           "type": "string"
         },
         "original_gravity": {
@@ -105,6 +110,7 @@
           "$ref": "#/$defs/TasteType"
         },
         "calories_per_pint": {
+          "description": "The estimated energy content of the finished beer, in calories per pint.",
           "type": "number"
         }
       },
@@ -144,6 +150,7 @@
       ]
     },
     "IngredientsType": {
+      "description": "Everything a recipe calls for, grouped by kind of ingredient.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -188,13 +195,16 @@
       ]
     },
     "TasteType": {
+      "description": "A tasting record for the finished beer.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "notes": {
+          "description": "Free text tasting notes for the finished beer.",
           "type": "string"
         },
         "rating": {
+          "description": "A subjective score for the finished beer, on a scale the recording software defines.",
           "type": "number"
         }
       },

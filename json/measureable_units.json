@@ -5,6 +5,7 @@
   "additionalProperties": false,
   "$defs": {
     "VolumeType": {
+      "description": "A volume, as a magnitude and its unit.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -12,6 +13,7 @@
           "$ref": "#/$defs/VolumeUnitType"
         },
         "value": {
+          "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
           "type": "number"
         }
       },
@@ -21,6 +23,7 @@
       ]
     },
     "MassType": {
+      "description": "A mass, as a magnitude and its unit.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -28,6 +31,7 @@
           "$ref": "#/$defs/MassUnitType"
         },
         "value": {
+          "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
           "type": "number"
         }
       },
@@ -45,6 +49,7 @@
           "$ref": "#/$defs/DiastaticPowerUnitType"
         },
         "value": {
+          "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
           "type": "number"
         }
       },
@@ -54,6 +59,7 @@
       ]
     },
     "TemperatureType": {
+      "description": "A temperature, as a magnitude and its unit.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -61,6 +67,7 @@
           "$ref": "#/$defs/TemperatureUnitType"
         },
         "value": {
+          "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
           "type": "number"
         }
       },
@@ -70,6 +77,7 @@
       ]
     },
     "PressureType": {
+      "description": "A pressure, as a magnitude and its unit.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -77,6 +85,7 @@
           "$ref": "#/$defs/PressureUnitType"
         },
         "value": {
+          "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
           "type": "number"
         }
       },
@@ -86,6 +95,7 @@
       ]
     },
     "AcidityType": {
+      "description": "An acidity, as a magnitude and its unit.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -93,6 +103,7 @@
           "$ref": "#/$defs/AcidityUnitType"
         },
         "value": {
+          "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
           "type": "number"
         }
       },
@@ -102,6 +113,7 @@
       ]
     },
     "TimeType": {
+      "description": "A duration, as a magnitude and its unit.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -109,6 +121,7 @@
           "$ref": "#/$defs/TimeUnitType"
         },
         "value": {
+          "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
           "type": "integer"
         }
       },
@@ -126,6 +139,7 @@
           "$ref": "#/$defs/ColorUnitType"
         },
         "value": {
+          "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
           "type": "number"
         }
       },
@@ -135,6 +149,7 @@
       ]
     },
     "CarbonationType": {
+      "description": "A carbonation level, as a magnitude and its unit.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -142,6 +157,7 @@
           "$ref": "#/$defs/CarbonationUnitType"
         },
         "value": {
+          "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
           "type": "number"
         }
       },
@@ -151,6 +167,7 @@
       ]
     },
     "BitternessType": {
+      "description": "A bitterness, as a magnitude and its unit.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -158,6 +175,7 @@
           "$ref": "#/$defs/BitternessUnitType"
         },
         "value": {
+          "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
           "type": "number"
         }
       },
@@ -175,6 +193,7 @@
           "$ref": "#/$defs/GravityUnitType"
         },
         "value": {
+          "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
           "type": "number"
         }
       },
@@ -192,6 +211,7 @@
           "$ref": "#/$defs/SpecificHeatUnitType"
         },
         "value": {
+          "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
           "type": "number"
         }
       },
@@ -209,6 +229,7 @@
           "$ref": "#/$defs/ConcentrationUnitType"
         },
         "value": {
+          "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
           "type": "number"
         }
       },
@@ -226,6 +247,7 @@
           "$ref": "#/$defs/SpecificVolumeUnitType"
         },
         "value": {
+          "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
           "type": "number"
         }
       },
@@ -243,6 +265,7 @@
           "$ref": "#/$defs/UnitUnitType"
         },
         "value": {
+          "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
           "type": "number"
         }
       },
@@ -260,6 +283,7 @@
           "$ref": "#/$defs/ViscosityUnitType"
         },
         "value": {
+          "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
           "type": "number"
         }
       },
@@ -269,6 +293,7 @@
       ]
     },
     "CarbonationRangeType": {
+      "description": "A range of carbonation levels, as a minimum and a maximum.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -285,6 +310,7 @@
       ]
     },
     "BitternessRangeType": {
+      "description": "A range of bitterness values, as a minimum and a maximum.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -301,6 +327,7 @@
       ]
     },
     "TemperatureRangeType": {
+      "description": "A range of temperatures, as a minimum and a maximum.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -317,6 +344,7 @@
       ]
     },
     "ColorRangeType": {
+      "description": "A range of colors, as a minimum and a maximum.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -333,6 +361,7 @@
       ]
     },
     "GravityRangeType": {
+      "description": "A range of gravities, as a minimum and a maximum.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -349,6 +378,7 @@
       ]
     },
     "PercentRangeType": {
+      "description": "A range of percentages, as a minimum and a maximum.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -365,6 +395,7 @@
       ]
     },
     "VolumeUnitType": {
+      "description": "Units in which a volume may be expressed.",
       "type": "string",
       "enum": [
         "ml",
@@ -385,6 +416,7 @@
       ]
     },
     "MassUnitType": {
+      "description": "Units in which a mass may be expressed.",
       "type": "string",
       "enum": [
         "mg",
@@ -395,6 +427,7 @@
       ]
     },
     "DiastaticPowerUnitType": {
+      "description": "Units in which diastatic power may be expressed.",
       "type": "string",
       "enum": [
         "Lintner",
@@ -402,6 +435,7 @@
       ]
     },
     "TemperatureUnitType": {
+      "description": "Units in which a temperature may be expressed.",
       "type": "string",
       "enum": [
         "C",
@@ -409,12 +443,14 @@
       ]
     },
     "AcidityUnitType": {
+      "description": "Units in which acidity may be expressed.",
       "type": "string",
       "enum": [
         "pH"
       ]
     },
     "PressureUnitType": {
+      "description": "Units in which a pressure may be expressed.",
       "type": "string",
       "enum": [
         "kPa",
@@ -423,6 +459,7 @@
       ]
     },
     "TimeUnitType": {
+      "description": "Units in which a duration may be expressed.",
       "type": "string",
       "enum": [
         "sec",
@@ -433,6 +470,7 @@
       ]
     },
     "ColorUnitType": {
+      "description": "Units in which a color may be expressed.",
       "type": "string",
       "enum": [
         "EBC",
@@ -441,6 +479,7 @@
       ]
     },
     "CarbonationUnitType": {
+      "description": "Units in which carbonation may be expressed.",
       "type": "string",
       "enum": [
         "vols",
@@ -448,12 +487,14 @@
       ]
     },
     "BitternessUnitType": {
+      "description": "Units in which bitterness may be expressed.",
       "type": "string",
       "enum": [
         "IBUs"
       ]
     },
     "GravityUnitType": {
+      "description": "Units in which a gravity may be expressed.",
       "type": "string",
       "enum": [
         "sg",
@@ -462,6 +503,7 @@
       ]
     },
     "ConcentrationUnitType": {
+      "description": "Units in which a concentration may be expressed.",
       "type": "string",
       "enum": [
         "ppm",
@@ -470,6 +512,7 @@
       ]
     },
     "SpecificHeatUnitType": {
+      "description": "Units in which specific heat may be expressed.",
       "type": "string",
       "enum": [
         "Cal/(g C)",
@@ -478,6 +521,7 @@
       ]
     },
     "SpecificVolumeUnitType": {
+      "description": "Units in which a specific volume may be expressed.",
       "type": "string",
       "enum": [
         "qt/lb",
@@ -491,6 +535,7 @@
       ]
     },
     "UnitUnitType": {
+      "description": "Units in which a countable or dimensionless quantity may be expressed.",
       "type": "string",
       "enum": [
         "1",
@@ -501,10 +546,12 @@
       ]
     },
     "DateType": {
+      "description": "A date, as ISO 8601 YYYY-MM-DD, optionally with a time as YYYY-MM-DDThh:mm:ss.",
       "type": "string",
       "pattern": "\\d{4}-\\d{2}-\\d{2}|\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}"
     },
     "PercentType": {
+      "description": "A percentage, as a magnitude and its unit.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -512,6 +559,7 @@
           "$ref": "#/$defs/PercentUnitType"
         },
         "value": {
+          "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
           "type": "number"
         }
       },
@@ -521,12 +569,14 @@
       ]
     },
     "PercentUnitType": {
+      "description": "Units in which a percentage may be expressed.",
       "type": "string",
       "enum": [
         "%"
       ]
     },
     "QualitativeRangeType": {
+      "description": "A qualitative scale, for a property that is judged rather than measured.",
       "type": "string",
       "enum": [
         "very low",
@@ -560,6 +610,7 @@
       ]
     },
     "ViscosityUnitType": {
+      "description": "Units in which a viscosity may be expressed.",
       "type": "string",
       "enum": [
         "cP",

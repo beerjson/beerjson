@@ -8,8 +8,8 @@ WaterBase provides unique properties to identify individual records of  brewing 
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | ✅ | string|  |
-| **producer** |  | string|  |
+| **name** | ✅ | string| Name of the water profile. |
+| **producer** |  | string| The utility or source the profile describes. |
 | **calcium** | ✅ | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
 | **bicarbonate** | ✅ | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
 | **carbonate** |  | [ConcentrationType](measureable_units.json.md#concentrationtype)|  |
@@ -32,8 +32,8 @@ WaterType collects the attributes of a brewing water to store as record informat
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **pH** |  | number|  |
-| **notes** |  | string|  |
+| **pH** |  | number| The pH of the water. |
+| **notes** |  | string| Free text notes about the water profile. |
 
 ## WaterAdditionType 
 

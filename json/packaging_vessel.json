@@ -10,9 +10,11 @@
       "additionalProperties": false,
       "properties": {
         "name": {
+          "description": "Name of the packaging vessel.",
           "type": "string"
         },
         "type": {
+          "description": "The kind of vessel the beer is packaged into.",
           "type": "string",
           "enum": [
             "keg",
@@ -24,6 +26,7 @@
           ]
         },
         "description": {
+          "description": "Free text description of the packaging vessel.",
           "type": "string"
         },
         "package_date": {
@@ -51,15 +54,18 @@
           "$ref": "measureable_units.json#/$defs/AcidityType"
         },
         "carbonation": {
+          "description": "The carbonation of the beer in this vessel, in volumes of CO2.",
           "type": "number"
         },
         "vessel_volume": {
           "$ref": "measureable_units.json#/$defs/VolumeType"
         },
         "vessel_quantity": {
+          "description": "How many vessels of this kind were filled.",
           "type": "number"
         },
         "graphics": {
+          "description": "Artwork applied to the vessel, such as labels and cap prints.",
           "type": "array",
           "items": {
             "$ref": "packaging_graphic.json#/$defs/PackagingGraphicType"

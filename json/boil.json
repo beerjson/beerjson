@@ -10,12 +10,15 @@
       "additionalProperties": false,
       "properties": {
         "name": {
+          "description": "Name of the boil procedure.",
           "type": "string"
         },
         "description": {
+          "description": "Free text description of the boil procedure.",
           "type": "string"
         },
         "notes": {
+          "description": "Free text notes about the boil procedure.",
           "type": "string"
         },
         "pre_boil_size": {
@@ -25,6 +28,7 @@
           "$ref": "measureable_units.json#/$defs/TimeType"
         },
         "boil_steps": {
+          "description": "The steps that make up the boil, in the order they are performed.",
           "type": "array",
           "items": {
             "$ref": "boil_step.json#/$defs/BoilStepType"

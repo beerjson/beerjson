@@ -345,51 +345,45 @@ describe('measurements', () => {
 
 describe('descriptions', () => {
   /**
-   * Every property should carry a description: docs/ is generated from these
-   * strings and they are the only documentation an implementer gets.
+   * Every property carries a description. docs/ is generated from these strings
+   * and they are the only documentation an implementer gets, so a property
+   * without one is undocumented in the published reference.
    *
-   * 121 properties still lack one. This is a per-file budget rather than a list
-   * so that filling them in is a normal part of touching a schema. Lower a
-   * number when you improve a file; the test fails if one goes up, and also if
-   * a number is now higher than reality, so the budget cannot drift.
+   * A property that is only a `$ref` is exempt: it inherits the referenced
+   * type's own description.
    */
-  const BUDGET = {
-    'boil.json': 4,
-    'boil_step.json': 2,
-    'culture.json': 14,
-    'equipment.json': 6,
-    'fermentable.json': 9,
-    'fermentation.json': 4,
-    'fermentation_step.json': 3,
-    'hop.json': 11,
-    'mash.json': 3,
-    'mash_step.json': 3,
-    'measureable_units.json': 17,
-    'misc.json': 7,
-    'packaging.json': 4,
-    'packaging_graphic.json': 3,
-    'packaging_vessel.json': 6,
-    'recipe.json': 8,
-    'style.json': 13,
-    'water.json': 4
-  }
+  const undescribed = file =>
+    walkProperties(schemas[file])
+      .filter(({ def }) => !def.description && !def.$ref)
+      .map(({ path: at }) => `${file}#${at}`)
 
-  test.each(files)('%s stays within its missing-description budget', file => {
-    const missing = walkProperties(schemas[file]).filter(
-      ({ def }) => !def.description && !def.$ref
-    ).length
-    expect(missing).toBe(BUDGET[file] || 0)
+  test.each(files)('every property in %s has a description', file => {
+    expect(undescribed(file)).toEqual([])
   })
 
-  test('the total is going down, not up', () => {
-    const total = files.reduce(
-      (sum, file) =>
-        sum +
-        walkProperties(schemas[file]).filter(
-          ({ def }) => !def.description && !def.$ref
-        ).length,
-      0
-    )
-    expect(total).toBeLessThanOrEqual(121)
+  test.each(files)('every type in %s has a description', file => {
+    const missing = Object.entries(schemas[file].$defs || {})
+      .filter(([, def]) => !def.description)
+      .map(([name]) => `${file}#${name}`)
+    expect(missing).toEqual([])
+  })
+
+  // An empty string passes a truthiness check in some tooling but documents
+  // nothing, and the published reference renders it as a blank cell.
+  test('no description is blank or whitespace', () => {
+    const blank = []
+    for (const file of files) {
+      for (const [name, def] of Object.entries(schemas[file].$defs || {})) {
+        if ('description' in def && !String(def.description).trim()) {
+          blank.push(`${file}#${name}`)
+        }
+      }
+      for (const { path: at, def } of walkProperties(schemas[file])) {
+        if ('description' in def && !String(def.description).trim()) {
+          blank.push(`${file}#${at}`)
+        }
+      }
+    }
+    expect(blank).toEqual([])
   })
 })

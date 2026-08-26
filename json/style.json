@@ -9,21 +9,26 @@
       "description": "The descriptive base type for both style guideline records, and recipe style provisions. Provides unique properties to identify individual styles",
       "properties": {
         "name": {
+          "description": "Name of the style.",
           "type": "string"
         },
         "category": {
+          "description": "Name of the category the style belongs to in its style guide.",
           "type": "string"
         },
         "category_number": {
+          "description": "Number of the category the style belongs to in its style guide.",
           "type": "integer"
         },
         "style_letter": {
+          "description": "The letter identifying the style within its category, as BJCP guidelines use.",
           "type": "string",
           "maxLength": 1,
           "minLength": 1,
           "pattern": "[A-Z ]"
         },
         "style_guide": {
+          "description": "The style guide the style is defined by, such as BJCP 2021 or Brewers Association 2017.",
           "type": "string"
         },
         "type": {
@@ -65,27 +70,35 @@
               "$ref": "measureable_units.json#/$defs/PercentRangeType"
             },
             "notes": {
+              "description": "Free text notes about the style.",
               "type": "string"
             },
             "aroma": {
+              "description": "The aroma a beer in this style should present.",
               "type": "string"
             },
             "appearance": {
+              "description": "The appearance a beer in this style should present.",
               "type": "string"
             },
             "flavor": {
+              "description": "The flavour a beer in this style should present.",
               "type": "string"
             },
             "mouthfeel": {
+              "description": "The mouthfeel a beer in this style should present.",
               "type": "string"
             },
             "overall_impression": {
+              "description": "A summary of the overall character of the style.",
               "type": "string"
             },
             "ingredients": {
+              "description": "The ingredients characteristic of the style.",
               "type": "string"
             },
             "examples": {
+              "description": "Commercial examples of the style.",
               "type": "string"
             }
           }
@@ -102,6 +115,7 @@
       ]
     },
     "StyleCategories": {
+      "description": "The kind of beverage a style describes.",
       "type": "string",
       "enum": [
         "beer",
