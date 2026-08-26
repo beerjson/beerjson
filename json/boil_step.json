@@ -10,9 +10,11 @@
       "additionalProperties": false,
       "properties": {
         "name": {
+          "description": "Name of the boil step.",
           "type": "string"
         },
         "description": {
+          "description": "Free text description of the boil step.",
           "type": "string"
         },
         "start_temperature": {

@@ -8,12 +8,12 @@ PackagingGraphicType - a representation of a graphic to be placed on a vessel.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **position** | ✅ | `"body front"`<br/>`"body back"`<br/>`"body wrap around"`<br/>`"neck front"`<br/>`"neck back"`<br/>`"neck wrap around"`<br/>`"cap"`<br/>`"carrier"`|  |
+| **position** | ✅ | `"body front"`<br/>`"body back"`<br/>`"body wrap around"`<br/>`"neck front"`<br/>`"neck back"`<br/>`"neck wrap around"`<br/>`"cap"`<br/>`"carrier"`| Where on the vessel the graphic is placed. |
 | **type** | ✅ | `"svg"`<br/>`"svgz"`<br/>`"ai"`<br/>`"cdr"`<br/>`"cdx"`<br/>`"odg"`<br/>`"eps"`<br/>`"pdf"`<br/>`"png"`<br/>`"jpg"`<br/>`"gif"`| File type |
 | **base64_data** |  | string| base64 encoded file. |
 | **URLS** |  | array of string| URLS to hosted version of image. |
 | **dpi** |  | number| Dots per inch. |
-| **width** |  | number|  |
-| **height** |  | number|  |
+| **width** |  | number| Width of the graphic, in the unit given by the units property. |
+| **height** |  | number| Height of the graphic, in the unit given by the units property. |
 | **units** |  | `"mm"`<br/>`"in"`| The unit type which are used for measurements. |
 

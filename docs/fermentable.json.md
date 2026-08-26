@@ -8,12 +8,12 @@ FermentableBase provides unique properties to identify individual records of fer
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | ✅ | string|  |
-| **type** | ✅ | `"dry extract"`<br/>`"extract"`<br/>`"grain"`<br/>`"sugar"`<br/>`"fruit"`<br/>`"juice"`<br/>`"honey"`<br/>`"other"`|  |
-| **origin** |  | string|  |
-| **producer** |  | string|  |
-| **product_id** |  | string|  |
-| **grain_group** |  | `"base"`<br/>`"caramel"`<br/>`"flaked"`<br/>`"roasted"`<br/>`"specialty"`<br/>`"smoked"`<br/>`"adjunct"`|  |
+| **name** | ✅ | string| Name of the fermentable, usually the name its producer sells it under. |
+| **type** | ✅ | `"dry extract"`<br/>`"extract"`<br/>`"grain"`<br/>`"sugar"`<br/>`"fruit"`<br/>`"juice"`<br/>`"honey"`<br/>`"other"`| The kind of fermentable, which determines how it is used and whether it has to be mashed. |
+| **origin** |  | string| The country or region the fermentable was grown or produced in. |
+| **producer** |  | string| The maltster or company that produced the fermentable. |
+| **product_id** |  | string| The producer's catalogue number for the fermentable. |
+| **grain_group** |  | `"base"`<br/>`"caramel"`<br/>`"flaked"`<br/>`"roasted"`<br/>`"specialty"`<br/>`"smoked"`<br/>`"adjunct"`| The role the grain plays in a grain bill. |
 | **yield** | ✅ | [YieldType](#yieldtype)|  |
 | **color** | ✅ | [ColorType](measureable_units.json.md#colortype)|  |
 
@@ -25,7 +25,7 @@ FermentableType collects the attributes of a fermentable ingredient to store as 
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **notes** |  | string|  |
+| **notes** |  | string| Free text notes about the fermentable. |
 | **moisture** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **alpha_amylase** |  | number| Where diastatic power gives the total amount of all enzymes, alpha amylase, also known as dextrinizing units, refers to only the total amount of alpa amylase in the malted grain. A value of 25-50 is desirable for base malt. |
 | **diastatic_power** |  | [DiastaticPowerType](measureable_units.json.md#diastaticpowertype)| Diastatic power is a measurement of malted grains enzymatic content. A value of 35 Lintner is needed to self convert, while a value of 100 or more is desirable. |
@@ -56,7 +56,7 @@ FermentableAdditionType collects the attributes of each fermentable ingredient f
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **timing** |  | [TimingType](timing.json.md#timingtype)| The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step. |
-| **amount** | ✅ |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)|  |
+| **amount** | ✅ |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)| The quantity added: by mass for a solid, or by volume for a liquid such as a syrup or juice. |
 
 ## YieldType 
 
@@ -73,11 +73,11 @@ The potential yield of the fermentable ingredient, supporting SG, or percentage.
 
 ## FermentableInventoryType 
 
-*no description yet*
+The quantity of a fermentable held in stock.
 
 **FermentableInventoryType** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)|  |
+| **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)| The quantity held in stock: by mass for a solid, or by volume for a liquid. |
 

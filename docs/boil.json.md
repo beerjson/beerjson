@@ -8,10 +8,10 @@ BoilProcedureType defines the procedure for performing a boil. A boil procedure 
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** |  | string|  |
-| **description** |  | string|  |
-| **notes** |  | string|  |
+| **name** |  | string| Name of the boil procedure. |
+| **description** |  | string| Free text description of the boil procedure. |
+| **notes** |  | string| Free text notes about the boil procedure. |
 | **pre_boil_size** |  | [VolumeType](measureable_units.json.md#volumetype)|  |
 | **boil_time** | ✅ | [TimeType](measureable_units.json.md#timetype)|  |
-| **boil_steps** |  | array of [BoilStepType](boil_step.json.md#boilsteptype)|  |
+| **boil_steps** |  | array of [BoilStepType](boil_step.json.md#boilsteptype)| The steps that make up the boil, in the order they are performed. |
 
