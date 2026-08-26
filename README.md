@@ -111,6 +111,20 @@ published as [@beerjson/beerjson](https://www.npmjs.com/package/@beerjson/beerjs
 npm install @beerjson/beerjson
 ```
 
+The registry copy can lag behind a release. To pin an exact release without
+going through the registry, install the tarball attached to it, or the git tag
+directly:
+
+```bash
+npm install https://github.com/beerjson/beerjson/releases/download/v1.1.0/beerjson-beerjson-1.1.0.tgz
+npm install github:beerjson/beerjson#v1.1.0
+```
+
+Both give the same package contents as the published one. The schemas themselves
+need no package manager at all: each carries a `$id` under
+`raw.githubusercontent.com/beerjson/beerjson/main/json/`, and a git submodule of
+this repository works well if you want them pinned and offline.
+
 ```js
 const beerjson = require('@beerjson/beerjson')
 

@@ -39,8 +39,49 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-  publish:
+  # Attaches the packed tarball to the GitHub release. This runs before, and
+  # independently of, the npm publish, so a release always produces an
+  # installable artifact even when registry credentials are unavailable:
+  #
+  #   npm install https://github.com/beerjson/beerjson/releases/download/vX.Y.Z/beerjson-beerjson-X.Y.Z.tgz
+  release-asset:
+    name: Attach tarball to the release
     if: github.event_name == 'release'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm test
+
+      - name: Check the tag matches package.json
+        run: |
+          tag="${GITHUB_REF_NAME#v}"
+          pkg="$(node -p 'require("./package.json").version')"
+          if [ "$tag" != "$pkg" ]; then
+            echo "::error::release tag $GITHUB_REF_NAME does not match package.json version $pkg"
+            exit 1
+          fi
+
+      - name: Pack and upload
+        run: |
+          tarball="$(npm pack --silent)"
+          gh release upload "$GITHUB_REF_NAME" "$tarball" --clobber
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish:
+    name: Publish to npm
+    if: github.event_name == 'release'
+    needs: [release-asset]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -56,17 +97,6 @@ jobs:
       - run: npm ci
 
       - run: npm test
-
-      # The release tag must match the version in package.json, or a release
-      # publishes something other than what it claims to.
-      - name: Check the tag matches package.json
-        run: |
-          tag="${GITHUB_REF_NAME#v}"
-          pkg="$(node -p 'require("./package.json").version')"
-          if [ "$tag" != "$pkg" ]; then
-            echo "::error::release tag $GITHUB_REF_NAME does not match package.json version $pkg"
-            exit 1
-          fi
 
       - uses: JS-DevTools/npm-publish@v4
         with:
