@@ -10,6 +10,7 @@
       "additionalProperties": false,
       "properties": {
         "name": {
+          "description": "Name of the mash procedure.",
           "type": "string"
         },
         "grain_temperature": {
@@ -17,9 +18,11 @@
           "$ref": "measureable_units.json#/$defs/TemperatureType"
         },
         "notes": {
+          "description": "Free text notes about the mash procedure.",
           "type": "string"
         },
         "mash_steps": {
+          "description": "The steps that make up the mash, in the order they are performed.",
           "type": "array",
           "minItems": 1,
           "items": {

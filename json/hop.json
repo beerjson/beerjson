@@ -9,21 +9,27 @@
       "description": "HopVarietyBase provides unique properties to identify individual records of a hop variety.",
       "properties": {
         "name": {
+          "description": "Name of the hop variety.",
           "type": "string"
         },
         "producer": {
+          "description": "The grower or company that supplied the hops.",
           "type": "string"
         },
         "product_id": {
+          "description": "The producer's catalogue or lot number for the hops.",
           "type": "string"
         },
         "origin": {
+          "description": "The country or region the hops were grown in.",
           "type": "string"
         },
         "year": {
+          "description": "The harvest year of the crop.",
           "type": "string"
         },
         "form": {
+          "description": "The physical form the hops are supplied in.",
           "type": "string",
           "enum": [
             "extract",
@@ -57,6 +63,7 @@
         {
           "properties": {
             "type": {
+              "description": "What the variety is typically used for, given its aroma and bittering character.",
               "type": "string",
               "enum": [
                 "aroma",
@@ -69,6 +76,7 @@
               ]
             },
             "notes": {
+              "description": "Free text notes about the variety.",
               "type": "string"
             },
             "percent_lost": {
@@ -76,6 +84,7 @@
               "$ref": "measureable_units.json#/$defs/PercentType"
             },
             "substitutes": {
+              "description": "Other varieties that can be used in place of this one.",
               "type": "string"
             },
             "oil_content": {
@@ -103,6 +112,7 @@
               "$ref": "timing.json#/$defs/TimingType"
             },
             "amount": {
+              "description": "The quantity added: by mass for whole, pellet or powdered hops, or by volume for an extract.",
               "oneOf": [
                 {
                   "$ref": "measureable_units.json#/$defs/VolumeType"
@@ -134,6 +144,7 @@
       }
     },
     "IBUMethodType": {
+      "description": "The formula used to estimate bitterness.",
       "type": "string",
       "enum": [
         "Rager",
@@ -193,10 +204,12 @@
       }
     },
     "HopInventoryType": {
+      "description": "The quantity of a hop held in stock.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "amount": {
+          "description": "The quantity held in stock: by mass for whole, pellet or powdered hops, or by volume for an extract.",
           "oneOf": [
             {
               "$ref": "measureable_units.json#/$defs/VolumeType"

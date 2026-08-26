@@ -8,8 +8,8 @@ BoilStepType - a per step representation of a boil process, can be used to suppo
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | ✅ | string|  |
-| **description** |  | string|  |
+| **name** | ✅ | string| Name of the boil step. |
+| **description** |  | string| Free text description of the boil step. |
 | **start_temperature** |  | [TemperatureType](measureable_units.json.md#temperaturetype)|  |
 | **end_temperature** |  | [TemperatureType](measureable_units.json.md#temperaturetype)|  |
 | **ramp_time** |  | [TimeType](measureable_units.json.md#timetype)| The amount of time that passes before this step begins. eg moving from a boiling step (step 1) to a whirlpool step (step 2) may take 5 minutes. Step 2 would have a ramp time of 5 minutes, hop isomerization and bitterness calculations will need to account for this accordingly. |

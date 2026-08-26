@@ -64,8 +64,12 @@ with a description that answers the question an implementer actually has:
 }
 ```
 
-Around 120 properties still lack a description. The test records a per-file
-budget that can only go down.
+Every property and every type in the format carries one, and the conventions
+test enforces it outright: a new property without a description fails CI, as
+does a description that is present but blank.
+
+A property whose whole definition is a `$ref` is exempt, since it inherits the
+description of the type it points at.
 
 ## Measurements
 
