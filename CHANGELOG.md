@@ -35,6 +35,11 @@ than entries written at the time.
   per-file budget: a property or type without one fails, and so does a
   description that is present but blank.
 
+- **A release now attaches its packed tarball to the GitHub release**, and does
+  so independently of the npm publish, so a release always produces an
+  installable artifact even when registry credentials are unavailable. The
+  README documents installing a pinned release from the tarball or the git tag.
+
 ### Fixed
 
 - **`EquipmentType.equipment_items` had `"description": ""`**, which reads as
