@@ -51,9 +51,9 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
@@ -78,10 +78,16 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+  # Best effort. Publishing requires write access to the `beerjson` npm org,
+  # whose only member is the account that first published the package. Until
+  # that is resolved the registry copy lags behind the GitHub release, so a
+  # failure here must not fail the release: the tarball attached by
+  # release-asset is the artifact consumers can always install.
   publish:
     name: Publish to npm
     if: github.event_name == 'release'
     needs: [release-asset]
+    continue-on-error: true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7

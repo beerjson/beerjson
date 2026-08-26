@@ -111,9 +111,8 @@ published as [@beerjson/beerjson](https://www.npmjs.com/package/@beerjson/beerjs
 npm install @beerjson/beerjson
 ```
 
-The registry copy can lag behind a release. To pin an exact release without
-going through the registry, install the tarball attached to it, or the git tag
-directly:
+The registry copy lags behind the GitHub release. To get a given release,
+install the tarball attached to it, or the git tag directly:
 
 ```bash
 npm install https://github.com/beerjson/beerjson/releases/download/v1.1.0/beerjson-beerjson-1.1.0.tgz
