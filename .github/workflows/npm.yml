@@ -4,16 +4,27 @@ on:
   release:
     types: [published]
 
+permissions:
+  contents: read
+
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
         with:
-          node-version: 18
-      - run: npm i
+          node-version: 24
+          cache: npm
+          registry-url: https://registry.npmjs.org
+
+      # `npm ci` installs exactly what package-lock.json pins, so the published
+      # package is built against the same tree CI tested.
+      - run: npm ci
+
       - run: npm test
-      - uses: JS-DevTools/npm-publish@v1
+
+      - uses: JS-DevTools/npm-publish@v4
         with:
           token: ${{ secrets.NPM_TOKEN }}

@@ -1,9 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/water.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/water.json",
   "type": "object",
   "additionalProperties": false,
-  "definitions": {
+  "$defs": {
     "WaterBase": {
       "type": "object",
       "description": "WaterBase provides unique properties to identify individual records of  brewing water.",
@@ -15,40 +15,40 @@
           "type": "string"
         },
         "calcium": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "bicarbonate": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "carbonate": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "potassium": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "iron": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "nitrate": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "nitrite": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "flouride": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "sulfate": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "chloride": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "sodium": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "magnesium": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         }
       },
       "required": [
@@ -66,7 +66,7 @@
       "description": "WaterType collects the attributes of a brewing water to store as record information",
       "allOf": [
         {
-          "$ref": "#/definitions/WaterBase"
+          "$ref": "#/$defs/WaterBase"
         },
         {
           "properties": {
@@ -85,12 +85,12 @@
       "description": "WaterAdditionType collects the attributes of each water addition for use in a recipe",
       "allOf": [
         {
-          "$ref": "#/definitions/WaterBase"
+          "$ref": "#/$defs/WaterBase"
         },
         {
           "properties": {
             "amount": {
-              "$ref": "measureable_units.json#/definitions/VolumeType"
+              "$ref": "measureable_units.json#/$defs/VolumeType"
             }
           }
         }

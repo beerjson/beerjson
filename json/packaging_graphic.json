@@ -1,9 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/packaging_graphic.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/packaging_graphic.json",
   "type": "object",
   "additionalProperties": false,
-  "definitions": {
+  "$defs": {
     "PackagingGraphicType": {
       "type": "object",
       "description": "PackagingGraphicType - a representation of a graphic to be placed on a vessel.",

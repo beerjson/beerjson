@@ -4,7 +4,7 @@ const rootSchema = require('../json/beer.json')
 test('simple schema converted to ts', () => {
   expect(
     convert({
-      definitions: {
+      $defs: {
         ObjType: {
           type: 'object',
           properties: {
@@ -29,7 +29,7 @@ test('simple schema converted to ts', () => {
 test('enum format', () => {
   expect(
     convert({
-      definitions: {
+      $defs: {
         EnumType: {
           type: 'object',
           properties: {

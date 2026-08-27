@@ -5,28 +5,36 @@ const fs = require('fs')
 
 const schemaDir = __dirname + '/../json/'
 
+const schemaFiles = fs.readdirSync(schemaDir)
+
+// Name the schema that failed: the generators throw from deep inside the
+// recursive walk, where the stack trace alone does not say which file it was on.
+const convert = (convertFn, fileName) => {
+  try {
+    return convertFn(require(schemaDir + fileName))
+  } catch (error) {
+    error.message = `${fileName}: ${error.message}`
+    throw error
+  }
+}
+
 console.log('Generating docs...')
 
-fs.readdirSync(schemaDir).forEach(fileName =>
-  fs.writeFileSync(
-    './docs/' + fileName + '.md',
-    mdConvert(require(schemaDir + fileName))
-  )
+schemaFiles.forEach(fileName =>
+  fs.writeFileSync('./docs/' + fileName + '.md', convert(mdConvert, fileName))
 )
 
 console.log('Generating Flow types...')
 
 let s = '// @flow\n\n'
-fs.readdirSync(schemaDir).forEach(
-  fileName => (s = s + flowConvert(require(schemaDir + fileName)))
-)
+schemaFiles.forEach(fileName => (s = s + convert(flowConvert, fileName)))
 fs.writeFileSync('./types/flow-typed/beerjson.js', s)
 
 console.log('Generating TypeScript types...')
 
 s = 'declare namespace BeerJSON {\n'
-fs.readdirSync(schemaDir).forEach(
-  fileName => (s = s + tsConvert(require(schemaDir + fileName)))
-)
+schemaFiles.forEach(fileName => (s = s + convert(tsConvert, fileName)))
 s = s + '\n}\n'
 fs.writeFileSync('./types/ts/beerjson.d.ts', s)
+
+console.log('Done.')

@@ -1,9 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/boil.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/boil.json",
   "type": "object",
   "additionalProperties": false,
-  "definitions": {
+  "$defs": {
     "BoilProcedureType": {
       "type": "object",
       "description": "BoilProcedureType defines the procedure for performing a boil. A boil procedure with no steps is the same as a standard single step boil.",
@@ -19,15 +19,15 @@
           "type": "string"
         },
         "pre_boil_size": {
-          "$ref": "measureable_units.json#/definitions/VolumeType"
+          "$ref": "measureable_units.json#/$defs/VolumeType"
         },
         "boil_time": {
-          "$ref": "measureable_units.json#/definitions/TimeType"
+          "$ref": "measureable_units.json#/$defs/TimeType"
         },
         "boil_steps": {
           "type": "array",
           "items": {
-            "$ref": "boil_step.json#/definitions/BoilStepType"
+            "$ref": "boil_step.json#/$defs/BoilStepType"
           }
         }
       },

@@ -5,7 +5,7 @@ declare namespace BeerJSON {
     miscellaneous_ingredients?: MiscellaneousType[]
     hop_varieties?: VarietyInformation[]
     cultures?: CultureInformation[]
-    profiles?: WaterBase[]
+    profiles?: WaterType[]
     styles?: StyleType[]
     mashes?: MashProcedureType[]
     fermentations?: FermentationProcedureType[]
@@ -436,7 +436,6 @@ declare namespace BeerJSON {
   export type CarbonationUnitType = 'vols' | 'g/l'
   export type BitternessUnitType = 'IBUs'
   export type GravityUnitType = 'sg' | 'plato' | 'brix'
-  export type DensityUnitType = 'sg' | 'plato' | 'brix'
   export type ConcentrationUnitType = 'ppm' | 'ppb' | 'mg/l'
   export type SpecificHeatUnitType = 'Cal/(g C)' | 'J/(kg K)' | 'BTU/(lb F)'
   export type SpecificVolumeUnitType =
@@ -503,6 +502,36 @@ declare namespace BeerJSON {
     packaging_vessels?: PackagingVesselType[]
   }
 
+  export type PackagingGraphicType = {
+    position:
+      | 'body front'
+      | 'body back'
+      | 'body wrap around'
+      | 'neck front'
+      | 'neck back'
+      | 'neck wrap around'
+      | 'cap'
+      | 'carrier'
+    type:
+      | 'svg'
+      | 'svgz'
+      | 'ai'
+      | 'cdr'
+      | 'cdx'
+      | 'odg'
+      | 'eps'
+      | 'pdf'
+      | 'png'
+      | 'jpg'
+      | 'gif'
+    base64_data?: string
+    URLS?: string[]
+    dpi?: number
+    width?: number
+    height?: number
+    units?: 'mm' | 'in'
+  }
+
   export type PackagingVesselType = {
     name: string
     type?: 'keg' | 'bottle' | 'cask' | 'tank' | 'firkin' | 'other'
@@ -518,7 +547,7 @@ declare namespace BeerJSON {
     carbonation?: number
     vessel_volume?: VolumeType
     vessel_quantity?: number
-    graphics?: GraphicType[]
+    graphics?: PackagingGraphicType[]
   }
 
   export type RecipeType = {
@@ -652,23 +681,5 @@ declare namespace BeerJSON {
 
   export type WaterAdditionType = WaterBase & {
     amount?: VolumeType
-  }
-
-  export type GraphicType = {
-    position:
-      | 'neck front'
-      | 'neck back'
-      | 'neck wrap around'
-      | 'body front'
-      | 'body back'
-      | 'body warp around'
-      | 'cap'
-    type: 'svg' | 'pdf' | 'png' | 'bmp' | 'jpg'
-    base64_data?: string
-    URLS?: Array<string>
-    dpi?: number
-    width?: number
-    height?: number
-    units?: 'mm' | 'in'
   }
 }

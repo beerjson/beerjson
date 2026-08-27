@@ -1,9 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/culture.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/culture.json",
   "type": "object",
   "additionalProperties": false,
-  "definitions": {
+  "$defs": {
     "CultureBase": {
       "type": "object",
       "description": "Provides unique properties to identify individual records of a culture.",
@@ -57,24 +57,24 @@
       "description": "CultureInformation collects the attributes of a microbial culture.",
       "allOf": [
         {
-          "$ref": "#/definitions/CultureBase"
+          "$ref": "#/$defs/CultureBase"
         },
         {
           "properties": {
             "temperature_range": {
               "description": "The recommended temperature range of fermentation by the culture producer.",
-              "$ref": "measureable_units.json#/definitions/TemperatureRangeType"
+              "$ref": "measureable_units.json#/$defs/TemperatureRangeType"
             },
             "alcohol_tolerance": {
               "description": "The recommended limit of abv by the culture producer before attenuation stops.",
-              "$ref": "measureable_units.json#/definitions/PercentType"
+              "$ref": "measureable_units.json#/$defs/PercentType"
             },
             "flocculation": {
               "description": "Floculation refers to the ability of yeast to aggregate to form large flocs which drop out of suspension.",
-              "$ref": "measureable_units.json#/definitions/QualitativeRangeType"
+              "$ref": "measureable_units.json#/$defs/QualitativeRangeType"
             },
             "attenuation_range": {
-              "$ref": "measureable_units.json#/definitions/PercentRangeType"
+              "$ref": "measureable_units.json#/$defs/PercentRangeType"
             },
             "notes": {
               "type": "string"
@@ -96,10 +96,10 @@
               "type": "boolean"
             },
             "inventory": {
-              "$ref": "#/definitions/CultureInventoryType"
+              "$ref": "#/$defs/CultureInventoryType"
             },
             "zymocide": {
-              "$ref": "#/definitions/Zymocide"
+              "$ref": "#/$defs/Zymocide"
             }
           }
         }
@@ -110,20 +110,20 @@
       "description": "CultureAdditionType collects the attributes of each culture ingredient for use in a recipe.",
       "allOf": [
         {
-          "$ref": "#/definitions/CultureBase"
+          "$ref": "#/$defs/CultureBase"
         },
         {
           "properties": {
             "attenuation": {
               "description": "The expected, or measured apparent attenuation for a given culture in a given recipe. In comparison to attenuation range, this is a single value.",
-              "$ref": "measureable_units.json#/definitions/PercentType"
+              "$ref": "measureable_units.json#/$defs/PercentType"
             },
             "times_cultured": {
               "type": "integer"
             },
             "timing": {
               "description": "The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step.",
-              "$ref": "timing.json#/definitions/TimingType"
+              "$ref": "timing.json#/$defs/TimingType"
             },
             "cell_count_billions": {
               "type": "integer"
@@ -131,13 +131,13 @@
             "amount": {
               "oneOf": [
                 {
-                  "$ref": "measureable_units.json#/definitions/VolumeType"
+                  "$ref": "measureable_units.json#/$defs/VolumeType"
                 },
                 {
-                  "$ref": "measureable_units.json#/definitions/MassType"
+                  "$ref": "measureable_units.json#/$defs/MassType"
                 },
                 {
-                  "$ref": "measureable_units.json#/definitions/UnitType"
+                  "$ref": "measureable_units.json#/$defs/UnitType"
                 }
               ]
             }
@@ -155,16 +155,16 @@
       "additionalProperties": false,
       "properties": {
         "liquid": {
-          "$ref": "measureable_units.json#/definitions/VolumeType"
+          "$ref": "measureable_units.json#/$defs/VolumeType"
         },
         "dry": {
-          "$ref": "measureable_units.json#/definitions/MassType"
+          "$ref": "measureable_units.json#/$defs/MassType"
         },
         "slant": {
-          "$ref": "measureable_units.json#/definitions/VolumeType"
+          "$ref": "measureable_units.json#/$defs/VolumeType"
         },
         "culture": {
-          "$ref": "measureable_units.json#/definitions/VolumeType"
+          "$ref": "measureable_units.json#/$defs/VolumeType"
         }
       }
     },

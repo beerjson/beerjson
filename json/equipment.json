@@ -1,9 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/equipment.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/equipment.json",
   "type": "object",
   "additionalProperties": false,
-  "definitions": {
+  "$defs": {
     "EquipmentBase": {
       "type": "object",
       "description": "The descriptive base type for brew day equipment. Provides unique properties to fully describe the recipe.",
@@ -27,7 +27,7 @@
           ]
         },
         "maximum_volume": {
-          "$ref": "measureable_units.json#/definitions/VolumeType"
+          "$ref": "measureable_units.json#/$defs/VolumeType"
         }
       },
       "required": [
@@ -41,32 +41,32 @@
       "description": "EquipmentType provides necessary information for individual brewing equipment.",
       "allOf": [
         {
-          "$ref": "#/definitions/EquipmentBase"
+          "$ref": "#/$defs/EquipmentBase"
         },
         {
           "properties": {
             "loss": {
-              "$ref": "measureable_units.json#/definitions/VolumeType"
+              "$ref": "measureable_units.json#/$defs/VolumeType"
             },
             "grain_absorption_rate": {
               "description": "The apparent volume absorbed by grain, typical values are 0.125 qt/lb (1.04 L/kg) for a mashtun, 0.08 gal/lb (0.66 L/kg) for BIAB.",
-              "$ref": "measureable_units.json#/definitions/SpecificVolumeType"
+              "$ref": "measureable_units.json#/$defs/SpecificVolumeType"
             },
             "boil_rate_per_hour": {
               "description": "The volume boiled off during 1 hour, measured before and after at room temperature.",
-              "$ref": "measureable_units.json#/definitions/VolumeType"
+              "$ref": "measureable_units.json#/$defs/VolumeType"
             },
             "drain_rate_per_minute": {
               "description": "The volume that leaves the kettle, especially important for non-immersion chillers that cool the wort as it leaves the kettle.",
-              "$ref": "measureable_units.json#/definitions/VolumeType"
+              "$ref": "measureable_units.json#/$defs/VolumeType"
             },
             "weight": {
               "description": "The weight of the piece of equipment, especially important for when the mashtun is not preheated.",
-              "$ref": "measureable_units.json#/definitions/MassType"
+              "$ref": "measureable_units.json#/$defs/MassType"
             },
             "specific_heat": {
               "description": "The specific heat of the piece of equipment, expressed in Cal/(g*C), especially important for when the mashtun is not preheated.",
-              "$ref": "measureable_units.json#/definitions/SpecificHeatType"
+              "$ref": "measureable_units.json#/$defs/SpecificHeatType"
             },
             "notes": {
               "type": "string"
@@ -90,7 +90,7 @@
           "type": "array",
           "description": "",
           "items": {
-            "$ref": "equipment.json#/definitions/EquipmentItemType"
+            "$ref": "equipment.json#/$defs/EquipmentItemType"
           }
         }
       },

@@ -1,9 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/recipe.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/recipe.json",
   "type": "object",
   "additionalProperties": false,
-  "definitions": {
+  "$defs": {
     "RecipeType": {
       "type": "object",
       "description": "RecipeType composes the information stored in a beerjson recipe.",
@@ -33,52 +33,52 @@
           "type": "string"
         },
         "created": {
-          "$ref": "measureable_units.json#/definitions/DateType"
+          "$ref": "measureable_units.json#/$defs/DateType"
         },
         "batch_size": {
           "description": "The volume into the fermenter.",
-          "$ref": "measureable_units.json#/definitions/VolumeType"
+          "$ref": "measureable_units.json#/$defs/VolumeType"
         },
         "efficiency": {
           "description": "Used to store each efficiency component, including conversion, and brewhouse.",
-          "$ref": "#/definitions/EfficiencyType"
+          "$ref": "#/$defs/EfficiencyType"
         },
         "style": {
-          "$ref": "style.json#/definitions/RecipeStyleType"
+          "$ref": "style.json#/$defs/RecipeStyleType"
         },
         "ingredients": {
           "description": "A collection of all ingredients used for the recipe.",
-          "$ref": "#/definitions/IngredientsType"
+          "$ref": "#/$defs/IngredientsType"
         },
         "mash": {
           "description": "This defines the procedure for performing unique mashing processes.",
-          "$ref": "mash.json#/definitions/MashProcedureType"
+          "$ref": "mash.json#/$defs/MashProcedureType"
         },
         "notes": {
           "type": "string"
         },
         "original_gravity": {
           "description": "The gravity of wort when transffered to the fermenter.",
-          "$ref": "measureable_units.json#/definitions/GravityType"
+          "$ref": "measureable_units.json#/$defs/GravityType"
         },
         "final_gravity": {
           "description": "The gravity of beer at the end of fermentation.",
-          "$ref": "measureable_units.json#/definitions/GravityType"
+          "$ref": "measureable_units.json#/$defs/GravityType"
         },
         "alcohol_by_volume": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "$ref": "measureable_units.json#/$defs/PercentType"
         },
         "ibu_estimate": {
           "description": "The estimated bitterness of the finished beer together with the IBU formula used to calculate it. If the formula is modified in any way, e.g. to support whirlpool/flameout additions, please use `Other` for transparency.",
-          "$ref": "hop.json#/definitions/IBUEstimateType"
+          "$ref": "hop.json#/$defs/IBUEstimateType"
         },
         "color_estimate": {
           "description": "The color of the finished beer, using SRM or EBC.",
-          "$ref": "measureable_units.json#/definitions/ColorType"
+          "$ref": "measureable_units.json#/$defs/ColorType"
         },
         "beer_pH": {
           "description": "The final beer pH at the end of fermentation.",
-          "$ref": "measureable_units.json#/definitions/AcidityType"
+          "$ref": "measureable_units.json#/$defs/AcidityType"
         },
         "carbonation": {
           "description": "The final carbonation of the beer when packaged or served.",
@@ -86,23 +86,23 @@
         },
         "apparent_attenuation": {
           "description": "The total apparent attenuation of the finished beer after fermentation.",
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "$ref": "measureable_units.json#/$defs/PercentType"
         },
         "fermentation": {
           "description": "FermentationProcedureType defines the procedure for performing fermentation.",
-          "$ref": "fermentation.json#/definitions/FermentationProcedureType"
+          "$ref": "fermentation.json#/$defs/FermentationProcedureType"
         },
         "packaging": {
           "description": "Describes the procedure for packaging your beverage.",
-          "$ref": "packaging.json#/definitions/PackagingProcedureType"
+          "$ref": "packaging.json#/$defs/PackagingProcedureType"
         },
         "boil": {
           "description": "Defines the procedure for performing a boil. A boil procedure with no steps is the same as a standard single step boil.",
-          "$ref": "boil.json#/definitions/BoilProcedureType"
+          "$ref": "boil.json#/$defs/BoilProcedureType"
         },
         "taste": {
           "description": "Used to store subjective tasting notes, and rating.",
-          "$ref": "#/definitions/TasteType"
+          "$ref": "#/$defs/TasteType"
         },
         "calories_per_pint": {
           "type": "number"
@@ -124,19 +124,19 @@
       "properties": {
         "conversion": {
           "description": "The percentage of sugar from the grain yield that is extracted and converted during the mash.",
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "$ref": "measureable_units.json#/$defs/PercentType"
         },
         "lauter": {
           "description": "The percentage of sugar that makes it from the mash tun to the kettle.",
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "$ref": "measureable_units.json#/$defs/PercentType"
         },
         "mash": {
           "description": "The percentage of sugar that makes it from the grain to the kettle.",
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "$ref": "measureable_units.json#/$defs/PercentType"
         },
         "brewhouse": {
           "description": "The percentage of sugar that makes it from the grain to the fermenter.",
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "$ref": "measureable_units.json#/$defs/PercentType"
         }
       },
       "required": [
@@ -151,35 +151,35 @@
           "type": "array",
           "description": "fermentable_additions collects all the fermentable ingredients for use in a recipe",
           "items": {
-            "$ref": "fermentable.json#/definitions/FermentableAdditionType"
+            "$ref": "fermentable.json#/$defs/FermentableAdditionType"
           }
         },
         "hop_additions": {
           "type": "array",
           "description": "hop_additions collects all the hops for use in a recipe",
           "items": {
-            "$ref": "hop.json#/definitions/HopAdditionType"
+            "$ref": "hop.json#/$defs/HopAdditionType"
           }
         },
         "miscellaneous_additions": {
           "type": "array",
           "description": "miscellaneous_additions collects all the miscellaneous items for use in a recipe",
           "items": {
-            "$ref": "misc.json#/definitions/MiscellaneousAdditionType"
+            "$ref": "misc.json#/$defs/MiscellaneousAdditionType"
           }
         },
         "culture_additions": {
           "type": "array",
           "description": "culture_additions collects all the culture items for use in a recipe",
           "items": {
-            "$ref": "culture.json#/definitions/CultureAdditionType"
+            "$ref": "culture.json#/$defs/CultureAdditionType"
           }
         },
         "water_additions": {
           "type": "array",
           "description": "water_additions collects all the water items for use in a recipe",
           "items": {
-            "$ref": "water.json#/definitions/WaterAdditionType"
+            "$ref": "water.json#/$defs/WaterAdditionType"
           }
         }
       },

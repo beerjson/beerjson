@@ -1,9 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/mash.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/mash.json",
   "type": "object",
   "additionalProperties": false,
-  "definitions": {
+  "$defs": {
     "MashProcedureType": {
       "type": "object",
       "description": "This defines the procedure for performing unique mashing processes.",
@@ -14,7 +14,7 @@
         },
         "grain_temperature": {
           "description": "Initial grain temperature prior to the start of the mash.",
-          "$ref": "measureable_units.json#/definitions/TemperatureType"
+          "$ref": "measureable_units.json#/$defs/TemperatureType"
         },
         "notes": {
           "type": "string"
@@ -23,7 +23,7 @@
           "type": "array",
           "minItems": 1,
           "items": {
-            "$ref": "mash_step.json#/definitions/MashStepType"
+            "$ref": "mash_step.json#/$defs/MashStepType"
           }
         }
       },

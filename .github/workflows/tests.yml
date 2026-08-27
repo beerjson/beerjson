@@ -1,19 +1,84 @@
+# The workflow name is load-bearing: the README badge and any required status
+# check are addressed by it.
 name: BeerJSON tests
+
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
-
+    branches: [main]
   workflow_dispatch:
+
+# Cancel an in-flight run when a new commit lands on the same branch or PR.
+# Only the latest result matters.
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+# Least privilege: these jobs only read the repository.
+permissions:
+  contents: read
 
 jobs:
   run-tests:
+    name: Tests (Node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # Node's active and maintenance LTS lines, matching `engines` in
+        # package.json. Drop a version once it goes end-of-life.
+        node: [22, 24]
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm test
+
+  generated-files:
+    name: Generated files are up to date
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
         with:
-          node-version: 18
+          node-version: 24
+          cache: npm
+
       - run: npm ci
-      - run: npm test
+
+      # docs/*.json.md and types/ are generated from json/. Regenerating them
+      # must be a no-op: a diff means either the generator was not run after a
+      # schema change, or the generated files were edited by hand.
+      # docs/README.md is the hand-written index and is excluded.
+      - name: Regenerate docs and types
+        run: npm run gen-docs
+
+      - name: Check for drift
+        run: |
+          if ! git diff --exit-code -- 'docs/*.json.md' types; then
+            echo "::error::docs/ or types/ is out of date. Run 'npm run gen-docs' and commit the result."
+            exit 1
+          fi
+
+  format:
+    name: Formatting
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run format:check

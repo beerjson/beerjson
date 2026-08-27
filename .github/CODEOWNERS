@@ -1,0 +1,32 @@
+# BeerJSON code owners
+# These owners are requested for review when someone opens a pull request.
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything
+* @beerjson/beerjson-wg
+
+# The specification itself. Changes here alter the format every implementer
+# reads and writes, so they need working group review.
+/json/ @beerjson/beerjson-wg
+
+# Format decisions and authoring conventions
+/adr/ @beerjson/beerjson-wg
+/SCHEMA_STYLE.md @beerjson/beerjson-wg
+
+# Generated from json/ by `npm run gen-docs`. A pull request that touches these
+# without touching json/ is editing generated output by hand.
+/docs/ @beerjson/beerjson-wg
+/types/ @beerjson/beerjson-wg
+
+# Generators, validator, BeerXML importer
+/js/ @beerjson/beerjson-wg
+
+# Test corpus
+/tests/ @beerjson/beerjson-wg
+
+# CI, templates, repository policy
+/.github/ @beerjson/beerjson-admin
+
+# Packaging and release
+/package.json @beerjson/beerjson-admin
+/package-lock.json @beerjson/beerjson-admin
