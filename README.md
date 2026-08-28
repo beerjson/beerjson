@@ -104,4 +104,40 @@ than a public issue.
 
 ## NPM package
 
-NPM package available at [@beerjson/beerjson](https://www.npmjs.com/package/@beerjson/beerjson).
+The schemas, the generated TypeScript and Flow declarations, and a validator are
+published as [@beerjson/beerjson](https://www.npmjs.com/package/@beerjson/beerjson).
+
+```bash
+npm install @beerjson/beerjson
+```
+
+```js
+const beerjson = require('@beerjson/beerjson')
+
+const { valid, errors } = beerjson.validate(document)
+// errors: [{ path: '/beerjson/hop_varieties/0', message: "must have required property 'name'", params: {...} }]
+```
+
+`validate` accepts a parsed document or a JSON string, and reports every error
+rather than stopping at the first.
+
+To drive your own validator, the schemas are exported as a map and are also
+importable individually:
+
+```js
+beerjson.schemas['hop.json']
+beerjson.rootSchema // beer.json, the document entry point
+
+require('@beerjson/beerjson/json/hop.json')
+```
+
+Register every schema under its filename so that cross-file `$ref`s such as
+`measureable_units.json#/$defs/VolumeType` resolve.
+
+TypeScript declarations are included, no `@types` package needed:
+
+```ts
+const recipe: BeerJSON.RecipeType = {
+  /* ... */
+}
+```

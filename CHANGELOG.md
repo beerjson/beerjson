@@ -59,6 +59,13 @@ release. The npm package is still 1.0.2, so none of it has reached consumers.
 - **`additionalProperties: false` on `IBUEstimateType` and `OilContentType`**,
   the only two standalone object types that lacked it, so a misspelled key in
   either is now a validation error.
+- **The npm package has a working entry point**
+  ([#215](https://github.com/beerjson/beerjson/issues/215)).
+  `require('@beerjson/beerjson')` now returns `{ validate, schemas, rootSchema, schemaFiles }`. `validate` takes a document or a JSON string and returns
+  `{ valid, errors }` with every error reported, each carrying a JSON pointer,
+  a message and ajv's params.
+- **`engines: node >= 22`** declared, and CI runs the suite on Node 22 and 24
+  ([#216](https://github.com/beerjson/beerjson/issues/216)).
 
 ### Fixed
 
@@ -81,7 +88,12 @@ release. The npm package is still 1.0.2, so none of it has reached consumers.
   [#200](https://github.com/beerjson/beerjson/pull/200)).
 - **`$id` values** pointed at the `master` branch, renamed to `main` in
   [#235](https://github.com/beerjson/beerjson/pull/235).
-- **ajv** updated to `^8.20.0`, clearing GHSA-2g4f-4pwh-qvx6.
+- **ajv** updated to `^8.20.0`, clearing GHSA-2g4f-4pwh-qvx6, and moved to
+  `dependencies`, since the shipped validator requires it at runtime.
+- **The published tarball** carried 133 files and 2.5 MB unpacked, including the
+  2 MB of style guide fixtures, the BeerXML `xsd/` reference and the generators.
+  A `files` allowlist brings it to 28 files and 120 kB: the schemas, the
+  declarations, the validator and the changelog.
 
 ## [1.0.2] - 2021-10-12
 
