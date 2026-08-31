@@ -27,6 +27,11 @@ as part of the pull request that implements the decision. An ADR is immutable
 once accepted: if the decision changes, write a new one that supersedes it and
 mark the old one `Superseded by ADR-NNNN`.
 
+An idea that is worth recording before it is settled goes in as **Proposed**,
+with what would have to be true to accept it. That keeps a design discussion
+from evaporating into a closed issue thread, which is most of why ADR-0001
+exists. A Proposed ADR is not a decision and nothing should be built on it.
+
 ## Index
 
 | ADR                                                 | Title                                                                       | Status   |
@@ -36,3 +41,4 @@ mark the old one `Superseded by ADR-NNNN`.
 | [0003](0003-deprecate-rather-than-rename.md)        | Correct property names by deprecating, not renaming                         | Accepted |
 | [0004](0004-format-version-numbering.md)            | Format version numbering                                                    | Accepted |
 | [0005](0005-ingredient-base-record-and-addition.md) | How an ingredient is split between identity, catalogue record, and addition | Accepted |
+| [0006](0006-referencing-elements-by-id.md)          | Referencing recipe elements by identifier                                   | Proposed |
