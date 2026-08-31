@@ -2,7 +2,7 @@ The schema defines the following types:
 
 ## HopVarietyBase 
 
-HopVarietyBase provides unique properties to identify individual records of a hop variety.
+Identifies a hop and carries what a recipe must know to calculate with it, which is why `alpha_acid` is required: bitterness cannot be derived without it. `VarietyInformation` extends it into a full catalogue record, and `HopAdditionType` extends it with an amount and a timing.
 
 **HopVarietyBase** is an object with these properties:
 
@@ -19,7 +19,7 @@ HopVarietyBase provides unique properties to identify individual records of a ho
 
 ## VarietyInformation 
 
-VarietyInformation collects the attributes of a hop variety to store as record information.
+The full catalogue record for a hop variety: `HopVarietyBase` plus the properties a supplier publishes, such as oil content and substitutes. This is the form used in the `hop_varieties` list at the document root.
 
 **VarietyInformation** is an object with all properties from [HopVarietyBase](#hopvarietybase) and these additional properties:
 
@@ -34,7 +34,7 @@ VarietyInformation collects the attributes of a hop variety to store as record i
 
 ## HopAdditionType 
 
-HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bill.
+A hop as used in a recipe: `HopVarietyBase` plus how much and when. Catalogue detail belongs in a `VarietyInformation` record at the document root, not here.
 
 **HopAdditionType** is an object with all properties from [HopVarietyBase](#hopvarietybase) and these additional properties:
 

@@ -116,12 +116,23 @@ sees the whole composition:
 Putting either keyword on `CultureBase` would reject every property
 `CultureAdditionType` adds.
 
-Nine of the thirteen composed types carry it. The four that do not
-(`HopAdditionType`, `WaterAdditionType`, `StyleType`, `RecipeStyleType`) are
-blocked on open format questions: their own examples under `tests/` use
-properties the types do not declare. Closing one is therefore a change that
-comes with resolving that question and fixing its examples. The conventions test
-tracks the four, so a newly added composed type cannot join them.
+Ten of the thirteen composed types carry it. The three that do not
+(`WaterAdditionType`, `StyleType`, `RecipeStyleType`) are blocked on open format
+questions: their own examples under `tests/` use properties the types do not
+declare. Closing one is therefore a change that comes with resolving that
+question and fixing its examples. The conventions test tracks the three, so a
+newly added composed type cannot join them.
+
+## Ingredients: identity, catalogue record, addition
+
+Each ingredient family is three types built on one another. A **Base** identifies
+the ingredient and carries the measurements a recipe must have to calculate with
+it; a **catalogue record** adds everything a supplier publishes; an **addition**
+adds how much, when, and anything measured at the time of use. Catalogue detail
+does not belong on an addition, and an exporter should emit the full catalogue
+records alongside a recipe so the document stands on its own.
+[ADR-0005](adr/0005-ingredient-base-record-and-addition.md) has the detail and
+the reasoning.
 
 ## Arrays
 

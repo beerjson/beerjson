@@ -237,8 +237,6 @@ describe('objects and composition', () => {
       }
     }
     expectOnlyKnown(found, [
-      // Recipe examples put the full variety record on an addition.
-      'hop.json#HopAdditionType',
       // The BeerXML importer fills these with the style's ranges.
       'style.json#RecipeStyleType',
       // The BJCP and BA style guides carry 38 keys the type does not declare.

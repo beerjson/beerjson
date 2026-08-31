@@ -35,6 +35,34 @@ than entries written at the time.
   per-file budget: a property or type without one fails, and so does a
   description that is present but blank.
 
+- **[ADR-0005](adr/0005-ingredient-base-record-and-addition.md) records what the
+  three-way ingredient split is for**, raised in review of
+  [#245](https://github.com/beerjson/beerjson/pull/245) by the author of
+  Brewtarget's BeerJSON support, who had to guess it when implementing. A
+  **Base** identifies the ingredient and carries the measurements a recipe must
+  have to calculate with it, which is why `FermentableBase` requires `yield` and
+  `color` and `HopVarietyBase` requires `alpha_acid`. A **catalogue record**
+  (`FermentableType`, `VarietyInformation`, `MiscellaneousType`,
+  `CultureInformation`) adds everything a supplier or lab publishes. An
+  **addition** adds how much, when, and anything measured at the time of use.
+
+  The twelve type descriptions involved now say this instead of the previous
+  "provides unique properties to identify individual records" and "collects the
+  attributes to store as record information", neither of which told an
+  implementer which one to write.
+
+  The ADR also recommends what Brewtarget already does: emit the full catalogue
+  record for every ingredient a recipe references, alongside the recipe, so the
+  document stands on its own. This needs no schema change, since the document
+  root already accepts ingredient lists next to `recipes`.
+
+- **`HopAdditionType` is closed to unknown keys**, taking the count to 10 of 13.
+  It was the one type blocked purely on the question ADR-0005 answers.
+  `generic/recipes.json` put a hop's `type`, `notes`, `substitutes`, `inventory`
+  and `oil_content` on the additions themselves; those records moved to a
+  `hop_varieties` list at the document root, so the fixture now demonstrates the
+  recommended pattern rather than contradicting it.
+
 - **A release now attaches its packed tarball to the GitHub release**, and does
   so independently of the npm publish, so a release always produces an
   installable artifact even when registry credentials are unavailable. The
@@ -45,6 +73,11 @@ than entries written at the time.
 - **`EquipmentType.equipment_items` had `"description": ""`**, which reads as
   documented to any tooling checking for the key's presence while rendering as
   an empty cell in the reference.
+
+- **Two errors in `generic/recipes.json`'s hop data**, surfaced by moving it to a
+  catalogue record: the `oil_content` compounds were bare numbers where the
+  schema requires `PercentType`, and `inventory` used a bucket per hop form where
+  `HopInventoryType` has a single `amount`.
 
 ## [1.1.0] - 2026-08-21
 
