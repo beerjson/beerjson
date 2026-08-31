@@ -6,7 +6,7 @@
   "$defs": {
     "HopVarietyBase": {
       "type": "object",
-      "description": "HopVarietyBase provides unique properties to identify individual records of a hop variety.",
+      "description": "Identifies a hop and carries what a recipe must know to calculate with it, which is why `alpha_acid` is required: bitterness cannot be derived without it. `VarietyInformation` extends it into a full catalogue record, and `HopAdditionType` extends it with an amount and a timing.",
       "properties": {
         "name": {
           "description": "Name of the hop variety.",
@@ -54,7 +54,7 @@
     },
     "VarietyInformation": {
       "type": "object",
-      "description": "VarietyInformation collects the attributes of a hop variety to store as record information.",
+      "description": "The full catalogue record for a hop variety: `HopVarietyBase` plus the properties a supplier publishes, such as oil content and substitutes. This is the form used in the `hop_varieties` list at the document root.",
       "unevaluatedProperties": false,
       "allOf": [
         {
@@ -100,7 +100,8 @@
     },
     "HopAdditionType": {
       "type": "object",
-      "description": "HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bill.",
+      "description": "A hop as used in a recipe: `HopVarietyBase` plus how much and when. Catalogue detail belongs in a `VarietyInformation` record at the document root, not here.",
+      "unevaluatedProperties": false,
       "allOf": [
         {
           "$ref": "#/$defs/HopVarietyBase"
