@@ -29,9 +29,10 @@ mark the old one `Superseded by ADR-NNNN`.
 
 ## Index
 
-| ADR                                             | Title                                               | Status   |
-| ----------------------------------------------- | --------------------------------------------------- | -------- |
-| [0001](0001-record-format-decisions-as-adrs.md) | Record format decisions as ADRs                     | Accepted |
-| [0002](0002-json-schema-2020-12.md)             | JSON Schema 2020-12 and `$defs`                     | Accepted |
-| [0003](0003-deprecate-rather-than-rename.md)    | Correct property names by deprecating, not renaming | Accepted |
-| [0004](0004-format-version-numbering.md)        | Format version numbering                            | Accepted |
+| ADR                                                 | Title                                                                       | Status   |
+| --------------------------------------------------- | --------------------------------------------------------------------------- | -------- |
+| [0001](0001-record-format-decisions-as-adrs.md)     | Record format decisions as ADRs                                             | Accepted |
+| [0002](0002-json-schema-2020-12.md)                 | JSON Schema 2020-12 and `$defs`                                             | Accepted |
+| [0003](0003-deprecate-rather-than-rename.md)        | Correct property names by deprecating, not renaming                         | Accepted |
+| [0004](0004-format-version-numbering.md)            | Format version numbering                                                    | Accepted |
+| [0005](0005-ingredient-base-record-and-addition.md) | How an ingredient is split between identity, catalogue record, and addition | Accepted |
