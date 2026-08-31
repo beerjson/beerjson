@@ -2,7 +2,7 @@ The schema defines the following types:
 
 ## CultureBase 
 
-Provides unique properties to identify individual records of a culture.
+Identifies a microbial culture. Nothing is calculated from it directly, so it carries identity alone. `CultureInformation` extends it into a full catalogue record, and `CultureAdditionType` extends it with a pitch.
 
 **CultureBase** is an object with these properties:
 
@@ -16,7 +16,7 @@ Provides unique properties to identify individual records of a culture.
 
 ## CultureInformation 
 
-CultureInformation collects the attributes of a microbial culture.
+The full catalogue record for a culture: `CultureBase` plus the behaviour a lab publishes, such as temperature range, attenuation range and flocculation. This is the form used in the `cultures` list at the document root.
 
 **CultureInformation** is an object with all properties from [CultureBase](#culturebase) and these additional properties:
 
@@ -36,7 +36,7 @@ CultureInformation collects the attributes of a microbial culture.
 
 ## CultureAdditionType 
 
-CultureAdditionType collects the attributes of each culture ingredient for use in a recipe.
+A culture as pitched into a recipe: `CultureBase` plus how much, when, and what was measured at pitch time such as cell count and generation. Catalogue detail belongs in a `CultureInformation` record at the document root, not here.
 
 **CultureAdditionType** is an object with all properties from [CultureBase](#culturebase) and these additional properties:
 

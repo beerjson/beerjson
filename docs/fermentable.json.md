@@ -2,7 +2,7 @@ The schema defines the following types:
 
 ## FermentableBase 
 
-FermentableBase provides unique properties to identify individual records of fermentable ingredients.
+Identifies a fermentable and carries what a recipe must know to calculate with it, which is why `yield` and `color` are required: original gravity and colour cannot be derived without them. `FermentableType` extends it into a full catalogue record, and `FermentableAdditionType` extends it with an amount and a timing.
 
 **FermentableBase** is an object with these properties:
 
@@ -19,7 +19,7 @@ FermentableBase provides unique properties to identify individual records of fer
 
 ## FermentableType 
 
-FermentableType collects the attributes of a fermentable ingredient to store as record information.
+The full catalogue record for a fermentable: `FermentableBase` plus the specification a maltster publishes. This is the form used in the `fermentables` list at the document root.
 
 **FermentableType** is an object with all properties from [FermentableBase](#fermentablebase) and these additional properties:
 
@@ -49,7 +49,7 @@ FermentableType collects the attributes of a fermentable ingredient to store as 
 
 ## FermentableAdditionType 
 
-FermentableAdditionType collects the attributes of each fermentable ingredient for use in a recipe fermentable bill.
+A fermentable as used in a recipe: `FermentableBase` plus how much and when. Catalogue detail belongs in a `FermentableType` record at the document root, not here.
 
 **FermentableAdditionType** is an object with all properties from [FermentableBase](#fermentablebase) and these additional properties:
 

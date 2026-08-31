@@ -6,7 +6,7 @@
   "$defs": {
     "CultureBase": {
       "type": "object",
-      "description": "Provides unique properties to identify individual records of a culture.",
+      "description": "Identifies a microbial culture. Nothing is calculated from it directly, so it carries identity alone. `CultureInformation` extends it into a full catalogue record, and `CultureAdditionType` extends it with a pitch.",
       "properties": {
         "name": {
           "description": "Name of the culture, usually the name its producer sells it under.",
@@ -60,7 +60,7 @@
     },
     "CultureInformation": {
       "type": "object",
-      "description": "CultureInformation collects the attributes of a microbial culture.",
+      "description": "The full catalogue record for a culture: `CultureBase` plus the behaviour a lab publishes, such as temperature range, attenuation range and flocculation. This is the form used in the `cultures` list at the document root.",
       "unevaluatedProperties": false,
       "allOf": [
         {
@@ -115,7 +115,7 @@
     },
     "CultureAdditionType": {
       "type": "object",
-      "description": "CultureAdditionType collects the attributes of each culture ingredient for use in a recipe.",
+      "description": "A culture as pitched into a recipe: `CultureBase` plus how much, when, and what was measured at pitch time such as cell count and generation. Catalogue detail belongs in a `CultureInformation` record at the document root, not here.",
       "unevaluatedProperties": false,
       "allOf": [
         {

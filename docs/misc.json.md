@@ -2,7 +2,7 @@ The schema defines the following types:
 
 ## MiscellaneousBase 
 
-MiscellaneousBase provides unique properties to identify individual records of ingredients that are neither hops, nor provide a contribution to the gravity of wort.
+Identifies an ingredient that is neither a hop nor a contributor to the gravity of the wort. Nothing is calculated from it, so it carries identity alone. `MiscellaneousType` extends it into a full catalogue record, and `MiscellaneousAdditionType` extends it with an amount and a timing.
 
 **MiscellaneousBase** is an object with these properties:
 
@@ -15,7 +15,7 @@ MiscellaneousBase provides unique properties to identify individual records of i
 
 ## MiscellaneousType 
 
-MiscellaneousType collects the attributes of an ingredient to store as record information.
+The full catalogue record for a miscellaneous ingredient: `MiscellaneousBase` plus what it is used for and what is in stock. This is the form used in the `miscellaneous_ingredients` list at the document root.
 
 **MiscellaneousType** is an object with all properties from [MiscellaneousBase](#miscellaneousbase) and these additional properties:
 
@@ -27,7 +27,7 @@ MiscellaneousType collects the attributes of an ingredient to store as record in
 
 ## MiscellaneousAdditionType 
 
-MiscellaneousAdditionType collects the attributes of each miscellaneous ingredient for use in a recipe.
+A miscellaneous ingredient as used in a recipe: `MiscellaneousBase` plus how much and when. Catalogue detail belongs in a `MiscellaneousType` record at the document root, not here.
 
 **MiscellaneousAdditionType** is an object with all properties from [MiscellaneousBase](#miscellaneousbase) and these additional properties:
 
