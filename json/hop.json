@@ -49,6 +49,7 @@
     "VarietyInformation": {
       "type": "object",
       "description": "VarietyInformation collects the attributes of a hop variety to store as record information.",
+      "unevaluatedProperties": false,
       "allOf": [
         {
           "$ref": "#/$defs/HopVarietyBase"

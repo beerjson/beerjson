@@ -9,7 +9,7 @@ const {
   lowerCase
 } = require('lodash')
 
-const parseBool = s => s === 'TRUE'
+const parseBool = s => String(s).toUpperCase() === 'TRUE'
 const getArrayNode = node =>
   Array.from(isNil(node) ? [] : Array.isArray(node) ? node : [node])
 
@@ -28,6 +28,22 @@ const getFermentableType = type =>
   ].indexOf(type) == -1
     ? 'other'
     : type
+
+// BeerXML records when an ingredient is added as a free-text USE on the
+// ingredient; BeerJSON records it as `timing.use`. Values not listed here (and
+// a missing USE) fall back to the boil, which is where BeerXML puts an
+// unqualified addition.
+const USE_TO_TIMING = {
+  boil: 'add_to_boil',
+  'first wort': 'add_to_boil',
+  aroma: 'add_to_boil',
+  mash: 'add_to_mash',
+  'dry hop': 'add_to_fermentation',
+  primary: 'add_to_fermentation',
+  secondary: 'add_to_fermentation',
+  bottling: 'add_to_package'
+}
+const timingUse = use => USE_TO_TIMING[lowerCase(use)] || 'add_to_boil'
 
 const potential = y => (y * 0.46) / 1000 + 1
 const mash_steps = r =>
@@ -118,7 +134,6 @@ const miscellaneous_additions = r =>
   map(getArrayNode(get(r, ['MISCS', 'MISC'])), misc => ({
     name: misc['NAME'],
     type: lowerCase(misc['TYPE']),
-    use: lowerCase(misc['USE']),
     ...(!isEmpty(misc['AMOUNT_IS_WEIGHT']) &&
     parseBool(misc['AMOUNT_IS_WEIGHT'])
       ? {
@@ -143,7 +158,7 @@ const miscellaneous_additions = r =>
         unit: 'min',
         value: Number(misc['TIME'])
       },
-      use: 'add_to_boil'
+      use: timingUse(misc['USE'])
     }
   }))
 
@@ -164,7 +179,6 @@ const hop_bill = r =>
           }
         }
       : {}),
-    ...(!isEmpty(hop['USE']) ? { use: lowerCase(hop['USE']) } : {}),
     amount: {
       unit: 'kg',
       value: Number(hop['AMOUNT'])
@@ -174,7 +188,7 @@ const hop_bill = r =>
         unit: 'min',
         value: Number(hop['TIME'])
       },
-      use: 'add_to_boil'
+      use: timingUse(hop['USE'])
     }
   }))
 
@@ -191,7 +205,7 @@ const fermentable_bill = r =>
       value: Number(fermentable['AMOUNT'])
     },
     origin: fermentable['ORIGIN'],
-    supplier: fermentable['SUPPLIER'],
+    producer: fermentable['SUPPLIER'],
     grain_group: 'base',
     yield: {
       potential: {
@@ -199,9 +213,13 @@ const fermentable_bill = r =>
         value: potential(Number(fermentable['YIELD']))
       }
     },
-    ...(!isEmpty(fermentable['ADD_AFTER_BOIL'])
+    // BeerXML's ADD_AFTER_BOIL boolean has no direct BeerJSON equivalent; a
+    // fermentable added after the boil is one added to the fermentation.
+    ...(parseBool(fermentable['ADD_AFTER_BOIL'])
       ? {
-          add_after_boil: parseBool(fermentable['ADD_AFTER_BOIL'])
+          timing: {
+            use: 'add_to_fermentation'
+          }
         }
       : {})
   }))

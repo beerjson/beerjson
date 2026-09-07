@@ -64,6 +64,7 @@
     "WaterType": {
       "type": "object",
       "description": "WaterType collects the attributes of a brewing water to store as record information",
+      "unevaluatedProperties": false,
       "allOf": [
         {
           "$ref": "#/$defs/WaterBase"

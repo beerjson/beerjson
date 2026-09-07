@@ -65,10 +65,6 @@
               "type": "aroma/bittering",
               "notes": "American aroma hop Citra was created by John I. Haas, Inc. and Select Botanicals Group joint venture, the Hop Breeding Company. It was released to the brewing world in 2008.",
               "substitutes": "Simcoe®, Cascade (US), Centennial, Mosaic®",
-              "humulene": 12,
-              "caryophyllene": 8,
-              "myrcene": 60,
-              "farnesene": 1,
               "inventory": {
                 "pellet": {
                   "unit": "g",
@@ -85,6 +81,12 @@
                   "value": 2
                 },
                 "use": "add_to_fermentation"
+              },
+              "oil_content": {
+                "myrcene": 60,
+                "humulene": 12,
+                "caryophyllene": 8,
+                "farnesene": 1
               }
             },
             {
@@ -116,36 +118,45 @@
               "name": "Burlington Ale",
               "type": "ale",
               "form": "liquid",
-              "laboratory": "White Labs",
+              "producer": "White Labs",
               "product_id": "WLP095",
-              "add_to_fermentation_step": 1,
               "amount": {
                 "unit": "ml",
                 "value": 40
+              },
+              "timing": {
+                "use": "add_to_fermentation",
+                "step": 1
               }
             },
             {
               "name": "California Ale Yeast",
               "type": "ale",
               "form": "liquid",
-              "laboratory": "White Labs",
+              "producer": "White Labs",
               "product_id": "WLP001",
-              "add_to_fermentation_step": 2,
               "amount": {
                 "unit": "each",
                 "value": 1
+              },
+              "timing": {
+                "use": "add_to_fermentation",
+                "step": 2
               }
             },
             {
               "name": "US-05",
               "type": "ale",
               "form": "dry",
-              "laboratory": "Safale",
+              "producer": "Safale",
               "product_id": "WLP001",
-              "add_to_fermentation_step": 3,
               "amount": {
                 "unit": "g",
                 "value": 11.5
+              },
+              "timing": {
+                "use": "add_to_fermentation",
+                "step": 3
               }
             }
           ],

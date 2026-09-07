@@ -112,9 +112,12 @@ sees the whole composition:
 Putting either keyword on `CultureBase` would reject every property
 `CultureAdditionType` adds.
 
-The composed types do not carry `unevaluatedProperties` yet: enabling it rejects
-59 keys currently present in the repository's own test corpus. Adding it to a
-type is therefore a change that comes with fixing that type's examples.
+Nine of the thirteen composed types carry it. The four that do not
+(`HopAdditionType`, `WaterAdditionType`, `StyleType`, `RecipeStyleType`) are
+blocked on open format questions: their own examples under `tests/` use
+properties the types do not declare. Closing one is therefore a change that
+comes with resolving that question and fixing its examples. The conventions test
+tracks the four, so a newly added composed type cannot join them.
 
 ## Arrays
 

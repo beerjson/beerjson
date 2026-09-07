@@ -38,6 +38,7 @@
     "MiscellaneousType": {
       "type": "object",
       "description": "MiscellaneousType collects the attributes of an ingredient to store as record information.",
+      "unevaluatedProperties": false,
       "allOf": [
         {
           "$ref": "#/$defs/MiscellaneousBase"
@@ -61,6 +62,7 @@
     "MiscellaneousAdditionType": {
       "type": "object",
       "description": "MiscellaneousAdditionType collects the attributes of each miscellaneous ingredient for use in a recipe.",
+      "unevaluatedProperties": false,
       "allOf": [
         {
           "$ref": "#/$defs/MiscellaneousBase"

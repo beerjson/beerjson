@@ -62,6 +62,7 @@
     "FermentableType": {
       "type": "object",
       "description": "FermentableType collects the attributes of a fermentable ingredient to store as record information.",
+      "unevaluatedProperties": false,
       "allOf": [
         {
           "$ref": "#/$defs/FermentableBase"
@@ -155,6 +156,7 @@
     "FermentableAdditionType": {
       "type": "object",
       "description": "FermentableAdditionType collects the attributes of each fermentable ingredient for use in a recipe fermentable bill.",
+      "unevaluatedProperties": false,
       "allOf": [
         {
           "$ref": "#/$defs/FermentableBase"

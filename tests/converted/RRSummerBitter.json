@@ -41,15 +41,14 @@
                 "value": 6.9999955
               },
               "origin": "United Kingdom",
-              "supplier": "Maris Otter",
+              "producer": "Maris Otter",
               "grain_group": "base",
               "yield": {
                 "potential": {
                   "unit": "sg",
                   "value": 1.03795
                 }
-              },
-              "add_after_boil": false
+              }
             },
             {
               "name": "Cara 50",
@@ -63,15 +62,14 @@
                 "value": 0.9999994
               },
               "origin": "Belgium",
-              "supplier": "",
+              "producer": "",
               "grain_group": "base",
               "yield": {
                 "potential": {
                   "unit": "sg",
                   "value": 1.0345
                 }
-              },
-              "add_after_boil": false
+              }
             }
           ],
           "hop_additions": [
@@ -87,7 +85,6 @@
                 "unit": "%",
                 "value": 5
               },
-              "use": "boil",
               "amount": {
                 "unit": "kg",
                 "value": 0.04
@@ -112,7 +109,6 @@
                 "unit": "%",
                 "value": 3.5
               },
-              "use": "boil",
               "amount": {
                 "unit": "kg",
                 "value": 0.015
@@ -137,7 +133,6 @@
                 "unit": "%",
                 "value": 3.5
               },
-              "use": "boil",
               "amount": {
                 "unit": "kg",
                 "value": 0.015

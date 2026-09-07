@@ -66,6 +66,14 @@ release. The npm package is still 1.0.2, so none of it has reached consumers.
   a message and ajv's params.
 - **`engines: node >= 22`** declared, and CI runs the suite on Node 22 and 24
   ([#216](https://github.com/beerjson/beerjson/issues/216)).
+- **Nine of the thirteen `allOf`-composed types now reject unknown keys**, via
+  2020-12's `unevaluatedProperties`: `CultureInformation`,
+  `CultureAdditionType`, `EquipmentItemType`, `FermentableType`,
+  `FermentableAdditionType`, `VarietyInformation`, `MiscellaneousType`,
+  `MiscellaneousAdditionType` and `WaterType`. A misspelled key in any of them
+  was previously accepted and silently discarded, and draft-07 offered no way to
+  catch it. `HopAdditionType`, `WaterAdditionType`, `StyleType` and
+  `RecipeStyleType` remain open pending format questions.
 
 ### Fixed
 
@@ -78,6 +86,21 @@ release. The npm package is still 1.0.2, so none of it has reached consumers.
   they still declared the removed `DensityUnitType`, and `BeerJSON.profiles` was
   typed `WaterBase[]` where the schema says `WaterType`. All four are corrected
   by regenerating.
+- **The BeerXML importer converted every hop as a boil addition**, because
+  `timing.use` was hardcoded to `add_to_boil` while BeerXML's `USE` was written
+  out to a `use` key the format does not have. Dry hops therefore became boil
+  additions. `USE` is now mapped to `timing.use`, so the six dry hop additions
+  in the fixtures convert to `add_to_fermentation`. Same fix for miscellaneous
+  additions.
+- **The BeerXML importer emitted three more keys the format does not have**:
+  `supplier` on fermentable additions (the schema calls it `producer`),
+  `add_after_boil` (now a `timing` of `add_to_fermentation`), and `use` on
+  miscellaneous additions. Its `parseBool` also only recognised uppercase
+  `TRUE`, so a lowercase `true` in a source file read as false.
+- **Test fixtures used properties the format does not have**: `laboratory` for
+  `producer` on cultures, `add_to_fermentation_step: N` where `TimingType`
+  expresses exactly that as `timing.step`, and the hop oil fields flat on an
+  addition rather than nested under `oil_content`.
 - **`packaging_vessel.graphics` and the `misc.json` root** had JSON Schema
   authoring errors ([#222](https://github.com/beerjson/beerjson/pull/222)).
 - **Kolbach Index** is a percentage, and is now typed as one

@@ -79,7 +79,6 @@
                 "unit": "%",
                 "value": 0
               },
-              "use": "boil",
               "amount": {
                 "unit": "kg",
                 "value": 0.02
@@ -103,7 +102,6 @@
                 "unit": "%",
                 "value": 0
               },
-              "use": "boil",
               "amount": {
                 "unit": "kg",
                 "value": 0.0125
@@ -127,7 +125,6 @@
                 "unit": "%",
                 "value": 0
               },
-              "use": "boil",
               "amount": {
                 "unit": "kg",
                 "value": 0.02
@@ -151,7 +148,6 @@
                 "unit": "%",
                 "value": 0
               },
-              "use": "boil",
               "amount": {
                 "unit": "kg",
                 "value": 0.0125
@@ -175,7 +171,6 @@
                 "unit": "%",
                 "value": 0
               },
-              "use": "boil",
               "amount": {
                 "unit": "kg",
                 "value": 0.0275
@@ -199,7 +194,6 @@
                 "unit": "%",
                 "value": 0
               },
-              "use": "boil",
               "amount": {
                 "unit": "kg",
                 "value": 0.0125
@@ -223,7 +217,6 @@
                 "unit": "%",
                 "value": 0
               },
-              "use": "boil",
               "amount": {
                 "unit": "kg",
                 "value": 0.0125
@@ -247,7 +240,6 @@
                 "unit": "%",
                 "value": 0
               },
-              "use": "boil",
               "amount": {
                 "unit": "kg",
                 "value": 0.0125
@@ -271,7 +263,6 @@
                 "unit": "%",
                 "value": 0
               },
-              "use": "dry hop",
               "amount": {
                 "unit": "kg",
                 "value": 0.0475
@@ -281,7 +272,7 @@
                   "unit": "min",
                   "value": 10080
                 },
-                "use": "add_to_boil"
+                "use": "add_to_fermentation"
               }
             },
             {
@@ -295,7 +286,6 @@
                 "unit": "%",
                 "value": 0
               },
-              "use": "dry hop",
               "amount": {
                 "unit": "kg",
                 "value": 0.0375
@@ -305,7 +295,7 @@
                   "unit": "min",
                   "value": 10080
                 },
-                "use": "add_to_boil"
+                "use": "add_to_fermentation"
               }
             },
             {
@@ -319,7 +309,6 @@
                 "unit": "%",
                 "value": 0
               },
-              "use": "dry hop",
               "amount": {
                 "unit": "kg",
                 "value": 0.0375
@@ -329,7 +318,7 @@
                   "unit": "min",
                   "value": 10080
                 },
-                "use": "add_to_boil"
+                "use": "add_to_fermentation"
               }
             },
             {
@@ -343,7 +332,6 @@
                 "unit": "%",
                 "value": 0
               },
-              "use": "dry hop",
               "amount": {
                 "unit": "kg",
                 "value": 0.02
@@ -353,7 +341,7 @@
                   "unit": "min",
                   "value": 10080
                 },
-                "use": "add_to_boil"
+                "use": "add_to_fermentation"
               }
             },
             {
@@ -367,7 +355,6 @@
                 "unit": "%",
                 "value": 0
               },
-              "use": "dry hop",
               "amount": {
                 "unit": "kg",
                 "value": 0.0375
@@ -377,7 +364,7 @@
                   "unit": "min",
                   "value": 10080
                 },
-                "use": "add_to_boil"
+                "use": "add_to_fermentation"
               }
             },
             {
@@ -391,7 +378,6 @@
                 "unit": "%",
                 "value": 0
               },
-              "use": "dry hop",
               "amount": {
                 "unit": "kg",
                 "value": 0.01
@@ -401,7 +387,7 @@
                   "unit": "min",
                   "value": 10080
                 },
-                "use": "add_to_boil"
+                "use": "add_to_fermentation"
               }
             }
           ],
