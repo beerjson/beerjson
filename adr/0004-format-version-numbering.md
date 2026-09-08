@@ -42,9 +42,48 @@ level, since a change to what documents may contain is at least a minor.
   being valid: a property removed, a property's type changed, a new `required`
   entry, an enum value withdrawn.
 - **MINOR** increments when the format gains something without invalidating
-  anything: a new optional property, a new enum value, a new type, a corrected
-  description. Closing a type to unknown keys is a minor, because the keys it
-  starts rejecting were never valid.
+  anything: a new optional property, a new enum value, a new type. Closing a
+  type to unknown keys is a minor, because the keys it starts rejecting were
+  never valid.
+- **Neither** increments for a change that leaves every document's validity
+  untouched, such as correcting a description. That ships as a patch release of
+  the package with the format version unchanged.
+
+### What a version bump promises
+
+An interchange format has two directions of compatibility, and they are not
+equivalent:
+
+|                      | New software, old document | Old software, new document |
+| -------------------- | -------------------------- | -------------------------- |
+| Patch (package only) | valid                      | valid                      |
+| MINOR                | valid                      | **may be rejected**        |
+| MAJOR                | may be rejected            | may be rejected            |
+
+**A MINOR bump promises only that new software reads old documents.** It does
+not promise the reverse. Semantic Versioning's "backward compatible manner" is
+written for an API consumer, where adding something is safe; for a data format,
+a document written against a newer version can fail against an older schema.
+Three ways it fails, in increasing severity:
+
+- **A new optional property is ignored** where the type it sits on is open to
+  unknown keys. The document validates and the value is discarded.
+- **A property added alongside a deprecated one loses data silently.** A reader
+  that knows only `flouride` discards a document's `fluoride` and reports
+  nothing.
+- **A new enum value is rejected outright.** An enum is closed in every version,
+  so a document using `wheat` as a culture type fails against the 1.0 schema
+  rather than degrading.
+
+From 1.1 onwards most composed types declare `unevaluatedProperties: false`, so
+the first case increasingly behaves like the third: an older validator rejects a
+newer document rather than ignoring the addition.
+
+None of this argues for calling such changes MAJOR, which would make every
+addition a breaking release. It argues for saying so plainly: a reader should
+accept an unknown format version it can parse, and treat unrecognised properties
+and enum values as data it does not understand rather than as grounds for
+rejecting the document.
 
 **Minor versions stay single-digit while the field is a number.** On reaching
 `x.9`, the next release is a major, or the field moves to a string in a major.
