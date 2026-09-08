@@ -1,7 +1,7 @@
 /**
- * The version contract from ADR-0004. `beerjson.version` was unconstrained and
- * the repository's own documents disagreed about what belonged in it for five
- * years, so every part of the contract is pinned here.
+ * The version contract from ADR-0004: `beerjson.version` is the format version
+ * as MAJOR.MINOR, the schema accepts only the versions it can validate, and
+ * every document under tests/ declares a supported one.
  */
 const fs = require('fs')
 const path = require('path')
@@ -50,8 +50,8 @@ describe('VersionType', () => {
     })
   })
 
-  // These were never a published BeerJSON version, but they are what the
-  // examples showed for years, so implementations copied them.
+  // Development-snapshot values that implementations copied from the examples.
+  // Deprecated, and accepted so those documents stay valid.
   test.each(DEPRECATED_VERSIONS)('deprecated %s still validates', version => {
     expect(beerjson.validate(document(version)).valid).toBe(true)
   })
