@@ -28,7 +28,8 @@ const parser = formatter => schema => {
       propName,
       requiredList.includes(propName),
       processPropType(propName, propDef),
-      propDef.description
+      propDef.description,
+      propDef.deprecated === true
     )
 
   const processSimpleTypeDefinition = (typeName, typeDef) =>

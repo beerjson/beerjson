@@ -1,28 +1,33 @@
 # BeerJSON code owners
 # These owners are requested for review when someone opens a pull request.
 # https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# beerjson-wg and beerjson-admin overlap only partially, so paths that concern
+# every maintainer list both. A team must have at least write access to the
+# repository or GitHub ignores it here: beerjson-wg has push, beerjson-admin has
+# admin.
 
 # Default owner for everything
-* @beerjson/beerjson-wg
+* @beerjson/beerjson-wg @beerjson/beerjson-admin
 
 # The specification itself. Changes here alter the format every implementer
 # reads and writes, so they need working group review.
-/json/ @beerjson/beerjson-wg
+/json/ @beerjson/beerjson-wg @beerjson/beerjson-admin
 
 # Format decisions and authoring conventions
-/adr/ @beerjson/beerjson-wg
-/SCHEMA_STYLE.md @beerjson/beerjson-wg
+/adr/ @beerjson/beerjson-wg @beerjson/beerjson-admin
+/SCHEMA_STYLE.md @beerjson/beerjson-wg @beerjson/beerjson-admin
 
 # Generated from json/ by `npm run gen-docs`. A pull request that touches these
 # without touching json/ is editing generated output by hand.
-/docs/ @beerjson/beerjson-wg
-/types/ @beerjson/beerjson-wg
+/docs/ @beerjson/beerjson-wg @beerjson/beerjson-admin
+/types/ @beerjson/beerjson-wg @beerjson/beerjson-admin
 
 # Generators, validator, BeerXML importer
-/js/ @beerjson/beerjson-wg
+/js/ @beerjson/beerjson-wg @beerjson/beerjson-admin
 
 # Test corpus
-/tests/ @beerjson/beerjson-wg
+/tests/ @beerjson/beerjson-wg @beerjson/beerjson-admin
 
 # CI, templates, repository policy
 /.github/ @beerjson/beerjson-admin
