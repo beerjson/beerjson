@@ -345,9 +345,9 @@ RegExp pattern: `\d{4}-\d{2}-\d{2}|\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}`
 `"very low"`<br/>`"low"`<br/>`"medium low"`<br/>`"medium"`<br/>`"medium high"`<br/>`"high"`<br/>`"very high"`
 ## VersionType 
 
-*no description yet*
+The version of the BeerJSON format this document is written against, as MAJOR.MINOR. Note that JSON has no decimal type, so 1.0 is written as the number 1.
 
-number
+ `1`<br/>`1.1` or  `2.01`<br/>`2.06`
 ## ViscosityUnitType 
 
 *no description yet*

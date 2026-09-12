@@ -9,6 +9,8 @@ const {
   lowerCase
 } = require('lodash')
 
+const { CURRENT_VERSION } = require('./format-version')
+
 const parseBool = s => String(s).toUpperCase() === 'TRUE'
 const getArrayNode = node =>
   Array.from(isNil(node) ? [] : Array.isArray(node) ? node : [node])
@@ -395,7 +397,7 @@ const importFromBeerXml = xml => {
 
     const beerJSON = {
       beerjson: {
-        version: 2.06,
+        version: CURRENT_VERSION,
         recipes: [recipe]
       }
     }

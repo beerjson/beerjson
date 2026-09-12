@@ -63,12 +63,20 @@ question is likely to be asked again.
 Classify every schema change before proposing it:
 
 - **Additive** (minor release): a new optional property, a new value in an
-  existing enum, a new type, a clarified `description`. A document valid against
-  the previous version stays valid, and existing software keeps working.
+  existing enum, a new type. A document valid against the previous version stays
+  valid, and software built against the new version reads old documents.
 - **Breaking** (major release): renaming or removing a property, changing a
   property's type, adding a `required` entry, removing an enum value, or
   tightening a constraint. Existing files or existing implementations stop
   working.
+- **Neither**: a clarified `description`, which leaves every document's validity
+  untouched. Ships as a patch release of the package, format version unchanged.
+
+Note that an additive change does not guarantee that _older_ software reads a
+_newer_ document. A new enum value is rejected by an older validator, and a
+property added on a closed type is too.
+[ADR-0004](adr/0004-format-version-numbering.md) sets out what each bump does
+and does not promise.
 
 Breaking changes are batched into a single release rather than dribbled out, and
 are announced in [CHANGELOG.md](CHANGELOG.md) with upgrade notes. Where a

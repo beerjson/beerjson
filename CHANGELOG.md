@@ -14,10 +14,29 @@ than entries written at the time.
 
 ## [Unreleased]
 
-Everything below has been on `main` since 1.0.2 (October 2021) without a
-release. The npm package is still 1.0.2, so none of it has reached consumers.
+## [1.1.0] - 2026-08-21
 
-### Changed (breaking)
+Format version **1.1**. The first release since October 2021: everything below
+had accumulated on `main` without reaching consumers.
+
+No document that was valid against 1.0.2 becomes invalid. The schemas are
+stricter, but only about keys and values that were never part of the format and
+were going undetected.
+
+> **Upgrade notes**
+>
+> - **Schema consumers**: the schemas are now JSON Schema 2020-12, so a
+>   validator supporting that draft is required, and type definitions moved from
+>   `definitions` to `$defs`. Code that resolves `$ref` pointers properly needs
+>   no change; code that string-matches `#/definitions/` does.
+> - **TypeScript consumers**: `GraphicType` is now `PackagingGraphicType`, which
+>   is what the schema always called it, and `DensityUnitType` is gone. Neither
+>   described anything the schema contained.
+> - **Anyone writing documents**: write `"version": 1.1`. The `2.01` and `2.06`
+>   values that the examples used to show still validate but are deprecated. See
+>   [ADR-0004](adr/0004-format-version-numbering.md).
+
+### Changed
 
 - **Schemas migrated to JSON Schema 2020-12, and `definitions` renamed to
   `$defs`.** draft-07 has no `deprecated` keyword, which is the only way to
@@ -25,16 +44,20 @@ release. The npm package is still 1.0.2, so none of it has reached consumers.
   ([#214](https://github.com/beerjson/beerjson/issues/214),
   [#208](https://github.com/beerjson/beerjson/issues/208)), and no
   `unevaluatedProperties`, which is the only way an `allOf`-composed type can
-  reject unknown keys. All 46 test documents validate unchanged; a consumer that
-  resolves `$ref` pointers properly is unaffected, but one that string-matches
-  `#/definitions/` will not find the types. See
+  reject unknown keys. All 46 test documents validate unchanged. See
   [ADR-0002](adr/0002-json-schema-2020-12.md).
-- **`FermentableBase.group` renamed to `grain_group`**
-  ([#219](https://github.com/beerjson/beerjson/pull/219)). `group` was never a
-  valid key for the value it held.
+- **`beerjson.version` is now constrained and documented**
+  ([ADR-0004](adr/0004-format-version-numbering.md)). It was a bare `number`
+  with no constraint and no documentation, so nothing agreed on what belonged in
+  it: 22 of the repository's own documents said `2.01`, 24 said `2.06`, the
+  BeerXML importer hardcoded `2.06`, and the README called the format 1.0. It is
+  the format version, `MAJOR.MINOR`, distinct from the npm package version, and
+  the schema now enumerates the versions it accepts. The `2.0x` development
+  snapshot values are kept and marked deprecated, because the published examples
+  showed them for five years and implementations copied them.
 - **`DensityUnitType` removed** from `measureable_units.json`
   ([#234](https://github.com/beerjson/beerjson/pull/234)). It duplicated
-  `GravityUnitType` and no type referenced it.
+  `GravityUnitType` and no type referenced it, so no document could have used it.
 
 ### Added
 
@@ -115,6 +138,10 @@ release. The npm package is still 1.0.2, so none of it has reached consumers.
   `producer` on cultures, `add_to_fermentation_step: N` where `TimingType`
   expresses exactly that as `timing.step`, and the hop oil fields flat on an
   addition rather than nested under `oil_content`.
+- **The BeerXML importer wrote an invalid `group` key** on fermentable
+  additions, where the schema has always called it `grain_group`
+  ([#219](https://github.com/beerjson/beerjson/pull/219)). The schema was not
+  changed, so this affects only files the importer produced.
 - **`packaging_vessel.graphics` and the `misc.json` root** had JSON Schema
   authoring errors ([#222](https://github.com/beerjson/beerjson/pull/222)).
 - **Kolbach Index** is a percentage, and is now typed as one
