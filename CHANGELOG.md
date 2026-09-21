@@ -63,10 +63,9 @@ than entries written at the time.
   `hop_varieties` list at the document root, so the fixture now demonstrates the
   recommended pattern rather than contradicting it.
 
-- **A release now attaches its packed tarball to the GitHub release**, and does
-  so independently of the npm publish, so a release always produces an
-  installable artifact even when registry credentials are unavailable. The
-  README documents installing a pinned release from the tarball or the git tag.
+- **A release now attaches its packed tarball to the GitHub release**, so a
+  release can be pinned and installed by URL without going through the
+  registry. The README documents installing from the tarball or the git tag.
 
 ### Fixed
 

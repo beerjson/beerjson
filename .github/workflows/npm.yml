@@ -39,9 +39,8 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-  # Attaches the packed tarball to the GitHub release. This runs before, and
-  # independently of, the npm publish, so a release always produces an
-  # installable artifact even when registry credentials are unavailable:
+  # Attaches the packed tarball to the GitHub release, so a release can be
+  # installed by URL without going through the registry:
   #
   #   npm install https://github.com/beerjson/beerjson/releases/download/vX.Y.Z/beerjson-beerjson-X.Y.Z.tgz
   release-asset:
@@ -78,16 +77,10 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  # Best effort. Publishing requires write access to the `beerjson` npm org,
-  # whose only member is the account that first published the package. Until
-  # that is resolved the registry copy lags behind the GitHub release, so a
-  # failure here must not fail the release: the tarball attached by
-  # release-asset is the artifact consumers can always install.
   publish:
     name: Publish to npm
     if: github.event_name == 'release'
     needs: [release-asset]
-    continue-on-error: true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
