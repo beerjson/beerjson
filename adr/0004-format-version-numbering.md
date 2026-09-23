@@ -23,10 +23,10 @@ result is that a consumer cannot use the field for the one thing it exists for,
 which is deciding whether it understands the document in front of it, and an
 implementer writing a file has no way to find out what to emit.
 
-There is a second, quieter problem. Because the value is a JSON number, `1.10`
-and `1.1` are the same value, so a numbering scheme that ever reaches a
-two-digit minor version silently collides. `1.0` is also indistinguishable from
-`1`, since JSON has no decimal type.
+There is a second, quieter problem. Because the value is a JSON number, `3.10`
+and `3.1` are the same value, so a numbering scheme that ever reaches a
+two-digit minor version silently collides. `3.0` is also indistinguishable from
+`3`, since JSON has no decimal type.
 
 ## Decision
 
@@ -34,13 +34,22 @@ two-digit minor version silently collides. `1.0` is also indistinguishable from
 package release that changes no schema does not move it. Dependency bumps and
 tooling fixes never move it.
 
+The two are nonetheless kept aligned where they can be: the package's
+`MAJOR.MINOR` mirrors the format version, and its `PATCH` carries
+package-only changes such as dependency bumps. So `@beerjson/beerjson@3.0.x`
+implements format 3.0, which is the question five years of two competing numbers
+made hard to answer. If the package ever needs a breaking change the format does
+not have, the format takes a minor bump alongside it rather than the two
+desyncing.
+
 **It has exactly two components, `MAJOR.MINOR`.** Never `MAJOR.MINOR.PATCH`: a
 JSON number cannot carry three components, and a format has no meaningful patch
 level, since a change to what documents may contain is at least a minor.
 
 - **MAJOR** increments when a document valid against the previous version stops
-  being valid: a property removed, a property's type changed, a new `required`
-  entry, an enum value withdrawn.
+  being valid (a property removed, a property's type changed, a new `required`
+  entry, an enum value withdrawn), or when reading the schema demands work of
+  implementers that a schema edit would not, such as changing JSON Schema draft.
 - **MINOR** increments when the format gains something without invalidating
   anything: a new optional property, a new enum value, a new type. Closing a
   type to unknown keys is a minor, because the keys it starts rejecting were
@@ -48,6 +57,40 @@ level, since a change to what documents may contain is at least a minor.
 - **Neither** increments for a change that leaves every document's validity
   untouched, such as correcting a description. That ships as a patch release of
   the package with the format version unchanged.
+
+**`VersionType` enumerates the versions the schema can validate**, rather than
+accepting any number:
+
+```json
+"VersionType": {
+  "description": "The version of the BeerJSON format this document is written against, as MAJOR.MINOR. A schema accepts its own version and the earlier ones it can still validate. Note that JSON has no decimal type, so 3.0 is written as the number 3.",
+  "type": "number",
+  "enum": [2.01, 2.06, 3.0]
+}
+```
+
+**The current format version is 3.0.** The published examples carried `2.01` and
+then `2.06` for years, and implementations copied them: a GitHub code search
+finds 31 documents declaring `2.06`, including samples in `beerproto/beerjson.go`
+and test data in `brewcomputer/brewcalc`. Those are not development snapshots to
+be deprecated, they are the versions the format shipped as, and they stay valid.
+
+A version number exists to be compared, so whatever comes next has to sort and
+read as newer than `2.06`. That rules out continuing from the "1.0" the README
+used, and it rules out `2.1`, which sorts correctly as a number (`2.1` is `2.10`)
+but reads as older to anyone seeing minor 1 against minor 6, and which would
+permanently foreclose `2.10`.
+
+Going to a major rather than `2.07` reflects the cost to implementers. Moving to
+2020-12 is not a schema edit they can absorb: Brewtarget and Brewken had to
+replace their validation library, from Valijson to Blaze, to support the draft at
+all. No document breaks, but implementations do, and that is what a major
+communicates. It also leaves the two-decimal `2.0x` counter behind, so `3.1` and
+`3.2` can be ordinary single-digit minors.
+
+**Minor versions stay single-digit from 3.0 onwards.** On reaching `3.9`, the
+next release is a major, or the field moves to a string in a major. The `2.0x`
+values keep the two-decimal form they were published with.
 
 ### What a version bump promises
 
@@ -72,10 +115,10 @@ Three ways it fails, in increasing severity:
   that knows only `flouride` discards a document's `fluoride` and reports
   nothing.
 - **A new enum value is rejected outright.** An enum is closed in every version,
-  so a document using `wheat` as a culture type fails against the 1.0 schema
+  so a document using `wheat` as a culture type fails against an earlier schema
   rather than degrading.
 
-From 1.1 onwards most composed types declare `unevaluatedProperties: false`, so
+From 3.0 onwards most composed types declare `unevaluatedProperties: false`, so
 the first case increasingly behaves like the third: an older validator rejects a
 newer document rather than ignoring the addition.
 
@@ -85,55 +128,22 @@ accept an unknown format version it can parse, and treat unrecognised properties
 and enum values as data it does not understand rather than as grounds for
 rejecting the document.
 
-**Minor versions stay single-digit while the field is a number.** On reaching
-`x.9`, the next release is a major, or the field moves to a string in a major.
-
-**`VersionType` enumerates the versions the schema can validate**, rather than
-accepting any number. The development-snapshot values are kept in a branch
-marked `deprecated`, following [ADR-0003](0003-deprecate-rather-than-rename.md):
-
-```json
-"VersionType": {
-  "description": "The version of the BeerJSON format this document is written against, as MAJOR.MINOR. Note that JSON has no decimal type, so 1.0 is written as the number 1.",
-  "oneOf": [
-    { "type": "number", "enum": [1.0, 1.1] },
-    {
-      "deprecated": true,
-      "description": "Development-snapshot versions inherited from the unfinished BeerXML 2 draft. Accepted so existing documents stay valid; write 1.1 instead.",
-      "type": "number",
-      "enum": [2.01, 2.06]
-    }
-  ]
-}
-```
-
-Keeping `2.01` and `2.06` valid is not politeness. They are what the published
-examples showed for five years, so implementations copied them: every example
-document in Werb, an independent consumer, declares `2.06` because it was
-copied from this repository's own fixtures. Rejecting the value outright would
-invalidate real files for a cosmetic gain, and would make this release a major
-for no benefit to anyone.
-
-A schema accepts its own version and every earlier one it is compatible with, so
-a 1.1 reader accepts a 1.0 document. A document declaring a version in neither
-branch fails with an error that names the version, rather than failing obscurely
-somewhere deeper or, as today, passing while being misunderstood.
-
-The current format version is therefore **1.1**, and the enum is the single
-source of truth for it: `js/format-version.js` derives the current and supported
-versions from the schema, the importer emits the current one, and a test asserts
-every document under `tests/` declares a supported version.
-
 ## Alternatives considered
 
-**Keep `2.06` and continue the BeerXML 2 numbering.** It is what most of the
-test corpus and the importer already do, so it is the cheapest option and has
-some claim to being the original intent. Rejected because the project published
-itself as 1.0 in #176, tagged 1.0.x, and describes itself as 1.0 in the README
-and the documentation title. Declaring `2.06` in documents while calling the
-format 1.0 everywhere else would preserve exactly the confusion this ADR exists
-to end. It would also imply a relationship to a BeerXML 2 draft that was never
-finished and that BeerJSON has long since diverged from.
+**Continue from 1.0**, which the README, the tags and the npm package all use.
+Rejected because `1.1` sorts below the `2.06` already in circulation, so an
+implementer comparing two documents gets the order backwards, and would need
+special-case logic instead of a numeric comparison.
+
+**`2.1`.** Sorts correctly, since `2.1` is `2.10` and `2.06` is `2.06`.
+Rejected because it reads as older than `2.06` to a human comparing minor 1 with
+minor 6, and because it would foreclose `2.10` forever, that being the same
+number.
+
+**`2.07`**, continuing the two-decimal sequence exactly. Sorts and reads
+correctly and leaves room to `2.99`. Rejected as understating the cost to
+implementers of the 2020-12 migration, and because it keeps the two-decimal
+counter that made this question hard in the first place.
 
 **Leave `VersionType` unconstrained and document the expected value.** Least
 disruptive. Rejected because the field's only purpose is machine consumption; a
@@ -163,8 +173,7 @@ freeze the package version.
 - **Harder:** every release with schema changes must extend the `VersionType`
   enum, which is a deliberate step that is easy to forget. The test asserting the
   test corpus declares a supported version is what catches it.
-- **Breaking:** nothing. Documents declaring `2.01` or `2.06` keep validating,
-  and every other value that used to pass was passing only because the field was
-  unconstrained. Software emitting `2.06` should move to `1.1`, but on its own
-  schedule; the deprecated branch will be removed in a future major with the
-  usual notice.
+- **Breaking:** no document. Documents declaring `2.01` or `2.06` keep
+  validating; every other value that passed before did so only because the field
+  was unconstrained. Implementations do break, in that reading a 3.0 schema needs
+  a validator supporting JSON Schema 2020-12, which is what the major signals.

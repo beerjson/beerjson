@@ -9,6 +9,7 @@ const path = require('path')
 
 const pkg = require('../package.json')
 const beerjson = require('../index.js')
+const { CURRENT_VERSION } = require('../js/format-version')
 
 describe('package manifest', () => {
   test('main points at a file that exists', () => {
@@ -50,7 +51,7 @@ describe('exported schemas', () => {
 describe('validate', () => {
   const minimal = {
     beerjson: {
-      version: 1.0,
+      version: CURRENT_VERSION,
       hop_varieties: [
         {
           name: 'Cascade',
@@ -71,7 +72,7 @@ describe('validate', () => {
 
   test('reports a path, message and params for an invalid document', () => {
     const result = beerjson.validate({
-      beerjson: { version: 1.0, hop_varieties: [{ origin: 'US' }] }
+      beerjson: { version: CURRENT_VERSION, hop_varieties: [{ origin: 'US' }] }
     })
     expect(result.valid).toBe(false)
     expect(result.errors.length).toBeGreaterThan(0)
@@ -85,7 +86,7 @@ describe('validate', () => {
   test('reports every error, not only the first', () => {
     const result = beerjson.validate({
       beerjson: {
-        version: 1.0,
+        version: CURRENT_VERSION,
         hop_varieties: [{ origin: 'US' }, { origin: 'DE' }]
       }
     })
@@ -99,7 +100,9 @@ describe('validate', () => {
   })
 
   test('does not leak errors from a previous call', () => {
-    beerjson.validate({ beerjson: { version: 1.0, hop_varieties: [{}] } })
+    beerjson.validate({
+      beerjson: { version: CURRENT_VERSION, hop_varieties: [{}] }
+    })
     expect(beerjson.validate(minimal)).toEqual({ valid: true, errors: [] })
   })
 })

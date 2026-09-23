@@ -14,27 +14,33 @@ than entries written at the time.
 
 ## [Unreleased]
 
-## [1.1.0] - 2026-08-21
+## [3.0.0] - 2026-09-23
 
-Format version **1.1**. The first release since October 2021: everything below
+**Format version 3.0.** The first release since October 2021: everything below
 had accumulated on `main` without reaching consumers.
 
-No document that was valid against 1.0.2 becomes invalid. The schemas are
-stricter, but only about keys and values that were never part of the format and
-were going undetected.
+The package jumps from 1.0.2 to 3.0.0 so that its `MAJOR.MINOR` matches the
+format version it implements. The format continues the `2.0x` sequence that
+documents in the wild already carry, and the package's `PATCH` is reserved for
+package-only changes. See [ADR-0004](adr/0004-format-version-numbering.md).
+
+No document that was valid before becomes invalid, including documents declaring
+`2.01` or `2.06`. Implementations do have work to do, which is what the major
+signals on both numbers.
 
 > **Upgrade notes**
 >
 > - **Schema consumers**: the schemas are now JSON Schema 2020-12, so a
->   validator supporting that draft is required, and type definitions moved from
->   `definitions` to `$defs`. Code that resolves `$ref` pointers properly needs
->   no change; code that string-matches `#/definitions/` does.
+>   validator supporting that draft is required. This is not always a version
+>   bump: Brewtarget and Brewken had to replace their validation library. Type
+>   definitions also moved from `definitions` to `$defs`, so code that resolves
+>   `$ref` pointers properly needs no change while code that string-matches
+>   `#/definitions/` does.
 > - **TypeScript consumers**: `GraphicType` is now `PackagingGraphicType`, which
 >   is what the schema always called it, and `DensityUnitType` is gone. Neither
 >   described anything the schema contained.
-> - **Anyone writing documents**: write `"version": 1.1`. The `2.01` and `2.06`
->   values that the examples used to show still validate but are deprecated. See
->   [ADR-0004](adr/0004-format-version-numbering.md).
+> - **Anyone writing documents**: write `"version": 3.0`. Documents declaring
+>   `2.01` or `2.06` remain valid.
 
 ### Changed
 
@@ -52,9 +58,7 @@ were going undetected.
   it: 22 of the repository's own documents said `2.01`, 24 said `2.06`, the
   BeerXML importer hardcoded `2.06`, and the README called the format 1.0. It is
   the format version, `MAJOR.MINOR`, distinct from the npm package version, and
-  the schema now enumerates the versions it accepts. The `2.0x` development
-  snapshot values are kept and marked deprecated, because the published examples
-  showed them for five years and implementations copied them.
+  the schema now enumerates the versions it accepts: `2.01`, `2.06` and `3.0`.
 - **`DensityUnitType` removed** from `measureable_units.json`
   ([#234](https://github.com/beerjson/beerjson/pull/234)). It duplicated
   `GravityUnitType` and no type referenced it, so no document could have used it.

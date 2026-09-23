@@ -539,24 +539,12 @@
       ]
     },
     "VersionType": {
-      "description": "The version of the BeerJSON format this document is written against, as MAJOR.MINOR. Note that JSON has no decimal type, so 1.0 is written as the number 1.",
-      "oneOf": [
-        {
-          "type": "number",
-          "enum": [
-            1,
-            1.1
-          ]
-        },
-        {
-          "deprecated": true,
-          "description": "Development-snapshot versions inherited from the unfinished BeerXML 2 draft. Accepted so existing documents stay valid; write 1.1 instead.",
-          "type": "number",
-          "enum": [
-            2.01,
-            2.06
-          ]
-        }
+      "description": "The version of the BeerJSON format this document is written against, as MAJOR.MINOR. A schema accepts its own version and the earlier ones it can still validate. Note that JSON has no decimal type, so 3.0 is written as the number 3.",
+      "type": "number",
+      "enum": [
+        2.01,
+        2.06,
+        3
       ]
     },
     "ViscosityUnitType": {

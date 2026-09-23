@@ -4,10 +4,11 @@
  * failing test attached rather than a silent break of every existing document.
  */
 const beerjson = require('../index.js')
+const { CURRENT_VERSION } = require('../js/format-version')
 
 const waterProfile = extra => ({
   beerjson: {
-    version: 1.0,
+    version: CURRENT_VERSION,
     profiles: [
       {
         name: 'Test water',
@@ -91,7 +92,7 @@ describe('CultureBase types (#217)', () => {
   test('a wheat culture validates', () => {
     const result = beerjson.validate({
       beerjson: {
-        version: 1.0,
+        version: CURRENT_VERSION,
         cultures: [
           {
             name: 'Weihenstephan Weizen',
