@@ -465,7 +465,7 @@ export type QualitativeRangeType =
   | 'medium high'
   | 'high'
   | 'very high'
-export type VersionType = number
+export type VersionType = 2.01 | 2.06 | 3
 export type ViscosityUnitType = 'cP' | 'mPa-s'
 export type MiscellaneousBase = {|
   name: string,

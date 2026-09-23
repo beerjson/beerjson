@@ -34,3 +34,4 @@ mark the old one `Superseded by ADR-NNNN`.
 | [0001](0001-record-format-decisions-as-adrs.md) | Record format decisions as ADRs                     | Accepted |
 | [0002](0002-json-schema-2020-12.md)             | JSON Schema 2020-12 and `$defs`                     | Accepted |
 | [0003](0003-deprecate-rather-than-rename.md)    | Correct property names by deprecating, not renaming | Accepted |
+| [0004](0004-format-version-numbering.md)        | Format version numbering                            | Accepted |
