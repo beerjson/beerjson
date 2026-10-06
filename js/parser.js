@@ -18,9 +18,10 @@ const parser = formatter => schema => {
   const processArray = items =>
     formatter.formatArray(items.$ref, processPropType('items', items))
 
+  // A branch is either a $ref to a named type or an inline schema.
   const processOneOf = types =>
     types
-      .map(({ $ref }) => processTypeRef($ref))
+      .map((branch, index) => processPropType(`oneOf[${index}]`, branch))
       .reduce(formatter.formatOneOf, '')
 
   const processPropDefinition = requiredList => ([propName, propDef]) =>
