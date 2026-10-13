@@ -6,12 +6,14 @@
   "$defs": {
     "FermentableBase": {
       "type": "object",
-      "description": "FermentableBase provides unique properties to identify individual records of fermentable ingredients.",
+      "description": "Identifies a fermentable and carries what a recipe must know to calculate with it, which is why `yield` and `color` are required: original gravity and colour cannot be derived without them. `FermentableType` extends it into a full catalogue record, and `FermentableAdditionType` extends it with an amount and a timing.",
       "properties": {
         "name": {
+          "description": "Name of the fermentable, usually the name its producer sells it under.",
           "type": "string"
         },
         "type": {
+          "description": "The kind of fermentable, which determines how it is used and whether it has to be mashed.",
           "type": "string",
           "enum": [
             "dry extract",
@@ -25,15 +27,19 @@
           ]
         },
         "origin": {
+          "description": "The country or region the fermentable was grown or produced in.",
           "type": "string"
         },
         "producer": {
+          "description": "The maltster or company that produced the fermentable.",
           "type": "string"
         },
         "product_id": {
+          "description": "The producer's catalogue number for the fermentable.",
           "type": "string"
         },
         "grain_group": {
+          "description": "The role the grain plays in a grain bill.",
           "type": "string",
           "enum": [
             "base",
@@ -61,7 +67,7 @@
     },
     "FermentableType": {
       "type": "object",
-      "description": "FermentableType collects the attributes of a fermentable ingredient to store as record information.",
+      "description": "The full catalogue record for a fermentable: `FermentableBase` plus the specification a maltster publishes. This is the form used in the `fermentables` list at the document root.",
       "unevaluatedProperties": false,
       "allOf": [
         {
@@ -70,6 +76,7 @@
         {
           "properties": {
             "notes": {
+              "description": "Free text notes about the fermentable.",
               "type": "string"
             },
             "moisture": {
@@ -92,11 +99,11 @@
               "$ref": "measureable_units.json#/$defs/PercentType"
             },
             "max_in_batch": {
-              "description": "The recommended maximum percentage to use in a grain bill. ",
+              "description": "The recommended maximum percentage by weight that this ingredient should represent in a batch.",
               "$ref": "measureable_units.json#/$defs/PercentType"
             },
             "recommend_mash": {
-              "description": "True if the fermentable must be mashed, false if it can be steeped. ",
+              "description": "True if the fermentable is recommended to be mashed, false if it can be steeped.",
               "type": "boolean"
             },
             "inventory": {
@@ -155,7 +162,7 @@
     },
     "FermentableAdditionType": {
       "type": "object",
-      "description": "FermentableAdditionType collects the attributes of each fermentable ingredient for use in a recipe fermentable bill.",
+      "description": "A fermentable as used in a recipe: `FermentableBase` plus how much and when. Catalogue detail belongs in a `FermentableType` record at the document root, not here.",
       "unevaluatedProperties": false,
       "allOf": [
         {
@@ -168,6 +175,7 @@
               "$ref": "timing.json#/$defs/TimingType"
             },
             "amount": {
+              "description": "The quantity added: by mass for a solid, or by volume for a liquid such as a syrup or juice.",
               "oneOf": [
                 {
                   "$ref": "measureable_units.json#/$defs/VolumeType"
@@ -209,10 +217,12 @@
       }
     },
     "FermentableInventoryType": {
+      "description": "The quantity of a fermentable held in stock.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "amount": {
+          "description": "The quantity held in stock: by mass for a solid, or by volume for a liquid.",
           "oneOf": [
             {
               "$ref": "measureable_units.json#/$defs/VolumeType"
