@@ -31,7 +31,7 @@ RecipeType composes the information stored in a beerjson recipe.
 | **packaging** |  | [PackagingProcedureType](packaging.json.md#packagingproceduretype)| Describes the procedure for packaging your beverage. |
 | **boil** |  | [BoilProcedureType](boil.json.md#boilproceduretype)| Defines the procedure for performing a boil. A boil procedure with no steps is the same as a standard single step boil. |
 | **taste** |  | [TasteType](#tastetype)| Used to store subjective tasting notes, and rating. |
-| **calories_per_pint** |  | number| The estimated energy content of the finished beer, in calories per pint. |
+| **calories_per_pint** |  | number| The estimated energy content of the finished beer, derived from its original and final gravity, in kilocalories (dietary Calories) per pint. Which pint is not specified. |
 
 ## EfficiencyType 
 
@@ -69,5 +69,5 @@ A tasting record for the finished beer.
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **notes** | ✅ | string| Free text tasting notes for the finished beer. |
-| **rating** | ✅ | number| A subjective score for the finished beer, on a scale the recording software defines. |
+| **rating** | ✅ | number| A score for the finished beer between 0 and 50, corresponding to the 50 point BJCP rating system. |
 

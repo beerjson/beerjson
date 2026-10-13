@@ -80,7 +80,7 @@
               "type": "string"
             },
             "percent_lost": {
-              "description": " Defined as the percentage of hop alpha lost in 6 months of storage.",
+              "description": "The percentage of hop alpha acid lost in six months of storage, also known as the Hop Stability Index.",
               "$ref": "measureable_units.json#/$defs/PercentType"
             },
             "substitutes": {

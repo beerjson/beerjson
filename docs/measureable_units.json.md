@@ -134,7 +134,7 @@ Specific heat is the measurement of the amount of heat required to raise a given
 
 ## ConcentrationType 
 
-Examples for concentration include ppm, ppb, and mg/l. 
+Examples for concentration include ppm, ppb, and mg/l.
 
 **ConcentrationType** is an object with these properties:
 

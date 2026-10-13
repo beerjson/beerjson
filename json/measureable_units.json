@@ -222,7 +222,7 @@
     },
     "ConcentrationType": {
       "type": "object",
-      "description": "Examples for concentration include ppm, ppb, and mg/l. ",
+      "description": "Examples for concentration include ppm, ppb, and mg/l.",
       "additionalProperties": false,
       "properties": {
         "unit": {

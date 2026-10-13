@@ -366,6 +366,25 @@ describe('descriptions', () => {
     expect(missing).toEqual([])
   })
 
+  // A description is rendered verbatim into the reference and the generated
+  // declarations, so stray whitespace shows up in the published output.
+  test('no description has leading or trailing whitespace', () => {
+    const untrimmed = []
+    for (const file of files) {
+      for (const [name, def] of Object.entries(schemas[file].$defs || {})) {
+        if (def.description && def.description !== def.description.trim()) {
+          untrimmed.push(`${file}#${name}`)
+        }
+      }
+      for (const { path: at, def } of walkProperties(schemas[file])) {
+        if (def.description && def.description !== def.description.trim()) {
+          untrimmed.push(`${file}#${at}`)
+        }
+      }
+    }
+    expect(untrimmed).toEqual([])
+  })
+
   // An empty string passes a truthiness check in some tooling but documents
   // nothing, and the published reference renders it as a blank cell.
   test('no description is blank or whitespace', () => {

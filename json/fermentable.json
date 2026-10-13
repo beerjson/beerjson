@@ -99,11 +99,11 @@
               "$ref": "measureable_units.json#/$defs/PercentType"
             },
             "max_in_batch": {
-              "description": "The recommended maximum percentage to use in a grain bill. ",
+              "description": "The recommended maximum percentage by weight that this ingredient should represent in a batch.",
               "$ref": "measureable_units.json#/$defs/PercentType"
             },
             "recommend_mash": {
-              "description": "True if the fermentable must be mashed, false if it can be steeped. ",
+              "description": "True if the fermentable is recommended to be mashed, false if it can be steeped.",
               "type": "boolean"
             },
             "inventory": {

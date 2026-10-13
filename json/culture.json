@@ -77,7 +77,7 @@
               "$ref": "measureable_units.json#/$defs/PercentType"
             },
             "flocculation": {
-              "description": "Floculation refers to the ability of yeast to aggregate to form large flocs which drop out of suspension.",
+              "description": "Flocculation refers to the ability of a culture to aggregate into large flocs which drop out of suspension.",
               "$ref": "measureable_units.json#/$defs/QualitativeRangeType"
             },
             "attenuation_range": {

@@ -27,7 +27,7 @@ The full catalogue record for a hop variety: `HopVarietyBase` plus the propertie
 |--|--|--|--|
 | **type** |  | `"aroma"`<br/>`"bittering"`<br/>`"flavor"`<br/>`"aroma/bittering"`<br/>`"bittering/flavor"`<br/>`"aroma/flavor"`<br/>`"aroma/bittering/flavor"`| What the variety is typically used for, given its aroma and bittering character. |
 | **notes** |  | string| Free text notes about the variety. |
-| **percent_lost** |  | [PercentType](measureable_units.json.md#percenttype)|  Defined as the percentage of hop alpha lost in 6 months of storage. |
+| **percent_lost** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of hop alpha acid lost in six months of storage, also known as the Hop Stability Index. |
 | **substitutes** |  | string| Other varieties that can be used in place of this one. |
 | **oil_content** |  | [OilContentType](#oilcontenttype)| Oil Content information object. |
 | **inventory** |  | [HopInventoryType](#hopinventorytype)|  |
