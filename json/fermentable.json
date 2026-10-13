@@ -107,7 +107,7 @@
               "$ref": "measureable_units.json#/$defs/PercentType"
             },
             "plump": {
-              "description": "The percentage of grain that masses through sieves with gaps of 7/64 and 6/64, desired values of 80% or higher which indicate plump kernels.",
+              "description": "The percentage of grain retained on sieves with gaps of 7/64 inch and 6/64 inch, desired values of 80% or higher which indicate plump kernels.",
               "$ref": "measureable_units.json#/$defs/PercentType"
             },
             "half": {

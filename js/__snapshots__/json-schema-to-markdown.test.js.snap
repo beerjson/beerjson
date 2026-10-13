@@ -38,7 +38,7 @@ FermentableType collects the attributes of a fermentable ingredient to store as 
 | **recommend_mash** |  | boolean| True if the fermentable must be mashed, false if it can be steeped.  |
 | **inventory** |  | [FermentableInventoryType](#fermentableinventorytype)|  |
 | **glassy** |  | [PercentType](measureable_units.json.md#percenttype)| Used to indicate the 'crystallized' percentage of starches for crystal malts. |
-| **plump** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of grain that masses through sieves with gaps of 7/64 and 6/64, desired values of 80% or higher which indicate plump kernels. |
+| **plump** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of grain retained on sieves with gaps of 7/64 inch and 6/64 inch, desired values of 80% or higher which indicate plump kernels. |
 | **half** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **mealy** |  | [PercentType](measureable_units.json.md#percenttype)| The opposite of glassy, a mealy kernel is one that is not glassy. Base malt should be at least 90%, single step mashes generally require 95% or higher. |
 | **thru** |  | [PercentType](measureable_units.json.md#percenttype)| The Percentage of grain that makes it through a thin mesh screen, typically 5/64 inch. Values less than 3% are desired. |
