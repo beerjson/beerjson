@@ -6,24 +6,30 @@
   "$defs": {
     "HopVarietyBase": {
       "type": "object",
-      "description": "HopVarietyBase provides unique properties to identify individual records of a hop variety.",
+      "description": "Identifies a hop and carries what a recipe must know to calculate with it, which is why `alpha_acid` is required: bitterness cannot be derived without it. `VarietyInformation` extends it into a full catalogue record, and `HopAdditionType` extends it with an amount and a timing.",
       "properties": {
         "name": {
+          "description": "Name of the hop variety.",
           "type": "string"
         },
         "producer": {
+          "description": "The grower or company that supplied the hops.",
           "type": "string"
         },
         "product_id": {
+          "description": "The producer's catalogue or lot number for the hops.",
           "type": "string"
         },
         "origin": {
+          "description": "The country or region the hops were grown in.",
           "type": "string"
         },
         "year": {
+          "description": "The harvest year of the crop.",
           "type": "string"
         },
         "form": {
+          "description": "The physical form the hops are supplied in.",
           "type": "string",
           "enum": [
             "extract",
@@ -48,7 +54,7 @@
     },
     "VarietyInformation": {
       "type": "object",
-      "description": "VarietyInformation collects the attributes of a hop variety to store as record information.",
+      "description": "The full catalogue record for a hop variety: `HopVarietyBase` plus the properties a supplier publishes, such as oil content and substitutes. This is the form used in the `hop_varieties` list at the document root.",
       "unevaluatedProperties": false,
       "allOf": [
         {
@@ -57,6 +63,7 @@
         {
           "properties": {
             "type": {
+              "description": "What the variety is typically used for, given its aroma and bittering character.",
               "type": "string",
               "enum": [
                 "aroma",
@@ -69,13 +76,15 @@
               ]
             },
             "notes": {
+              "description": "Free text notes about the variety.",
               "type": "string"
             },
             "percent_lost": {
-              "description": " Defined as the percentage of hop alpha lost in 6 months of storage.",
+              "description": "The percentage of hop alpha acid lost in six months of storage, also known as the Hop Stability Index.",
               "$ref": "measureable_units.json#/$defs/PercentType"
             },
             "substitutes": {
+              "description": "Other varieties that can be used in place of this one.",
               "type": "string"
             },
             "oil_content": {
@@ -91,7 +100,8 @@
     },
     "HopAdditionType": {
       "type": "object",
-      "description": "HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bill.",
+      "description": "A hop as used in a recipe: `HopVarietyBase` plus how much and when. Catalogue detail belongs in a `VarietyInformation` record at the document root, not here.",
+      "unevaluatedProperties": false,
       "allOf": [
         {
           "$ref": "#/$defs/HopVarietyBase"
@@ -103,6 +113,7 @@
               "$ref": "timing.json#/$defs/TimingType"
             },
             "amount": {
+              "description": "The quantity added: by mass for whole, pellet or powdered hops, or by volume for an extract.",
               "oneOf": [
                 {
                   "$ref": "measureable_units.json#/$defs/VolumeType"
@@ -134,6 +145,7 @@
       }
     },
     "IBUMethodType": {
+      "description": "The formula used to estimate bitterness.",
       "type": "string",
       "enum": [
         "Rager",
@@ -193,10 +205,12 @@
       }
     },
     "HopInventoryType": {
+      "description": "The quantity of a hop held in stock.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "amount": {
+          "description": "The quantity held in stock: by mass for whole, pellet or powdered hops, or by volume for an extract.",
           "oneOf": [
             {
               "$ref": "measureable_units.json#/$defs/VolumeType"

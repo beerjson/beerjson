@@ -9,9 +9,11 @@
       "description": "WaterBase provides unique properties to identify individual records of  brewing water.",
       "properties": {
         "name": {
+          "description": "Name of the water profile.",
           "type": "string"
         },
         "producer": {
+          "description": "The utility or source the profile describes.",
           "type": "string"
         },
         "calcium": {
@@ -78,9 +80,11 @@
         {
           "properties": {
             "pH": {
+              "description": "The pH of the water.",
               "type": "number"
             },
             "notes": {
+              "description": "Free text notes about the water profile.",
               "type": "string"
             }
           }

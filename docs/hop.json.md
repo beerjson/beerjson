@@ -2,46 +2,46 @@ The schema defines the following types:
 
 ## HopVarietyBase 
 
-HopVarietyBase provides unique properties to identify individual records of a hop variety.
+Identifies a hop and carries what a recipe must know to calculate with it, which is why `alpha_acid` is required: bitterness cannot be derived without it. `VarietyInformation` extends it into a full catalogue record, and `HopAdditionType` extends it with an amount and a timing.
 
 **HopVarietyBase** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | ✅ | string|  |
-| **producer** |  | string|  |
-| **product_id** |  | string|  |
-| **origin** |  | string|  |
-| **year** |  | string|  |
-| **form** |  | `"extract"`<br/>`"leaf"`<br/>`"leaf (wet)"`<br/>`"pellet"`<br/>`"powder"`<br/>`"plug"`|  |
+| **name** | ✅ | string| Name of the hop variety. |
+| **producer** |  | string| The grower or company that supplied the hops. |
+| **product_id** |  | string| The producer's catalogue or lot number for the hops. |
+| **origin** |  | string| The country or region the hops were grown in. |
+| **year** |  | string| The harvest year of the crop. |
+| **form** |  | `"extract"`<br/>`"leaf"`<br/>`"leaf (wet)"`<br/>`"pellet"`<br/>`"powder"`<br/>`"plug"`| The physical form the hops are supplied in. |
 | **alpha_acid** | ✅ | [PercentType](measureable_units.json.md#percenttype)|  |
 | **beta_acid** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 
 ## VarietyInformation 
 
-VarietyInformation collects the attributes of a hop variety to store as record information.
+The full catalogue record for a hop variety: `HopVarietyBase` plus the properties a supplier publishes, such as oil content and substitutes. This is the form used in the `hop_varieties` list at the document root.
 
 **VarietyInformation** is an object with all properties from [HopVarietyBase](#hopvarietybase) and these additional properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **type** |  | `"aroma"`<br/>`"bittering"`<br/>`"flavor"`<br/>`"aroma/bittering"`<br/>`"bittering/flavor"`<br/>`"aroma/flavor"`<br/>`"aroma/bittering/flavor"`|  |
-| **notes** |  | string|  |
-| **percent_lost** |  | [PercentType](measureable_units.json.md#percenttype)|  Defined as the percentage of hop alpha lost in 6 months of storage. |
-| **substitutes** |  | string|  |
+| **type** |  | `"aroma"`<br/>`"bittering"`<br/>`"flavor"`<br/>`"aroma/bittering"`<br/>`"bittering/flavor"`<br/>`"aroma/flavor"`<br/>`"aroma/bittering/flavor"`| What the variety is typically used for, given its aroma and bittering character. |
+| **notes** |  | string| Free text notes about the variety. |
+| **percent_lost** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of hop alpha acid lost in six months of storage, also known as the Hop Stability Index. |
+| **substitutes** |  | string| Other varieties that can be used in place of this one. |
 | **oil_content** |  | [OilContentType](#oilcontenttype)| Oil Content information object. |
 | **inventory** |  | [HopInventoryType](#hopinventorytype)|  |
 
 ## HopAdditionType 
 
-HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bill.
+A hop as used in a recipe: `HopVarietyBase` plus how much and when. Catalogue detail belongs in a `VarietyInformation` record at the document root, not here.
 
 **HopAdditionType** is an object with all properties from [HopVarietyBase](#hopvarietybase) and these additional properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **timing** | ✅ | [TimingType](timing.json.md#timingtype)| The timing object fully describes the timing of an addition with options for a basis on time, gravity, or pH at any process step. |
-| **amount** | ✅ |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)|  |
+| **amount** | ✅ |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)| The quantity added: by mass for whole, pellet or powdered hops, or by volume for an extract. |
 
 ## IBUEstimateType 
 
@@ -56,7 +56,7 @@ Stores the IBU formula used in a recipe and, when available, the resulting estim
 
 ## IBUMethodType 
 
-*no description yet*
+The formula used to estimate bitterness.
 
 `"Rager"`<br/>`"Tinseth"`<br/>`"Garetz"`<br/>`"Other"`
 ## OilContentType 
@@ -84,11 +84,11 @@ oil_content collects all information of a hop variety pertaining to oil content,
 
 ## HopInventoryType 
 
-*no description yet*
+The quantity of a hop held in stock.
 
 **HopInventoryType** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)|  |
+| **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)| The quantity held in stock: by mass for whole, pellet or powdered hops, or by volume for an extract. |
 

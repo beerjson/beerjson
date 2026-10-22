@@ -2,37 +2,37 @@ The schema defines the following types:
 
 ## FermentableBase 
 
-FermentableBase provides unique properties to identify individual records of fermentable ingredients.
+Identifies a fermentable and carries what a recipe must know to calculate with it, which is why `yield` and `color` are required: original gravity and colour cannot be derived without them. `FermentableType` extends it into a full catalogue record, and `FermentableAdditionType` extends it with an amount and a timing.
 
 **FermentableBase** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | ✅ | string|  |
-| **type** | ✅ | `"dry extract"`<br/>`"extract"`<br/>`"grain"`<br/>`"sugar"`<br/>`"fruit"`<br/>`"juice"`<br/>`"honey"`<br/>`"other"`|  |
-| **origin** |  | string|  |
-| **producer** |  | string|  |
-| **product_id** |  | string|  |
-| **grain_group** |  | `"base"`<br/>`"caramel"`<br/>`"flaked"`<br/>`"roasted"`<br/>`"specialty"`<br/>`"smoked"`<br/>`"adjunct"`|  |
+| **name** | ✅ | string| Name of the fermentable, usually the name its producer sells it under. |
+| **type** | ✅ | `"dry extract"`<br/>`"extract"`<br/>`"grain"`<br/>`"sugar"`<br/>`"fruit"`<br/>`"juice"`<br/>`"honey"`<br/>`"other"`| The kind of fermentable, which determines how it is used and whether it has to be mashed. |
+| **origin** |  | string| The country or region the fermentable was grown or produced in. |
+| **producer** |  | string| The maltster or company that produced the fermentable. |
+| **product_id** |  | string| The producer's catalogue number for the fermentable. |
+| **grain_group** |  | `"base"`<br/>`"caramel"`<br/>`"flaked"`<br/>`"roasted"`<br/>`"specialty"`<br/>`"smoked"`<br/>`"adjunct"`| The role the grain plays in a grain bill. |
 | **yield** | ✅ | [YieldType](#yieldtype)|  |
 | **color** | ✅ | [ColorType](measureable_units.json.md#colortype)|  |
 
 ## FermentableType 
 
-FermentableType collects the attributes of a fermentable ingredient to store as record information.
+The full catalogue record for a fermentable: `FermentableBase` plus the specification a maltster publishes. This is the form used in the `fermentables` list at the document root.
 
 **FermentableType** is an object with all properties from [FermentableBase](#fermentablebase) and these additional properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **notes** |  | string|  |
+| **notes** |  | string| Free text notes about the fermentable. |
 | **moisture** |  | [PercentType](measureable_units.json.md#percenttype)|  |
 | **alpha_amylase** |  | number| Where diastatic power gives the total amount of all enzymes, alpha amylase, also known as dextrinizing units, refers to only the total amount of alpa amylase in the malted grain. A value of 25-50 is desirable for base malt. |
 | **diastatic_power** |  | [DiastaticPowerType](measureable_units.json.md#diastaticpowertype)| Diastatic power is a measurement of malted grains enzymatic content. A value of 35 Lintner is needed to self convert, while a value of 100 or more is desirable. |
 | **protein** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of protein. Higher values may indicate a possibility of haze, or lautering issues. |
 | **kolbach_index** |  | [PercentType](measureable_units.json.md#percenttype)| The Kolbach Index, also known as soluble to total ratio of nitrogen or protein, is used to indicate the degree of malt modification. A value above 35% is desired for simple single infusion mashing, undermodified malt may require multiple step mashes or decoction. |
-| **max_in_batch** |  | [PercentType](measureable_units.json.md#percenttype)| The recommended maximum percentage to use in a grain bill.  |
-| **recommend_mash** |  | boolean| True if the fermentable must be mashed, false if it can be steeped.  |
+| **max_in_batch** |  | [PercentType](measureable_units.json.md#percenttype)| The recommended maximum percentage by weight that this ingredient should represent in a batch. |
+| **recommend_mash** |  | boolean| True if the fermentable is recommended to be mashed, false if it can be steeped. |
 | **inventory** |  | [FermentableInventoryType](#fermentableinventorytype)|  |
 | **glassy** |  | [PercentType](measureable_units.json.md#percenttype)| Used to indicate the 'crystallized' percentage of starches for crystal malts. |
 | **plump** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of grain retained on sieves with gaps of 7/64 inch and 6/64 inch, desired values of 80% or higher which indicate plump kernels. |
@@ -49,14 +49,14 @@ FermentableType collects the attributes of a fermentable ingredient to store as 
 
 ## FermentableAdditionType 
 
-FermentableAdditionType collects the attributes of each fermentable ingredient for use in a recipe fermentable bill.
+A fermentable as used in a recipe: `FermentableBase` plus how much and when. Catalogue detail belongs in a `FermentableType` record at the document root, not here.
 
 **FermentableAdditionType** is an object with all properties from [FermentableBase](#fermentablebase) and these additional properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **timing** |  | [TimingType](timing.json.md#timingtype)| The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step. |
-| **amount** | ✅ |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)|  |
+| **amount** | ✅ |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)| The quantity added: by mass for a solid, or by volume for a liquid such as a syrup or juice. |
 
 ## YieldType 
 
@@ -73,11 +73,11 @@ The potential yield of the fermentable ingredient, supporting SG, or percentage.
 
 ## FermentableInventoryType 
 
-*no description yet*
+The quantity of a fermentable held in stock.
 
 **FermentableInventoryType** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)|  |
+| **amount** |  |  [VolumeType](measureable_units.json.md#volumetype) or  [MassType](measureable_units.json.md#masstype)| The quantity held in stock: by mass for a solid, or by volume for a liquid. |
 

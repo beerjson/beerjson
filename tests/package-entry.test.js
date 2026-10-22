@@ -1,8 +1,7 @@
 /**
- * The package's `main` entry pointed at an index.js that did not exist, so
- * `require('@beerjson/beerjson')` threw MODULE_NOT_FOUND for both published
- * versions. Nothing tested it. These tests cover the public surface so the
- * entry point cannot break silently again.
+ * Covers the package's public surface: the manifest entries must point at files
+ * that exist, the schemas must all be exported, and validate must return
+ * { valid, errors } without carrying state between calls.
  */
 const fs = require('fs')
 const path = require('path')

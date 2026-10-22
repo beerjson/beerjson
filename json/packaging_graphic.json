@@ -10,6 +10,7 @@
       "additionalProperties": false,
       "properties": {
         "position": {
+          "description": "Where on the vessel the graphic is placed.",
           "type": "string",
           "enum": [
             "body front",
@@ -55,9 +56,11 @@
           "description": "Dots per inch."
         },
         "width": {
+          "description": "Width of the graphic, in the unit given by the units property.",
           "type": "number"
         },
         "height": {
+          "description": "Height of the graphic, in the unit given by the units property.",
           "type": "number"
         },
         "units": {

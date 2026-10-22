@@ -10,9 +10,11 @@
       "additionalProperties": false,
       "properties": {
         "name": {
+          "description": "Name of the mash step.",
           "type": "string"
         },
         "type": {
+          "description": "What the step does to the mash.",
           "type": "string",
           "enum": [
             "infusion",
@@ -41,6 +43,7 @@
           "$ref": "measureable_units.json#/$defs/TemperatureType"
         },
         "description": {
+          "description": "Free text description of the mash step.",
           "type": "string"
         },
         "water_grain_ratio": {
