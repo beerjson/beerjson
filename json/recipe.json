@@ -37,6 +37,7 @@
           "type": "string"
         },
         "created": {
+          "description": "The date the recipe was created.",
           "$ref": "measureable_units.json#/$defs/DateType"
         },
         "batch_size": {
@@ -48,6 +49,7 @@
           "$ref": "#/$defs/EfficiencyType"
         },
         "style": {
+          "description": "The style the recipe is designed to meet.",
           "$ref": "style.json#/$defs/RecipeStyleType"
         },
         "ingredients": {
@@ -71,6 +73,7 @@
           "$ref": "measureable_units.json#/$defs/GravityType"
         },
         "alcohol_by_volume": {
+          "description": "The alcohol content of the finished beer, by volume.",
           "$ref": "measureable_units.json#/$defs/PercentType"
         },
         "ibu_estimate": {

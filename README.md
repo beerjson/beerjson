@@ -33,6 +33,14 @@ specification. It is based on yet unfinished
 
 - Explicit support for fermenting under pressure.
 
+## Software supporting BeerJSON
+
+Applications and libraries that read or write BeerJSON are listed on the
+[wiki](https://github.com/beerjson/beerjson/wiki/Software-supporting-BeerJSON).
+To add one that is missing, open an
+[issue](https://github.com/beerjson/beerjson/issues) or a
+[discussion](https://github.com/beerjson/beerjson/discussions).
+
 ## Structure of the repository
 
 | Path     | Contents                                                                                              |

@@ -79,6 +79,31 @@ than entries written at the time.
 
 ### Fixed
 
+- **116 properties still had no description of their own.** The conventions
+  test exempted any property whose definition was a `$ref`, on the theory that
+  it inherited the referenced type's description. But that type only says what
+  kind of value it is: `half` was documented as "a percentage", every water ion
+  as "a concentration", every step temperature as "a temperature". Under
+  2020-12 a description beside a `$ref` is read by validators as well as
+  generators, so the exemption had no justification. All 116 are now described,
+  and the test no longer exempts `$ref` properties.
+- **`OilContentType` said every member was a percentage of total oil.** Three
+  are not oils: `cohumulone` is a percentage of total alpha acids, and
+  `polyphenols` and `xanthohumol` are percentages of hop weight. It also
+  promised thiols, which nothing represents. The type and its members now say
+  what each is measured against. Where they belong is
+  [#256](https://github.com/beerjson/beerjson/issues/256).
+- **Four descriptions were wrong**: `glassy` described crystal malt starch
+  rather than kernel hardness
+  ([#262](https://github.com/beerjson/beerjson/issues/262));
+  `grain_absorption_rate` gave 0.125 qt/lb as 1.04 L/kg, which is 0.125 gal/lb
+  ([#263](https://github.com/beerjson/beerjson/issues/263)); `Cal/(g C)` reads
+  as kilocalories but its values are small calories, and `specific_heat`
+  hardcoded a unit its own `unit` field chooses
+  ([#264](https://github.com/beerjson/beerjson/issues/264)); and `duration`
+  contradicted `time` for boil additions
+  ([#266](https://github.com/beerjson/beerjson/issues/266)).
+
 - **`EquipmentType.equipment_items` had `"description": ""`**, which reads as
   documented to any tooling checking for the key's presence while rendering as
   an empty cell in the reference.

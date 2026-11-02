@@ -347,12 +347,13 @@ describe('descriptions', () => {
    * and they are the only documentation an implementer gets, so a property
    * without one is undocumented in the published reference.
    *
-   * A property that is only a `$ref` is exempt: it inherits the referenced
-   * type's own description.
+   * A property that is only a `$ref` still needs its own: the referenced type
+   * says what kind of value it is, not what this property means. Under 2020-12
+   * a description beside a `$ref` is read by validators as well as generators.
    */
   const undescribed = file =>
     walkProperties(schemas[file])
-      .filter(({ def }) => !def.description && !def.$ref)
+      .filter(({ def }) => !def.description)
       .map(({ path: at }) => `${file}#${at}`)
 
   test.each(files)('every property in %s has a description', file => {
