@@ -11,7 +11,7 @@ The descriptive base type for brew day equipment. Provides unique properties to 
 | **name** | ✅ | string| Name of the equipment item. |
 | **type** |  | string| Free text type of the equipment item, such as its material or model. Use form for the role it plays in the brewhouse. |
 | **form** | ✅ | `"HLT"`<br/>`"Mash Tun"`<br/>`"Lauter Tun"`<br/>`"Brew Kettle"`<br/>`"Fermenter"`<br/>`"Aging Vessel"`<br/>`"Packaging Vessel"`| The item's role in the brewhouse. |
-| **maximum_volume** | ✅ | [VolumeType](measureable_units.json.md#volumetype)|  |
+| **maximum_volume** | ✅ | [VolumeType](measureable_units.json.md#volumetype)| The total volume the vessel can hold. |
 
 ## EquipmentItemType 
 
@@ -21,12 +21,12 @@ EquipmentType provides necessary information for individual brewing equipment.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **loss** | ✅ | [VolumeType](measureable_units.json.md#volumetype)|  |
-| **grain_absorption_rate** |  | [SpecificVolumeType](measureable_units.json.md#specificvolumetype)| The apparent volume absorbed by grain, typical values are 0.125 qt/lb (1.04 L/kg) for a mashtun, 0.08 gal/lb (0.66 L/kg) for BIAB. |
+| **loss** | ✅ | [VolumeType](measureable_units.json.md#volumetype)| Liquid left behind in this vessel and not recovered, such as dead space below the outlet or trub. |
+| **grain_absorption_rate** |  | [SpecificVolumeType](measureable_units.json.md#specificvolumetype)| The apparent volume absorbed by grain, typical values are 0.125 gal/lb (1.04 L/kg) for a mashtun, 0.08 gal/lb (0.66 L/kg) for BIAB. |
 | **boil_rate_per_hour** |  | [VolumeType](measureable_units.json.md#volumetype)| The volume boiled off during 1 hour, measured before and after at room temperature. |
 | **drain_rate_per_minute** |  | [VolumeType](measureable_units.json.md#volumetype)| The volume that leaves the kettle, especially important for non-immersion chillers that cool the wort as it leaves the kettle. |
 | **weight** |  | [MassType](measureable_units.json.md#masstype)| The weight of the piece of equipment, especially important for when the mashtun is not preheated. |
-| **specific_heat** |  | [SpecificHeatType](measureable_units.json.md#specificheattype)| The specific heat of the piece of equipment, expressed in Cal/(g*C), especially important for when the mashtun is not preheated. |
+| **specific_heat** |  | [SpecificHeatType](measureable_units.json.md#specificheattype)| The specific heat of the piece of equipment, used to calculate the heat it absorbs, which matters most when the mash tun is not preheated. |
 | **notes** |  | string| Free text notes about the equipment item. |
 
 ## EquipmentType 

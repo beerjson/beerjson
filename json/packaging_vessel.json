@@ -30,27 +30,35 @@
           "type": "string"
         },
         "package_date": {
+          "description": "The date the beer was packaged into this vessel.",
           "$ref": "measureable_units.json#/$defs/DateType"
         },
         "start_temperature": {
+          "description": "The temperature of the beer at the start of the step.",
           "$ref": "measureable_units.json#/$defs/TemperatureType"
         },
         "end_temperature": {
+          "description": "The temperature of the beer at the end of the step.",
           "$ref": "measureable_units.json#/$defs/TemperatureType"
         },
         "step_time": {
+          "description": "How long the beer spends in this vessel, such as a conditioning period.",
           "$ref": "measureable_units.json#/$defs/TimeType"
         },
         "start_gravity": {
+          "description": "The gravity of the beer at the start of the step.",
           "$ref": "measureable_units.json#/$defs/GravityType"
         },
         "end_gravity": {
+          "description": "The gravity of the beer at the end of the step.",
           "$ref": "measureable_units.json#/$defs/GravityType"
         },
         "start_ph": {
+          "description": "The pH of the beer at the start of the step.",
           "$ref": "measureable_units.json#/$defs/AcidityType"
         },
         "end_ph": {
+          "description": "The pH of the beer at the end of the step.",
           "$ref": "measureable_units.json#/$defs/AcidityType"
         },
         "carbonation": {
@@ -58,6 +66,7 @@
           "type": "number"
         },
         "vessel_volume": {
+          "description": "The capacity of one vessel of this kind.",
           "$ref": "measureable_units.json#/$defs/VolumeType"
         },
         "vessel_quantity": {

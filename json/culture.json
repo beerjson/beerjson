@@ -81,6 +81,7 @@
               "$ref": "measureable_units.json#/$defs/QualitativeRangeType"
             },
             "attenuation_range": {
+              "description": "The range of apparent attenuation the culture typically achieves.",
               "$ref": "measureable_units.json#/$defs/PercentRangeType"
             },
             "notes": {
@@ -104,9 +105,11 @@
               "type": "boolean"
             },
             "inventory": {
+              "description": "The quantity of the culture held in stock.",
               "$ref": "#/$defs/CultureInventoryType"
             },
             "zymocide": {
+              "description": "Which killer toxins the culture produces, or whether it is neutral.",
               "$ref": "#/$defs/Zymocide"
             }
           }
@@ -168,15 +171,19 @@
       "additionalProperties": false,
       "properties": {
         "liquid": {
+          "description": "Stock held as liquid culture.",
           "$ref": "measureable_units.json#/$defs/VolumeType"
         },
         "dry": {
+          "description": "Stock held as dried culture.",
           "$ref": "measureable_units.json#/$defs/MassType"
         },
         "slant": {
+          "description": "Stock held on slants.",
           "$ref": "measureable_units.json#/$defs/VolumeType"
         },
         "culture": {
+          "description": "Stock held as a propagated culture, such as a starter.",
           "$ref": "measureable_units.json#/$defs/VolumeType"
         }
       }

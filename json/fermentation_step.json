@@ -18,12 +18,15 @@
           "type": "string"
         },
         "start_temperature": {
+          "description": "The temperature of the beer at the start of the step.",
           "$ref": "measureable_units.json#/$defs/TemperatureType"
         },
         "end_temperature": {
+          "description": "The temperature of the beer at the end of the step.",
           "$ref": "measureable_units.json#/$defs/TemperatureType"
         },
         "step_time": {
+          "description": "How long the step lasts.",
           "$ref": "measureable_units.json#/$defs/TimeType"
         },
         "free_rise": {
@@ -31,15 +34,19 @@
           "type": "boolean"
         },
         "start_gravity": {
+          "description": "The gravity of the beer at the start of the step.",
           "$ref": "measureable_units.json#/$defs/GravityType"
         },
         "end_gravity": {
+          "description": "The gravity of the beer at the end of the step.",
           "$ref": "measureable_units.json#/$defs/GravityType"
         },
         "start_ph": {
+          "description": "The pH of the beer at the start of the step.",
           "$ref": "measureable_units.json#/$defs/AcidityType"
         },
         "end_ph": {
+          "description": "The pH of the beer at the end of the step.",
           "$ref": "measureable_units.json#/$defs/AcidityType"
         },
         "vessel": {

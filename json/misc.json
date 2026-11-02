@@ -58,6 +58,7 @@
               "type": "string"
             },
             "inventory": {
+              "description": "The quantity of the ingredient held in stock.",
               "$ref": "#/$defs/MiscellaneousInventoryType"
             }
           }

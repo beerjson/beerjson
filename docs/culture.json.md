@@ -25,14 +25,14 @@ The full catalogue record for a culture: `CultureBase` plus the behaviour a lab 
 | **temperature_range** |  | [TemperatureRangeType](measureable_units.json.md#temperaturerangetype)| The recommended temperature range of fermentation by the culture producer. |
 | **alcohol_tolerance** |  | [PercentType](measureable_units.json.md#percenttype)| The recommended limit of abv by the culture producer before attenuation stops. |
 | **flocculation** |  | [QualitativeRangeType](measureable_units.json.md#qualitativerangetype)| Flocculation refers to the ability of a culture to aggregate into large flocs which drop out of suspension. |
-| **attenuation_range** |  | [PercentRangeType](measureable_units.json.md#percentrangetype)|  |
+| **attenuation_range** |  | [PercentRangeType](measureable_units.json.md#percentrangetype)| The range of apparent attenuation the culture typically achieves. |
 | **notes** |  | string| Free text notes about the culture. |
 | **best_for** |  | string| Recommended styles for a particular culture. |
 | **max_reuse** |  | integer| Maximum number of times to reuse a culture before a new lab source is recommended. |
 | **pof** |  | boolean| A POF+ culture is capable of producing phenols, which is a common distinctive property of saison, and brett yeasts. |
 | **glucoamylase** |  | boolean| A glucoamylase positive culture is capable of producing glucoamylase, the enzyme produced through expression of the diastatic gene, which allows yeast to attenuate dextrins and starches leading to a very low FG. This is positive in some saison/brett yeasts as well as the new gulo hybrid by Omega yeast labs. |
-| **inventory** |  | [CultureInventoryType](#cultureinventorytype)|  |
-| **zymocide** |  | [Zymocide](#zymocide)|  |
+| **inventory** |  | [CultureInventoryType](#cultureinventorytype)| The quantity of the culture held in stock. |
+| **zymocide** |  | [Zymocide](#zymocide)| Which killer toxins the culture produces, or whether it is neutral. |
 
 ## CultureAdditionType 
 
@@ -56,10 +56,10 @@ The quantity of a culture held in stock, recorded separately for each form it is
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **liquid** |  | [VolumeType](measureable_units.json.md#volumetype)|  |
-| **dry** |  | [MassType](measureable_units.json.md#masstype)|  |
-| **slant** |  | [VolumeType](measureable_units.json.md#volumetype)|  |
-| **culture** |  | [VolumeType](measureable_units.json.md#volumetype)|  |
+| **liquid** |  | [VolumeType](measureable_units.json.md#volumetype)| Stock held as liquid culture. |
+| **dry** |  | [MassType](measureable_units.json.md#masstype)| Stock held as dried culture. |
+| **slant** |  | [VolumeType](measureable_units.json.md#volumetype)| Stock held on slants. |
+| **culture** |  | [VolumeType](measureable_units.json.md#volumetype)| Stock held as a propagated culture, such as a starter. |
 
 ## Zymocide 
 

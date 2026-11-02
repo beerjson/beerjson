@@ -30,6 +30,7 @@
           ]
         },
         "maximum_volume": {
+          "description": "The total volume the vessel can hold.",
           "$ref": "measureable_units.json#/$defs/VolumeType"
         }
       },
@@ -50,10 +51,11 @@
         {
           "properties": {
             "loss": {
+              "description": "Liquid left behind in this vessel and not recovered, such as dead space below the outlet or trub.",
               "$ref": "measureable_units.json#/$defs/VolumeType"
             },
             "grain_absorption_rate": {
-              "description": "The apparent volume absorbed by grain, typical values are 0.125 qt/lb (1.04 L/kg) for a mashtun, 0.08 gal/lb (0.66 L/kg) for BIAB.",
+              "description": "The apparent volume absorbed by grain, typical values are 0.125 gal/lb (1.04 L/kg) for a mashtun, 0.08 gal/lb (0.66 L/kg) for BIAB.",
               "$ref": "measureable_units.json#/$defs/SpecificVolumeType"
             },
             "boil_rate_per_hour": {
@@ -69,7 +71,7 @@
               "$ref": "measureable_units.json#/$defs/MassType"
             },
             "specific_heat": {
-              "description": "The specific heat of the piece of equipment, expressed in Cal/(g*C), especially important for when the mashtun is not preheated.",
+              "description": "The specific heat of the piece of equipment, used to calculate the heat it absorbs, which matters most when the mash tun is not preheated.",
               "$ref": "measureable_units.json#/$defs/SpecificHeatType"
             },
             "notes": {
