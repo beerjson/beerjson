@@ -471,13 +471,7 @@ declare namespace BeerJSON {
     producer?: string
     product_id?: string
     type:
-      | 'spice'
-      | 'fining'
-      | 'water agent'
-      | 'herb'
-      | 'flavor'
-      | 'wood'
-      | 'other'
+      'spice' | 'fining' | 'water agent' | 'herb' | 'flavor' | 'wood' | 'other'
   }
 
   export type MiscellaneousType = MiscellaneousBase & {
@@ -636,18 +630,9 @@ declare namespace BeerJSON {
   export type RecipeStyleType = StyleBase
 
   export type StyleCategories =
-    | 'beer'
-    | 'cider'
-    | 'kombucha'
-    | 'mead'
-    | 'other'
-    | 'soda'
-    | 'wine'
+    'beer' | 'cider' | 'kombucha' | 'mead' | 'other' | 'soda' | 'wine'
   export type UseType =
-    | 'add_to_mash'
-    | 'add_to_boil'
-    | 'add_to_fermentation'
-    | 'add_to_package'
+    'add_to_mash' | 'add_to_boil' | 'add_to_fermentation' | 'add_to_package'
   export type TimingType = {
     time?: TimeType
     duration?: TimeType

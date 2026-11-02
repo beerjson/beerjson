@@ -24,14 +24,16 @@ const parser = formatter => schema => {
       .map((branch, index) => processPropType(`oneOf[${index}]`, branch))
       .reduce(formatter.formatOneOf, '')
 
-  const processPropDefinition = requiredList => ([propName, propDef]) =>
-    formatter.formatPropDefinition(
-      propName,
-      requiredList.includes(propName),
-      processPropType(propName, propDef),
-      propDef.description,
-      propDef.deprecated === true
-    )
+  const processPropDefinition =
+    requiredList =>
+    ([propName, propDef]) =>
+      formatter.formatPropDefinition(
+        propName,
+        requiredList.includes(propName),
+        processPropType(propName, propDef),
+        propDef.description,
+        propDef.deprecated === true
+      )
 
   const processSimpleTypeDefinition = (typeName, typeDef) =>
     processPropType(typeName, typeDef)

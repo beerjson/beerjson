@@ -159,6 +159,8 @@ TypeScript declarations are included, no `@types` package needed:
 
 ```ts
 const recipe: BeerJSON.RecipeType = {
-  /* ... */
+  name: 'Pale Ale',
+  type: 'all grain'
+  // ...
 }
 ```
