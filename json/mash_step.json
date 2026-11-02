@@ -27,12 +27,15 @@
           ]
         },
         "amount": {
+          "description": "The volume of water added in this step. Applies to infusion steps.",
           "$ref": "measureable_units.json#/$defs/VolumeType"
         },
         "step_temperature": {
+          "description": "The temperature the mash is held at during the step.",
           "$ref": "measureable_units.json#/$defs/TemperatureType"
         },
         "step_time": {
+          "description": "How long the mash is held at the step temperature.",
           "$ref": "measureable_units.json#/$defs/TimeType"
         },
         "ramp_time": {
@@ -40,6 +43,7 @@
           "$ref": "measureable_units.json#/$defs/TimeType"
         },
         "end_temperature": {
+          "description": "The temperature the mash is expected to have fallen to by the end of the step.",
           "$ref": "measureable_units.json#/$defs/TemperatureType"
         },
         "description": {
@@ -55,9 +59,11 @@
           "$ref": "measureable_units.json#/$defs/TemperatureType"
         },
         "start_ph": {
+          "description": "The pH of the mash at the start of the step.",
           "$ref": "measureable_units.json#/$defs/AcidityType"
         },
         "end_ph": {
+          "description": "The pH of the mash at the end of the step.",
           "$ref": "measureable_units.json#/$defs/AcidityType"
         }
       },

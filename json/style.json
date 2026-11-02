@@ -32,6 +32,7 @@
           "type": "string"
         },
         "type": {
+          "description": "The kind of beverage the style describes.",
           "$ref": "#/$defs/StyleCategories"
         }
       },
@@ -52,21 +53,27 @@
         {
           "properties": {
             "original_gravity": {
+              "description": "The range of original gravity for the style.",
               "$ref": "measureable_units.json#/$defs/GravityRangeType"
             },
             "final_gravity": {
+              "description": "The range of final gravity for the style.",
               "$ref": "measureable_units.json#/$defs/GravityRangeType"
             },
             "international_bitterness_units": {
+              "description": "The range of bitterness for the style.",
               "$ref": "measureable_units.json#/$defs/BitternessRangeType"
             },
             "color": {
+              "description": "The range of colour for the style.",
               "$ref": "measureable_units.json#/$defs/ColorRangeType"
             },
             "carbonation": {
+              "description": "The range of carbonation for the style.",
               "$ref": "measureable_units.json#/$defs/CarbonationRangeType"
             },
             "alcohol_by_volume": {
+              "description": "The range of alcohol content by volume for the style.",
               "$ref": "measureable_units.json#/$defs/PercentRangeType"
             },
             "notes": {

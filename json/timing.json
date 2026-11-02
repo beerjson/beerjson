@@ -28,11 +28,11 @@
           "$ref": "measureable_units.json#/$defs/TimeType"
         },
         "continuous": {
-          "description": "A continuous addition is spread out evenly and added during the entire process step, eg 60 minute IPA by dogfish head takes all ofthe hop additions and adds them throughout the entire boil.",
+          "description": "A continuous addition is spread out evenly and added during the entire process step, eg 60 minute IPA by dogfish head takes all of the hop additions and adds them throughout the entire boil.",
           "type": "boolean"
         },
         "specific_gravity": {
-          "description": "Used to indicate when an addition is added based on a desired specific gravity. E.G. Add dry hop at when SG is 1.018.",
+          "description": "Used to indicate when an addition is added based on a desired specific gravity. E.G. Add dry hop when SG is 1.018.",
           "$ref": "measureable_units.json#/$defs/GravityType"
         },
         "pH": {
@@ -44,6 +44,7 @@
           "type": "integer"
         },
         "use": {
+          "description": "The process the ingredient is added to: the mash, the boil, the fermentation, or packaging.",
           "$ref": "#/$defs/UseType"
         }
       }

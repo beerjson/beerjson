@@ -8,7 +8,7 @@ A volume, as a magnitude and its unit.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | ✅ | [VolumeUnitType](#volumeunittype)|  |
+| **unit** | ✅ | [VolumeUnitType](#volumeunittype)| The unit the value is expressed in. |
 | **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## MassType 
@@ -19,7 +19,7 @@ A mass, as a magnitude and its unit.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | ✅ | [MassUnitType](#massunittype)|  |
+| **unit** | ✅ | [MassUnitType](#massunittype)| The unit the value is expressed in. |
 | **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## DiastaticPowerType 
@@ -30,7 +30,7 @@ Diastatic power is a measurement of malted grains enzymatic content. A value of 
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | ✅ | [DiastaticPowerUnitType](#diastaticpowerunittype)|  |
+| **unit** | ✅ | [DiastaticPowerUnitType](#diastaticpowerunittype)| The unit the value is expressed in. |
 | **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## TemperatureType 
@@ -41,7 +41,7 @@ A temperature, as a magnitude and its unit.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | ✅ | [TemperatureUnitType](#temperatureunittype)|  |
+| **unit** | ✅ | [TemperatureUnitType](#temperatureunittype)| The unit the value is expressed in. |
 | **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## PressureType 
@@ -52,7 +52,7 @@ A pressure, as a magnitude and its unit.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | ✅ | [PressureUnitType](#pressureunittype)|  |
+| **unit** | ✅ | [PressureUnitType](#pressureunittype)| The unit the value is expressed in. |
 | **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## AcidityType 
@@ -63,7 +63,7 @@ An acidity, as a magnitude and its unit.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | ✅ | [AcidityUnitType](#acidityunittype)|  |
+| **unit** | ✅ | [AcidityUnitType](#acidityunittype)| The unit the value is expressed in. |
 | **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## TimeType 
@@ -74,7 +74,7 @@ A duration, as a magnitude and its unit.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | ✅ | [TimeUnitType](#timeunittype)|  |
+| **unit** | ✅ | [TimeUnitType](#timeunittype)| The unit the value is expressed in. |
 | **value** | ✅ | integer| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## ColorType 
@@ -85,7 +85,7 @@ ColorType supports both grain color properties, such as Lovibond, and wort color
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | ✅ | [ColorUnitType](#colorunittype)|  |
+| **unit** | ✅ | [ColorUnitType](#colorunittype)| The unit the value is expressed in. |
 | **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## CarbonationType 
@@ -96,7 +96,7 @@ A carbonation level, as a magnitude and its unit.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | ✅ | [CarbonationUnitType](#carbonationunittype)|  |
+| **unit** | ✅ | [CarbonationUnitType](#carbonationunittype)| The unit the value is expressed in. |
 | **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## BitternessType 
@@ -107,7 +107,7 @@ A bitterness, as a magnitude and its unit.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | ✅ | [BitternessUnitType](#bitternessunittype)|  |
+| **unit** | ✅ | [BitternessUnitType](#bitternessunittype)| The unit the value is expressed in. |
 | **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## GravityType 
@@ -118,7 +118,7 @@ Gravity refers to the both the measurements of percent of sugar content, ie plat
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | ✅ | [GravityUnitType](#gravityunittype)|  |
+| **unit** | ✅ | [GravityUnitType](#gravityunittype)| The unit the value is expressed in. |
 | **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## SpecificHeatType 
@@ -129,7 +129,7 @@ The heat required to raise a given mass by one degree, per unit mass.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | ✅ | [SpecificHeatUnitType](#specificheatunittype)|  |
+| **unit** | ✅ | [SpecificHeatUnitType](#specificheatunittype)| The unit the value is expressed in. |
 | **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## ConcentrationType 
@@ -140,7 +140,7 @@ Examples for concentration include ppm, ppb, and mg/l.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | ✅ | [ConcentrationUnitType](#concentrationunittype)|  |
+| **unit** | ✅ | [ConcentrationUnitType](#concentrationunittype)| The unit the value is expressed in. |
 | **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## SpecificVolumeType 
@@ -151,7 +151,7 @@ Specific volume is the inverse of density, with units of volume over mass, ie qt
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | ✅ | [SpecificVolumeUnitType](#specificvolumeunittype)|  |
+| **unit** | ✅ | [SpecificVolumeUnitType](#specificvolumeunittype)| The unit the value is expressed in. |
 | **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## UnitType 
@@ -162,7 +162,7 @@ UnitType is used where unitless amounts are required, such as 1 apple, or 1 yeas
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | ✅ | [UnitUnitType](#unitunittype)|  |
+| **unit** | ✅ | [UnitUnitType](#unitunittype)| The unit the value is expressed in. |
 | **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## ViscosityType 
@@ -173,7 +173,7 @@ Viscosity of fluids
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | ✅ | [ViscosityUnitType](#viscosityunittype)|  |
+| **unit** | ✅ | [ViscosityUnitType](#viscosityunittype)| The unit the value is expressed in. |
 | **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## CarbonationRangeType 
@@ -184,8 +184,8 @@ A range of carbonation levels, as a minimum and a maximum.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **minimum** | ✅ | [CarbonationType](#carbonationtype)|  |
-| **maximum** | ✅ | [CarbonationType](#carbonationtype)|  |
+| **minimum** | ✅ | [CarbonationType](#carbonationtype)| The lower end of the range. |
+| **maximum** | ✅ | [CarbonationType](#carbonationtype)| The upper end of the range. |
 
 ## BitternessRangeType 
 
@@ -195,8 +195,8 @@ A range of bitterness values, as a minimum and a maximum.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **minimum** | ✅ | [BitternessType](#bitternesstype)|  |
-| **maximum** | ✅ | [BitternessType](#bitternesstype)|  |
+| **minimum** | ✅ | [BitternessType](#bitternesstype)| The lower end of the range. |
+| **maximum** | ✅ | [BitternessType](#bitternesstype)| The upper end of the range. |
 
 ## TemperatureRangeType 
 
@@ -206,8 +206,8 @@ A range of temperatures, as a minimum and a maximum.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **minimum** | ✅ | [TemperatureType](#temperaturetype)|  |
-| **maximum** | ✅ | [TemperatureType](#temperaturetype)|  |
+| **minimum** | ✅ | [TemperatureType](#temperaturetype)| The lower end of the range. |
+| **maximum** | ✅ | [TemperatureType](#temperaturetype)| The upper end of the range. |
 
 ## ColorRangeType 
 
@@ -217,8 +217,8 @@ A range of colors, as a minimum and a maximum.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **minimum** | ✅ | [ColorType](#colortype)|  |
-| **maximum** | ✅ | [ColorType](#colortype)|  |
+| **minimum** | ✅ | [ColorType](#colortype)| The lower end of the range. |
+| **maximum** | ✅ | [ColorType](#colortype)| The upper end of the range. |
 
 ## GravityRangeType 
 
@@ -228,8 +228,8 @@ A range of gravities, as a minimum and a maximum.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **minimum** | ✅ | [GravityType](#gravitytype)|  |
-| **maximum** | ✅ | [GravityType](#gravitytype)|  |
+| **minimum** | ✅ | [GravityType](#gravitytype)| The lower end of the range. |
+| **maximum** | ✅ | [GravityType](#gravitytype)| The upper end of the range. |
 
 ## PercentRangeType 
 
@@ -239,8 +239,8 @@ A range of percentages, as a minimum and a maximum.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **minimum** | ✅ | [PercentType](#percenttype)|  |
-| **maximum** | ✅ | [PercentType](#percenttype)|  |
+| **minimum** | ✅ | [PercentType](#percenttype)| The lower end of the range. |
+| **maximum** | ✅ | [PercentType](#percenttype)| The upper end of the range. |
 
 ## VolumeUnitType 
 
@@ -330,7 +330,7 @@ A percentage, as a magnitude and its unit.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **unit** | ✅ | [PercentUnitType](#percentunittype)|  |
+| **unit** | ✅ | [PercentUnitType](#percentunittype)| The unit the value is expressed in. |
 | **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## PercentUnitType 

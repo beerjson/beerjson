@@ -10,6 +10,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
+          "description": "The unit the value is expressed in.",
           "$ref": "#/$defs/VolumeUnitType"
         },
         "value": {
@@ -28,6 +29,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
+          "description": "The unit the value is expressed in.",
           "$ref": "#/$defs/MassUnitType"
         },
         "value": {
@@ -46,6 +48,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
+          "description": "The unit the value is expressed in.",
           "$ref": "#/$defs/DiastaticPowerUnitType"
         },
         "value": {
@@ -64,6 +67,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
+          "description": "The unit the value is expressed in.",
           "$ref": "#/$defs/TemperatureUnitType"
         },
         "value": {
@@ -82,6 +86,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
+          "description": "The unit the value is expressed in.",
           "$ref": "#/$defs/PressureUnitType"
         },
         "value": {
@@ -100,6 +105,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
+          "description": "The unit the value is expressed in.",
           "$ref": "#/$defs/AcidityUnitType"
         },
         "value": {
@@ -118,6 +124,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
+          "description": "The unit the value is expressed in.",
           "$ref": "#/$defs/TimeUnitType"
         },
         "value": {
@@ -136,6 +143,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
+          "description": "The unit the value is expressed in.",
           "$ref": "#/$defs/ColorUnitType"
         },
         "value": {
@@ -154,6 +162,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
+          "description": "The unit the value is expressed in.",
           "$ref": "#/$defs/CarbonationUnitType"
         },
         "value": {
@@ -172,6 +181,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
+          "description": "The unit the value is expressed in.",
           "$ref": "#/$defs/BitternessUnitType"
         },
         "value": {
@@ -190,6 +200,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
+          "description": "The unit the value is expressed in.",
           "$ref": "#/$defs/GravityUnitType"
         },
         "value": {
@@ -208,6 +219,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
+          "description": "The unit the value is expressed in.",
           "$ref": "#/$defs/SpecificHeatUnitType"
         },
         "value": {
@@ -226,6 +238,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
+          "description": "The unit the value is expressed in.",
           "$ref": "#/$defs/ConcentrationUnitType"
         },
         "value": {
@@ -244,6 +257,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
+          "description": "The unit the value is expressed in.",
           "$ref": "#/$defs/SpecificVolumeUnitType"
         },
         "value": {
@@ -262,6 +276,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
+          "description": "The unit the value is expressed in.",
           "$ref": "#/$defs/UnitUnitType"
         },
         "value": {
@@ -280,6 +295,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
+          "description": "The unit the value is expressed in.",
           "$ref": "#/$defs/ViscosityUnitType"
         },
         "value": {
@@ -298,9 +314,11 @@
       "additionalProperties": false,
       "properties": {
         "minimum": {
+          "description": "The lower end of the range.",
           "$ref": "#/$defs/CarbonationType"
         },
         "maximum": {
+          "description": "The upper end of the range.",
           "$ref": "#/$defs/CarbonationType"
         }
       },
@@ -315,9 +333,11 @@
       "additionalProperties": false,
       "properties": {
         "minimum": {
+          "description": "The lower end of the range.",
           "$ref": "#/$defs/BitternessType"
         },
         "maximum": {
+          "description": "The upper end of the range.",
           "$ref": "#/$defs/BitternessType"
         }
       },
@@ -332,9 +352,11 @@
       "additionalProperties": false,
       "properties": {
         "minimum": {
+          "description": "The lower end of the range.",
           "$ref": "#/$defs/TemperatureType"
         },
         "maximum": {
+          "description": "The upper end of the range.",
           "$ref": "#/$defs/TemperatureType"
         }
       },
@@ -349,9 +371,11 @@
       "additionalProperties": false,
       "properties": {
         "minimum": {
+          "description": "The lower end of the range.",
           "$ref": "#/$defs/ColorType"
         },
         "maximum": {
+          "description": "The upper end of the range.",
           "$ref": "#/$defs/ColorType"
         }
       },
@@ -366,9 +390,11 @@
       "additionalProperties": false,
       "properties": {
         "minimum": {
+          "description": "The lower end of the range.",
           "$ref": "#/$defs/GravityType"
         },
         "maximum": {
+          "description": "The upper end of the range.",
           "$ref": "#/$defs/GravityType"
         }
       },
@@ -383,9 +409,11 @@
       "additionalProperties": false,
       "properties": {
         "minimum": {
+          "description": "The lower end of the range.",
           "$ref": "#/$defs/PercentType"
         },
         "maximum": {
+          "description": "The upper end of the range.",
           "$ref": "#/$defs/PercentType"
         }
       },
@@ -556,6 +584,7 @@
       "additionalProperties": false,
       "properties": {
         "unit": {
+          "description": "The unit the value is expressed in.",
           "$ref": "#/$defs/PercentUnitType"
         },
         "value": {

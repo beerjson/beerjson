@@ -13,7 +13,7 @@ The descriptive base type for both style guideline records, and recipe style pro
 | **category_number** |  | integer| Number of the category the style belongs to in its style guide. |
 | **style_letter** |  | RegExp pattern: `[A-Z ]`| The letter identifying the style within its category, as BJCP guidelines use. |
 | **style_guide** | ✅ | string| The style guide the style is defined by, such as BJCP 2021 or Brewers Association 2017. |
-| **type** | ✅ | [StyleCategories](#stylecategories)|  |
+| **type** | ✅ | [StyleCategories](#stylecategories)| The kind of beverage the style describes. |
 
 ## StyleType 
 
@@ -23,12 +23,12 @@ StyleType provide information for Style categorization
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **original_gravity** |  | [GravityRangeType](measureable_units.json.md#gravityrangetype)|  |
-| **final_gravity** |  | [GravityRangeType](measureable_units.json.md#gravityrangetype)|  |
-| **international_bitterness_units** |  | [BitternessRangeType](measureable_units.json.md#bitternessrangetype)|  |
-| **color** |  | [ColorRangeType](measureable_units.json.md#colorrangetype)|  |
-| **carbonation** |  | [CarbonationRangeType](measureable_units.json.md#carbonationrangetype)|  |
-| **alcohol_by_volume** |  | [PercentRangeType](measureable_units.json.md#percentrangetype)|  |
+| **original_gravity** |  | [GravityRangeType](measureable_units.json.md#gravityrangetype)| The range of original gravity for the style. |
+| **final_gravity** |  | [GravityRangeType](measureable_units.json.md#gravityrangetype)| The range of final gravity for the style. |
+| **international_bitterness_units** |  | [BitternessRangeType](measureable_units.json.md#bitternessrangetype)| The range of bitterness for the style. |
+| **color** |  | [ColorRangeType](measureable_units.json.md#colorrangetype)| The range of colour for the style. |
+| **carbonation** |  | [CarbonationRangeType](measureable_units.json.md#carbonationrangetype)| The range of carbonation for the style. |
+| **alcohol_by_volume** |  | [PercentRangeType](measureable_units.json.md#percentrangetype)| The range of alcohol content by volume for the style. |
 | **notes** |  | string| Free text notes about the style. |
 | **aroma** |  | string| The aroma a beer in this style should present. |
 | **appearance** |  | string| The appearance a beer in this style should present. |

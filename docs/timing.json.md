@@ -15,9 +15,9 @@ The timing object fully describes the timing of an addition with options for bas
 |--|--|--|--|
 | **time** |  | [TimeType](measureable_units.json.md#timetype)| When during the process step the addition happens. The reference point depends on use: for add_to_fermentation, add_to_mash and add_to_package it is measured forwards from the start of the step, so 2 days for a dry hop means 2 days after fermentation began; for add_to_boil it is measured backwards from the end of the step, following brewing convention, so 40 min means 40 minutes before the end of the boil. |
 | **duration** |  | [TimeType](measureable_units.json.md#timetype)| How long an ingredient addition remains before it is removed or the step ends. A 2 day duration on a dry hop means it is removed after 2 days, and a 20 minute duration on a hop added at the end of the boil means it steeps for 20 minutes. How long a boil addition is boiled for is given by `time`, not `duration`. |
-| **continuous** |  | boolean| A continuous addition is spread out evenly and added during the entire process step, eg 60 minute IPA by dogfish head takes all ofthe hop additions and adds them throughout the entire boil. |
-| **specific_gravity** |  | [GravityType](measureable_units.json.md#gravitytype)| Used to indicate when an addition is added based on a desired specific gravity. E.G. Add dry hop at when SG is 1.018. |
+| **continuous** |  | boolean| A continuous addition is spread out evenly and added during the entire process step, eg 60 minute IPA by dogfish head takes all of the hop additions and adds them throughout the entire boil. |
+| **specific_gravity** |  | [GravityType](measureable_units.json.md#gravitytype)| Used to indicate when an addition is added based on a desired specific gravity. E.G. Add dry hop when SG is 1.018. |
 | **pH** |  | [AcidityType](measureable_units.json.md#aciditytype)| Used to indicate when an addition is added based on a desired specific pH. eg Add brett when pH is 3.4. |
 | **step** |  | integer| Used to indicate what step this ingredient timing addition is referencing. EG A value of 2 for add_to_fermentation would mean to add during the second fermentation step. |
-| **use** |  | [UseType](#usetype)|  |
+| **use** |  | [UseType](#usetype)| The process the ingredient is added to: the mash, the boil, the fermentation, or packaging. |
 

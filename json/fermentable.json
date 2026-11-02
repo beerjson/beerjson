@@ -52,9 +52,11 @@
           ]
         },
         "yield": {
+          "description": "The extract the fermentable contributes to the wort.",
           "$ref": "#/$defs/YieldType"
         },
         "color": {
+          "description": "The colour of the fermentable.",
           "$ref": "measureable_units.json#/$defs/ColorType"
         }
       },
@@ -80,6 +82,7 @@
               "type": "string"
             },
             "moisture": {
+              "description": "The moisture content of the fermentable, as a percentage by weight.",
               "$ref": "measureable_units.json#/$defs/PercentType"
             },
             "alpha_amylase": {
@@ -107,6 +110,7 @@
               "type": "boolean"
             },
             "inventory": {
+              "description": "The quantity of the fermentable held in stock.",
               "$ref": "#/$defs/FermentableInventoryType"
             },
             "glassy": {

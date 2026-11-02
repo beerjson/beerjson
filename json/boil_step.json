@@ -18,9 +18,11 @@
           "type": "string"
         },
         "start_temperature": {
+          "description": "The temperature of the wort at the start of the step.",
           "$ref": "measureable_units.json#/$defs/TemperatureType"
         },
         "end_temperature": {
+          "description": "The temperature of the wort at the end of the step.",
           "$ref": "measureable_units.json#/$defs/TemperatureType"
         },
         "ramp_time": {
@@ -28,18 +30,23 @@
           "$ref": "measureable_units.json#/$defs/TimeType"
         },
         "step_time": {
+          "description": "How long the step lasts.",
           "$ref": "measureable_units.json#/$defs/TimeType"
         },
         "start_gravity": {
+          "description": "The gravity of the wort at the start of the step.",
           "$ref": "measureable_units.json#/$defs/GravityType"
         },
         "end_gravity": {
+          "description": "The gravity of the wort at the end of the step.",
           "$ref": "measureable_units.json#/$defs/GravityType"
         },
         "start_ph": {
+          "description": "The pH of the wort at the start of the step.",
           "$ref": "measureable_units.json#/$defs/AcidityType"
         },
         "end_ph": {
+          "description": "The pH of the wort at the end of the step.",
           "$ref": "measureable_units.json#/$defs/AcidityType"
         },
         "chilling_type": {

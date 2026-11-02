@@ -14,8 +14,8 @@ Identifies a fermentable and carries what a recipe must know to calculate with i
 | **producer** |  | string| The maltster or company that produced the fermentable. |
 | **product_id** |  | string| The producer's catalogue number for the fermentable. |
 | **grain_group** |  | `"base"`<br/>`"caramel"`<br/>`"flaked"`<br/>`"roasted"`<br/>`"specialty"`<br/>`"smoked"`<br/>`"adjunct"`| The role the grain plays in a grain bill. |
-| **yield** | ✅ | [YieldType](#yieldtype)|  |
-| **color** | ✅ | [ColorType](measureable_units.json.md#colortype)|  |
+| **yield** | ✅ | [YieldType](#yieldtype)| The extract the fermentable contributes to the wort. |
+| **color** | ✅ | [ColorType](measureable_units.json.md#colortype)| The colour of the fermentable. |
 
 ## FermentableType 
 
@@ -26,14 +26,14 @@ The full catalogue record for a fermentable: `FermentableBase` plus the specific
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **notes** |  | string| Free text notes about the fermentable. |
-| **moisture** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **moisture** |  | [PercentType](measureable_units.json.md#percenttype)| The moisture content of the fermentable, as a percentage by weight. |
 | **alpha_amylase** |  | number| Where diastatic power gives the total amount of all enzymes, alpha amylase, also known as dextrinizing units, refers to only the total amount of alpa amylase in the malted grain. A value of 25-50 is desirable for base malt. |
 | **diastatic_power** |  | [DiastaticPowerType](measureable_units.json.md#diastaticpowertype)| Diastatic power is a measurement of malted grains enzymatic content. A value of 35 Lintner is needed to self convert, while a value of 100 or more is desirable. |
 | **protein** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of protein. Higher values may indicate a possibility of haze, or lautering issues. |
 | **kolbach_index** |  | [PercentType](measureable_units.json.md#percenttype)| The Kolbach Index, also known as soluble to total ratio of nitrogen or protein, is used to indicate the degree of malt modification. A value above 35% is desired for simple single infusion mashing, undermodified malt may require multiple step mashes or decoction. |
 | **max_in_batch** |  | [PercentType](measureable_units.json.md#percenttype)| The recommended maximum percentage by weight that this ingredient should represent in a batch. |
 | **recommend_mash** |  | boolean| True if the fermentable is recommended to be mashed, false if it can be steeped. |
-| **inventory** |  | [FermentableInventoryType](#fermentableinventorytype)|  |
+| **inventory** |  | [FermentableInventoryType](#fermentableinventorytype)| The quantity of the fermentable held in stock. |
 | **glassy** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of kernels that are glassy (vitreous), with a mostly hard endosperm, which generally indicates poor modification. glassy, half and mealy together make 100%. |
 | **plump** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of grain retained on sieves with gaps of 7/64 inch and 6/64 inch, desired values of 80% or higher which indicate plump kernels. |
 | **half** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of kernels that are half-glassy, with a partly hard endosperm. glassy, half and mealy together make 100%. |

@@ -30,6 +30,7 @@
           ]
         },
         "maximum_volume": {
+          "description": "The total volume the vessel can hold.",
           "$ref": "measureable_units.json#/$defs/VolumeType"
         }
       },
@@ -50,6 +51,7 @@
         {
           "properties": {
             "loss": {
+              "description": "Liquid left behind in this vessel and not recovered, such as dead space below the outlet or trub.",
               "$ref": "measureable_units.json#/$defs/VolumeType"
             },
             "grain_absorption_rate": {

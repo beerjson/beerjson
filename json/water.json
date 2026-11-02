@@ -17,24 +17,31 @@
           "type": "string"
         },
         "calcium": {
+          "description": "The concentration of calcium (Ca) in the water.",
           "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "bicarbonate": {
+          "description": "The concentration of bicarbonate (HCO3) in the water.",
           "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "carbonate": {
+          "description": "The concentration of carbonate (CO3) in the water.",
           "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "potassium": {
+          "description": "The concentration of potassium (K) in the water.",
           "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "iron": {
+          "description": "The concentration of iron (Fe) in the water.",
           "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "nitrate": {
+          "description": "The concentration of nitrate (NO3) in the water.",
           "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "nitrite": {
+          "description": "The concentration of nitrite (NO2) in the water.",
           "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "fluoride": {
@@ -47,15 +54,19 @@
           "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "sulfate": {
+          "description": "The concentration of sulfate (SO4) in the water.",
           "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "chloride": {
+          "description": "The concentration of chloride (Cl) in the water.",
           "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "sodium": {
+          "description": "The concentration of sodium (Na) in the water.",
           "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "magnesium": {
+          "description": "The concentration of magnesium (Mg) in the water.",
           "$ref": "measureable_units.json#/$defs/ConcentrationType"
         }
       },
@@ -101,6 +112,7 @@
         {
           "properties": {
             "amount": {
+              "description": "The volume of this water used in the recipe.",
               "$ref": "measureable_units.json#/$defs/VolumeType"
             }
           }
