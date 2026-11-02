@@ -13,15 +13,20 @@ const importFromBeerXml = require('../js/beerxml-to-beerjson')
 const beerjson = require('../index.js')
 const { CURRENT_VERSION } = require('../js/format-version')
 
-const recipeXml = ({ hops = '', miscs = '', fermentables = '' } = {}) => `
+const PALE_MALT = `<FERMENTABLE><NAME>Pale</NAME><VERSION>1</VERSION>
+  <TYPE>Grain</TYPE><AMOUNT>4</AMOUNT><YIELD>80</YIELD><COLOR>3</COLOR></FERMENTABLE>`
+
+const recipeXml = ({
+  hops = '',
+  miscs = '',
+  fermentables = PALE_MALT
+} = {}) => `
 <RECIPES><RECIPE>
   <NAME>Test</NAME><VERSION>1</VERSION><TYPE>All Grain</TYPE><BREWER>tester</BREWER>
   <BATCH_SIZE>20</BATCH_SIZE><BOIL_SIZE>25</BOIL_SIZE><BOIL_TIME>60</BOIL_TIME>
   <EFFICIENCY>72</EFFICIENCY>
   <HOPS>${hops}</HOPS>
-  <FERMENTABLES>${fermentables ||
-    `<FERMENTABLE><NAME>Pale</NAME><VERSION>1</VERSION><TYPE>Grain</TYPE>
-      <AMOUNT>4</AMOUNT><YIELD>80</YIELD><COLOR>3</COLOR></FERMENTABLE>`}</FERMENTABLES>
+  <FERMENTABLES>${fermentables}</FERMENTABLES>
   ${miscs ? `<MISCS>${miscs}</MISCS>` : ''}
   <YEASTS><YEAST><NAME>US-05</NAME><VERSION>1</VERSION><TYPE>Ale</TYPE>
     <FORM>Dry</FORM><AMOUNT>0.011</AMOUNT><AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT></YEAST></YEASTS>
