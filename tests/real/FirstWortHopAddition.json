@@ -57,7 +57,7 @@
               "timing": {
                 "time": {
                   "unit": "min",
-                  "value": 15
+                  "value": 10
                 },
                 "use": "add_to_boil",
                 "step": 1
@@ -81,7 +81,7 @@
               "timing": {
                 "time": {
                   "unit": "min",
-                  "value": 30
+                  "value": 10
                 },
                 "use": "add_to_boil",
                 "step": 1

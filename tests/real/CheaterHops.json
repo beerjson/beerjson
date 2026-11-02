@@ -215,8 +215,7 @@
                 "duration": {
                   "unit": "day",
                   "value": 3
-                },
-                "step": 1
+                }
               }
             },
             {
@@ -243,8 +242,7 @@
                 "duration": {
                   "unit": "day",
                   "value": 3
-                },
-                "step": 1
+                }
               }
             },
             {

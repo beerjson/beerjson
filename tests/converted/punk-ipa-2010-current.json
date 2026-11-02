@@ -268,7 +268,7 @@
                 "value": 0.0475
               },
               "timing": {
-                "time": {
+                "duration": {
                   "unit": "min",
                   "value": 10080
                 },
@@ -291,7 +291,7 @@
                 "value": 0.0375
               },
               "timing": {
-                "time": {
+                "duration": {
                   "unit": "min",
                   "value": 10080
                 },
@@ -314,7 +314,7 @@
                 "value": 0.0375
               },
               "timing": {
-                "time": {
+                "duration": {
                   "unit": "min",
                   "value": 10080
                 },
@@ -337,7 +337,7 @@
                 "value": 0.02
               },
               "timing": {
-                "time": {
+                "duration": {
                   "unit": "min",
                   "value": 10080
                 },
@@ -360,7 +360,7 @@
                 "value": 0.0375
               },
               "timing": {
-                "time": {
+                "duration": {
                   "unit": "min",
                   "value": 10080
                 },
@@ -383,7 +383,7 @@
                 "value": 0.01
               },
               "timing": {
-                "time": {
+                "duration": {
                   "unit": "min",
                   "value": 10080
                 },
