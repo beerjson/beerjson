@@ -204,7 +204,7 @@
     },
     "SpecificHeatType": {
       "type": "object",
-      "description": "Specific heat is the measurement of the amount of heat required to raise a given mass one degree..",
+      "description": "The heat required to raise a given mass by one degree, per unit mass.",
       "additionalProperties": false,
       "properties": {
         "unit": {
@@ -512,7 +512,7 @@
       ]
     },
     "SpecificHeatUnitType": {
-      "description": "Units in which specific heat may be expressed.",
+      "description": "Units in which specific heat may be expressed. Despite its capital C, `Cal/(g C)` means calories, not kilocalories, per gram per degree Celsius, so water is 1.0 and stainless steel about 0.12. It is numerically equal to `BTU/(lb F)`.",
       "type": "string",
       "enum": [
         "Cal/(g C)",

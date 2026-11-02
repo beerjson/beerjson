@@ -123,7 +123,7 @@ Gravity refers to the both the measurements of percent of sugar content, ie plat
 
 ## SpecificHeatType 
 
-Specific heat is the measurement of the amount of heat required to raise a given mass one degree..
+The heat required to raise a given mass by one degree, per unit mass.
 
 **SpecificHeatType** is an object with these properties:
 
@@ -304,7 +304,7 @@ Units in which a concentration may be expressed.
 `"ppm"`<br/>`"ppb"`<br/>`"mg/l"`
 ## SpecificHeatUnitType 
 
-Units in which specific heat may be expressed.
+Units in which specific heat may be expressed. Despite its capital C, `Cal/(g C)` means calories, not kilocalories, per gram per degree Celsius, so water is 1.0 and stainless steel about 0.12. It is numerically equal to `BTU/(lb F)`.
 
 `"Cal/(g C)"`<br/>`"J/(kg K)"`<br/>`"BTU/(lb F)"`
 ## SpecificVolumeUnitType 

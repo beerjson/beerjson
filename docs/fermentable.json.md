@@ -34,9 +34,9 @@ The full catalogue record for a fermentable: `FermentableBase` plus the specific
 | **max_in_batch** |  | [PercentType](measureable_units.json.md#percenttype)| The recommended maximum percentage by weight that this ingredient should represent in a batch. |
 | **recommend_mash** |  | boolean| True if the fermentable is recommended to be mashed, false if it can be steeped. |
 | **inventory** |  | [FermentableInventoryType](#fermentableinventorytype)|  |
-| **glassy** |  | [PercentType](measureable_units.json.md#percenttype)| Used to indicate the 'crystallized' percentage of starches for crystal malts. |
+| **glassy** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of kernels that are glassy (vitreous), with a mostly hard endosperm, which generally indicates poor modification. glassy, half and mealy together make 100%. |
 | **plump** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of grain retained on sieves with gaps of 7/64 inch and 6/64 inch, desired values of 80% or higher which indicate plump kernels. |
-| **half** |  | [PercentType](measureable_units.json.md#percenttype)|  |
+| **half** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of kernels that are half-glassy, with a partly hard endosperm. glassy, half and mealy together make 100%. |
 | **mealy** |  | [PercentType](measureable_units.json.md#percenttype)| The opposite of glassy, a mealy kernel is one that is not glassy. Base malt should be at least 90%, single step mashes generally require 95% or higher. |
 | **thru** |  | [PercentType](measureable_units.json.md#percenttype)| The Percentage of grain that makes it through a thin mesh screen, typically 5/64 inch. Values less than 3% are desired. |
 | **friability** |  | [PercentType](measureable_units.json.md#percenttype)| Friability is the measure of a malts ability to crumble during the crush, and is used as an indicator for easy gelatinization of the grain and starches, as well as modification of the malt. Value of 85% of higher indicates a well modified malt and is suitable for single step mashes. Lower values may require a step mash. |

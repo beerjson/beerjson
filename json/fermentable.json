@@ -110,7 +110,7 @@
               "$ref": "#/$defs/FermentableInventoryType"
             },
             "glassy": {
-              "description": "Used to indicate the 'crystallized' percentage of starches for crystal malts.",
+              "description": "The percentage of kernels that are glassy (vitreous), with a mostly hard endosperm, which generally indicates poor modification. glassy, half and mealy together make 100%.",
               "$ref": "measureable_units.json#/$defs/PercentType"
             },
             "plump": {
@@ -118,6 +118,7 @@
               "$ref": "measureable_units.json#/$defs/PercentType"
             },
             "half": {
+              "description": "The percentage of kernels that are half-glassy, with a partly hard endosperm. glassy, half and mealy together make 100%.",
               "$ref": "measureable_units.json#/$defs/PercentType"
             },
             "mealy": {

@@ -24,7 +24,7 @@
           "$ref": "measureable_units.json#/$defs/TimeType"
         },
         "duration": {
-          "description": "How long an ingredient addition remains, this was referred to as time in the BeerXML standard. E.G. A 40 minute hop boil additions means to boil for 40 minutes, and a 2 day duration for a dry hop means to remove it after 2 days.",
+          "description": "How long an ingredient addition remains before it is removed or the step ends. A 2 day duration on a dry hop means it is removed after 2 days, and a 20 minute duration on a hop added at the end of the boil means it steeps for 20 minutes. How long a boil addition is boiled for is given by `time`, not `duration`.",
           "$ref": "measureable_units.json#/$defs/TimeType"
         },
         "continuous": {
