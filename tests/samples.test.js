@@ -1,5 +1,4 @@
 const JsonLint = require('json-dup-key-validator')
-const prettier = require('prettier')
 const fs = require('fs')
 const importFromBeerXml = require('../js/beerxml-to-beerjson')
 const validate = require('./../js/validation')
@@ -25,8 +24,10 @@ const testJson = path => {
 const convertFromXML = (dataDir, convertedDir) => {
   fs.readdirSync(dataDir).forEach(file => {
     const xmlString = fs.readFileSync(dataDir + file, 'utf8')
-    const rawRecipe = importFromBeerXml(xmlString)
-    const recipe = prettier.format(rawRecipe, { parser: 'json-stringify' })
+    // Same layout prettier's json-stringify parser produces, without depending
+    // on prettier at test time.
+    const recipe =
+      JSON.stringify(JSON.parse(importFromBeerXml(xmlString)), null, 2) + '\n'
     fs.writeFileSync(convertedDir + file.replace('.xml', '.json'), recipe)
   })
 }

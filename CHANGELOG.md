@@ -67,6 +67,16 @@ than entries written at the time.
   release can be pinned and installed by URL without going through the
   registry. The README documents installing from the tarball or the git tag.
 
+### Changed
+
+- **Prettier 3.9.10**, from 1.14.2. Prettier 3 made `format()` asynchronous,
+  which broke the test that writes the converted BeerXML fixtures and is why
+  Dependabot's upgrade could not pass on its own. That test now writes them with
+  `JSON.stringify`, which produces byte-identical output, so the test suite no
+  longer depends on prettier at all. `.prettierrc` sets `trailingComma` and
+  `arrowParens` to prettier 1's defaults, so the upgrade reformats two source
+  files and restyles nothing.
+
 ### Fixed
 
 - **`EquipmentType.equipment_items` had `"description": ""`**, which reads as
