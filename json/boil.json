@@ -22,9 +22,11 @@
           "type": "string"
         },
         "pre_boil_size": {
+          "description": "The volume of wort in the kettle before the boil begins.",
           "$ref": "measureable_units.json#/$defs/VolumeType"
         },
         "boil_time": {
+          "description": "The total length of the boil.",
           "$ref": "measureable_units.json#/$defs/TimeType"
         },
         "boil_steps": {

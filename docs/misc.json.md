@@ -23,7 +23,7 @@ The full catalogue record for a miscellaneous ingredient: `MiscellaneousBase` pl
 |--|--|--|--|
 | **use_for** |  | string| Used to describe the purpose of the miscellaneous ingredient, e.g. whirlfloc is used for clarity. |
 | **notes** |  | string| Free text notes about the ingredient. |
-| **inventory** |  | [MiscellaneousInventoryType](#miscellaneousinventorytype)|  |
+| **inventory** |  | [MiscellaneousInventoryType](#miscellaneousinventorytype)| The quantity of the ingredient held in stock. |
 
 ## MiscellaneousAdditionType 
 

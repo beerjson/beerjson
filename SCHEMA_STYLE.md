@@ -68,8 +68,10 @@ Every property and every type in the format carries one, and the conventions
 test enforces it outright: a new property without a description fails CI, as
 does a description that is present but blank.
 
-A property whose whole definition is a `$ref` is exempt, since it inherits the
-description of the type it points at.
+A property whose definition is a `$ref` needs its own description too. The
+referenced type says what kind of value it is (a percentage, a temperature);
+only the property can say what it measures. Under 2020-12, validators read a
+description that sits beside a `$ref`.
 
 ## Measurements
 
