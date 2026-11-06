@@ -45,7 +45,25 @@ const USE_TO_TIMING = {
   secondary: 'add_to_fermentation',
   bottling: 'add_to_package'
 }
-const timingUse = use => USE_TO_TIMING[lowerCase(use)] || 'add_to_boil'
+
+// BeerXML's TIME means something different for each USE:
+// - Boil and First Wort: the boil time, which is BeerJSON's `time` for a boil
+//   addition (measured back from the end of the boil).
+// - Aroma: the steep time after the boil ends, so `time` 0 plus `duration`.
+// - Mash, Dry Hop, Primary, Secondary, Bottling: how long the ingredient stays
+//   in, which is BeerJSON's `duration`. BeerXML does not say when it goes in.
+// First Wort cannot yet be placed in a pre-boil step: see issue #271.
+const timing = (use, time) => {
+  const key = lowerCase(use)
+  const target = USE_TO_TIMING[key] || 'add_to_boil'
+  if (isNil(time) || String(time).trim() === '') return { use: target }
+  const minutes = { unit: 'min', value: Number(time) }
+  if (key === 'aroma') {
+    return { time: { unit: 'min', value: 0 }, duration: minutes, use: target }
+  }
+  if (target === 'add_to_boil') return { time: minutes, use: target }
+  return { duration: minutes, use: target }
+}
 
 const potential = y => (y * 0.46) / 1000 + 1
 const mash_steps = r =>
@@ -155,13 +173,7 @@ const miscellaneous_additions = r =>
           }
         }
       : {}),
-    timing: {
-      time: {
-        unit: 'min',
-        value: Number(misc['TIME'])
-      },
-      use: timingUse(misc['USE'])
-    }
+    timing: timing(misc['USE'], misc['TIME'])
   }))
 
 const hop_bill = r =>
@@ -185,13 +197,7 @@ const hop_bill = r =>
       unit: 'kg',
       value: Number(hop['AMOUNT'])
     },
-    timing: {
-      time: {
-        unit: 'min',
-        value: Number(hop['TIME'])
-      },
-      use: timingUse(hop['USE'])
-    }
+    timing: timing(hop['USE'], hop['TIME'])
   }))
 
 const fermentable_bill = r =>

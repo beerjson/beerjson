@@ -63,6 +63,11 @@ than entries written at the time.
   `hop_varieties` list at the document root, so the fixture now demonstrates the
   recommended pattern rather than contradicting it.
 
+- **Tests for what the BeerXML importer means**, not only that its output is
+  valid: every BeerXML USE value is pinned to the BeerJSON timing it produces.
+  Ten of them fail against the previous importer. A second set checks timing
+  rules across every document under `tests/` that JSON Schema cannot express:
+  a `step` must exist, and a `time` cannot exceed its step or the boil.
 - **A release now attaches its packed tarball to the GitHub release**, so a
   release can be pinned and installed by URL without going through the
   registry. The README documents installing from the tarball or the git tag.
@@ -103,6 +108,23 @@ than entries written at the time.
   ([#264](https://github.com/beerjson/beerjson/issues/264)); and `duration`
   contradicted `time` for boil additions
   ([#266](https://github.com/beerjson/beerjson/issues/266)).
+- **The BeerXML importer put BeerXML's TIME in the wrong field for every use
+  except the boil** ([#268](https://github.com/beerjson/beerjson/issues/268)).
+  BeerXML's TIME means the boil time for Boil and First Wort, the steep time for
+  Aroma, and how long the ingredient stays in for Mash, Dry Hop, Primary,
+  Secondary and Bottling. Every case was written to `time`, which for a boil
+  addition counts back from the end of the boil, so a 20 minute whirlpool hop
+  became a 20 minute boil addition and inflated calculated bitterness, and a
+  7 day dry hop became one added 7 days into fermentation. Aroma is now `time` 0
+  plus `duration`, and the stay-in uses are `duration`. A missing TIME no longer
+  produces a `null` time. First Wort still cannot be placed in a pre-boil step
+  until [#271](https://github.com/beerjson/beerjson/issues/271) settles how boil
+  steps are classified.
+- **Two example documents described impossible timings**
+  ([#267](https://github.com/beerjson/beerjson/issues/267)).
+  `FirstWortHopAddition.json` put first wort hops 15 and 30 minutes before the
+  end of a 10 minute step, and `CheaterHops.json` pointed two dry hops at a
+  fermentation step in a recipe with no fermentation procedure.
 
 - **`EquipmentType.equipment_items` had `"description": ""`**, which reads as
   documented to any tooling checking for the key's presence while rendering as
