@@ -55,7 +55,7 @@ ${str}`
     description,
     deprecated
   ) =>
-    `| **${propName}** | ${required ? '✅' : ''} | ${formattedPropType}| ${
+    `| **${propName}** | ${required ? '✅' : ''} | ${formattedPropType.replace(/\|/g, '\\|')}| ${
       deprecated ? '⚠️ **Deprecated.** ' : ''
     }${description ? description : ''} |\n`
 }

@@ -1,6 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/measureable_units.json",
+  "x-version": "3.0",
   "type": "object",
   "additionalProperties": false,
   "$defs": {
@@ -119,7 +120,7 @@
       ]
     },
     "TimeType": {
-      "description": "A duration, as a magnitude and its unit.",
+      "description": "A duration, as a magnitude and its unit. The magnitude may be fractional, such as 3.5 min.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -129,7 +130,7 @@
         },
         "value": {
           "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
-          "type": "integer"
+          "type": "number"
         }
       },
       "required": [
@@ -263,6 +264,26 @@
         "value": {
           "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
           "type": "number"
+        }
+      },
+      "required": [
+        "unit",
+        "value"
+      ]
+    },
+    "EnergyPerVolumeType": {
+      "description": "An energy content per volume of beer, as a magnitude and its unit.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "unit": {
+          "description": "The unit the value is expressed in.",
+          "$ref": "#/$defs/EnergyPerVolumeUnitType"
+        },
+        "value": {
+          "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
+          "type": "number",
+          "minimum": 0
         }
       },
       "required": [
@@ -562,8 +583,23 @@
         "ft^3/lb"
       ]
     },
+    "EnergyPerVolumeUnitType": {
+      "description": "Units in which an energy content per volume may be expressed. kcal is the kilocalorie (dietary Calorie). pt is the US pint of 16 US fluid ounces, ipt the imperial pint, and floz the US fluid ounce. kcal/100ml and kJ/100ml are the units of EU nutritional labelling.",
+      "type": "string",
+      "enum": [
+        "kcal/l",
+        "kcal/50cl",
+        "kcal/33cl",
+        "kcal/25cl",
+        "kcal/100ml",
+        "kcal/pt",
+        "kcal/12floz",
+        "kcal/ipt",
+        "kJ/100ml"
+      ]
+    },
     "UnitUnitType": {
-      "description": "Units in which a countable or dimensionless quantity may be expressed.",
+      "description": "Units in which a count of items may be expressed. Write each, which counts whatever the ingredient is: apples, cinnamon sticks, yeast packets. The values 1, unit, dimensionless and pkg are deprecated synonyms of each, kept so existing documents stay valid; readers should treat all five alike.",
       "type": "string",
       "enum": [
         "1",
@@ -574,12 +610,33 @@
       ]
     },
     "DateType": {
-      "description": "A date, as ISO 8601 YYYY-MM-DD, optionally with a time as YYYY-MM-DDThh:mm:ss.",
+      "description": "A date, as ISO 8601 YYYY-MM-DD, optionally with a time as YYYY-MM-DDThh:mm:ss. The time may have fractional seconds and may end in Z or a UTC offset such as +01:00; without either it is a local time. The pattern checks that the month, day and time are in range, but not that the day exists in that month.",
       "type": "string",
-      "pattern": "\\d{4}-\\d{2}-\\d{2}|\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}"
+      "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])(T([01]\\d|2[0-3]):[0-5]\\d:([0-5]\\d|60)(\\.\\d+)?(Z|[+-]([01]\\d|2[0-3]):[0-5]\\d)?)?$"
+    },
+    "BoundedPercentType": {
+      "description": "A percentage that is a share of a whole, so cannot be below 0 or above 100, as a magnitude and its unit.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "unit": {
+          "description": "The unit the value is expressed in.",
+          "$ref": "#/$defs/PercentUnitType"
+        },
+        "value": {
+          "description": "The magnitude of the measurement. Its unit is given by the sibling unit property.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "required": [
+        "unit",
+        "value"
+      ]
     },
     "PercentType": {
-      "description": "A percentage, as a magnitude and its unit.",
+      "description": "A percentage, as a magnitude and its unit, for a quantity that can legitimately fall outside 0 to 100, such as apparent attenuation, which exceeds 100 when the final gravity is below 1.000. Use BoundedPercentType for a share of a whole.",
       "type": "object",
       "additionalProperties": false,
       "properties": {

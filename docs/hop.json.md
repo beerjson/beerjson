@@ -14,8 +14,8 @@ Identifies a hop and carries what a recipe must know to calculate with it, which
 | **origin** |  | string| The country or region the hops were grown in. |
 | **year** |  | string| The harvest year of the crop. |
 | **form** |  | `"extract"`<br/>`"leaf"`<br/>`"leaf (wet)"`<br/>`"pellet"`<br/>`"powder"`<br/>`"plug"`| The physical form the hops are supplied in. |
-| **alpha_acid** | ✅ | [PercentType](measureable_units.json.md#percenttype)| The alpha acid content of the hop, as a percentage by weight. Alpha acids are the main source of bitterness. |
-| **beta_acid** |  | [PercentType](measureable_units.json.md#percenttype)| The beta acid content of the hop, as a percentage by weight. |
+| **alpha_acid** | ✅ | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| The alpha acid content of the hop, as a percentage by weight. Alpha acids are the main source of bitterness. |
+| **beta_acid** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| The beta acid content of the hop, as a percentage by weight. |
 
 ## VarietyInformation 
 
@@ -27,7 +27,7 @@ The full catalogue record for a hop variety: `HopVarietyBase` plus the propertie
 |--|--|--|--|
 | **type** |  | `"aroma"`<br/>`"bittering"`<br/>`"flavor"`<br/>`"aroma/bittering"`<br/>`"bittering/flavor"`<br/>`"aroma/flavor"`<br/>`"aroma/bittering/flavor"`| What the variety is typically used for, given its aroma and bittering character. |
 | **notes** |  | string| Free text notes about the variety. |
-| **percent_lost** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of hop alpha acid lost in six months of storage, also known as the Hop Stability Index. |
+| **percent_lost** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| The percentage of hop alpha acid lost in six months of storage, also known as the Hop Stability Index. |
 | **substitutes** |  | string| Other varieties that can be used in place of this one. |
 | **oil_content** |  | [OilContentType](#oilcontenttype)| Oil Content information object. |
 | **inventory** |  | [HopInventoryType](#hopinventorytype)| The quantity of the hop held in stock. |
@@ -68,19 +68,19 @@ The oil content of a hop variety, and related compounds. Each oil is a percentag
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **total_oil_ml_per_100g** |  | number| The total amount of oil, including hydrocarbons, esters, and terpene alcohols in units of ml of oil per 100g of hop mass. |
-| **humulene** |  | [PercentType](measureable_units.json.md#percenttype)| Humulene, as a percentage of total hop oil. |
-| **caryophyllene** |  | [PercentType](measureable_units.json.md#percenttype)| Caryophyllene, as a percentage of total hop oil. |
-| **cohumulone** |  | [PercentType](measureable_units.json.md#percenttype)| Cohumulone, as a percentage of total alpha acids. Unlike the other members it is an alpha acid, not an oil. |
-| **myrcene** |  | [PercentType](measureable_units.json.md#percenttype)| Myrcene, as a percentage of total hop oil. |
-| **farnesene** |  | [PercentType](measureable_units.json.md#percenttype)| Farnesene, as a percentage of total hop oil. |
-| **geraniol** |  | [PercentType](measureable_units.json.md#percenttype)| Geraniol, as a percentage of total hop oil. |
-| **b_pinene** |  | [PercentType](measureable_units.json.md#percenttype)| Beta-pinene, as a percentage of total hop oil. |
-| **linalool** |  | [PercentType](measureable_units.json.md#percenttype)| Linalool, as a percentage of total hop oil. |
-| **limonene** |  | [PercentType](measureable_units.json.md#percenttype)| Limonene, as a percentage of total hop oil. |
-| **nerol** |  | [PercentType](measureable_units.json.md#percenttype)| Nerol, as a percentage of total hop oil. |
-| **pinene** |  | [PercentType](measureable_units.json.md#percenttype)| Alpha-pinene, as a percentage of total hop oil. Beta-pinene is recorded separately as b_pinene. |
-| **polyphenols** |  | [PercentType](measureable_units.json.md#percenttype)| Polyphenols, as a percentage of hop weight. Unlike the oils, not measured relative to total oil. |
-| **xanthohumol** |  | [PercentType](measureable_units.json.md#percenttype)| Xanthohumol, as a percentage of hop weight. Unlike the oils, not measured relative to total oil. |
+| **humulene** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| Humulene, as a percentage of total hop oil. |
+| **caryophyllene** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| Caryophyllene, as a percentage of total hop oil. |
+| **cohumulone** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| Cohumulone, as a percentage of total alpha acids. Unlike the other members it is an alpha acid, not an oil. |
+| **myrcene** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| Myrcene, as a percentage of total hop oil. |
+| **farnesene** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| Farnesene, as a percentage of total hop oil. |
+| **geraniol** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| Geraniol, as a percentage of total hop oil. |
+| **b_pinene** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| Beta-pinene, as a percentage of total hop oil. |
+| **linalool** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| Linalool, as a percentage of total hop oil. |
+| **limonene** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| Limonene, as a percentage of total hop oil. |
+| **nerol** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| Nerol, as a percentage of total hop oil. |
+| **pinene** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| Alpha-pinene, as a percentage of total hop oil. Beta-pinene is recorded separately as b_pinene. |
+| **polyphenols** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| Polyphenols, as a percentage of hop weight. Unlike the oils, not measured relative to total oil. |
+| **xanthohumol** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| Xanthohumol, as a percentage of hop weight. Unlike the oils, not measured relative to total oil. |
 
 ## HopInventoryType 
 

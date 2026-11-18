@@ -17,6 +17,7 @@ Every file in `json/` declares its draft and its identity:
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/hop.json",
+  "x-version": "3.0",
   "type": "object",
   "additionalProperties": false,
   "$defs": {}
@@ -27,6 +28,9 @@ Every file in `json/` declares its draft and its identity:
   files: cross-file `$ref` resolution depends on them agreeing. See
   [ADR-0002](adr/0002-json-schema-2020-12.md).
 - The `$id` path must match the filename.
+- `x-version` is the format version the file belongs to, as a `MAJOR.MINOR`
+  string. It must be the highest value in `VersionType`. See
+  [ADR-0007](adr/0007-schema-version-annotation.md).
 - Reusable types go under `$defs`. Only `beer.json` declares `properties` at the
   root: it is the document entry point.
 
@@ -89,6 +93,10 @@ an index, a rating, or the `value` field inside a measurement type itself.
 The set of bare-number properties is frozen by the test. Adding one means adding
 it to that list, which is the point: it forces the question "what unit is this
 in?" to be answered in review rather than after release.
+
+A percentage that is a share of a whole uses `BoundedPercentType`, which enforces
+0 to 100. `PercentType` is unbounded, and is for quantities that can legitimately
+leave that range, such as apparent attenuation.
 
 If a quantity needs a unit that does not exist yet, add the unit type to
 `measureable_units.json` rather than embedding the unit in the property name.

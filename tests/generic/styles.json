@@ -49,6 +49,54 @@
             "value": 1
           }
         }
+      },
+      {
+        "name": "Dry Mead",
+        "category": "Traditional Mead",
+        "category_id": "M1",
+        "style_letter": "A",
+        "style_guide": "BJCP",
+        "type": "mead",
+        "original_gravity": {
+          "minimum": {
+            "unit": "sg",
+            "value": 1
+          },
+          "maximum": {
+            "unit": "sg",
+            "value": 1
+          }
+        },
+        "final_gravity": {
+          "minimum": {
+            "unit": "sg",
+            "value": 1
+          },
+          "maximum": {
+            "unit": "sg",
+            "value": 1
+          }
+        },
+        "international_bitterness_units": {
+          "minimum": {
+            "unit": "IBUs",
+            "value": 1
+          },
+          "maximum": {
+            "unit": "IBUs",
+            "value": 1
+          }
+        },
+        "color": {
+          "minimum": {
+            "unit": "SRM",
+            "value": 1
+          },
+          "maximum": {
+            "unit": "SRM",
+            "value": 1
+          }
+        }
       }
     ]
   }

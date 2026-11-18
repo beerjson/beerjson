@@ -1,6 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/style.json",
+  "x-version": "3.0",
   "type": "object",
   "additionalProperties": false,
   "$defs": {
@@ -16,16 +17,20 @@
           "description": "Name of the category the style belongs to in its style guide.",
           "type": "string"
         },
+        "category_id": {
+          "description": "Identifier of the category the style belongs to in its style guide. This is a string because not every identifier is a number: BJCP uses 3 for Czech Lager, but M1 to M4 for meads and C1 and C2 for ciders.",
+          "type": "string",
+          "minLength": 1
+        },
         "category_number": {
-          "description": "Number of the category the style belongs to in its style guide.",
+          "deprecated": true,
+          "description": "Number of the category the style belongs to in its style guide, which cannot represent an identifier such as M1. Kept so existing documents stay valid. Write category_id instead; readers should accept either and prefer category_id when both are present.",
           "type": "integer"
         },
         "style_letter": {
-          "description": "The letter identifying the style within its category, as BJCP guidelines use.",
+          "description": "The upper case letter, or one or two digit number, identifying the style within its category, such as the B of BJCP style 3B. Omit it if the style has none.",
           "type": "string",
-          "maxLength": 1,
-          "minLength": 1,
-          "pattern": "[A-Z ]"
+          "pattern": "^([A-Z]|[0-9]{1,2})$"
         },
         "style_guide": {
           "description": "The style guide the style is defined by, such as BJCP 2021 or Brewers Association 2017.",
