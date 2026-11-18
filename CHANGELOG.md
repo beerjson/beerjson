@@ -14,128 +14,7 @@ than entries written at the time.
 
 ## [Unreleased]
 
-### Added
-
-- **Every property and every type in the format now has a description**, which
-  completes the documentation work tracked by
-  [#89](https://github.com/beerjson/beerjson/issues/89). 121 properties and 42
-  types had none, so the published reference showed blank cells and
-  "_no description yet_" against roughly a third of the format, and the
-  generated TypeScript and Flow declarations carried no explanatory text at all.
-  Under 2020-12 these strings also reach validators, which draft-07 ignored when
-  they sat next to a `$ref`.
-
-  Descriptions say what a value means and, where it is not obvious, what it is
-  measured relative to or which unit it is in. Two ambiguities the format has
-  but does not resolve are named rather than papered over:
-  `RecipeType.calories_per_pint` does not say which pint, and `TasteType.rating`
-  does not define a scale.
-
-- **The conventions test enforces descriptions outright**, replacing the
-  per-file budget: a property or type without one fails, and so does a
-  description that is present but blank.
-
-- **[ADR-0005](adr/0005-ingredient-base-record-and-addition.md) records what the
-  three-way ingredient split is for**, raised in review of
-  [#245](https://github.com/beerjson/beerjson/pull/245) by the author of
-  Brewtarget's BeerJSON support, who had to guess it when implementing. A
-  **Base** identifies the ingredient and carries the measurements a recipe must
-  have to calculate with it, which is why `FermentableBase` requires `yield` and
-  `color` and `HopVarietyBase` requires `alpha_acid`. A **catalogue record**
-  (`FermentableType`, `VarietyInformation`, `MiscellaneousType`,
-  `CultureInformation`) adds everything a supplier or lab publishes. An
-  **addition** adds how much, when, and anything measured at the time of use.
-
-  The twelve type descriptions involved now say this instead of the previous
-  "provides unique properties to identify individual records" and "collects the
-  attributes to store as record information", neither of which told an
-  implementer which one to write.
-
-  The ADR also recommends what Brewtarget already does: emit the full catalogue
-  record for every ingredient a recipe references, alongside the recipe, so the
-  document stands on its own. This needs no schema change, since the document
-  root already accepts ingredient lists next to `recipes`.
-
-- **`HopAdditionType` is closed to unknown keys**, taking the count to 10 of 13.
-  It was the one type blocked purely on the question ADR-0005 answers.
-  `generic/recipes.json` put a hop's `type`, `notes`, `substitutes`, `inventory`
-  and `oil_content` on the additions themselves; those records moved to a
-  `hop_varieties` list at the document root, so the fixture now demonstrates the
-  recommended pattern rather than contradicting it.
-
-- **Tests for what the BeerXML importer means**, not only that its output is
-  valid: every BeerXML USE value is pinned to the BeerJSON timing it produces.
-  Ten of them fail against the previous importer. A second set checks timing
-  rules across every document under `tests/` that JSON Schema cannot express:
-  a `step` must exist, and a `time` cannot exceed its step or the boil.
-- **A release now attaches its packed tarball to the GitHub release**, so a
-  release can be pinned and installed by URL without going through the
-  registry. The README documents installing from the tarball or the git tag.
-
-### Changed
-
-- **Prettier 3.9.10**, from 1.14.2. Prettier 3 made `format()` asynchronous,
-  which broke the test that writes the converted BeerXML fixtures and is why
-  Dependabot's upgrade could not pass on its own. That test now writes them with
-  `JSON.stringify`, which produces byte-identical output, so the test suite no
-  longer depends on prettier at all. `.prettierrc` sets `trailingComma` and
-  `arrowParens` to prettier 1's defaults, so the upgrade reformats two source
-  files and restyles nothing.
-
-### Fixed
-
-- **116 properties still had no description of their own.** The conventions
-  test exempted any property whose definition was a `$ref`, on the theory that
-  it inherited the referenced type's description. But that type only says what
-  kind of value it is: `half` was documented as "a percentage", every water ion
-  as "a concentration", every step temperature as "a temperature". Under
-  2020-12 a description beside a `$ref` is read by validators as well as
-  generators, so the exemption had no justification. All 116 are now described,
-  and the test no longer exempts `$ref` properties.
-- **`OilContentType` said every member was a percentage of total oil.** Three
-  are not oils: `cohumulone` is a percentage of total alpha acids, and
-  `polyphenols` and `xanthohumol` are percentages of hop weight. It also
-  promised thiols, which nothing represents. The type and its members now say
-  what each is measured against. Where they belong is
-  [#256](https://github.com/beerjson/beerjson/issues/256).
-- **Four descriptions were wrong**: `glassy` described crystal malt starch
-  rather than kernel hardness
-  ([#262](https://github.com/beerjson/beerjson/issues/262));
-  `grain_absorption_rate` gave 0.125 qt/lb as 1.04 L/kg, which is 0.125 gal/lb
-  ([#263](https://github.com/beerjson/beerjson/issues/263)); `Cal/(g C)` reads
-  as kilocalories but its values are small calories, and `specific_heat`
-  hardcoded a unit its own `unit` field chooses
-  ([#264](https://github.com/beerjson/beerjson/issues/264)); and `duration`
-  contradicted `time` for boil additions
-  ([#266](https://github.com/beerjson/beerjson/issues/266)).
-- **The BeerXML importer put BeerXML's TIME in the wrong field for every use
-  except the boil** ([#268](https://github.com/beerjson/beerjson/issues/268)).
-  BeerXML's TIME means the boil time for Boil and First Wort, the steep time for
-  Aroma, and how long the ingredient stays in for Mash, Dry Hop, Primary,
-  Secondary and Bottling. Every case was written to `time`, which for a boil
-  addition counts back from the end of the boil, so a 20 minute whirlpool hop
-  became a 20 minute boil addition and inflated calculated bitterness, and a
-  7 day dry hop became one added 7 days into fermentation. Aroma is now `time` 0
-  plus `duration`, and the stay-in uses are `duration`. A missing TIME no longer
-  produces a `null` time. First Wort still cannot be placed in a pre-boil step
-  until [#271](https://github.com/beerjson/beerjson/issues/271) settles how boil
-  steps are classified.
-- **Two example documents described impossible timings**
-  ([#267](https://github.com/beerjson/beerjson/issues/267)).
-  `FirstWortHopAddition.json` put first wort hops 15 and 30 minutes before the
-  end of a 10 minute step, and `CheaterHops.json` pointed two dry hops at a
-  fermentation step in a recipe with no fermentation procedure.
-
-- **`EquipmentType.equipment_items` had `"description": ""`**, which reads as
-  documented to any tooling checking for the key's presence while rendering as
-  an empty cell in the reference.
-
-- **Two errors in `generic/recipes.json`'s hop data**, surfaced by moving it to a
-  catalogue record: the `oil_content` compounds were bare numbers where the
-  schema requires `PercentType`, and `inventory` used a bucket per hop form where
-  `HopInventoryType` has a single `amount`.
-
-## [3.0.0] - 2026-09-23
+## [3.0.0] - 2026-11-06
 
 **Format version 3.0.** The first release since October 2021: everything below
 had accumulated on `main` without reaching consumers.
@@ -183,6 +62,13 @@ signals on both numbers.
 - **`DensityUnitType` removed** from `measureable_units.json`
   ([#234](https://github.com/beerjson/beerjson/pull/234)). It duplicated
   `GravityUnitType` and no type referenced it, so no document could have used it.
+- **Prettier 3.9.10**, from 1.14.2. Prettier 3 made `format()` asynchronous,
+  which broke the test that writes the converted BeerXML fixtures and is why
+  Dependabot's upgrade could not pass on its own. That test now writes them with
+  `JSON.stringify`, which produces byte-identical output, so the test suite no
+  longer depends on prettier at all. `.prettierrc` sets `trailingComma` and
+  `arrowParens` to prettier 1's defaults, so the upgrade reformats two source
+  files and restyles nothing.
 
 ### Added
 
@@ -228,14 +114,62 @@ signals on both numbers.
 - **Deprecations are visible in the generated output.** The markdown reference
   marks a deprecated property, and the TypeScript and Flow declarations emit
   `@deprecated`, so an editor strikes it through at the point of use.
-- **Nine of the thirteen `allOf`-composed types now reject unknown keys**, via
+- **Ten of the thirteen `allOf`-composed types now reject unknown keys**, via
   2020-12's `unevaluatedProperties`: `CultureInformation`,
   `CultureAdditionType`, `EquipmentItemType`, `FermentableType`,
-  `FermentableAdditionType`, `VarietyInformation`, `MiscellaneousType`,
-  `MiscellaneousAdditionType` and `WaterType`. A misspelled key in any of them
-  was previously accepted and silently discarded, and draft-07 offered no way to
-  catch it. `HopAdditionType`, `WaterAdditionType`, `StyleType` and
+  `FermentableAdditionType`, `HopAdditionType`, `VarietyInformation`,
+  `MiscellaneousType`, `MiscellaneousAdditionType` and `WaterType`. A misspelled
+  key in any of them was previously accepted and silently discarded, and
+  draft-07 offered no way to catch it. `WaterAdditionType`, `StyleType` and
   `RecipeStyleType` remain open pending format questions.
+- **Every property and every type in the format now has a description**, which
+  completes the documentation work tracked by
+  [#89](https://github.com/beerjson/beerjson/issues/89). In 1.0.2, 238 of 336
+  properties and 44 of 90 types had none, so the published reference showed
+  blank cells and "_no description yet_" against most of the format, and the
+  generated TypeScript and Flow declarations carried no explanatory text at all.
+  A property defined by a `$ref` has its own description too: the referenced
+  type says what kind of value it is ("a percentage", "a concentration"), and
+  only the property can say what it measures. Under 2020-12 validators read a
+  description beside a `$ref`, which draft-07 ignored.
+
+  Descriptions say what a value means and, where it is not obvious, what it is
+  measured relative to or which unit it is in. Two ambiguities the format has
+  but does not resolve are named rather than papered over:
+  `RecipeType.calories_per_pint` does not say which pint, and `TasteType.rating`
+  does not define a scale. The conventions test fails on a property or type
+  without a description, or with a blank one.
+
+- **[ADR-0005](adr/0005-ingredient-base-record-and-addition.md) records what the
+  three-way ingredient split is for**, raised in review of
+  [#245](https://github.com/beerjson/beerjson/pull/245) by the author of
+  Brewtarget's BeerJSON support, who had to guess it when implementing. A
+  **Base** identifies the ingredient and carries the measurements a recipe must
+  have to calculate with it, which is why `FermentableBase` requires `yield` and
+  `color` and `HopVarietyBase` requires `alpha_acid`. A **catalogue record**
+  (`FermentableType`, `VarietyInformation`, `MiscellaneousType`,
+  `CultureInformation`) adds everything a supplier or lab publishes. An
+  **addition** adds how much, when, and anything measured at the time of use.
+
+  The twelve type descriptions involved now say this instead of the previous
+  "provides unique properties to identify individual records" and "collects the
+  attributes to store as record information", neither of which told an
+  implementer which one to write.
+
+  The ADR also recommends what Brewtarget already does: emit the full catalogue
+  record for every ingredient a recipe references, alongside the recipe, so the
+  document stands on its own. This needs no schema change, since the document
+  root already accepts ingredient lists next to `recipes`, and
+  `generic/recipes.json` now follows it.
+
+- **Tests for what the BeerXML importer means**, not only that its output is
+  valid: every BeerXML USE value is pinned to the BeerJSON timing it produces.
+  Ten of them fail against the previous importer. A second set checks timing
+  rules across every document under `tests/` that JSON Schema cannot express:
+  a `step` must exist, and a `time` cannot exceed its step or the boil.
+- **A release now attaches its packed tarball to the GitHub release**, so a
+  release can be pinned and installed by URL without going through the
+  registry. The README documents installing from the tarball or the git tag.
 
 ### Fixed
 
@@ -254,6 +188,18 @@ signals on both numbers.
   additions. `USE` is now mapped to `timing.use`, so the six dry hop additions
   in the fixtures convert to `add_to_fermentation`. Same fix for miscellaneous
   additions.
+- **The BeerXML importer put BeerXML's TIME in the wrong field for every use
+  except the boil** ([#268](https://github.com/beerjson/beerjson/issues/268)).
+  BeerXML's TIME means the boil time for Boil and First Wort, the steep time for
+  Aroma, and how long the ingredient stays in for Mash, Dry Hop, Primary,
+  Secondary and Bottling. Every case was written to `time`, which for a boil
+  addition counts back from the end of the boil, so a 20 minute whirlpool hop
+  became a 20 minute boil addition and inflated calculated bitterness, and a
+  7 day dry hop became one added 7 days into fermentation. Aroma is now `time` 0
+  plus `duration`, and the stay-in uses are `duration`. A missing TIME no longer
+  produces a `null` time. First Wort still cannot be placed in a pre-boil step
+  until [#271](https://github.com/beerjson/beerjson/issues/271) settles how boil
+  steps are classified.
 - **The BeerXML importer emitted three more keys the format does not have**:
   `supplier` on fermentable additions (the schema calls it `producer`),
   `add_after_boil` (now a `timing` of `add_to_fermentation`), and `use` on
@@ -290,6 +236,34 @@ signals on both numbers.
   2 MB of style guide fixtures, the BeerXML `xsd/` reference and the generators.
   A `files` allowlist brings it to 28 files and 120 kB: the schemas, the
   declarations, the validator and the changelog.
+- **`OilContentType` said every member was a percentage of total oil.** Three
+  are not oils: `cohumulone` is a percentage of total alpha acids, and
+  `polyphenols` and `xanthohumol` are percentages of hop weight. It also
+  promised thiols, which nothing represents. The type and its members now say
+  what each is measured against. Where they belong is
+  [#256](https://github.com/beerjson/beerjson/issues/256).
+- **Four descriptions were wrong**: `glassy` described crystal malt starch
+  rather than kernel hardness
+  ([#262](https://github.com/beerjson/beerjson/issues/262));
+  `grain_absorption_rate` gave 0.125 qt/lb as 1.04 L/kg, which is 0.125 gal/lb
+  ([#263](https://github.com/beerjson/beerjson/issues/263)); `Cal/(g C)` reads
+  as kilocalories but its values are small calories, and `specific_heat`
+  hardcoded a unit its own `unit` field chooses
+  ([#264](https://github.com/beerjson/beerjson/issues/264)); and `duration`
+  contradicted `time` for boil additions
+  ([#266](https://github.com/beerjson/beerjson/issues/266)).
+- **Two example documents described impossible timings**
+  ([#267](https://github.com/beerjson/beerjson/issues/267)).
+  `FirstWortHopAddition.json` put first wort hops 15 and 30 minutes before the
+  end of a 10 minute step, and `CheaterHops.json` pointed two dry hops at a
+  fermentation step in a recipe with no fermentation procedure.
+- **`EquipmentType.equipment_items` had `"description": ""`**, which reads as
+  documented to any tooling checking for the key's presence while rendering as
+  an empty cell in the reference.
+- **Two errors in `generic/recipes.json`'s hop data**, surfaced by moving it to a
+  catalogue record: the `oil_content` compounds were bare numbers where the
+  schema requires `PercentType`, and `inventory` used a bucket per hop form where
+  `HopInventoryType` has a single `amount`.
 
 ## [1.0.2] - 2021-10-12
 

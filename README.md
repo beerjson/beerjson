@@ -85,8 +85,8 @@ npm run gen-docs
 
 ## Version
 
-This branch contains the BeerJSON 1.0 specification. Released changes are
-recorded in [CHANGELOG.md](CHANGELOG.md).
+`main` holds BeerJSON format version 3.0, published as `@beerjson/beerjson`
+3.0.0. Released changes are recorded in [CHANGELOG.md](CHANGELOG.md).
 
 The schemas are [JSON Schema 2020-12](adr/0002-json-schema-2020-12.md), so a
 validator supporting that draft is required.
@@ -123,8 +123,8 @@ To pin an exact release without going through the registry, install the tarball
 attached to it, or the git tag directly:
 
 ```bash
-npm install https://github.com/beerjson/beerjson/releases/download/v1.1.0/beerjson-beerjson-1.1.0.tgz
-npm install github:beerjson/beerjson#v1.1.0
+npm install https://github.com/beerjson/beerjson/releases/download/v3.0.0/beerjson-beerjson-3.0.0.tgz
+npm install github:beerjson/beerjson#v3.0.0
 ```
 
 Both give the same package contents as the published one. The schemas themselves
