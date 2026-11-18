@@ -42,3 +42,4 @@ exists. A Proposed ADR is not a decision and nothing should be built on it.
 | [0004](0004-format-version-numbering.md)            | Format version numbering                                                    | Accepted |
 | [0005](0005-ingredient-base-record-and-addition.md) | How an ingredient is split between identity, catalogue record, and addition | Accepted |
 | [0006](0006-referencing-elements-by-id.md)          | Referencing recipe elements by identifier                                   | Proposed |
+| [0007](0007-schema-version-annotation.md)           | Record the format version in each schema file                               | Accepted |

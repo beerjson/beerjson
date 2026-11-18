@@ -1,6 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/fermentable.json",
+  "x-version": "3.0",
   "type": "object",
   "additionalProperties": false,
   "$defs": {
@@ -83,7 +84,7 @@
             },
             "moisture": {
               "description": "The moisture content of the fermentable, as a percentage by weight.",
-              "$ref": "measureable_units.json#/$defs/PercentType"
+              "$ref": "measureable_units.json#/$defs/BoundedPercentType"
             },
             "alpha_amylase": {
               "description": "Where diastatic power gives the total amount of all enzymes, alpha amylase, also known as dextrinizing units, refers to only the total amount of alpa amylase in the malted grain. A value of 25-50 is desirable for base malt.",
@@ -95,15 +96,15 @@
             },
             "protein": {
               "description": "The percentage of protein. Higher values may indicate a possibility of haze, or lautering issues.",
-              "$ref": "measureable_units.json#/$defs/PercentType"
+              "$ref": "measureable_units.json#/$defs/BoundedPercentType"
             },
             "kolbach_index": {
               "description": "The Kolbach Index, also known as soluble to total ratio of nitrogen or protein, is used to indicate the degree of malt modification. A value above 35% is desired for simple single infusion mashing, undermodified malt may require multiple step mashes or decoction.",
-              "$ref": "measureable_units.json#/$defs/PercentType"
+              "$ref": "measureable_units.json#/$defs/BoundedPercentType"
             },
             "max_in_batch": {
               "description": "The recommended maximum percentage by weight that this ingredient should represent in a batch.",
-              "$ref": "measureable_units.json#/$defs/PercentType"
+              "$ref": "measureable_units.json#/$defs/BoundedPercentType"
             },
             "recommend_mash": {
               "description": "True if the fermentable is recommended to be mashed, false if it can be steeped.",
@@ -115,30 +116,30 @@
             },
             "glassy": {
               "description": "The percentage of kernels that are glassy (vitreous), with a mostly hard endosperm, which generally indicates poor modification. glassy, half and mealy together make 100%.",
-              "$ref": "measureable_units.json#/$defs/PercentType"
+              "$ref": "measureable_units.json#/$defs/BoundedPercentType"
             },
             "plump": {
               "description": "The percentage of grain retained on sieves with gaps of 7/64 inch and 6/64 inch, desired values of 80% or higher which indicate plump kernels.",
-              "$ref": "measureable_units.json#/$defs/PercentType"
+              "$ref": "measureable_units.json#/$defs/BoundedPercentType"
             },
             "half": {
               "description": "The percentage of kernels that are half-glassy, with a partly hard endosperm. glassy, half and mealy together make 100%.",
-              "$ref": "measureable_units.json#/$defs/PercentType"
+              "$ref": "measureable_units.json#/$defs/BoundedPercentType"
             },
             "mealy": {
               "description": "The opposite of glassy, a mealy kernel is one that is not glassy. Base malt should be at least 90%, single step mashes generally require 95% or higher.",
-              "$ref": "measureable_units.json#/$defs/PercentType"
+              "$ref": "measureable_units.json#/$defs/BoundedPercentType"
             },
             "thru": {
               "description": "The Percentage of grain that makes it through a thin mesh screen, typically 5/64 inch. Values less than 3% are desired.",
-              "$ref": "measureable_units.json#/$defs/PercentType"
+              "$ref": "measureable_units.json#/$defs/BoundedPercentType"
             },
             "friability": {
               "description": "Friability is the measure of a malts ability to crumble during the crush, and is used as an indicator for easy gelatinization of the grain and starches, as well as modification of the malt. Value of 85% of higher indicates a well modified malt and is suitable for single step mashes. Lower values may require a step mash.",
-              "$ref": "measureable_units.json#/$defs/PercentType"
+              "$ref": "measureable_units.json#/$defs/BoundedPercentType"
             },
             "di_ph": {
-              "description": "The pH of the resultant wort for 1 lb of grain mashed in 1 gallon of distilled water. Used in many water chemistry / mash pH prediction software.",
+              "description": "The distilled water mash pH of the malt, as stated on the maltster's malt analysis sheet, where it is usually given as wort pH. Record the figure as published, whatever laboratory method it came from. Used in many water chemistry / mash pH prediction software.",
               "$ref": "measureable_units.json#/$defs/AcidityType"
             },
             "viscosity": {
@@ -199,17 +200,33 @@
     },
     "YieldType": {
       "type": "object",
-      "description": "The potential yield of the fermentable ingredient, supporting SG, or percentage. eg 1.037 or 80% are valid yield types.",
-      "minProperties": 1,
+      "description": "The potential yield of the fermentable ingredient, supporting SG, or percentage. eg 1.037 or 80% are valid yield types. At least one of fine_grind, coarse_grind or potential is required, since fine_coarse_difference alone gives nothing to calculate with.",
       "additionalProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "fine_grind"
+          ]
+        },
+        {
+          "required": [
+            "coarse_grind"
+          ]
+        },
+        {
+          "required": [
+            "potential"
+          ]
+        }
+      ],
       "properties": {
         "fine_grind": {
           "description": "Percentage yield, compared to sucrose, of a fine grind. eg 80%",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         },
         "coarse_grind": {
           "description": "Percentage yield, compared to sucrose, of a coarse grind. eg 78%",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         },
         "fine_coarse_difference": {
           "description": "The difference between fine and coarse grind, a difference more than 2 percent can indicate a protein or step mash may be desirable. eg 2%.",

@@ -10,8 +10,9 @@ The descriptive base type for both style guideline records, and recipe style pro
 |--|--|--|--|
 | **name** | ✅ | string| Name of the style. |
 | **category** | ✅ | string| Name of the category the style belongs to in its style guide. |
-| **category_number** |  | integer| Number of the category the style belongs to in its style guide. |
-| **style_letter** |  | RegExp pattern: `[A-Z ]`| The letter identifying the style within its category, as BJCP guidelines use. |
+| **category_id** |  | string| Identifier of the category the style belongs to in its style guide. This is a string because not every identifier is a number: BJCP uses 3 for Czech Lager, but M1 to M4 for meads and C1 and C2 for ciders. |
+| **category_number** |  | integer| ⚠️ **Deprecated.** Number of the category the style belongs to in its style guide, which cannot represent an identifier such as M1. Kept so existing documents stay valid. Write category_id instead; readers should accept either and prefer category_id when both are present. |
+| **style_letter** |  | RegExp pattern: `^([A-Z]\|[0-9]{1,2})$`| The upper case letter, or one or two digit number, identifying the style within its category, such as the B of BJCP style 3B. Omit it if the style has none. |
 | **style_guide** | ✅ | string| The style guide the style is defined by, such as BJCP 2021 or Brewers Association 2017. |
 | **type** | ✅ | [StyleCategories](#stylecategories)| The kind of beverage the style describes. |
 

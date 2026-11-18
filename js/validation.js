@@ -4,6 +4,9 @@
 const Ajv = require('ajv/dist/2020')
 // allErrors so a caller sees every problem in a document, not just the first.
 const ajv = new Ajv({ allErrors: true })
+// Annotation only (see ADR-0007), but ajv's strict mode rejects keywords it has
+// not been told about.
+ajv.addKeyword('x-version')
 ajv.addSchema(require('../json/fermentation'))
 ajv.addSchema(require('../json/fermentation_step'))
 ajv.addSchema(require('../json/fermentable'))

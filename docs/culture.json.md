@@ -23,7 +23,7 @@ The full catalogue record for a culture: `CultureBase` plus the behaviour a lab 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **temperature_range** |  | [TemperatureRangeType](measureable_units.json.md#temperaturerangetype)| The recommended temperature range of fermentation by the culture producer. |
-| **alcohol_tolerance** |  | [PercentType](measureable_units.json.md#percenttype)| The recommended limit of abv by the culture producer before attenuation stops. |
+| **alcohol_tolerance** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| The recommended limit of abv by the culture producer before attenuation stops. |
 | **flocculation** |  | [QualitativeRangeType](measureable_units.json.md#qualitativerangetype)| Flocculation refers to the ability of a culture to aggregate into large flocs which drop out of suspension. |
 | **attenuation_range** |  | [PercentRangeType](measureable_units.json.md#percentrangetype)| The range of apparent attenuation the culture typically achieves. |
 | **notes** |  | string| Free text notes about the culture. |

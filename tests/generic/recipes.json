@@ -57,6 +57,10 @@
     "recipes": [
       {
         "name": "my recipe",
+        "energy_content": {
+          "unit": "kcal/100ml",
+          "value": 43
+        },
         "type": "all grain",
         "author": "me",
         "batch_size": {

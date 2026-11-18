@@ -153,7 +153,10 @@ require('@beerjson/beerjson/json/hop.json')
 ```
 
 Register every schema under its filename so that cross-file `$ref`s such as
-`measureable_units.json#/$defs/VolumeType` resolve.
+`measureable_units.json#/$defs/VolumeType` resolve. Each schema records the
+format version it belongs to in an `x-version` annotation. Validators ignore
+unknown keywords by default, but one running in a strict mode needs telling
+about it, for example `ajv.addKeyword('x-version')`.
 
 TypeScript declarations are included, no `@types` package needed:
 

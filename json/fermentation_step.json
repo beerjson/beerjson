@@ -1,6 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/fermentation_step.json",
+  "x-version": "3.0",
   "type": "object",
   "additionalProperties": false,
   "$defs": {
@@ -54,7 +55,7 @@
           "type": "string"
         },
         "vessel_pressure": {
-          "description": "Vessel pressure indicates the pressure applied within the fermentation vessel.",
+          "description": "The gauge pressure, meaning the pressure above atmospheric, at which the fermentation vessel is to be held during the step, for example by a spunding valve or regulator. It is a target for the step rather than a measured value. If absent, the vessel is vented to the atmosphere or the pressure is not known.",
           "$ref": "measureable_units.json#/$defs/PressureType"
         }
       },

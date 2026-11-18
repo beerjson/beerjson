@@ -1,6 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/recipe.json",
+  "x-version": "3.0",
   "type": "object",
   "additionalProperties": false,
   "$defs": {
@@ -74,7 +75,7 @@
         },
         "alcohol_by_volume": {
           "description": "The alcohol content of the finished beer, by volume.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         },
         "ibu_estimate": {
           "description": "The estimated bitterness of the finished beer together with the IBU formula used to calculate it. If the formula is modified in any way, e.g. to support whirlpool/flameout additions, please use `Other` for transparency.",
@@ -112,8 +113,13 @@
           "description": "Used to store subjective tasting notes, and rating.",
           "$ref": "#/$defs/TasteType"
         },
+        "energy_content": {
+          "description": "The estimated energy content of the finished beer, as used in nutritional labelling, typically derived from its original and final gravity.",
+          "$ref": "measureable_units.json#/$defs/EnergyPerVolumeType"
+        },
         "calories_per_pint": {
-          "description": "The estimated energy content of the finished beer, derived from its original and final gravity, in kilocalories (dietary Calories) per pint. Which pint is not specified.",
+          "deprecated": true,
+          "description": "The estimated energy content of the finished beer, in kilocalories (dietary Calories) per pint, without saying whether that is a US or an imperial pint. Kept so existing documents stay valid. Write energy_content instead; readers should accept either and prefer energy_content when both are present.",
           "type": "number"
         }
       },
@@ -133,19 +139,19 @@
       "properties": {
         "conversion": {
           "description": "The percentage of sugar from the grain yield that is extracted and converted during the mash.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         },
         "lauter": {
           "description": "The percentage of sugar that makes it from the mash tun to the kettle.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         },
         "mash": {
           "description": "The percentage of sugar that makes it from the grain to the kettle.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         },
         "brewhouse": {
           "description": "The percentage of sugar that makes it from the grain to the fermenter.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         }
       },
       "required": [
@@ -208,7 +214,9 @@
         },
         "rating": {
           "description": "A score for the finished beer between 0 and 50, corresponding to the 50 point BJCP rating system.",
-          "type": "number"
+          "type": "number",
+          "minimum": 0,
+          "maximum": 50
         }
       },
       "required": [

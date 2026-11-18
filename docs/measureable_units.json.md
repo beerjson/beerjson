@@ -68,14 +68,14 @@ An acidity, as a magnitude and its unit.
 
 ## TimeType 
 
-A duration, as a magnitude and its unit.
+A duration, as a magnitude and its unit. The magnitude may be fractional, such as 3.5 min.
 
 **TimeType** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [TimeUnitType](#timeunittype)| The unit the value is expressed in. |
-| **value** | ✅ | integer| The magnitude of the measurement. Its unit is given by the sibling unit property. |
+| **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## ColorType 
 
@@ -152,6 +152,17 @@ Specific volume is the inverse of density, with units of volume over mass, ie qt
 |Name|Required|Type|Description|
 |--|--|--|--|
 | **unit** | ✅ | [SpecificVolumeUnitType](#specificvolumeunittype)| The unit the value is expressed in. |
+| **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
+
+## EnergyPerVolumeType 
+
+An energy content per volume of beer, as a magnitude and its unit.
+
+**EnergyPerVolumeType** is an object with these properties:
+
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **unit** | ✅ | [EnergyPerVolumeUnitType](#energypervolumeunittype)| The unit the value is expressed in. |
 | **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
 
 ## UnitType 
@@ -312,19 +323,35 @@ Units in which specific heat may be expressed. Despite its capital C, `Cal/(g C)
 Units in which a specific volume may be expressed.
 
 `"qt/lb"`<br/>`"gal/lb"`<br/>`"gal/oz"`<br/>`"l/g"`<br/>`"l/kg"`<br/>`"floz/oz"`<br/>`"m^3/kg"`<br/>`"ft^3/lb"`
+## EnergyPerVolumeUnitType 
+
+Units in which an energy content per volume may be expressed. kcal is the kilocalorie (dietary Calorie). pt is the US pint of 16 US fluid ounces, ipt the imperial pint, and floz the US fluid ounce. kcal/100ml and kJ/100ml are the units of EU nutritional labelling.
+
+`"kcal/l"`<br/>`"kcal/50cl"`<br/>`"kcal/33cl"`<br/>`"kcal/25cl"`<br/>`"kcal/100ml"`<br/>`"kcal/pt"`<br/>`"kcal/12floz"`<br/>`"kcal/ipt"`<br/>`"kJ/100ml"`
 ## UnitUnitType 
 
-Units in which a countable or dimensionless quantity may be expressed.
+Units in which a count of items may be expressed. Write each, which counts whatever the ingredient is: apples, cinnamon sticks, yeast packets. The values 1, unit, dimensionless and pkg are deprecated synonyms of each, kept so existing documents stay valid; readers should treat all five alike.
 
 `"1"`<br/>`"unit"`<br/>`"each"`<br/>`"dimensionless"`<br/>`"pkg"`
 ## DateType 
 
-A date, as ISO 8601 YYYY-MM-DD, optionally with a time as YYYY-MM-DDThh:mm:ss.
+A date, as ISO 8601 YYYY-MM-DD, optionally with a time as YYYY-MM-DDThh:mm:ss. The time may have fractional seconds and may end in Z or a UTC offset such as +01:00; without either it is a local time. The pattern checks that the month, day and time are in range, but not that the day exists in that month.
 
-RegExp pattern: `\d{4}-\d{2}-\d{2}|\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}`
+RegExp pattern: `^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])(T([01]\d|2[0-3]):[0-5]\d:([0-5]\d|60)(\.\d+)?(Z|[+-]([01]\d|2[0-3]):[0-5]\d)?)?$`
+## BoundedPercentType 
+
+A percentage that is a share of a whole, so cannot be below 0 or above 100, as a magnitude and its unit.
+
+**BoundedPercentType** is an object with these properties:
+
+|Name|Required|Type|Description|
+|--|--|--|--|
+| **unit** | ✅ | [PercentUnitType](#percentunittype)| The unit the value is expressed in. |
+| **value** | ✅ | number| The magnitude of the measurement. Its unit is given by the sibling unit property. |
+
 ## PercentType 
 
-A percentage, as a magnitude and its unit.
+A percentage, as a magnitude and its unit, for a quantity that can legitimately fall outside 0 to 100, such as apparent attenuation, which exceeds 100 when the final gravity is below 1.000. Use BoundedPercentType for a share of a whole.
 
 **PercentType** is an object with these properties:
 

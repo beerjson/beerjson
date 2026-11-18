@@ -24,8 +24,9 @@ format version it implements. The format continues the `2.0x` sequence that
 documents in the wild already carry, and the package's `PATCH` is reserved for
 package-only changes. See [ADR-0004](adr/0004-format-version-numbering.md).
 
-No document that was valid before becomes invalid, including documents declaring
-`2.01` or `2.06`. Implementations do have work to do, which is what the major
+Documents valid against 1.0.2 stay valid, including those declaring `2.01` or
+`2.06`, unless they hit one of the tightenings listed under Breaking.
+Implementations do have work to do, which is what the major
 signals on both numbers.
 
 > **Upgrade notes**
@@ -40,7 +41,34 @@ signals on both numbers.
 >   is what the schema always called it, and `DensityUnitType` is gone. Neither
 >   described anything the schema contained.
 > - **Anyone writing documents**: write `"version": 3.0`. Documents declaring
->   `2.01` or `2.06` remain valid.
+>   `2.01` or `2.06` remain valid, subject to the tightenings under Breaking.
+> - **Validators in a strict mode** must be told about the `x-version` keyword,
+>   for example `ajv.addKeyword('x-version')`.
+
+### Breaking
+
+- **`DateType` is anchored** ([#283](https://github.com/beerjson/beerjson/issues/283)). `junk2026-11-09junk` and `2026-13-45` no
+  longer validate. Time zones and fractional seconds, which passed only because
+  the pattern was unanchored, are now allowed deliberately.
+- **`YieldType` needs something to calculate with** ([#284](https://github.com/beerjson/beerjson/issues/284)): at least one of
+  `fine_grind`, `coarse_grind` or `potential`.
+- **`style_letter` no longer accepts a space** ([#286](https://github.com/beerjson/beerjson/issues/286)). Omit it instead.
+- **`TasteType.rating` must be between 0 and 50** ([#287](https://github.com/beerjson/beerjson/issues/287)), as its description
+  always said.
+- **Shares of a whole must be between 0 and 100** ([#289](https://github.com/beerjson/beerjson/issues/289)), through the new
+  `BoundedPercentType`: acids and oils on hops, malt analysis figures, grind
+  yields, alcohol by volume, alcohol tolerance and the four efficiencies.
+  `PercentType` stays unbounded for attenuation, fermentability,
+  `fine_coarse_difference` and the percentage ranges.
+
+### Deprecated
+
+- **`StyleBase.category_number`, for `category_id`** ([#286](https://github.com/beerjson/beerjson/issues/286)), a string, because
+  BJCP's mead and cider categories are M1 to M4 and C1 and C2.
+- **`RecipeType.calories_per_pint`, for `energy_content`** ([#289](https://github.com/beerjson/beerjson/issues/289)), which has
+  a unit, so says which pint.
+- **The `UnitUnitType` values `1`, `unit`, `dimensionless` and `pkg`, for `each`**
+  ([#289](https://github.com/beerjson/beerjson/issues/289)). They had no stated difference. They still validate.
 
 ### Changed
 
@@ -70,8 +98,18 @@ signals on both numbers.
   `arrowParens` to prettier 1's defaults, so the upgrade reformats two source
   files and restyles nothing.
 
+- **`di_ph` now describes the figure on a malt analysis sheet** ([#288](https://github.com/beerjson/beerjson/issues/288)),
+  rather than a laboratory method maltsters do not use.
+- **`vessel_pressure` is defined as a gauge pressure and a target** ([#289](https://github.com/beerjson/beerjson/issues/289)).
+
 ### Added
 
+- **Every schema file records its format version** in an `x-version` annotation
+  ([#282](https://github.com/beerjson/beerjson/issues/282), [ADR-0007](adr/0007-schema-version-annotation.md)).
+- **`TimeType.value` may be fractional** ([#285](https://github.com/beerjson/beerjson/issues/285)), so 3.5 min no longer has to
+  be written as 210 sec.
+- **`style_letter` accepts a one or two digit number** ([#286](https://github.com/beerjson/beerjson/issues/286)), for style
+  guides that number their subcategories.
 - **`ibu_estimate` on recipes**
   ([#237](https://github.com/beerjson/beerjson/pull/237)). `IBUEstimateType`
   now carries a `value` alongside its estimation method, so a recipe can record

@@ -1,6 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/hop.json",
+  "x-version": "3.0",
   "type": "object",
   "additionalProperties": false,
   "$defs": {
@@ -42,11 +43,11 @@
         },
         "alpha_acid": {
           "description": "The alpha acid content of the hop, as a percentage by weight. Alpha acids are the main source of bitterness.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         },
         "beta_acid": {
           "description": "The beta acid content of the hop, as a percentage by weight.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         }
       },
       "required": [
@@ -83,7 +84,7 @@
             },
             "percent_lost": {
               "description": "The percentage of hop alpha acid lost in six months of storage, also known as the Hop Stability Index.",
-              "$ref": "measureable_units.json#/$defs/PercentType"
+              "$ref": "measureable_units.json#/$defs/BoundedPercentType"
             },
             "substitutes": {
               "description": "Other varieties that can be used in place of this one.",
@@ -170,55 +171,55 @@
         },
         "humulene": {
           "description": "Humulene, as a percentage of total hop oil.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         },
         "caryophyllene": {
           "description": "Caryophyllene, as a percentage of total hop oil.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         },
         "cohumulone": {
           "description": "Cohumulone, as a percentage of total alpha acids. Unlike the other members it is an alpha acid, not an oil.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         },
         "myrcene": {
           "description": "Myrcene, as a percentage of total hop oil.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         },
         "farnesene": {
           "description": "Farnesene, as a percentage of total hop oil.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         },
         "geraniol": {
           "description": "Geraniol, as a percentage of total hop oil.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         },
         "b_pinene": {
           "description": "Beta-pinene, as a percentage of total hop oil.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         },
         "linalool": {
           "description": "Linalool, as a percentage of total hop oil.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         },
         "limonene": {
           "description": "Limonene, as a percentage of total hop oil.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         },
         "nerol": {
           "description": "Nerol, as a percentage of total hop oil.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         },
         "pinene": {
           "description": "Alpha-pinene, as a percentage of total hop oil. Beta-pinene is recorded separately as b_pinene.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         },
         "polyphenols": {
           "description": "Polyphenols, as a percentage of hop weight. Unlike the oils, not measured relative to total oil.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         },
         "xanthohumol": {
           "description": "Xanthohumol, as a percentage of hop weight. Unlike the oils, not measured relative to total oil.",
-          "$ref": "measureable_units.json#/$defs/PercentType"
+          "$ref": "measureable_units.json#/$defs/BoundedPercentType"
         }
       }
     },

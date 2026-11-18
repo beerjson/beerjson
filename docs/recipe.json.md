@@ -21,7 +21,7 @@ RecipeType composes the information stored in a beerjson recipe.
 | **notes** |  | string| Free text notes about the recipe. |
 | **original_gravity** |  | [GravityType](measureable_units.json.md#gravitytype)| The gravity of wort when transferred to the fermenter. |
 | **final_gravity** |  | [GravityType](measureable_units.json.md#gravitytype)| The gravity of beer at the end of fermentation. |
-| **alcohol_by_volume** |  | [PercentType](measureable_units.json.md#percenttype)| The alcohol content of the finished beer, by volume. |
+| **alcohol_by_volume** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| The alcohol content of the finished beer, by volume. |
 | **ibu_estimate** |  | [IBUEstimateType](hop.json.md#ibuestimatetype)| The estimated bitterness of the finished beer together with the IBU formula used to calculate it. If the formula is modified in any way, e.g. to support whirlpool/flameout additions, please use `Other` for transparency. |
 | **color_estimate** |  | [ColorType](measureable_units.json.md#colortype)| The color of the finished beer, using SRM or EBC. |
 | **beer_pH** |  | [AcidityType](measureable_units.json.md#aciditytype)| The final beer pH at the end of fermentation. |
@@ -31,7 +31,8 @@ RecipeType composes the information stored in a beerjson recipe.
 | **packaging** |  | [PackagingProcedureType](packaging.json.md#packagingproceduretype)| Describes the procedure for packaging your beverage. |
 | **boil** |  | [BoilProcedureType](boil.json.md#boilproceduretype)| Defines the procedure for performing a boil. A boil procedure with no steps is the same as a standard single step boil. |
 | **taste** |  | [TasteType](#tastetype)| Used to store subjective tasting notes, and rating. |
-| **calories_per_pint** |  | number| The estimated energy content of the finished beer, derived from its original and final gravity, in kilocalories (dietary Calories) per pint. Which pint is not specified. |
+| **energy_content** |  | [EnergyPerVolumeType](measureable_units.json.md#energypervolumetype)| The estimated energy content of the finished beer, as used in nutritional labelling, typically derived from its original and final gravity. |
+| **calories_per_pint** |  | number| ⚠️ **Deprecated.** The estimated energy content of the finished beer, in kilocalories (dietary Calories) per pint, without saying whether that is a US or an imperial pint. Kept so existing documents stay valid. Write energy_content instead; readers should accept either and prefer energy_content when both are present. |
 
 ## EfficiencyType 
 
@@ -41,10 +42,10 @@ The efficiencyType stores each efficiency component.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **conversion** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of sugar from the grain yield that is extracted and converted during the mash. |
-| **lauter** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of sugar that makes it from the mash tun to the kettle. |
-| **mash** |  | [PercentType](measureable_units.json.md#percenttype)| The percentage of sugar that makes it from the grain to the kettle. |
-| **brewhouse** | ✅ | [PercentType](measureable_units.json.md#percenttype)| The percentage of sugar that makes it from the grain to the fermenter. |
+| **conversion** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| The percentage of sugar from the grain yield that is extracted and converted during the mash. |
+| **lauter** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| The percentage of sugar that makes it from the mash tun to the kettle. |
+| **mash** |  | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| The percentage of sugar that makes it from the grain to the kettle. |
+| **brewhouse** | ✅ | [BoundedPercentType](measureable_units.json.md#boundedpercenttype)| The percentage of sugar that makes it from the grain to the fermenter. |
 
 ## IngredientsType 
 

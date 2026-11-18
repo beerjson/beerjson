@@ -61,7 +61,7 @@ declare namespace BeerJSON {
 
   export type CultureInformation = CultureBase & {
     temperature_range?: TemperatureRangeType
-    alcohol_tolerance?: PercentType
+    alcohol_tolerance?: BoundedPercentType
     flocculation?: QualitativeRangeType
     attenuation_range?: PercentRangeType
     notes?: string
@@ -153,20 +153,20 @@ declare namespace BeerJSON {
 
   export type FermentableType = FermentableBase & {
     notes?: string
-    moisture?: PercentType
+    moisture?: BoundedPercentType
     alpha_amylase?: number
     diastatic_power?: DiastaticPowerType
-    protein?: PercentType
-    kolbach_index?: PercentType
-    max_in_batch?: PercentType
+    protein?: BoundedPercentType
+    kolbach_index?: BoundedPercentType
+    max_in_batch?: BoundedPercentType
     recommend_mash?: boolean
     inventory?: FermentableInventoryType
-    glassy?: PercentType
-    plump?: PercentType
-    half?: PercentType
-    mealy?: PercentType
-    thru?: PercentType
-    friability?: PercentType
+    glassy?: BoundedPercentType
+    plump?: BoundedPercentType
+    half?: BoundedPercentType
+    mealy?: BoundedPercentType
+    thru?: BoundedPercentType
+    friability?: BoundedPercentType
     di_ph?: AcidityType
     viscosity?: ViscosityType
     dms_p?: ConcentrationType
@@ -181,8 +181,8 @@ declare namespace BeerJSON {
   }
 
   export type YieldType = {
-    fine_grind?: PercentType
-    coarse_grind?: PercentType
+    fine_grind?: BoundedPercentType
+    coarse_grind?: BoundedPercentType
     fine_coarse_difference?: PercentType
     potential?: GravityType
   }
@@ -220,8 +220,8 @@ declare namespace BeerJSON {
     origin?: string
     year?: string
     form?: 'extract' | 'leaf' | 'leaf (wet)' | 'pellet' | 'powder' | 'plug'
-    alpha_acid: PercentType
-    beta_acid?: PercentType
+    alpha_acid: BoundedPercentType
+    beta_acid?: BoundedPercentType
   }
 
   export type VarietyInformation = HopVarietyBase & {
@@ -234,7 +234,7 @@ declare namespace BeerJSON {
       | 'aroma/flavor'
       | 'aroma/bittering/flavor'
     notes?: string
-    percent_lost?: PercentType
+    percent_lost?: BoundedPercentType
     substitutes?: string
     oil_content?: OilContentType
     inventory?: HopInventoryType
@@ -253,19 +253,19 @@ declare namespace BeerJSON {
   export type IBUMethodType = 'Rager' | 'Tinseth' | 'Garetz' | 'Other'
   export type OilContentType = {
     total_oil_ml_per_100g?: number
-    humulene?: PercentType
-    caryophyllene?: PercentType
-    cohumulone?: PercentType
-    myrcene?: PercentType
-    farnesene?: PercentType
-    geraniol?: PercentType
-    b_pinene?: PercentType
-    linalool?: PercentType
-    limonene?: PercentType
-    nerol?: PercentType
-    pinene?: PercentType
-    polyphenols?: PercentType
-    xanthohumol?: PercentType
+    humulene?: BoundedPercentType
+    caryophyllene?: BoundedPercentType
+    cohumulone?: BoundedPercentType
+    myrcene?: BoundedPercentType
+    farnesene?: BoundedPercentType
+    geraniol?: BoundedPercentType
+    b_pinene?: BoundedPercentType
+    linalool?: BoundedPercentType
+    limonene?: BoundedPercentType
+    nerol?: BoundedPercentType
+    pinene?: BoundedPercentType
+    polyphenols?: BoundedPercentType
+    xanthohumol?: BoundedPercentType
   }
 
   export type HopInventoryType = {
@@ -371,6 +371,11 @@ declare namespace BeerJSON {
     value: number
   }
 
+  export type EnergyPerVolumeType = {
+    unit: EnergyPerVolumeUnitType
+    value: number
+  }
+
   export type UnitType = {
     unit: UnitUnitType
     value: number
@@ -448,8 +453,23 @@ declare namespace BeerJSON {
     | 'floz/oz'
     | 'm^3/kg'
     | 'ft^3/lb'
+  export type EnergyPerVolumeUnitType =
+    | 'kcal/l'
+    | 'kcal/50cl'
+    | 'kcal/33cl'
+    | 'kcal/25cl'
+    | 'kcal/100ml'
+    | 'kcal/pt'
+    | 'kcal/12floz'
+    | 'kcal/ipt'
+    | 'kJ/100ml'
   export type UnitUnitType = '1' | 'unit' | 'each' | 'dimensionless' | 'pkg'
   export type DateType = string
+  export type BoundedPercentType = {
+    unit: PercentUnitType
+    value: number
+  }
+
   export type PercentType = {
     unit: PercentUnitType
     value: number
@@ -568,7 +588,7 @@ declare namespace BeerJSON {
     notes?: string
     original_gravity?: GravityType
     final_gravity?: GravityType
-    alcohol_by_volume?: PercentType
+    alcohol_by_volume?: BoundedPercentType
     ibu_estimate?: IBUEstimateType
     color_estimate?: ColorType
     beer_pH?: AcidityType
@@ -578,14 +598,16 @@ declare namespace BeerJSON {
     packaging?: PackagingProcedureType
     boil?: BoilProcedureType
     taste?: TasteType
+    energy_content?: EnergyPerVolumeType
+    /** @deprecated */
     calories_per_pint?: number
   }
 
   export type EfficiencyType = {
-    conversion?: PercentType
-    lauter?: PercentType
-    mash?: PercentType
-    brewhouse: PercentType
+    conversion?: BoundedPercentType
+    lauter?: BoundedPercentType
+    mash?: BoundedPercentType
+    brewhouse: BoundedPercentType
   }
 
   export type IngredientsType = {
@@ -604,6 +626,8 @@ declare namespace BeerJSON {
   export type StyleBase = {
     name: string
     category: string
+    category_id?: string
+    /** @deprecated */
     category_number?: number
     style_letter?: string
     style_guide: string

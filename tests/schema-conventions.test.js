@@ -8,6 +8,7 @@
  */
 const fs = require('fs')
 const path = require('path')
+const { CURRENT_VERSION } = require('../js/format-version')
 
 const JSON_DIR = path.join(__dirname, '..', 'json')
 
@@ -79,6 +80,13 @@ describe('file structure', () => {
       )
     }
   )
+
+  // ADR-0007: every file says which format version it belongs to, and that
+  // cannot drift from the versions VersionType accepts.
+  test.each(files)('%s declares the current format version', file => {
+    expect(schemas[file]['x-version']).toMatch(/^\d+\.\d+$/)
+    expect(Number(schemas[file]['x-version'])).toBe(CURRENT_VERSION)
+  })
 
   test('only beer.json declares root properties', () => {
     const withRoot = files.filter(f => schemas[f].properties)
@@ -312,10 +320,12 @@ describe('measurements', () => {
       // `unit` property, which is the whole point of these types.
       'measureable_units.json#AcidityType.value',
       'measureable_units.json#BitternessType.value',
+      'measureable_units.json#BoundedPercentType.value',
       'measureable_units.json#CarbonationType.value',
       'measureable_units.json#ColorType.value',
       'measureable_units.json#ConcentrationType.value',
       'measureable_units.json#DiastaticPowerType.value',
+      'measureable_units.json#EnergyPerVolumeType.value',
       'measureable_units.json#GravityType.value',
       'measureable_units.json#MassType.value',
       'measureable_units.json#PercentType.value',

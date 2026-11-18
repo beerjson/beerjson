@@ -19,5 +19,5 @@ FermentationStepType - a per step representation of a fermentation action.
 | **start_ph** |  | [AcidityType](measureable_units.json.md#aciditytype)| The pH of the beer at the start of the step. |
 | **end_ph** |  | [AcidityType](measureable_units.json.md#aciditytype)| The pH of the beer at the end of the step. |
 | **vessel** |  | string| Name of the vessel the step takes place in, which is how a transfer between vessels is recorded. |
-| **vessel_pressure** |  | [PressureType](measureable_units.json.md#pressuretype)| Vessel pressure indicates the pressure applied within the fermentation vessel. |
+| **vessel_pressure** |  | [PressureType](measureable_units.json.md#pressuretype)| The gauge pressure, meaning the pressure above atmospheric, at which the fermentation vessel is to be held during the step, for example by a spunding valve or regulator. It is a target for the step rather than a measured value. If absent, the vessel is vented to the atmosphere or the pressure is not known. |
 
