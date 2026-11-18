@@ -1,5 +1,5 @@
 [![Build Status](https://github.com/beerjson/beerjson/workflows/BeerJSON%20tests/badge.svg)](https://github.com/beerjson/beerjson/actions)
-[![Join the chat at https://gitter.im/beerjson/beerjson](https://badges.gitter.im/beerjson/beerjson.svg)](https://gitter.im/beerjson/beerjson?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Discussions](https://img.shields.io/github/discussions/beerjson/beerjson)](https://github.com/beerjson/beerjson/discussions)
 
 # Welcome to the BeerJSON repository
 
@@ -33,34 +33,43 @@ specification. It is based on yet unfinished
 
 - Explicit support for fermenting under pressure.
 
+## Software supporting BeerJSON
+
+Applications and libraries that read or write BeerJSON are listed on the
+[wiki](https://github.com/beerjson/beerjson/wiki/Software-supporting-BeerJSON).
+To add one that is missing, open an
+[issue](https://github.com/beerjson/beerjson/issues) or a
+[discussion](https://github.com/beerjson/beerjson/discussions).
+
 ## Structure of the repository
 
-- Current development is done in the Master branch.
-- Each published version has its own branch or tag
-- Changes are proposed by creating a
-  [pull request](https://github.com/beerjson/beerjson/pulls) that should be
-  reviewed by members of working group.
-- Issues, questions and suggestions should be posted to
-  [Issues](https://github.com/beerjson/beerjson/issues)
+| Path     | Contents                                                                                              |
+| -------- | ----------------------------------------------------------------------------------------------------- |
+| `json/`  | The JSON Schema files. This is the specification.                                                     |
+| `docs/`  | Generated reference, published to [beerjson.github.io/beerjson](https://beerjson.github.io/beerjson/) |
+| `types/` | Generated TypeScript and Flow declarations                                                            |
+| `js/`    | Documentation and type generators, validator, BeerXML importer                                        |
+| `tests/` | Sample documents validated against the schemas in CI                                                  |
+| `xsd/`   | BeerXML 1.0 schemas, kept for reference by the importer                                               |
+| `adr/`   | [Architecture Decision Records](adr/) for format decisions                                            |
+
+Current development happens on `main`. Each published version has a tag.
+`docs/` and `types/` are generated from `json/` and are never edited by hand.
 
 ## CI and tests
 
-For safe manipulations with json schemas, we have set of tests in the tests
-folder. We check that json is valid for serializations and json is valid
-according to the beerjson schema. To run tests do following steps after repo
-fork or clone
+The test suite validates every document under `tests/` against the schemas,
+converts the BeerXML fixtures and validates the result, checks the generators
+against snapshots, and enforces the authoring conventions in
+[SCHEMA_STYLE.md](SCHEMA_STYLE.md).
 
 ```bash
-yarn
-yarn test
-```
-
-or
-
-```bash
-npm i
+npm ci
 npm test
 ```
+
+The project targets Node's active and maintenance LTS lines. CI runs the suite
+on **Node 22 and 24**; a version is dropped once it goes end-of-life.
 
 ## Documentation
 
@@ -76,20 +85,82 @@ npm run gen-docs
 
 ## Version
 
-This brunch contains BeerJSON 1.0 specification.
+This branch contains the BeerJSON 1.0 specification. Released changes are
+recorded in [CHANGELOG.md](CHANGELOG.md).
+
+The schemas are [JSON Schema 2020-12](adr/0002-json-schema-2020-12.md), so a
+validator supporting that draft is required.
 
 ## How to contribute
 
-- If you have an issue or question related to the schema -
-  [submit an issue](https://github.com/beerjson/beerjson/issues)
-- To propose a schema change
-  [submit a pull request](https://github.com/beerjson/beerjson/pulls).
-  [Learn more about pull requests](https://help.github.com/articles/about-pull-requests/).
-  Note that one of the benefits of using json schemas is a possibility to use
-  tests and CI. Please ensure that tests are green before submitting a pull
-  request. And all new entities in the json schema are covered.
-- To chat with others, join our [discussions](https://github.com/beerjson/beerjson/discussions)
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide. In short:
+
+- **A question, or an idea that is not yet a concrete proposal**: start a
+  [discussion](https://github.com/beerjson/beerjson/discussions)
+- **A schema change**: open an
+  [issue](https://github.com/beerjson/beerjson/issues/new/choose) with the
+  schema change template first, so the working group can weigh it before code
+  is written
+- **A bug in the schemas, docs, types, or tooling**: open an issue
+- **A pull request**: follow [SCHEMA_STYLE.md](SCHEMA_STYLE.md) for anything
+  under `json/`, run `npm run gen-docs`, keep the tests green, and add a
+  `CHANGELOG.md` entry
+
+Participation is governed by our [Code of Conduct](CODE_OF_CONDUCT.md).
+Security reports go through the [security policy](.github/SECURITY.md) rather
+than a public issue.
 
 ## NPM package
 
-NPM package available at [@beerjson/beerjson](https://www.npmjs.com/package/@beerjson/beerjson).
+The schemas, the generated TypeScript and Flow declarations, and a validator are
+published as [@beerjson/beerjson](https://www.npmjs.com/package/@beerjson/beerjson).
+
+```bash
+npm install @beerjson/beerjson
+```
+
+To pin an exact release without going through the registry, install the tarball
+attached to it, or the git tag directly:
+
+```bash
+npm install https://github.com/beerjson/beerjson/releases/download/v1.1.0/beerjson-beerjson-1.1.0.tgz
+npm install github:beerjson/beerjson#v1.1.0
+```
+
+Both give the same package contents as the published one. The schemas themselves
+need no package manager at all: each carries a `$id` under
+`raw.githubusercontent.com/beerjson/beerjson/main/json/`, and a git submodule of
+this repository works well if you want them pinned and offline.
+
+```js
+const beerjson = require('@beerjson/beerjson')
+
+const { valid, errors } = beerjson.validate(document)
+// errors: [{ path: '/beerjson/hop_varieties/0', message: "must have required property 'name'", params: {...} }]
+```
+
+`validate` accepts a parsed document or a JSON string, and reports every error
+rather than stopping at the first.
+
+To drive your own validator, the schemas are exported as a map and are also
+importable individually:
+
+```js
+beerjson.schemas['hop.json']
+beerjson.rootSchema // beer.json, the document entry point
+
+require('@beerjson/beerjson/json/hop.json')
+```
+
+Register every schema under its filename so that cross-file `$ref`s such as
+`measureable_units.json#/$defs/VolumeType` resolve.
+
+TypeScript declarations are included, no `@types` package needed:
+
+```ts
+const recipe: BeerJSON.RecipeType = {
+  name: 'Pale Ale',
+  type: 'all grain'
+  // ...
+}
+```

@@ -1,23 +1,27 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/misc.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/misc.json",
   "type": "object",
   "additionalProperties": false,
-  "definitions": {
+  "$defs": {
     "MiscellaneousBase": {
       "type": "object",
-      "description": "MiscellaneousBase provides unique properties to identify individual records of ingredients that are neither hops, nor provide a contribution to the gravity of wort.",
+      "description": "Identifies an ingredient that is neither a hop nor a contributor to the gravity of the wort. Nothing is calculated from it, so it carries identity alone. `MiscellaneousType` extends it into a full catalogue record, and `MiscellaneousAdditionType` extends it with an amount and a timing.",
       "properties": {
         "name": {
+          "description": "Name of the ingredient.",
           "type": "string"
         },
         "producer": {
+          "description": "The company that produced the ingredient.",
           "type": "string"
         },
         "product_id": {
+          "description": "The producer's catalogue number for the ingredient.",
           "type": "string"
         },
         "type": {
+          "description": "The kind of ingredient, which indicates what it is used for.",
           "type": "string",
           "enum": [
             "spice",
@@ -37,10 +41,11 @@
     },
     "MiscellaneousType": {
       "type": "object",
-      "description": "MiscellaneousType collects the attributes of an ingredient to store as record information.",
+      "description": "The full catalogue record for a miscellaneous ingredient: `MiscellaneousBase` plus what it is used for and what is in stock. This is the form used in the `miscellaneous_ingredients` list at the document root.",
+      "unevaluatedProperties": false,
       "allOf": [
         {
-          "$ref": "#/definitions/MiscellaneousBase"
+          "$ref": "#/$defs/MiscellaneousBase"
         },
         {
           "properties": {
@@ -49,10 +54,12 @@
               "type": "string"
             },
             "notes": {
+              "description": "Free text notes about the ingredient.",
               "type": "string"
             },
             "inventory": {
-              "$ref": "#/definitions/MiscellaneousInventoryType"
+              "description": "The quantity of the ingredient held in stock.",
+              "$ref": "#/$defs/MiscellaneousInventoryType"
             }
           }
         }
@@ -60,27 +67,29 @@
     },
     "MiscellaneousAdditionType": {
       "type": "object",
-      "description": "MiscellaneousAdditionType collects the attributes of each miscellaneous ingredient for use in a recipe.",
+      "description": "A miscellaneous ingredient as used in a recipe: `MiscellaneousBase` plus how much and when. Catalogue detail belongs in a `MiscellaneousType` record at the document root, not here.",
+      "unevaluatedProperties": false,
       "allOf": [
         {
-          "$ref": "#/definitions/MiscellaneousBase"
+          "$ref": "#/$defs/MiscellaneousBase"
         },
         {
           "properties": {
             "timing": {
               "description": "The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step.",
-              "$ref": "timing.json#/definitions/TimingType"
+              "$ref": "timing.json#/$defs/TimingType"
             },
             "amount": {
+              "description": "The quantity added: by mass, by volume, or by unit for a countable item such as a tablet.",
               "oneOf": [
                 {
-                  "$ref": "measureable_units.json#/definitions/VolumeType"
+                  "$ref": "measureable_units.json#/$defs/VolumeType"
                 },
                 {
-                  "$ref": "measureable_units.json#/definitions/MassType"
+                  "$ref": "measureable_units.json#/$defs/MassType"
                 },
                 {
-                  "$ref": "measureable_units.json#/definitions/UnitType"
+                  "$ref": "measureable_units.json#/$defs/UnitType"
                 }
               ]
             }
@@ -94,19 +103,21 @@
       ]
     },
     "MiscellaneousInventoryType": {
+      "description": "The quantity of a miscellaneous ingredient held in stock.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "amount": {
+          "description": "The quantity held in stock: by mass, by volume, or by unit for a countable item.",
           "oneOf": [
             {
-              "$ref": "measureable_units.json#/definitions/VolumeType"
+              "$ref": "measureable_units.json#/$defs/VolumeType"
             },
             {
-              "$ref": "measureable_units.json#/definitions/MassType"
+              "$ref": "measureable_units.json#/$defs/MassType"
             },
             {
-              "$ref": "measureable_units.json#/definitions/UnitType"
+              "$ref": "measureable_units.json#/$defs/UnitType"
             }
           ]
         }

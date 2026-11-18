@@ -9,7 +9,9 @@ const {
   lowerCase
 } = require('lodash')
 
-const parseBool = s => s === 'TRUE'
+const { CURRENT_VERSION } = require('./format-version')
+
+const parseBool = s => String(s).toUpperCase() === 'TRUE'
 const getArrayNode = node =>
   Array.from(isNil(node) ? [] : Array.isArray(node) ? node : [node])
 
@@ -28,6 +30,40 @@ const getFermentableType = type =>
   ].indexOf(type) == -1
     ? 'other'
     : type
+
+// BeerXML records when an ingredient is added as a free-text USE on the
+// ingredient; BeerJSON records it as `timing.use`. Values not listed here (and
+// a missing USE) fall back to the boil, which is where BeerXML puts an
+// unqualified addition.
+const USE_TO_TIMING = {
+  boil: 'add_to_boil',
+  'first wort': 'add_to_boil',
+  aroma: 'add_to_boil',
+  mash: 'add_to_mash',
+  'dry hop': 'add_to_fermentation',
+  primary: 'add_to_fermentation',
+  secondary: 'add_to_fermentation',
+  bottling: 'add_to_package'
+}
+
+// BeerXML's TIME means something different for each USE:
+// - Boil and First Wort: the boil time, which is BeerJSON's `time` for a boil
+//   addition (measured back from the end of the boil).
+// - Aroma: the steep time after the boil ends, so `time` 0 plus `duration`.
+// - Mash, Dry Hop, Primary, Secondary, Bottling: how long the ingredient stays
+//   in, which is BeerJSON's `duration`. BeerXML does not say when it goes in.
+// First Wort cannot yet be placed in a pre-boil step: see issue #271.
+const timing = (use, time) => {
+  const key = lowerCase(use)
+  const target = USE_TO_TIMING[key] || 'add_to_boil'
+  if (isNil(time) || String(time).trim() === '') return { use: target }
+  const minutes = { unit: 'min', value: Number(time) }
+  if (key === 'aroma') {
+    return { time: { unit: 'min', value: 0 }, duration: minutes, use: target }
+  }
+  if (target === 'add_to_boil') return { time: minutes, use: target }
+  return { duration: minutes, use: target }
+}
 
 const potential = y => (y * 0.46) / 1000 + 1
 const mash_steps = r =>
@@ -118,7 +154,6 @@ const miscellaneous_additions = r =>
   map(getArrayNode(get(r, ['MISCS', 'MISC'])), misc => ({
     name: misc['NAME'],
     type: lowerCase(misc['TYPE']),
-    use: lowerCase(misc['USE']),
     ...(!isEmpty(misc['AMOUNT_IS_WEIGHT']) &&
     parseBool(misc['AMOUNT_IS_WEIGHT'])
       ? {
@@ -138,13 +173,7 @@ const miscellaneous_additions = r =>
           }
         }
       : {}),
-    timing: {
-      time: {
-        unit: 'min',
-        value: Number(misc['TIME'])
-      },
-      use: 'add_to_boil'
-    }
+    timing: timing(misc['USE'], misc['TIME'])
   }))
 
 const hop_bill = r =>
@@ -164,18 +193,11 @@ const hop_bill = r =>
           }
         }
       : {}),
-    ...(!isEmpty(hop['USE']) ? { use: lowerCase(hop['USE']) } : {}),
     amount: {
       unit: 'kg',
       value: Number(hop['AMOUNT'])
     },
-    timing: {
-      time: {
-        unit: 'min',
-        value: Number(hop['TIME'])
-      },
-      use: 'add_to_boil'
-    }
+    timing: timing(hop['USE'], hop['TIME'])
   }))
 
 const fermentable_bill = r =>
@@ -191,7 +213,7 @@ const fermentable_bill = r =>
       value: Number(fermentable['AMOUNT'])
     },
     origin: fermentable['ORIGIN'],
-    supplier: fermentable['SUPPLIER'],
+    producer: fermentable['SUPPLIER'],
     grain_group: 'base',
     yield: {
       potential: {
@@ -199,9 +221,13 @@ const fermentable_bill = r =>
         value: potential(Number(fermentable['YIELD']))
       }
     },
-    ...(!isEmpty(fermentable['ADD_AFTER_BOIL'])
+    // BeerXML's ADD_AFTER_BOIL boolean has no direct BeerJSON equivalent; a
+    // fermentable added after the boil is one added to the fermentation.
+    ...(parseBool(fermentable['ADD_AFTER_BOIL'])
       ? {
-          add_after_boil: parseBool(fermentable['ADD_AFTER_BOIL'])
+          timing: {
+            use: 'add_to_fermentation'
+          }
         }
       : {})
   }))
@@ -377,7 +403,7 @@ const importFromBeerXml = xml => {
 
     const beerJSON = {
       beerjson: {
-        version: 2.06,
+        version: CURRENT_VERSION,
         recipes: [recipe]
       }
     }

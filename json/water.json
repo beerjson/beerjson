@@ -1,54 +1,73 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/water.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/water.json",
   "type": "object",
   "additionalProperties": false,
-  "definitions": {
+  "$defs": {
     "WaterBase": {
       "type": "object",
       "description": "WaterBase provides unique properties to identify individual records of  brewing water.",
       "properties": {
         "name": {
+          "description": "Name of the water profile.",
           "type": "string"
         },
         "producer": {
+          "description": "The utility or source the profile describes.",
           "type": "string"
         },
         "calcium": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "description": "The concentration of calcium (Ca) in the water.",
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "bicarbonate": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "description": "The concentration of bicarbonate (HCO3) in the water.",
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "carbonate": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "description": "The concentration of carbonate (CO3) in the water.",
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "potassium": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "description": "The concentration of potassium (K) in the water.",
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "iron": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "description": "The concentration of iron (Fe) in the water.",
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "nitrate": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "description": "The concentration of nitrate (NO3) in the water.",
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "nitrite": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "description": "The concentration of nitrite (NO2) in the water.",
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
+        },
+        "fluoride": {
+          "description": "The concentration of fluoride in the water.",
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "flouride": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "deprecated": true,
+          "description": "Misspelling of fluoride, kept so existing documents stay valid. Write fluoride instead; readers should accept either and prefer fluoride when both are present.",
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "sulfate": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "description": "The concentration of sulfate (SO4) in the water.",
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "chloride": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "description": "The concentration of chloride (Cl) in the water.",
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "sodium": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "description": "The concentration of sodium (Na) in the water.",
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         },
         "magnesium": {
-          "$ref": "measureable_units.json#/definitions/ConcentrationType"
+          "description": "The concentration of magnesium (Mg) in the water.",
+          "$ref": "measureable_units.json#/$defs/ConcentrationType"
         }
       },
       "required": [
@@ -64,16 +83,19 @@
     "WaterType": {
       "type": "object",
       "description": "WaterType collects the attributes of a brewing water to store as record information",
+      "unevaluatedProperties": false,
       "allOf": [
         {
-          "$ref": "#/definitions/WaterBase"
+          "$ref": "#/$defs/WaterBase"
         },
         {
           "properties": {
             "pH": {
+              "description": "The pH of the water.",
               "type": "number"
             },
             "notes": {
+              "description": "Free text notes about the water profile.",
               "type": "string"
             }
           }
@@ -85,12 +107,13 @@
       "description": "WaterAdditionType collects the attributes of each water addition for use in a recipe",
       "allOf": [
         {
-          "$ref": "#/definitions/WaterBase"
+          "$ref": "#/$defs/WaterBase"
         },
         {
           "properties": {
             "amount": {
-              "$ref": "measureable_units.json#/definitions/VolumeType"
+              "description": "The volume of this water used in the recipe.",
+              "$ref": "measureable_units.json#/$defs/VolumeType"
             }
           }
         }

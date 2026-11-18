@@ -17,10 +17,10 @@ ${formattedDef}
 ${str}`
       : '',
   formatEnum: enumValues =>
-    enumValues.reduce(
-      (str, val) => (str ? str + `<br/>\`"${val}"\`` : `\`"${val}"\``),
-      ''
-    ),
+    enumValues.reduce((str, val) => {
+      const rendered = typeof val === 'number' ? `\`${val}\`` : `\`"${val}"\``
+      return str ? str + `<br/>${rendered}` : rendered
+    }, ''),
   formatArray: (ref, formattedType) => `array of ${formattedType}`,
 
   formatOneOf: (str, formattedRef) =>
@@ -48,8 +48,14 @@ ${str}`
   formatNestedType: propType =>
     '❌ Cannot generate document for a nested type! ' + propType.type,
 
-  formatPropDefinition: (propName, required, formattedPropType, description) =>
+  formatPropDefinition: (
+    propName,
+    required,
+    formattedPropType,
+    description,
+    deprecated
+  ) =>
     `| **${propName}** | ${required ? '✅' : ''} | ${formattedPropType}| ${
-      description ? description : ''
-    } |\n`
+      deprecated ? '⚠️ **Deprecated.** ' : ''
+    }${description ? description : ''} |\n`
 }

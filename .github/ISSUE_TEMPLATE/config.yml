@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Question or idea
+    url: https://github.com/beerjson/beerjson/discussions
+    about: Ask how something is meant to be represented, or float an idea that is not yet a concrete proposal.
+  - name: Documentation
+    url: https://beerjson.github.io/beerjson/
+    about: The generated reference for every type and property.
+  - name: Security vulnerability
+    url: https://github.com/beerjson/beerjson/security/advisories/new
+    about: Report privately rather than in a public issue.

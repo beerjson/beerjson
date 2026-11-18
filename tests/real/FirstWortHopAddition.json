@@ -1,6 +1,6 @@
 {
   "beerjson": {
-    "version": 2.06,
+    "version": 3,
     "recipes": [
       {
         "name": "First Wort Hop Addition",
@@ -57,7 +57,7 @@
               "timing": {
                 "time": {
                   "unit": "min",
-                  "value": 15
+                  "value": 10
                 },
                 "use": "add_to_boil",
                 "step": 1
@@ -81,7 +81,7 @@
               "timing": {
                 "time": {
                   "unit": "min",
-                  "value": 30
+                  "value": 10
                 },
                 "use": "add_to_boil",
                 "step": 1

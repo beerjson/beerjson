@@ -4,7 +4,7 @@ const rootSchema = require('../json/beer.json')
 test('simple schema converted to flow', () => {
   expect(
     convert({
-      definitions: {
+      $defs: {
         ObjType: {
           type: 'object',
           properties: {
@@ -29,7 +29,7 @@ test('simple schema converted to flow', () => {
 test('enum format', () => {
   expect(
     convert({
-      definitions: {
+      $defs: {
         EnumType: {
           type: 'object',
           properties: {
@@ -48,7 +48,7 @@ test('root schema type', () => {
 test('regexp pattern should be rendered as str', () => {
   expect(
     convert({
-      definitions: {
+      $defs: {
         patternType: {
           type: 'string',
           pattern:
@@ -62,30 +62,30 @@ test('regexp pattern should be rendered as str', () => {
 test('required allOf property', () => {
   expect(
     convert({
-      definitions: {
+      $defs: {
         MiscellaneousAdditionType: {
           type: 'object',
           description:
             'MiscellaneousAdditionType collects the attributes of each miscellaneous ingredient for use in a recipe',
           allOf: [
             {
-              $ref: '#/definitions/MiscellaneousBase'
+              $ref: '#/$defs/MiscellaneousBase'
             },
             {
               properties: {
                 timing: {
-                  $ref: 'timing.json#/definitions/TimingType'
+                  $ref: 'timing.json#/$defs/TimingType'
                 },
                 amount: {
                   oneOf: [
                     {
-                      $ref: 'measureable_units.json#/definitions/VolumeType'
+                      $ref: 'measureable_units.json#/$defs/VolumeType'
                     },
                     {
-                      $ref: 'measureable_units.json#/definitions/MassType'
+                      $ref: 'measureable_units.json#/$defs/MassType'
                     },
                     {
-                      $ref: 'measureable_units.json#/definitions/UnitType'
+                      $ref: 'measureable_units.json#/$defs/UnitType'
                     }
                   ]
                 }

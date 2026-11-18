@@ -1,6 +1,6 @@
 {
   "beerjson": {
-    "version": 2.06,
+    "version": 3,
     "profiles": [
       {
         "name": "metropolis city water",
@@ -36,7 +36,7 @@
                 "unit": "ppm",
                 "value": 0.0
               },
-              "flouride": {
+              "fluoride": {
                 "unit": "ppm",
                 "value": 0.0
               },

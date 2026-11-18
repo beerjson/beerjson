@@ -5,7 +5,7 @@ declare namespace BeerJSON {
     miscellaneous_ingredients?: MiscellaneousType[]
     hop_varieties?: VarietyInformation[]
     cultures?: CultureInformation[]
-    profiles?: WaterBase[]
+    profiles?: WaterType[]
     styles?: StyleType[]
     mashes?: MashProcedureType[]
     fermentations?: FermentationProcedureType[]
@@ -52,6 +52,7 @@ declare namespace BeerJSON {
       | 'other'
       | 'pedio'
       | 'spontaneous'
+      | 'wheat'
       | 'wine'
     form: 'liquid' | 'dry' | 'slant' | 'culture' | 'dregs'
     producer?: string
@@ -246,6 +247,7 @@ declare namespace BeerJSON {
 
   export type IBUEstimateType = {
     method?: IBUMethodType
+    value?: BitternessType
   }
 
   export type IBUMethodType = 'Rager' | 'Tinseth' | 'Garetz' | 'Other'
@@ -435,7 +437,6 @@ declare namespace BeerJSON {
   export type CarbonationUnitType = 'vols' | 'g/l'
   export type BitternessUnitType = 'IBUs'
   export type GravityUnitType = 'sg' | 'plato' | 'brix'
-  export type DensityUnitType = 'sg' | 'plato' | 'brix'
   export type ConcentrationUnitType = 'ppm' | 'ppb' | 'mg/l'
   export type SpecificHeatUnitType = 'Cal/(g C)' | 'J/(kg K)' | 'BTU/(lb F)'
   export type SpecificVolumeUnitType =
@@ -463,20 +464,14 @@ declare namespace BeerJSON {
     | 'medium high'
     | 'high'
     | 'very high'
-  export type VersionType = number
+  export type VersionType = 2.01 | 2.06 | 3
   export type ViscosityUnitType = 'cP' | 'mPa-s'
   export type MiscellaneousBase = {
     name: string
     producer?: string
     product_id?: string
     type:
-      | 'spice'
-      | 'fining'
-      | 'water agent'
-      | 'herb'
-      | 'flavor'
-      | 'wood'
-      | 'other'
+      'spice' | 'fining' | 'water agent' | 'herb' | 'flavor' | 'wood' | 'other'
   }
 
   export type MiscellaneousType = MiscellaneousBase & {
@@ -502,6 +497,36 @@ declare namespace BeerJSON {
     packaging_vessels?: PackagingVesselType[]
   }
 
+  export type PackagingGraphicType = {
+    position:
+      | 'body front'
+      | 'body back'
+      | 'body wrap around'
+      | 'neck front'
+      | 'neck back'
+      | 'neck wrap around'
+      | 'cap'
+      | 'carrier'
+    type:
+      | 'svg'
+      | 'svgz'
+      | 'ai'
+      | 'cdr'
+      | 'cdx'
+      | 'odg'
+      | 'eps'
+      | 'pdf'
+      | 'png'
+      | 'jpg'
+      | 'gif'
+    base64_data?: string
+    URLS?: string[]
+    dpi?: number
+    width?: number
+    height?: number
+    units?: 'mm' | 'in'
+  }
+
   export type PackagingVesselType = {
     name: string
     type?: 'keg' | 'bottle' | 'cask' | 'tank' | 'firkin' | 'other'
@@ -517,7 +542,7 @@ declare namespace BeerJSON {
     carbonation?: number
     vessel_volume?: VolumeType
     vessel_quantity?: number
-    graphics?: GraphicType[]
+    graphics?: PackagingGraphicType[]
   }
 
   export type RecipeType = {
@@ -605,18 +630,9 @@ declare namespace BeerJSON {
   export type RecipeStyleType = StyleBase
 
   export type StyleCategories =
-    | 'beer'
-    | 'cider'
-    | 'kombucha'
-    | 'mead'
-    | 'other'
-    | 'soda'
-    | 'wine'
+    'beer' | 'cider' | 'kombucha' | 'mead' | 'other' | 'soda' | 'wine'
   export type UseType =
-    | 'add_to_mash'
-    | 'add_to_boil'
-    | 'add_to_fermentation'
-    | 'add_to_package'
+    'add_to_mash' | 'add_to_boil' | 'add_to_fermentation' | 'add_to_package'
   export type TimingType = {
     time?: TimeType
     duration?: TimeType
@@ -637,6 +653,8 @@ declare namespace BeerJSON {
     iron?: ConcentrationType
     nitrate?: ConcentrationType
     nitrite?: ConcentrationType
+    fluoride?: ConcentrationType
+    /** @deprecated */
     flouride?: ConcentrationType
     sulfate: ConcentrationType
     chloride: ConcentrationType
@@ -651,23 +669,5 @@ declare namespace BeerJSON {
 
   export type WaterAdditionType = WaterBase & {
     amount?: VolumeType
-  }
-
-  export type GraphicType = {
-    position:
-      | 'neck front'
-      | 'neck back'
-      | 'neck wrap around'
-      | 'body front'
-      | 'body back'
-      | 'body warp around'
-      | 'cap'
-    type: 'svg' | 'pdf' | 'png' | 'bmp' | 'jpg'
-    base64_data?: string
-    URLS?: Array<string>
-    dpi?: number
-    width?: number
-    height?: number
-    units?: 'mm' | 'in'
   }
 }

@@ -1,29 +1,35 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/hop.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/hop.json",
   "type": "object",
   "additionalProperties": false,
-  "definitions": {
+  "$defs": {
     "HopVarietyBase": {
       "type": "object",
-      "description": "HopVarietyBase provides unique properties to identify individual records of a hop variety.",
+      "description": "Identifies a hop and carries what a recipe must know to calculate with it, which is why `alpha_acid` is required: bitterness cannot be derived without it. `VarietyInformation` extends it into a full catalogue record, and `HopAdditionType` extends it with an amount and a timing.",
       "properties": {
         "name": {
+          "description": "Name of the hop variety.",
           "type": "string"
         },
         "producer": {
+          "description": "The grower or company that supplied the hops.",
           "type": "string"
         },
         "product_id": {
+          "description": "The producer's catalogue or lot number for the hops.",
           "type": "string"
         },
         "origin": {
+          "description": "The country or region the hops were grown in.",
           "type": "string"
         },
         "year": {
+          "description": "The harvest year of the crop.",
           "type": "string"
         },
         "form": {
+          "description": "The physical form the hops are supplied in.",
           "type": "string",
           "enum": [
             "extract",
@@ -35,10 +41,12 @@
           ]
         },
         "alpha_acid": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "description": "The alpha acid content of the hop, as a percentage by weight. Alpha acids are the main source of bitterness.",
+          "$ref": "measureable_units.json#/$defs/PercentType"
         },
         "beta_acid": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "description": "The beta acid content of the hop, as a percentage by weight.",
+          "$ref": "measureable_units.json#/$defs/PercentType"
         }
       },
       "required": [
@@ -48,14 +56,16 @@
     },
     "VarietyInformation": {
       "type": "object",
-      "description": "VarietyInformation collects the attributes of a hop variety to store as record information.",
+      "description": "The full catalogue record for a hop variety: `HopVarietyBase` plus the properties a supplier publishes, such as oil content and substitutes. This is the form used in the `hop_varieties` list at the document root.",
+      "unevaluatedProperties": false,
       "allOf": [
         {
-          "$ref": "#/definitions/HopVarietyBase"
+          "$ref": "#/$defs/HopVarietyBase"
         },
         {
           "properties": {
             "type": {
+              "description": "What the variety is typically used for, given its aroma and bittering character.",
               "type": "string",
               "enum": [
                 "aroma",
@@ -68,21 +78,24 @@
               ]
             },
             "notes": {
+              "description": "Free text notes about the variety.",
               "type": "string"
             },
             "percent_lost": {
-              "description": " Defined as the percentage of hop alpha lost in 6 months of storage.",
-              "$ref": "measureable_units.json#/definitions/PercentType"
+              "description": "The percentage of hop alpha acid lost in six months of storage, also known as the Hop Stability Index.",
+              "$ref": "measureable_units.json#/$defs/PercentType"
             },
             "substitutes": {
+              "description": "Other varieties that can be used in place of this one.",
               "type": "string"
             },
             "oil_content": {
               "description": "Oil Content information object.",
-              "$ref": "#/definitions/OilContentType"
+              "$ref": "#/$defs/OilContentType"
             },
             "inventory": {
-              "$ref": "#/definitions/HopInventoryType"
+              "description": "The quantity of the hop held in stock.",
+              "$ref": "#/$defs/HopInventoryType"
             }
           }
         }
@@ -90,24 +103,26 @@
     },
     "HopAdditionType": {
       "type": "object",
-      "description": "HopAdditionType collects the attributes of each hop ingredient for use in a recipe hop bill.",
+      "description": "A hop as used in a recipe: `HopVarietyBase` plus how much and when. Catalogue detail belongs in a `VarietyInformation` record at the document root, not here.",
+      "unevaluatedProperties": false,
       "allOf": [
         {
-          "$ref": "#/definitions/HopVarietyBase"
+          "$ref": "#/$defs/HopVarietyBase"
         },
         {
           "properties": {
             "timing": {
               "description": "The timing object fully describes the timing of an addition with options for a basis on time, gravity, or pH at any process step.",
-              "$ref": "timing.json#/definitions/TimingType"
+              "$ref": "timing.json#/$defs/TimingType"
             },
             "amount": {
+              "description": "The quantity added: by mass for whole, pellet or powdered hops, or by volume for an extract.",
               "oneOf": [
                 {
-                  "$ref": "measureable_units.json#/definitions/VolumeType"
+                  "$ref": "measureable_units.json#/$defs/VolumeType"
                 },
                 {
-                  "$ref": "measureable_units.json#/definitions/MassType"
+                  "$ref": "measureable_units.json#/$defs/MassType"
                 }
               ]
             }
@@ -120,15 +135,22 @@
       ]
     },
     "IBUEstimateType": {
-      "description": "Used to differentiate the IBU formula used in a recipe. If the formula is modified in any way, e.g. to support whirlpool/flameout additions, then please use `Other` for transparency.",
+      "description": "Stores the IBU formula used in a recipe and, when available, the resulting estimated bitterness. If the formula is modified in any way, e.g. to support whirlpool/flameout additions, then please use `Other` for transparency.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "method": {
-          "$ref": "#/definitions/IBUMethodType"
+          "description": "The formula the bitterness value was estimated with.",
+          "$ref": "#/$defs/IBUMethodType"
+        },
+        "value": {
+          "description": "The estimated bitterness of the recipe.",
+          "$ref": "measureable_units.json#/$defs/BitternessType"
         }
       }
     },
     "IBUMethodType": {
+      "description": "The formula used to estimate bitterness.",
       "type": "string",
       "enum": [
         "Rager",
@@ -139,64 +161,80 @@
     },
     "OilContentType": {
       "type": "object",
-      "description": "oil_content collects all information of a hop variety pertaining to oil content, polyphenols, and thiols. Each individual compound is expressed as a percent of the total oil measurement.",
+      "description": "The oil content of a hop variety, and related compounds. Each oil is a percentage of total oil, the amount of which is total_oil_ml_per_100g. cohumulone is a percentage of total alpha acids, and polyphenols and xanthohumol are percentages of hop weight.",
+      "additionalProperties": false,
       "properties": {
         "total_oil_ml_per_100g": {
           "description": "The total amount of oil, including hydrocarbons, esters, and terpene alcohols in units of ml of oil per 100g of hop mass.",
           "type": "number"
         },
         "humulene": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "description": "Humulene, as a percentage of total hop oil.",
+          "$ref": "measureable_units.json#/$defs/PercentType"
         },
         "caryophyllene": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "description": "Caryophyllene, as a percentage of total hop oil.",
+          "$ref": "measureable_units.json#/$defs/PercentType"
         },
         "cohumulone": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "description": "Cohumulone, as a percentage of total alpha acids. Unlike the other members it is an alpha acid, not an oil.",
+          "$ref": "measureable_units.json#/$defs/PercentType"
         },
         "myrcene": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "description": "Myrcene, as a percentage of total hop oil.",
+          "$ref": "measureable_units.json#/$defs/PercentType"
         },
         "farnesene": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "description": "Farnesene, as a percentage of total hop oil.",
+          "$ref": "measureable_units.json#/$defs/PercentType"
         },
         "geraniol": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "description": "Geraniol, as a percentage of total hop oil.",
+          "$ref": "measureable_units.json#/$defs/PercentType"
         },
         "b_pinene": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "description": "Beta-pinene, as a percentage of total hop oil.",
+          "$ref": "measureable_units.json#/$defs/PercentType"
         },
         "linalool": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "description": "Linalool, as a percentage of total hop oil.",
+          "$ref": "measureable_units.json#/$defs/PercentType"
         },
         "limonene": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "description": "Limonene, as a percentage of total hop oil.",
+          "$ref": "measureable_units.json#/$defs/PercentType"
         },
         "nerol": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "description": "Nerol, as a percentage of total hop oil.",
+          "$ref": "measureable_units.json#/$defs/PercentType"
         },
         "pinene": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "description": "Alpha-pinene, as a percentage of total hop oil. Beta-pinene is recorded separately as b_pinene.",
+          "$ref": "measureable_units.json#/$defs/PercentType"
         },
         "polyphenols": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "description": "Polyphenols, as a percentage of hop weight. Unlike the oils, not measured relative to total oil.",
+          "$ref": "measureable_units.json#/$defs/PercentType"
         },
         "xanthohumol": {
-          "$ref": "measureable_units.json#/definitions/PercentType"
+          "description": "Xanthohumol, as a percentage of hop weight. Unlike the oils, not measured relative to total oil.",
+          "$ref": "measureable_units.json#/$defs/PercentType"
         }
       }
     },
     "HopInventoryType": {
+      "description": "The quantity of a hop held in stock.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "amount": {
+          "description": "The quantity held in stock: by mass for whole, pellet or powdered hops, or by volume for an extract.",
           "oneOf": [
             {
-              "$ref": "measureable_units.json#/definitions/VolumeType"
+              "$ref": "measureable_units.json#/$defs/VolumeType"
             },
             {
-              "$ref": "measureable_units.json#/definitions/MassType"
+              "$ref": "measureable_units.json#/$defs/MassType"
             }
           ]
         }

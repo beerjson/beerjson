@@ -1,18 +1,20 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/packaging_vessel.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/packaging_vessel.json",
   "type": "object",
   "additionalProperties": false,
-  "definitions": {
+  "$defs": {
     "PackagingVesselType": {
       "type": "object",
       "description": "PackagingVesselType - a per vessel representation of a packaging process.",
       "additionalProperties": false,
       "properties": {
         "name": {
+          "description": "Name of the packaging vessel.",
           "type": "string"
         },
         "type": {
+          "description": "The kind of vessel the beer is packaged into.",
           "type": "string",
           "enum": [
             "keg",
@@ -24,45 +26,58 @@
           ]
         },
         "description": {
+          "description": "Free text description of the packaging vessel.",
           "type": "string"
         },
         "package_date": {
-          "$ref": "measureable_units.json#/definitions/DateType"
+          "description": "The date the beer was packaged into this vessel.",
+          "$ref": "measureable_units.json#/$defs/DateType"
         },
         "start_temperature": {
-          "$ref": "measureable_units.json#/definitions/TemperatureType"
+          "description": "The temperature of the beer at the start of the step.",
+          "$ref": "measureable_units.json#/$defs/TemperatureType"
         },
         "end_temperature": {
-          "$ref": "measureable_units.json#/definitions/TemperatureType"
+          "description": "The temperature of the beer at the end of the step.",
+          "$ref": "measureable_units.json#/$defs/TemperatureType"
         },
         "step_time": {
-          "$ref": "measureable_units.json#/definitions/TimeType"
+          "description": "How long the beer spends in this vessel, such as a conditioning period.",
+          "$ref": "measureable_units.json#/$defs/TimeType"
         },
         "start_gravity": {
-          "$ref": "measureable_units.json#/definitions/GravityType"
+          "description": "The gravity of the beer at the start of the step.",
+          "$ref": "measureable_units.json#/$defs/GravityType"
         },
         "end_gravity": {
-          "$ref": "measureable_units.json#/definitions/GravityType"
+          "description": "The gravity of the beer at the end of the step.",
+          "$ref": "measureable_units.json#/$defs/GravityType"
         },
         "start_ph": {
-          "$ref": "measureable_units.json#/definitions/AcidityType"
+          "description": "The pH of the beer at the start of the step.",
+          "$ref": "measureable_units.json#/$defs/AcidityType"
         },
         "end_ph": {
-          "$ref": "measureable_units.json#/definitions/AcidityType"
+          "description": "The pH of the beer at the end of the step.",
+          "$ref": "measureable_units.json#/$defs/AcidityType"
         },
         "carbonation": {
+          "description": "The carbonation of the beer in this vessel, in volumes of CO2.",
           "type": "number"
         },
         "vessel_volume": {
-          "$ref": "measureable_units.json#/definitions/VolumeType"
+          "description": "The capacity of one vessel of this kind.",
+          "$ref": "measureable_units.json#/$defs/VolumeType"
         },
         "vessel_quantity": {
+          "description": "How many vessels of this kind were filled.",
           "type": "number"
         },
         "graphics": {
+          "description": "Artwork applied to the vessel, such as labels and cap prints.",
           "type": "array",
           "items": {
-            "$ref": "packaging_graphic.json#/definitions/PackagingGraphicType"
+            "$ref": "packaging_graphic.json#/$defs/PackagingGraphicType"
           }
         }
       },

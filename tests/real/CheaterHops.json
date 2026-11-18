@@ -1,6 +1,6 @@
 {
   "beerjson": {
-    "version": 2.06,
+    "version": 3,
     "recipes": [
       {
         "name": "Cheater hops",
@@ -215,8 +215,7 @@
                 "duration": {
                   "unit": "day",
                   "value": 3
-                },
-                "step": 1
+                }
               }
             },
             {
@@ -243,8 +242,7 @@
                 "duration": {
                   "unit": "day",
                   "value": 3
-                },
-                "step": 1
+                }
               }
             },
             {

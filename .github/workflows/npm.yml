@@ -3,17 +3,100 @@ name: Publish beerJSON NPM package
 on:
   release:
     types: [published]
+  # Run manually to check that NPM_TOKEN still authenticates, before creating a
+  # release. Nothing is published on this path.
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
-  publish:
+  # Authenticates against the registry and builds the tarball without uploading
+  # it. `npm whoami` fails with E401 or ENEEDAUTH if the token is expired,
+  # revoked, or missing.
+  verify-auth:
+    name: Verify registry credentials
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
         with:
-          node-version: 18
-      - run: npm i
+          node-version: 24
+          cache: npm
+          registry-url: https://registry.npmjs.org
+
+      - run: npm ci
+
+      - name: Who does NPM_TOKEN authenticate as?
+        run: npm whoami
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Build the tarball without publishing
+        run: npm publish --dry-run
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  # Attaches the packed tarball to the GitHub release, so a release can be
+  # installed by URL without going through the registry:
+  #
+  #   npm install https://github.com/beerjson/beerjson/releases/download/vX.Y.Z/beerjson-beerjson-X.Y.Z.tgz
+  release-asset:
+    name: Attach tarball to the release
+    if: github.event_name == 'release'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
       - run: npm test
-      - uses: JS-DevTools/npm-publish@v1
+
+      - name: Check the tag matches package.json
+        run: |
+          tag="${GITHUB_REF_NAME#v}"
+          pkg="$(node -p 'require("./package.json").version')"
+          if [ "$tag" != "$pkg" ]; then
+            echo "::error::release tag $GITHUB_REF_NAME does not match package.json version $pkg"
+            exit 1
+          fi
+
+      - name: Pack and upload
+        run: |
+          tarball="$(npm pack --silent)"
+          gh release upload "$GITHUB_REF_NAME" "$tarball" --clobber
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish:
+    name: Publish to npm
+    if: github.event_name == 'release'
+    needs: [release-asset]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          registry-url: https://registry.npmjs.org
+
+      # `npm ci` installs exactly what package-lock.json pins, so the published
+      # package is built against the same tree CI tested.
+      - run: npm ci
+
+      - run: npm test
+
+      - uses: JS-DevTools/npm-publish@v4
         with:
           token: ${{ secrets.NPM_TOKEN }}

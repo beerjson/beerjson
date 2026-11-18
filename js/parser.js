@@ -3,7 +3,7 @@ const mapProps = (obj, mapFn) =>
 
 const parser = formatter => schema => {
   const parseTypeRefStr = ref => {
-    const regex = /^(\S+)?#\/definitions\/(\S+)/
+    const regex = /^(\S+)?#\/\$defs\/(\S+)/
     const matches = ref.match(regex)
     const fileName = matches[1]
     const typeName = matches[2]
@@ -13,21 +13,27 @@ const parser = formatter => schema => {
   const processTypeRef = ref =>
     formatter.formatParsedTypeRef(parseTypeRefStr(ref))
 
-  const processArray = ({ $ref }) =>
-    formatter.formatArray($ref, processTypeRef($ref))
+  // `items` is either a $ref to a named type or an inline schema
+  // (e.g. `{ "type": "string" }`).
+  const processArray = items =>
+    formatter.formatArray(items.$ref, processPropType('items', items))
 
+  // A branch is either a $ref to a named type or an inline schema.
   const processOneOf = types =>
     types
-      .map(({ $ref }) => processTypeRef($ref))
+      .map((branch, index) => processPropType(`oneOf[${index}]`, branch))
       .reduce(formatter.formatOneOf, '')
 
-  const processPropDefinition = requiredList => ([propName, propDef]) =>
-    formatter.formatPropDefinition(
-      propName,
-      requiredList.includes(propName),
-      processPropType(propName, propDef),
-      propDef.description
-    )
+  const processPropDefinition =
+    requiredList =>
+    ([propName, propDef]) =>
+      formatter.formatPropDefinition(
+        propName,
+        requiredList.includes(propName),
+        processPropType(propName, propDef),
+        propDef.description,
+        propDef.deprecated === true
+      )
 
   const processSimpleTypeDefinition = (typeName, typeDef) =>
     processPropType(typeName, typeDef)
@@ -83,10 +89,10 @@ const parser = formatter => schema => {
 
   const formatDefinitions = schema =>
     formatter.addTypeWrapper(
-      mapProps(schema.definitions, (typeName, typeDef) => [
-        typeName,
-        typeDef
-      ]).reduce((acc, pair) => acc + processTypeDefinition(pair), '')
+      mapProps(schema.$defs, (typeName, typeDef) => [typeName, typeDef]).reduce(
+        (acc, pair) => acc + processTypeDefinition(pair),
+        ''
+      )
     )
 
   const formatRootSchema = ({ properties: { beerjson } = {} }) => {

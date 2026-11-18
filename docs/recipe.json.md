@@ -8,21 +8,21 @@ RecipeType composes the information stored in a beerjson recipe.
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **name** | ✅ | string|  |
-| **type** | ✅ | `"cider"`<br/>`"kombucha"`<br/>`"soda"`<br/>`"other"`<br/>`"mead"`<br/>`"wine"`<br/>`"extract"`<br/>`"partial mash"`<br/>`"all grain"`|  |
-| **author** | ✅ | string|  |
-| **coauthor** |  | string|  |
-| **created** |  | [DateType](measureable_units.json.md#datetype)|  |
+| **name** | ✅ | string| Name of the recipe. |
+| **type** | ✅ | `"cider"`<br/>`"kombucha"`<br/>`"soda"`<br/>`"other"`<br/>`"mead"`<br/>`"wine"`<br/>`"extract"`<br/>`"partial mash"`<br/>`"all grain"`| The kind of beverage the recipe produces and, for beer, the mashing approach it uses. |
+| **author** | ✅ | string| The person who wrote the recipe. |
+| **coauthor** |  | string| An additional author of the recipe. |
+| **created** |  | [DateType](measureable_units.json.md#datetype)| The date the recipe was created. |
 | **batch_size** | ✅ | [VolumeType](measureable_units.json.md#volumetype)| The volume into the fermenter. |
 | **efficiency** | ✅ | [EfficiencyType](#efficiencytype)| Used to store each efficiency component, including conversion, and brewhouse. |
-| **style** |  | [RecipeStyleType](style.json.md#recipestyletype)|  |
+| **style** |  | [RecipeStyleType](style.json.md#recipestyletype)| The style the recipe is designed to meet. |
 | **ingredients** | ✅ | [IngredientsType](#ingredientstype)| A collection of all ingredients used for the recipe. |
 | **mash** |  | [MashProcedureType](mash.json.md#mashproceduretype)| This defines the procedure for performing unique mashing processes. |
-| **notes** |  | string|  |
-| **original_gravity** |  | [GravityType](measureable_units.json.md#gravitytype)| The gravity of wort when transffered to the fermenter. |
+| **notes** |  | string| Free text notes about the recipe. |
+| **original_gravity** |  | [GravityType](measureable_units.json.md#gravitytype)| The gravity of wort when transferred to the fermenter. |
 | **final_gravity** |  | [GravityType](measureable_units.json.md#gravitytype)| The gravity of beer at the end of fermentation. |
-| **alcohol_by_volume** |  | [PercentType](measureable_units.json.md#percenttype)|  |
-| **ibu_estimate** |  | [IBUEstimateType](hop.json.md#ibuestimatetype)| Used to differentiate which IBU formula is being used in a recipe. If formula is modified in any way, eg to support whirlpool/flameout additions etc etc, please use `Other` for transparency. |
+| **alcohol_by_volume** |  | [PercentType](measureable_units.json.md#percenttype)| The alcohol content of the finished beer, by volume. |
+| **ibu_estimate** |  | [IBUEstimateType](hop.json.md#ibuestimatetype)| The estimated bitterness of the finished beer together with the IBU formula used to calculate it. If the formula is modified in any way, e.g. to support whirlpool/flameout additions, please use `Other` for transparency. |
 | **color_estimate** |  | [ColorType](measureable_units.json.md#colortype)| The color of the finished beer, using SRM or EBC. |
 | **beer_pH** |  | [AcidityType](measureable_units.json.md#aciditytype)| The final beer pH at the end of fermentation. |
 | **carbonation** |  | number| The final carbonation of the beer when packaged or served. |
@@ -31,7 +31,7 @@ RecipeType composes the information stored in a beerjson recipe.
 | **packaging** |  | [PackagingProcedureType](packaging.json.md#packagingproceduretype)| Describes the procedure for packaging your beverage. |
 | **boil** |  | [BoilProcedureType](boil.json.md#boilproceduretype)| Defines the procedure for performing a boil. A boil procedure with no steps is the same as a standard single step boil. |
 | **taste** |  | [TasteType](#tastetype)| Used to store subjective tasting notes, and rating. |
-| **calories_per_pint** |  | number|  |
+| **calories_per_pint** |  | number| The estimated energy content of the finished beer, derived from its original and final gravity, in kilocalories (dietary Calories) per pint. Which pint is not specified. |
 
 ## EfficiencyType 
 
@@ -48,7 +48,7 @@ The efficiencyType stores each efficiency component.
 
 ## IngredientsType 
 
-*no description yet*
+Everything a recipe calls for, grouped by kind of ingredient.
 
 **IngredientsType** is an object with these properties:
 
@@ -62,12 +62,12 @@ The efficiencyType stores each efficiency component.
 
 ## TasteType 
 
-*no description yet*
+A tasting record for the finished beer.
 
 **TasteType** is an object with these properties:
 
 |Name|Required|Type|Description|
 |--|--|--|--|
-| **notes** | ✅ | string|  |
-| **rating** | ✅ | number|  |
+| **notes** | ✅ | string| Free text tasting notes for the finished beer. |
+| **rating** | ✅ | number| A score for the finished beer between 0 and 50, corresponding to the 50 point BJCP rating system. |
 

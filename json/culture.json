@@ -1,17 +1,19 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/culture.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/culture.json",
   "type": "object",
   "additionalProperties": false,
-  "definitions": {
+  "$defs": {
     "CultureBase": {
       "type": "object",
-      "description": "Provides unique properties to identify individual records of a culture.",
+      "description": "Identifies a microbial culture. Nothing is calculated from it directly, so it carries identity alone. `CultureInformation` extends it into a full catalogue record, and `CultureAdditionType` extends it with a pitch.",
       "properties": {
         "name": {
+          "description": "Name of the culture, usually the name its producer sells it under.",
           "type": "string"
         },
         "type": {
+          "description": "The kind of organism the culture is, which determines how it ferments and what flavours it contributes.",
           "type": "string",
           "enum": [
             "ale",
@@ -26,10 +28,12 @@
             "other",
             "pedio",
             "spontaneous",
+            "wheat",
             "wine"
           ]
         },
         "form": {
+          "description": "The physical form the culture is supplied or stored in.",
           "type": "string",
           "enum": [
             "liquid",
@@ -40,9 +44,11 @@
           ]
         },
         "producer": {
+          "description": "The lab or company that produced the culture.",
           "type": "string"
         },
         "product_id": {
+          "description": "The producer's catalogue number for the culture, such as WLP001 or 3068.",
           "type": "string"
         }
       },
@@ -54,29 +60,32 @@
     },
     "CultureInformation": {
       "type": "object",
-      "description": "CultureInformation collects the attributes of a microbial culture.",
+      "description": "The full catalogue record for a culture: `CultureBase` plus the behaviour a lab publishes, such as temperature range, attenuation range and flocculation. This is the form used in the `cultures` list at the document root.",
+      "unevaluatedProperties": false,
       "allOf": [
         {
-          "$ref": "#/definitions/CultureBase"
+          "$ref": "#/$defs/CultureBase"
         },
         {
           "properties": {
             "temperature_range": {
               "description": "The recommended temperature range of fermentation by the culture producer.",
-              "$ref": "measureable_units.json#/definitions/TemperatureRangeType"
+              "$ref": "measureable_units.json#/$defs/TemperatureRangeType"
             },
             "alcohol_tolerance": {
               "description": "The recommended limit of abv by the culture producer before attenuation stops.",
-              "$ref": "measureable_units.json#/definitions/PercentType"
+              "$ref": "measureable_units.json#/$defs/PercentType"
             },
             "flocculation": {
-              "description": "Floculation refers to the ability of yeast to aggregate to form large flocs which drop out of suspension.",
-              "$ref": "measureable_units.json#/definitions/QualitativeRangeType"
+              "description": "Flocculation refers to the ability of a culture to aggregate into large flocs which drop out of suspension.",
+              "$ref": "measureable_units.json#/$defs/QualitativeRangeType"
             },
             "attenuation_range": {
-              "$ref": "measureable_units.json#/definitions/PercentRangeType"
+              "description": "The range of apparent attenuation the culture typically achieves.",
+              "$ref": "measureable_units.json#/$defs/PercentRangeType"
             },
             "notes": {
+              "description": "Free text notes about the culture.",
               "type": "string"
             },
             "best_for": {
@@ -96,10 +105,12 @@
               "type": "boolean"
             },
             "inventory": {
-              "$ref": "#/definitions/CultureInventoryType"
+              "description": "The quantity of the culture held in stock.",
+              "$ref": "#/$defs/CultureInventoryType"
             },
             "zymocide": {
-              "$ref": "#/definitions/Zymocide"
+              "description": "Which killer toxins the culture produces, or whether it is neutral.",
+              "$ref": "#/$defs/Zymocide"
             }
           }
         }
@@ -107,37 +118,41 @@
     },
     "CultureAdditionType": {
       "type": "object",
-      "description": "CultureAdditionType collects the attributes of each culture ingredient for use in a recipe.",
+      "description": "A culture as pitched into a recipe: `CultureBase` plus how much, when, and what was measured at pitch time such as cell count and generation. Catalogue detail belongs in a `CultureInformation` record at the document root, not here.",
+      "unevaluatedProperties": false,
       "allOf": [
         {
-          "$ref": "#/definitions/CultureBase"
+          "$ref": "#/$defs/CultureBase"
         },
         {
           "properties": {
             "attenuation": {
               "description": "The expected, or measured apparent attenuation for a given culture in a given recipe. In comparison to attenuation range, this is a single value.",
-              "$ref": "measureable_units.json#/definitions/PercentType"
+              "$ref": "measureable_units.json#/$defs/PercentType"
             },
             "times_cultured": {
+              "description": "How many times this culture has already been harvested and repitched. Absent or zero means a fresh pitch from the producer.",
               "type": "integer"
             },
             "timing": {
               "description": "The timing object fully describes the timing of an addition with options for basis on time, gravity, or pH at any process step.",
-              "$ref": "timing.json#/definitions/TimingType"
+              "$ref": "timing.json#/$defs/TimingType"
             },
             "cell_count_billions": {
+              "description": "The number of viable cells pitched, in billions.",
               "type": "integer"
             },
             "amount": {
+              "description": "The quantity pitched: by volume for a liquid culture, by mass for a dry one, or by unit for whole packets.",
               "oneOf": [
                 {
-                  "$ref": "measureable_units.json#/definitions/VolumeType"
+                  "$ref": "measureable_units.json#/$defs/VolumeType"
                 },
                 {
-                  "$ref": "measureable_units.json#/definitions/MassType"
+                  "$ref": "measureable_units.json#/$defs/MassType"
                 },
                 {
-                  "$ref": "measureable_units.json#/definitions/UnitType"
+                  "$ref": "measureable_units.json#/$defs/UnitType"
                 }
               ]
             }
@@ -151,20 +166,25 @@
       ]
     },
     "CultureInventoryType": {
+      "description": "The quantity of a culture held in stock, recorded separately for each form it is stored in.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "liquid": {
-          "$ref": "measureable_units.json#/definitions/VolumeType"
+          "description": "Stock held as liquid culture.",
+          "$ref": "measureable_units.json#/$defs/VolumeType"
         },
         "dry": {
-          "$ref": "measureable_units.json#/definitions/MassType"
+          "description": "Stock held as dried culture.",
+          "$ref": "measureable_units.json#/$defs/MassType"
         },
         "slant": {
-          "$ref": "measureable_units.json#/definitions/VolumeType"
+          "description": "Stock held on slants.",
+          "$ref": "measureable_units.json#/$defs/VolumeType"
         },
         "culture": {
-          "$ref": "measureable_units.json#/definitions/VolumeType"
+          "description": "Stock held as a propagated culture, such as a starter.",
+          "$ref": "measureable_units.json#/$defs/VolumeType"
         }
       }
     },
@@ -174,18 +194,23 @@
       "additionalProperties": false,
       "properties": {
         "no1": {
+          "description": "Whether the culture expresses the K1 killer factor, a toxin lethal to strains sensitive to it.",
           "type": "boolean"
         },
         "no2": {
+          "description": "Whether the culture expresses the K2 killer factor, a toxin lethal to strains sensitive to it.",
           "type": "boolean"
         },
         "no28": {
+          "description": "Whether the culture expresses the K28 killer factor, a toxin lethal to strains sensitive to it.",
           "type": "boolean"
         },
         "klus": {
+          "description": "Whether the culture expresses the Klus killer factor, a toxin lethal to strains sensitive to it.",
           "type": "boolean"
         },
         "neutral": {
+          "description": "Whether the culture is neutral: it produces no killer factor, but is not sensitive to them either.",
           "type": "boolean"
         }
       }

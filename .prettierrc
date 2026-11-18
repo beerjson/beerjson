@@ -1,8 +1,9 @@
 {
   "singleQuote": true,
   "semi": false,
-  "jsxBracketSameLine": true,
-    "overrides": [
+  "trailingComma": "none",
+  "arrowParens": "avoid",
+  "overrides": [
     {
       "files": "*.json",
       "options": {

@@ -1,15 +1,16 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/master/json/packaging_graphic.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/beerjson/beerjson/main/json/packaging_graphic.json",
   "type": "object",
   "additionalProperties": false,
-  "definitions": {
+  "$defs": {
     "PackagingGraphicType": {
       "type": "object",
       "description": "PackagingGraphicType - a representation of a graphic to be placed on a vessel.",
       "additionalProperties": false,
       "properties": {
         "position": {
+          "description": "Where on the vessel the graphic is placed.",
           "type": "string",
           "enum": [
             "body front",
@@ -55,9 +56,11 @@
           "description": "Dots per inch."
         },
         "width": {
+          "description": "Width of the graphic, in the unit given by the units property.",
           "type": "number"
         },
         "height": {
+          "description": "Height of the graphic, in the unit given by the units property.",
           "type": "number"
         },
         "units": {
